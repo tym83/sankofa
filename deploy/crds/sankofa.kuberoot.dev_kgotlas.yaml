@@ -1,0 +1,108 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.23.0
+  name: kgotlas.sankofa.kuberoot.dev
+spec:
+  group: sankofa.kuberoot.dev
+  names:
+    kind: Kgotla
+    listKind: KgotlaList
+    plural: kgotlas
+    shortNames:
+    - council
+    singular: kgotla
+  scope: Cluster
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .spec.target.name
+      name: Target
+      type: string
+    - jsonPath: .spec.chief
+      name: Chief
+      type: string
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: |-
+          Kgotla is a council in the manner of the Tswana kgotla: everyone speaks,
+          the chief speaks last, and only then a protected object may be deleted.
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: KgotlaSpec is a council about one dangerous operation.
+            properties:
+              chief:
+                description: The chief speaks last and fixes the decision.
+                type: string
+              reason:
+                description: Why the operation is needed.
+                type: string
+              spoken:
+                description: |-
+                  Who has spoken, in order. Names are set by the admission webhook from
+                  the authenticated user, never by the client.
+                items:
+                  description: Voice is a participant who has spoken.
+                  properties:
+                    at:
+                      format: date-time
+                      type: string
+                    user:
+                      type: string
+                  required:
+                  - at
+                  - user
+                  type: object
+                type: array
+              target:
+                description: Target names the object a council decides about.
+                properties:
+                  group:
+                    type: string
+                  name:
+                    type: string
+                  namespace:
+                    type: string
+                  resource:
+                    type: string
+                required:
+                - name
+                - resource
+                type: object
+              voices:
+                description: Users who must speak before the decision.
+                items:
+                  type: string
+                minItems: 1
+                type: array
+            required:
+            - chief
+            - reason
+            - target
+            - voices
+            type: object
+        required:
+        - spec
+        type: object
+    served: true
+    storage: true
+    subresources: {}

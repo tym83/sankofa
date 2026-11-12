@@ -21,7 +21,7 @@ var (
 )
 
 func init() {
-	SchemeBuilder.Register(&Card{}, &CardList{}, &Quest{}, &QuestList{})
+	SchemeBuilder.Register(&Card{}, &CardList{}, &Quest{}, &QuestList{}, &Kgotla{}, &KgotlaList{})
 }
 
 // Place is a point on the atlas.
@@ -171,3 +171,73 @@ type QuestList struct {
 }
 
 var _ runtime.Object = &Card{}
+
+// Target names the object a council decides about.
+type Target struct {
+	// +optional
+	Group    string `json:"group,omitempty"`
+	Resource string `json:"resource"`
+	// +optional
+	Namespace string `json:"namespace,omitempty"`
+	Name      string `json:"name"`
+}
+
+// Voice is a participant who has spoken.
+type Voice struct {
+	User string      `json:"user"`
+	At   metav1.Time `json:"at"`
+}
+
+// KgotlaSpec is a council about one dangerous operation.
+type KgotlaSpec struct {
+	Target Target `json:"target"`
+	// Why the operation is needed.
+	Reason string `json:"reason"`
+	// Users who must speak before the decision.
+	// +kubebuilder:validation:MinItems=1
+	Voices []string `json:"voices"`
+	// The chief speaks last and fixes the decision.
+	Chief string `json:"chief"`
+	// Who has spoken, in order. Names are set by the admission webhook from
+	// the authenticated user, never by the client.
+	// +optional
+	Spoken []Voice `json:"spoken,omitempty"`
+}
+
+// Kgotla is a council in the manner of the Tswana kgotla: everyone speaks,
+// the chief speaks last, and only then a protected object may be deleted.
+// +kubebuilder:object:root=true
+// +kubebuilder:resource:scope=Cluster,shortName=council
+// +kubebuilder:printcolumn:name="Target",type=string,JSONPath=`.spec.target.name`
+// +kubebuilder:printcolumn:name="Chief",type=string,JSONPath=`.spec.chief`
+type Kgotla struct {
+	metav1.TypeMeta   `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
+	Spec              KgotlaSpec `json:"spec"`
+}
+
+// KgotlaList is a list of councils.
+// +kubebuilder:object:root=true
+type KgotlaList struct {
+	metav1.TypeMeta `json:",inline"`
+	metav1.ListMeta `json:"metadata,omitempty"`
+	Items           []Kgotla `json:"items"`
+}
+
+// Decided reports whether everyone has spoken and the chief spoke last.
+func (k *Kgotla) Decided() bool {
+	sp := k.Spec.Spoken
+	if len(sp) == 0 || sp[len(sp)-1].User != k.Spec.Chief {
+		return false
+	}
+	heard := map[string]bool{}
+	for _, v := range sp {
+		heard[v.User] = true
+	}
+	for _, v := range k.Spec.Voices {
+		if !heard[v] {
+			return false
+		}
+	}
+	return true
+}

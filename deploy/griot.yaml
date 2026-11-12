@@ -26,6 +26,10 @@ rules:
   - apiGroups: ["authorization.k8s.io"]
     resources: ["subjectaccessreviews"]
     verbs: ["create"]
+  - apiGroups: ["admissionregistration.k8s.io"]
+    resources: ["validatingwebhookconfigurations", "mutatingwebhookconfigurations"]
+    resourceNames: ["sankofa-validating", "sankofa-mutating"]
+    verbs: ["update"]
   - apiGroups: ["apiregistration.k8s.io"]
     resources: ["apiservices"]
     resourceNames: ["v1alpha1.history.sankofa.kuberoot.dev"]
@@ -72,6 +76,20 @@ rules:
   - apiGroups: ["sankofa.kuberoot.dev"]
     resources: ["cards", "quests"]
     verbs: ["get", "list", "watch"]
+---
+# Anyone who may edit a namespace may call a council and speak in it; the
+# webhook makes sure only named voices speak, under their own names.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sankofa:kgotla
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+rules:
+  - apiGroups: ["sankofa.kuberoot.dev"]
+    resources: ["kgotlas"]
+    verbs: ["get", "list", "watch", "create", "update", "patch"]
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

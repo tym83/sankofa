@@ -21,6 +21,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"strconv"
 	"strings"
 	"syscall"
 	"time"
@@ -38,7 +39,9 @@ import (
 
 	"github.com/tym83/sankofa/api/v1alpha1"
 	"github.com/tym83/sankofa/content"
+	"github.com/tym83/sankofa/pkg/admission"
 	"github.com/tym83/sankofa/pkg/card"
+	"github.com/tym83/sankofa/pkg/credits"
 	"github.com/tym83/sankofa/pkg/history"
 )
 
@@ -114,9 +117,17 @@ func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiS
 	if err := publishCA(ctx, cl, apiService, caPEM); err != nil {
 		log.Warn("could not publish CA bundle to APIService", "err", err)
 	}
+	mux := http.NewServeMux()
+	mux.Handle("/", (&history.API{Store: store, Auth: auth, Kube: kube}).Handler())
+	webhooks(mux, cl, kube)
+	for _, name := range []string{"sankofa-validating", "sankofa-mutating"} {
+		if err := publishWebhookCA(ctx, cl, name, caPEM); err != nil {
+			log.Warn("could not publish CA bundle to webhook configuration", "name", name, "err", err)
+		}
+	}
 	srv := &http.Server{
 		Addr:    listen,
-		Handler: (&history.API{Store: store, Auth: auth, Kube: kube}).Handler(),
+		Handler: mux,
 		TLSConfig: &tls.Config{
 			Certificates: []tls.Certificate{cert},
 			ClientAuth:   tls.VerifyClientCertIfGiven,
@@ -267,4 +278,58 @@ func publishCA(ctx context.Context, cl client.Client, name string, ca []byte) er
 	obj.SetName(name)
 	patch := fmt.Sprintf(`{"spec":{"caBundle":%q,"insecureSkipTLSVerify":false}}`, base64.StdEncoding.EncodeToString(ca))
 	return cl.Patch(ctx, obj, client.RawPatch(types.MergePatchType, []byte(patch)))
+}
+
+// webhooks registers the distribution's admission webhooks.
+func webhooks(mux *http.ServeMux, cl client.Client, kube kubernetes.Interface) {
+	councils := func(ctx context.Context) ([]v1alpha1.Kgotla, error) {
+		var l v1alpha1.KgotlaList
+		err := cl.List(ctx, &l)
+		return l.Items, err
+	}
+	taken := func(ctx context.Context, rest, self string) map[int]bool {
+		out := map[int]bool{}
+		l, err := kube.BatchV1().CronJobs("").List(ctx, metav1.ListOptions{})
+		if err != nil {
+			return out
+		}
+		for _, cj := range l.Items {
+			f := strings.Fields(cj.Spec.Schedule)
+			if len(f) != 5 || cj.Namespace+"/"+cj.Name == self || strings.Join(f[1:], " ") != rest {
+				continue
+			}
+			if m, err := strconv.Atoi(strings.SplitN(f[0], "/", 2)[0]); err == nil {
+				out[m] = true
+			}
+		}
+		return out
+	}
+	resolver := &credits.Resolver{Timeout: 6 * time.Second}
+	mux.Handle("/admit/kgotla", admission.Serve(admission.Kgotla(councils)))
+	mux.Handle("/mutate/kgotla-speech", admission.Serve(admission.KgotlaSpeech(time.Now)))
+	mux.Handle("/mutate/polyrhythm", admission.Serve(admission.Polyrhythm(taken)))
+	mux.Handle("/admit/credits/warn", admission.Serve(admission.Credits(resolver.Resolve, false)))
+	mux.Handle("/admit/credits/enforce", admission.Serve(admission.Credits(resolver.Resolve, true)))
+}
+
+// publishWebhookCA writes the serving CA into every webhook of a configuration.
+func publishWebhookCA(ctx context.Context, cl client.Client, name string, ca []byte) error {
+	kind := "ValidatingWebhookConfiguration"
+	if strings.Contains(name, "mutating") {
+		kind = "MutatingWebhookConfiguration"
+	}
+	obj := &unstructured.Unstructured{}
+	obj.SetAPIVersion("admissionregistration.k8s.io/v1")
+	obj.SetKind(kind)
+	if err := cl.Get(ctx, client.ObjectKey{Name: name}, obj); err != nil {
+		return err
+	}
+	hooks, _, _ := unstructured.NestedSlice(obj.Object, "webhooks")
+	for i := range hooks {
+		h := hooks[i].(map[string]any)
+		_ = unstructured.SetNestedField(h, base64.StdEncoding.EncodeToString(ca), "clientConfig", "caBundle")
+		hooks[i] = h
+	}
+	_ = unstructured.SetNestedSlice(obj.Object, hooks, "webhooks")
+	return cl.Update(ctx, obj)
 }
