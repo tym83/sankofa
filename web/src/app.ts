@@ -13,6 +13,7 @@ export interface App {
   closeCard(): void;
   openAtlas(p: Point, push?: boolean): void;
   openBook(): void;
+  openDescent(year?: number, push?: boolean): void;
   /** Story position, kept in the fragment as ch=… next to the atlas keys. */
   chapterInView(id: string | null): void;
   onPath(cb: (path: string[]) => void): void;
@@ -48,8 +49,8 @@ export function richText(app: App, text: string): DocumentFragment {
           title: `${target.title}: ${target.wow}`,
         },
         bookMarks(target.books),
-        // A bare [[some-id]] reads as words in prose.
-        s.text === s.target ? s.text.replace(/-/g, ' ') : s.text,
+        // A bare [[id]] shows the title of the card it names.
+        s.text === s.target ? (app.set.get(s.target)?.title ?? s.text) : s.text,
       ),
     );
   }
