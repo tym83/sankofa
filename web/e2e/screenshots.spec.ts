@@ -153,3 +153,18 @@ test('the engine room and the coda', async ({ page }, info) => {
   await settle(page, 1500);
   await shot(page, '92-coda', p);
 });
+
+test('descent levels', async ({ page }, info) => {
+  const p = info.project.name;
+  for (const [url, name] of [
+    ['/#t=1781&view=descent&zoom=1', '61-descent-level1'],
+    ['/#t=1781&view=descent&zoom=3', '62-descent-level3'],
+    ['/#t=1925&view=descent&zoom=5', '63-descent-level5'],
+    ['/#t=1925&view=descent&zoom=4&lang=ru', '64-ru-descent-level4'],
+  ]) {
+    await page.goto(url);
+    await page.reload();
+    await settle(page, 2800);
+    await shot(page, name, p);
+  }
+});
