@@ -63,10 +63,12 @@ IP трёх узлов. Во всех вызовах kubectl к workshop явн�
 Внутри сборщика выполните `hack/kuberoot/bootstrap.py install IP1 IP2 IP3`,
 указав `KUBECTL` с путём к kubectl. Скрипт проверяет дистрибутив Sankofa и
 пустой диск `vdb`, устанавливает систему на диск и оставляет узлы работающими
-с носителя. У каждой собственной VMInstance замените `spec.disks` на
-`[{"name":"sankofa-N-system"}]`, выставьте `spec.runStrategy: Halted`,
-дождитесь исчезновения соответствующей VirtualMachineInstance и выставьте
-`runStrategy: Always`. Узел загрузится с установленного диска.
+с носителя. У каждой собственной VMInstance выставьте `spec.runStrategy: Halted` и
+дождитесь исчезновения соответствующей VirtualMachineInstance. Затем замените
+`spec.disks` на `[{"name":"sankofa-N-system"}]` и выставьте `runStrategy: Always`.
+Узел загрузится с установленного диска. Перед присоединением проверьте новые
+IP: они могут измениться. Не повторяйте команду `node` для установленной VM —
+она снова подключит загрузочный носитель.
 
 Затем внутри сборщика выполните `hack/kuberoot/bootstrap.py join IP1 IP2 IP3`.
 Скрипт проверит установленный boot slot и присоединит узлы 2 и 3 как workers.

@@ -64,10 +64,12 @@ All workshop kubectl calls must specify `--kubeconfig "$HOME/workshop.txt"
 Run `hack/kuberoot/bootstrap.py install IP1 IP2 IP3` **inside the builder**
 with `KUBECTL` pointing to its kubectl binary. It verifies the Sankofa distro
 and empty `vdb`, installs each node onto that disk, and leaves it running from
-media. On each owned VMInstance, replace `spec.disks` with just
-`[{"name":"sankofa-N-system"}]`, stop it with `spec.runStrategy: Halted`, wait
-for its VirtualMachineInstance to disappear, then set `runStrategy: Always`.
-This boots the installed system without its media disk.
+media. On each owned VMInstance, set `spec.runStrategy: Halted` and wait for its
+VirtualMachineInstance to disappear. Then replace `spec.disks` with just
+`[{"name":"sankofa-N-system"}]` and set `runStrategy: Always`.
+This boots the installed system without its media disk. Read the new VMI
+addresses before joining; addresses can change across a stop/start. Do not
+repeat the initial `node` command on installed VMs, since it reattaches media.
 
 Run `hack/kuberoot/bootstrap.py join IP1 IP2 IP3` in the builder. It waits for
 healthy installed boot slots and joins nodes 2 and 3 as workers using the node

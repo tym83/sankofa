@@ -90,7 +90,11 @@ def dead(ns):
 
 def cards():
     items = eventually(lambda: get('cards')['items'])
-    assert len(items) >= 10, 'embedded collection did not sync'
+    source = pathlib.Path(__file__).resolve().parents[2] / 'content' / 'cards'
+    expected = json.loads(cli('content', 'export', str(source)))['cards']
+    assert expected, 'source collection is empty'
+    actual = {c['metadata']['name']: c for c in items}
+    assert all(c['id'] in actual and actual[c['id']]['spec']['title'] == c['title'] for c in expected), 'source collection did not sync'
     # A unique server-only card proves the CLI did not use embedded/local content.
     spec = dict(items[0]['spec'], title=PREFIX, body='Server-only dictionary proof ' + PREFIX,
                 edition='both')
