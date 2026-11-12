@@ -21,6 +21,8 @@ sources:
   - {title: "Encyclopedia Virginia: Virginia act of December 1662", url: "https://encyclopediavirginia.org/primary-documents/negro-womens-children-to-serve-according-to-the-condition-of-the-mother-1662/"}
   - {title: "Encyclopedia Virginia: Baptism act of September 1667", url: "https://encyclopediavirginia.org/primary-documents/an-act-declaring-that-baptisme-of-slaves-doth-not-exempt-them-from-bondage-1667/"}
   - {title: "Encyclopedia Virginia: An act declaring that baptisme of slaves doth not exempt them from bondage (1667)", url: "https://encyclopediavirginia.org/entries/an-act-declaring-that-baptisme-of-slaves-doth-not-exempt-them-from-bondage-1667/"}
+media:
+  - {"type": "image", "file": "partus-1662.jpg", "caption": "Remains of the 1639 Jamestown church tower, with a twentieth-century reconstruction on the original foundations, 22 August 2008", "credit": "Tony Fischer; resized for display", "license": "CC BY 2.0", "url": "https://commons.wikimedia.org/wiki/File:1639_Jamestown_Church_(2883847775).jpg"}
 ---
 One sentence of Virginia law made slavery hereditary through the mother.
 Elizabeth Key was the daughter of an English planter, Thomas Key, and an

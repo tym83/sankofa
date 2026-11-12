@@ -24,6 +24,8 @@ sources:
   - {title: "Georg Leets: Abram Petrovich Gannibal (1984), documentary biography", url: "https://imwerden.de/pdf/leets_abram_petrovich_gannibal_1984__ocr.pdf"}
   - {title: "Ibrahima Gaye, 'African Pushkin', Philology. Theory & Practice 2024", url: "https://www.gramota.net/articles/phil20240134.pdf"}
   - {title: "Pushkin, Arap Petra Velikogo (Wikisource; dated 1827, Mikhailovskoye)", url: "https://ru.wikisource.org/wiki/%D0%90%D1%80%D0%B0%D0%BF_%D0%9F%D0%B5%D1%82%D1%80%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3%D0%BE_(%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD)"}
+media:
+  - {"type": "image", "file": "gannibal.jpg", "caption": "Letter from Abram Petrovich Gannibal to his son Pyotr, 10 November 1780", "credit": "Abram Petrovich Gannibal; scan uploaded by Eraevsky, from L. V. Kozmina, Petrovskoye: Pushkin and the Gannibals (2003); resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D1%81%D1%8C%D0%BC%D0%BE_%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D0%B0_%D0%93%D0%B0%D0%BD%D0%BD%D0%B8%D0%B1%D0%B0%D0%BB%D0%B0_%D1%81%D1%8B%D0%BD%D1%83_%D0%9F%D0%B5%D1%82%D1%80%D1%83.png"}
 ---
 Alexander Pushkin, Russia's national poet, was the great-grandson of an
 African boy who had been kidnapped. Held in Constantinople, the child was

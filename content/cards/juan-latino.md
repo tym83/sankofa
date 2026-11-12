@@ -20,5 +20,7 @@ sources:
   - {title: "Eduardo Soler Fiérrez, Juan Latino: biografía (Cultura y Pensamiento de los Pueblos Negros)", url: "http://culturaypensamientodelospueblosnegros.com/juan-latino-biografia-esclavo-catedratico-granada/"}
   - {title: "Cervantes, Don Quijote (Project Gutenberg #2000)", url: "https://www.gutenberg.org/cache/epub/2000/pg2000.txt"}
   - {title: "Wikipedia (es): Juan Latino", url: "https://es.wikipedia.org/wiki/Juan_Latino"}
+media:
+  - {"type": "image", "file": "juan-latino.jpg", "caption": "Title page of Juan Latino’s Latin poems, printed by Hugo de Mena, Granada, 1573", "credit": "Juan Latino; Boston Public Library, digitized with support from the Associates of the Boston Public Library; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Ad_Catholicvm,_pariter_et_invictissimvm_Phillippvm_Dei_gratia_Hispaniarum_regem_-_de_foelicissima_serenissimi_Ferdinandi_principis_natiuitate_(IA_adcatholicvmpari00lati).pdf"}
 ---
 An enslaved Black boy grew up to teach Latin in Granada, and Cervantes put him into Don Quixote. In the household of the future Duke of Sessa, the boy went with his young master to grammar classes in Granada; he went on to become a Latin professor there. In 1573, or 1572 by another dating, a Granada printer issued his Latin verse, led by the Austrias Carmen, an epic on Don John of Austria's victory at Lepanto. In 1605 Cervantes, in the clipped prefatory verses of Don Quixote, named "el negro Juan Lati-". Where he was born is disputed. Compare [[amo]] and [[saint-georges]].
