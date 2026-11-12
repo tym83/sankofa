@@ -84,6 +84,9 @@ func Export(s *card.Set) map[string]any {
 
 // lintQuests checks quests against the cards they reference.
 func lintQuests(dir string, s *card.Set) []error {
+	if _, err := os.Stat(dir); os.IsNotExist(err) {
+		return nil
+	}
 	qs, err := v1alpha1.LoadQuests(os.DirFS(dir))
 	if err != nil {
 		return []error{err}

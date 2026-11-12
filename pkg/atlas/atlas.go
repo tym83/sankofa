@@ -8,6 +8,11 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"unicode"
+
+	"golang.org/x/text/runes"
+	"golang.org/x/text/transform"
+	"golang.org/x/text/unicode/norm"
 )
 
 // DefaultBase is used when SANKOFA_MUSEUM_URL is not set.
@@ -108,7 +113,7 @@ func Hyperlink(enabled bool, target, text string) string {
 func Slug(name string) string {
 	var b strings.Builder
 	dash := false
-	for _, r := range strings.ToLower(name) {
+	for _, r := range strings.ToLower(fold(name)) {
 		switch {
 		case r >= 'a' && r <= 'z' || r >= '0' && r <= '9':
 			b.WriteRune(r)
@@ -119,4 +124,13 @@ func Slug(name string) string {
 		}
 	}
 	return strings.TrimSuffix(b.String(), "-")
+}
+
+// fold drops diacritics so that "Île de Gorée" becomes "ile-de-goree".
+func fold(s string) string {
+	t, _, err := transform.String(transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC), s)
+	if err != nil {
+		return s
+	}
+	return t
 }

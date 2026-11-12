@@ -12,3 +12,9 @@ func TestRoundTrip(t *testing.T) {
 		t.Fatal("zoom 9 must fail")
 	}
 }
+
+func TestSlug(t *testing.T) {
+	if got := Slug("Île de Gorée"); got != "ile-de-goree" {
+		t.Fatal(got)
+	}
+}

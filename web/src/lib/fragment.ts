@@ -98,7 +98,9 @@ export function safeParse(input: string): Point {
 export function slug(name: string): string {
   let b = '';
   let dash = false;
-  for (const r of name.toLowerCase()) {
+  // Like Go's fold: drop diacritics, so "Île de Gorée" is "ile-de-goree".
+  const folded = name.normalize('NFD').replace(/\p{Mn}/gu, '').normalize('NFC');
+  for (const r of folded.toLowerCase()) {
     if ((r >= 'a' && r <= 'z') || (r >= '0' && r <= '9')) {
       b += r;
       dash = false;

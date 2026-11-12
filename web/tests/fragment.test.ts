@@ -17,7 +17,7 @@ const GO_SLUGS: [string, string][] = [
   ['Salvador da Bahia', 'salvador-da-bahia'],
   ['Saint-Domingue (Haiti)', 'saint-domingue-haiti'],
   ['Fort-de-France', 'fort-de-france'],
-  ['Île de Gorée', 'le-de-gor-e'],
+  ['Île de Gorée', 'ile-de-goree'],
   ['  New  Orleans  ', 'new-orleans'],
 ];
 
