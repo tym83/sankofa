@@ -17,6 +17,7 @@ func main() {
 		SilenceErrors: true,
 	}
 	root.PersistentFlags().String("content", envOr("SANKOFA_CONTENT", ""), "read cards from a local content directory instead of the cluster")
+	kubeFlags.AddFlags(root.PersistentFlags())
 	root.AddCommand(contentCmd(), dictCmd())
 	if err := root.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, "sankofa:", err)

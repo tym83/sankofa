@@ -1,0 +1,201 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.23.0
+  name: cards.sankofa.kuberoot.dev
+spec:
+  group: sankofa.kuberoot.dev
+  names:
+    kind: Card
+    listKind: CardList
+    plural: cards
+    shortNames:
+    - cd
+    singular: card
+  scope: Cluster
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .spec.title
+      name: Title
+      type: string
+    - jsonPath: .spec.kind
+      name: Kind
+      type: string
+    - jsonPath: .spec.era
+      name: Era
+      type: string
+    - jsonPath: .spec.wow
+      name: Wow
+      priority: 1
+      type: string
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: |-
+          Card is an entry of the Sankofa dictionary. Read it with `sankofa dict`, or
+          open it in the museum at #focus=<name>.
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: CardSpec is one short, sourced piece of culture.
+            properties:
+              body:
+                description: The card text with [[id]] cross-references.
+                type: string
+              books:
+                description: voices (their own words), archives (records of those
+                  who traded and ruled), heirs (diaspora and memory).
+                items:
+                  type: string
+                minItems: 1
+                type: array
+              dispute:
+                type: string
+              edition:
+                enum:
+                - both
+                - m
+                - f
+                type: string
+              era:
+                type: string
+              further:
+                items:
+                  type: string
+                type: array
+              genres:
+                items:
+                  type: string
+                type: array
+              kind:
+                enum:
+                - person
+                - genre
+                - place
+                - object
+                - language
+                - script
+                - instrument
+                - event
+                - media
+                - work
+                - myth
+                - comparison
+                type: string
+              media:
+                items:
+                  description: Media is a public-domain or openly licensed image or
+                    recording.
+                  properties:
+                    caption:
+                      type: string
+                    credit:
+                      type: string
+                    file:
+                      type: string
+                    license:
+                      type: string
+                    type:
+                      enum:
+                      - image
+                      - audio
+                      type: string
+                    url:
+                      type: string
+                  required:
+                  - credit
+                  - file
+                  - license
+                  - type
+                  type: object
+                type: array
+              pair:
+                type: string
+              places:
+                items:
+                  description: Place is a point on the atlas.
+                  properties:
+                    lat:
+                      description: Latitude in degrees, as a decimal string.
+                      type: string
+                    lon:
+                      description: Longitude in degrees, as a decimal string.
+                      type: string
+                    name:
+                      type: string
+                  required:
+                  - lat
+                  - lon
+                  - name
+                  type: object
+                minItems: 1
+                type: array
+              sources:
+                items:
+                  description: Source backs the facts on a card.
+                  properties:
+                    title:
+                      type: string
+                    url:
+                      type: string
+                  required:
+                  - title
+                  type: object
+                minItems: 1
+                type: array
+              tags:
+                items:
+                  type: string
+                type: array
+              title:
+                type: string
+              wow:
+                description: The one-line hook.
+                type: string
+              years:
+                items:
+                  type: integer
+                maxItems: 2
+                minItems: 1
+                type: array
+              zoom:
+                description: 'Atlas zoom: 1 centuries, 2 regions, 3 cities and genres,
+                  4 people, 5 a document.'
+                maximum: 5
+                minimum: 1
+                type: integer
+            required:
+            - body
+            - books
+            - kind
+            - places
+            - sources
+            - title
+            - wow
+            - years
+            - zoom
+            type: object
+        required:
+        - spec
+        type: object
+    served: true
+    storage: true
+    subresources: {}
