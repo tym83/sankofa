@@ -20,6 +20,8 @@ sources:
   - {title: "JSTOR Daily: Hearing Aunt Harriet (interviewed about 2,300 people)", url: "https://daily.jstor.org/hearing-aunt-harriet-slave-narratives"}
   - {title: "LoC, Norman R. Yetman: Limitations of the Slave Narrative Collection", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/articles-and-essays/introduction-to-the-wpa-slave-narratives/limitations-of-the-slave-narrative-collection/?fo=json"}
   - {title: "LoC: A Note on the Language of the Narratives", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/articles-and-essays/note-on-the-language-of-the-narratives/?fo=json"}
+media:
+  - {"type": "image", "file": "wpa-narratives.jpg", "caption": "Hannah Crasson, photographed for the Federal Writers' Project slave narratives, between 1937 and about 1938", "credit": "U.S. Works Progress Administration, Federal Writers' Project; Library of Congress Prints and Photographs Division; resized for display", "license": "Public domain", "url": "https://www.loc.gov/item/99615427/"}
 ---
 The answers people born into slavery gave in the 1930s changed with the
 colour of the person asking. Between 1936 and 1938 the Federal Writers'

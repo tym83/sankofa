@@ -1,4 +1,5 @@
-# Exact rights statements from the linked file pages. JPEG derivatives retain their source licences.
+# Verified source-page rights quotations; dates and contextual substitutions are noted per image.
+# JPEG derivatives retain their source licences.
 - card: adlam
   file: adlam.jpg
   url: https://commons.wikimedia.org/wiki/File:The_Adlam_of_Fulfulde.jpg
@@ -116,13 +117,17 @@
   source_revision: https://commons.wikimedia.org/w/index.php?title=File:Emmett_Till%27s_Chicago_home_6427_S._St._Lawrence_Avenue.jpg&oldid=1247808890
 - card: gannibal
   file: gannibal.jpg
-  url: https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D1%81%D1%8C%D0%BC%D0%BE_%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D0%B0_%D0%93%D0%B0%D0%BD%D0%BD%D0%B8%D0%B1%D0%B0%D0%BB%D0%B0_%D1%81%D1%8B%D0%BD%D1%83_%D0%9F%D0%B5%D1%82%D1%80%D1%83.png
-  license: Public domain
-  license_wording: This work is in the public domain in the United States because it was published (or
-    registered with the U.S. Copyright Office ) before January 1, 1931.
+  url: https://commons.wikimedia.org/wiki/File:Outbuildin_Suyda,_Gatchinsky_district,_Leningrad_region.jpg
+  license: CC BY-SA 4.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International
+    license.
+  note: Contextual photograph of the Suyda estate. The letter-image candidate was rejected because its
+    Russian-Empire publication template did not establish the rights to the modern reproduction.
   verified_on: '2026-11-12'
-  sha256: 4b4fa846181f143a84b5871fcd85f530b8aa4647ee850ba67e14477ae7bb3ac8
-  source_revision: https://commons.wikimedia.org/w/index.php?title=File:%D0%9F%D0%B8%D1%81%D1%8C%D0%BC%D0%BE_%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D0%B0_%D0%93%D0%B0%D0%BD%D0%BD%D0%B8%D0%B1%D0%B0%D0%BB%D0%B0_%D1%81%D1%8B%D0%BD%D1%83_%D0%9F%D0%B5%D1%82%D1%80%D1%83.png&oldid=1104902267
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  sha256: 3fe51acaf7cda0a317fa27d73162ae1345a79e1616e5aeadf255c60d43fbe00f
+  context_source: https://www.lenoblmus.ru/museums/muzey-usadba-suyda
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Outbuildin_Suyda,_Gatchinsky_district,_Leningrad_region.jpg&oldid=1082768580
 - card: hannah-crafts
   file: hannah-crafts.jpg
   url: https://commons.wikimedia.org/wiki/File:Henry_Louis_Gates,_Jr.jpg
@@ -334,6 +339,18 @@
   license_url: https://creativecommons.org/licenses/by-sa/4.0/
   sha256: e6375470bbfccc09177767863c3ddbd8254a4a09faf2c05d6d10f1fb430505e5
   source_revision: https://commons.wikimedia.org/w/index.php?title=File:Roda_de_Samba_-_Tijuca_-_RJ.jpg&oldid=1277011387
+- card: slavevoyages
+  file: slavevoyages.jpg
+  url: https://commons.wikimedia.org/wiki/File:Kaart_met_plattegrond_van_Fort_Elmina,_ca._1636-1644_Castrum_Mina_(titel_op_object),_BI-1892-3415-22.jpg
+  license: CC0
+  license_wording: This file is made available under the Creative Commons CC0 1.0 Universal Public Domain
+    Dedication .
+  note: Historical map of an Atlantic trading fort; not a visualisation or screenshot of the SlaveVoyages
+    database.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  sha256: b5259e8e4e758271c71248a750e1ee3f88386eda3d3673d4d77209d24a99c3e5
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Kaart_met_plattegrond_van_Fort_Elmina,_ca._1636-1644_Castrum_Mina_(titel_op_object),_BI-1892-3415-22.jpg&oldid=1159026905
 - card: sojourner-truth
   file: sojourner-truth.jpg
   url: https://www.loc.gov/item/scsm000880/
@@ -348,6 +365,28 @@
   note: 'Public domain: historical work dated 1864 on the item page; no conflicting rights advisory.'
   verified_on: '2026-11-12'
   sha256: a9d66586dddcd15ab524602dbb765dba45823ff85ad7c3f7b56841c7323829f3
+- card: stolen-legacy
+  file: stolen-legacy.jpg
+  url: https://commons.wikimedia.org/wiki/File:Library_of_Alexandria_(1).jpg
+  license: CC BY-SA 4.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International
+    license.
+  note: The image is the modern library, not a reconstruction or surviving interior of the ancient Library
+    of Alexandria.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  sha256: d46a90c767be11a63a31432c2e3ac87e07abb2d955023c69536db73bf1e504a5
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Library_of_Alexandria_(1).jpg&oldid=687532390
+- card: stono-drum-ban
+  file: stono-drum-ban.jpg
+  url: https://commons.wikimedia.org/wiki/File:Stono_Rebellion_site_-_Jan_23_2013.jpg
+  license: CC BY-SA 3.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported
+    license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  sha256: 7e5e1f66f86ab30bb7cd3b35f845d34a72ca994235af3066c4233205ceb6aa1c
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Stono_Rebellion_site_-_Jan_23_2013.jpg&oldid=1286398333
 - card: tutuola
   file: tutuola.jpg
   url: https://commons.wikimedia.org/wiki/File:A_palm_wine_tapper_01.jpg
@@ -360,6 +399,85 @@
   license_url: https://creativecommons.org/publicdomain/zero/1.0/
   sha256: 49c76c42611a3832baaee1be54722330a6bd8446d0b6ef35a78be705e7eb88cd
   source_revision: https://commons.wikimedia.org/w/index.php?title=File:A_palm_wine_tapper_01.jpg&oldid=1109319214
+- card: underground-railroad-myths
+  file: underground-railroad-myths.jpg
+  url: https://commons.wikimedia.org/wiki/File:The_underground_rail_road._A_record_of_facts,_authentic_narratives,_letters,_%26c.,_narrating_the_hardships,_hairbreadth_escapes_and_death_struggles_of_the_slaves_in_their_efforts_for_freedom_(1872)_(14574304928).jpg
+  license: Public domain
+  license_wording: No known copyright restrictions
+  note: 'The source explicitly identifies the 1872 publication (Philadelphia: Porter & Coates) and William
+    Still (1821–1902). The scan is of the historical print, not a modern reconstruction.'
+  verified_on: '2026-11-12'
+  sha256: 0029db018298ecd3ce193d3b923df433e1b0c58d3d5a634eb9bc8e936cfeabb5
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:The_underground_rail_road._A_record_of_facts,_authentic_narratives,_letters,_%26c.,_narrating_the_hardships,_hairbreadth_escapes_and_death_struggles_of_the_slaves_in_their_efforts_for_freedom_(1872)_(14574304928).jpg&oldid=749288080
+- card: v2
+  file: hero-v2.jpg
+  url: https://commons.wikimedia.org/wiki/File:South-carolina-volunteers_raid_on_Combahee.jpg
+  license: Public domain
+  license_wording: This work was published before January 1, 1901 and it is anonymous or pseudonymous
+    due to unknown authorship. It is in the public domain in the United States as well as countries and
+    areas where the copyright terms of anonymous or pseudonymous works are 125 years or fewer since publication
+    .
+  verified_on: '2026-11-12'
+  sha256: 12efedf9c8cd0d3f12da84d805a70d3edcc9060e8dc8c14286eba89948288a6a
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:South-carolina-volunteers_raid_on_Combahee.jpg&oldid=1089674062
+- card: v3
+  file: hero-v3.jpg
+  url: https://commons.wikimedia.org/wiki/File:Samuel_J._Miller_-_Frederick_Douglass_-_Google_Art_Project.jpg
+  license: Public domain
+  license_wording: The author died in 1888, so this work is in the public domain in its country of origin
+    and other countries and areas where the copyright term is the author's life plus 100 years or fewer
+    . This work is in the public domain in the United States because it was published (or registered with
+    the U.S. Copyright Office ) before January 1, 1931. This photographic reproduction is therefore also
+    considered to be in the public domain in the United States.
+  verified_on: '2026-11-12'
+  sha256: b138f1b35fa28c410c8689b77f23f729053d5054cc1a0d6617829eef121f50b3
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Samuel_J._Miller_-_Frederick_Douglass_-_Google_Art_Project.jpg&oldid=1124712607
+- card: v5
+  file: hero-v5.jpg
+  url: https://www.loc.gov/item/2013650428/
+  license: Public domain
+  license_wording: No known restrictions on publication.
+  note: Published/exhibited in 1900; the item page identifies the date and states no known restrictions
+    on publication.
+  verified_on: '2026-11-12'
+  sha256: 495ce56920b54dd309291d6207c1c8cc6352b0c13afbf577b95a8f5cd78700ab
+  corroborating_source: https://commons.wikimedia.org/wiki/File:The_Georgia_Negro_LCCN2013650428.jpg
+  corroborating_license_wording: This work is in the public domain in the United States because it was
+    published (or registered with the U.S. Copyright Office ) before January 1, 1931.
+- card: v6
+  file: hero-v6.jpg
+  url: https://commons.wikimedia.org/wiki/File:March_on_Washington_edit.jpg
+  license: Public domain
+  license_wording: It is part of a collection donated to the Library of Congress.  Per the deed of gift,
+    U.S. News & World Report dedicated to the public all rights it held for the photographs in this collection
+    upon its donation to the Library. Photographs in this collection by one of the photographers above
+    are in the public domain.
+  verified_on: '2026-11-12'
+  sha256: 786a3f67b01f071d5ec2a74a98a1118a235d2f17f162927bc4d8a91be5150bbe
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:March_on_Washington_edit.jpg&oldid=1009467545
+- card: walkers-appeal
+  file: walkers-appeal.jpg
+  url: https://www.loc.gov/item/92513183/
+  license: Public domain
+  license_wording: No known restrictions on publication.
+  note: 'Public domain: historical work dated 1848 on the item page; no conflicting rights advisory.'
+  verified_on: '2026-11-12'
+  sha256: 7028a14a611158976c4b595470a89e5d6486d58b7705a75e3c24b6a0bc158e54
+  corroborating_source: https://commons.wikimedia.org/wiki/File:Title_page_and_frontispiece_showing_slave_on_top_of_mountain,_with_his_hands_raised_to_paper_labelled_%22libertas_justitia%22_which_appears_in_sky)_-_Childs_LCCN92513183.jpg
+  corroborating_license_wording: This work is in the public domain in its country of origin and other
+    countries and areas where the copyright term is the author's life plus 100 years or fewer . This work
+    is in the public domain in the United States because it was published (or registered with the U.S.
+    Copyright Office ) before January 1, 1931.
+- card: what-black-means
+  file: what-black-means.jpg
+  url: https://commons.wikimedia.org/wiki/File:Congreso_Futuro_2020_-_Chimamanda_Ngozi_Adichie_02.jpg
+  license: CC BY-SA 4.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International
+    license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  sha256: bca9c0c855a7eb73af5d9b0abcafa5b7783a4ade0defab354c7e461cf1ac01a2
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Congreso_Futuro_2020_-_Chimamanda_Ngozi_Adichie_02.jpg&oldid=1165128632
 - card: work-songs
   file: work-songs.jpg
   url: https://commons.wikimedia.org/wiki/File:Leadbelly,_National_Press_Club,_Washington,_D.C.,_between_1938_and_1948_(William_P._Gottlieb_13561).jpg
@@ -369,3 +487,23 @@
   verified_on: '2026-11-12'
   sha256: f00db121c3f08c39cdec60ff37816017d1f8cca006c442040831c8377c12bcd0
   source_revision: https://commons.wikimedia.org/w/index.php?title=File:Leadbelly,_National_Press_Club,_Washington,_D.C.,_between_1938_and_1948_(William_P._Gottlieb_13561).jpg&oldid=1040713207
+- card: wpa-narratives
+  file: wpa-narratives.jpg
+  url: https://www.loc.gov/item/99615427/
+  license: Public domain
+  license_wording: U.S. Government employees created the materials in this collection. Generally speaking,
+    works created by U.S. Government employees are not eligible for copyright protection in the United
+    States, although they may be under copyright in some foreign countries.
+  note: 'Public domain: US government work.'
+  verified_on: '2026-11-12'
+  sha256: 21cfa2845fcb1e6e07e7517364f06e956651e1751445794805453a2d12be4ce4
+- card: zong
+  file: zong.jpg
+  url: https://commons.wikimedia.org/wiki/File:Portrait_of_Granville_Sharp_(4671963).jpg
+  license: Public domain
+  license_wording: This work is in the public domain in its country of origin and other countries and
+    areas where the copyright term is the author's life plus 100 years or fewer .
+  note: Portrait of the abolitionist named in the card, not a representation of the massacre.
+  verified_on: '2026-11-12'
+  sha256: 37974f6e0fe3f667734bc233ae10856b12366670bbecf7d5f52e61b9a4b9071d
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Portrait_of_Granville_Sharp_(4671963).jpg&oldid=967932779
