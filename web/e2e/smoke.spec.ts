@@ -187,3 +187,30 @@ test('a deep link with lang=ru opens the atlas and the card in Russian', async (
   await card.getByRole('button', { name: 'Открыть в терминале' }).click();
   await expect(card.locator('.term code')).toContainText('lang=ru');
 });
+
+test('the engine room shows cards as Kubernetes objects', async ({ page }) => {
+  await page.goto('/#view=engine');
+  await expect(page.locator('.engine.open')).toBeVisible();
+  await expect(page.locator('.engine .term pre').first()).toContainText('kubectl get cards');
+  await expect(page.locator('.e-yaml pre')).toContainText('kind: Card');
+  await expect(page.locator('.e-card')).toHaveCount(6);
+});
+
+test('#view=atlas opens the atlas on first load, and a card shows its object', async ({ page }) => {
+  await page.goto('/#view=atlas');
+  await expect(page.locator('.atlas.open')).toBeVisible();
+  await page.goto('/#focus=equiano');
+  await page.reload();
+  const det = page.locator('.drawer.on details.k8s');
+  await det.locator('summary').click();
+  await expect(det.locator('pre')).toContainText('sankofa dict equiano');
+  await expect(det.locator('pre')).toContainText('apiVersion: sankofa.kuberoot.dev/v1alpha1');
+});
+
+test('the demo lets you break a node and hear it fall silent', async ({ page }) => {
+  await page.goto('/#view=listen');
+  await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/, { timeout: 8000 });
+  await page.getByRole('button', { name: 'Break a node' }).click();
+  await expect.poll(() => page.locator('.l-node.silent').count()).toBeGreaterThan(0);
+  await expect(page.getByRole('button', { name: 'Mend the node' })).toBeVisible();
+});

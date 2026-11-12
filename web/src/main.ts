@@ -14,6 +14,7 @@ import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
 import { Descent } from './views/descent';
 import { Listen } from './views/listen';
+import { Engine } from './views/engine';
 
 async function load<T>(url: string): Promise<T> {
   const r = await fetch(url);
@@ -61,6 +62,7 @@ async function start(): Promise<void> {
     return;
   }
 
+  const rawCards = new Map(cardsFile.cards.map((c) => [c.id, c]));
   const set = new CardSet(cardsFile.cards.map((c) => localizeCard(c, current)));
   const chapters = sortChapters(chaptersFile.chapters.map((c) => localizeChapter(c, current)));
   const cardDrawer = new Drawer(t('Card'));
@@ -71,6 +73,15 @@ async function start(): Promise<void> {
 
   const app: App = {
     set,
+    raw: (id) => rawCards.get(id),
+    openEngine(push = true) {
+      cardDrawer.close(true);
+      bookDrawer.close(true);
+      closeOverlays('engine');
+      route = { point: {}, view: 'engine' };
+      writeRoute(route, push);
+      engine.open();
+    },
     chapters,
     edition: reader.edition(),
     media: (file) => `media/${file}`,
@@ -86,7 +97,7 @@ async function start(): Promise<void> {
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
-      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
+      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
       writeRoute(route, opts.push ?? true);
     },
     closeCard() {
@@ -94,9 +105,10 @@ async function start(): Promise<void> {
     },
     openAtlas(p, push = true) {
       cardDrawer.close(true);
-      if (descent.isOpen) descent.close();
+      closeOverlays('atlas');
       bookDrawer.close(true);
-      route = { point: p };
+      // A bare atlas has no point to show; name the view so the link opens it.
+      route = { point: p, view: p.from || p.place || p.zoom || p.path?.length ? undefined : 'atlas' };
       writeRoute(route, push);
       atlas.open(p);
       if (p.focus) app.openCard(p.focus, { push: false, exact: !!p.path?.includes(p.focus) });
@@ -125,7 +137,7 @@ async function start(): Promise<void> {
     openDescent(year, push = true) {
       cardDrawer.close(true);
       bookDrawer.close(true);
-      if (atlas.isOpen) atlas.close();
+      closeOverlays('descent');
       route = { point: year ? { from: year } : {}, view: 'descent' };
       writeRoute(route, push);
       descent.open(year);
@@ -143,6 +155,18 @@ async function start(): Promise<void> {
   descent.onYear = (year) => {
     route = { point: { from: year, focus: route.point.focus }, view: 'descent' };
     writeRoute(route, false);
+  };
+  const engine = new Engine(app);
+  engine.onClose = () => {
+    engine.close();
+    route = { point: {}, ch: chapterNow ?? undefined };
+    writeRoute(route, false);
+  };
+  const closeOverlays = (keep?: string) => {
+    if (keep !== 'atlas' && atlas.isOpen) atlas.close();
+    if (keep !== 'descent' && descent.isOpen) descent.close();
+    if (keep !== 'listen' && listen.isOpen) listen.close();
+    if (keep !== 'engine' && engine.isOpen) engine.close();
   };
   const listen = new Listen(app);
   listen.onClose = () => {
@@ -183,6 +207,7 @@ async function start(): Promise<void> {
   );
   document.querySelector('[data-open-descent]')?.prepend(svgIcon('down'));
   document.querySelector('[data-open-listen]')?.prepend(svgIcon('wave'));
+  document.querySelector('[data-open-engine]')?.prepend(svgIcon('term'));
   buildStory(app, document.getElementById('story')!);
   trackChapters(app);
   loading.remove();
@@ -203,11 +228,16 @@ async function start(): Promise<void> {
 
   // Inline card links anywhere open the card in place.
   document.addEventListener('click', (e) => {
+    const en = (e.target as Element).closest<HTMLElement>('[data-engine]');
+    if (en) {
+      e.preventDefault();
+      app.openEngine();
+      return;
+    }
     const l = (e.target as Element).closest<HTMLElement>('[data-listen]');
     if (l) {
       e.preventDefault();
-      if (descent.isOpen) descent.close();
-      if (atlas.isOpen) atlas.close();
+      closeOverlays('listen');
       cardDrawer.close(true);
       route = { point: {}, view: 'listen' };
       writeRoute(route, true);
@@ -237,22 +267,12 @@ async function start(): Promise<void> {
   const apply = (initial: boolean) => {
     route = readRoute();
     const screen = screenOf(route);
-    if (screen !== 'listen' && listen.isOpen) listen.close();
-    if (screen === 'listen') {
-      if (atlas.isOpen) atlas.close();
-      if (descent.isOpen) descent.close();
-      listen.open();
-    } else if (screen === 'descent') {
-      if (atlas.isOpen) atlas.close();
-      descent.open(route.point.from);
-    } else if (screen === 'atlas') {
-      if (descent.isOpen) descent.close();
-      atlas.open(route.point);
-    } else {
-      if (atlas.isOpen) atlas.close();
-      if (descent.isOpen) descent.close();
-      if (route.ch && (initial || route.ch !== chapterNow)) scrollToChapter(route.ch, initial);
-    }
+    closeOverlays(screen);
+    if (screen === 'listen') listen.open();
+    else if (screen === 'engine') engine.open();
+    else if (screen === 'descent') descent.open(route.point.from);
+    else if (screen === 'atlas') atlas.open(route.point);
+    else if (route.ch && (initial || route.ch !== chapterNow)) scrollToChapter(route.ch, initial);
     if (route.point.focus) app.openCard(route.point.focus, { push: false });
     else cardDrawer.close(true);
   };

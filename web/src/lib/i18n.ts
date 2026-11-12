@@ -81,6 +81,11 @@ export function yearsAgo(n: number, l: Lang = current): string {
   return l === 'ru' ? `${count(n, 'year', l)} назад` : `${count(n, 'year', l)} ago`;
 }
 
+/** Pick the reader's language from a pair written side by side. */
+export function pick<T>(o: { en: T; ru: T }): T {
+  return current === 'ru' ? o.ru : o.en;
+}
+
 /** Translate an interface string; {name} placeholders are filled from vars. */
 export function t(en: string, vars?: Record<string, string | number>): string {
   const s = current === 'ru' ? (RU[en] ?? en) : en;
@@ -99,6 +104,10 @@ export function edition(e: 'm' | 'f', form: 'nom' | 'prep' = 'nom'): string {
 
 export const RU: Record<string, string> = {
   // nav and shell
+  'The engine room': 'Машинное отделение',
+  'Engine room': 'Машинное отделение',
+  'This card is a Kubernetes object': 'Эта карточка — объект Kubernetes',
+  'Read it in the terminal': 'Прочитать в терминале',
   'Skip to the story': 'Перейти к истории',
   Descend: 'Сквозь века',
   Atlas: 'Атлас',
@@ -239,8 +248,8 @@ export const RU: Record<string, string> = {
   'Start listening': 'Начать слушать',
   Stop: 'Остановить',
   'The bell timeline in the centre and one drum per node around it': 'Колокольный ритм в центре и по барабану на каждый узел вокруг',
-  'Bell: the control plane': 'Колокол: control plane',
-  'Drum: a node, renewing its Lease': 'Барабан: узел, обновляющий свой Lease',
+  'Bell: the control plane': 'Колокол — это управляющая машина (control plane)',
+  'Drum: a node, renewing its Lease': 'Барабан — машина кластера, пока она подаёт сигнал жизни',
   'Wavering: the heartbeat is late': 'Дрожь: сердцебиение запаздывает',
   'Hollow: the node is silent': 'Пустой круг: узел молчит',
   'Filled: a pod answered': 'Заполненный: под откликнулся',
@@ -252,6 +261,7 @@ export const RU: Record<string, string> = {
   'Listening for the cluster…': 'Прислушиваемся к кластеру…',
   'No nodes yet.': 'Узлов пока нет.',
   Call: 'Зов',
+  node: 'узел',
   silent: 'молчит',
   '{ready} ready': 'готовы: {ready}',
   '{n} silent': 'молчат: {n}',

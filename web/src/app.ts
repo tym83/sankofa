@@ -8,6 +8,9 @@ import { bookMarks, h } from './lib/dom';
 
 export interface App {
   set: CardSet;
+  /** The card as exported (English, with translations), as the cluster holds it. */
+  raw(id: string): Card | undefined;
+  openEngine(push?: boolean): void;
   chapters: Chapter[];
   edition: 'm' | 'f';
   media(file: string): string;

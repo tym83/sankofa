@@ -23,3 +23,9 @@ if [ -d "$src/media" ]; then
   cp -R "$src/media/." web/public/media/
 fi
 echo "media: $(ls web/public/media | wc -l | tr -d ' ') files"
+# The public, read-only visitor kubeconfig (hack/stand/visitor-kubeconfig.sh),
+# offered in the engine room when the stand has produced one.
+if [ -f dist/visitor.kubeconfig ]; then
+  cp dist/visitor.kubeconfig web/public/visitor.kubeconfig
+  echo "visitor kubeconfig: included"
+fi

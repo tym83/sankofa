@@ -25,6 +25,11 @@ describe('route', () => {
     expect(formatRoute({ point: {}, view: 'listen' })).toBe('view=listen');
   });
 
+  it('opens the atlas and the engine room by view', () => {
+    expect(screenOf(parseRoute('view=atlas'))).toBe('atlas');
+    expect(screenOf(parseRoute('view=engine'))).toBe('engine');
+  });
+
   it('ignores unknown views', () => {
     expect(parseRoute('view=nope').view).toBeUndefined();
   });

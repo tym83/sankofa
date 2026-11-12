@@ -7,6 +7,7 @@ import { formatFragment, terminalCommand } from '../lib/fragment';
 import { bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
 import { edition, lang, t } from '../lib/i18n';
+import { cardYaml } from '../lib/cardYaml';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
 export class Drawer {
@@ -36,7 +37,9 @@ export class Drawer {
   show(content: HTMLElement): void {
     if (!this.isOpen) this.returnTo = document.activeElement;
     const close = h('button.icon-btn.close', { 'aria-label': t('Close'), onclick: () => this.close() }, svgIcon('close'));
-    this.el.replaceChildren(close, content);
+    // A sticky header holds the close button, so it never covers the text.
+    const bar = h('div.drawer-bar', {}, h('span.drawer-label', {}, content.dataset.label ?? ''), close);
+    this.el.replaceChildren(bar, content);
     this.el.scrollTop = 0;
     this.el.classList.add('on');
     this.scrim.classList.add('on');
@@ -185,6 +188,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       ),
     ),
     term,
+    k8sObject(app, c),
     h(
       'section.sec.sources',
       {},
@@ -213,7 +217,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       )
     : null;
 
-  return h('article.card', { 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
+  return h('article.card', { 'data-label': `${(c.era ?? '').toUpperCase()} · ${KIND_LABEL[c.kind] ?? c.kind}`, 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
 }
 
 export function renderBook(app: App, path: string[], actions: { share(): void; replay(): void; clear(): void }): HTMLElement {
@@ -249,4 +253,18 @@ export function renderBook(app: App, path: string[], actions: { share(): void; r
         )
       : null,
   );
+}
+
+/** The card as the object the cluster stores, behind a quiet toggle. */
+function k8sObject(app: App, c: Card): HTMLElement {
+  const raw = app.raw(c.id) ?? c;
+  const cmd = `sankofa dict ${c.id}`;
+  const det = h(
+    'details.sec.k8s',
+    {},
+    h('summary', {}, svgIcon('term'), t('This card is a Kubernetes object')),
+    h('div.term.on.multi', {}, h('pre', {}, `$ ${cmd}\n$ kubectl get card ${c.id} -o yaml\n${cardYaml(raw)}`)),
+  );
+  det.querySelector('.term')!.append(h('button', { onclick: async () => toast((await copyText(cmd)) ? t('Command copied') : t('Copy failed')) }, t('Copy')));
+  return det;
 }

@@ -3,7 +3,7 @@
 // atlas.Parse ignores these keys, so terminal links stay compatible.
 import { formatFragment, goQueryEscape, safeParse, type Point } from './fragment';
 
-export type View = 'descent' | 'listen';
+export type View = 'descent' | 'listen' | 'atlas' | 'engine';
 
 export interface Route {
   point: Point;
@@ -15,7 +15,7 @@ export function parseRoute(hash: string): Route {
   const s = hash.startsWith('#') ? hash.slice(1) : hash;
   const q = new URLSearchParams(s);
   const v = q.get('view');
-  const view = v === 'descent' || v === 'listen' ? v : undefined;
+  const view = v === 'descent' || v === 'listen' || v === 'atlas' || v === 'engine' ? v : undefined;
   return { point: safeParse(s), ch: q.get('ch') ?? undefined, view };
 }
 
@@ -28,7 +28,7 @@ export function formatRoute(r: Route): string {
 }
 
 /** Which screen a route opens. */
-export function screenOf(r: Route): View | 'atlas' | 'story' {
+export function screenOf(r: Route): View | 'story' {
   if (r.view) return r.view;
   if (!r.ch && (r.point.path?.length || r.point.from || r.point.place || r.point.zoom)) return 'atlas';
   return 'story';

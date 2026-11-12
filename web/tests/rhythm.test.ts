@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { BELL, PARTS, demoLeases, demoVoices, exchange, parsePulse, playing, strokes } from '../src/lib/rhythm';
+import { BELL, PARTS, demoLeases, demoVoices, demoWith, drumName, exchange, parsePulse, playing, strokes } from '../src/lib/rhythm';
 
 describe('rhythm', () => {
   it('the bell plays seven strokes in twelve pulses', () => {
@@ -46,5 +46,19 @@ describe('rhythm', () => {
     expect(demoVoices(40)[1].alive).toBe(true);
     expect(demoVoices(40)[2].notReady).toBeGreaterThan(0);
     expect(demoLeases(0, 30).length).toBeGreaterThan(3);
+  });
+});
+
+describe('demo interventions and names', () => {
+  it('breaks a node and fails pods on request', () => {
+    const v = demoWith(40, { broken: true, failing: true });
+    expect(v[1].alive).toBe(false);
+    expect(v[2].notReady).toBeGreaterThanOrEqual(2);
+    expect(demoWith(40, {})[1].alive).toBe(true);
+  });
+
+  it('names nodes after drums', () => {
+    expect(drumName(0)).toBe('Atsimevu');
+    expect(drumName(6)).toBe('Atsimevu 2');
   });
 });

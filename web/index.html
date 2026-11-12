@@ -30,6 +30,7 @@
         if (l === 'ru') document.title = 'Sankofa — Вернись и забери';
       })();
     </script>
+    <link rel="preload" as="image" href="media/hero-v0.jpg" fetchpriority="high" />
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
@@ -41,6 +42,7 @@
         <button class="btn" type="button" data-open-descent data-descent=""><span class="label"><span data-l="en">Descend</span><span data-l="ru">Сквозь века</span></span></button>
         <button class="btn" type="button" data-open-atlas><span class="label"><span data-l="en">Atlas</span><span data-l="ru">Атлас</span></span></button>
         <button class="btn" type="button" data-open-listen data-listen=""><span class="label"><span data-l="en">Listen</span><span data-l="ru">Слушать</span></span></button>
+        <button class="btn" type="button" data-open-engine data-engine=""><span class="label"><span data-l="en">Engine room</span><span data-l="ru">Машинное отделение</span></span></button>
         <button class="btn" type="button" data-open-book><span class="label"><span data-l="en">Your book</span><span data-l="ru">Ваша книга</span></span> <span class="count" data-path-count>0</span></button>
         <button class="btn lang-switch" type="button" data-lang-switch><span data-l="en" lang="ru" aria-label="Читать по-русски">RU</span><span data-l="ru" lang="en" aria-label="Read in English">EN</span></button>
         <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme"></button>
@@ -48,36 +50,42 @@
     </nav>
     <main id="story" tabindex="-1">
       <section class="cover" aria-labelledby="cover-title">
-        <div class="cover-map" aria-hidden="true"></div>
+        <figure class="cover-art">
+          <img src="media/hero-v0.jpg" alt="" fetchpriority="high" decoding="async" />
+        </figure>
         <div class="cover-inner">
           <div class="cover-lang" role="group" aria-label="Language · Язык">
             <a href="#lang=en" data-set-lang="en" lang="en">English</a>
             <a href="#lang=ru" data-set-lang="ru" lang="ru">Русский</a>
           </div>
-          <div class="kicker"><span data-l="en">A museum that ships as a Kubernetes distribution</span><span data-l="ru">Музей, который поставляется как дистрибутив Kubernetes</span></div>
           <h1 id="cover-title">Sanko<em>f</em>a</h1>
           <p class="deck" data-l="en">Seven centuries of Black culture, from the libraries of Timbuktu to the starships of Sun Ra.</p>
           <p class="deck" data-l="ru">Семь веков чёрной культуры — от библиотек Тимбукту до звездолётов Сан Ра.</p>
-          <p class="meaning" data-l="en"><b>Sankofa</b> is an Adinkra symbol of the Akan people of Ghana: a bird that turns its head back to take an egg from its own back. <i>Go back and fetch what you left behind.</i></p>
-          <p class="meaning" data-l="ru"><b>Санкофа</b> — символ адинкра народа акан из Ганы: птица, повернувшая голову назад, чтобы взять яйцо со своей спины. <i>Вернись и забери то, что оставил.</i></p>
+          <p class="cover-wow" data-l="en">Around 1324 a king of Mali, on his way to Mecca, spent so much gold in Cairo that its price there was still low twelve years later.</p>
+          <p class="cover-wow" data-l="ru">Около 1324 года король Мали по пути в Мекку потратил в Каире столько золота, что и двенадцать лет спустя оно стоило там дешевле прежнего.</p>
           <div class="cover-actions">
             <a class="btn primary" href="#t=1300&amp;view=descent" data-descent=""><span data-l="en">Descend through seven centuries</span><span data-l="ru">Спуститься сквозь семь веков</span></a>
             <a class="btn l-cover" href="#view=listen" data-listen=""><span data-l="en">Listen to the cluster</span><span data-l="ru">Послушать кластер</span></a>
             <a class="cue" href="#opener"><i aria-hidden="true"></i><span data-l="en">Or begin before the ships</span><span data-l="ru">Или начать с того, что было до кораблей</span></a>
           </div>
         </div>
+        <p class="credit cover-credit"><span data-l="en">Mansa Musa on the Catalan Atlas, about 1375</span><span data-l="ru">Манса Муса в Каталанском атласе, около 1375 года</span> · Bibliothèque nationale de France · <span data-l="en">public domain</span><span data-l="ru">общественное достояние</span></p>
       </section>
       <section class="opener" id="opener" aria-label="Introduction">
         <div data-l="en">
-          <p class="lede">In 2020, Kubernetes began to retire a word. The machine that runs the cluster stopped being called the master and became the control plane. Most engineers changed a label and moved on. This museum starts at that commit and goes back: to where the word came from, and to everything built, sung, written and invented by the people that pair of words was once made of.</p>
-          <p>It is a distribution and a monument at once. Every era is a release, from <b>v0</b> to <b>v7</b>: Africa before the slave trade, the Middle Passage, the revolutions, the voices, the diaspora, Harlem and Négritude, civil rights, Afrofuturism. Every page is a card: a few lines, one surprise, and a road further.</p>
+          <p class="lede">This museum tells seven centuries of Black culture in eight chapters: Africa before the slave trade, the Middle Passage, the revolutions, the voices, the diaspora, Harlem and Négritude, civil rights, Afrofuturism. Every page is a card: a few lines, one surprise, and a road further.</p>
           <p>Cards come from three books. The Book of Voices <b data-book="voices">❝</b> is told by people in their own words. The Book of Archives <b data-book="archives">▤</b> is the ledger kept by those who traded and ruled. The Book of Heirs <b data-book="heirs">✶</b> is the art and argument of the diaspora. As in Pavić’s <i>Dictionary of the Khazars</i>, the books do not always agree, and the museum exists in two copies, male and female. You hold the <b data-edition>…</b>.</p>
         </div>
         <div data-l="ru">
-          <p class="lede">В 2020 году Kubernetes начал прощаться с одним словом. Машина, которая управляет кластером, перестала называться master и стала control plane. Большинство инженеров поправили метку и пошли дальше. Этот музей начинается с того коммита и идёт назад — к тому, откуда взялось это слово, и ко всему, что построили, спели, написали и придумали люди, о которых когда-то говорила эта пара слов.</p>
-          <p>Это одновременно дистрибутив и памятник. Каждая эпоха — релиз, от <b>v0</b> до <b>v7</b>: Африка до работорговли, Средний путь, революции, голоса, диаспора, Гарлем и негритюд, борьба за гражданские права, афрофутуризм. Каждая страница — карточка: несколько строк, одно удивление и дорога дальше.</p>
+          <p class="lede">Этот музей рассказывает о семи веках чёрной культуры в восьми главах: Африка до работорговли, Средний путь, революции, голоса, диаспора, Гарлем и негритюд, борьба за гражданские права, афрофутуризм. Каждая страница — карточка: несколько строк, одно удивление и дорога дальше.</p>
           <p>Карточки взяты из трёх книг. Книга голосов <b data-book="voices">❝</b> рассказана самими людьми. Книга архивов <b data-book="archives">▤</b> — учётные записи тех, кто торговал и правил. Книга наследников <b data-book="heirs">✶</b> — искусство и споры диаспоры. Как в «Хазарском словаре» Павича, книги не всегда согласны друг с другом, а сам музей существует в двух экземплярах, мужском и женском. У вас в руках — <b data-edition>…</b>.</p>
         </div>
+        <aside class="engine-aside" aria-label="The engine room">
+          <div class="kicker"><span data-l="en">The engine room</span><span data-l="ru">Машинное отделение</span></div>
+          <p data-l="en">This museum is also a Kubernetes cluster. Every card is an object in it, and the cluster’s own machinery is named after the culture it comes from: Griot remembers, Kgotla holds a council before anything is deleted, the nodes play drums.</p>
+          <p data-l="ru">Этот музей — ещё и кластер Kubernetes. Каждая карточка — объект в нём, а механизмы самого кластера названы по той культуре, из которой они пришли: Griot помнит, Kgotla созывает совет, прежде чем что-то удалить, а узлы играют на барабанах.</p>
+          <a class="btn" href="#view=engine" data-engine=""><span data-l="en">Enter the engine room</span><span data-l="ru">Войти в машинное отделение</span></a>
+        </aside>
       </section>
     </main>
     <noscript><p class="error">The museum needs JavaScript to draw its maps and timeline. Музею нужен JavaScript, чтобы нарисовать карты и хронологию.</p></noscript>

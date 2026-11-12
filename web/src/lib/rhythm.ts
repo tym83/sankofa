@@ -123,3 +123,28 @@ export function demoLeases(from: number, to: number): { node: string; at: number
   }
   return out;
 }
+
+/** Drum names of an Ewe ensemble, given to nodes in order; the bell is the gankogui. */
+export const DRUMS = ['Atsimevu', 'Sogo', 'Kidi', 'Kagan', 'Totodzi', 'Kroboto'];
+
+export function drumName(i: number): string {
+  const base = DRUMS[i % DRUMS.length];
+  return i < DRUMS.length ? base : `${base} ${Math.floor(i / DRUMS.length) + 1}`;
+}
+
+export interface DemoTweaks {
+  broken?: boolean; // the second node stops
+  failing?: boolean; // two pods on the third node stop answering
+}
+
+/** The recorded demo with the reader's own interventions on top. */
+export function demoWith(t: number, tw: DemoTweaks): Voice[] {
+  const v = demoVoices(t).map((x) => ({ ...x }));
+  if (tw.broken && v[1]) Object.assign(v[1], { alive: false, late: 1.6, notReady: v[1].ready + v[1].notReady, ready: 0 });
+  if (tw.failing && v[2]) {
+    const n = Math.min(2, v[2].ready);
+    v[2].ready -= n;
+    v[2].notReady += n;
+  }
+  return v;
+}

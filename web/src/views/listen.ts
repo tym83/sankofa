@@ -4,8 +4,8 @@
 import type { App } from '../app';
 import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
-import { count, t } from '../lib/i18n';
-import { BELL, PARTS, PULSES, SLOTS, TUNINGS, demoLeases, demoVoices, exchange, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
+import { count, pick, t } from '../lib/i18n';
+import { BELL, PARTS, PULSES, SLOTS, TUNINGS, demoLeases, demoWith, drumName, exchange, type DemoTweaks, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
 const PULSE = 0.2; // seconds per pulse: one 12/8 cycle is 2.4 s
 const AHEAD = 0.15;
@@ -35,6 +35,8 @@ class Source {
   private lastDemo = 0;
   onChange?: () => void;
   onLease?: (node: string) => void;
+  tweaks: DemoTweaks = {};
+  retick?: () => void;
 
   start(): void {
     this.started = performance.now();
@@ -78,12 +80,13 @@ class Source {
     const t0 = performance.now();
     const tick = () => {
       const t = (performance.now() - t0) / 1000;
-      this.voices = demoVoices(t);
+      this.voices = demoWith(t, this.tweaks);
       for (const l of demoLeases(this.lastDemo, t)) this.onLease?.(l.node);
       this.lastDemo = t;
       this.onChange?.();
     };
     tick();
+    this.retick = tick;
     this.demoTimer = window.setInterval(tick, 1000);
     this.onChange?.();
   }
@@ -208,6 +211,7 @@ export class Listen {
   private hand: SVGLineElement;
   private bellDots: SVGCircleElement[] = [];
   private callRow: HTMLElement;
+  private demoRow: HTMLElement;
   onClose?: () => void;
 
   constructor(app: App) {
@@ -223,6 +227,24 @@ export class Listen {
     this.gNodes = document.createElementNS(NS, 'g');
     this.drawRing();
     this.callRow = h('div.l-call', { 'aria-hidden': 'true' });
+    const tweak = (key: 'broken' | 'failing', on: [string, string], off: [string, string]) => {
+      const b = h('button.btn', {
+        'aria-pressed': 'false',
+        onclick: () => {
+          this.source.tweaks[key] = !this.source.tweaks[key];
+          b.setAttribute('aria-pressed', String(!!this.source.tweaks[key]));
+          b.textContent = pick(this.source.tweaks[key] ? { en: off[0], ru: off[1] } : { en: on[0], ru: on[1] });
+          this.source.retick?.();
+        },
+      }, pick({ en: on[0], ru: on[1] }));
+      return b;
+    };
+    this.demoRow = h(
+      'div.l-demo',
+      {},
+      tweak('broken', ['Break a node', 'Сломать узел'], ['Mend the node', 'Починить узел']),
+      tweak('failing', ['Fail two pods', 'Уронить два пода'], ['Heal the pods', 'Поднять поды']),
+    );
     const talk = app.set.get('talking-drums') ? `[[talking-drums|${t('talking drums')}]]` : t('talking drums');
     const spirit = app.set.get('spirituals') ? `[[spirituals|${t('the spirituals')}]]` : t('the spirituals');
     const text = h(
@@ -231,24 +253,34 @@ export class Listen {
       h('div.kicker', {}, t('The cluster, played live')),
       h('h2', {}, t('The listening room')),
       h(
+        'p.l-plain',
+        {},
+        pick({
+          en: 'Every machine in the museum’s cluster plays a drum, and a bell keeps time for all of them. While a machine is healthy, its drum keeps up with the bell; when its heartbeat comes late, the drum stumbles; when it stops, you hear the gap it leaves. Every other bar the cluster calls, and the programs running on a machine answer. A program that cannot answer leaves a silence, and you can hear it.',
+          ru: 'Каждая машина в кластере музея играет на барабане, а колокол держит для всех общий ритм. Пока машина здорова, её барабан идёт вровень с колоколом; когда её сердцебиение запаздывает, барабан сбивается; когда машина останавливается, в ансамбле слышна дыра. Через такт кластер зовёт, и программы, работающие на машине, откликаются. Программа, которая не может ответить, оставляет тишину — и её слышно.',
+        }),
+      ),
+      h('div.l-controls', {}, this.button, this.badge),
+      this.demoRow,
+      this.status,
+      h(
         'p.l-lede',
         {},
+        h('b', {}, pick({ en: 'Technically. ', ru: 'Технически. ' })),
         richText(
           app,
           t('The bell is the control plane, keeping the West African 12/8 timeline of seven strokes in twelve pulses that every drum in the ensemble locks to, the way {talk} carry speech in rhythm. Each node is a drum with its own interlocking part: it plays while its Lease is fresh, stumbles as heartbeats come late, and falls silent when the node stops. Then the cluster calls and every ready pod answers, as in {spirit}; a pod that is not ready leaves its answer empty, and you hear the gap.', { talk, spirit }),
         ),
       ),
-      h('div.l-controls', {}, this.button, this.badge),
-      this.status,
       h(
         'ul.l-legend',
         {},
-        h('li', {}, h('i.k-bell'), t('Bell: the control plane')),
-        h('li', {}, h('i.k-node'), t('Drum: a node, renewing its Lease')),
-        h('li', {}, h('i.k-late'), t('Wavering: the heartbeat is late')),
-        h('li', {}, h('i.k-silent'), t('Hollow: the node is silent')),
-        h('li', {}, h('i.k-ans'), t('Filled: a pod answered')),
-        h('li', {}, h('i.k-gap'), t('Empty: a pod was called and stayed silent')),
+        h('li', {}, h('i.k-bell'), pick({ en: 'Bell: the machine that runs the cluster (control plane)', ru: 'Колокол: машина, которая управляет кластером (control plane)' })),
+        h('li', {}, h('i.k-node'), pick({ en: 'Drum: a machine of the cluster, while it signals it is alive', ru: 'Барабан: машина кластера, пока она подаёт сигнал жизни' })),
+        h('li', {}, h('i.k-late'), pick({ en: 'Wavering: its heartbeat is late', ru: 'Дрожь: её сердцебиение запаздывает' })),
+        h('li', {}, h('i.k-silent'), pick({ en: 'Hollow: the machine has stopped', ru: 'Пустой круг: машина остановилась' })),
+        h('li', {}, h('i.k-ans'), pick({ en: 'Filled: a program answered', ru: 'Заполненный: программа откликнулась' })),
+        h('li', {}, h('i.k-gap'), pick({ en: 'Empty: a program was called and stayed silent', ru: 'Пунктир: программу позвали, а она промолчала' })),
       ),
     );
     const stage = h('div.l-stage', {}, this.svg, this.callRow);
@@ -414,7 +446,7 @@ export class Listen {
       let g = this.nodeEls.get(v.node);
       if (!g) {
         g = document.createElementNS(NS, 'g');
-        g.innerHTML = '<circle class="halo" r="44"/><circle class="body" r="30"/><path class="late"/><text class="nm" y="58"/><text class="st" y="74"/>';
+        g.innerHTML = '<circle class="halo" r="44"/><circle class="body" r="30"/><path class="late"/><text class="no" y="5"/><text class="nm" y="58"/><text class="st" y="74"/>';
         this.gNodes.append(g);
         this.nodeEls.set(v.node, g);
       }
@@ -426,7 +458,8 @@ export class Listen {
       g.setAttribute('class', `l-node${v.alive ? '' : ' silent'}${p.jitter > 0 ? ' late' : ''}`);
       g.style.setProperty('--hue', String((k * 67 + 30) % 360));
       g.style.setProperty('--wob', `${(p.jitter * 40).toFixed(1)}px`);
-      g.querySelector('text.nm')!.textContent = shortName(v.node, voices.map((x) => x.node));
+      g.querySelector('text.nm')!.textContent = drumName(k);
+      g.querySelector('text.no')!.textContent = `${t('node')} ${k + 1}`;
       g.querySelector('text.nm')!.setAttribute('aria-label', v.node);
       g.querySelector('text.st')!.textContent = v.alive ? t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '') : t('silent');
       // The lateness arc: how far into its lease the node is.
@@ -483,7 +516,7 @@ export class Listen {
     if (!ex) return;
     this.callRow.replaceChildren(
       h('span.cl', {}, t('Call')),
-      h('span.to', {}, `→ ${shortName(node, this.source.voices.map((v) => v.node))}`),
+      h('span.to', {}, `→ ${drumName(Math.max(0, this.source.voices.findIndex((v) => v.node === node)))}`),
       ...ex.slots.map((ok) => h(`i.slot${ok ? '.ok' : '.gap'}`)),
     );
   }
@@ -493,6 +526,7 @@ export class Listen {
     const live = m === 'live';
     this.badge.textContent = t(live ? 'Live · Griot /pulse' : m === 'demo' ? 'Recorded demo · not a live cluster' : m === 'stale' ? 'Live stream quiet' : 'Connecting…');
     this.badge.className = `l-badge ${m}`;
+    this.demoRow.hidden = m !== 'demo';
     const v = this.source.voices;
     const alive = v.filter((x) => x.alive).length;
     const ready = v.reduce((s, x) => s + (x.alive ? x.ready : 0), 0);
