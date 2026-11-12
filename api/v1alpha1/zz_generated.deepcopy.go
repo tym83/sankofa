@@ -94,6 +94,11 @@ func (in *CardSpec) DeepCopyInto(out *CardSpec) {
 		*out = make([]string, len(*in))
 		copy(*out, *in)
 	}
+	if in.Roots != nil {
+		in, out := &in.Roots, &out.Roots
+		*out = make([]string, len(*in))
+		copy(*out, *in)
+	}
 	if in.Further != nil {
 		in, out := &in.Further, &out.Further
 		*out = make([]string, len(*in))

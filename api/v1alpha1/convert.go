@@ -15,7 +15,7 @@ func FromCard(c *card.Card) *Card {
 		ObjectMeta: metav1.ObjectMeta{Name: c.ID, Labels: map[string]string{"sankofa.kuberoot.dev/kind": c.Kind}},
 		Spec: CardSpec{
 			Kind: c.Kind, Title: c.Title, Wow: c.Wow, Years: c.Years, Zoom: c.Zoom, Era: c.Era,
-			Books: c.Books, Edition: c.Edition, Pair: c.Pair, Tags: c.Tags, Genres: c.Genres,
+			Books: c.Books, Edition: c.Edition, Pair: c.Pair, Tags: c.Tags, Genres: c.Genres, Roots: c.Roots,
 			Further: c.Further, Dispute: c.Dispute, Body: c.Body,
 		},
 	}
@@ -39,7 +39,7 @@ func ToCard(o *Card) *card.Card {
 	s := o.Spec
 	c := &card.Card{
 		ID: o.Name, Kind: s.Kind, Title: s.Title, Wow: s.Wow, Years: s.Years, Zoom: s.Zoom, Era: s.Era,
-		Books: s.Books, Edition: s.Edition, Pair: s.Pair, Tags: s.Tags, Genres: s.Genres,
+		Books: s.Books, Edition: s.Edition, Pair: s.Pair, Tags: s.Tags, Genres: s.Genres, Roots: s.Roots,
 		Further: s.Further, Dispute: s.Dispute, Body: s.Body,
 	}
 	if c.Edition == "" {

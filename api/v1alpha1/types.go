@@ -83,6 +83,9 @@ type CardSpec struct {
 	Tags []string `json:"tags,omitempty"`
 	// +optional
 	Genres []string `json:"genres,omitempty"`
+	// For genres: the genres it grew from.
+	// +optional
+	Roots []string `json:"roots,omitempty"`
 	// +optional
 	Further []string `json:"further,omitempty"`
 	// +kubebuilder:validation:MinItems=1

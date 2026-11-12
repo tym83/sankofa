@@ -148,6 +148,11 @@ spec:
                   type: object
                 minItems: 1
                 type: array
+              roots:
+                description: 'For genres: the genres it grew from.'
+                items:
+                  type: string
+                type: array
               sources:
                 items:
                   description: Source backs the facts on a card.

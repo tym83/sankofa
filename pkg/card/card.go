@@ -103,6 +103,7 @@ type Card struct {
 	Pair    string   `json:"pair,omitempty"` // id shared by an m/f pair
 	Tags    []string `json:"tags,omitempty"`
 	Genres  []string `json:"genres,omitempty"`  // genre card ids this belongs to
+	Roots   []string `json:"roots,omitempty"`   // for genres: the genres it grew from
 	Further []string `json:"further,omitempty"` // where to look next
 	Sources []Source `json:"sources"`
 	Media   []Media  `json:"media,omitempty"`
@@ -292,6 +293,15 @@ func (s *Set) Validate() []error {
 		for _, g := range c.Genres {
 			if t, ok := s.ByID[g]; !ok || t.Kind != KindGenre {
 				bad(c, "genre %q is not a genre card", g)
+			}
+		}
+		for _, g := range c.Roots {
+			if c.Kind != KindGenre {
+				bad(c, "only genre cards have roots")
+				break
+			}
+			if t, ok := s.ByID[g]; !ok || t.Kind != KindGenre {
+				bad(c, "root %q is not a genre card", g)
 			}
 		}
 		for _, m := range c.Media {

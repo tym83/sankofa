@@ -57,3 +57,8 @@ scroll step. Use [[card-id]] links like in cards. 150–400 words in total.
 ```
 
 Media files for cards and chapters live in `content/media/`.
+
+## Genres and credit
+
+- Genre cards (`kind: genre`) list the genres they grew from in `roots: [blues, gospel]`. This is the dependency graph `sankofa genre why/rdeps` walks and the order in which genre packages install.
+- People whose work was taken or popularised by others without credit or pay get `tags: [uncredited]` and `genres: [...]`; `sankofa genre audit <genre>` shows them as undeclared dependencies.
