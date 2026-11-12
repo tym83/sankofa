@@ -89,8 +89,10 @@ func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiS
 		return err
 	}
 	if sync {
+		// Cards are content: a bad card must not stop the cluster's memory.
+		// The collection is linted at build time; here a failure is a warning.
 		if err := syncCards(ctx, log, cl); err != nil {
-			return fmt.Errorf("sync cards: %w", err)
+			log.Error("sync cards", "err", err)
 		}
 	}
 	if !record {
