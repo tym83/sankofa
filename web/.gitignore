@@ -1,0 +1,6 @@
+/public/data/
+/public/media/
+/test-results/
+/playwright-report/
+/node_modules/
+/dist/
