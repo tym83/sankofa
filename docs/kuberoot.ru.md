@@ -34,6 +34,7 @@ hack/kuberoot.sh builder
 kubectl --kubeconfig "$HOME/workshop.txt" --context admin@workshop \
   -n tenant-sankofa wait pod/sankofa-builder --for=condition=Ready --timeout=180s
 hack/kuberoot.sh test
+export KUBEROOT_VERSION=0.1.0-sankofa.2
 hack/kuberoot.sh build amd64
 hack/kuberoot.sh media amd64
 ```
@@ -45,6 +46,16 @@ Service `sankofa-builder`. Исходники, кеши и результаты 
 параллельных компиляторов ограничено четырьмя. Каждая VM стенда имеет
 1 vCPU и 4 GiB RAM. Перед созданием VM проверяйте квоту. Ради стенда нельзя
 менять музей или увеличивать квоту.
+
+Перед bootstrap и тестами установите Linux amd64 kubectl v1.37.2 внутри
+сборщика в `/work/bin/kubectl`. Скачайте его с
+`https://dl.k8s.io/release/v1.37.2/bin/linux/amd64/kubectl`, проверьте по
+соседнему файлу `kubectl.sha256` и сделайте исполняемым. Hydrophone v0.8.0
+установите в `/work/bin/hydrophone` из официального
+[release](https://github.com/kubernetes-sigs/hydrophone/releases/tag/v0.8.0):
+перед распаковкой проверьте `hydrophone_Linux_x86_64.tar.gz` по
+`hydrophone_0.8.0_checksums.txt`. Войти в сборщик можно через
+`hack/kuberoot.sh sh`.
 
 ## Запуск и установка
 
@@ -129,8 +140,7 @@ Griot заново создаёт сертификат и восстанавли
 на диске.
 
 Документация runner: <https://github.com/kubernetes-sigs/hydrophone>.
-Фактические результаты фиксируются в журнале сессии и сохранённых артефактах;
-целевые 462/462 выше сами по себе не означают завершённого прогона.
+Результаты завершённого прогона приведены ниже и сохранены в артефактах.
 
 ## Подписанные обновления и сохранность памяти
 
@@ -152,3 +162,37 @@ plane. Кроме переменных E2E задайте `SANKOFA_NODE_IP` и
 edge/kine: на стенде начальный streaming-list не завершался bookmark-событием.
 Обычный LIST с последующим WATCH сохраняет границу resourceVersion и позволяет
 регистратору начать работу. Выбор upstream conformance-тестов не меняется.
+
+## Проверено на стенде — 2026-11-12
+
+Все три установленных узла работали на `0.1.0-sankofa.2`, Kubernetes v1.37.2,
+ядре 6.18.62-kuberoot и containerd 2.4.2. Control plane — `kuberoot-a23175`,
+worker-узлы — `kuberoot-0c599e` и `kuberoot-2dc975`.
+
+| Проверка | Результат |
+| --- | --- |
+| `go test ./...` в сборщике | Успешно |
+| Функциональные E2E | 6/6 пройдено |
+| Перезагрузка control plane и восстановление из памяти | Успешно |
+| Upstream conformance, четыре потока | **462/462, 0 ошибок, 0 пропущенных выбранных тестов** |
+| Состояние после conformance | 3 Ready-узла, API истории Available, Griot Running |
+
+Полный conformance-набор выполнялся 2520.338 секунды; Hydrophone завершился
+с кодом 0. Остальные 2744 upstream-сценария не входят в стандартную выборку
+Conformance. Ни один выбранный conformance-тест не исключён. Официальный
+образ закреплён по digest:
+`registry.k8s.io/conformance@sha256:d503a15722ea23662c482b72ce01ee6e9efec1e8b9c2d3834aa0c51bb2d0832a`.
+
+Артефакты сохранены в сборщике под `/work/results`; успешный прогон находится
+в `conformance-20261112-parallel/`: `junit_01.xml`, `e2e.log`, `hydrophone.log`,
+`summary.json`, данные образа и окружения. Ранние неудачные E2E и прерванный
+последовательный conformance сохранены отдельно и не считаются результатом
+приёмки. Экспортированный архив:
+`~/Downloads/sankofa-kuberoot-validation-2026-11-12.tar.gz`.
+
+Загрузочный носитель и подписанный bundle оставлены на PVC сборщика в
+`/work/out/amd64`. SHA-256 bundle:
+`f00f7bec372293b6ed39263e802b27450916656d8bb27952ad37e314fc399340`.
+В артефактах также есть контрольные суммы бинарников и носителя. Приватные
+kubeconfig и ключи подписи находятся вне архива и файлового сервера. Музей
+и квота tenant не изменялись.

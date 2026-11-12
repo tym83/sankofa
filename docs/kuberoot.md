@@ -34,6 +34,7 @@ hack/kuberoot.sh builder
 kubectl --kubeconfig "$HOME/workshop.txt" --context admin@workshop \
   -n tenant-sankofa wait pod/sankofa-builder --for=condition=Ready --timeout=180s
 hack/kuberoot.sh test
+export KUBEROOT_VERSION=0.1.0-sankofa.2
 hack/kuberoot.sh build amd64
 hack/kuberoot.sh media amd64
 ```
@@ -45,6 +46,16 @@ The builder has no registry container. Its CPU requests total 100m; builds
 use at most four compiler workers. Each stand VM has 1 vCPU and 4 GiB RAM.
 Check tenant quota before creating nodes; never raise quota or modify the
 museum to make room.
+
+Before bootstrap/testing, install Linux amd64 kubectl v1.37.2 into the builder
+at `/work/bin/kubectl`. Download it from
+`https://dl.k8s.io/release/v1.37.2/bin/linux/amd64/kubectl`, verify it against
+the adjacent `kubectl.sha256`, and make it executable. Install Hydrophone
+v0.8.0 at `/work/bin/hydrophone` from the official
+[release assets](https://github.com/kubernetes-sigs/hydrophone/releases/tag/v0.8.0):
+verify `hydrophone_Linux_x86_64.tar.gz` against
+`hydrophone_0.8.0_checksums.txt` before extracting its executable.
+Use `hack/kuberoot.sh sh` to enter the builder for these steps.
 
 ## Boot and install
 
@@ -128,8 +139,7 @@ For node-service diagnostics, use the private node trust kubeconfig at
 its serving certificate and repairs trust without discarding disk memory.
 
 Upstream runner reference: <https://github.com/kubernetes-sigs/hydrophone>.
-Recorded stand results belong in the session journal and retained evidence;
-the acceptance target above is not a claim of a completed run.
+The completed stand run is recorded below and in the retained evidence.
 
 ## Signed updates and persistence
 
@@ -151,3 +161,37 @@ Griot's node-service profile sets `KUBE_FEATURE_WatchListClient=false` on this
 edge/kine base: the initial streaming-list bookmark did not complete on the
 stand. Ordinary LIST followed by WATCH preserves the resource-version boundary
 and allows the recorder to start. Upstream conformance selection is unchanged.
+
+## Recorded validation — 2026-11-12
+
+All three installed nodes ran `0.1.0-sankofa.2`, Kubernetes v1.37.2,
+kernel 6.18.62-kuberoot and containerd 2.4.2. The control plane is
+`kuberoot-a23175`; workers are `kuberoot-0c599e` and `kuberoot-2dc975`.
+
+| Check | Result |
+| --- | --- |
+| `go test ./...` in the builder | Passed |
+| Live feature suite | 6/6 passed |
+| Installed control-plane reboot and memory restore | Passed |
+| Upstream conformance, four workers | **462/462 passed, 0 failed, 0 selected skipped** |
+| Post-conformance state | 3 Ready nodes, history API Available, Griot Running |
+
+The complete conformance run took 2520.338 seconds of suite execution;
+Hydrophone exited 0. The other 2744 upstream specs were outside the standard
+Conformance focus. No selected conformance test was excluded. The official
+image was pinned to
+`registry.k8s.io/conformance@sha256:d503a15722ea23662c482b72ce01ee6e9efec1e8b9c2d3834aa0c51bb2d0832a`.
+
+Evidence is retained in the builder at `/work/results`, with the accepted
+run in `conformance-20261112-parallel/` (`junit_01.xml`, `e2e.log`,
+`hydrophone.log`, `summary.json`, image and environment records). Earlier
+failed feature attempts and the interrupted serial conformance attempt are
+kept separately; they are not acceptance results. The exported archive is
+`~/Downloads/sankofa-kuberoot-validation-2026-11-12.tar.gz`.
+
+Boot media and the signed release bundle remain on the builder PVC under
+`/work/out/amd64`. Bundle SHA-256:
+`f00f7bec372293b6ed39263e802b27450916656d8bb27952ad37e314fc399340`.
+The evidence includes binary/media checksums. Private kubeconfigs and signing
+keys remain outside the evidence and file server. The public museum and
+tenant quota were not modified.
