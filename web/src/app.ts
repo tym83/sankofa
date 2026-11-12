@@ -49,7 +49,8 @@ export function richText(app: App, text: string): DocumentFragment {
           title: `${target.title}: ${target.wow}`,
         },
         h('span.sym', { 'aria-hidden': 'true' }, symbols),
-        s.text,
+        // A bare [[some-id]] reads as words in prose.
+        s.text === s.target ? s.text.replace(/-/g, ' ') : s.text,
       ),
     );
   }
