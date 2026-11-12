@@ -365,7 +365,8 @@ export class Descent {
     for (const g of genres) {
       const [gx, gy] = pos.get(g.id)!;
       const label = g.title.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-      nodes += `<g class="gnode" transform="translate(${gx},${gy})"><circle r="5" style="fill:${eraColor(g.era)}"/><text x="9" y="4">${label}</text></g>`;
+      const left = gx > x0 + w * 0.5;
+      nodes += `<g class="gnode" transform="translate(${gx},${gy})"><circle r="5" style="fill:${eraColor(g.era)}"/><text x="${left ? -9 : 9}" y="4"${left ? ' text-anchor="end"' : ''}>${label}</text></g>`;
     }
     svg.innerHTML = paths + nodes;
     return svg;
