@@ -24,6 +24,9 @@
 | Asante / Ashanti | Асанте (не Ашанти) |
 | MacArthur Fellowship | грант Макартура |
 | National Hero (Jamaica) | национальный герой (со строчной) |
+| Zong massacre | резня на «Зонге» |
+| Sankofa, "go back and get it" | Санкофа, «вернись и забери» |
+| Fulani (language) | язык фула |
 | Middle Passage | Средний путь (с прописной; путь через Атлантику) |
 | Underground Railroad | Подземная железная дорога |
 | enslaved people | порабощённые люди; «рабы» — там, где так в оригинале (slaves) |
@@ -66,6 +69,8 @@
 | Living in Bondage | «Жизнь в неволе» (Living in Bondage) |
 | Pelo Telefone | «По телефону» (Pelo Telefone) |
 | Freedom's Journal | «Журнал свободы» (Freedom's Journal) при первом упоминании, дальше «Журнал свободы» |
+| We wish to plead our own cause (Freedom's Journal) | «Мы хотим сами отстаивать своё дело» |
+| Free Speech (Ida B. Wells) | «Свобода слова» (Free Speech) |
 | Chicago Defender | «Чикаго дефендер» |
 | Radio Haïti-Inter | «Радио Гаити-Интер» |
 | songs, records, albums in English | латиницей в «ёлочках»: «Hound Dog», «Crazy Blues», «Planet Rock» |
@@ -135,4 +140,4 @@
 - «ё» пишется всегда, где она есть: всё, ещё, её, чёрный, Хёрстон.
 - Числа как в оригинале; тысячи — через неразрывный пробел (100 000).
 - Названия произведений в ссылках склоняются по слову перед кавычками:
-  [[zong|резне на «Зонге»]], [[hannah-crafts|«Повествование невольницы»]].
+  [[zong|резне на «Зонге»]], [[hannah-crafts|«Повествование невольницы»]]. „Лапки“ — только внутри «ёлочек».
