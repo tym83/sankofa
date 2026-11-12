@@ -50,3 +50,22 @@ media only with verified licences (take agent A's licence checks). Run
 Work only in `~/projects/sankofa-reconcile` (branch `feat/reconcile`).
 Commits: `git commit --signoff`, English, last line exactly `Assisted-by: LLM`.
 No push.
+
+## Phase 3 inputs (ready)
+
+- `content/ledger/match.yaml` — phase 1.
+- `content/ledger/recheck-codex-result.yaml` — Codex re-checked 645 claims
+  Claude had confirmed: 405 confirmed, 39 corrected, 201 unverified.
+- `content/ledger/recheck-claude-result.yaml` — Claude re-checked 18 claims
+  Codex had confirmed: 17 confirmed, 1 unverified (the Atkins photo was not
+  taken in Detroit: do not say Detroit in that caption).
+
+A fact may appear in a final card only if it is:
+- `agreed` in match.yaml; or
+- `contested` and then `confirmed` in the re-check by the other agent; or
+- `contested` and `corrected` in the re-check, used in its corrected form only
+  if the correction is a narrowing or a fix that the confirming agent's
+  sources do not contradict (otherwise drop it);
+- `disputed`: only with `dispute` set and the body saying it is contested.
+Everything `refuted`, `unconfirmed` or re-check `unverified` is dropped.
+Sources on each card: the working sources of both agents for the facts kept.
