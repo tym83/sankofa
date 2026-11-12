@@ -306,7 +306,7 @@ func webhooks(mux *http.ServeMux, cl client.Client, kube kubernetes.Interface) {
 		}
 		return out
 	}
-	resolver := &credits.Resolver{Timeout: 6 * time.Second}
+	resolver := &credits.Resolver{Timeout: 12 * time.Second}
 	mux.Handle("/admit/kgotla", admission.Serve(admission.Kgotla(councils)))
 	mux.Handle("/mutate/kgotla-speech", admission.Serve(admission.KgotlaSpeech(time.Now)))
 	mux.Handle("/mutate/polyrhythm", admission.Serve(admission.Polyrhythm(taken)))
