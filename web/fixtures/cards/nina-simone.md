@@ -18,7 +18,7 @@ sources:
   - {title: "Nina Simone with Stephen Cleary, I Put a Spell on You: The Autobiography of Nina Simone (Pantheon, 1991)"}
   - {title: "Nadine Cohodas, Princess Noire: The Tumultuous Reign of Nina Simone (Pantheon, 2010)"}
 media:
-  - {"type": "image", "file": "nina-simone.jpg", "caption": "Nina Simone in the Netherlands, 1965", "credit": "Kroon, Ron for Anefo, via Wikimedia Commons", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Nina_Simone_1965.jpg"}
+  - {"type": "image", "file": "nina-simone.jpg", "caption": "Nina Simone in the Netherlands, 1965", "credit": "Ron Kroon / Anefo, Nationaal Archief, via Wikimedia Commons", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Nina_Simone_1965.jpg"}
 dispute: "Simone believed the Curtis Institute rejected her because she was Black; the school has never confirmed the reason."
 ---
 Eunice Waymon of Tryon, North Carolina, wanted to be the first Black concert

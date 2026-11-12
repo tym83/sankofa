@@ -22,7 +22,7 @@ sources:
   - {title: "John Stauffer, Zoe Trodd & Celeste-Marie Bernier, Picturing Frederick Douglass (Liveright, 2015)"}
   - {title: "David W. Blight, Frederick Douglass: Prophet of Freedom (Simon & Schuster, 2018)"}
 media:
-  - {"type": "image", "file": "douglass.jpg", "caption": "Frederick Douglass in the 1840s", "credit": "Unknown author, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Frederick_Douglass_(1840s).jpg"}
+  - {"type": "image", "file": "douglass.jpg", "caption": "Frederick Douglass in the 1840s", "credit": "Unknown photographer, 1840s, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Frederick_Douglass_(1840s).jpg"}
 ---
 As a boy in Baltimore he traded bread with white children for reading lessons,
 because his enslaver had forbidden anyone to teach him. In 1838 he escaped north

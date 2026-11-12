@@ -20,7 +20,7 @@ sources:
   - {title: "Jean Fagan Yellin, Written by Herself: Harriet Jacobs' Slave Narrative, American Literature 53:3 (1981)"}
   - {title: "Jean Fagan Yellin, Harriet Jacobs: A Life (Basic Civitas, 2004)"}
 media:
-  - {"type": "image", "file": "jacobs.jpg", "caption": "Harriet Jacobs, photographed by Gilbert Studios, 1894", "credit": "Adam Cuerden, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Gilbert_Studios_photograph_of_Harriet_Jacobs.jpg"}
+  - {"type": "image", "file": "jacobs.jpg", "caption": "Harriet Jacobs, photographed by Gilbert Studios, 1894", "credit": "Gilbert Studios, Washington, 1894; restoration by Adam Cuerden, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Gilbert_Studios_photograph_of_Harriet_Jacobs.jpg"}
 ---
 To escape her enslaver in Edenton, North Carolina, Harriet Jacobs hid in a space
 under the roof of her grandmother's shed, about three feet high at its peak. She

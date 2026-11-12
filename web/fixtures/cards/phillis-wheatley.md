@@ -17,7 +17,7 @@ sources:
   - {title: "Vincent Carretta, Phillis Wheatley: Biography of a Genius in Bondage (University of Georgia Press, 2011)"}
   - {title: "Henry Louis Gates Jr., The Trials of Phillis Wheatley (Basic Civitas, 2003)"}
 media:
-  - {"type": "image", "file": "phillis-wheatley.jpg", "caption": "Phillis Wheatley, frontispiece of Poems on Various Subjects, 1773", "credit": "Moorhead, Scipio, engraver, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Phillis_Wheatley,_Negro_servant_to_Mr._John_Wheatley,_of_Boston_LCCN2002712199.jpg"}
+  - {"type": "image", "file": "phillis-wheatley.jpg", "caption": "Phillis Wheatley, frontispiece of Poems on Various Subjects, 1773", "credit": "Engraving attributed to Scipio Moorhead, 1773; Library of Congress, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Phillis_Wheatley,_Negro_servant_to_Mr._John_Wheatley,_of_Boston_LCCN2002712199.jpg"}
 dispute: "The attestation is printed in the book, but whether the signers examined her together at one meeting is not documented. The frontispiece portrait is traditionally attributed to Scipio Moorhead."
 ---
 Kidnapped from West Africa as a child, she was sold in Boston in 1761 from a ship

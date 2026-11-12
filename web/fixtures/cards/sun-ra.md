@@ -19,7 +19,7 @@ sources:
   - {title: "John F. Szwed, Space Is the Place: The Lives and Times of Sun Ra (Pantheon, 1997)"}
   - {title: "University of Chicago Library: Guide to the Alton Abraham Collection of Sun Ra"}
 media:
-  - {"type": "image", "file": "sun-ra.jpg", "caption": "Sun Ra, publicity photograph, 1973", "credit": "Distributed by Impulse! Records and ABC/Dunhill Records. Photographer uncredited on the publicity photo itself; most likely Francis Ing, who is credited for the photography on Astro Black (see Discogs, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Sun_Ra_(1973_publicity_photo_-_Impulse_ABC_Dunhill).jpg"}
+  - {"type": "image", "file": "sun-ra.jpg", "caption": "Sun Ra, publicity photograph, 1973", "credit": "Impulse! Records / ABC Dunhill publicity photograph, 1973, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Sun_Ra_(1973_publicity_photo_-_Impulse_ABC_Dunhill).jpg"}
 ---
 Herman Poole Blount of Birmingham, Alabama, said that as a young man he had been
 taken to Saturn and told to speak to the world through music. In Chicago in the

@@ -16,7 +16,7 @@ sources:
   - {title: "Thomas Clarkson, The History of the Rise, Progress, and Accomplishment of the Abolition of the African Slave-Trade (1808)"}
   - {title: "Brooklyn Museum: Am I Not a Man and a Brother? medallion"}
 media:
-  - {"type": "image", "file": "wedgwood-medallion.jpg", "caption": "Am I Not a Man and a Brother? Wedgwood medallion modelled by William Hackwood, c. 1786. Brooklyn Museum", "credit": "Daderot, via Wikimedia Commons", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Am_I_not_a_Man_and_a_Brother,_medallion_modelled_by_William_H._Hackwood,_Wedgwood,_Etruria,_England,_c._1786,_tinted_stoneware_-_Brooklyn_Museum_-_DSC09289_(cropped).JPG"}
+  - {"type": "image", "file": "wedgwood-medallion.jpg", "caption": "Am I Not a Man and a Brother? Wedgwood medallion modelled by William Hackwood, c. 1786. Brooklyn Museum", "credit": "Photograph by Daderot, Brooklyn Museum, via Wikimedia Commons", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Am_I_not_a_Man_and_a_Brother,_medallion_modelled_by_William_H._Hackwood,_Wedgwood,_Etruria,_England,_c._1786,_tinted_stoneware_-_Brooklyn_Museum_-_DSC09289_(cropped).JPG"}
 ---
 In 1787 the Society for Effecting the Abolition of the Slave Trade chose a seal:
 a kneeling, chained African asking "Am I not a man and a brother?". Josiah

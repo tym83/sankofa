@@ -17,7 +17,7 @@ sources:
   - {title: "Skowronek et al., German brass for Benin Bronzes from the Middle Ages to the twentieth century, PLOS ONE (2023)"}
   - {title: "Barbara Plankensteiner (ed.), Benin: Kings and Rituals (Snoeck, 2007)"}
 media:
-  - {"type": "image", "file": "benin-bronzes.jpg", "caption": "Plaque: Warrior Chief, Benin, 16th–17th century. The Metropolitan Museum of Art", "credit": "Unknown author, via Wikimedia Commons", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Plaque-_Warrior_Chief_MET_DT6557.jpg"}
+  - {"type": "image", "file": "benin-bronzes.jpg", "caption": "Plaque: Warrior Chief, Benin, 16th–17th century. The Metropolitan Museum of Art", "credit": "The Metropolitan Museum of Art, via Wikimedia Commons", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Plaque-_Warrior_Chief_MET_DT6557.jpg"}
 dispute: "Ownership is contested: Nigeria and the Oba of Benin ask for return; some museums have returned objects since 2022, others have not."
 ---
 In the palace of the Oba of Benin, a guild of casters, the Igun Eronmwon, made

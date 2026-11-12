@@ -17,7 +17,7 @@ sources:
   - {title: "Equiano, The Interesting Narrative of the Life of Olaudah Equiano, or Gustavus Vassa, the African (1789), Project Gutenberg", url: "https://www.gutenberg.org/ebooks/15399"}
   - {title: "Vincent Carretta, Equiano, the African: Biography of a Self-Made Man (University of Georgia Press, 2005)"}
 media:
-  - {"type": "image", "file": "equiano.jpg", "caption": "Olaudah Equiano, frontispiece of his Interesting Narrative, 1789", "credit": "W Dent D Orme, via Wikimedia Commons", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Olaudah_Equiano_-_The_interesting_Narrative_of_the_Life_of_Olaudah_Equiano_(1789),_frontispiece_-_BL.jpg"}
+  - {"type": "image", "file": "equiano.jpg", "caption": "Olaudah Equiano, frontispiece of his Interesting Narrative, 1789", "credit": "Daniel Orme after W. Denton, 1789; British Library, via Wikimedia Commons", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Olaudah_Equiano_-_The_interesting_Narrative_of_the_Life_of_Olaudah_Equiano_(1789),_frontispiece_-_BL.jpg"}
 dispute: "Equiano wrote that he was born in Igboland and taken as a child; Vincent Carretta found a baptism record and a naval muster roll that list his birthplace as South Carolina. Historians still disagree."
 ---
 Sailor, merchant, hairdresser, Arctic explorer, campaigner: Equiano bought his
