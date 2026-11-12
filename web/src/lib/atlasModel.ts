@@ -108,6 +108,19 @@ export function atlasLayers(set: CardSet, q: AtlasQuery, extra: Card[] = []): At
     }
   }
 
+  // Genre lineage (pkg/card roots): a genre grows from its roots' homes.
+  if (lvl >= 3 && lvl <= 4) {
+    for (const c of cards) {
+      if (c.kind !== 'genre' || !c.roots?.length || !overlaps(c, q.from, q.to)) continue;
+      const legs = c.roots
+        .map((r) => set.get(r))
+        .filter((r): r is Card => !!r)
+        .map((r) => ({ from: [r.places[0].lon, r.places[0].lat] as [number, number], to: [c.places[0].lon, c.places[0].lat] as [number, number] }))
+        .filter((l) => l.from[0] !== l.to[0] || l.from[1] !== l.to[1]);
+      if (legs.length) routes.push({ id: `roots:${c.id}`, legs, color: eraColor(c.era), flow: true });
+    }
+  }
+
   if (lvl <= 2) {
     for (const m of MOVEMENTS) {
       if (q.from && !(m.years[1] >= q.from && m.years[0] <= (q.to ?? q.from))) continue;

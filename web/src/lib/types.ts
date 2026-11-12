@@ -38,6 +38,7 @@ export interface Card {
   pair?: string;
   tags?: string[];
   genres?: string[];
+  roots?: string[];
   further?: string[];
   sources: Source[];
   media?: Media[];

@@ -85,6 +85,15 @@ describe('atlas levels', () => {
     expect(l3.points.find((p) => p.id === 'tharpe')!.minor).toBe(true);
   });
 
+  it('zoom 3 draws a genre growing from its roots', () => {
+    const g = new CardSet([
+      mk('spirituals', 3, { kind: 'genre', places: [{ name: 'Georgia', lat: 32.6, lon: -83.4 }] }),
+      mk('gospel', 3, { kind: 'genre', roots: ['spirituals'], places: [{ name: 'Chicago', lat: 41.88, lon: -87.63 }] }),
+    ]);
+    const r = atlasLayers(g, { level: 3, edition: 'm' }).routes.find((x) => x.id === 'roots:gospel');
+    expect(r?.legs[0].from).toEqual([-83.4, 32.6]);
+  });
+
   it('zoom 4 shows people, zoom 5 single documents', () => {
     expect(atlasLayers(set, { level: 4, edition: 'm' }).points.find((p) => p.id === 'tharpe')!.minor).toBe(false);
     expect(atlasLayers(set, { level: 4, edition: 'm' }).points.find((p) => p.id === 'record')!.minor).toBe(true);
