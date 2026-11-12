@@ -66,3 +66,25 @@ test('reduced motion still reaches the deep-linked point', async ({ browser }) =
   await expect(page.locator('.atlas-bar .when')).toContainText('1900–1935');
   await ctx.close();
 });
+
+test('the descent opens at a deep-linked year and keeps the year in the link', async ({ page }) => {
+  await page.goto('/#t=1803&view=descent');
+  await expect(page.locator('.descent.open')).toBeVisible();
+  await expect.poll(async () => Number(await page.locator('.dm-year').textContent())).toBeGreaterThan(1795);
+  expect(Number(await page.locator('.dm-year').textContent())).toBeLessThan(1811);
+  await page.locator('.descent').evaluate((el) => el.scrollBy(0, 3000));
+  await expect.poll(() => page.evaluate(() => Number(new URLSearchParams(location.hash.slice(1)).get('t')))).toBeGreaterThan(1810);
+  expect(page.url()).toContain('view=descent');
+  const card = page.locator('.descent a.dc').first();
+  const id = await card.getAttribute('data-card');
+  await page.locator('.descent').evaluate((el, id) => el.querySelector(`a.dc[data-card="${id}"]`)!.scrollIntoView({ block: 'center' }), id);
+  await card.click();
+  await expect(page.locator('.drawer.on article.card')).toBeVisible();
+});
+
+test('the cover leads into the descent', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('link', { name: 'Descend through seven centuries' }).click();
+  await expect(page.locator('.descent.open')).toBeVisible();
+  await expect(page.locator('.dm-year')).toHaveText(/^13\d\d$/);
+});

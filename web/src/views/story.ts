@@ -275,7 +275,8 @@ function finale(app: App): HTMLElement {
     h(
       'div.actions',
       {},
-      h('button.btn.primary', { onclick: () => app.openAtlas({ zoom: 1 }, true) }, 'Open the atlas'),
+      h('button.btn.primary', { onclick: () => app.openDescent() }, 'Descend through the centuries'),
+      h('button.btn', { onclick: () => app.openAtlas({ zoom: 1 }, true) }, 'Open the atlas'),
       h('button.btn', { onclick: () => app.openAtlas({ from: 1900, to: 1935, zoom: 3 }, true) }, '1900–1935, cities and genres'),
       h('button.btn', { onclick: () => app.openBook() }, 'Your book'),
     ),

@@ -22,7 +22,7 @@ export function h<K extends keyof HTMLElementTagNameMap>(tag: K | string, attrs:
 
 export const reducedMotion = (): boolean => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-export function svgIcon(name: 'sun' | 'moon' | 'map' | 'book' | 'close' | 'term' | 'link' | 'prev' | 'next'): SVGSVGElement {
+export function svgIcon(name: 'sun' | 'moon' | 'map' | 'book' | 'close' | 'term' | 'link' | 'prev' | 'next' | 'down'): SVGSVGElement {
   const paths: Record<string, string> = {
     sun: 'M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z',
     moon: 'M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z',
@@ -33,6 +33,7 @@ export function svgIcon(name: 'sun' | 'moon' | 'map' | 'book' | 'close' | 'term'
     link: 'M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1',
     prev: 'M15 6l-6 6 6 6',
     next: 'M9 6l6 6-6 6',
+    down: 'M12 3v15m0 0-6-6m6 6 6-6M5 21h14',
   };
   const ns = 'http://www.w3.org/2000/svg';
   const svg = document.createElementNS(ns, 'svg');
