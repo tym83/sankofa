@@ -45,3 +45,24 @@ test('a shared path replays and records the visit', async ({ page, request }) =>
   const stored = await page.evaluate(() => localStorage.getItem('sankofa.path'));
   expect(stored).toBeTruthy();
 });
+
+test('keyboard: a card link opens with Enter and closes with Escape', async ({ page }) => {
+  await page.goto('/');
+  const link = page.locator('article.chapter a.xref').first();
+  await link.focus();
+  await page.keyboard.press('Enter');
+  const drawer = page.locator('.drawer.on article.card');
+  await expect(drawer).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(drawer).toBeHidden();
+  await expect(link).toBeFocused();
+});
+
+test('reduced motion still reaches the deep-linked point', async ({ browser }) => {
+  const ctx = await browser.newContext({ reducedMotion: 'reduce', viewport: { width: 1280, height: 800 } });
+  const page = await ctx.newPage();
+  await page.goto('/#t=1900-1935&zoom=3');
+  await expect(page.locator('.atlas .levels button[aria-pressed="true"] b')).toHaveText('3');
+  await expect(page.locator('.atlas-bar .when')).toContainText('1900–1935');
+  await ctx.close();
+});

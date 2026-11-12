@@ -139,6 +139,20 @@ async function start(): Promise<void> {
   trackChapters(app);
   loading.remove();
 
+  // Escape closes the topmost panel first, wherever the focus is.
+  document.addEventListener(
+    'keydown',
+    (e) => {
+      if (e.key !== 'Escape') return;
+      const open = [cardDrawer, bookDrawer].find((d) => d.isOpen);
+      if (!open) return;
+      e.preventDefault();
+      e.stopPropagation();
+      open.close();
+    },
+    true,
+  );
+
   // Inline card links anywhere open the card in place.
   document.addEventListener('click', (e) => {
     const a = (e.target as Element).closest<HTMLElement>('[data-card]');

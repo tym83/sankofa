@@ -39,7 +39,9 @@ export class Drawer {
     this.el.scrollTop = 0;
     this.el.classList.add('on');
     this.scrim.classList.add('on');
-    requestAnimationFrame(() => (this.el.querySelector<HTMLElement>('h2') ?? this.el).focus({ preventScroll: true }));
+    requestAnimationFrame(() => {
+      if (this.isOpen) (this.el.querySelector<HTMLElement>('h2') ?? this.el).focus({ preventScroll: true });
+    });
   }
 
   close(silent = false): void {
