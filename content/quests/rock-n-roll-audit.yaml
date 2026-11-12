@@ -1,0 +1,8 @@
+metadata: {name: rock-n-roll-audit}
+spec:
+  type: cluster
+  title: Undeclared dependencies
+  prompt: "Install rock'n'roll and audit it. Whose work does it stand on without saying so?"
+  check: "kubepkg install sankofa-genre-rock-n-roll && sankofa genre audit rock-n-roll"
+  reveal: "Rosetta Tharpe played electric gospel guitar in the 1930s and 1940s and shaped Chuck Berry, Little Richard and Elvis. Big Mama Thornton recorded 'Hound Dog' three years before Elvis."
+  cards: [rosetta-tharpe, big-mama-thornton]

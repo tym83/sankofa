@@ -16,13 +16,11 @@ import (
 	"encoding/pem"
 	"flag"
 	"fmt"
-	"io/fs"
 	"log/slog"
 	"math/big"
 	"net/http"
 	"os"
 	"os/signal"
-	"path"
 	"strings"
 	"syscall"
 	"time"
@@ -37,7 +35,6 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 	"sigs.k8s.io/controller-runtime/pkg/client"
-	"sigs.k8s.io/yaml"
 
 	"github.com/tym83/sankofa/api/v1alpha1"
 	"github.com/tym83/sankofa/content"
@@ -171,7 +168,7 @@ func syncCards(ctx context.Context, log *slog.Logger, cl client.Client) error {
 			}
 		}
 	}
-	quests, err := loadQuests()
+	quests, err := v1alpha1.LoadQuests(content.Quests())
 	if err != nil {
 		return err
 	}
@@ -270,25 +267,4 @@ func publishCA(ctx context.Context, cl client.Client, name string, ca []byte) er
 	obj.SetName(name)
 	patch := fmt.Sprintf(`{"spec":{"caBundle":%q,"insecureSkipTLSVerify":false}}`, base64.StdEncoding.EncodeToString(ca))
 	return cl.Patch(ctx, obj, client.RawPatch(types.MergePatchType, []byte(patch)))
-}
-
-func loadQuests() ([]*v1alpha1.Quest, error) {
-	var out []*v1alpha1.Quest
-	err := fs.WalkDir(content.Quests(), ".", func(p string, d fs.DirEntry, err error) error {
-		if err != nil || d.IsDir() || path.Ext(p) != ".yaml" {
-			return err
-		}
-		data, err := fs.ReadFile(content.Quests(), p)
-		if err != nil {
-			return err
-		}
-		q := &v1alpha1.Quest{}
-		if err := yaml.UnmarshalStrict(data, q); err != nil {
-			return fmt.Errorf("%s: %w", p, err)
-		}
-		q.APIVersion, q.Kind = v1alpha1.GroupVersion.String(), "Quest"
-		out = append(out, q)
-		return nil
-	})
-	return out, err
 }

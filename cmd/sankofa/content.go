@@ -8,6 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
+	"github.com/tym83/sankofa/api/v1alpha1"
 	"github.com/tym83/sankofa/pkg/card"
 )
 
@@ -23,6 +24,7 @@ func contentCmd() *cobra.Command {
 				return err
 			}
 			errs := s.Validate()
+			errs = append(errs, lintQuests(filepath.Join(args[0], "..", "quests"), s)...)
 			for _, e := range errs {
 				fmt.Fprintln(cmd.ErrOrStderr(), e)
 			}
@@ -78,4 +80,50 @@ func Export(s *card.Set) map[string]any {
 		cards = append(cards, ExportedCard{Card: s.ByID[id], Backlinks: s.Backlinks(id)})
 	}
 	return map[string]any{"version": 1, "cards": cards}
+}
+
+// lintQuests checks quests against the cards they reference.
+func lintQuests(dir string, s *card.Set) []error {
+	qs, err := v1alpha1.LoadQuests(os.DirFS(dir))
+	if err != nil {
+		return []error{err}
+	}
+	var errs []error
+	for _, q := range qs {
+		bad := func(f string, a ...any) {
+			errs = append(errs, fmt.Errorf("quest %s: %s", q.Name, fmt.Sprintf(f, a...)))
+		}
+		sp := q.Spec
+		if sp.Title == "" || sp.Prompt == "" || sp.Reveal == "" {
+			bad("needs title, prompt and reveal")
+		}
+		switch sp.Type {
+		case "dilemma", "quiz":
+			if len(sp.Choices) < 2 {
+				bad("needs at least two choices")
+			}
+			if sp.Type == "quiz" && (sp.Answer == nil || *sp.Answer < 0 || *sp.Answer >= len(sp.Choices)) {
+				bad("quiz needs a valid answer index")
+			}
+			if sp.Type == "dilemma" && sp.Answer != nil {
+				bad("a dilemma has no right answer")
+			}
+		case "walk":
+			if s.ByID[sp.From] == nil || s.ByID[sp.To] == nil {
+				bad("walk needs existing from and to cards")
+			}
+		case "cluster":
+			if sp.Check == "" {
+				bad("cluster quest needs a check")
+			}
+		default:
+			bad("unknown type %q", sp.Type)
+		}
+		for _, c := range sp.Cards {
+			if s.ByID[c] == nil {
+				bad("unknown card %q", c)
+			}
+		}
+	}
+	return errs
 }

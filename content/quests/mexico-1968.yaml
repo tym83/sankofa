@@ -1,0 +1,9 @@
+metadata: {name: mexico-1968}
+spec:
+  type: dilemma
+  title: The third man on the podium
+  prompt: "Mexico City, October 1968. Two American sprinters will raise black-gloved fists on the medal podium. You are the silver medallist, a white Australian. They ask whether you stand with them. What do you do?"
+  choices:
+    - Stay neutral
+    - Wear the badge of the Olympic Project for Human Rights
+  reveal: "Peter Norman wore the badge. Tommie Smith and John Carlos were expelled from the Games; Norman was shunned at home for years. When he died in 2006, Smith and Carlos carried his coffin."

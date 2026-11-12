@@ -1,0 +1,9 @@
+metadata: {name: colvin-1955}
+spec:
+  type: dilemma
+  title: The face of the boycott
+  prompt: "Montgomery, March 1955. A fifteen-year-old schoolgirl, Claudette Colvin, has just refused to give up her seat on a bus and was dragged off by police. You organise the movement. Do you make her the public face of a challenge to bus segregation, or wait for another case?"
+  choices:
+    - Build the campaign around her now
+    - Wait for another case
+  reveal: "Local leaders waited. Nine months later Rosa Parks was arrested, and the boycott began. Colvin was not forgotten in the end: she became one of the plaintiffs in Browder v. Gayle, the case that ended bus segregation in Montgomery in 1956."

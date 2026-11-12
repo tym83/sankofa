@@ -1,0 +1,10 @@
+metadata: {name: equiano-1766}
+spec:
+  type: dilemma
+  title: Forty pounds
+  prompt: "It is the 1760s. Your owner, a Quaker merchant, has promised that you may buy your freedom for forty pounds, the price he paid for you. You trade on the side, a few glasses and fruits at a time, and every port could cost you everything. Do you keep saving, trusting the promise, or do you run at the next port?"
+  choices:
+    - Keep saving and hold him to his word
+    - Run at the first chance
+  reveal: "Olaudah Equiano kept saving. In July 1766 he paid Robert King forty pounds and received his manumission. Twenty-three years later he published his autobiography, became one of the most famous abolitionists in Britain, and is still read today."
+  cards: [equiano]
