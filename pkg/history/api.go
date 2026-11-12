@@ -175,7 +175,7 @@ func (a *API) resources(w http.ResponseWriter, _ *http.Request) {
 		GroupVersion: Group + "/" + Version,
 		APIResources: []metav1.APIResource{
 			{Name: "timelines", Namespaced: true, Kind: "Timeline", Verbs: []string{"get", "list"}, ShortNames: []string{"tl"}, Categories: []string{"sankofa"}},
-			{Name: "clustertimelines", Namespaced: false, Kind: "Timeline", Verbs: []string{"get", "list"}, Categories: []string{"sankofa"}},
+			{Name: "clustertimelines", Namespaced: false, Kind: "ClusterTimeline", Verbs: []string{"get", "list"}, Categories: []string{"sankofa"}},
 		}})
 }
 
@@ -269,7 +269,11 @@ func (a *API) list(ctx context.Context, w http.ResponseWriter, r *http.Request, 
 		status(w, 500, metav1.StatusReasonInternalError, err.Error())
 		return
 	}
-	out := TimelineList{TypeMeta: metav1.TypeMeta{Kind: "TimelineList", APIVersion: Group + "/" + Version}, Items: []Timeline{}}
+	kind := "TimelineList"
+	if cluster {
+		kind = "ClusterTimelineList"
+	}
+	out := TimelineList{TypeMeta: metav1.TypeMeta{Kind: kind, APIVersion: Group + "/" + Version}, Items: []Timeline{}}
 	for _, rec := range recs {
 		if cluster != (rec.Ref.Namespace == "") || !a.allowed(ctx, user, groups, rec.Ref) {
 			continue
@@ -290,8 +294,12 @@ func (a *API) allowed(ctx context.Context, user string, groups []string, ref Ref
 }
 
 func toTimeline(ref Ref, life []Record) Timeline {
+	kind := "Timeline"
+	if ref.Namespace == "" {
+		kind = "ClusterTimeline"
+	}
 	tl := Timeline{
-		TypeMeta:   metav1.TypeMeta{Kind: "Timeline", APIVersion: Group + "/" + Version},
+		TypeMeta:   metav1.TypeMeta{Kind: kind, APIVersion: Group + "/" + Version},
 		ObjectMeta: metav1.ObjectMeta{Name: TimelineName(ref), Namespace: ref.Namespace},
 		Target:     ref,
 	}
