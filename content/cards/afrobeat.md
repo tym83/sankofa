@@ -2,7 +2,7 @@
 id: afrobeat
 kind: genre
 title: Afrobeat
-wow: Afrobeat was politicised in Los Angeles in 1969, when an activist handed a Lagos bandleader The Autobiography of Malcolm X.
+wow: "Afrobeat turned political in Los Angeles in 1969, when an activist introduced a Lagos bandleader to Malcolm X and the Black Power thinkers."
 years: [1969]
 places:
   - {name: Lagos, lat: 6.4541, lon: 3.3947}
@@ -16,26 +16,20 @@ further:
   - "Michael E. Veal, Fela: The Life and Times of an African Musical Icon (2000)"
   - "Tony Allen with Michael E. Veal, Tony Allen: Master Drummer of Afrobeat (2013)"
 sources:
-  - {title: "Fela Kuti official site: story, 1969", url: "https://felakuti.com/story/1969"}
+  - {title: "Fela Kuti estate: 1969", url: "https://felakuti.com/story/1969"}
+  - {title: "KCRW: Remembering Tony Allen", url: "https://www.kcrw.com/stories/tony-allen-obituary-afrobeat-drummer-fela"}
+  - {title: "The Wire: Fela Kuti, chronicle of a life foretold", url: "https://www.thewire.co.uk/in-writing/essays/fela-kuti_chronicle-ofa-life-foretold"}
+  - {title: "PM News: Sandra Iszadore ... speak at Felabration (2015)", url: "https://pmnewsnigeria.com/2015/10/12/sandra-iszadore-fashola-ajibade-others-speak-at-felabration/"}
+  - {title: "Los Angeles Times: Tony Allen obituary", url: "https://www.latimes.com/entertainment-arts/music/story/2020-04-30/tony-allen-fela-kuti-drummer-dies-obituary"}
+  - {title: "OkayAfrica: Tony Allen has died (2020)", url: "https://www.okayafrica.com/trailblazing-afrobeat-drummer-pioneer-tony-allen-has-died/117647"}
+  - {title: "uDiscover Music: Tony Allen dead at 79 (2020)", url: "https://udiscovermusic.com/news/tony-allen-afrobeat-dead-79"}
+  - {title: "Scroll.in: The art of resistance, Zombie by Fela Kuti", url: "https://scroll.in/article/948202/the-art-of-resistance-zombie-by-fela-kuti-questions-repressive-governments"}
+  - {title: "Classic Album Sundays: Fela Kuti, Gentleman and Zombie", url: "https://classicalbumsundays.com/album-of-the-month-fela-kuti-gentleman-zombie/"}
   - {title: "Fela Kuti official site: story, 1977", url: "https://felakuti.com/story/1977"}
+  - {title: "Al Jazeera: The Lioness of Lisabi (2020)", url: "https://www.aljazeera.com/features/2020/10/1/the-lioness-of-lisabi-who-ended-unfair-taxes-for-nigerian-women"}
   - {title: "Fela Kuti official site: story, 1978", url: "https://felakuti.com/story/1978"}
-  - {title: "BlackPast: Fela Kuti (1938-1997)", url: "https://blackpast.org/gah/kuti-fela-1938-1997"}
-  - {title: "Rolling Stone: 5 facts we learned from 'Finding Fela' (2014)", url: "https://www.rollingstone.com/music/music-news/afropop-culture-5-facts-we-learned-from-finding-fela-84012/"}
-  - {title: "The Archivist (archivi.ng): When Fela married 27 wives in one day", url: "https://archivi.ng/the-archivist/issue-2/when-fela-married-27-wives"}
-  - {title: "OkayAfrica: Afrobeat drummer Tony Allen has died (2020)", url: "https://www.okayafrica.com/trailblazing-afrobeat-drummer-pioneer-tony-allen-has-died/117647"}
-  - {title: "uDiscover Music: Tony Allen, pioneering Afrobeat drummer, dead at 79 (2020)", url: "https://udiscovermusic.com/news/tony-allen-afrobeat-dead-79"}
+  - {title: "Graphic Online: how Fela Kuti married 27 women the same day", url: "https://www.graphic.com.gh/entertainment/showbiz-news/the-untold-story-of-how-fela-kuti-married-27-women-same-day-2.html"}
 media:
-  - {type: image, file: afrobeat.jpg, caption: "Fela Kuti on stage, promotional photograph distributed by Celluloid Records, 1986", credit: "Unknown photographer, distributed by Celluloid Records; scan via Wikimedia Commons", license: "Public domain (US: published 1986 without copyright notice)", url: "https://commons.wikimedia.org/wiki/File:Fela_Kuti_circa_1986.jpg"}
-dispute: "Fela presented his 1978 marriage to 27 women as tradition; his biographer Michael Veal says traditional polygamy had strict controls that Fela's household did not."
+  - {type: "image", file: "afrobeat.jpg", caption: "Fela Kuti on stage, promotional photograph distributed by Celluloid Records, 1986", credit: "Unknown photographer, distributed by Celluloid Records; scan via Wikimedia Commons", license: "Public domain (US: published 1986 without copyright notice)", url: "https://commons.wikimedia.org/wiki/File:Fela_Kuti_circa_1986.jpg"}
 ---
-In 1969 the Lagos bandleader Fela Ransome-Kuti spent months in Los
-Angeles. There the activist Sandra Izsadore (Sandra Smith) pushed him to
-read Malcolm X, Marcus Garvey and the Black Power writers. Back home he set
-political lyrics over highlife, jazz and funk, driven by drummer Tony Allen;
-Fela said that without Allen there would be no afrobeat. After the album
-Zombie attacked the military, a thousand soldiers stormed his Kalakuta Republic
-commune in 1977, burned it and threw his 77-year-old mother, the activist
-Funmilayo Ransome-Kuti, from a window; she died in 1978. That year he
-married 27 women in one day; his own lawyer called it immoral, and his
-biographer Michael Veal doubts the tradition he invoked. Not to be confused with
-today's Afrobeats. See [[highlife]], [[funk]], [[nollywood]].
+In 1969 the Lagos bandleader Fela Ransome-Kuti spent months in Los Angeles, where the activist Sandra Izsadore introduced him to Malcolm X and other Black Power and revolutionary thinkers. The music he built at home ran on the drums of Tony Allen; Fela said that without Allen there would be no afrobeat. Its politics had a price. After the album Zombie attacked the military, about a thousand soldiers stormed his Kalakuta Republic commune in 1977 and threw his mother, the activist Funmilayo Ransome-Kuti, from a window. She died in 1978, the year he married 27 women in one day. Not to be confused with today's Afrobeats. See [[highlife]], [[funk]] and [[jazz]].

@@ -2,7 +2,7 @@
 id: candomble
 kind: place
 title: Candomblé houses of Salvador
-wow: Brazil's first listed Black monument is a temple founded around 1830 by three African women, and Salvador's most famous temples descend from it.
+wow: "Salvador's most famous candomblé temples, the Gantois and the Opô Afonjá, descend from one house founded behind a Baroque church."
 years: [1830, 1984]
 places:
   - {name: "Salvador, Bahia", lat: -12.9777, lon: -38.5016}
@@ -12,21 +12,15 @@ books: [heirs]
 further:
   - "Ruth Landes, The City of Women (1947; University of New Mexico Press, 1994)"
   - "Terreiro da Casa Branca (Ilê Axé Iyá Nassô Oká), Avenida Vasco da Gama, Salvador"
+dispute: "Casa Branca's founding date is uncertain: most accounts give around 1830, some say 1820."
 sources:
-  - {title: "Brasil de Fato: Terreiro da Casa Branca celebra 40 anos de tombamento (2024)", url: "https://www.brasildefato.com.br/2024/06/07/terreiro-da-casa-branca-celebra-40-anos-de-tombamento/"}
-  - {title: "Fundação Bienal de São Paulo, Terra: Ilê Axé Iyá Nassô Oká (Terreiro da Casa Branca)", url: "https://terra.bienal.org.br/Ile-Axe-Iya-Nasso-Oka-Terreiro-da-Casa-Branca"}
-  - {title: "UC San Diego Community Centers Library: Ruth Landes, The City of Women", url: "https://cclib.ucsd.edu/Library/details.aspx?ID=1049"}
-  - {title: "University of New Mexico Press: The City of Women", url: "https://www.unmpress.com/9780826315564/the-city-of-women/"}
-  - {title: "A Tarde: Tombamento da Casa Branca há 40 anos inovou política de patrimônio (2024; SPHAN council vote reported in A Tarde, 1 June 1984)", url: "https://atarde.com.br/colunistas/atardememoria/tombamento-da-casa-branca-ha-40-anos-inovou-politica-de-patrimonio-1271738"}
-  - {title: "Sally Cole, Journal de la Société des Américanistes (2024): Ruth Landes in Bahia, August 1938 to February 1939", url: "https://journals.openedition.org/jsa/23077"}
+  - {title: "Brasil de Fato: Terreiro da Casa Branca celebra 40 anos de tombamento (por volta de 1830, atrás da Igreja da Barroquinha)", url: "https://www.brasildefato.com.br/2024/06/07/terreiro-da-casa-branca-celebra-40-anos-de-tombamento/"}
+  - {title: "Fundação Bienal, Terra: Ilê Axé Iyá Nassô Oká (1830)", url: "https://terra.bienal.org.br/Ile-Axe-Iya-Nasso-Oka-Terreiro-da-Casa-Branca"}
+  - {title: "Correio (2024): Barroquinha in 1820", url: "https://www.correio24horas.com.br/minha-bahia/casa-mae-do-brasil-evento-celebra-os-40-anos-de-reconhecimento-do-terreiro-da-casa-branca-0524"}
+  - {title: "Odete Dourado, Risco (USP) 2011: origin near Igreja da Barroquinha", url: "https://journals.usp.br/risco/article/download/45501/49110/54308"}
+  - {title: "Ordep Serra, Afro-Ásia 33 (2005): mãe Menininha do Gantois", url: "https://periodicos.ufba.br/index.php/afroasia/article/view/21104"}
+  - {title: "A Tarde: Casa Branca and heritage policy", url: "https://atarde.com.br/colunistas/atardememoria/tombamento-da-casa-branca-ha-40-anos-inovou-politica-de-patrimonio-1271738"}
+  - {title: "UC San Diego Community Centers Library: The City of Women (1947)", url: "https://cclib.ucsd.edu/Library/details.aspx?ID=1049"}
+  - {title: "Smithsonian National Anthropological Archives: Ruth Landes papers, biographical note", url: "https://sirismm.si.edu/EADpdfs/NAA.1991-04.pdf"}
 ---
-Behind the Barroquinha church in Salvador, around 1830, three African women
-of the Nagô nation, remembered as Iyá Akalá, Iyá Adetá and Iyá Nassô, founded
-a house for the orixás. Its Yoruba name is Ilê Axé Iyá Nassô Oká; Bahians
-call it Casa Branca. From it descend the famous Gantois, led by Mãe
-Menininha, and the Ilê Axé Opô Afonjá. In 1984 the national heritage
-council voted to list it, the first terreiro and the first monument of Black
-culture so protected. When the American anthropologist Ruth Landes worked
-in Salvador's houses in 1938-39, she found them led by women, the mães de
-santo, and called her 1947 book The City of Women. Compare [[samba]] and [[capoeira]], and the Yoruba
-[[talking-drums]].
+Salvador's most famous candomblé temples share a mother. Behind the Barroquinha church, around 1830 (some accounts say earlier), a house for the orixás was founded. Its Yoruba name is Ilê Axé Iyá Nassô Oká; Bahians call it Casa Branca. From it descend the Gantois, led by Mãe Menininha, and the Ilê Axé Opô Afonjá. In 1984 the national heritage council voted to list it, the first terreiro ever so protected. When the American anthropologist Ruth Landes worked in Salvador's houses in 1938–39, she found them led by women, and called her 1947 book The City of Women. Compare [[samba]] and [[capoeira]], and the Yoruba [[talking-drums]].

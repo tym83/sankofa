@@ -2,7 +2,7 @@
 id: benin-bronzes
 kind: object
 title: The Benin Bronzes
-wow: The plaques that show Portuguese traders were cast by a royal guild that still works in Benin City.
+wow: "When the Portuguese arrived, Benin's royal casters put them onto the palace plaques as foreign merchants."
 years: [1500, 2022]
 places:
   - {name: Benin City, lat: 6.3350, lon: 5.6037}
@@ -15,21 +15,17 @@ further:
   - "Barnaby Phillips, Loot: Britain and the Benin Bronzes (Oneworld, 2021)"
   - "Art Institute of Chicago, Benin: Kings and Rituals, video of lost-wax casting in Benin City (2003, 2006)"
 sources:
-  - {title: "Art Institute of Chicago: Lost-wax brass casting, Benin City (Igun Eronmwon)", url: "https://archive.artic.edu/benin/659"}
-  - {title: "Horniman Museum: Horniman to return ownership of Benin bronzes to Nigeria (2022)", url: "https://www.horniman.ac.uk/story/horniman-to-return-ownership-of-benin-bronzes-to-nigeria/"}
-  - {title: "The Art Newspaper: Germany kicks off major Benin bronze restitution with return of 20 artefacts to Nigeria (2022)", url: "https://www.theartnewspaper.com/2022/12/22/germany-kicks-off-major-benin-bronze-restitution-with-return-of-20-artefacts-to-nigeria"}
-  - {title: "Al Jazeera: Germany returns 20 Benin bronzes to Nigeria, noting 'dark past' (2022)", url: "https://www.aljazeera.com/news/2022/12/21/germany-returns-nigerian-bronzes-notes-its-dark-past"}
+  - {title: "AFRREV IJAH (2017) abstract on the Igun Eronmwon casters", url: "https://www.ajol.info/index.php/ijah/article/view/152306"}
+  - {title: "Wikipedia: Igun Street (pointer only)", url: "https://en.wikipedia.org/wiki/Igun_Street"}
+  - {title: "Pitt Rivers Museum: The Kingdom of Benin", url: "https://prm.ox.ac.uk/kingdom-benin"}
+  - {title: "Art Institute of Chicago: Brass Casters, Lost Wax Casting, Benin City", url: "https://archive.artic.edu/benin/659"}
+  - {title: "Wikimedia Commons: Plaque, Two Portuguese Merchants, Met 1991.17.18 (Met record data)", url: "https://commons.wikimedia.org/wiki/File:Plaque-_Two_Portuguese_Merchants_MET_DT6560.jpg"}
+  - {title: "The Art Newspaper (2022)", url: "https://www.theartnewspaper.com/2022/12/22/germany-kicks-off-major-benin-bronze-restitution-with-return-of-20-artefacts-to-nigeria"}
+  - {title: "Metropolitan Museum of Art: Plaque with Two Portuguese Merchants", url: "https://www.metmuseum.org/art/collection/search/316490"}
+  - {title: "Art Institute of Chicago: Double Plaque of a Portuguese Man", url: "https://archive.artic.edu/benin/artwork/195413"}
+  - {title: "Horniman Museum: return of ownership", url: "https://www.horniman.ac.uk/story/horniman-to-return-ownership-of-benin-bronzes-to-nigeria/"}
+  - {title: "Al Jazeera (2022)", url: "https://www.aljazeera.com/news/2022/12/21/germany-returns-nigerian-bronzes-notes-its-dark-past"}
 media:
-  - {type: image, file: benin-bronzes.jpg, caption: "Plaque with two Portuguese merchants, Edo, Court of Benin, 16th–17th century, brass. Metropolitan Museum of Art", credit: "Metropolitan Museum of Art, via Wikimedia Commons", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Plaque-_Two_Portuguese_Merchants_MET_DT6560.jpg"}
+  - {type: "image", file: "benin-bronzes.jpg", caption: "Plaque with two Portuguese merchants, Edo, Court of Benin, brass. Metropolitan Museum of Art", credit: "Metropolitan Museum of Art, via Wikimedia Commons", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Plaque-_Two_Portuguese_Merchants_MET_DT6560.jpg"}
 ---
-In the palace of the Oba of Benin, the brass casters, Igun Eronmwon, were
-the highest-ranking guild of artists. They worked in lost wax: a detailed
-wax model over a clay core, clay over the wax, the wax melted out, molten
-metal poured in. Brass was prized in Benin before the Portuguese came, and
-the casters put the newcomers onto the palace plaques as foreign
-merchants. In February 1897 a British force took Benin City and carried
-off thousands of objects to Europe. Restitution has begun: in 2022 London's
-Horniman Museum transferred ownership of 72 objects to Nigeria, and in
-December Germany's foreign minister handed 20 back in Abuja. The guild
-never stopped; casters still work in Benin City. Its kin in craft:
-[[kente]], [[adinkra]], [[nsibidi]] on ukara cloth.
+Benin's artists made the Portuguese their subject. The Oba's brass casters, the royal guild of Igun Eronmwon, put the Portuguese newcomers onto the palace plaques as foreign merchants. They worked in lost wax: a detailed wax model over a clay core, clay over the wax, the wax melted out and molten metal poured in. In 1897 a British force took Benin City and carried thousands of objects off to Europe. Restitution has begun: in 2022 London's Horniman Museum transferred ownership of 72 objects to Nigeria, and in December 2022 Germany's foreign minister handed 20 back in Abuja. Their kin in craft: [[kente]], [[adinkra]], [[nsibidi]].
