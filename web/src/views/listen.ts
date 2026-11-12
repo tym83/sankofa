@@ -425,7 +425,8 @@ export class Listen {
       g.setAttribute('class', `l-node${v.alive ? '' : ' silent'}${p.jitter > 0 ? ' late' : ''}`);
       g.style.setProperty('--hue', String((k * 67 + 30) % 360));
       g.style.setProperty('--wob', `${(p.jitter * 40).toFixed(1)}px`);
-      g.querySelector('text.nm')!.textContent = v.node;
+      g.querySelector('text.nm')!.textContent = shortName(v.node, voices.map((x) => x.node));
+      g.querySelector('text.nm')!.setAttribute('aria-label', v.node);
       g.querySelector('text.st')!.textContent = v.alive ? `${v.ready} ready${v.notReady ? ` · ${v.notReady} silent` : ''}` : 'silent';
       // The lateness arc: how far into its lease the node is.
       const f = Math.max(0, Math.min(0.999, v.late));
@@ -481,7 +482,7 @@ export class Listen {
     if (!ex) return;
     this.callRow.replaceChildren(
       h('span.cl', {}, 'Call'),
-      h('span.to', {}, `→ ${node}`),
+      h('span.to', {}, `→ ${shortName(node, this.source.voices.map((v) => v.node))}`),
       ...ex.slots.map((ok) => h(`i.slot${ok ? '.ok' : '.gap'}`)),
     );
   }
@@ -505,4 +506,14 @@ export class Listen {
     this.el.classList.toggle('playing', this.playingNow);
     this.renderNodes();
   }
+}
+
+/** The part of a node name that tells it apart: kubernetes-museum-md0-htprj-z9txf → z9txf. */
+export function shortName(node: string, all: string[]): string {
+  if (all.length < 2) return node.length > 18 ? node.slice(-18) : node;
+  const parts = all.map((n) => n.split('-'));
+  let common = 0;
+  while (parts.every((p) => p.length > common + 1 && p[common] === parts[0][common])) common++;
+  const rest = node.split('-').slice(common).join('-');
+  return rest.length > 18 ? rest.slice(-18) : rest;
 }
