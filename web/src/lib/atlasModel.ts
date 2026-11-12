@@ -93,7 +93,7 @@ export function atlasLayers(set: CardSet, q: AtlasQuery, extra: Card[] = []): At
     });
     if (!inTime && !focus) continue;
     const color = eraColor(c.era);
-    if (focus || lit.has(c.id)) {
+    if (focus) {
       const r = arcs(c, color, { flow: true });
       if (r) routes.push(r);
     } else if (c.kind === 'genre' && lvl >= 3 && lvl <= 4) {

@@ -26,7 +26,7 @@ describe('fragment', () => {
     expect(formatFragment(p)).toBe(want);
   });
 
-  it.each(GO_FRAGMENTS)('round-trips %j', (p, frag) => {
+  it.each(GO_FRAGMENTS)('round-trips %j', (_, frag) => {
     expect(formatFragment(parseFragment('http://museum.local/#' + frag))).toBe(frag);
   });
 

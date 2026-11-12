@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Sankofa — Go back and fetch it</title>
+    <meta name="description" content="Seven centuries of Black culture, from the courts of Mali to Afrofuturism: a museum that ships as a Kubernetes distribution." />
+    <meta name="theme-color" content="#0c0d18" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0d18'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='20' text-anchor='middle' fill='%23e3ab3d'%3ES%3C/text%3E%3C/svg%3E" />
+    <script>
+      try {
+        if (localStorage.getItem('sankofa.theme') === 'light') document.documentElement.dataset.theme = 'light';
+      } catch (e) {}
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip" href="#story">Skip to the story</a>
+    <nav class="nav" aria-label="Museum">
+      <a class="wordmark" href="#" data-home>Sanko<span>f</span>a</a>
+      <div class="progress" aria-label="Chapters"></div>
+      <div class="nav-actions">
+        <button class="btn" type="button" data-open-atlas><span class="label">Atlas</span></button>
+        <button class="btn" type="button" data-open-book><span class="label">Your book</span> <span class="count" data-path-count>0</span></button>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme"></button>
+      </div>
+    </nav>
+    <main id="story" tabindex="-1">
+      <section class="cover" aria-labelledby="cover-title">
+        <div class="cover-map" aria-hidden="true"></div>
+        <div class="cover-inner">
+          <div class="kicker">A museum that ships as a Kubernetes distribution</div>
+          <h1 id="cover-title">Sanko<em>f</em>a</h1>
+          <p class="deck">Seven centuries of Black culture, from the libraries of Timbuktu to the starships of Sun Ra.</p>
+          <p class="meaning"><b>Sankofa</b> is an Adinkra symbol of the Akan people of Ghana: a bird that turns its head back to take an egg from its own back. <i>Go back and fetch what you left behind.</i></p>
+          <a class="cue" href="#opener"><i aria-hidden="true"></i>Begin before the ships</a>
+        </div>
+      </section>
+      <section class="opener" id="opener" aria-label="Introduction">
+        <p class="lede">In 2020, Kubernetes began to retire a word. The machine that runs the cluster stopped being called the master and became the control plane. Most engineers changed a label and moved on. This museum starts at that commit and goes back: to where the word came from, and to everything built, sung, written and invented by the people that pair of words was once made of.</p>
+        <p>It is a distribution and a monument at once. Every era is a release, from <b>v0</b> to <b>v7</b>: Africa before the slave trade, the Middle Passage, the revolutions, the voices, the diaspora, Harlem and Négritude, civil rights, Afrofuturism. Every page is a card: a few lines, one surprise, and a road further.</p>
+        <p>Cards come from three books. The Book of Voices <b>❝</b> is told by people in their own words. The Book of Archives <b>▤</b> is the ledger kept by those who traded and ruled. The Book of Heirs <b>✶</b> is the art and argument of the diaspora. As in Pavić’s <i>Dictionary of the Khazars</i>, the books do not always agree, and the museum exists in two copies, male and female. You hold the <b data-edition>…</b>.</p>
+      </section>
+    </main>
+    <noscript><p class="error">The museum needs JavaScript to draw its maps and timeline.</p></noscript>
+  </body>
+</html>
