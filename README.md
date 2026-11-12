@@ -38,6 +38,13 @@ independent authoritative sources each.
 - The web museum: a scrollytelling special project with an atlas, a timeline
   and every card; every terminal link opens at the same point.
 
+## The distribution
+
+Sankofa is also a full [kuberoot](https://github.com/tym83/kuberoot) distribution:
+Griot runs as a node service, nodes boot signed images and upgrade A/B, and
+the installed distribution passes upstream Kubernetes conformance **462/462**
+(v1.37.2). How to build, boot and test it: [docs/kuberoot.md](docs/kuberoot.md).
+
 ## Install as add-ons
 
 ```bash
