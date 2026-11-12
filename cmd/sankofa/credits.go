@@ -45,7 +45,7 @@ licenses) and points out what is not declared.`,
 					fmt.Fprintln(w, l)
 				}
 				if m := cr.Missing(); len(m) > 0 {
-					u := atlas.Point{Focus: "big-mama-thornton"}.URL()
+					u := atlas.Point{Focus: "big-mama-thornton", Lang: lang}.URL()
 					fmt.Fprintf(w, "   not declared: %s — %s\n", strings.Join(m, ", "),
 						atlas.Hyperlink(osc, u, "\"Hound Dog\" was Big Mama Thornton's first"))
 				}

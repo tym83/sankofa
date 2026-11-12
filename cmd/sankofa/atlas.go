@@ -283,7 +283,7 @@ func (m *atlasModel) View() string {
 	b.WriteString(stTime.Render(string(bar)) + "\n")
 	b.WriteString(stDim.Render(string(labels[:tw])) + "\n")
 	b.WriteString(fmt.Sprintf("%s  zoom %d  %d–%d\n", stMeta.Render("Sankofa atlas"), m.zoom, m.from, m.to))
-	p := atlas.Point{From: m.from, To: m.to, Zoom: m.zoom, Focus: m.sel}
+	p := atlas.Point{From: m.from, To: m.to, Zoom: m.zoom, Focus: m.sel, Lang: lang}
 	if m.showLink {
 		u := p.URL()
 		b.WriteString(stFooter.Render("Museum: ") + atlas.Hyperlink(true, u, u) + "\n")

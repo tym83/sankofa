@@ -78,7 +78,7 @@ func pathCmd() *cobra.Command {
 			if len(st.Path) == 0 {
 				return fmt.Errorf("your path is empty: open some cards with `sankofa dict` first")
 			}
-			p := atlas.Point{Focus: st.Path[0], Path: st.Path}
+			p := atlas.Point{Focus: st.Path[0], Path: st.Path, Lang: lang}
 			fmt.Fprintln(cmd.OutOrStdout(), p.URL())
 			return nil
 		},
