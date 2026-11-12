@@ -193,6 +193,59 @@ func lintChapters(dir string, s *card.Set) []error {
 		if n := len(strings.Fields(body.PlainBody())); n < 80 || n > 450 {
 			bad("text has %d words, want 80..450", n)
 		}
+		errs = append(errs, lintChapterTranslation(dir, e.Name(), parts[1], bad)...)
 	}
 	return errs
+}
+
+type chapterText struct {
+	Title       string `json:"title"`
+	Kicker      string `json:"kicker"`
+	HeroCaption string `json:"heroCaption,omitempty"`
+}
+
+// lintChapterTranslation checks <id>.<lang>.md: same links, same paragraphs.
+func lintChapterTranslation(dir, name, original string, bad func(string, ...any)) []error {
+	for _, lang := range card.Languages {
+		data, err := os.ReadFile(filepath.Join(dir, strings.TrimSuffix(name, ".md")+"."+lang+".md"))
+		if err != nil {
+			continue
+		}
+		parts := strings.SplitN(string(data), "\n---\n", 2)
+		if !strings.HasPrefix(string(data), "---\n") || len(parts) != 2 {
+			bad("%s translation: missing front matter", lang)
+			continue
+		}
+		var t chapterText
+		if err := yaml.UnmarshalStrict([]byte(strings.TrimPrefix(parts[0], "---\n")), &t); err != nil {
+			bad("%s translation: %v", lang, err)
+			continue
+		}
+		if t.Title == "" || t.Kicker == "" {
+			bad("%s translation needs title and kicker", lang)
+		}
+		paras := func(s string) int {
+			n := 0
+			for _, p := range strings.Split(strings.TrimSpace(s), "\n\n") {
+				if strings.TrimSpace(p) != "" {
+					n++
+				}
+			}
+			return n
+		}
+		if a, b := paras(original), paras(parts[1]); a != b {
+			bad("%s translation has %d paragraphs, want %d (one per scroll step)", lang, b, a)
+		}
+		want := map[string]bool{}
+		for _, l := range (&card.Card{Body: original}).Links() {
+			want[l.Target] = true
+		}
+		for _, l := range (&card.Card{Body: parts[1]}).Links() {
+			delete(want, l.Target)
+		}
+		for id := range want {
+			bad("%s translation lost the link to %q", lang, id)
+		}
+	}
+	return nil
 }
