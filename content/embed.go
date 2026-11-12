@@ -7,12 +7,17 @@ import (
 	"io/fs"
 )
 
-//go:embed cards
-var cards embed.FS
+//go:embed cards quests
+var files embed.FS
 
 // Cards is the card collection.
-func Cards() fs.FS {
-	sub, err := fs.Sub(cards, "cards")
+func Cards() fs.FS { return sub("cards") }
+
+// Quests are the quest definitions.
+func Quests() fs.FS { return sub("quests") }
+
+func sub(dir string) fs.FS {
+	sub, err := fs.Sub(files, dir)
 	if err != nil {
 		panic(err)
 	}
