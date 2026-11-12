@@ -4,6 +4,7 @@
 import type { App } from '../app';
 import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
+import { count, t } from '../lib/i18n';
 import { BELL, PARTS, PULSES, SLOTS, TUNINGS, demoLeases, demoVoices, exchange, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
 const PULSE = 0.2; // seconds per pulse: one 12/8 cycle is 2.4 s
@@ -212,29 +213,29 @@ export class Listen {
   constructor(app: App) {
     this.badge = h('span.l-badge');
     this.status = h('p.l-status', { 'aria-live': 'polite' });
-    this.button = h('button.btn.primary.l-start', { onclick: () => this.toggle() }, 'Start listening') as HTMLButtonElement;
+    this.button = h('button.btn.primary.l-start', { onclick: () => this.toggle() }, t('Start listening')) as HTMLButtonElement;
     this.svg = document.createElementNS(NS, 'svg');
     this.svg.setAttribute('viewBox', '0 0 600 600');
     this.svg.setAttribute('class', 'l-ring');
     this.svg.setAttribute('role', 'img');
-    this.svg.setAttribute('aria-label', 'The bell timeline in the centre and one drum per node around it');
+    this.svg.setAttribute('aria-label', t('The bell timeline in the centre and one drum per node around it'));
     this.hand = document.createElementNS(NS, 'line');
     this.gNodes = document.createElementNS(NS, 'g');
     this.drawRing();
     this.callRow = h('div.l-call', { 'aria-hidden': 'true' });
-    const talk = app.set.get('talking-drums') ? '[[talking-drums|talking drums]]' : 'talking drums';
-    const spirit = app.set.get('spirituals') ? '[[spirituals|the spirituals]]' : 'the spirituals';
+    const talk = app.set.get('talking-drums') ? `[[talking-drums|${t('talking drums')}]]` : t('talking drums');
+    const spirit = app.set.get('spirituals') ? `[[spirituals|${t('the spirituals')}]]` : t('the spirituals');
     const text = h(
       'div.l-text',
       {},
-      h('div.kicker', {}, 'The cluster, played live'),
-      h('h2', {}, 'The listening room'),
+      h('div.kicker', {}, t('The cluster, played live')),
+      h('h2', {}, t('The listening room')),
       h(
         'p.l-lede',
         {},
         richText(
           app,
-          `The bell is the control plane, keeping the West African 12/8 timeline of seven strokes in twelve pulses that every drum in the ensemble locks to, the way ${talk} carry speech in rhythm. Each node is a drum with its own interlocking part: it plays while its Lease is fresh, stumbles as heartbeats come late, and falls silent when the node stops. Then the cluster calls and every ready pod answers, as in ${spirit}; a pod that is not ready leaves its answer empty, and you hear the gap.`,
+          t('The bell is the control plane, keeping the West African 12/8 timeline of seven strokes in twelve pulses that every drum in the ensemble locks to, the way {talk} carry speech in rhythm. Each node is a drum with its own interlocking part: it plays while its Lease is fresh, stumbles as heartbeats come late, and falls silent when the node stops. Then the cluster calls and every ready pod answers, as in {spirit}; a pod that is not ready leaves its answer empty, and you hear the gap.', { talk, spirit }),
         ),
       ),
       h('div.l-controls', {}, this.button, this.badge),
@@ -242,17 +243,17 @@ export class Listen {
       h(
         'ul.l-legend',
         {},
-        h('li', {}, h('i.k-bell'), 'Bell: the control plane'),
-        h('li', {}, h('i.k-node'), 'Drum: a node, renewing its Lease'),
-        h('li', {}, h('i.k-late'), 'Wavering: the heartbeat is late'),
-        h('li', {}, h('i.k-silent'), 'Hollow: the node is silent'),
-        h('li', {}, h('i.k-ans'), 'Filled: a pod answered'),
-        h('li', {}, h('i.k-gap'), 'Empty: a pod was called and stayed silent'),
+        h('li', {}, h('i.k-bell'), t('Bell: the control plane')),
+        h('li', {}, h('i.k-node'), t('Drum: a node, renewing its Lease')),
+        h('li', {}, h('i.k-late'), t('Wavering: the heartbeat is late')),
+        h('li', {}, h('i.k-silent'), t('Hollow: the node is silent')),
+        h('li', {}, h('i.k-ans'), t('Filled: a pod answered')),
+        h('li', {}, h('i.k-gap'), t('Empty: a pod was called and stayed silent')),
       ),
     );
     const stage = h('div.l-stage', {}, this.svg, this.callRow);
-    const bar = h('header.d-bar', {}, h('span.d-title', {}, 'The listening room'), h('button.icon-btn', { 'aria-label': 'Leave the listening room', onclick: () => this.onClose?.() }, svgIcon('close')));
-    this.el = h('section.listen', { 'aria-label': 'The listening room', tabindex: '-1' }, bar, h('div.l-wrap', {}, text, stage));
+    const bar = h('header.d-bar', {}, h('span.d-title', {}, t('The listening room')), h('button.icon-btn', { 'aria-label': t('Leave the listening room'), onclick: () => this.onClose?.() }, svgIcon('close')));
+    this.el = h('section.listen', { 'aria-label': t('The listening room'), tabindex: '-1' }, bar, h('div.l-wrap', {}, text, stage));
     this.el.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') this.onClose?.();
     });
@@ -427,7 +428,7 @@ export class Listen {
       g.style.setProperty('--wob', `${(p.jitter * 40).toFixed(1)}px`);
       g.querySelector('text.nm')!.textContent = shortName(v.node, voices.map((x) => x.node));
       g.querySelector('text.nm')!.setAttribute('aria-label', v.node);
-      g.querySelector('text.st')!.textContent = v.alive ? `${v.ready} ready${v.notReady ? ` · ${v.notReady} silent` : ''}` : 'silent';
+      g.querySelector('text.st')!.textContent = v.alive ? t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '') : t('silent');
       // The lateness arc: how far into its lease the node is.
       const f = Math.max(0, Math.min(0.999, v.late));
       const ang = f * Math.PI * 2;
@@ -481,7 +482,7 @@ export class Listen {
     const ex = this.current;
     if (!ex) return;
     this.callRow.replaceChildren(
-      h('span.cl', {}, 'Call'),
+      h('span.cl', {}, t('Call')),
       h('span.to', {}, `→ ${shortName(node, this.source.voices.map((v) => v.node))}`),
       ...ex.slots.map((ok) => h(`i.slot${ok ? '.ok' : '.gap'}`)),
     );
@@ -490,18 +491,18 @@ export class Listen {
   private render(): void {
     const m = this.source.mode;
     const live = m === 'live';
-    this.badge.textContent = live ? 'Live · Griot /pulse' : m === 'demo' ? 'Recorded demo · not a live cluster' : m === 'stale' ? 'Live stream quiet' : 'Connecting…';
+    this.badge.textContent = t(live ? 'Live · Griot /pulse' : m === 'demo' ? 'Recorded demo · not a live cluster' : m === 'stale' ? 'Live stream quiet' : 'Connecting…');
     this.badge.className = `l-badge ${m}`;
     const v = this.source.voices;
     const alive = v.filter((x) => x.alive).length;
     const ready = v.reduce((s, x) => s + (x.alive ? x.ready : 0), 0);
     const silent = v.reduce((s, x) => s + x.notReady, 0);
     this.status.textContent = v.length
-      ? `${alive} of ${v.length} nodes playing · ${ready} pods answering${silent ? ` · ${silent} silent` : ''}`
+      ? t('{alive} of {total} playing · {ready} answering', { alive, total: count(v.length, 'nodeOf'), ready: count(ready, 'pod') }) + (silent ? ' · ' + t('{n} silent pods', { n: silent }) : '')
       : m === 'connecting'
-        ? 'Listening for the cluster…'
-        : 'No nodes yet.';
-    this.button.replaceChildren(this.playingNow ? 'Stop' : 'Start listening');
+        ? t('Listening for the cluster…')
+        : t('No nodes yet.');
+    this.button.replaceChildren(t(this.playingNow ? 'Stop' : 'Start listening'));
     this.button.setAttribute('aria-pressed', String(this.playingNow));
     this.el.classList.toggle('playing', this.playingNow);
     this.renderNodes();

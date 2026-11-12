@@ -3306,3 +3306,78 @@ body {
     animation: none;
   }
 }
+
+/* ---------- languages ---------- */
+html:not(:lang(ru)) [data-l='ru'],
+html:lang(ru) [data-l='en'] {
+  display: none !important;
+}
+html:lang(ru) {
+  --font-display: 'Literata', 'Fraunces', 'PT Serif', Georgia, serif;
+}
+/* The wordmark and the cover title are the name, always in Fraunces. */
+.wordmark,
+.cover h1 {
+  font-family: 'Fraunces', Georgia, serif;
+}
+html:lang(ru) .hero h2,
+html:lang(ru) .finale h2,
+html:lang(ru) .d-intro h2,
+html:lang(ru) .d-outro h2,
+html:lang(ru) .d-chapter b,
+html:lang(ru) .l-text h2,
+html:lang(ru) .toc-head h2,
+html:lang(ru) .card-body h2 {
+  letter-spacing: -0.012em;
+  font-weight: 330;
+}
+html:lang(ru) .hero h2 {
+  font-size: clamp(44px, 7.6vw, 120px);
+  line-height: 0.98;
+  max-width: 14ch;
+}
+html:lang(ru) .interlude blockquote {
+  font-size: clamp(30px, 4.2vw, 60px);
+  line-height: 1.14;
+  letter-spacing: -0.005em;
+}
+html:lang(ru) .opener p.lede::first-letter,
+html:lang(ru) .step.first p::first-letter {
+  font-weight: 400;
+}
+html:lang(ru) .kicker,
+html:lang(ru) .d-chapter .k {
+  letter-spacing: 0.1em;
+}
+html:lang(ru) body {
+  hyphens: auto;
+}
+.lang-switch {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+}
+.cover-lang {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 26px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+}
+.cover-lang a {
+  text-decoration: none;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(242, 233, 216, 0.22);
+  color: rgba(242, 233, 216, 0.7);
+}
+.cover-lang a:hover {
+  color: #f2e9d8;
+  border-color: rgba(242, 233, 216, 0.5);
+}
+html:not(:lang(ru)) .cover-lang a[lang='en'],
+html:lang(ru) .cover-lang a[lang='ru'] {
+  background: rgba(242, 233, 216, 0.12);
+  color: #f2e9d8;
+  border-color: rgba(242, 233, 216, 0.45);
+}

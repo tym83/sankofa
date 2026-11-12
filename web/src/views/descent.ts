@@ -9,6 +9,7 @@ import { formatYears, span } from '../lib/cards';
 import { bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
 import { eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
+import { count, t, yearsAgo } from '../lib/i18n';
 import { buildScale, chapterAt, chapterCentres, lanes, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
 import { interpolateRgb } from 'd3-interpolate';
 import { scaleLinear } from 'd3-scale';
@@ -26,7 +27,7 @@ const QUIET = [
   'Few records survive from these years. Absence of evidence, not of lives.',
   'A long stretch with no card yet. Somebody was singing.',
   'Silence in the sources. Keep going.',
-];
+].map((q) => t(q));
 
 export class Descent {
   readonly el: HTMLElement;
@@ -59,10 +60,10 @@ export class Descent {
     const bar = h(
       'header.d-bar',
       {},
-      h('span.d-title', {}, 'Through the centuries'),
-      h('button.icon-btn', { 'aria-label': 'Leave the descent', onclick: () => this.onClose?.() }, svgIcon('close')),
+      h('span.d-title', {}, t('Through the centuries')),
+      h('button.icon-btn', { 'aria-label': t('Leave the descent'), onclick: () => this.onClose?.() }, svgIcon('close')),
     );
-    this.el = h('section.descent', { 'aria-label': 'Through the centuries: a descent from 1300 to today', tabindex: '-1' }, this.sun, this.stars, bar, meter, this.track);
+    this.el = h('section.descent', { 'aria-label': t('Through the centuries: a descent from 1300 to today'), tabindex: '-1' }, this.sun, this.stars, bar, meter, this.track);
     this.el.addEventListener('scroll', () => this.onScroll(), { passive: true });
     this.el.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') this.onClose?.();
@@ -133,7 +134,7 @@ export class Descent {
         this.lastYear = year;
         this.meterYear.textContent = String(year);
         const ago = NOW - year;
-        this.meterAgo.textContent = ago === 0 ? 'this year' : `${ago} years ago`;
+        this.meterAgo.textContent = yearsAgo(ago);
         this.centres ??= chapterCentres(this.app.chapters, (id) => this.app.set.get(id)?.years[0]);
         const ch = chapterAt(this.app.chapters, year, this.centres);
         const label = ch ? `${ch.id} · ${ch.title}` : '';
@@ -197,13 +198,13 @@ export class Descent {
         h('span.v', {}, ch.id),
         h('b', {}, ch.title),
         h('span.k', {}, ch.kicker),
-        h('a.d-read', { href: `#ch=${ch.id}`, 'data-chapter': ch.id }, 'Read the chapter →'),
+        h('a.d-read', { href: `#ch=${ch.id}`, 'data-chapter': ch.id }, t('Read the chapter →')),
       );
       els.set('chapter:' + ch.id, el);
       list.push({ kind: 'chapter', id: ch.id, year: ch.years[0], h: 0 });
     }
     for (const m of MOVEMENTS) {
-      const el = h('div.d-move', { style: `--era:${eraColor(m.era)}` }, h('small', {}, 'Movement'), h('b', {}, m.title), h('span', {}, m.sub));
+      const el = h('div.d-move', { style: `--era:${eraColor(m.era)}` }, h('small', {}, t('Movement')), h('b', {}, m.title), h('span', {}, m.sub));
       els.set('movement:' + m.id, el);
       list.push({ kind: 'movement', id: m.id, year: m.years[0], h: 0 });
     }
@@ -240,23 +241,23 @@ export class Descent {
     const intro = h(
       'div.d-intro',
       { style: `height:${top}px` },
-      h('div.kicker', {}, `${START} – ${NOW}`),
-      h('h2', {}, 'Through the centuries'),
-      h('p', {}, `Seven hundred years of Black culture, one year at a time. Scroll down: every screen is time, and the deeper you go, the closer you come to today.`),
+      h('div.kicker', {}, t('{from} – {to}', { from: START, to: NOW })),
+      h('h2', {}, t('Through the centuries')),
+      h('p', {}, t('Seven hundred years of Black culture, one year at a time. Scroll down: every screen is time, and the deeper you go, the closer you come to today.')),
       h('div.d-down', { 'aria-hidden': 'true' }, h('i')),
     );
     const outro = h(
       'div.d-outro',
       { style: `top:${end - bottom}px;height:${bottom}px` },
       h('div.kicker', {}, String(NOW)),
-      h('h2', {}, 'Today.'),
-      h('p', {}, `You have come down ${NOW - START} years. Every card on the way has a place, a time and its sources.`),
+      h('h2', {}, t('Today.')),
+      h('p', {}, t('You have come down {years}. Every card on the way has a place, a time and its sources.', { years: count(NOW - START, 'year') })),
       h(
         'div.actions',
         {},
-        h('button.btn.primary', { onclick: () => app.openAtlas({ zoom: 1 }) }, 'Open the atlas'),
-        h('button.btn', { onclick: () => app.openBook() }, 'Your book'),
-        h('button.btn', { onclick: () => this.goTo(START, true) }, 'Back to 1300'),
+        h('button.btn.primary', { onclick: () => app.openAtlas({ zoom: 1 }) }, t('Open the atlas')),
+        h('button.btn', { onclick: () => app.openBook() }, t('Your book')),
+        h('button.btn', { onclick: () => this.goTo(START, true) }, t('Back to 1300')),
       ),
     );
     this.track.append(intro, outro);

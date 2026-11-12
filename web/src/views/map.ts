@@ -15,6 +15,7 @@ import countries110Url from 'world-atlas/countries-110m.json?url';
 import countries50Url from 'world-atlas/countries-50m.json?url';
 import { reducedMotion } from '../lib/dom';
 import type { Leg } from '../lib/movements';
+import { count, t } from '../lib/i18n';
 
 export const LEVEL_K = [1, 2.2, 4.6, 9, 18];
 export const LEVEL_NAMES = ['Centuries', 'Regions', 'Cities and genres', 'People', 'One document'];
@@ -116,7 +117,7 @@ export class GeoMap {
     private opts: Options = {},
   ) {
     this.svg = select(host).append('svg').attr('class', 'geo' + (opts.interactive ? ' interactive' : '')) as never;
-    this.svg.attr('role', opts.interactive ? 'application' : 'img').attr('aria-label', 'Map of the Atlantic world');
+    this.svg.attr('role', opts.interactive ? 'application' : 'img').attr('aria-label', t('Map of the Atlantic world'));
     if (!opts.interactive) this.svg.style('touch-action', 'auto');
     const defs = this.svg.append('defs');
     const halo = defs.append('radialGradient').attr('id', `${this.idPrefix}-halo`);
@@ -372,10 +373,10 @@ export class GeoMap {
         }
         return g;
       });
-    sel.style('--rc', (d) => d.color).attr('aria-label', (d) => `${d.name}: ${d.count} cards`);
+    sel.style('--rc', (d) => d.color).attr('aria-label', (d) => `${d.name}: ${count(d.count, 'card')}`);
     sel.select('circle').attr('r', (d) => 16 + Math.sqrt(d.count) * 11);
     sel.select('text.nm').text((d) => d.name);
-    sel.select('text.n').text((d) => `${d.count} ${d.count === 1 ? 'card' : 'cards'}`);
+    sel.select('text.n').text((d) => count(d.count, 'card'));
     this.renderOverlay();
   }
 

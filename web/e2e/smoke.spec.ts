@@ -154,3 +154,36 @@ test('the page is never wider than the screen', async ({ page }) => {
   const [inner, client] = await page.evaluate(() => [window.innerWidth, document.documentElement.clientWidth]);
   expect(inner).toBe(client);
 });
+
+test('the language switch turns the museum Russian and remembers it', async ({ page }) => {
+  await page.addInitScript(() => {
+    if (!sessionStorage.getItem('seeded')) {
+      localStorage.setItem('sankofa.lang', 'en');
+      sessionStorage.setItem('seeded', '1');
+    }
+  });
+  await page.goto('/');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await page.locator('[data-lang-switch]').click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+  await expect(page).toHaveURL(/lang=ru/);
+  await expect(page.locator('.deck:visible')).toContainText('Семь веков');
+  await expect(page.locator('.toc-head h2')).toHaveText('Восемь релизов');
+  expect(await page.evaluate(() => localStorage.getItem('sankofa.lang'))).toBe('ru');
+  await page.locator('[data-lang-switch]').click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page).not.toHaveURL(/lang=ru/);
+});
+
+test('a deep link with lang=ru opens the atlas and the card in Russian', async ({ page, request }) => {
+  const data = await (await request.get('data/cards.json')).json();
+  const c = data.cards.find((x: { translations?: { ru?: { title: string } }; edition: string }) => x.translations?.ru?.title && x.edition === 'both');
+  test.skip(!c, 'no translated card yet');
+  await page.goto(`/#focus=${c.id}&lang=ru&zoom=${c.zoom}`);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+  await expect(page.locator('.atlas.open .atlas-bar h2')).toHaveText('Атлас');
+  const card = page.locator(`.drawer.on article.card[data-card-id="${c.id}"]`);
+  await expect(card.locator('h2')).toHaveText(c.translations.ru.title);
+  await card.getByRole('button', { name: 'Открыть в терминале' }).click();
+  await expect(card.locator('.term code')).toContainText('lang=ru');
+});

@@ -10,6 +10,7 @@ import { ERAS, type Card } from '../lib/types';
 import { GeoMap, LEVEL_K, LEVEL_NAMES } from './map';
 import { Timeline } from './timeline';
 import { showTip, hideTip } from './tip';
+import { count, t } from '../lib/i18n';
 
 export class Atlas {
   readonly el: HTMLElement;
@@ -30,11 +31,11 @@ export class Atlas {
   constructor(private app: App) {
     this.when = h('div.when', { 'aria-live': 'polite' });
     this.term = h('div.term', { style: 'position:absolute;right:var(--gutter);top:calc(var(--nav-h) + 12px);z-index:4;max-width:min(560px,90vw)' }, h('code'));
-    this.term.append(h('button', { onclick: async () => toast((await copyText(terminalCommand(this.point()))) ? 'Command copied' : 'Copy failed') }, 'Copy'));
+    this.term.append(h('button', { onclick: async () => toast((await copyText(terminalCommand(this.point()))) ? t('Command copied') : t('Copy failed')) }, t('Copy')));
     const bar = h(
       'header.atlas-bar',
       {},
-      h('h2', {}, 'Atlas'),
+      h('h2', {}, t('Atlas')),
       this.when,
       h('div.sp'),
       h(
@@ -46,18 +47,18 @@ export class Atlas {
           },
         },
         svgIcon('term'),
-        h('span.label', {}, 'Open in terminal'),
+        h('span.label', {}, t('Open in terminal')),
       ),
-      h('button.icon-btn', { 'aria-label': 'Close the atlas', onclick: () => this.onClose?.() }, svgIcon('close')),
+      h('button.icon-btn', { 'aria-label': t('Close the atlas'), onclick: () => this.onClose?.() }, svgIcon('close')),
     );
-    const ladder = h('div.levels', { role: 'group', 'aria-label': 'Zoom level' });
+    const ladder = h('div.levels', { role: 'group', 'aria-label': t('Zoom level') });
     LEVEL_NAMES.forEach((name, i) => {
       const b = h('button', { 'aria-pressed': 'false', onclick: () => this.setLevel(i + 1) }, h('b', {}, String(i + 1)), h('span', {}, name)) as HTMLButtonElement;
       this.levels.push(b);
       ladder.append(b);
     });
-    ladder.append(h('div.hint', {}, 'Zoom changes what is told, not only the scale. Keys: + − arrows [ ]'));
-    this.pathbar = h('div.pathbar', { role: 'group', 'aria-label': 'Reader path' });
+    ladder.append(h('div.hint', {}, t('Zoom changes what is told, not only the scale. Keys: + − arrows [ ]')));
+    this.pathbar = h('div.pathbar', { role: 'group', 'aria-label': t('Reader path') });
     const legend = h(
       'div.legend',
       { 'aria-hidden': 'true' },
@@ -65,7 +66,7 @@ export class Atlas {
     );
     this.stage = h('div.atlas-stage', {}, ladder, legend, this.pathbar);
     this.timeHost = h('div.atlas-time');
-    this.el = h('section.atlas', { 'aria-label': 'Atlas', role: 'region', tabindex: '-1' }, bar, this.stage, this.timeHost, this.term);
+    this.el = h('section.atlas', { 'aria-label': t('Atlas'), role: 'region', tabindex: '-1' }, bar, this.stage, this.timeHost, this.term);
     this.el.addEventListener('keydown', (e) => this.key(e));
     document.body.append(this.el);
   }
@@ -233,8 +234,8 @@ export class Atlas {
       b.classList.toggle('on', i + 1 === this.level);
       b.setAttribute('aria-pressed', String(i + 1 === this.level));
     });
-    const t = this.p.from ? formatYears(this.p.to ? [this.p.from, this.p.to] : [this.p.from]) : '1300 – today';
-    this.when.textContent = `${t} · ${LEVEL_NAMES[this.level - 1]} · ${layers.visible.length} ${layers.visible.length === 1 ? 'card' : 'cards'}`;
+    const when = this.p.from ? formatYears(this.p.to ? [this.p.from, this.p.to] : [this.p.from]) : t('1300 – today');
+    this.when.textContent = `${when} · ${LEVEL_NAMES[this.level - 1]} · ${count(layers.visible.length, 'card')}`;
     this.renderPathbar(path);
   }
 
@@ -247,9 +248,9 @@ export class Atlas {
       this.focus(c.id);
     };
     this.pathbar.replaceChildren(
-      h('span', {}, 'A reader’s path · ', h('b', {}, `${i + 1} / ${path.length}`)),
-      h('button.icon-btn', { 'aria-label': 'Previous card in the path', onclick: () => go(this.pathIndex - 1), disabled: i === 0 }, svgIcon('prev')),
-      h('button.icon-btn', { 'aria-label': 'Next card in the path', onclick: () => go(this.pathIndex + (this.p.focus ? 1 : 0)), disabled: i >= path.length - 1 && !!this.p.focus }, svgIcon('next')),
+      h('span', {}, t('A reader’s path ·') + ' ', h('b', {}, `${i + 1} / ${path.length}`)),
+      h('button.icon-btn', { 'aria-label': t('Previous card in the path'), onclick: () => go(this.pathIndex - 1), disabled: i === 0 }, svgIcon('prev')),
+      h('button.icon-btn', { 'aria-label': t('Next card in the path'), onclick: () => go(this.pathIndex + (this.p.focus ? 1 : 0)), disabled: i >= path.length - 1 && !!this.p.focus }, svgIcon('next')),
     );
   }
 

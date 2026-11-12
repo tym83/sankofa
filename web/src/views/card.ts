@@ -1,11 +1,12 @@
 import type { App } from '../app';
-import { cardPoint, EDITION_NAME, richText } from '../app';
+import { cardPoint, richText } from '../app';
 import type { Card } from '../lib/types';
 import { BOOK_NAMES, ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL } from '../lib/cards';
 import { formatFragment, terminalCommand } from '../lib/fragment';
 import { bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
+import { edition, lang, t } from '../lib/i18n';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
 export class Drawer {
@@ -34,7 +35,7 @@ export class Drawer {
 
   show(content: HTMLElement): void {
     if (!this.isOpen) this.returnTo = document.activeElement;
-    const close = h('button.icon-btn.close', { 'aria-label': 'Close', onclick: () => this.close() }, svgIcon('close'));
+    const close = h('button.icon-btn.close', { 'aria-label': t('Close'), onclick: () => this.close() }, svgIcon('close'));
     this.el.replaceChildren(close, content);
     this.el.scrollTop = 0;
     this.el.classList.add('on');
@@ -81,20 +82,20 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
   const point = cardPoint(c);
   const term = h('div.term', {}, h('code', {}, terminalCommand(point)));
   term.append(
-    h('button', { onclick: async () => toast((await copyText(terminalCommand(point))) ? 'Command copied' : 'Copy failed') }, 'Copy'),
+    h('button', { onclick: async () => toast((await copyText(terminalCommand(point))) ? t('Command copied') : t('Copy failed')) }, t('Copy')),
   );
 
   const paragraphs = c.body.split(/\n\s*\n/).map((p) => h('p', {}, richText(app, p.replace(/\s*\n\s*/g, ' '))));
   const partner = app.set.partner(c.id);
   const notices: HTMLElement[] = [];
-  if (c.dispute) notices.push(h('div.notice', { role: 'note' }, h('b', {}, 'Contested. '), c.dispute));
+  if (c.dispute) notices.push(h('div.notice', { role: 'note' }, h('b', {}, t('Contested.') + ' '), c.dispute));
   if (ctx.asked && ctx.asked.id !== c.id) {
     notices.push(
       h(
         'div.notice.edition',
         {},
-        `You followed a link to ${ctx.asked.title}. In your ${EDITION_NAME[app.edition]} this place is held by another voice. `,
-        'The other page exists: a reader with the other copy can pass it to you by sharing their path.',
+        t('You followed a link to {title}. In your {edition} this place is held by another voice.', { title: ctx.asked.title, edition: edition(app.edition, 'prep') }) + ' ',
+        t('The other page exists: a reader with the other copy can pass it to you by sharing their path.'),
       ),
     );
   } else if (ctx.foreign) {
@@ -102,9 +103,9 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       h(
         'div.notice.edition',
         {},
-        h('b', {}, 'From the other copy. '),
-        `You hold the ${EDITION_NAME[app.edition]}; this page reached you through another reader's path.`,
-        partner ? ' Its counterpart in your copy is ' : '',
+        h('b', {}, t('From the other copy.') + ' '),
+        t("You hold the {edition}; this page reached you through another reader's path.", { edition: edition(app.edition) }),
+        partner ? ' ' + t('Its counterpart in your copy is') + ' ' : '',
         partner ? h('a', { href: `#focus=${partner.id}`, 'data-card': partner.id }, partner.title) : '',
         partner ? '.' : '',
       ),
@@ -114,8 +115,8 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       h(
         'div.notice.edition',
         {},
-        h('b', {}, `Only in the ${EDITION_NAME[c.edition]}. `),
-        'This museum comes in two copies, like Pavić’s dictionary. The other one tells this moment in a different voice; ask another reader for their path.',
+        h('b', {}, t('Only in the {edition}.', { edition: edition(c.edition, 'prep') }) + ' '),
+        t('This museum comes in two copies, like Pavić’s dictionary. The other one tells this moment in a different voice; ask another reader for their path.'),
       ),
     );
   }
@@ -151,12 +152,12 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
         h('figcaption.credit', {}, a.caption ? a.caption + ' · ' : '', a.credit, ' · ', a.url ? h('a', { href: a.url, rel: 'noopener', target: '_blank' }, a.license) : a.license),
       ),
     ),
-    c.further?.length ? h('section.sec.further', {}, h('h3', {}, 'Go further'), h('ul', {}, c.further.map((f) => h('li', {}, richText(app, f))))) : null,
+    c.further?.length ? h('section.sec.further', {}, h('h3', {}, t('Go further')), h('ul', {}, c.further.map((f) => h('li', {}, richText(app, f))))) : null,
     sameGenre.length || backlinks.length
       ? h(
           'section.sec',
           {},
-          h('h3', {}, 'Cards that lead here'),
+          h('h3', {}, t('Cards that lead here')),
           h(
             'div.chips',
             {},
@@ -169,25 +170,25 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     h(
       'div.card-actions',
       {},
-      h('button.btn', { onclick: () => app.openAtlas(point, true) }, svgIcon('map'), 'Show on the atlas'),
-      h('button.btn', { onclick: () => term.classList.toggle('on'), 'aria-label': 'Open in terminal' }, svgIcon('term'), 'Open in terminal'),
+      h('button.btn', { onclick: () => app.openAtlas(point, true) }, svgIcon('map'), t('Show on the atlas')),
+      h('button.btn', { onclick: () => term.classList.toggle('on'), 'aria-label': t('Open in terminal') }, svgIcon('term'), t('Open in terminal')),
       h(
         'button.btn',
         {
           onclick: async () => {
             const url = location.href.split('#')[0] + '#' + formatFragment(point);
-            toast((await copyText(url)) ? 'Link copied' : 'Copy failed');
+            toast((await copyText(url)) ? t('Link copied') : t('Copy failed'));
           },
         },
         svgIcon('link'),
-        'Copy link',
+        t('Copy link'),
       ),
     ),
     term,
     h(
       'section.sec.sources',
       {},
-      h('h3', {}, 'Sources'),
+      h('h3', {}, t('Sources')),
       h(
         'ol',
         {},
@@ -212,7 +213,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       )
     : null;
 
-  return h('article.card', { 'data-card-id': c.id, 'aria-labelledby': 'card-title' }, media, body);
+  return h('article.card', { 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
 }
 
 export function renderBook(app: App, path: string[], actions: { share(): void; replay(): void; clear(): void }): HTMLElement {
@@ -220,14 +221,14 @@ export function renderBook(app: App, path: string[], actions: { share(): void; r
   return h(
     'div.book-panel',
     {},
-    h('div.kicker', {}, `Your book · ${EDITION_NAME[app.edition]}`),
-    h('h2', { tabindex: '-1' }, 'The path you walked'),
+    h('div.kicker', {}, t('Your book · {edition}', { edition: edition(app.edition) })),
+    h('h2', { tabindex: '-1' }, t('The path you walked')),
     h(
       'p',
       {},
       cards.length
-        ? 'Every card you open is written into your own book, here in your browser and nowhere else. Share it and another reader walks the same road, including pages their copy does not have.'
-        : 'Open a card and it is written into your own book. Nothing leaves your browser until you share it.',
+        ? t('Every card you open is written into your own book, here in your browser and nowhere else. Share it and another reader walks the same road, including pages their copy does not have.')
+        : t('Open a card and it is written into your own book. Nothing leaves your browser until you share it.'),
     ),
     cards.length
       ? h(
@@ -242,9 +243,9 @@ export function renderBook(app: App, path: string[], actions: { share(): void; r
       ? h(
           'div.card-actions',
           {},
-          h('button.btn.primary', { onclick: actions.share }, svgIcon('link'), 'Share my path'),
-          h('button.btn', { onclick: actions.replay }, svgIcon('map'), 'Replay on the atlas'),
-          h('button.btn', { onclick: actions.clear }, 'Start a new book'),
+          h('button.btn.primary', { onclick: actions.share }, svgIcon('link'), t('Share my path')),
+          h('button.btn', { onclick: actions.replay }, svgIcon('map'), t('Replay on the atlas')),
+          h('button.btn', { onclick: actions.clear }, t('Start a new book')),
         )
       : null,
   );

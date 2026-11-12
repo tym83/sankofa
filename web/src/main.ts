@@ -1,13 +1,15 @@
 import './styles/main.css';
 import type { App } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
-import { CardSet } from './lib/cards';
+import { CardSet, localizeCard, localizeChapter } from './lib/cards';
 import { sortChapters } from './lib/chapters';
 import { formatFragment } from './lib/fragment';
 import { formatRoute, parseRoute, screenOf, type Route } from './lib/route';
 import * as reader from './lib/reader';
 import { copyText, h, svgIcon, toast } from './lib/dom';
+import { detectLang, isLang, lang, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
 import { buildStory } from './views/story';
+import { localizeStatics } from './lib/statics';
 import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
 import { Descent } from './views/descent';
@@ -24,14 +26,30 @@ function readRoute(): Route {
 }
 
 function writeRoute(r: Route, push: boolean): void {
-  const frag = formatRoute(r);
+  // Every link carries the language, so a shared link opens as it was read.
+  const frag = formatRoute({ ...r, point: { ...r.point, lang: lang() === 'en' ? undefined : lang() } });
   const url = frag ? `#${frag}` : location.pathname + location.search;
   if (url === (location.hash || location.pathname + location.search)) return;
   history[push ? 'pushState' : 'replaceState'](null, '', url);
 }
 
+/** Switch language: remember it, put it in the link, and rebuild the museum. */
+export function switchLang(to: Lang): void {
+  storeLang(to);
+  const r = parseRoute(location.hash);
+  const frag = formatRoute({ ...r, point: { ...r.point, lang: to === 'en' ? undefined : to } });
+  history.replaceState(null, '', frag ? `#${frag}` : location.pathname + location.search);
+  location.reload();
+}
+
 async function start(): Promise<void> {
-  const loading = h('div.loading', { role: 'progressbar', 'aria-label': 'Loading the museum' });
+  const fromHash = new URLSearchParams(location.hash.slice(1)).get('lang');
+  const current = detectLang(fromHash, storedLang(), navigator.languages ?? navigator.language);
+  setLang(current);
+  if (isLang(fromHash)) storeLang(fromHash);
+  document.documentElement.lang = current;
+  localizeStatics(current);
+  const loading = h('div.loading', { role: 'progressbar', 'aria-label': t('Loading the museum') });
   document.body.append(loading);
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
@@ -39,14 +57,14 @@ async function start(): Promise<void> {
     [cardsFile, chaptersFile] = await Promise.all([load<CardsFile>('data/cards.json'), load<ChaptersFile>('data/chapters.json')]);
   } catch (e) {
     loading.remove();
-    document.getElementById('story')!.append(h('p.error', {}, `The museum could not load its cards (${(e as Error).message}). Run scripts/build-data.sh.`));
+    document.getElementById('story')!.append(h('p.error', {}, t('The museum could not load its cards ({error}). Run scripts/build-data.sh.', { error: (e as Error).message })));
     return;
   }
 
-  const set = new CardSet(cardsFile.cards);
-  const chapters = sortChapters(chaptersFile.chapters);
-  const cardDrawer = new Drawer('Card');
-  const bookDrawer = new Drawer('Your book');
+  const set = new CardSet(cardsFile.cards.map((c) => localizeCard(c, current)));
+  const chapters = sortChapters(chaptersFile.chapters.map((c) => localizeChapter(c, current)));
+  const cardDrawer = new Drawer(t('Card'));
+  const bookDrawer = new Drawer(t('Your book'));
   const pathListeners: ((p: string[]) => void)[] = [];
   let route = readRoute();
   let chapterNow: string | null = null;
@@ -89,8 +107,8 @@ async function start(): Promise<void> {
       bookDrawer.show(
         renderBook(app, path, {
           share: async () => {
-            const url = location.href.split('#')[0] + '#' + formatFragment({ path });
-            toast((await copyText(url)) ? 'Link to your path copied' : 'Copy failed');
+            const url = location.href.split('#')[0] + '#' + formatFragment({ path, lang: lang() === 'en' ? undefined : lang() });
+            toast((await copyText(url)) ? t('Link to your path copied') : t('Copy failed'));
           },
           replay: () => {
             bookDrawer.close(true);
@@ -155,6 +173,14 @@ async function start(): Promise<void> {
   };
 
   setupNav(app, atlas);
+  document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
+  document.querySelectorAll<HTMLAnchorElement>('[data-set-lang]').forEach((a) =>
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const to = a.dataset.setLang;
+      if (isLang(to) && to !== lang()) switchLang(to);
+    }),
+  );
   document.querySelector('[data-open-descent]')?.prepend(svgIcon('down'));
   document.querySelector('[data-open-listen]')?.prepend(svgIcon('wave'));
   buildStory(app, document.getElementById('story')!);
@@ -230,6 +256,8 @@ async function start(): Promise<void> {
     if (route.point.focus) app.openCard(route.point.focus, { push: false });
     else cardDrawer.close(true);
   };
+  // Mirror the language into the link, so what is shared opens as it was read.
+  if (lang() !== 'en' && !isLang(new URLSearchParams(location.hash.slice(1)).get('lang'))) writeRoute(readRoute(), false);
   window.addEventListener('popstate', () => apply(false));
   window.addEventListener('hashchange', () => apply(false));
   apply(true);
@@ -268,7 +296,7 @@ function setupNav(app: App, atlas: Atlas): void {
   const paintTheme = () => {
     const t = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
     themeBtn.replaceChildren(svgIcon(t === 'light' ? 'moon' : 'sun'));
-    themeBtn.setAttribute('aria-label', t === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+    themeBtn.setAttribute('aria-label', tr(t === 'light' ? 'Switch to dark theme' : 'Switch to light theme'));
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', t === 'light' ? '#f5efe3' : '#0c0d18');
   };
   themeBtn.addEventListener('click', () => {

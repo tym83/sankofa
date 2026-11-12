@@ -9,6 +9,8 @@ const GO_FRAGMENTS: [Parameters<typeof formatFragment>[0], string][] = [
   [{ place: 'Rio de Janeiro', zoom: 2 }, 'place=Rio+de+Janeiro&zoom=2'],
   [{ focus: 'genre/blues' }, 'focus=genre%2Fblues'],
   [{ path: ['equiano', 'zong', 'zong-philip'] }, 'path=equiano.zong.zong-philip'],
+  [{ from: 1781, focus: 'zong', lang: 'ru', zoom: 5 }, 'focus=zong&lang=ru&t=1781&zoom=5'],
+  [{ focus: 'zong', lang: 'en' }, 'focus=zong'],
   [{ place: "Saint-Domingue & Haïti!*'()" }, 'place=Saint-Domingue+%26+Ha%C3%AFti%21%2A%27%28%29'],
 ];
 
@@ -55,6 +57,11 @@ describe('fragment', () => {
 
   it.each(GO_SLUGS)('slugs %j like atlas.Slug', (name, want) => {
     expect(slug(name)).toBe(want);
+  });
+
+  it('carries the language', () => {
+    expect(parseFragment('#focus=zong&lang=ru').lang).toBe('ru');
+    expect(parseFragment('#focus=zong').lang).toBeUndefined();
   });
 
   it('builds the terminal command', () => {

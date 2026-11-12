@@ -1,6 +1,7 @@
-import type { Book, Card, Edition, Place } from './types';
+import type { Book, Card, Chapter, Edition, Place } from './types';
 import { BOOK_SYMBOLS } from './types';
 import { slug } from './fragment';
+import { t } from './i18n';
 
 // Same expression as pkg/card linkRe.
 const LINK_RE = /\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g;
@@ -79,7 +80,7 @@ export class CardSet {
     let partial: Place | undefined;
     for (const c of this.all()) {
       for (const p of c.places) {
-        const s = slug(p.name);
+        const s = placeKey(p);
         if (s === key) return p;
         if (!partial && s.split('-').includes(key)) partial = p;
       }
@@ -100,7 +101,7 @@ export function span(c: { years: number[] }): [number, number] {
 
 export function formatYears(years: number[]): string {
   if (!years.length) return '';
-  const fmt = (y: number) => (y < 0 ? `${-y} BCE` : String(y));
+  const fmt = (y: number) => (y < 0 ? `${-y} ${t('BCE')}` : String(y));
   return years.length > 1 && years[1] !== years[0] ? `${fmt(years[0])}–${fmt(years[1])}` : fmt(years[0]);
 }
 
@@ -124,4 +125,40 @@ export function overlaps(c: { years: number[] }, from?: number, to?: number): bo
   const [a, b] = span(c);
   const end = to ?? from;
   return b >= from && a <= end;
+}
+
+/**
+ * A card in the reader's language, like card.Localized: anything missing or
+ * of the wrong length stays in English. Place names keep their English form
+ * in `en`, because fragments are built from it.
+ */
+export function localizeCard(c: Card, lang: string): Card {
+  const tr = lang === 'en' ? undefined : c.translations?.[lang];
+  if (!tr || !tr.title) return { ...c, textLang: 'en' };
+  const out: Card = { ...c, title: tr.title, wow: tr.wow || c.wow, body: tr.body || c.body, textLang: tr.body ? lang : 'en' };
+  if (tr.dispute) out.dispute = tr.dispute;
+  if (tr.further && c.further && tr.further.length === c.further.length) out.further = tr.further;
+  if (tr.places && tr.places.length === c.places.length) out.places = c.places.map((p, i) => ({ ...p, name: tr.places![i], en: p.name }));
+  if (tr.captions && c.media && tr.captions.length === c.media.length) out.media = c.media.map((m, i) => ({ ...m, caption: tr.captions![i] || m.caption }));
+  return out;
+}
+
+/** A chapter in the reader's language; the body only when every step is there. */
+export function localizeChapter(ch: Chapter, lang: string): Chapter {
+  const tr = lang === 'en' ? undefined : ch.translations?.[lang];
+  if (!tr) return { ...ch, textLang: 'en' };
+  const steps = tr.steps && tr.steps.length === ch.steps.length ? tr.steps : ch.steps;
+  return {
+    ...ch,
+    title: tr.title || ch.title,
+    kicker: tr.kicker || ch.kicker,
+    hero: ch.hero && tr.heroCaption ? { ...ch.hero, caption: tr.heroCaption } : ch.hero,
+    steps,
+    textLang: steps === ch.steps ? 'en' : lang,
+  };
+}
+
+/** The key a place has in fragments: the slug of its original name. */
+export function placeKey(p: Place): string {
+  return slug(p.en ?? p.name);
 }

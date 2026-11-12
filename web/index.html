@@ -18,19 +18,31 @@
       try {
         if (localStorage.getItem('sankofa.theme') === 'light') document.documentElement.dataset.theme = 'light';
       } catch (e) {}
+      // The language, before the first paint: the link, the reader's choice, the browser.
+      (function () {
+        var l = null;
+        try {
+          l = new URLSearchParams(location.hash.slice(1)).get('lang');
+          if (l !== 'ru' && l !== 'en') l = localStorage.getItem('sankofa.lang');
+        } catch (e) {}
+        if (l !== 'ru' && l !== 'en') l = (navigator.languages || [navigator.language || '']).some(function (x) { return /^ru\b/i.test(x); }) ? 'ru' : 'en';
+        document.documentElement.lang = l;
+        if (l === 'ru') document.title = 'Sankofa — Вернись и забери';
+      })();
     </script>
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <a class="skip" href="#story">Skip to the story</a>
+    <a class="skip" href="#story"><span data-l="en">Skip to the story</span><span data-l="ru">Перейти к истории</span></a>
     <nav class="nav" aria-label="Museum">
       <a class="wordmark" href="#" data-home>Sanko<span>f</span>a</a>
       <div class="progress" aria-label="Chapters"></div>
       <div class="nav-actions">
-        <button class="btn" type="button" data-open-descent data-descent=""><span class="label">Descend</span></button>
-        <button class="btn" type="button" data-open-atlas><span class="label">Atlas</span></button>
-        <button class="btn" type="button" data-open-listen data-listen=""><span class="label">Listen</span></button>
-        <button class="btn" type="button" data-open-book><span class="label">Your book</span> <span class="count" data-path-count>0</span></button>
+        <button class="btn" type="button" data-open-descent data-descent=""><span class="label"><span data-l="en">Descend</span><span data-l="ru">Сквозь века</span></span></button>
+        <button class="btn" type="button" data-open-atlas><span class="label"><span data-l="en">Atlas</span><span data-l="ru">Атлас</span></span></button>
+        <button class="btn" type="button" data-open-listen data-listen=""><span class="label"><span data-l="en">Listen</span><span data-l="ru">Слушать</span></span></button>
+        <button class="btn" type="button" data-open-book><span class="label"><span data-l="en">Your book</span><span data-l="ru">Ваша книга</span></span> <span class="count" data-path-count>0</span></button>
+        <button class="btn lang-switch" type="button" data-lang-switch><span data-l="en" lang="ru" aria-label="Читать по-русски">RU</span><span data-l="ru" lang="en" aria-label="Read in English">EN</span></button>
         <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme"></button>
       </div>
     </nav>
@@ -38,23 +50,36 @@
       <section class="cover" aria-labelledby="cover-title">
         <div class="cover-map" aria-hidden="true"></div>
         <div class="cover-inner">
-          <div class="kicker">A museum that ships as a Kubernetes distribution</div>
+          <div class="cover-lang" role="group" aria-label="Language · Язык">
+            <a href="#lang=en" data-set-lang="en" lang="en">English</a>
+            <a href="#lang=ru" data-set-lang="ru" lang="ru">Русский</a>
+          </div>
+          <div class="kicker"><span data-l="en">A museum that ships as a Kubernetes distribution</span><span data-l="ru">Музей, который поставляется как дистрибутив Kubernetes</span></div>
           <h1 id="cover-title">Sanko<em>f</em>a</h1>
-          <p class="deck">Seven centuries of Black culture, from the libraries of Timbuktu to the starships of Sun Ra.</p>
-          <p class="meaning"><b>Sankofa</b> is an Adinkra symbol of the Akan people of Ghana: a bird that turns its head back to take an egg from its own back. <i>Go back and fetch what you left behind.</i></p>
+          <p class="deck" data-l="en">Seven centuries of Black culture, from the libraries of Timbuktu to the starships of Sun Ra.</p>
+          <p class="deck" data-l="ru">Семь веков чёрной культуры — от библиотек Тимбукту до звездолётов Сан Ра.</p>
+          <p class="meaning" data-l="en"><b>Sankofa</b> is an Adinkra symbol of the Akan people of Ghana: a bird that turns its head back to take an egg from its own back. <i>Go back and fetch what you left behind.</i></p>
+          <p class="meaning" data-l="ru"><b>Санкофа</b> — символ адинкра народа акан из Ганы: птица, повернувшая голову назад, чтобы взять яйцо со своей спины. <i>Вернись и забери то, что оставил.</i></p>
           <div class="cover-actions">
-            <a class="btn primary" href="#t=1300&amp;view=descent" data-descent="">Descend through seven centuries</a>
-            <a class="btn l-cover" href="#view=listen" data-listen="">Listen to the cluster</a>
-            <a class="cue" href="#opener"><i aria-hidden="true"></i>Or begin before the ships</a>
+            <a class="btn primary" href="#t=1300&amp;view=descent" data-descent=""><span data-l="en">Descend through seven centuries</span><span data-l="ru">Спуститься сквозь семь веков</span></a>
+            <a class="btn l-cover" href="#view=listen" data-listen=""><span data-l="en">Listen to the cluster</span><span data-l="ru">Послушать кластер</span></a>
+            <a class="cue" href="#opener"><i aria-hidden="true"></i><span data-l="en">Or begin before the ships</span><span data-l="ru">Или начать с того, что было до кораблей</span></a>
           </div>
         </div>
       </section>
       <section class="opener" id="opener" aria-label="Introduction">
-        <p class="lede">In 2020, Kubernetes began to retire a word. The machine that runs the cluster stopped being called the master and became the control plane. Most engineers changed a label and moved on. This museum starts at that commit and goes back: to where the word came from, and to everything built, sung, written and invented by the people that pair of words was once made of.</p>
-        <p>It is a distribution and a monument at once. Every era is a release, from <b>v0</b> to <b>v7</b>: Africa before the slave trade, the Middle Passage, the revolutions, the voices, the diaspora, Harlem and Négritude, civil rights, Afrofuturism. Every page is a card: a few lines, one surprise, and a road further.</p>
-        <p>Cards come from three books. The Book of Voices <b data-book="voices">❝</b> is told by people in their own words. The Book of Archives <b data-book="archives">▤</b> is the ledger kept by those who traded and ruled. The Book of Heirs <b data-book="heirs">✶</b> is the art and argument of the diaspora. As in Pavić’s <i>Dictionary of the Khazars</i>, the books do not always agree, and the museum exists in two copies, male and female. You hold the <b data-edition>…</b>.</p>
+        <div data-l="en">
+          <p class="lede">In 2020, Kubernetes began to retire a word. The machine that runs the cluster stopped being called the master and became the control plane. Most engineers changed a label and moved on. This museum starts at that commit and goes back: to where the word came from, and to everything built, sung, written and invented by the people that pair of words was once made of.</p>
+          <p>It is a distribution and a monument at once. Every era is a release, from <b>v0</b> to <b>v7</b>: Africa before the slave trade, the Middle Passage, the revolutions, the voices, the diaspora, Harlem and Négritude, civil rights, Afrofuturism. Every page is a card: a few lines, one surprise, and a road further.</p>
+          <p>Cards come from three books. The Book of Voices <b data-book="voices">❝</b> is told by people in their own words. The Book of Archives <b data-book="archives">▤</b> is the ledger kept by those who traded and ruled. The Book of Heirs <b data-book="heirs">✶</b> is the art and argument of the diaspora. As in Pavić’s <i>Dictionary of the Khazars</i>, the books do not always agree, and the museum exists in two copies, male and female. You hold the <b data-edition>…</b>.</p>
+        </div>
+        <div data-l="ru">
+          <p class="lede">В 2020 году Kubernetes начал прощаться с одним словом. Машина, которая управляет кластером, перестала называться master и стала control plane. Большинство инженеров поправили метку и пошли дальше. Этот музей начинается с того коммита и идёт назад — к тому, откуда взялось это слово, и ко всему, что построили, спели, написали и придумали люди, о которых когда-то говорила эта пара слов.</p>
+          <p>Это одновременно дистрибутив и памятник. Каждая эпоха — релиз, от <b>v0</b> до <b>v7</b>: Африка до работорговли, Средний путь, революции, голоса, диаспора, Гарлем и негритюд, борьба за гражданские права, афрофутуризм. Каждая страница — карточка: несколько строк, одно удивление и дорога дальше.</p>
+          <p>Карточки взяты из трёх книг. Книга голосов <b data-book="voices">❝</b> рассказана самими людьми. Книга архивов <b data-book="archives">▤</b> — учётные записи тех, кто торговал и правил. Книга наследников <b data-book="heirs">✶</b> — искусство и споры диаспоры. Как в «Хазарском словаре» Павича, книги не всегда согласны друг с другом, а сам музей существует в двух экземплярах, мужском и женском. У вас в руках — <b data-edition>…</b>.</p>
+        </div>
       </section>
     </main>
-    <noscript><p class="error">The museum needs JavaScript to draw its maps and timeline.</p></noscript>
+    <noscript><p class="error">The museum needs JavaScript to draw its maps and timeline. Музею нужен JavaScript, чтобы нарисовать карты и хронологию.</p></noscript>
   </body>
 </html>

@@ -8,6 +8,8 @@ export interface Place {
   name: string;
   lat: number;
   lon: number;
+  /** The original (English) name when `name` is translated; fragments use it. */
+  en?: string;
 }
 
 export interface Source {
@@ -45,6 +47,26 @@ export interface Card {
   dispute?: string;
   body: string;
   backlinks?: string[];
+  translations?: Record<string, CardTranslation>;
+  /** Set on a localized copy: the language its text is actually in. */
+  textLang?: string;
+}
+
+export interface CardTranslation {
+  title: string;
+  wow: string;
+  places?: string[];
+  further?: string[];
+  dispute?: string;
+  captions?: string[];
+  body: string;
+}
+
+export interface ChapterTranslation {
+  title?: string;
+  kicker?: string;
+  heroCaption?: string;
+  steps?: string[];
 }
 
 export interface Chapter {
@@ -56,6 +78,8 @@ export interface Chapter {
   places: Place[];
   cards: string[];
   steps: string[];
+  translations?: Record<string, ChapterTranslation>;
+  textLang?: string;
 }
 
 export interface CardsFile {

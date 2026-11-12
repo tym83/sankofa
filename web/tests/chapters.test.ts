@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { parseChapter, sortChapters } from '../src/lib/chapters';
+import { parseChapter, parseChapterTranslation, sortChapters } from '../src/lib/chapters';
+import { localizeChapter, localizeCard } from '../src/lib/cards';
+import type { Card } from '../src/lib/types';
 
 const SRC = `---
 id: v1
@@ -43,5 +45,54 @@ describe('chapters', () => {
   it('sorts v0..v10 naturally', () => {
     const ids = sortChapters(['v10', 'v2', 'v0'].map((id) => parseChapter(`---\nid: ${id}\ntitle: t\n---\nx`))).map((c) => c.id);
     expect(ids).toEqual(['v0', 'v2', 'v10']);
+  });
+});
+
+describe('translations', () => {
+  const RU = `---
+title: Средний путь
+kicker: 1500-е — 1860-е · Атлантика
+heroCaption: Корабль «Брукс»
+---
+Первый абзац о [[equiano|Эквиано]].
+
+Второй — о [[zong|«Зонге»]].
+
+Третий.
+`;
+
+  it('parses a chapter translation and localizes the chapter', () => {
+    const tr = parseChapterTranslation(RU);
+    expect(tr).toMatchObject({ title: 'Средний путь', heroCaption: 'Корабль «Брукс»' });
+    expect(tr.steps).toHaveLength(3);
+    const ch = { ...parseChapter(SRC), translations: { ru: tr } };
+    const ru = localizeChapter(ch, 'ru');
+    expect(ru.title).toBe('Средний путь');
+    expect(ru.hero?.caption).toBe('Корабль «Брукс»');
+    expect(ru.steps[1]).toContain('«Зонге»');
+    expect(ru.textLang).toBe('ru');
+    expect(localizeChapter(ch, 'en').title).toBe('The Middle Passage');
+  });
+
+  it('keeps the English body when paragraphs do not match, and the title anyway', () => {
+    const ch = { ...parseChapter(SRC), translations: { ru: { title: 'Средний путь', steps: ['один'] } } };
+    const ru = localizeChapter(ch, 'ru');
+    expect(ru.title).toBe('Средний путь');
+    expect(ru.steps[0]).toContain('First paragraph');
+    expect(ru.textLang).toBe('en');
+  });
+
+  it('localizes a card and keeps English place names for links', () => {
+    const c: Card = {
+      id: 'bridgetower', kind: 'person', title: 'George Bridgetower', wow: 'w', years: [1778], zoom: 4, books: ['heirs'], sources: [], body: 'b',
+      places: [{ name: 'Vienna', lat: 48, lon: 16 }],
+      further: ['Op. 47'],
+      translations: { ru: { title: 'Джордж Бриджтауэр', wow: 'в', body: 'тело', places: ['Вена'], further: ['Соч. 47', 'лишнее'] } },
+    };
+    const ru = localizeCard(c, 'ru');
+    expect(ru.title).toBe('Джордж Бриджтауэр');
+    expect(ru.places[0]).toEqual({ name: 'Вена', lat: 48, lon: 16, en: 'Vienna' });
+    expect(ru.further).toEqual(['Op. 47']);
+    expect(localizeCard({ ...c, translations: undefined }, 'ru').title).toBe('George Bridgetower');
   });
 });

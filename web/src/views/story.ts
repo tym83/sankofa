@@ -6,16 +6,19 @@ import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL, links } from '../lib/cards';
 import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
+import { count, lang, t } from '../lib/i18n';
 import { eraColor } from '../lib/atlasModel';
-import { MOVEMENTS } from '../lib/movements';
+import { MOVEMENTS, movementText } from '../lib/movements';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
 import { Timeline } from './timeline';
 import { hideTip, showTip } from './tip';
 
 export function buildStory(app: App, main: HTMLElement): void {
   coverMap(main.querySelector<HTMLElement>('.cover-map'));
-  const edition = main.querySelector('[data-edition]');
-  if (edition) edition.textContent = EDITION_NAME[app.edition];
+  main.querySelectorAll<HTMLElement>('[data-edition]').forEach((el) => {
+    const l = el.closest<HTMLElement>('[data-l]')?.dataset.l ?? lang();
+    el.textContent = l === 'ru' ? (app.edition === 'm' ? 'мужской экземпляр' : 'женский экземпляр') : EDITION_NAME[app.edition];
+  });
   main.querySelectorAll<HTMLElement>('[data-book]').forEach((b) => b.replaceWith(bookMarks([b.dataset.book!])));
 
   main.append(toc(app));
@@ -123,8 +126,8 @@ export function heroFrame(coords: [number, number][], narrow = false): [[number,
 function toc(app: App): HTMLElement {
   return h(
     'section.toc',
-    { id: 'contents', 'aria-label': 'Contents' },
-    h('div.toc-head', {}, h('h2', {}, 'Eight releases'), h('p', {}, 'Each era ships as a release of the distribution, from v0 to v7. Begin anywhere; every card leads somewhere else.')),
+    { id: 'contents', 'aria-label': t('Contents') },
+    h('div.toc-head', {}, h('h2', {}, t('Eight releases')), h('p', {}, t('Each era ships as a release of the distribution, from v0 to v7. Begin anywhere; every card leads somewhere else.'))),
     h(
       'div.toc-grid',
       {},
@@ -166,7 +169,7 @@ function chapter(app: App, ch: Chapter): HTMLElement {
       h('div.release', {}, h('span.v', {}, ch.id), h('span.kicker', {}, ch.kicker)),
       h('h2', { id: `title-${ch.id}` }, ch.title),
     ),
-    mapHero ? h('p.credit', {}, 'The places of this chapter · map data: Natural Earth, public domain') : null,
+    mapHero ? h('p.credit', {}, t('The places of this chapter · map data: Natural Earth, public domain')) : null,
     ch.hero ? h('p.credit', {}, ch.hero.caption ? ch.hero.caption + ' · ' : '', ch.hero.credit, ' · ', ch.hero.url ? h('a', { href: ch.hero.url, rel: 'noopener', target: '_blank' }, ch.hero.license) : ch.hero.license) : null,
   );
 
@@ -176,7 +179,7 @@ function chapter(app: App, ch: Chapter): HTMLElement {
   const steps = ch.steps.map((s, i) => {
     const sc = stepCards(app, s);
     const where = sc[0] ? `${sc[0].places[0].name} · ${formatYears(sc[0].years)}` : ch.kicker;
-    return h(`div.step${i === 0 ? '.first' : ''}`, { 'data-step': String(i) }, h('div.where', {}, where), h('p', {}, richText(app, s)));
+    return h(`div.step${i === 0 ? '.first' : ''}`, { 'data-step': String(i), lang: ch.textLang && ch.textLang !== lang() ? ch.textLang : undefined }, h('div.where', {}, where), h('p', {}, richText(app, s)));
   });
   const scrolly = h('div.scrolly', {}, graphic, h('div.steps', {}, steps));
 
@@ -194,7 +197,7 @@ function chapter(app: App, ch: Chapter): HTMLElement {
     ? h(
         'section.strip',
         {},
-        h('h3', {}, `In ${ch.id}: ${cards.length} cards`),
+        h('h3', {}, t('In {chapter}: {cards}', { chapter: ch.id, cards: count(cards.length, 'card') })),
         h(
           'div.strip-row',
           {},
@@ -299,7 +302,7 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
       const routes: MapRoute[] = [];
       if (i === 0) {
         for (const mv of MOVEMENTS.filter((x) => x.era === ch.id)) {
-          routes.push({ id: mv.id, legs: mv.legs, color: eraColor(mv.era), flow: true, label: { text: mv.title, sub: mv.sub, at: mv.label } });
+          routes.push({ id: mv.id, legs: mv.legs, color: eraColor(mv.era), flow: true, label: { text: movementText(mv, lang()).title, sub: movementText(mv, lang()).sub, at: mv.label } });
         }
       }
       for (const c of sc) {
@@ -345,16 +348,16 @@ function finale(app: App): HTMLElement {
   const sec = h(
     'section.finale',
     { id: 'atlas-intro', 'aria-labelledby': 'finale-title' },
-    h('div.kicker', {}, 'The atlas'),
-    h('h2', { id: 'finale-title' }, 'Seven centuries on one map'),
-    h('p', {}, 'Every card has a place and a time. Brush the years, zoom from oceans to a single page, and watch the routes the music and the people took.'),
+    h('div.kicker', {}, t('The atlas')),
+    h('h2', { id: 'finale-title' }, t('Seven centuries on one map')),
+    h('p', {}, t('Every card has a place and a time. Brush the years, zoom from oceans to a single page, and watch the routes the music and the people took.')),
     h(
       'div.actions',
       {},
-      h('button.btn.primary', { onclick: () => app.openDescent() }, 'Descend through the centuries'),
-      h('button.btn', { onclick: () => app.openAtlas({ zoom: 1 }, true) }, 'Open the atlas'),
-      h('button.btn', { onclick: () => app.openAtlas({ from: 1900, to: 1935, zoom: 3 }, true) }, '1900–1935, cities and genres'),
-      h('button.btn', { onclick: () => app.openBook() }, 'Your book'),
+      h('button.btn.primary', { onclick: () => app.openDescent() }, t('Descend through the centuries')),
+      h('button.btn', { onclick: () => app.openAtlas({ zoom: 1 }, true) }, t('Open the atlas')),
+      h('button.btn', { onclick: () => app.openAtlas({ from: 1900, to: 1935, zoom: 3 }, true) }, t('1900–1935, cities and genres')),
+      h('button.btn', { onclick: () => app.openBook() }, t('Your book')),
     ),
     host,
   );

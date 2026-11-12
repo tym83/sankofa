@@ -1,6 +1,9 @@
 import type { Card, Chapter, Book } from './lib/types';
 import { CardSet, segments } from './lib/cards';
-import { slug, type Point } from './lib/fragment';
+import { type Point } from './lib/fragment';
+import { placeKey } from './lib/cards';
+import { lang } from './lib/i18n';
+import { t } from './lib/i18n';
 import { bookMarks, h } from './lib/dom';
 
 export interface App {
@@ -21,7 +24,7 @@ export interface App {
 
 export function cardPoint(c: Card): Point {
   const [a, b] = [c.years[0], c.years[1]];
-  return { from: a, to: b && b !== a ? b : undefined, place: slug(c.places[0].name), zoom: c.zoom, focus: c.id };
+  return { from: a, to: b && b !== a ? b : undefined, place: placeKey(c.places[0]), zoom: c.zoom, focus: c.id, lang: lang() === 'en' ? undefined : lang() };
 }
 
 export const EDITION_NAME = { m: 'male copy', f: 'female copy' } as const;
@@ -36,7 +39,7 @@ export function richText(app: App, text: string): DocumentFragment {
     }
     const target = app.set.forEdition(s.target, app.edition) ?? app.set.get(s.target);
     if (!target) {
-      frag.append(h('span.xref.missing', { title: 'This card is not written yet' }, s.text));
+      frag.append(h('span.xref.missing', { title: t('This card is not written yet') }, s.text));
       continue;
     }
     const book: Book | undefined = target.books[0];

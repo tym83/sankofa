@@ -8,6 +8,8 @@ export interface Point {
   zoom?: number;
   focus?: string;
   path?: string[];
+  /** The museum's language; absent means English. */
+  lang?: string;
 }
 
 /** Go's url.QueryEscape: unreserved are A-Z a-z 0-9 - _ . ~, space becomes +. */
@@ -38,6 +40,7 @@ export function formatFragment(p: Point): string {
   if (p.zoom) v.zoom = String(p.zoom);
   if (p.focus) v.focus = p.focus;
   if (p.path && p.path.length) v.path = p.path.join('.');
+  if (p.lang && p.lang !== 'en') v.lang = p.lang;
   return Object.keys(v)
     .sort()
     .map((k) => goQueryEscape(k) + '=' + goQueryEscape(v[k]))
@@ -82,6 +85,7 @@ export function parseFragment(input: string): Point {
   if (v.get('focus')) p.focus = v.get('focus');
   const path = v.get('path');
   if (path) p.path = path.split('.');
+  if (v.get('lang')) p.lang = v.get('lang');
   return p;
 }
 

@@ -6,6 +6,7 @@ import { brushX, type BrushBehavior } from 'd3-brush';
 import type { Card } from '../lib/types';
 import { span } from '../lib/cards';
 import { eraColor } from '../lib/atlasModel';
+import { t } from '../lib/i18n';
 
 export interface EraSpan {
   id: string;
@@ -50,7 +51,7 @@ export class Timeline {
     private opts: Options = {},
   ) {
     this.svg = select(host).append('svg').attr('class', 'tl') as never;
-    this.svg.attr('role', 'group').attr('aria-label', 'Timeline, 1300 to today');
+    this.svg.attr('role', 'group').attr('aria-label', t('Timeline, 1300 to today'));
     this.ro = new ResizeObserver(() => {
       const w = Math.max(this.opts.compact ? 900 : 1100, host.clientWidth);
       if (Math.abs(w - this.width) > 4) this.render();

@@ -12,6 +12,8 @@ export interface Movement {
   id: string;
   title: string;
   sub: string;
+  /** Russian title and subtitle: the same facts, in Russian. */
+  ru: { title: string; sub: string };
   years: [number, number];
   era: string;
   legs: Leg[];
@@ -62,6 +64,7 @@ export const MOVEMENTS: Movement[] = [
     id: 'middle-passage',
     title: 'The Middle Passage',
     sub: '1501–1866 · about 12.5 million people embarked',
+    ru: { title: 'Средний путь', sub: '1501–1866 · на корабли погрузили около 12,5 млн человек' },
     years: [1501, 1866],
     era: 'v1',
     label: [-26, 2],
@@ -83,6 +86,7 @@ export const MOVEMENTS: Movement[] = [
     id: 'return',
     title: 'Return to Africa',
     sub: '1787–1890s · Freetown, Monrovia, the Agudás of Lagos',
+    ru: { title: 'Возвращение в Африку', sub: '1787–1890-е · Фритаун, Монровия, агуда в Лагосе' },
     years: [1787, 1895],
     era: 'v4',
     label: [-31, 20],
@@ -96,6 +100,7 @@ export const MOVEMENTS: Movement[] = [
     id: 'negritude',
     title: 'Harlem, Paris, Fort-de-France',
     sub: '1920s–1940s · the conversation that became Négritude',
+    ru: { title: 'Гарлем, Париж, Фор-де-Франс', sub: '1920–1940-е · разговор, из которого вырос негритюд' },
     years: [1920, 1950],
     era: 'v5',
     label: [-44, 49],
@@ -106,6 +111,7 @@ export const MOVEMENTS: Movement[] = [
     id: 'great-migration',
     title: 'The Great Migration',
     sub: '1910–1970 · some six million people leave the South',
+    ru: { title: 'Великая миграция', sub: '1910–1970 · около шести миллионов человек покидают Юг' },
     years: [1910, 1970],
     era: 'v5',
     label: [-128, 47],
@@ -116,6 +122,7 @@ export const MOVEMENTS: Movement[] = [
     id: 'windrush',
     title: 'Windrush and the sound systems',
     sub: '1948–1971 · Kingston to Tilbury, ska to London',
+    ru: { title: '«Уиндраш» и саунд-системы', sub: '1948–1971 · из Кингстона в Тилбери, ска — в Лондон' },
     years: [1948, 1971],
     era: 'v6',
     label: [-58, 31],
@@ -126,6 +133,7 @@ export const MOVEMENTS: Movement[] = [
     id: 'techno',
     title: 'Detroit to Berlin',
     sub: '1988–1990s · techno crosses the Atlantic',
+    ru: { title: 'Из Детройта в Берлин', sub: '1988–1990-е · техно пересекает Атлантику' },
     years: [1988, 1999],
     era: 'v7',
     label: [-40, 59],
@@ -159,4 +167,9 @@ export const REGIONS: Region[] = [
 
 export function regionOf(lon: number, lat: number): Region | undefined {
   return REGIONS.find((r) => lon >= r.box[0] && lon <= r.box[2] && lat >= r.box[1] && lat <= r.box[3]);
+}
+
+/** A movement's title and subtitle in the reader's language. */
+export function movementText(m: Movement, lang: string): { title: string; sub: string } {
+  return lang === 'ru' ? m.ru : { title: m.title, sub: m.sub };
 }
