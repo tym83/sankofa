@@ -20,6 +20,11 @@ describe('route', () => {
     expect(screenOf(parseRoute(''))).toBe('story');
   });
 
+  it('opens the listening room', () => {
+    expect(screenOf(parseRoute('view=listen'))).toBe('listen');
+    expect(formatRoute({ point: {}, view: 'listen' })).toBe('view=listen');
+  });
+
   it('ignores unknown views', () => {
     expect(parseRoute('view=nope').view).toBeUndefined();
   });

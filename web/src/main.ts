@@ -11,6 +11,7 @@ import { buildStory } from './views/story';
 import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
 import { Descent } from './views/descent';
+import { Listen } from './views/listen';
 
 async function load<T>(url: string): Promise<T> {
   const r = await fetch(url);
@@ -67,7 +68,7 @@ async function start(): Promise<void> {
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
-      if (!atlas.isOpen && !descent.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
+      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
       writeRoute(route, opts.push ?? true);
     },
     closeCard() {
@@ -125,6 +126,12 @@ async function start(): Promise<void> {
     route = { point: { from: year, focus: route.point.focus }, view: 'descent' };
     writeRoute(route, false);
   };
+  const listen = new Listen(app);
+  listen.onClose = () => {
+    listen.close();
+    route = { point: {}, ch: chapterNow ?? undefined };
+    writeRoute(route, false);
+  };
   descent.onClose = () => {
     descent.close();
     cardDrawer.close(true);
@@ -149,6 +156,7 @@ async function start(): Promise<void> {
 
   setupNav(app, atlas);
   document.querySelector('[data-open-descent]')?.prepend(svgIcon('down'));
+  document.querySelector('[data-open-listen]')?.prepend(svgIcon('wave'));
   buildStory(app, document.getElementById('story')!);
   trackChapters(app);
   loading.remove();
@@ -169,6 +177,17 @@ async function start(): Promise<void> {
 
   // Inline card links anywhere open the card in place.
   document.addEventListener('click', (e) => {
+    const l = (e.target as Element).closest<HTMLElement>('[data-listen]');
+    if (l) {
+      e.preventDefault();
+      if (descent.isOpen) descent.close();
+      if (atlas.isOpen) atlas.close();
+      cardDrawer.close(true);
+      route = { point: {}, view: 'listen' };
+      writeRoute(route, true);
+      listen.open();
+      return;
+    }
     const d = (e.target as Element).closest<HTMLElement>('[data-descent]');
     if (d) {
       e.preventDefault();
@@ -192,7 +211,12 @@ async function start(): Promise<void> {
   const apply = (initial: boolean) => {
     route = readRoute();
     const screen = screenOf(route);
-    if (screen === 'descent') {
+    if (screen !== 'listen' && listen.isOpen) listen.close();
+    if (screen === 'listen') {
+      if (atlas.isOpen) atlas.close();
+      if (descent.isOpen) descent.close();
+      listen.open();
+    } else if (screen === 'descent') {
       if (atlas.isOpen) atlas.close();
       descent.open(route.point.from);
     } else if (screen === 'atlas') {

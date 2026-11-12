@@ -88,3 +88,26 @@ test('the cover leads into the descent', async ({ page }) => {
   await expect(page.locator('.descent.open')).toBeVisible();
   await expect(page.locator('.dm-year')).toHaveText(/^13\d\d$/);
 });
+
+test('the listening room plays a labelled demo when the cluster is not reachable', async ({ page }) => {
+  await page.goto('/#view=listen');
+  await expect(page.locator('.listen.open')).toBeVisible();
+  await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/, { timeout: 8000 });
+  await expect(page.locator('.l-node')).toHaveCount(3);
+  await page.getByRole('button', { name: 'Start listening' }).click();
+  await expect(page.locator('.listen.playing')).toBeVisible();
+  await expect(page.locator('.l-call .slot').first()).toBeAttached({ timeout: 8000 });
+  await page.getByRole('button', { name: 'Stop' }).click();
+  await expect(page.locator('.listen.playing')).toHaveCount(0);
+});
+
+test('the listening room plays the live cluster from /pulse', async ({ page }) => {
+  const voices = { type: 'voices', at: '2026-11-12T10:00:00Z', voices: [{ node: 'cp-1', alive: true, late: 0.1, ready: 2, notReady: 1 }, { node: 'w-1', alive: false, late: 1.3, ready: 0, notReady: 2 }] };
+  const lease = { type: 'lease', node: 'cp-1', at: '2026-11-12T10:00:01Z', leaseSeconds: 40 };
+  await page.route('**/pulse', (r) => r.fulfill({ status: 200, headers: { 'content-type': 'text/event-stream', 'cache-control': 'no-cache' }, body: `retry: 60000\ndata: ${JSON.stringify(voices)}\n\ndata: ${JSON.stringify(lease)}\n\n` }));
+  await page.goto('/#view=listen');
+  await expect(page.locator('.l-badge')).toHaveText(/Live/);
+  await expect(page.locator('.l-node')).toHaveCount(2);
+  await expect(page.locator('.l-node.silent')).toHaveCount(1);
+  await expect(page.locator('.l-status')).toContainText('1 of 2 nodes playing');
+});
