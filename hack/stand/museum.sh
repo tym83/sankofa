@@ -8,6 +8,7 @@ source hack/stand/env.sh
 rm -rf dist/museum-layer dist/museum-layer.tar dist/museum.tar
 mkdir -p dist/museum-layer/usr/share/nginx/html dist/museum-layer/etc/nginx/conf.d
 cp -R web/dist/. dist/museum-layer/usr/share/nginx/html/
+chmod -R a+rX dist/museum-layer/usr/share/nginx/html
 cp web/nginx.conf dist/museum-layer/etc/nginx/conf.d/default.conf
 (cd dist/museum-layer && COPYFILE_DISABLE=1 tar --uid 0 --gid 0 -cf ../museum-layer.tar .)
 "$HOME/go/bin/crane" append --platform linux/amd64 -b nginxinc/nginx-unprivileged:1.29-alpine \
