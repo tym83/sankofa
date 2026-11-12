@@ -269,7 +269,7 @@ export class Atlas {
     const when = this.p.from ? formatYears(this.p.to ? [this.p.from, this.p.to] : [this.p.from]) : t('1300 – today');
     this.when.textContent = `${when} · ${LEVEL_NAMES[this.level - 1]} · ${count(layers.points.filter((p) => !p.out).length, 'card')}`;
     this.renderPathbar(path);
-    this.renderList(layers.visible);
+    this.renderList(layers.points.filter((p) => !p.out).map((p) => this.app.set.get(p.id)).filter((c): c is Card => !!c));
   }
 
   /** On phones the timeline becomes a list under a small map: eras to filter, cards to open. */

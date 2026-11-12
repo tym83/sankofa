@@ -110,6 +110,7 @@ export class GeoMap {
   private idPrefix = `m${++uid}`;
   /** Pixels on the right covered by a panel; flights centre in what is left. */
   inset = 0;
+  private labelWidths = new Map<string, number>();
   private flight: [number, number, number, number] | null = null;
 
   constructor(
@@ -449,11 +450,19 @@ export class GeoMap {
     lab
       .attr('transform', (d) => {
         const [x, y] = this.xy(d.label!.at[0], d.label!.at[1]);
-        return `translate(${x},${y})`;
+        // Keep the label on screen: clamp by its measured width.
+        const w = (this.labelWidths.get(d.id) ?? d.label!.text.length * 8) + 8;
+        const cx = Math.max(8, Math.min(this.w - w, x));
+        return `translate(${cx.toFixed(1)},${y})`;
       })
       .style('opacity', (d) => Math.min(1, ((d.progress ?? 1) - 0.4) * 2));
     lab.select('tspan.main').attr('x', 0).text((d) => d.label!.text);
     lab.select('tspan.sub').attr('x', 0).text((d) => d.label!.sub ?? '');
+    lab.each((d, i, n) => {
+      if (this.labelWidths.has(d.id)) return;
+      const bb = (n[i] as SVGTextElement).getBBox?.();
+      if (bb && bb.width) this.labelWidths.set(d.id, bb.width);
+    });
   }
 
   private renderOverlay(): void {

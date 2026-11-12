@@ -110,3 +110,46 @@ test('key views', async ({ page }, info) => {
   await settle(page, 3200);
   await shot(page, '51-light-atlas', p);
 });
+
+test('key views in Russian', async ({ page }, info) => {
+  const p = info.project.name;
+  await page.addInitScript(() => {
+    localStorage.setItem('sankofa.edition', 'f');
+    localStorage.setItem('sankofa.lang', 'ru');
+  });
+  const views: [string, string, string?][] = [
+    ['/#lang=ru', '80-ru-cover'],
+    ['/#ch=v1&lang=ru', '81-ru-chapter-hero'],
+    ['/#lang=ru', '82-ru-chapter-step', '#ch-v1 .step:nth-child(3)'],
+    ['/#lang=ru&zoom=1', '83-ru-atlas'],
+    ['/#lang=ru&t=1781&view=descent', '84-ru-descent'],
+    ['/#lang=ru&view=listen', '85-ru-listen'],
+    ['/#focus=equiano&lang=ru', '86-ru-card'],
+    ['/#lang=ru&view=engine', '87-ru-engine'],
+  ];
+  for (const [url, name, sel] of views) {
+    await page.goto(url);
+    await page.reload();
+    await settle(page, 2800);
+    if (sel) {
+      await page.locator(sel).first().evaluate((el) => el.scrollIntoView({ block: 'center' }));
+      await settle(page, 2400);
+    }
+    await shot(page, name, p);
+  }
+});
+
+test('the engine room and the coda', async ({ page }, info) => {
+  const p = info.project.name;
+  await page.goto('/#view=engine');
+  await settle(page, 1500);
+  await shot(page, '90-engine', p);
+  await page.locator('.e-mech').scrollIntoViewIfNeeded();
+  await settle(page, 800);
+  await shot(page, '91-engine-mechanisms', p);
+  await page.goto('/');
+  await page.reload();
+  await page.locator('.coda').scrollIntoViewIfNeeded();
+  await settle(page, 1500);
+  await shot(page, '92-coda', p);
+});
