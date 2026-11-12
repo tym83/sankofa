@@ -27,7 +27,7 @@ test('key views', async ({ page }, info) => {
 
   const chapters = page.locator('article.chapter');
   const n = await chapters.count();
-  for (const i of [0, 1, Math.min(4, n - 1)]) {
+  for (let i = 0; i < n; i++) {
     const ch = chapters.nth(i);
     const id = await ch.getAttribute('data-chapter');
     await ch.locator('.hero').scrollIntoViewIfNeeded();
@@ -35,7 +35,7 @@ test('key views', async ({ page }, info) => {
     await shot(page, `10-${id}-hero`, p);
     const steps = ch.locator('.step');
     const count = await steps.count();
-    for (const s of [0, 1, 2]) {
+    for (const s of i % 2 ? [0, 2] : [0, 1, 2]) {
       if (s >= count) break;
       await steps.nth(s).evaluate((el) => el.scrollIntoView({ block: 'center' }));
       await settle(page, 2400);
