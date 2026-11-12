@@ -5,6 +5,16 @@ import { CardSet, overlaps } from './cards';
 import { MOVEMENTS, REGIONS, regionOf } from './movements';
 import type { MapPoint, MapRegion, MapRoute } from '../views/map';
 
+/**
+ * Cards whose "place" is not a place on the ground (an ocean standing in for
+ * an online database, say) stay in lists and the timeline but off the map.
+ */
+const NON_PLACES = new Set(['atlantic ocean', 'online', 'worldwide', 'the internet']);
+export function isNonPlace(c: Card): boolean {
+  const p = c.places[0];
+  return !p || (c.kind === 'media' || c.kind === 'work' ? NON_PLACES.has((p.en ?? p.name).toLowerCase()) : false);
+}
+
 export const eraColor = (era?: string): string => `var(--${/^v[0-7]$/.test(era ?? '') ? era : 'v0'})`;
 
 export interface AtlasQuery {
@@ -72,6 +82,7 @@ export function atlasLayers(set: CardSet, q: AtlasQuery, extra: Card[] = []): At
   const visible: Card[] = [];
 
   for (const c of cards) {
+    if (isNonPlace(c)) continue;
     const inTime = overlaps(c, q.from, q.to);
     const focus = c.id === q.focus;
     const major = c.zoom <= lvl || focus || lit.has(c.id);

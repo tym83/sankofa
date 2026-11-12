@@ -3776,3 +3776,321 @@ details.k8s .term {
   white-space: normal;
   overflow-wrap: anywhere;
 }
+
+/* ---------- pictures behind steps: a calm solid ground ---------- */
+.graphic .img {
+  background: #16141d;
+}
+:root[data-theme='light'] .graphic .img {
+  background: #ebe3d3;
+}
+.graphic .img .bg {
+  display: none;
+}
+.step-fig {
+  display: none;
+  margin: -6px -8px 14px;
+}
+.step-fig img {
+  width: 100%;
+  max-height: 46svh;
+  object-fit: contain;
+  background: #16141d;
+  border-radius: 3px;
+}
+.step-fig figcaption {
+  margin-top: 6px;
+}
+@media (max-width: 720px) {
+  .step-fig {
+    display: block;
+  }
+  .graphic.show-img .map {
+    opacity: 1;
+  }
+  .graphic .img {
+    display: none;
+  }
+}
+
+/* ---------- text-only cards: a deliberate design, not a missing picture ---------- */
+.teaser.textonly {
+  border-top: 3px solid var(--era);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--era) 9%, var(--bg-2)), var(--bg-2) 60%);
+}
+.teaser.textonly .tx {
+  padding: 18px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.teaser.textonly b {
+  font-size: 24px;
+  line-height: 1.12;
+  margin: 10px 0 12px;
+  font-weight: 450;
+}
+.teaser.textonly .w {
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink);
+  border-left: 2px solid var(--era);
+  padding-left: 12px;
+  flex: 1;
+}
+.teaser .pl {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.strip .more {
+  margin-top: 18px;
+}
+.teaser.reveal.seen {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- inline links: quieter, the books live in the card panel ---------- */
+.xref .sym {
+  display: none;
+}
+
+/* ---------- coda ---------- */
+.coda {
+  position: relative;
+  min-height: 92svh;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  isolation: isolate;
+  color: #f2e9d8;
+  background: #0c0d18;
+}
+.coda-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: saturate(0.8) brightness(0.75);
+}
+.coda::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(10, 9, 16, 0.2) 0%, rgba(10, 9, 16, 0.55) 45%, rgba(10, 9, 16, 0.94) 85%);
+}
+.coda-inner {
+  padding: 0 var(--gutter) clamp(50px, 10vh, 110px);
+  max-width: 900px;
+}
+.coda h2 {
+  margin: 14px 0 18px;
+  font-size: clamp(54px, 9vw, 140px);
+  line-height: 0.92;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 144;
+}
+.coda p {
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.55;
+  max-width: 44ch;
+  color: rgba(242, 233, 216, 0.88);
+}
+.coda .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 26px 0 18px;
+}
+.coda .btn {
+  color: #f2e9d8;
+}
+.coda .btn.primary {
+  color: #16120a;
+}
+.coda-term {
+  font-family: var(--font-sans);
+  font-size: 14px !important;
+  color: rgba(242, 233, 216, 0.7) !important;
+}
+.coda-term code {
+  margin-left: 8px;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(242, 233, 216, 0.2);
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #e3ab3d;
+}
+.coda .credit {
+  color: rgba(242, 233, 216, 0.5);
+  font-size: 11px !important;
+  margin-top: 26px;
+}
+
+/* ---------- descent: room for the scrollbar, the era under the year ---------- */
+.descent {
+  scrollbar-gutter: stable;
+}
+.dm-era {
+  max-width: 100%;
+  text-wrap: balance;
+}
+.dc .tx {
+  min-width: 0;
+}
+.dc strong,
+.dc .w {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.legend-note {
+  flex-basis: 100%;
+  font-size: 11px;
+  color: var(--ink-3);
+  margin-top: 4px;
+}
+
+/* ---------- atlas on phones: a small map and a list ---------- */
+.atlas {
+  grid-template-rows: var(--nav-h) minmax(0, 1fr) auto auto;
+}
+.atlas-list {
+  display: none;
+}
+.atlas-bar .when {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.atlas-bar > .btn,
+.atlas-bar > .icon-btn {
+  flex: none;
+}
+@media (max-width: 720px) {
+  .atlas {
+    grid-template-rows: var(--nav-h) 48svh minmax(0, 1fr) 0;
+  }
+  .atlas-bar {
+    gap: 8px;
+    padding: 0 8px 0 14px;
+  }
+  .atlas-bar h2 {
+    font-size: 17px;
+  }
+  .atlas-bar .sp {
+    display: none;
+  }
+  .atlas-bar .when {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .atlas-time {
+    display: none;
+  }
+  .atlas-list {
+    display: block;
+    overflow-y: auto;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+    padding: 8px 12px 24px;
+  }
+  .atlas-eras {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 4px 0 10px;
+    position: sticky;
+    top: -8px;
+    background: var(--bg);
+    z-index: 1;
+  }
+  .atlas-eras .chip {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    flex: none;
+  }
+  .atlas-eras .chip[aria-pressed='true'] {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #16120a;
+  }
+  .atlas-item {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 2px 10px;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  .atlas-item .y {
+    grid-row: span 2;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--era);
+    font-weight: 600;
+    padding-top: 3px;
+  }
+  .atlas-item b {
+    font-weight: 450;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+  .atlas-item .pl {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--ink-3);
+  }
+  .levels {
+    top: 8px;
+  }
+  .legend,
+  .levels .hint {
+    display: none;
+  }
+}
+/* Phones: the picture first, then the words on solid ground. */
+@media (max-width: 720px) {
+  .cover {
+    display: block;
+    min-height: 0;
+    padding-top: calc(48svh + 12px);
+  }
+  .cover-art {
+    bottom: auto;
+    height: 48svh;
+  }
+  .cover::before {
+    background: linear-gradient(180deg, rgba(10, 9, 16, 0) 0, rgba(10, 9, 16, 0) calc(48svh - 70px), #0c0d18 48svh);
+  }
+  .cover-inner {
+    padding-bottom: 48px;
+  }
+  .cover-lang {
+    position: absolute;
+    top: calc(var(--nav-h) + 40px);
+    left: 16px;
+  }
+  .cover h1 {
+    font-size: 64px;
+  }
+}
+@media (max-width: 720px) {
+  .cover-credit {
+    top: calc(48svh - 30px);
+    left: 16px;
+    right: 16px;
+  }
+}

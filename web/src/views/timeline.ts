@@ -97,7 +97,7 @@ export class Timeline {
       // Lives are bars; events, works and objects are beads at their first year.
       const life = c.kind === 'person' && b > a;
       const x1 = life ? Math.max(x(b), x0 + 4) : x0 + 6;
-      const lw = c.title.length * (compact ? 5.6 : 6.4) + 10;
+      const lw = textWidth(c.title, compact ? 11 : 11) + 10;
       const long = life && b - a > LONG;
       const need = (long ? x0 + lw : Math.max(x1, x0 + lw)) + 8;
       let row = rows.findIndex((end) => end < x0);
@@ -238,4 +238,13 @@ export class Timeline {
     this.ro.disconnect();
     this.svg.remove();
   }
+}
+
+let ctx2d: CanvasRenderingContext2D | null | undefined;
+/** Measure a label as it will be drawn, so labels never run into each other. */
+export function textWidth(text: string, size: number): number {
+  if (ctx2d === undefined) ctx2d = typeof document !== 'undefined' ? document.createElement('canvas').getContext('2d') : null;
+  if (!ctx2d) return text.length * size * 0.58;
+  ctx2d.font = `${size}px Inter, system-ui, sans-serif`;
+  return ctx2d.measureText(text).width;
 }

@@ -232,7 +232,7 @@ export class GeoMap {
     return this.t.apply(p);
   }
 
-  private center(): [number, number] {
+  center(): [number, number] {
     const inv = this.t.invert([this.w / 2, this.h / 2]);
     return (this.projection.invert?.(inv) as [number, number]) ?? [-20, 15];
   }
@@ -424,6 +424,7 @@ export class GeoMap {
       .join('path')
       .attr('class', (d) => `route${d.r.faint ? ' faint' : ''}`)
       .style('--rc', (d) => d.r.color)
+      .style('stroke-width', (d) => (d.l.weight ? `${(1.2 + d.l.weight * 9).toFixed(1)}px` : null))
       .attr('d', (d) => this.curve(d.l, d.r.progress ?? 1));
     const flows = legs.filter((d) => d.r.flow && (d.r.progress ?? 1) >= 1 && !d.r.faint);
     this.gRoutes
@@ -432,6 +433,8 @@ export class GeoMap {
       .join('path')
       .attr('class', 'flow')
       .style('--rc', (d) => d.r.color)
+      .style('stroke-width', (d) => (d.l.weight ? `${(2 + d.l.weight * 6).toFixed(1)}px` : null))
+      .style('stroke-dasharray', (d) => (d.l.weight ? `1 ${Math.round(14 - d.l.weight * 9)}` : null))
       .attr('d', (d) => this.curve(d.l, 1));
     const labelled = this.routes.filter((r) => r.label && !r.faint);
     const lab = this.gRoutes
@@ -490,8 +493,12 @@ export class GeoMap {
       }
       const [x, y] = this.xy(p.lon, p.lat);
       const w = p.label.length * (p.title ? 7.4 : 6.6) + 12;
-      const box: [number, number, number, number] = [x + 6, y - 10, x + 6 + w, y + 8];
-      const inside = box[0] < this.w && box[2] > 0 && box[1] < this.h && box[3] > 0;
+      // Labels stay inside the frame: near the right edge they go to the left.
+      const left = x + 6 + w > this.w - 8 && x - 6 - w > 8;
+      node.setAttribute('x', left ? '-9' : '9');
+      node.setAttribute('text-anchor', left ? 'end' : 'start');
+      const box: [number, number, number, number] = left ? [x - 6 - w, y - 10, x - 6, y + 8] : [x + 6, y - 10, x + 6 + w, y + 8];
+      const inside = box[0] >= 0 && box[2] <= this.w && box[1] < this.h && box[3] > 0;
       const hit = boxes.some((b) => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1]);
       if (inside && (!hit || p.lit || p.focus)) {
         boxes.push(box);

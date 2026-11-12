@@ -4,7 +4,7 @@ import { type Point } from './lib/fragment';
 import { placeKey } from './lib/cards';
 import { lang } from './lib/i18n';
 import { t } from './lib/i18n';
-import { bookMarks, h } from './lib/dom';
+import { h } from './lib/dom';
 
 export interface App {
   set: CardSet;
@@ -54,7 +54,6 @@ export function richText(app: App, text: string): DocumentFragment {
           'data-card': s.target,
           title: `${target.title}: ${target.wow}`,
         },
-        bookMarks(target.books),
         // A bare [[id]] shows the title of the card it names.
         s.text === s.target ? (app.set.get(s.target)?.title ?? s.text) : s.text,
       ),

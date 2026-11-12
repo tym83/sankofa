@@ -10,7 +10,7 @@ import { ERAS, type Card } from '../lib/types';
 import { GeoMap, LEVEL_K, LEVEL_NAMES } from './map';
 import { Timeline } from './timeline';
 import { showTip, hideTip } from './tip';
-import { count, t } from '../lib/i18n';
+import { count, pick, t } from '../lib/i18n';
 
 export class Atlas {
   readonly el: HTMLElement;
@@ -21,6 +21,7 @@ export class Atlas {
   private when: HTMLElement;
   private levels: HTMLButtonElement[] = [];
   private pathbar: HTMLElement;
+  private list: HTMLElement;
   private term: HTMLElement;
   private p: Point = {};
   private level = 1;
@@ -63,10 +64,19 @@ export class Atlas {
       'div.legend',
       { 'aria-hidden': 'true' },
       ERAS.map((e) => h('span', { style: `--c:${eraColor(e.id)}` }, h('i'), `${e.id} ${e.label}`)),
+      h(
+        'span.legend-note',
+        {},
+        pick({
+          en: 'Middle Passage: line width is the share of people embarked from each African region (SlaveVoyages estimates).',
+          ru: 'Средний путь: толщина линии — доля людей, вывезенных из каждого региона Африки (оценки SlaveVoyages).',
+        }),
+      ),
     );
     this.stage = h('div.atlas-stage', {}, ladder, legend, this.pathbar);
     this.timeHost = h('div.atlas-time');
-    this.el = h('section.atlas', { 'aria-label': t('Atlas'), role: 'region', tabindex: '-1' }, bar, this.stage, this.timeHost, this.term);
+    this.list = h('div.atlas-list', { role: 'list' });
+    this.el = h('section.atlas', { 'aria-label': t('Atlas'), role: 'region', tabindex: '-1' }, bar, this.stage, this.timeHost, this.list, this.term);
     this.el.addEventListener('keydown', (e) => this.key(e));
     document.body.append(this.el);
   }
@@ -195,9 +205,31 @@ export class Atlas {
 
   private setLevel(lvl: number): void {
     this.level = Math.max(1, Math.min(5, lvl));
-    this.map?.setLevel(this.level);
+    const target = this.level >= 3 ? this.nearestContent() : undefined;
+    if (target) this.map?.flyTo(target[0], target[1], LEVEL_K[this.level - 1], 1100);
+    else this.map?.setLevel(this.level);
     this.draw(false);
     this.emit();
+  }
+
+  /** At cities, people and documents, go to the nearest thing to look at, never an empty sea. */
+  private nearestContent(): [number, number] | undefined {
+    if (!this.map) return undefined;
+    const [lon, lat] = this.map.center();
+    const layers = atlasLayers(this.app.set, { level: this.level, from: this.p.from, to: this.p.to, edition: this.app.edition });
+    const here = layers.visible.filter((c) => c.zoom >= Math.min(this.level, 4));
+    const pool = here.length ? here : layers.visible;
+    let best: [number, number] | undefined;
+    let bestD = Infinity;
+    for (const c of pool) {
+      const p = c.places[0];
+      const d = Math.hypot((p.lon - lon) * Math.cos((lat * Math.PI) / 180), p.lat - lat);
+      if (d < bestD) {
+        bestD = d;
+        best = [p.lon, p.lat];
+      }
+    }
+    return best;
   }
 
   private setTime(from?: number, to?: number): void {
@@ -235,8 +267,25 @@ export class Atlas {
       b.setAttribute('aria-pressed', String(i + 1 === this.level));
     });
     const when = this.p.from ? formatYears(this.p.to ? [this.p.from, this.p.to] : [this.p.from]) : t('1300 – today');
-    this.when.textContent = `${when} · ${LEVEL_NAMES[this.level - 1]} · ${count(layers.visible.length, 'card')}`;
+    this.when.textContent = `${when} · ${LEVEL_NAMES[this.level - 1]} · ${count(layers.points.filter((p) => !p.out).length, 'card')}`;
     this.renderPathbar(path);
+    this.renderList(layers.visible);
+  }
+
+  /** On phones the timeline becomes a list under a small map: eras to filter, cards to open. */
+  private renderList(visible: Card[]): void {
+    if (window.innerWidth >= 720) return this.list.replaceChildren();
+    const eras = this.eras();
+    const chips = h(
+      'div.atlas-eras',
+      {},
+      h('button.chip', { 'aria-pressed': String(!this.p.from), onclick: () => this.setTime() }, '1300 –'),
+      eras.map((e) => h('button.chip', { 'aria-pressed': String(this.p.from === e.from && this.p.to === e.to), onclick: () => this.setTime(e.from, e.to) }, e.id)),
+    );
+    const items = [...visible].sort((a, b) => span(a)[0] - span(b)[0]).map((c) =>
+      h('button.atlas-item', { role: 'listitem', onclick: () => this.focus(c.id), style: `--era:${eraColor(c.era)}` }, h('span.y', {}, formatYears(c.years)), h('b', {}, c.title), h('span.pl', {}, c.places[0].name)),
+    );
+    this.list.replaceChildren(chips, ...items);
   }
 
   private renderPathbar(path: Card[]): void {

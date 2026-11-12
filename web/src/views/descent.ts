@@ -44,6 +44,8 @@ export class Descent {
   private idle = 0;
   private lastYear = -1;
   private centres?: Map<string, number>;
+  /** Where each chapter header sits; the era shown is the last one passed. */
+  private heads: { id: string; top: number }[] = [];
   onYear?: (year: number) => void;
   onClose?: () => void;
 
@@ -136,7 +138,9 @@ export class Descent {
         const ago = NOW - year;
         this.meterAgo.textContent = yearsAgo(ago);
         this.centres ??= chapterCentres(this.app.chapters, (id) => this.app.set.get(id)?.years[0]);
-        const ch = chapterAt(this.app.chapters, year, this.centres);
+        const line = this.el.scrollTop + this.el.clientHeight * 0.45;
+        const passed = this.heads.filter((x) => x.top <= line).pop();
+        const ch = passed ? this.app.chapters.find((c) => c.id === passed.id) : chapterAt(this.app.chapters, year, this.centres);
         const label = ch ? `${ch.id} · ${ch.title}` : '';
         if (this.meterEra.textContent !== label) {
           this.meterEra.textContent = label;
@@ -171,6 +175,8 @@ export class Descent {
     const colW = Math.min(440, (W - cardsX - right - colGap * (cols - 1)) / cols);
 
     this.track.replaceChildren();
+    this.heads = [];
+    this.lastYear = -1;
     const layer = (cls: string) => {
       const l = h(`div.${cls}`);
       this.track.append(l);
@@ -318,7 +324,9 @@ export class Descent {
       el.style.left = `${x}px`;
       items.append(el);
       if (p.item.kind === 'card') threads.push(this.thread(p, axisX, x, mobile));
+      if (p.item.kind === 'chapter') this.heads.push({ id: p.item.id, top: p.top });
     }
+    this.heads.sort((a, b) => a.top - b.top);
     svgHost.insertAdjacentHTML(
       'afterbegin',
       `<svg class="d-threads" width="${W}" height="${end}" viewBox="0 0 ${W} ${end}" aria-hidden="true">${threads.join('')}</svg>`,
@@ -379,7 +387,7 @@ export class Descent {
     return h(
       `a.dc${img ? '' : '.noimg'}${c.zoom <= 2 ? '.big' : ''}`,
       { href: `#focus=${c.id}`, 'data-card': c.id, style: `width:${w}px;--era:${eraColor(c.era)}` },
-      img ? h('div.ph', {}, h('img', { src: this.app.media(img.file), alt: '', loading: 'lazy', decoding: 'async' })) : null,
+      img ? h('div.ph', {}, h('img', { 'data-src': this.app.media(img.file), alt: '', decoding: 'async' })) : null,
       h(
         'div.tx',
         {},
@@ -391,7 +399,29 @@ export class Descent {
     );
   }
 
+  /** Load thumbnails well before they scroll in: the descent never shows blank boxes. */
+  private loadImages(): void {
+    const imgs = [...this.track.querySelectorAll<HTMLImageElement>('img[data-src]')];
+    const load = (img: HTMLImageElement) => {
+      img.src = img.dataset.src!;
+      img.removeAttribute('data-src');
+    };
+    if (!('IntersectionObserver' in window)) return imgs.forEach(load);
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          load(e.target as HTMLImageElement);
+          io.unobserve(e.target);
+        }
+      },
+      { root: this.el, rootMargin: '200% 0px' },
+    );
+    imgs.forEach((i) => io.observe(i));
+  }
+
   private reveal(): void {
+    this.loadImages();
     const els = this.track.querySelectorAll('.dc, .d-chapter, .d-move, .d-quiet');
     if (reducedMotion() || !('IntersectionObserver' in window)) {
       els.forEach((e) => e.classList.add('seen'));

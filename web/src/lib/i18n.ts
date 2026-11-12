@@ -160,6 +160,7 @@ export const RU: Record<string, string> = {
     'Каждая эпоха выходит как релиз дистрибутива, от v0 до v7. Начните откуда угодно: каждая карточка ведёт дальше.',
   'The places of this chapter · map data: Natural Earth, public domain': 'Места этой главы · картографические данные: Natural Earth, общественное достояние',
   'In {chapter}: {cards}': 'В {chapter}: {cards}',
+  'See all {cards}': 'Показать все: {cards}',
   'The atlas': 'Атлас',
   'Seven centuries on one map': 'Семь веков на одной карте',
   'Every card has a place and a time. Brush the years, zoom from oceans to a single page, and watch the routes the music and the people took.':

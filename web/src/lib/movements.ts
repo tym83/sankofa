@@ -6,6 +6,8 @@ import type { Source } from './types';
 export interface Leg {
   from: [number, number]; // lon, lat
   to: [number, number];
+  /** Share of the movement this leg carried, 0..1 of the largest; drawn as width. */
+  weight?: number;
 }
 
 export interface Movement {
@@ -55,11 +57,25 @@ const P = {
   kingston: [-76.79, 17.97],
   tilbury: [0.36, 51.46],
   berlin: [13.4, 52.52],
+  kangaba: [-8.41, 11.94],
+  cairo: [31.24, 30.04],
+  mecca: [39.83, 21.42],
 } as const satisfies Record<string, [number, number]>;
 
-const leg = (a: keyof typeof P, b: keyof typeof P): Leg => ({ from: [...P[a]], to: [...P[b]] });
+const leg = (a: keyof typeof P, b: keyof typeof P, weight?: number): Leg => ({ from: [...P[a]], to: [...P[b]], weight });
 
 export const MOVEMENTS: Movement[] = [
+  {
+    id: 'hajj',
+    title: 'Mansa Musa’s pilgrimage',
+    sub: '1324–1325 · from Mali through Cairo to Mecca',
+    ru: { title: 'Хадж Мансы Мусы', sub: '1324–1325 · из Мали через Каир в Мекку' },
+    years: [1324, 1325],
+    era: 'v0',
+    label: [8, 34],
+    legs: [leg('kangaba', 'cairo'), leg('cairo', 'mecca')],
+    sources: [{ title: 'Nehemia Levtzion and J. F. P. Hopkins (eds.), Corpus of Early Arabic Sources for West African History (Cambridge University Press, 1981): al-ʿUmari' }],
+  },
   {
     id: 'middle-passage',
     title: 'The Middle Passage',
@@ -69,18 +85,26 @@ export const MOVEMENTS: Movement[] = [
     era: 'v1',
     label: [-26, 2],
     legs: [
-      leg('goree', 'chesapeake'),
-      leg('goree', 'charleston'),
-      leg('elmina', 'jamaica'),
-      leg('ouidah', 'stdomingue'),
-      leg('ouidah', 'salvador'),
-      leg('bonny', 'jamaica'),
-      leg('bonny', 'cuba'),
-      leg('luanda', 'rio'),
-      leg('luanda', 'recife'),
-      leg('mozambique', 'rio'),
+      // Width follows the share of people embarked from each African region
+      // (SlaveVoyages estimates, rounded): West-Central Africa about 45%,
+      // Bight of Benin 16%, Bight of Biafra 13%, Gold Coast 10%,
+      // Senegambia 6%, South-East Africa 4%. A region's share is split
+      // between its legs.
+      leg('goree', 'chesapeake', 3 / 45),
+      leg('goree', 'charleston', 3 / 45),
+      leg('elmina', 'jamaica', 10 / 45),
+      leg('ouidah', 'stdomingue', 8 / 45),
+      leg('ouidah', 'salvador', 8 / 45),
+      leg('bonny', 'jamaica', 7 / 45),
+      leg('bonny', 'cuba', 6 / 45),
+      leg('luanda', 'rio', 25 / 45),
+      leg('luanda', 'recife', 20 / 45),
+      leg('mozambique', 'rio', 4 / 45),
     ],
-    sources: [{ title: 'SlaveVoyages: Trans-Atlantic Slave Trade Database, estimates', url: 'https://www.slavevoyages.org/assessment/estimates' }],
+    sources: [
+      { title: 'SlaveVoyages: Trans-Atlantic Slave Trade Database, estimates', url: 'https://www.slavevoyages.org/assessment/estimates' },
+      { title: 'David Eltis and David Richardson, Atlas of the Transatlantic Slave Trade (Yale University Press, 2010)' },
+    ],
   },
   {
     id: 'return',

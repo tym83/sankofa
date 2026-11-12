@@ -214,3 +214,24 @@ test('the demo lets you break a node and hear it fall silent', async ({ page }) 
   await expect.poll(() => page.locator('.l-node.silent').count()).toBeGreaterThan(0);
   await expect(page.getByRole('button', { name: 'Mend the node' })).toBeVisible();
 });
+
+test('cover opens on a real image with the first surprise, and the end returns to Sankofa', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.cover-art img')).toBeVisible();
+  await expect(page.locator('.cover-wow:visible')).toContainText(/Mecca|Мекку/);
+  await expect(page.locator('.cover .kicker')).toHaveCount(0);
+  await expect(page.locator('.coda h2')).toHaveText(/Go back and fetch it|Вернись и забери/);
+});
+
+test('a chapter leads with a few cards and reveals the rest on request', async ({ page }) => {
+  await page.goto('/');
+  const strip = page.locator('article.chapter').first().locator('.strip');
+  const before = await strip.locator('.teaser').count();
+  expect(before).toBeLessThanOrEqual(4);
+  const more = strip.locator('.more');
+  if (await more.count()) {
+    await more.scrollIntoViewIfNeeded();
+    await more.click();
+    expect(await strip.locator('.teaser').count()).toBeGreaterThan(before);
+  }
+});

@@ -6,12 +6,15 @@ import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL, links } from '../lib/cards';
 import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
-import { count, lang, t } from '../lib/i18n';
-import { eraColor } from '../lib/atlasModel';
+import { count, lang, pick, t } from '../lib/i18n';
+import { eraColor, isNonPlace } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
 import { Timeline } from './timeline';
 import { hideTip, showTip } from './tip';
+
+/** The cover's own picture; a chapter that would repeat it opens on its map. */
+const COVER_IMAGE = 'hero-v0.jpg';
 
 export function buildStory(app: App, main: HTMLElement): void {
   coverMap(main.querySelector<HTMLElement>('.cover-map'));
@@ -23,7 +26,7 @@ export function buildStory(app: App, main: HTMLElement): void {
 
   main.append(toc(app));
   for (const ch of app.chapters) main.append(chapter(app, ch));
-  main.append(finale(app));
+  main.append(finale(app), coda(app));
   revealOnScroll(main);
   heroParallax();
 }
@@ -156,13 +159,12 @@ function stepCards(app: App, text: string): Card[] {
 function chapter(app: App, ch: Chapter): HTMLElement {
   const color = eraColor(ch.id);
   const cards = [...new Set(ch.cards.map((id) => app.set.forEdition(id, app.edition)).filter(Boolean) as Card[])];
-  const isFirst = app.chapters[0] === ch;
 
-  const mapHero = !ch.hero?.file;
+  const mapHero = !ch.hero?.file || ch.hero.file === COVER_IMAGE;
   const hero = h(
     `header.hero${mapHero ? '.map-hero' : ''}`,
     { style: `--era:${color}` },
-    mapHero ? heroMap(app, ch) : heroImg(app, ch, isFirst),
+    mapHero ? heroMap(app, ch) : heroImg(app, ch, false),
     h(
       'div.hero-text',
       {},
@@ -170,16 +172,34 @@ function chapter(app: App, ch: Chapter): HTMLElement {
       h('h2', { id: `title-${ch.id}` }, ch.title),
     ),
     mapHero ? h('p.credit', {}, t('The places of this chapter · map data: Natural Earth, public domain')) : null,
-    ch.hero ? h('p.credit', {}, ch.hero.caption ? ch.hero.caption + ' · ' : '', ch.hero.credit, ' · ', ch.hero.url ? h('a', { href: ch.hero.url, rel: 'noopener', target: '_blank' }, ch.hero.license) : ch.hero.license) : null,
+    ch.hero && !mapHero ? h('p.credit', {}, ch.hero.caption ? ch.hero.caption + ' · ' : '', ch.hero.credit, ' · ', ch.hero.url ? h('a', { href: ch.hero.url, rel: 'noopener', target: '_blank' }, ch.hero.license) : ch.hero.license) : null,
   );
 
   const mapHost = h('div.map', { 'aria-hidden': 'true' });
   const imgHost = h('div.img', { 'aria-hidden': 'true' });
   const graphic = h('div.graphic', {}, mapHost, imgHost);
+  // Which picture each step shows: the first linked card with an image that
+  // an earlier step has not shown. Step 0 always orients on the map.
+  const used = new Set<string>();
+  const stepImage: (Card | undefined)[] = ch.steps.map((s, i) => {
+    if (i === 0) return undefined;
+    const c = stepCards(app, s).find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id));
+    if (c) used.add(c.id);
+    return c;
+  });
   const steps = ch.steps.map((s, i) => {
     const sc = stepCards(app, s);
-    const where = sc[0] ? `${sc[0].places[0].name} · ${formatYears(sc[0].years)}` : ch.kicker;
-    return h(`div.step${i === 0 ? '.first' : ''}`, { 'data-step': String(i), lang: ch.textLang && ch.textLang !== lang() ? ch.textLang : undefined }, h('div.where', {}, where), h('p', {}, richText(app, s)));
+    const anchor = sc.find((c) => !isNonPlace(c)) ?? sc[0];
+    const where = anchor ? (isNonPlace(anchor) ? formatYears(anchor.years) : `${anchor.places[0].name} · ${formatYears(anchor.years)}`) : ch.kicker;
+    const img = stepImage[i]?.media?.find((m) => m.type === 'image');
+    return h(
+      `div.step${i === 0 ? '.first' : ''}`,
+      { 'data-step': String(i), lang: ch.textLang && ch.textLang !== lang() ? ch.textLang : undefined },
+      // On phones the picture sits above the text instead of under it.
+      img ? h('figure.step-fig', {}, h('img', { src: app.media(img.file), alt: img.caption ?? stepImage[i]!.title, loading: 'lazy', decoding: 'async' }), h('figcaption.credit', {}, img.caption ? img.caption + ' · ' : '', img.credit, ' · ', img.license)) : null,
+      h('div.where', {}, where),
+      h('p', {}, richText(app, s)),
+    );
   });
   const scrolly = h('div.scrolly', {}, graphic, h('div.steps', {}, steps));
 
@@ -193,16 +213,30 @@ function chapter(app: App, ch: Chapter): HTMLElement {
       )
     : null;
 
+  const LEAD = 4;
+  const rest = cards.slice(LEAD);
+  const more = rest.length
+    ? h(
+        'button.btn.more',
+        {
+          'aria-expanded': 'false',
+          onclick: (e: Event) => {
+            const b = e.currentTarget as HTMLButtonElement;
+            const row = b.previousElementSibling as HTMLElement;
+            rest.forEach((c) => row.append(teaser(app, c, true)));
+            b.remove();
+          },
+        },
+        t('See all {cards}', { cards: count(cards.length, 'card') }),
+      )
+    : null;
   const strip = cards.length
     ? h(
         'section.strip',
         {},
         h('h3', {}, t('In {chapter}: {cards}', { chapter: ch.id, cards: count(cards.length, 'card') })),
-        h(
-          'div.strip-row',
-          {},
-          cards.map((c) => teaser(app, c)),
-        ),
+        h('div.strip-row', {}, cards.slice(0, LEAD).map((c) => teaser(app, c))),
+        more,
       )
     : null;
 
@@ -215,32 +249,33 @@ function chapter(app: App, ch: Chapter): HTMLElement {
     strip,
     h('div.kente', { 'aria-hidden': 'true' }),
   );
-  runScrolly(app, ch, el, graphic, mapHost, imgHost, steps);
+  runScrolly(app, ch, el, graphic, mapHost, imgHost, steps, stepImage);
   return el;
 }
 
-export function teaser(app: App, c: Card): HTMLElement {
+export function teaser(app: App, c: Card, seen = false): HTMLElement {
   const img = c.media?.find((m) => m.type === 'image');
   return h(
-    'a.teaser.reveal',
+    `a.teaser${seen ? '.seen' : ''}.reveal${img ? '' : '.textonly'}`,
     { href: `#focus=${c.id}`, 'data-card': c.id, style: `--era:${eraColor(c.era)}` },
-    h('div.ph', {}, img ? h('img', { src: app.media(img.file), alt: '', loading: 'lazy', decoding: 'async' }) : h('span.glyph', { 'aria-hidden': 'true' }, c.title.slice(0, 1))),
+    img ? h('div.ph', {}, h('img', { src: app.media(img.file), alt: '', loading: 'lazy', decoding: 'async' })) : null,
     h(
       'div.tx',
       {},
       h('div.k', {}, h('span', {}, KIND_LABEL[c.kind] ?? c.kind), h('span', {}, formatYears(c.years)), h('span.bk', {}, bookMarks(c.books))),
       h('b', {}, c.title),
       h('span.w', {}, c.wow),
+      img ? null : h('span.pl', {}, c.places[0].name),
     ),
   );
 }
 
-function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement, mapHost: HTMLElement, imgHost: HTMLElement, steps: HTMLElement[]): void {
+function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement, mapHost: HTMLElement, imgHost: HTMLElement, steps: HTMLElement[], stepImage: (Card | undefined)[]): void {
   let map: GeoMap | null = null;
   let current = -1;
   const figures = new Map<string, HTMLElement>();
   const chapterCards = [...new Set(ch.cards.map((id) => app.set.forEdition(id, app.edition)).filter(Boolean) as Card[])];
-  const shownImages = new Set<string>();
+  const phone = () => window.innerWidth < 720;
 
   const figure = (c: Card): HTMLElement | null => {
     const m = c.media?.find((x) => x.type === 'image');
@@ -250,7 +285,6 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
       const f = h(
         'figure',
         {},
-        h('div.bg', { style: `background-image:url("${src}")` }),
         h('img', { src, alt: m.caption ?? c.title, decoding: 'async' }),
         h('figcaption.credit', {}, h('b', {}, m.caption ?? c.title), m.credit, ' · ', m.license),
       );
@@ -271,23 +305,28 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
     current = i;
     steps.forEach((s, j) => s.classList.toggle('on', j === i));
     const sc = stepCards(app, ch.steps[i] ?? '');
-    const withImage = sc.find((c) => c.media?.some((m) => m.type === 'image'));
-    // The first step orients the reader on the map; later steps show a face or
-    // a document when the card has one, unless it was already shown.
-    const showImage = i > 0 && withImage && !shownImages.has(withImage.id);
-    if (showImage && withImage) {
-      shownImages.add(withImage.id);
-      const f = figure(withImage);
-      figures.forEach((x) => x.classList.toggle('on', x === f));
-      graphic.classList.add('show-img');
+    const withImage = stepImage[i];
+    if (withImage && !phone()) {
+      // Cross-fade only once the picture is decoded: never a black void.
+      const f = figure(withImage)!;
+      const img = f.querySelector('img')!;
+      const show = () => {
+        if (current !== i) return;
+        figures.forEach((x) => x.classList.toggle('on', x === f));
+        graphic.classList.add('show-img');
+      };
+      img.decode().then(show, show);
     } else {
       graphic.classList.remove('show-img');
     }
+    // Get the next picture ready while the reader is still on this step.
+    const next = stepImage.slice(i + 1).find(Boolean);
+    if (next && !phone()) void figure(next)?.querySelector('img')?.decode().catch(() => undefined);
     const m = ensureMap();
     m.ready.then(() => {
       const lit = new Set(sc.map((c) => c.id));
       m.setPoints(
-        chapterCards.map((c) => ({
+        chapterCards.filter((c) => !isNonPlace(c)).map((c) => ({
           id: c.id,
           lon: c.places[0].lon,
           lat: c.places[0].lat,
@@ -310,8 +349,10 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
         const [o, ...rest] = c.places;
         routes.push({ id: c.id, legs: rest.map((p) => ({ from: [o.lon, o.lat], to: [p.lon, p.lat] })), color: eraColor(c.era), flow: true });
       }
-      m.setRoutes(routes);
-      const coords: [number, number][] = (sc.length ? sc.flatMap((c) => c.places) : [...ch.places, ...chapterCards.map((c) => c.places[0])]).map((p) => [p.lon, p.lat]);
+      // One animated change per step: the first step draws its routes, later
+      // steps fly the map and the routes are simply there.
+      m.setRoutes(routes, i === 0);
+      const coords: [number, number][] = (sc.filter((c) => !isNonPlace(c)).length ? sc.filter((c) => !isNonPlace(c)).flatMap((c) => c.places) : [...ch.places, ...chapterCards.map((c) => c.places[0])]).map((p) => [p.lon, p.lat]);
       if (i === 0) routes.forEach((r) => r.legs.forEach((l) => coords.push(l.from, l.to)));
       const zoom = sc.length ? Math.min(...sc.map((c) => c.zoom)) : 2;
       m.fit(coords, LEVEL_K[Math.max(0, Math.min(3, zoom - 2))], current === 0 ? 0 : 1700);
@@ -405,4 +446,46 @@ function heroParallax(): void {
   };
   window.addEventListener('scroll', () => (raf ||= requestAnimationFrame(tick)), { passive: true });
   tick();
+}
+
+/**
+ * The ending returns to the bird of the title: go back and fetch it. A last
+ * picture, the proverb, and the way on: the dictionary in the terminal.
+ */
+function coda(app: App): HTMLElement {
+  const art = app.raw('adinkra')?.media?.find((m) => m.type === 'image');
+  const cmd = 'sankofa dict';
+  return h(
+    'section.coda',
+    { 'aria-labelledby': 'coda-title' },
+    art ? h('img.coda-img', { src: app.media(art.file), alt: '', loading: 'lazy', decoding: 'async' }) : null,
+    h(
+      'div.coda-inner.reveal',
+      {},
+      h('div.kicker', {}, 'Sankofa'),
+      h('h2', { id: 'coda-title' }, pick({ en: 'Go back and fetch it.', ru: 'Вернись и забери.' })),
+      h(
+        'p',
+        {},
+        pick({
+          en: 'The Akan proverb behind the name says it is not wrong to go back for what you have forgotten. Everything in this museum is a road back: every card has a source, every source a place, every place a way further.',
+          ru: 'Пословица акан, от которой пошло имя, говорит: нет ничего дурного в том, чтобы вернуться за забытым. Всё в этом музее — дорога назад: у каждой карточки есть источник, у каждого источника — место, у каждого места — путь дальше.',
+        }),
+      ),
+      h(
+        'div.actions',
+        {},
+        h('button.btn.primary', { onclick: () => app.openDescent() }, t('Descend through the centuries')),
+        h('a.btn', { href: '#view=engine', 'data-engine': '' }, t('The engine room')),
+        h('button.btn', { onclick: () => app.openBook() }, t('Your book')),
+      ),
+      h(
+        'p.coda-term',
+        {},
+        pick({ en: 'Or open the dictionary where engineers live:', ru: 'Или откройте словарь там, где живут инженеры:' }),
+        h('code', {}, cmd),
+      ),
+      art ? h('p.credit', {}, art.caption ? art.caption + ' · ' : '', art.credit, ' · ', art.license) : null,
+    ),
+  );
 }
