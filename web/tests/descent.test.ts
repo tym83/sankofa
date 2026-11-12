@@ -64,3 +64,16 @@ describe('quiet stretches, lanes and eras', () => {
     expect(chapterAt(chapters, 1925)!.id).toBe('v3');
   });
 });
+
+import { heroFrame } from '../src/views/story';
+describe('hero map frame', () => {
+  it('pads the places and never frames less than an ocean', () => {
+    const [[w, s], [e, n]] = heroFrame([[-75, 40], [-74, 41]]);
+    expect(e - w).toBeGreaterThanOrEqual(70);
+    expect(w).toBeLessThan(-75);
+    expect(n).toBeGreaterThan(41);
+    expect(s).toBeLessThan(40);
+    const [[nw], [ne]] = heroFrame([[-75, 40], [-74, 41]], true);
+    expect(ne - nw).toBeLessThan(e - w);
+  });
+});

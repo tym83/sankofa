@@ -111,3 +111,46 @@ test('the listening room plays the live cluster from /pulse', async ({ page }) =
   await expect(page.locator('.l-node.silent')).toHaveCount(1);
   await expect(page.locator('.l-status')).toContainText('1 of 2 nodes playing');
 });
+
+test('a chapter without a photograph opens on its own night map', async ({ page, request }) => {
+  const data = await (await request.get('data/chapters.json')).json();
+  const ch = data.chapters.find((c: { hero?: { file?: string } }) => !c.hero?.file);
+  test.skip(!ch, 'every chapter has a hero image');
+  await page.goto('/');
+  const hero = page.locator(`#ch-${ch.id} .hero`);
+  await hero.scrollIntoViewIfNeeded();
+  await expect(hero).toHaveClass(/map-hero/);
+  await expect(hero.locator('svg.geo path.land')).toBeAttached();
+  await expect(hero.locator('svg.geo g.pt').first()).toBeAttached();
+});
+
+test('landing mid-chapter still shows a picture or the map in the sticky panel', async ({ page }) => {
+  await page.goto('/');
+  for (const id of ['v2', 'v3', 'v5', 'v6']) {
+    const step = page.locator(`article.chapter[data-chapter="${id}"] .step:nth-child(3)`);
+    if (!(await step.count())) continue;
+    await step.evaluate((el) => el.scrollIntoView({ block: 'center' }));
+    await expect(step).toHaveClass(/on/);
+    const graphic = page.locator(`#ch-${id} .graphic`);
+    await expect
+      .poll(async () =>
+        graphic.evaluate((g) => {
+          const vh = window.innerHeight;
+          const inView = (el: Element | null) => {
+            if (!el) return false;
+            const r = el.getBoundingClientRect();
+            return r.height > 50 && r.bottom > 0 && r.top < vh;
+          };
+          return g.classList.contains('show-img') ? inView(g.querySelector('figure.on img')) : inView(g.querySelector('svg.geo')) && !!g.querySelector('svg.geo path.land');
+        }),
+      )
+      .toBe(true);
+  }
+});
+
+test('the page is never wider than the screen', async ({ page }) => {
+  await page.goto('/');
+  await page.waitForTimeout(500);
+  const [inner, client] = await page.evaluate(() => [window.innerWidth, document.documentElement.clientWidth]);
+  expect(inner).toBe(client);
+});

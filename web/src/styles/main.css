@@ -104,7 +104,6 @@ body {
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 body.locked {
   overflow: hidden;
@@ -3203,8 +3202,11 @@ body {
     padding: 0 3px;
   }
 }
-html {
-  overflow-x: hidden;
+/* clip, not hidden: hidden would turn body into a scroll container and
+   break every position: sticky panel. */
+html,
+body {
+  overflow-x: clip;
 }
 .interlude {
   grid-template-columns: minmax(0, 1fr);
@@ -3213,4 +3215,94 @@ html {
   white-space: normal;
   text-align: center;
   max-width: 100%;
+}
+
+/* A chapter without a photograph opens on its own night map. */
+.hero.map-hero {
+  --ocean: transparent;
+  --land: rgba(242, 233, 216, 0.06);
+  --coast: rgba(227, 171, 61, 0.36);
+  --ink: #f2e9d8;
+  --ink-2: #cdbfa6;
+  --gold: #e3ab3d;
+  --indigo: #6a82d0;
+  --v0: #e3ab3d;
+  --v1: #7d93dc;
+  --v2: #e07a50;
+  --v3: #d2ad84;
+  --v4: #5fb07d;
+  --v5: #e2cd62;
+  --v6: #cf5a6e;
+  --v7: #ad92f0;
+  background:
+    radial-gradient(70% 60% at 62% 42%, color-mix(in srgb, var(--era) 22%, transparent), transparent 70%),
+    radial-gradient(120% 90% at 50% 0%, #1a1d3c 0%, #0b0c17 70%);
+}
+.hero-map {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.hero-map .geo {
+  background: transparent;
+}
+.hero-map .pt .lbl {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: rgba(242, 233, 216, 0.75);
+  stroke: rgba(8, 8, 18, 0.8);
+}
+.hero-map .pt.lit .lbl {
+  fill: rgba(242, 233, 216, 0.85);
+}
+.hero.map-hero::after {
+  background: linear-gradient(180deg, rgba(8, 8, 16, 0.25) 0%, rgba(8, 8, 16, 0) 35%, rgba(8, 8, 16, 0.2) 60%, rgba(8, 8, 16, 0.9) 100%);
+}
+.toc-glyph {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(90px, 12vw, 180px);
+  color: color-mix(in srgb, var(--era) 70%, transparent);
+  background: radial-gradient(80% 70% at 50% 40%, color-mix(in srgb, var(--era) 26%, transparent), #0d0e1b 75%);
+  font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 144;
+}
+.hero-map .pt .halo {
+  opacity: 0.9;
+  animation: breathe 4.5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.hero-map .pt:nth-child(3n) .halo {
+  animation-delay: -1.5s;
+}
+.hero-map .pt:nth-child(3n + 1) .halo {
+  animation-delay: -3s;
+}
+.hero-map .pt .dot {
+  r: 4.5px;
+}
+.hero-map svg {
+  animation: slowzoom 28s ease-out both;
+  transform-origin: 55% 45%;
+}
+@keyframes slowzoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-map svg,
+  .hero-map .pt .halo {
+    animation: none;
+  }
 }

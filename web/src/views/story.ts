@@ -46,6 +46,80 @@ function heroImg(app: App, ch: Chapter, eager: boolean): HTMLElement | null {
   });
 }
 
+/**
+ * A chapter without a photograph opens on its own night map: every place in
+ * the chapter lit, its movements and routes drawing themselves.
+ */
+function heroMap(app: App, ch: Chapter): HTMLElement {
+  const host = h('div.hero-map', { 'aria-hidden': 'true' });
+  const cards = [...new Set(ch.cards.map((id) => app.set.forEdition(id, app.edition)).filter(Boolean) as Card[])];
+  const coords: [number, number][] = [...ch.places, ...cards.flatMap((c) => c.places)].map((p) => [p.lon, p.lat]);
+  const moves = MOVEMENTS.filter((m) => m.era === ch.id);
+  moves.forEach((m) => m.legs.forEach((l) => coords.push(l.from, l.to)));
+  const frame = heroFrame(coords, window.innerWidth < 760);
+  let started = false;
+  const io = new IntersectionObserver(
+    (entries) => {
+      if (started || !entries.some((e) => e.isIntersecting)) return;
+      started = true;
+      io.disconnect();
+      const map = new GeoMap(host, { frame });
+      map.ready.then(() => {
+        map.setPoints(
+          cards.map((c) => ({
+            id: c.id,
+            lon: c.places[0].lon,
+            lat: c.places[0].lat,
+            label: c.places[0].name.split(/[,(]/)[0].trim(),
+            color: eraColor(c.era),
+            priority: 6 - c.zoom,
+          })),
+        );
+        const routes: MapRoute[] = [
+          ...moves.map((m) => ({ id: m.id, legs: m.legs, color: eraColor(m.era), flow: true })),
+          ...cards
+            .filter((c) => c.places.length > 1)
+            .map((c) => ({
+              id: c.id,
+              legs: c.places.slice(1).map((p) => ({ from: [c.places[0].lon, c.places[0].lat] as [number, number], to: [p.lon, p.lat] as [number, number] })),
+              color: eraColor(c.era),
+              flow: true,
+            })),
+        ];
+        // The routes draw one after another, like the cover.
+        routes.forEach((_, i) => setTimeout(() => map.setRoutes(routes.slice(0, i + 1)), reducedMotion() ? 0 : 300 + i * 450));
+      });
+    },
+    { rootMargin: '60% 0px' },
+  );
+  io.observe(host);
+  return host;
+}
+
+/** A generous frame around the chapter's places, never narrower than an ocean. */
+export function heroFrame(coords: [number, number][], narrow = false): [[number, number], [number, number]] {
+  if (!coords.length) return [[-100, -30], [45, 58]];
+  let [w, s, e, n] = [180, 90, -180, -90];
+  for (const [lon, lat] of coords) {
+    w = Math.min(w, lon);
+    e = Math.max(e, lon);
+    s = Math.min(s, lat);
+    n = Math.max(n, lat);
+  }
+  const padX = narrow ? 4 : Math.max(12, (e - w) * 0.25);
+  const padY = Math.max(10, (n - s) * 0.3);
+  [w, e, s, n] = [w - padX, e + padX, s - padY, n + padY];
+  const minW = narrow ? 34 : 70;
+  if (e - w < minW) {
+    const c = (w + e) / 2;
+    [w, e] = [c - minW / 2, c + minW / 2];
+  }
+  return [
+    [Math.max(-180, w), Math.max(-75, s)],
+    [Math.min(180, e), Math.min(80, n)],
+  ];
+}
+
 function toc(app: App): HTMLElement {
   return h(
     'section.toc',
@@ -58,7 +132,7 @@ function toc(app: App): HTMLElement {
         h(
           'a.toc-item.reveal',
           { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `--era:${eraColor(ch.id)}` },
-          heroImg(app, ch, false),
+          heroImg(app, ch, false) ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, ch.id),
           h('span.num', {}, ch.id.toUpperCase()),
           h('span.t', {}, h('b', {}, ch.title), h('span', {}, ch.kicker)),
         ),
@@ -81,16 +155,18 @@ function chapter(app: App, ch: Chapter): HTMLElement {
   const cards = [...new Set(ch.cards.map((id) => app.set.forEdition(id, app.edition)).filter(Boolean) as Card[])];
   const isFirst = app.chapters[0] === ch;
 
+  const mapHero = !ch.hero?.file;
   const hero = h(
-    'header.hero',
-    {},
-    heroImg(app, ch, isFirst),
+    `header.hero${mapHero ? '.map-hero' : ''}`,
+    { style: `--era:${color}` },
+    mapHero ? heroMap(app, ch) : heroImg(app, ch, isFirst),
     h(
       'div.hero-text',
       {},
       h('div.release', {}, h('span.v', {}, ch.id), h('span.kicker', {}, ch.kicker)),
       h('h2', { id: `title-${ch.id}` }, ch.title),
     ),
+    mapHero ? h('p.credit', {}, 'The places of this chapter · map data: Natural Earth, public domain') : null,
     ch.hero ? h('p.credit', {}, ch.hero.caption ? ch.hero.caption + ' · ' : '', ch.hero.credit, ' · ', ch.hero.url ? h('a', { href: ch.hero.url, rel: 'noopener', target: '_blank' }, ch.hero.license) : ch.hero.license) : null,
   );
 
