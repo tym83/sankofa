@@ -153,9 +153,9 @@ func (c *Card) Localized(lang string) *Card {
 			out.Places[i].Name = t.Places[i]
 		}
 	}
-	if len(t.Captions) == len(c.Media) {
+	if len(t.Captions) > 0 && len(t.Captions) <= len(c.Media) {
 		out.Media = append([]Media(nil), c.Media...)
-		for i := range out.Media {
+		for i := range t.Captions {
 			out.Media[i].Caption = t.Captions[i]
 		}
 	}
@@ -425,8 +425,8 @@ func (s *Set) Validate() []error {
 			if len(t.Further) > 0 && len(t.Further) != len(c.Further) {
 				bad(c, "%s translation has %d further items, want %d", lang, len(t.Further), len(c.Further))
 			}
-			if len(t.Captions) > 0 && len(t.Captions) != len(c.Media) {
-				bad(c, "%s translation has %d captions, want %d", lang, len(t.Captions), len(c.Media))
+			if len(t.Captions) > len(c.Media) {
+				bad(c, "%s translation has %d captions for %d media", lang, len(t.Captions), len(c.Media))
 			}
 			if (t.Dispute != "") != (c.Dispute != "") {
 				bad(c, "%s translation must translate the dispute exactly when the card has one", lang)
