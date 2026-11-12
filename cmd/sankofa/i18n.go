@@ -1,5 +1,10 @@
 package main
 
+import (
+	"github.com/tym83/sankofa/pkg/atlas"
+	"github.com/tym83/sankofa/pkg/card"
+)
+
 // tr translates the few interface words the CLI prints around cards.
 func tr(s string) string {
 	if lang != "ru" {
@@ -29,4 +34,11 @@ var ru = map[string]string{
 	"tab link · enter open · backspace back · r random · o atlas · q quit   [%s copy · %d read]": "tab ссылка · enter открыть · backspace назад · r случайная · o атлас · q выход   [%s экземпляр · прочитано %d]",
 	"male":   "мужской",
 	"female": "женский",
+}
+
+// cardPoint is the atlas point of a card in the reader's language.
+func cardPoint(c *card.Card) atlas.Point {
+	p := atlas.ForCard(c)
+	p.Lang = lang
+	return p
 }

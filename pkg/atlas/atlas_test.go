@@ -3,7 +3,7 @@ package atlas
 import "testing"
 
 func TestRoundTrip(t *testing.T) {
-	p := Point{From: 1900, To: 1935, Place: "delta", Zoom: 3, Focus: "blues", Path: []string{"a", "b"}}
+	p := Point{From: 1900, To: 1935, Place: "delta", Zoom: 3, Focus: "blues", Path: []string{"a", "b"}, Lang: "ru"}
 	got, err := Parse("http://x/#" + p.Fragment())
 	if err != nil || got.Fragment() != p.Fragment() {
 		t.Fatalf("%+v %v", got, err)

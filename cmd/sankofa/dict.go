@@ -179,7 +179,7 @@ func printCard(w io.Writer, s *card.Set, c *card.Card, osc bool) {
 	for _, src := range c.Sources {
 		fmt.Fprintln(w, "  ·", atlas.Hyperlink(osc && src.URL != "", src.URL, src.Title))
 	}
-	u := atlas.ForCard(c).URL()
+	u := cardPoint(c).URL()
 	fmt.Fprintln(w, "\n"+tr("Atlas:"), atlas.Hyperlink(osc, u, u))
 }
 
@@ -332,7 +332,7 @@ func (m *dictModel) View() string {
 	}
 	b.WriteString("\n" + stDim.Render(tr("Sources")+": "+sourceTitles(c)) + "\n")
 	if m.showLink {
-		u := atlas.ForCard(c).URL()
+		u := cardPoint(c).URL()
 		b.WriteString("\n" + stFooter.Render(tr("Atlas: ")) + atlas.Hyperlink(true, u, u) + "\n")
 	}
 	ed := tr("male")

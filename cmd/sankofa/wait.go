@@ -32,7 +32,7 @@ func crumbPicker(cmd *cobra.Command) (*crumbs.Picker, error) {
 }
 
 func crumbLine(c *card.Card, osc bool, width int) string {
-	u := atlas.ForCard(c).URL()
+	u := cardPoint(c).URL()
 	line := c.Wow
 	if width > 10 && len([]rune(line)) > width-4 {
 		line = string([]rune(line)[:width-5]) + "…"

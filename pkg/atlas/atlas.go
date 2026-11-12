@@ -26,6 +26,7 @@ type Point struct {
 	Zoom     int
 	Focus    string   // card id
 	Path     []string // a reader's path, replayed by the museum
+	Lang     string   // the museum's language, empty for English
 }
 
 // Base returns the museum base URL.
@@ -60,6 +61,9 @@ func (p Point) Fragment() string {
 	}
 	if len(p.Path) > 0 {
 		v.Set("path", strings.Join(p.Path, "."))
+	}
+	if p.Lang != "" && p.Lang != "en" {
+		v.Set("lang", p.Lang)
 	}
 	return v.Encode()
 }
@@ -98,6 +102,7 @@ func Parse(s string) (Point, error) {
 	if path := v.Get("path"); path != "" {
 		p.Path = strings.Split(path, ".")
 	}
+	p.Lang = v.Get("lang")
 	return p, nil
 }
 

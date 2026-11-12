@@ -73,7 +73,7 @@ func genreCmd() *cobra.Command {
 				osc := isTerminal(w)
 				fmt.Fprintf(w, "%s has %d undeclared dependencies:\n\n", args[0], len(found))
 				for _, c := range found {
-					u := atlas.ForCard(c).URL()
+					u := cardPoint(c).URL()
 					fmt.Fprintf(w, "  ✗ %s (%s)\n    %s\n    %s\n\n", c.Title, yearsOf(c), c.Wow, atlas.Hyperlink(osc, u, "open in the atlas"))
 				}
 				fmt.Fprintf(w, "Declare them: `sankofa dict %s`.\n", found[0].ID)
@@ -198,7 +198,7 @@ func writeRecipe(out string, s *card.Set, g *card.Card, owner map[string]string,
 			"name": pkg,
 			"annotations": map[string]string{
 				"kubepkg.dev/description": g.Title + ": " + g.Wow,
-				"kubepkg.dev/home":        atlas.ForCard(g).URL(),
+				"kubepkg.dev/home":        cardPoint(g).URL(),
 			},
 		},
 		"spec": map[string]any{
