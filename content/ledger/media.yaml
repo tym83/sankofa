@@ -1,36 +1,57 @@
-# Exact rights statements from the linked file pages. JPEG derivatives are resized for display.
+# Exact rights statements from the linked file pages. JPEG derivatives retain their source licences.
 - card: adlam
   file: adlam.jpg
   url: https://commons.wikimedia.org/wiki/File:The_Adlam_of_Fulfulde.jpg
   license: CC BY-SA 4.0
   license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International
     license.
+  note: Photographic detail of the printed lettering only. The unrelated illustrated cover artwork is
+    excluded from this derivative.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  sha256: 8ac18357878a9b2bfa8f898dee29c54186036636c654d93bf58385c5ccb0ca6b
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:The_Adlam_of_Fulfulde.jpg&oldid=1112582186
 - card: ashleys-sack
   file: ashleys-sack.jpg
   url: https://commons.wikimedia.org/wiki/File:Ashley%27s_Sack_(Slave_Sack_c._mid-19th_century).jpg
   license: CC BY-SA 4.0
   license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International
     license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  sha256: 11a15c8ee7e4c15858fae288ab3631511567cebe9de4e7a3d08a02c787e42d94
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Ashley%27s_Sack_(Slave_Sack_c._mid-19th_century).jpg&oldid=1066848152
 - card: cowries
   file: cowries.jpg
   url: https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_ZMA.MOLL.52002_-_Monetaria_moneta_(Linnaeus,_1758)_-_Cypraeidae_-_Mollusc_shell.jpeg
   license: CC0
   license_wording: This file is made available under the Creative Commons CC0 1.0 Universal Public Domain
     Dedication .
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  sha256: 0efe4cbeed54887304d7fea97a5af2fb693001a649fb843b03fdd0c8805b89f7
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Naturalis_Biodiversity_Center_-_ZMA.MOLL.52002_-_Monetaria_moneta_(Linnaeus,_1758)_-_Cypraeidae_-_Mollusc_shell.jpeg&oldid=1113934023
 - card: saint-georges
   file: saint-georges.jpg
   url: https://commons.wikimedia.org/wiki/File:Monsieur_de_St._George_MET_DP819235.jpg
   license: Public domain
   license_wording: This work is in the public domain in the United States because it was published (or
-    registered with the U.S. The author died in 1831, so this work is in the public domain in its country
-    of origin and other countries and areas where the copyright term is the author's life plus 100 years
-    or fewer .
+    registered with the U.S. Copyright Office ) before January 1, 1931. The author died in 1831, so this
+    work is in the public domain in its country of origin and other countries and areas where the copyright
+    term is the author's life plus 100 years or fewer .
+  verified_on: '2026-11-12'
+  sha256: 03b807bc6ecd8299f8934b223037f18c59233eb1bc5baaa3ebfa4fd068f350b0
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Monsieur_de_St._George_MET_DP819235.jpg&oldid=951710473
 - card: nanny-of-the-maroons
   file: nanny-of-the-maroons.jpg
   url: https://commons.wikimedia.org/wiki/File:JM_Moore_Town_1010_(6)_(17070794889).jpg
   license: CC BY-SA 2.0
   license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic
     license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  sha256: 043fd8aba85125824a46827120059d70436e951c70828b712e12aee74aedfee7
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:JM_Moore_Town_1010_(6)_(17070794889).jpg&oldid=1068715364
 - card: chicago-defender
   file: chicago-defender.jpg
   url: https://www.loc.gov/item/2017829265/
@@ -38,12 +59,19 @@
   license_wording: The contents of the Library of Congress Farm Security Administration/Office of War
     Information Black-and-White Negatives are in the public domain and are free to use and reuse.
   note: 'Public domain: US government work.'
+  verified_on: '2026-11-12'
+  sha256: 3ec9819fb3c5d0b44300d52b1983574592c4063973251fe448ab4b01e78d2bb2
 - card: du-bois-infographics
   file: du-bois-infographics.jpg
   url: https://www.loc.gov/item/2013650424/
   license: Public domain
   license_wording: No known restrictions on publication.
   note: 'Public domain: historical work dated 1900-01-01 on the item page; no conflicting rights advisory.'
+  verified_on: '2026-11-12'
+  sha256: daf5038b2fa1a9b02dcbb50aced126f1e325f428dcb3de5f8117331a0df64aaa
+  corroborating_source: https://commons.wikimedia.org/wiki/File:The_Georgia_Negro_LCCN2013650424.jpg
+  corroborating_license_wording: This work is in the public domain in the United States because it was
+    published (or registered with the U.S. Copyright Office ) before January 1, 1931.
 - card: liberia
   file: liberia.jpg
   url: https://www.loc.gov/item/96684991/
@@ -51,6 +79,8 @@
   license_wording: The content of the Library of Congress Geography and Map Division digitized collections
     is free to use and reuse unless a Rights Advisory statement is present that indicates otherwise.
   note: 'Public domain: historical work dated 1870 on the item page; no conflicting rights advisory.'
+  verified_on: '2026-11-12'
+  sha256: 2abc5426c41500a8b6fe186545b12fe4af687095c0530e2e8bb6177a9887426b
 - card: omar-ibn-said
   file: omar-ibn-said.jpg
   url: https://www.loc.gov/item/2018371864/
@@ -60,12 +90,19 @@
     is the materials from  the Africana Historic Postcard Collection . Some items in that collection may
     be rights-restricted .
   note: 'Public domain: historical work dated 1831 on the item page; no conflicting rights advisory.'
+  verified_on: '2026-11-12'
+  sha256: 817251379bbe4904c0f946cd8ed2eec306bf0c7030bbd6718ee25ee3ba72a242
 - card: phillis-wheatley
   file: phillis-wheatley.jpg
   url: https://www.loc.gov/item/2002712199/
   license: Public domain
   license_wording: No known restrictions on publication.
   note: 'Public domain: historical work dated 1773-01-01 on the item page; no conflicting rights advisory.'
+  verified_on: '2026-11-12'
+  sha256: 929dcbf01cf5601e1692504d9b279641df465a8f2f7529252d54ca21d30e2290
+  corroborating_source: https://commons.wikimedia.org/wiki/File:Phillis_Wheatley_frontispiece.jpg
+  corroborating_license_wording: This work is in the public domain in its country of origin and other
+    countries and areas where the copyright term is the author's life plus 100 years or fewer .
 - card: sojourner-truth
   file: sojourner-truth.jpg
   url: https://www.loc.gov/item/scsm000880/
@@ -78,6 +115,49 @@
     should watch for documents that may be copyrighted (for example, published in the United States less
     than 95 years ago, or unpublished and the author died less than 70 years ago).
   note: 'Public domain: historical work dated 1864 on the item page; no conflicting rights advisory.'
+  verified_on: '2026-11-12'
+  sha256: a9d66586dddcd15ab524602dbb765dba45823ff85ad7c3f7b56841c7323829f3
+- card: candomble
+  file: candomble.jpg
+  url: https://commons.wikimedia.org/wiki/File:Il%C3%AA_Ax%C3%A9_Iy%C3%A1_Nass%C3%B4_Ok%C3%A1_Casa_Branca_Salvador_2017-14017.jpg
+  license: CC BY-SA 4.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International
+    license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  sha256: 333912aa5e9b81b3ebaa70f4bc97233580294f2060a560c0c0776a28daed74e7
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Il%C3%AA_Ax%C3%A9_Iy%C3%A1_Nass%C3%B4_Ok%C3%A1_Casa_Branca_Salvador_2017-14017.jpg&oldid=1028447019
+- card: rinse-fm
+  file: rinse-fm.jpg
+  url: https://commons.wikimedia.org/wiki/File:Khadejia_Hosting_Rinse.jpg
+  license: CC BY-SA 4.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International
+    license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  sha256: 3980928dc95e4deff938c46d9376eec5cf418bbe9824c6aca3e2c341d9d4e44f
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Khadejia_Hosting_Rinse.jpg&oldid=1170463965
+- card: amen-break
+  file: amen-break.jpg
+  url: https://commons.wikimedia.org/wiki/File:Amen_Brother_7_inch_single.jpg
+  license: Public domain
+  license_wording: This image of simple geometry is ineligible for copyright and therefore in the public
+    domain , because it consists entirely of information that is common property and contains no original
+    authorship.
+  note: Only the record label is reproduced. The source identifies its simple geometry and factual text
+    as ineligible for copyright; this does not license the sound recording.
+  verified_on: '2026-11-12'
+  sha256: f93e13f9dded4f0added1ff24b44d0273b384c7cee0c32c5f2c5d95809157c63
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Amen_Brother_7_inch_single.jpg&oldid=1047819874
+- card: highlife
+  file: highlife.jpg
+  url: https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg
+  license: Public domain
+  license_wording: The depicted text is ineligible for copyright and therefore in the public domain because
+    it is not a “literary work” or other protected type in sense of the local copyright law.
+  verified_on: '2026-11-12'
+  sha256: 895b36e8082a84a9104a8d2a29c7a0dcf2cf7ddc0158249a8edb6482bb5559b6
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Armstrong-Mensahinvitation.jpg&oldid=1065609544
 - card: hannah-crafts
   file: hannah-crafts.jpg
   url: https://commons.wikimedia.org/wiki/File:Henry_Louis_Gates,_Jr.jpg
@@ -87,3 +167,88 @@
   note: The photograph shows the manuscript's purchaser and editor named in the card, not Hannah Crafts.
     The manuscript-scan candidate was rejected because its first-publication history is not resolved by
     the Commons licence template.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  sha256: 6347f6bd9ca36250c6266c749de3e00e925d952a2a3098c3654dc6e06d8cea91
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Henry_Louis_Gates,_Jr.jpg&oldid=1296608389
+- card: reggae
+  file: reggae.jpg
+  url: https://commons.wikimedia.org/wiki/File:Toots-Hibbert.jpg
+  license: CC BY-SA 2.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic
+    license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/2.0/
+  sha256: 2be137747ddf389d82980ea100cbb3fd094939b15ace2553779fced7f3570750
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Toots-Hibbert.jpg&oldid=721284206
+- card: rhythm-and-blues
+  file: rhythm-and-blues.jpg
+  url: https://commons.wikimedia.org/wiki/File:Ruth_Brown.jpg
+  license: CC BY 2.0
+  license_wording: This file is licensed under the Creative Commons Attribution 2.0 Generic license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by/2.0/
+  sha256: fa6f00e8a55c7bddfec347d356dfbbd60b71fccf3bd101a8f63fd8b1cdaa3d6b
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Ruth_Brown.jpg&oldid=947845028
+- card: misogyny-in-hip-hop
+  file: misogyny-in-hip-hop.jpg
+  url: https://commons.wikimedia.org/wiki/File:Queen_Latifah_by_Gage_Skidmore.jpg
+  license: CC BY-SA 3.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported
+    license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  sha256: a766a8a816d8290a77c2437db4100227b693d4e18fdb0a5e0269fa9d83dd2b5e
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Queen_Latifah_by_Gage_Skidmore.jpg&oldid=1271956146
+- card: tutuola
+  file: tutuola.jpg
+  url: https://commons.wikimedia.org/wiki/File:A_palm_wine_tapper_01.jpg
+  license: CC0
+  license_wording: This file is made available under the Creative Commons CC0 1.0 Universal Public Domain
+    Dedication .
+  note: Contextual photograph of the activity named in the novel; not a portrait of Tutuola or an illustration
+    of a specific scene. No location inferred from the disputed EXIF coordinates.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/publicdomain/zero/1.0/
+  sha256: 49c76c42611a3832baaee1be54722330a6bd8446d0b6ef35a78be705e7eb88cd
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:A_palm_wine_tapper_01.jpg&oldid=1109319214
+- card: samba
+  file: samba.jpg
+  url: https://commons.wikimedia.org/wiki/File:Roda_de_Samba_-_Tijuca_-_RJ.jpg
+  license: CC BY-SA 4.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International
+    license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/
+  sha256: e6375470bbfccc09177767863c3ddbd8254a4a09faf2c05d6d10f1fb430505e5
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Roda_de_Samba_-_Tijuca_-_RJ.jpg&oldid=1277011387
+- card: planet-rock
+  file: planet-rock.jpg
+  url: https://commons.wikimedia.org/wiki/File:Afrika_Bambaataa.jpg
+  license: CC BY-SA 3.0
+  license_wording: This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported
+    license.
+  verified_on: '2026-11-12'
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+  sha256: b2f117d0d468183f1f1c9f3684f29e747ebf702b1d71fb7776124cdaa72b7375
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Afrika_Bambaataa.jpg&oldid=1012995119
+- card: hurston
+  file: hurston.jpg
+  url: https://commons.wikimedia.org/wiki/File:Zora_Neale_Hurston_(1938).jpg
+  license: Public domain
+  license_wording: As the restrictions on this collection expired in 1986, the Library of Congress believes
+    this image is in the public domain.
+  note: The photograph is resized without cropping or colourisation, respecting the source page’s request
+    to preserve its integrity.
+  verified_on: '2026-11-12'
+  sha256: 75ee501dcf8d8f847dfab7be3508166bc9500f1d3273b08af67cb390f9ccb783
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Zora_Neale_Hurston_(1938).jpg&oldid=1171782561
+- card: work-songs
+  file: work-songs.jpg
+  url: https://commons.wikimedia.org/wiki/File:Leadbelly,_National_Press_Club,_Washington,_D.C.,_between_1938_and_1948_(William_P._Gottlieb_13561).jpg
+  license: Public domain
+  license_wording: In accordance with the wishes of William Gottlieb, the photographs in this collection
+    entered into the public domain on February 16, 2010.
+  verified_on: '2026-11-12'
+  sha256: f00db121c3f08c39cdec60ff37816017d1f8cca006c442040831c8377c12bcd0
+  source_revision: https://commons.wikimedia.org/w/index.php?title=File:Leadbelly,_National_Press_Club,_Washington,_D.C.,_between_1938_and_1948_(William_P._Gottlieb_13561).jpg&oldid=1040713207

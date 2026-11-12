@@ -21,5 +21,7 @@ sources:
   - {title: "Dicionário Cravo Albin: Tia Ciata (samba sessions and orisha rites at home)", url: "http://dicionariompb.com.br/personalidade/tia-ciata"}
   - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/"}
   - {title: "Agência Brasil: Primeiro samba faz hoje 100 anos (2016)", url: "https://agenciabrasil.ebc.com.br/cultura/noticia/2016-11/primeiro-samba-faz-hoje-100-anos-e-ganha-exposicao-na-biblioteca-nacional"}
+media:
+  - {"type": "image", "file": "samba.jpg", "caption": "Roda de samba in Tijuca, Rio de Janeiro, 30 December 2017", "credit": "Lgjunior; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Roda_de_Samba_-_Tijuca_-_RJ.jpg"}
 ---
 The song that made samba famous took shape in 1916 at the house of a Bahian woman in Rio, and its authorship is still argued over. Migrants had carried samba de roda south from Bahia, and Bahian "aunts" led the Black neighbourhood around Praça Onze, called Little Africa. The best known, Tia Ciata, born in 1854 and initiated in [[candomble]], hosted samba and religious gatherings at her house. There Pelo Telefone took shape, and on 27 November 1916 Donga registered it at the National Library. It was the hit of the 1917 carnival and is often called Brazil's first samba, a title scholars dispute. Other regulars said the tune was collective. Compare [[capoeira]] and [[jazz]].

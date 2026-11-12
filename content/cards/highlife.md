@@ -24,6 +24,8 @@ sources:
   - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg"}
   - {title: "MyJoyOnline: Legend of the week, E. T. Mensah (Tempos grew out of a 1947 group)", url: "https://www.myjoyonline.com/legend-of-the-week-e-t-mensah/"}
   - {title: "The Native: Native Roots, Highlife (Benson introduced to highlife by Mensah 1954; brass arrangements inspired a young Fela)", url: "https://thenativemag.com/native-roots-highlife/"}
+media:
+  - {"type": "image", "file": "highlife.jpg", "caption": "Invitation to E. T. Mensah's performance with Louis Armstrong, May 1956", "credit": "E. T. Mensah's Paramount / David Hagen, Georgetown University Library; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg"}
 ---
 Highlife was named by people who could not get in. By the 1920s orchestras
 played for the elite in Accra's clubs, and the onlookers outside called it

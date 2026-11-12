@@ -23,6 +23,8 @@ sources:
   - {title: "Eustace Palmer: Twenty-five Years of Amos Tutuola", url: "https://journals.lib.unb.ca/index.php/IFR/article/download/13280/14363/17988"}
   - {title: "The Irish Times: The Palm-Wine Drinkard", url: "https://www.irishtimes.com/culture/books/the-palm-wine-drinkard-by-amos-tutuola-1.2084537"}
   - {title: "Gail Low, University of Dundee: Publishing Amos Tutuola", url: "https://discovery.dundee.ac.uk/en/publications/the-natural-artist-publishing-amos-tutuolas-the-palm-wine-drinkar/"}
+media:
+  - {"type": "image", "file": "tutuola.jpg", "caption": "A palm-wine tapper climbing a palm tree, 27 January 2024", "credit": "Goodymeraj; resized for display", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:A_palm_wine_tapper_01.jpg"}
 ---
 A government employee in Lagos wrote a Yoruba journey to the land of the
 dead in his own English, and Dylan Thomas, reviewing it in The Observer,

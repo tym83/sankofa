@@ -19,6 +19,6 @@ sources:
   - {title: "Microsoft Windows Experience Blog (2019)", url: "https://blogs.windows.com/windowsexperience/2019/07/29/adlam-find-out-how-a-new-alphabet-is-helping-an-ancient-people-write-its-own-future/"}
   - {title: "Unicode Consortium: Unicode 9.0.0 (21 June 2016)", url: "https://www.unicode.org/versions/Unicode9.0.0/"}
 media:
-  - {"type": "image", "file": "adlam.jpg", "caption": "ADLAM in capitals on the cover of a textbook, 17 September 2025", "credit": "Smoking Tyre; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:The_Adlam_of_Fulfulde.jpg"}
+  - {"type": "image", "file": "adlam.jpg", "caption": "ADLAM in capitals on a textbook cover, 17 September 2025; detail of the lettering", "credit": "Smoking Tyre; cropped to the lettering and resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:The_Adlam_of_Fulfulde.jpg"}
 ---
 In 1989 in Nzérékoré, Guinea, Ibrahima Barry, aged 14, and his brother Abdoulaye, aged 10, set out to give the Fulani language a script of its own. They built one: 28 letters, written right to left. Its name comes from its first four letters, A, D, L, M, and is also an acronym for a phrase meaning "the alphabet that protects my people from vanishing". A children's invention became a global standard when Unicode encoded it in version 9.0 in 2016. Compare [[nko]], [[vai-script]], [[bamum]] and [[nsibidi]].

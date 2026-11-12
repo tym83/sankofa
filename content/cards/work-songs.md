@@ -21,6 +21,8 @@ sources:
   - {title: "Thomas Winterbottom: An Account of the Native Africans, volume 1, full text", url: "https://archive.org/stream/accountofnativea01wint/accountofnativea01wint_djvu.txt"}
   - {title: "University of Mississippi eGrove: Hollers, Parchman", url: "https://egrove.olemiss.edu/lomax/153"}
   - {title: "Bunk History / Scalawag: The Blues Behind Bars", url: "https://bunkhistory.org/resources/how-southern-prisons-shaped-american-music"}
+media:
+  - {"type": "image", "file": "work-songs.jpg", "caption": "Lead Belly at the National Press Club, Washington, D.C., between 1938 and 1948", "credit": "William P. Gottlieb; Library of Congress, Music Division; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Leadbelly,_National_Press_Club,_Washington,_D.C.,_between_1938_and_1948_(William_P._Gottlieb_13561).jpg"}
 ---
 In the 1790s a doctor working in Sierra Leone described rowers singing as a
 soloist and a chorus. In the work songs of the American South one voice sang
