@@ -2,7 +2,7 @@
 id: work-songs
 kind: genre
 title: Work songs and field hollers
-wow: The leader-and-chorus pattern a doctor heard from rowers in Sierra Leone in the 1790s was still timing axe strokes on Mississippi's Parchman Farm in 1947.
+wow: "In the 1790s a doctor in Sierra Leone heard rowers singing as leader and chorus; in 1947 Alan Lomax taped work songs at Mississippi's Parchman Farm."
 years: [1790, 1948]
 places:
   - {name: "Parchman Farm, Mississippi", lat: 33.9168, lon: -90.5137}
@@ -14,19 +14,19 @@ further:
   - "Alan Lomax, Prison Songs, Vol. 1: Murderous Home (Rounder, recorded at Parchman 1947–48)"
   - "American Folklife Center, Library of Congress: the John and Alan Lomax collections"
 sources:
-  - {title: "Carnegie Hall Timeline of African American Music (Portia K. Maultsby): Work Song, Field/Street Call, Satirical and Protest Songs", url: "https://timeline.carnegiehall.org/genres/work-songs-field-street-calls-satirical-protest-songs"}
-  - {title: "Association for Cultural Equity: Prison Songs, recordings 1947–1948 by Alan Lomax", url: "https://www.culturalequity.org/rounder-records/prison"}
-  - {title: "Bunk History / Scalawag: The Blues Behind Bars, how Southern prisons shaped American music (2023)", url: "https://bunkhistory.org/resources/how-southern-prisons-shaped-american-music"}
-media:
-  - {type: image, file: work-songs.jpg, caption: "Angola prison, Louisiana, July 1934: Lead Belly in the foreground", credit: "Alan Lomax; Library of Congress Prints and Photographs Division, Lomax Collection", license: "No known restrictions on publication (Library of Congress)", url: "https://www.loc.gov/pictures/item/2007660073/"}
+  - {title: "Carnegie Hall: Portia Maultsby, Work songs and field calls", url: "https://timeline.carnegiehall.org/genres/work-songs-field-street-calls-satirical-protest-songs"}
+  - {title: "Smithsonian Folkways / Blue Ridge Institute: Virginia Traditions, Western Piedmont Blues", url: "https://folkways-media.si.edu/docs/folkways/artwork/BRI00003.pdf"}
+  - {title: "Association for Cultural Equity: Prison Songs (wood-cutting and tie-tamping songs)", url: "https://www.culturalequity.org/rounder-records/prison"}
+  - {title: "Thomas Winterbottom, An Account of the Native Africans in the Neighbourhood of Sierra Leone (1803), vol. 1, Internet Archive full text (primary)", url: "https://archive.org/details/accountofnativea01wint"}
+  - {title: "Thomas Winterbottom: An Account of the Native Africans, volume 1, full text", url: "https://archive.org/stream/accountofnativea01wint/accountofnativea01wint_djvu.txt"}
+  - {title: "University of Mississippi eGrove: Hollers, Parchman", url: "https://egrove.olemiss.edu/lomax/153"}
+  - {title: "Bunk History / Scalawag: The Blues Behind Bars", url: "https://bunkhistory.org/resources/how-southern-prisons-shaped-american-music"}
 ---
-In the fields, on the levees and on the railroad, one voice sang a line and
-the crew answered with a refrain, timing hoes, axes and hammers. In the
-1790s a doctor working in Sierra Leone described rowers singing exactly that
-way, a soloist and a chorus. A worker alone sent out a holler instead, a
-long bending cry across the field. When mechanisation ended group labour,
-the songs survived where forced labour did: the road gang and the prison.
-In 1947 and 1948 Alan Lomax taped wood-cutting songs and hollers at Parchman
-Farm, Mississippi. His recordings are treasures, and they were made with
-the help of wardens. The same call and answer runs through the
-[[spirituals]] and the [[blues]].
+In the 1790s a doctor working in Sierra Leone described rowers singing as a
+soloist and a chorus. In the work songs of the American South one voice sang
+a line and the crew answered with a refrain, timing the strokes of work. A
+worker alone sent out a holler instead, a long bending cry. The songs lived
+on in road gangs and prisons, and in 1947 and 1948 Alan Lomax taped
+wood-cutting songs and hollers at Parchman Farm, Mississippi: music made to
+survive the hardest labour. Call and answer runs on through the
+[[spirituals]], the [[blues]] and [[gospel]]; compare the [[talking-drums]].

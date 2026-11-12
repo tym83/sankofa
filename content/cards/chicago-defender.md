@@ -2,7 +2,7 @@
 id: chicago-defender
 kind: media
 title: The Chicago Defender
-wow: Founded with 25 cents in a landlord's kitchen, it named a date for leaving the South, and railroad porters smuggled it there.
+wow: "A Chicago weekly named the day to leave the South, and Black Pullman porters hid it on southbound trains."
 years: [1905]
 places:
   - {name: "Bronzeville, Chicago", lat: 41.8314, lon: -87.6170}
@@ -13,20 +13,13 @@ further:
   - "Ethan Michaeli, The Defender: How the Legendary Black Newspaper Changed America"
   - "James R. Grossman, Land of Hope: Chicago, Black Southerners, and the Great Migration (University of Chicago Press, 1989)"
   - "Stanley Nelson, The Black Press: Soldiers Without Swords (PBS documentary)"
+dispute: "Accounts of the Defender's first print shop differ: a landlord's or landlady's kitchen in some, a dining room in others."
 sources:
-  - {title: "PBS, The Black Press: Soldiers Without Swords — The Chicago Defender", url: "https://www.pbs.org/blackpress/news_bios/defender.html"}
-  - {title: "TIME: Marcia Chatelain on girls and the Great Migration (2015)", url: "https://time.com/3857576/girls-great-migration/"}
-  - {title: "Richard H. Driehaus Museum: Pullman Porters and the Great Migration", url: "https://driehausmuseum.org/blog/view/pullman-porters"}
-media:
-  - {type: image, file: chicago-defender.jpg, caption: "Newsboy selling the Chicago Defender, Chicago, April 1942", credit: "Jack Delano, Farm Security Administration/Office of War Information, Library of Congress", license: "No known restrictions (Library of Congress)", url: "https://www.loc.gov/item/2017829265/"}
+  - {title: "PBS: The Chicago Defender", url: "https://www.pbs.org/blackpress/news_bios/defender.html?source=post_page---------------------------"}
+  - {title: "Driehaus Museum: Pullman porters and the Great Migration", url: "https://driehausmuseum.org/blog/view/pullman-porters"}
+  - {title: "PBS, The Black Press: Soldiers Without Swords, The Chicago Defender (kitchen in his landlord's apartment)", url: "https://www.pbs.org/blackpress/news_bios/defender.html"}
+  - {title: "Joshua Botkin, Encyclopedia of African-American Culture and History via Encyclopedia.com (landlady's dining room)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chicago-defender"}
+  - {title: "TIME (2015): Marcia Chatelain on the Defender and the Great Migration", url: "https://time.com/3857576/girls-great-migration/"}
+  - {title: "Washington Informer: The Great Migration was a triumph of the Black press", url: "https://www.washingtoninformer.com/the-great-migration-was-a-triumph-of-the-black-press/"}
 ---
-On 5 May 1905 Robert S. Abbott printed 300 copies of a weekly in his
-landlord's kitchen on Chicago's South Side, with 25 cents of capital. The
-Defender told Black Southerners what the white press would not, and printed
-jobs, rents and train times up north. In early 1917 it went further and set
-a date: the "Great Northern Drive" would begin on 15 May. Thousands of letters
-came back asking for work and tickets. White distributors in the South refused
-to carry it, so Black Pullman porters hid bundles on southbound trains, and
-some towns tried to ban it. It became the first Black paper to pass 100,000
-copies. Its ancestor is [[freedoms-journal]]; its London cousin, the West
-Indian Gazette of [[claudia-jones]].
+A newspaper that set a date for leaving the South, and railroad porters who smuggled it there: that is the Chicago Defender. Robert S. Abbott founded it in 1905, reportedly printing the first issues in his landlord's kitchen. The Defender urged Black Southerners to move north and printed the jobs waiting for them. In early 1917 it named 15 May as the start of the "Great Northern Drive". Black Pullman porters hid bundles on southbound trains, and some towns tried to ban it. It passed 100,000 copies. Its ancestor is [[freedoms-journal]]; its London cousin, the West Indian Gazette of [[claudia-jones]]; its sound, the [[blues]] that moved north too.

@@ -1,0 +1,268 @@
+# Phase 2 re-check by Claude (Agent B) of 18 contested claims.
+# Checked 2026-11-12. Every URL listed below was opened during this re-check.
+
+- card: hurston
+  claim: She went south to collect folklore
+  verdict: confirmed
+  sources:
+    - title: "National Park Service: Zora Neale Hurston and Cudjo's Own Story"
+      url: https://www.nps.gov/articles/000/zora-neale-hurston-and-cudjo-s-own-story.htm
+    - title: "Library of Congress: Her Eyes Were Watching Everything"
+      url: https://blogs.loc.gov/families/2025/01/her-eyes-were-watching-everything-zora-neale-hurston-at-the-library-of-congress/
+  note: >-
+    NPS: "She was to travel for six months throughout Florida and other places in the
+    South to collect folklore." LoC: she "traveled to the southern United States and the
+    Caribbean many times over the years as a folklorist".
+
+- card: octavia-butler
+  claim: The 2020 bestseller was Parable of the Sower
+  verdict: confirmed
+  sources:
+    - title: "SYFY Wire: Octavia Butler reaches New York Times bestseller list (2020-09-03)"
+      url: https://www.syfy.com/syfy-wire/octavia-butler-new-york-times-bestseller-list-parable-of-sower
+    - title: "Locus: Butler on Bestseller List"
+      url: https://locusmag.com/2020/10/butler-on-bestseller-list/
+  note: >-
+    SYFY names 1993's Parable of the Sower as the book that reached the list. Locus
+    (fetched directly; WebFetch got 502, curl worked): #14 paperback fiction, week ending
+    2020-08-29, printed 2020-09-13, her first appearance on the list. Independent reports.
+
+- card: tutuola
+  claim: He wrote it in his own English
+  verdict: confirmed
+  sources:
+    - title: "Eustace Palmer: Twenty-five Years of Amos Tutuola (International Fiction Review)"
+      url: https://journals.lib.unb.ca/index.php/IFR/article/download/13280/14363/17988
+    - title: "The Irish Times: The Palm-Wine Drinkard"
+      url: https://www.irishtimes.com/culture/books/the-palm-wine-drinkard-by-amos-tutuola-1.2084537
+  note: >-
+    Palmer (PDF text extracted) discusses "Tutuolan English", critics calling it
+    "West-African English", and argues it is "Yoruba English representing the interaction
+    between Yoruba deep grammar and English surface grammar". Irish Times: "its
+    idiosyncratic style captures brilliantly the continent's speech rhythms". "His own
+    English" is a fair plain-language gloss of both.
+
+- card: dave-the-potter
+  claim: "Media caption: jar made at Stony Bluff Manufactory, Edgefield District"
+  verdict: confirmed
+  sources:
+    - title: "Metropolitan Museum of Art: Storage jar, 1858 (collection record)"
+      url: https://www.metmuseum.org/art/collection/search/747045
+    - title: "Metropolitan Museum of Art Open Access API: object 747045"
+      url: https://collectionapi.metmuseum.org/public/collection/v1/objects/747045
+  note: >-
+    The HTML record returned 429, so the same record was read through the Met's
+    official collection API: maker "Dave (later recorded as David Drake)", 1858,
+    alkaline-glazed stoneware, "made at Stony Bluff Manufactory, Old Edgefield District,
+    South Carolina", manufacturer role "Stony Bluff Manufactory", isPublicDomain true.
+    Both entries are the rights holder's own record (per RECHECK rule for media/licence
+    claims). The record says "Old Edgefield District"; the caption may keep "Edgefield
+    District".
+
+- card: nollywood
+  claim: Living in Bondage was directed by Chris Obi Rapu
+  verdict: confirmed
+  sources:
+    - title: "This Day: Living in Bondage, where new and old school meld"
+      url: https://www.thisdaylive.com/2019/10/26/living-in-bondage-where-new-and-old-school-meld/
+    - title: "Hyde Park Picture House: Living in Bondage"
+      url: https://hpph.co.uk/films/living-in-bondage
+  note: >-
+    This Day: "directed by Chris Obi Rapu". HPPH: "was directed by Chris Obi Rapu,
+    recognised as the 'Father of Nollywood'".
+
+- card: rinse-fm
+  claim: Transmitters were moved from block to block and torn down by the DTI/Ofcom
+  verdict: confirmed
+  sources:
+    - title: "Time Out: Thirty years of Rinse FM"
+      url: https://www.timeout.com/london/music/rinse-fm-cover-interview
+    - title: "Dazed: Rinse FM at 30, an oral history"
+      url: https://www.dazeddigital.com/music/article/62542/1/rinse-fm-at-30-an-oral-history-of-the-notorious-east-london-radio
+  note: >-
+    Time Out: "constantly replacing transmitters and moving around different blocks in
+    the area"; Geeneus mentions Ofcom switching stations off and authorities taking "a
+    transmitter off us every day for 13 days". Dazed: transmitters hidden in tower
+    blocks/flats, and the Ingram House transmitter "went off" as DTI officers came out.
+    Wording note: the sources say transmitters were seized/taken, not literally "torn
+    down"; "seized" is the more exact verb (Dazed uses "tore down" only for rival crews).
+
+- card: rosetta-tharpe
+  claim: She was a Pentecostal gospel singer with a guitar
+  verdict: confirmed
+  sources:
+    - title: "Rock and Roll Hall of Fame: Sister Rosetta Tharpe"
+      url: https://www.rockhall.com/inductees/sister-rosetta-tharpe
+    - title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock"
+      url: https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/
+  note: >-
+    Rock Hall: "heartfelt gospel folksiness", her Gibson Les Paul Custom, and "the rich
+    musical traditions of black Pentecostalism". Wald: "a musical prodigy of the Church
+    of God in Christ", "a Pentecostal denomination", "gospel's first superstar", with
+    detail on her electric guitar playing.
+
+- card: big-mama-thornton
+  claim: In August 1952 Thornton recorded 'Hound Dog'
+  verdict: confirmed
+  sources:
+    - title: "Michael Spörke, Library of Congress National Recording Registry essay: Hound Dog"
+      url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf
+    - title: "HISTORY: Hound Dog is recorded for the first time by Big Mama Thornton"
+      url: https://www.history.com/this-day-in-history/august-13/hound-dog-is-recorded-for-the-first-time-by-big-mama-thornton
+  note: >-
+    LoC essay (PDF text extracted): "On 13 August 1952, Willie Mae Thornton ... recorded,
+    with Johnny Otis and his orchestra". HISTORY: recorded August 13, 1952, in Los
+    Angeles. "August" can be restored.
+
+- card: equiano
+  claim: It tells of a childhood in Igbo country, kidnapping and the Middle Passage
+  verdict: confirmed
+  sources:
+    - title: "University of Oxford, English Faculty: The Interesting Narrative by Olaudah Equiano"
+      url: https://english.web.ox.ac.uk/node/1250811
+    - title: "Colonial Williamsburg, Slavery and Remembrance: Olaudah Equiano"
+      url: https://www.slaveryandremembrance.org/people/person/?id=PP003
+  note: >-
+    Oxford: "born at Essaka, an Igbo town in present-day Nigeria"; "at the age of 11 he
+    was kidnapped by African traders, sold to European slavers, and transported to the
+    West Indies". Colonial Williamsburg: per his Narrative he "was born into an Igbo
+    community", "captured from his village", and survived the crossing. Also seen:
+    London Museum (kidnapping, "horrors of the Middle Passage") and Brycchan Carey
+    (first-person account of "the middle passage", plus the Carretta birthplace dispute).
+    The claim is about what the book tells, so the dispute does not affect it; keep the
+    card's existing dispute note.
+
+- card: saint-georges
+  claim: In 1772 he played his own concertos with the Concert des Amateurs
+  verdict: confirmed
+  sources:
+    - title: "Handel and Haydn Society: Joseph Bologne through the years"
+      url: https://handelandhaydn.org/joseph-bologne-chevalier-de-saint-georges-through-the-years/
+    - title: "BBC Music Magazine (Paul Riley): Joseph Bologne"
+      url: https://www.classical-music.com/features/composers/bologne-joseph
+  note: >-
+    H&H: in 1772 "he performed his own violin concertos with the Concert des Amateurs in
+    Paris", becoming its director the next year. BBC Music Magazine: he made his solo
+    debut with the Concert des Amateurs "the previous year" (before Gossec handed him
+    the orchestra in 1773), playing his two violin concertos Op. 2, citing Le Mercure.
+    BBC gives the year by implication, not as a printed "1772".
+
+- card: detroit-techno
+  claim: "Media caption: the Atkins photo was taken in Detroit"
+  verdict: unverified
+  sources:
+    - title: "Wikimedia Commons: File:Juan Atkins.jpg"
+      url: https://commons.wikimedia.org/wiki/File:Juan_Atkins.jpg
+    - title: "Flickr (Angie Linder / technochick): Hel10, the source photo"
+      url: https://www.flickr.com/photos/technochick/4307848491/
+  note: >-
+    Licence confirmed: CC BY-SA 2.0, author Angie Linder, taken 2010-01-18. Location is
+    NOT supported: Commons gives "Angie Linder from Detroit, USA", which is the
+    photographer's profile location ("location":"Detroit, USA" on the Flickr account),
+    not where the photo was taken. The Flickr photo has no geotag; its tags are "dj,
+    detroit, techno, militia, t1000, detroittechnomilitia, necto, juanatkins". "necto"
+    points to The Necto nightclub in Ann Arbor, Michigan, so "Detroit" may be wrong.
+    Keep the location out of the caption (or say "Michigan" only if confirmed).
+
+- card: aro-and-dahomey
+  claim: The Atlantic trade needed African sellers; states and merchant networks supplied them
+  verdict: confirmed
+  sources:
+    - title: "Robin Law: Ouidah (Ohio University Press)"
+      url: https://www.ohioswallow.com/9780821415726/ouidah/
+    - title: "J. N. Oriji: Slave trade, warfare and Aro expansion in the Igbo hinterland (AfricaBib abstract)"
+      url: https://africabib.org/rec.php?RID=189555858
+  note: >-
+    Law: Ouidah, "the second-most-important town of the Dahomey kingdom", was "the most
+    important embarkation point for slaves" on the Slave Coast, an African-run trading
+    centre whose private merchants dealt with the Dahomian monarchy (state + merchants).
+    Oriji: "the Aro of the Cross River basin area ... emerged as the leading slave
+    traders in the Igbo hinterland" (merchant network). Ronen (Persee) also opened: he
+    accepts the Dahomean king sold captives but disputes the profit motive, so it
+    supports the supply role, not motive claims. Nwokeji excerpt PDF could not be
+    downloaded (timeout); not needed.
+
+- card: henrietta-lacks
+  claim: Her family was left out
+  verdict: confirmed
+  sources:
+    - title: "Carl Zimmer, New York Times: A Family Consents to a Medical Gift, 62 Years Later"
+      url: https://carlzimmer.com/a-family-consents-to-a-medical-gift-62-years-later-214/
+    - title: "Associated Press via WVTF: Thermo Fisher settles with family of Henrietta Lacks"
+      url: https://www.wvtf.org/news/2023-08-01/thermo-fisher-scientific-settles-with-family-of-henrietta-lacks-whose-hela-cells-uphold-medicine
+  note: >-
+    Zimmer: "For 62 years, her family has been left out of the decision-making about
+    that research"; "The Lacks family was made aware of neither project". AP: cells
+    taken "without her knowledge" and "the Lacks family had never been compensated".
+
+- card: adinkra
+  claim: Sankofa expresses heritage as a tool to build the future
+  verdict: confirmed
+  sources:
+    - title: "UBC Museum of Anthropology: Sankofa, African Routes, Canadian Roots"
+      url: https://moa.ubc.ca/2021/11/sankofa-african-routes-canadian-roots/
+    - title: "Smithsonian NMAAHC: Kwanzaa / Adinkra learning resource (PDF)"
+      url: https://nmaahc.si.edu/sites/default/files/downloads/resources/kwanzaa_coloring_pages.pdf
+  note: >-
+    MOA: Sankofa, "go back and get it", presents the idea that "heritage is a tool with
+    which to build the future". NMAAHC: "Go back and get it" ... knowing our history
+    helps "make the present and the future better". Seattle Art Museum page was behind
+    a Cloudflare challenge and was not used.
+
+- card: chicago-defender
+  claim: It printed jobs up north
+  verdict: confirmed
+  sources:
+    - title: "Driehaus Museum: Pullman porters and the Great Migration"
+      url: https://driehausmuseum.org/blog/view/pullman-porters
+    - title: "Washington Informer: The Great Migration was a triumph of the Black press"
+      url: https://www.washingtoninformer.com/the-great-migration-was-a-triumph-of-the-black-press/
+  note: >-
+    Driehaus: "Its classified ads offered jobs, housing, and transportation out of the
+    Jim Crow South". Washington Informer: the Defender "posted job listings, train
+    schedules, and photos of the best schools, parks and housing" in Chicago. PBS page
+    returned 403 and was not used.
+
+- card: nanny-of-the-maroons
+  claim: The Maroons fought with guerrilla ambushes in the hills
+  verdict: confirmed
+  sources:
+    - title: "Jamaica Information Service: Nanny of the Maroons"
+      url: https://jis.gov.jm/heroes/nanny-of-the-maroons
+    - title: "Jamaica Gleaner: Quao, the invisible hunter"
+      url: https://past.jamaica-gleaner.com/article/news/20211016/quao-invisible-hunter
+  note: >-
+    JIS: Nanny was "particularly skilled in organising the guerilla warfare" of the
+    Eastern Maroons; "Maroon traps"; British tried to "penetrate the mountains". Gleaner:
+    runaways "fled to the hills and mountains", and describes a Maroon ambush at the
+    Spanish River ("emerged from the bushes and fell upon the hapless soldiers").
+    Colonial Williamsburg (PP023) also opened: "trained her maroon warriors in the art
+    of guerilla warfare", refuge "in the mountains of Jamaica". Sentence can be restored.
+
+- card: v0
+  claim: Mansa Musa of Mali made a pilgrimage to Mecca
+  verdict: confirmed
+  sources:
+    - title: "National Geographic Education: Mansa Musa (Musa I of Mali)"
+      url: https://education.nationalgeographic.org/resource/mansa-musa-musa-i-mali/
+    - title: "Boston University African Studies Center: Kingdom of Mali (al-Umari)"
+      url: https://www.bu.edu/africa/outreach/teachingresources/history/ancient-to-medieval-history/k_o_mali/
+  note: >-
+    NatGeo: "When Mansa Musa went on a pilgrimage (hajj) to Mecca in 1324 C.E.". BU
+    quotes al-Umari on Musa's 1324 stop in Cairo: "I came for the Pilgrimage and nothing
+    else" (primary source; does not name Mecca, but the Pilgrimage is the hajj). Met
+    exhibition page returned 429 and was not used.
+
+- card: v0
+  claim: Along the Niger bend scholars copied books
+  verdict: confirmed
+  sources:
+    - title: "Library of Congress: Ancient Manuscripts from the Desert Libraries of Timbuktu"
+      url: https://wwws.loc.gov/exhibits/mali/mali-overview.html
+    - title: "University of Cape Town: Tombouctou Manuscripts Project"
+      url: https://tombouctoumanuscripts.uct.ac.za/overview/project
+  note: >-
+    LoC: "By at least the fourteenth century, important books were written and copied
+    there" (Timbuktu). UCT: "Local scholars and their students recorded their
+    scholarship - original works and copies - in manuscripts". Neither page says "Niger
+    bend"; Timbuktu's location on the Niger bend is standard geography.

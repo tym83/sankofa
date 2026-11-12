@@ -2,7 +2,7 @@
 id: nsibidi
 kind: script
 title: Nsibidi
-wow: The secret signs of the Cross River leopard society crossed the Atlantic and are still drawn in Havana.
+wow: "The leopard society of the Cross River kept its knowledge in secret signs, and enslaved members carried the society itself across the Atlantic to Havana."
 years: [1911]
 places:
   - {name: Calabar, lat: 4.9757, lon: 8.3417}
@@ -15,21 +15,26 @@ further:
   - "Lydia Cabrera, Anaforuana: ritual y símbolos de la iniciación en la sociedad secreta Abakuá (1975)"
   - "J. K. Macgregor, Some Notes on Nsibidi, Journal of the Royal Anthropological Institute 39 (1909)"
 sources:
-  - {title: "Hood Museum of Art, Dartmouth: Ukara, ritual cloth of the Ekpe society", url: "https://hoodmuseum.dartmouth.edu/node/7361"}
-  - {title: "UBC Press: Ivor L. Miller, Voice of the Leopard (publisher's description)", url: "https://ubcpress.ca/voice-of-the-leopard"}
-  - {title: "Taylor & Francis: Cloth and Signs: West African Ukara and the Iconography of Regla (chapter)", url: "https://www.taylorfrancis.com/books/9780429283789/chapters/10.4324/9780429283789-5"}
+  - {title: "Hood Museum: Ukara, Ritual Cloth of the Ekpe Society,2015", url: "https://hoodmuseum.dartmouth.edu/sites/hoodmuseum.prod/files/hoodmuseum/publications/ukara-brochure-2015.pdf"}
+  - {title: "Princeton Art Museum: Victor Ekpuk, Language and Lineage", url: "https://artmuseum.princeton.edu/art/stories-perspectives/conversation-victor-ekpuk-language-and-lineage"}
+  - {title: "UBC Press / University Press of Mississippi: Ivor L. Miller, Voice of the Leopard (publisher's description)", url: "https://ubcpress.ca/voice-of-the-leopard"}
+  - {title: "Dayrell, JRAI 41 (1911): nsibidi signs of the Egbo (Ekpe) society", url: "https://zenodo.org/records/1449623/files/article.pdf"}
+  - {title: "Appalachian State Turchin Center: Exploration of Ukara", url: "https://tcva.appstate.edu/exhibition/negotiation-of-the-secret-society-cloth-an-exploration-of-ukara/"}
+  - {title: "Colgate University, Picker Art Gallery: Ukara (Ekpe indigo resist-dyed cloth)", url: "https://emuseum.colgate.edu/objects/20619/ukara"}
+  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Nsibidi_talk.jpg"}
+  - {title: "Royal Anthropological Institute archives MS 23", url: "https://therai.org.uk/archives-and-manuscripts/manuscript-contents/0023-dayrell-elphinstone-ms-23/"}
+  - {title: "University Press of Mississippi: Voice of the Leopard (same blurb)", url: "https://www.upress.state.ms.us/Books/V/Voice-of-the-Leopard"}
+  - {title: "OnCuba Magazine: Chivo que rompe tambó, verdad y mito del abakuá (Rafael Grillo, 2012)", url: "https://oncubanews.com/informe/chivo-que-rompe-tambo-verdad-y-mito-del-abakua"}
+  - {title: "Ivor L. Miller, Abakuá, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/abakua"}
 media:
-  - {type: image, file: nsibidi.jpg, caption: "Nsibidi sign for two people talking, as recorded by Elphinstone Dayrell in 1911", credit: "Elphinstone Dayrell, Journal of the Royal Anthropological Institute 41 (1911), via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Nsibidi_talk.jpg"}
+  - {type: "image", file: "nsibidi.jpg", caption: "Nsibidi sign for two people talking, as recorded by Elphinstone Dayrell in 1911", credit: "Elphinstone Dayrell, Journal of the Royal Anthropological Institute 41 (1911), via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Nsibidi_talk.jpg"}
 ---
-In the Cross River region of today's Nigeria and Cameroon, the Ekpe
-(leopard) society governed towns and trade, and it kept its knowledge in
+Secret signs crossed the Atlantic. In the Cross River region of today's
+Nigeria and Cameroon, the Ekpe, or leopard, society kept its knowledge in
 nsibidi: ideographic, abstract and gestural signs. Members wear them on
-ukara, cotton wrappers on which the signs are dyed in indigo; in 1911
-Elphinstone Dayrell printed a set of them in a London journal.
-Enslaved Cross River Africans carried Ekpe to Cuba and rebuilt their
-lodges in Havana and Matanzas as the Abakuá society. Abakuá initiates
-draw signs called anaforuana, and scholars comparing the two systems find
-persuasive evidence that anaforuana descend from nsibidi. Ivor Miller, who
-was initiated into Ekpe in Nigeria after years with Abakuá in Cuba, traces
-the line in Voice of the Leopard. Other African scripts: [[adinkra]],
-[[vai-script]], [[nko]].
+ukara, cotton wrappers with the signs dyed in indigo. Enslaved Cross River
+Africans carried Ekpe to Cuba and rebuilt its lodges in Havana and Matanzas
+as the Abakuá society. In 1911 Elphinstone Dayrell printed a set of nsibidi
+signs in a London journal. Other African scripts: [[adinkra]],
+[[vai-script]], [[nko]]; another sign system carried in sound is the
+[[talking-drums]].

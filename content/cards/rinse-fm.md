@@ -2,7 +2,7 @@
 id: rinse-fm
 kind: media
 title: Rinse FM
-wow: Rinse FM began in a council-flat kitchen with an aerial out of the window, and its co-founder got an ASBO banning him from tower-block roofs.
+wow: "Rinse FM began as a pirate in a council-flat kitchen, and one of its founders was later served an ASBO."
 years: [1994]
 places:
   - {name: "Bow, Tower Hamlets, London", lat: 51.5284, lon: -0.0236}
@@ -14,19 +14,10 @@ further:
   - "Rinse FM, 106.8 FM, London"
   - "Dazed: Rinse FM at 30, an oral history (2024)"
 sources:
-  - {title: "Dazed: Rinse FM at 30, an oral history of the notorious East London radio (2024)", url: "https://www.dazeddigital.com/music/article/62542/1/rinse-fm-at-30-an-oral-history-of-the-notorious-east-london-radio"}
-  - {title: "Time Out London: 30 years of Rinse FM (2024)", url: "https://www.timeout.com/london/music/rinse-fm-cover-interview"}
-  - {title: "Dummy: The Dummy guide to Rinse FM", url: "https://www.dummymag.com/features/the-dummy-guide-to-rinse-fm/"}
-  - {title: "RadioToday: Ofcom awards seven London community radio licences, Rinse FM among them (June 2010)", url: "https://radiotoday.co.uk/2010/06/ofcom-rejects-16-applications/"}
-  - {title: "Red Bull Music Academy: Keith Skues and Gordon Mac in conversation (2015)", url: "https://daily.redbullmusicacademy.com/2015/04/keith-skues-and-gordon-mac-in-conversation"}
+  - {title: "Dazed: Rinse FM at 30, oral history", url: "https://www.dazeddigital.com/music/article/62542/1/rinse-fm-at-30-an-oral-history-of-the-notorious-east-london-radio"}
+  - {title: "Time Out: Thirty years of Rinse FM", url: "https://www.timeout.com/london/music/rinse-fm-cover-interview"}
+  - {title: "Building: Pirate DJ silenced in rooftop radio purge (22 April 2005)", url: "https://www.building.co.uk/pirate-dj-silenced-in-rooftop-radio-purge/3050083.article"}
+  - {title: "Dummy: The Dummy guide to Rinse FM", url: "https://dmy.co/features/the-dummy-guide-to-rinse-fm/"}
+  - {title: "RadioToday: Ofcom awards London licences", url: "https://radiotoday.co.uk/2010/06/ofcom-rejects-16-applications/"}
 ---
-In 1994, on Notting Hill Carnival weekend, 16-year-old Geeneus and
-friends Slimzee, Target and Wiley set up decks in a council-flat kitchen
-at Ingram House in Tower Hamlets, and put an aerial out of the window. For years Rinse was a pirate, its transmitters moved from block
-to block in Bow while the DTI, later Ofcom, tore them down. In 2005 Slimzee
-got an ASBO banning him from the roofs of tall buildings in Tower Hamlets.
-Rinse carried jungle into garage, grime and dubstep; Dizzee Rascal first
-sent it a tape hoping to be a drum and bass DJ. In June 2010 Ofcom granted it
-a community licence. Kiss FM, a pirate from 1985, went legal too.
-Hear the [[amen-break]] in its jungle and [[reggae]] sound systems
-behind it.
+In 1994, on Notting Hill Carnival weekend, 16-year-old Geeneus and his friends Slimzee, Target and Wiley set up decks and an aerial in a council-flat kitchen in Tower Hamlets. That was Rinse. For years it was a pirate: its transmitters sat on the tower blocks of Bow and were moved from block to block while the DTI, later Ofcom, tore them down. In 2005 Slimzee was served an ASBO. Through it all Rinse carried jungle into garage, grime and dubstep, and in June 2010 Ofcom granted the old outlaw a community licence. Hear the [[amen-break]] in its jungle, the [[reggae]] sound systems behind it, and the wider story of [[hip-hop]].

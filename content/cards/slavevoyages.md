@@ -2,7 +2,7 @@
 id: slavevoyages
 kind: media
 title: SlaveVoyages
-wow: A free database lets anyone look up nearly 36,000 slaving voyages, and the names of almost 100,000 Africans taken off slave ships.
+wow: "A free database lists nearly 100,000 Africans freed from slave ships by their own names, and asks anyone to help trace where they came from."
 years: [1999, 2021]
 places:
   - {name: Atlantic Ocean, lat: 10.0000, lon: -30.0000}
@@ -15,17 +15,12 @@ further:
   - "David Eltis and David Richardson, Atlas of the Transatlantic Slave Trade (Yale, 2010)"
 sources:
   - {title: "SlaveVoyages: History of the project", url: "https://legacy.slavevoyages.org/blog/history-project"}
+  - {title: "Emory Report: Slave trade database goes online (24 November 2008)", url: "https://news.emory.edu/emory-report-archive/erarchive/2008/November/Nov24/SlaveTradeDatabase.htm"}
+  - {title: "Associated Press via Lawrence Journal-World: Database catalogs slaves' trans-Atlantic treks (Errin Haines, 6 December 2008)", url: "https://www2.ljworld.com/news/2008/dec/06/database-catalogs-slaves-trans-atlantic-treks/"}
+  - {title: "Royal Museums Greenwich library: The trans-Atlantic slave trade, a database on CD-ROM (CUP, 1999)", url: "https://rmg.co.uk/collections/library/rmgl-116526"}
+  - {title: "Harvard Gazette: Slave trade database moving to Harvard", url: "https://news.harvard.edu/gazette/story/2025/04/slave-trade-database-moving-to-harvard/"}
+  - {title: "Nicholas Radburn, USC Dornsife (2017)", url: "https://dornsife.usc.edu/news/stories/a-digital-archive-of-slave-voyages-details-the-largest-forced-migration-in-history/"}
+  - {title: "Literary Hub: about 12.5 million captives embarked", url: "https://lithub.com/how-empirical-databases-have-changed-our-understanding-of-early-american-slavery/"}
   - {title: "SlaveVoyages: Introduction", url: "https://legacy.slavevoyages.org/blog/slavevoyages-introduction"}
-  - {title: "Nicholas Radburn, USC Dornsife: A digital archive of slave voyages details the largest forced migration in history (2017)", url: "https://dornsife.usc.edu/news/stories/a-digital-archive-of-slave-voyages-details-the-largest-forced-migration-in-history/"}
 ---
-The idea came from a chance meeting: in 1990 David Eltis and Stephen
-Behrendt, each working on the British slave trade, met in the Public
-Record Office and decided to build one dataset from every source. A
-CD-ROM of 27,233 voyages followed in 1999, the free website on 5 December
-2008. It now covers nearly 36,000 voyages between 1514 and 1866, drawn
-from archives in Luanda, Rio de Janeiro, Bahia, Lisbon, Havana, Amsterdam
-and London. Between 1500 and 1866 traders forced 12.5 million Africans
-aboard (Radburn, 2017); before 1820 four Africans crossed the Atlantic
-for every European. The African Origins database lists nearly 100,000
-people liberated from slave ships, by their own names, and asks visitors
-to help trace where they came from. See [[equiano]], [[zong]], [[brookes]].
+A free website lists nearly 100,000 Africans liberated from slave ships by their own names, and asks visitors to help trace where they came from. That is the African Origins database of SlaveVoyages. It grew from a CD-ROM of 27,233 voyages in 1999 into the free website launched on 5 December 2008. Behind the names stands the scale: between 1500 and 1866 traders forced 12.5 million Africans aboard. See [[equiano]], [[zong]] and [[brookes]].

@@ -2,7 +2,7 @@
 id: banjo
 kind: instrument
 title: The banjo
-wow: A Gambian student watching country music on American TV in 1974 heard his father's akonting in the banjo, and spent two decades studying the link.
+wow: "The banjo is an African instrument, rebuilt by enslaved people from West African gourd lutes."
 years: [1680, 2010]
 places:
   - {name: "South Carolina Lowcountry", lat: 32.7765, lon: -79.9311}
@@ -15,21 +15,12 @@ further:
   - "Carolina Chocolate Drops, Genuine Negro Jig (2010)"
   - "Robert B. Winans (ed.), Banjo Roots and Branches (University of Illinois Press, 2018)"
 sources:
-  - {title: "Ballad of America: Banjo, a brief history", url: "https://balladofamerica.org/banjo/"}
-  - {title: "NPR: The Banjo's Roots, Reconsidered (2011)", url: "https://www.npr.org/2011/08/23/139880625/the-banjos-roots-reconsidered"}
-  - {title: "Charleston County Public Library, Charleston Time Machine: Banjer Bay, Charleston 1766", url: "https://www.ccpl.org/charleston-time-machine/banjer-bay-charleston-1766"}
+  - {title: "Charleston County Public Library: A Banjer on the Bay", url: "https://www.ccpl.org/charleston-time-machine/banjer-bay-charleston-1766"}
+  - {title: "McClung Museum, University of Tennessee: The Banjo", url: "https://mcclungmuseum.utk.edu/exhibitions/the-banjo-from-africa-to-america-and-beyond/"}
+  - {title: "Ballad of America", url: "https://balladofamerica.org/banjo/"}
+  - {title: "Wikimedia Commons: Slave dance to banjo, 1780s", url: "https://commons.wikimedia.org/wiki/File:Slave_dance_to_banjo,_1780s.jpg"}
   - {title: "National Park Service, Appomattox Court House: Joel Sweeney and the 5 String Banjo", url: "https://www.nps.gov/apco/sweeney.htm"}
 media:
-  - {type: image, file: banjo.jpg, caption: "\"The Old Plantation\", watercolour attributed to John Rose, South Carolina, about 1785–1790: a gourd banjo and a drum accompany dancers", credit: "Attributed to John Rose; image via Colonial Williamsburg", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Slave_dance_to_banjo,_1780s.jpg"}
+  - {type: "image", file: "banjo.jpg", caption: "\"The Old Plantation\", watercolour attributed to John Rose, South Carolina, about 1785–1790: a gourd banjo and a drum accompany dancers", credit: "Attributed to John Rose; image via Colonial Williamsburg", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Slave_dance_to_banjo,_1780s.jpg"}
 ---
-West Africa has dozens of plucked lutes with a gourd body, a skin head and
-a stick neck: the akonting of the Jola, the ngoni and others. Enslaved
-Africans in the Caribbean and the American South rebuilt them with a flat
-fingerboard and tuning pegs. A banjo-like "strum strump" was seen in
-Jamaica in the late 1680s; around 1785 a South Carolina watercolour shows
-a gourd banjo beside a drum. In 1836 the white Virginian Joel Sweeney,
-who learned from Black players, took it on tour in blackface, and
-minstrelsy made the banjo a white stage instrument; early [[blues]]
-players still picked it. The Carolina Chocolate Drops' 2010 album Genuine
-Negro Jig won a Grammy, and Rhiannon Giddens uses the banjo to reclaim
-that history. Compare [[stono-drum-ban]].
+The banjo came from Africa. Enslaved Africans in the Caribbean and the American South rebuilt West African gourd lutes into the banjo, a gourd body with a skin head. A watercolour called The Old Plantation, painted in South Carolina around 1785–1790, shows a banjo beside a drum. Then the instrument changed hands: Joel Sweeney, a white Virginian who learned from Black players, helped make the banjo a minstrel stage instrument. Compare [[stono-drum-ban]], [[blues]] and [[work-songs]].

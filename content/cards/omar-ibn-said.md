@@ -2,7 +2,7 @@
 id: omar-ibn-said
 kind: person
 title: Omar ibn Said
-wow: The only known autobiography written in Arabic by an enslaved person in America opens with verses of the Qur'an he wrote from memory.
+wow: "The only known autobiography written in Arabic by an enslaved person in America opens with verses of the Qur'an."
 years: [1770, 1863]
 places:
   - {name: "Fayetteville, North Carolina", lat: 35.0527, lon: -78.8784}
@@ -14,20 +14,21 @@ books: [voices]
 further:
   - "Library of Congress, Omar Ibn Said Collection: the 1831 manuscript, digitized page by page"
   - "Autobiography of Omar ibn Said, Slave in North Carolina, 1831, ed. J. Franklin Jameson, American Historical Review (1925)"
+dispute: "His death year is given as 1863 by the Library of Congress and as 1864 by other catalogues."
 sources:
-  - {title: "Library of Congress: Omar Ibn Said Collection, about this collection", url: "https://www.loc.gov/collections/omar-ibn-said-collection/about-this-collection/"}
-  - {title: "Library of Congress: The life of Omar ben Saeed, called Morro, a Fullah Slave in Fayetteville, N.C. (1831 manuscript)", url: "https://www.loc.gov/item/2018371864/"}
-  - {title: "Documenting the American South: Autobiography of Omar ibn Said, Slave in North Carolina, 1831", url: "https://docsouth.unc.edu/nc/omarsaid/omarsaid.html"}
-media:
-  - {type: image, file: omar-ibn-said.jpg, caption: "Page 3 of Omar ibn Said's 1831 Arabic manuscript, from the Qur'anic verses he set down from memory at its opening", credit: "Omar ibn Said; Library of Congress, African and Middle Eastern Division, Omar Ibn Said Collection", license: "Public domain", url: "https://www.loc.gov/item/2018371864/"}
+  - {title: "Library of Congress: Omar Ibn Said story map", url: "https://blogs.loc.gov/loc/2019/07/new-omar-bin-said-story-map/"}
+  - {title: "Colonial Williamsburg: Omar ibn Said, Slavery and Remembrance", url: "https://slaveryandremembrance.org/people/person/?id=PP027"}
+  - {title: "Lowcountry Digital History Initiative: Omar ibn Said (1770-1864)", url: "https://ldhi.library.cofc.edu/exhibits/show/african-muslims-in-the-south/five-african-muslims/omar-ibn-said--1770-1864"}
+  - {title: "Documenting the American South: summary by Patrick E. Horn", url: "https://docsouth.unc.edu/nc/omarsaid/summary.html"}
+  - {title: "Hunwick, Journal of Arabic and Islamic Studies: captured 1806/7, sold in South Carolina", url: "https://journals.uio.no/JAIS/article/view/4572"}
+  - {title: "National Humanities Center: Omar ibn Said autobiography with contextual documents", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf"}
+  - {title: "Library of Congress press release: Unique Autobiography Written in Arabic by an Enslaved Scholar Goes Online (15 January 2019)", url: "https://www.loc.gov/item/prn-19-004/only-known-surviving-muslim-american-slave-autobiography-goes-online-at-the-library-of-congress/2019-01-15/"}
 ---
-Omar ibn Said was a Fula scholar from Futa Toro, in West Africa, who studied for twenty-five years before a "big army" captured him.
-In 1807, at 37, he was landed in Charleston as a slave. He fled a cruel owner,
-was jailed in Fayetteville, North Carolina, and wrote in Arabic on the walls of
-his cell. The governor's brother, James Owen, took him in; he
-lived with the Owens until his death in 1863. In 1831 he wrote his
-life in Arabic, opening with verses of the Qur'an and apologising that he had
-forgotten much of his language. It is the only known slave autobiography written
-in Arabic in America, and no owner edited it. The Library of Congress bought it
-in 2017. Compare the
-[[timbuktu-manuscripts]].
+In 1831 an enslaved man in North Carolina wrote his life in Arabic and
+opened it with verses of the Qur'an. Omar ibn Said was a Fula scholar from
+Futa Toro in West Africa, landed in Charleston as a slave. He fled a cruel
+owner and was jailed in Fayetteville, where he wrote in Arabic on the walls
+of his cell. He lived with the Owen family until his death, in 1863 or 1864
+by different records. His manuscript is the only known slave autobiography
+written in Arabic in America. Compare the [[timbuktu-manuscripts]], and
+other lives told by their own hand: [[equiano]] and [[douglass-covey]].
