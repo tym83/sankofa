@@ -20,6 +20,8 @@ sources:
   - {title: "Nightingale (Data Visualization Society): Du Bois's data visualizations, part 1", url: "https://nightingaledvs.com/w-e-b-du-bois-staggering-data-visualizations-are-as-powerful-today-as-they-were-in-1900-part-1/"}
   - {title: "Smithsonian: Du Bois at the world’s fair", url: "https://www.smithsonianmag.com/smithsonian-institution/how-web-du-bois-disrupted-americas-dominance-at-the-worlds-fair-180981538/"}
   - {title: "LoC catalog: Proportion of freemen and slaves (JSON)", url: "https://www.loc.gov/item/2014645356/?fo=json"}
+media:
+  - {"type": "image", "file": "du-bois-infographics.jpg", "caption": "The Georgia Negro: Negro population of Georgia by counties, 1890, chart for the Paris Exposition, 1900", "credit": "W. E. B. Du Bois; Library of Congress, Prints and Photographs Division, Daniel Murray collection; resized for display", "license": "Public domain", "url": "https://www.loc.gov/item/2013650424/"}
 ---
 W. E. B. Du Bois and his students at Atlanta University answered a world's
 fair with data: hand-drawn charts of Black America, made for Paris in 1900.

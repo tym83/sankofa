@@ -22,6 +22,8 @@ sources:
   - {title: "Radio Svoboda (in Russian)", url: "https://www.svoboda.org/a/27667216.html"}
   - {title: "Lily Golden, Autobiography: Institute of Africa, daughter Yelena a journalist, Moscow television, Soul to Soul", url: "https://africana.ru/Golden/info/autobiography.htm"}
   - {title: "Wilson Center KennanX (2020): Khanga, journalist, talk show host, author of Soul to Soul", url: "https://www.wilsoncenter.org/audio/kennanx-episode-7-yelena-khanga-family-growing-ussr-and-black-lives-matter"}
+media:
+  - {"type": "image", "file": "oliver-golden.jpg", "caption": "Yelena Khanga at Lena Lenina's private show at the Estet jewellery house, 15 January 2010", "credit": "Mikhail Popov / thebestphotos.ru; resized for display", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:%D0%A5%D0%B0%D0%BD%D0%B3%D0%B0_%D0%95%D0%BB%D0%B5%D0%BD%D0%B0.jpg"}
 ---
 In 1931 Oliver Golden led a team of Black American agronomists to a Soviet
 cotton project in Uzbekistan. He had studied at Tuskegee, though accounts

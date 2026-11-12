@@ -1,0 +1,51 @@
+# Independent second check of every image in media.yaml (2026-11-12).
+# Each source page was reopened (Commons file page/API, LoC ?fo=json) and the
+# local file viewed. verdict: ok | fix (corrected in the card) | reject (media
+# entry removed from the card; file left in content/media/).
+- {card: adlam, file: adlam.jpg, verdict: ok, note: "Commons self, CC BY-SA 4.0 (Smoking Tyre, 2025-09-17). Crop shows only the Adlam lettering; typeface lettering carries no separate copyright. Caption and credit match."}
+- {card: amen-break, file: amen-break.jpg, verdict: ok, note: "PD-shape: label is text plus the simple Metromedia M; rationale is threshold of originality, acceptable. Recording itself is not licensed and is not claimed."}
+- {card: anthony-johnson, file: anthony-johnson.jpg, verdict: ok, note: "PD-old-100 (Smith 1612 / Hondius 1639). Contextual: the colony he lived in, contemporary with him; caption is factual."}
+- {card: aro-and-dahomey, file: aro-and-dahomey.jpg, verdict: ok, note: "Commons self, CC BY-SA 3.0 by Dominik Schwarz; royal palaces of Abomey. Caption and credit match."}
+- {card: ashleys-sack, file: ashleys-sack.jpg, verdict: ok, note: "Commons self, CC BY-SA 4.0 by Shameran81, source 'Courtesy Middleton Place'. Caption matches the page. Residual risk: the photo licence does not address the 1921 embroidery by Ruth Middleton; Commons gives no rationale for it."}
+- {card: candomble, file: candomble.jpg, verdict: ok, note: "Commons self, CC BY-SA 4.0 by Paul R. Burley, 2017-03-04, Casa Branca do Engenho Velho. Matches."}
+- {card: chicago-defender, file: chicago-defender.jpg, verdict: ok, note: "LoC FSA/OWI, Jack Delano, April 1942: 'in the public domain and free to use and reuse' (US federal work). Matches."}
+- {card: claudia-jones, file: claudia-jones.jpg, verdict: ok, note: "Commons self, CC BY-SA 4.0 by Spudgun67, 2014-09-27; page describes the Claudia Jones plaque and carnival. Matches."}
+- {card: cowries, file: cowries.jpg, verdict: ok, note: "CC0 Naturalis donation; page gives locality Djakarta Bay, collection date 1938, ZMA.MOLL.52002. Matches."}
+- {card: du-bois-infographics, file: du-bois-infographics.jpg, verdict: ok, note: "LoC: 'No known restrictions on publication'; Du Bois chart for Paris 1900, Daniel Murray collection; PD by age. Matches."}
+- {card: emmett-till, file: emmett-till.jpg, verdict: ok, note: "Commons self (WLM), CC BY-SA 4.0 by Charles Orlowek, 2016-09-03, 'Emmett Till's last home'. Matches; not stigmatising."}
+- {card: gannibal, file: gannibal.jpg, verdict: ok, note: "Commons self (WLM), CC BY-SA 4.0 by Vaija, 2021-10-02, Suyda estate outbuilding. Contextual (his estate); caption states only what the page states."}
+- {card: hannah-crafts, file: hannah-crafts.jpg, verdict: ok, note: "CC BY-SA 2.0, Oregon State University Flickr, 2013-07-18. Contextual: Gates is the buyer and editor named in the card."}
+- {card: highlife, file: highlife.jpg, verdict: ok, note: "PD-text: printed invitation, text only. Artist field 'E.T. Mensah's Paramount / David Hagen (Georgetown University Library)' matches credit; date May 1956 visible on the card."}
+- {card: hurston, file: hurston.jpg, verdict: ok, note: "PD-Van Vechten, LoC van.5a52142, 'no known copyright restrictions'; 1938-04-03. Matches."}
+- {card: juan-latino, file: juan-latino.jpg, verdict: ok, note: "PD-old-100-expired; Internet Archive scan contributed by Boston Public Library. Imprint 'Ex officina Hugonis de Mena', Granada, 1573 is printed on the page shown."}
+- {card: liberia, file: liberia.jpg, verdict: ok, note: "LoC Geography and Map Division: 'free to use and reuse'; American Colonization Society, D. McClelland, 1870. Matches."}
+- {card: misogyny-in-hip-hop, file: misogyny-in-hip-hop.jpg, verdict: ok, note: "CC BY-SA 3.0 by Gage Skidmore, SDCC 2025-07-27. Queen Latifah is named in the card as a critic from inside hip-hop."}
+- {card: nanny-of-the-maroons, file: nanny-of-the-maroons.jpg, verdict: ok, note: "CC BY-SA 2.0 Flickr (FlickreviewR passed), Diego Tirira, 2010-10-28, Moore Town. Contextual (Windward Maroon town); caption factual."}
+- {card: nardal-sisters, file: nardal-sisters.jpg, verdict: ok, note: "Commons self, CC BY-SA 4.0 by Chabe01, 2023-08-15, Allée Paulette-Nardal plaque, Clamart. Matches."}
+- {card: oliver-golden, file: oliver-golden.jpg, verdict: ok, note: "CC BY-SA 3.0 with VRTS permission, Mikhail Popov / thebestphotos.ru, 2010-01-15. Contextual: granddaughter named in the card; caption follows the page."}
+- {card: omar-ibn-said, file: omar-ibn-said.jpg, verdict: fix, note: "LoC: 'most of the materials in this collection are in the public domain'; 1831 manuscript, author d. 1863, PD by age. Caption claimed 'page 3' and verses 'set down from memory', which the record does not state; record says the text opens with Surat al-Mulk (fol. 1a-3a). Caption rewritten."}
+- {card: paper-bag-test, file: paper-bag-test.jpg, verdict: reject, note: "Licence fine (CC BY-SA 3.0), but the photo of a specific, real congregation (Fifteenth Street Presbyterian Church) on a card about a colourism test implies an accusation the source page does not make; does not depict the subject and risks stigma."}
+- {card: partus-1662, file: partus-1662.jpg, verdict: reject, note: "Licence fine (CC BY 2.0, Tony Fischer). Image is the 1639 Jamestown church tower; nothing ties it to the 1662 act or to Elizabeth Key. Does not depict the subject."}
+- {card: phillis-wheatley, file: phillis-wheatley.jpg, verdict: fix, note: "LoC: 'No known restrictions on publication', 1773, PD by age. Record lists Moorhead as engraver and the repository as Rare Book and Special Collections Division, not Prints and Photographs. Credit corrected."}
+- {card: planet-rock, file: planet-rock.jpg, verdict: ok, note: "CC BY-SA 3.0 with VRTS permission, Mika Vaisanen, Eindhoven 1998-12-05. Matches."}
+- {card: radio-haiti, file: radio-haiti.jpg, verdict: reject, note: "Licence fine (PD-self). Image is a Duke University library building; it shows neither the station nor its people. Does not depict the subject."}
+- {card: reggae, file: reggae.jpg, verdict: fix, note: "CC BY-SA 2.0 Flickr (reviewed), Karl Simpson, Orlando 2010-04-29. 'Watermark removed by R8cocin8' is not on the file page; credit reduced to the author."}
+- {card: rhythm-and-blues, file: rhythm-and-blues.jpg, verdict: ok, note: "CC BY 2.0 Flickr (FlickreviewR passed, account -cp / caviera), 2005-09-10. Matches."}
+- {card: rinse-fm, file: rinse-fm.jpg, verdict: reject, note: "CC BY-SA 4.0 'own work' uploaded by the person pictured (Khadejia); not a selfie, so the uploader is unlikely to be the photographer; uncategorised, description only 'Rinse Fm'. Provenance too weak for a holder statement."}
+- {card: saint-georges, file: saint-georges.jpg, verdict: ok, note: "Met open access, PD-US-expired / PD-old; mezzotint, William Ward after Mather Brown, 4 April 1788, credit line Harris Brisbane Dick Fund, 1953. Matches."}
+- {card: samba, file: samba.jpg, verdict: ok, note: "Commons self (Wiki Loves Folklore), CC BY-SA 4.0 by Lgjunior, 2017-12-30, roda de samba. Matches."}
+- {card: slavevoyages, file: slavevoyages.jpg, verdict: ok, note: "Rijksmuseum CC0, BI-1892-3415-22; prentmaker Jan van Brosterhuyzen, publisher Blaeu, 1645-1647, Fort Elmina in Ghana. Contextual; matches."}
+- {card: sojourner-truth, file: sojourner-truth.jpg, verdict: fix, note: "LoC: 'No known restrictions on use or reproduction', 1864. Record calls it a photograph; 'carte de visite' and 'Truth's own slogan' are not stated. Caption rewritten to the record."}
+- {card: stolen-legacy, file: stolen-legacy.jpg, verdict: reject, note: "Licence fine (CC BY-SA 4.0). Interior of the modern Bibliotheca Alexandrina shows neither the book nor its author and visually ties the card to the ancient library it debunks. Does not depict the subject."}
+- {card: stono-drum-ban, file: stono-drum-ban.jpg, verdict: reject, note: "Licence fine (CC BY-SA 3.0, ProfReader). Image shows a highway bridge with 'Peter Miller Bridge / Wallace River' signs; nothing visible relates to the rebellion. Does not depict the subject."}
+- {card: tutuola, file: tutuola.jpg, verdict: ok, note: "CC0 (Wiki Loves Africa 2024), Goodymeraj, 2024-01-27, palm-wine tapper in Nigeria. Contextual to The Palm-Wine Drinkard; caption matches."}
+- {card: underground-railroad-myths, file: underground-railroad-myths.jpg, verdict: fix, note: "Flickr Commons 'No restrictions', Still 1872, PD by age. Page does not title the illustration 'Escaping in a chest'; caption reduced to what the page states."}
+- {card: v2, file: hero-v2.jpg, verdict: ok, note: "PD-anon-expired; Harper's Weekly vol. VII no. 340, 4 July 1863, p. 429. Matches."}
+- {card: v3, file: hero-v3.jpg, verdict: ok, note: "PD-Art (PD-old-100-expired); Samuel J. Miller daguerreotype 1847/52, Art Institute of Chicago 1996.433. Matches."}
+- {card: v5, file: hero-v5.jpg, verdict: ok, note: "LoC: 'No known restrictions on publication'; Du Bois, Paris 1900, Daniel Murray collection. Matches."}
+- {card: v6, file: hero-v6.jpg, verdict: ok, note: "PD-USNWR, LoC ppmsca.03130, Warren K. Leffler; page records the Moondigger scan edit. Matches."}
+- {card: walkers-appeal, file: walkers-appeal.jpg, verdict: fix, note: "LoC: 'No known restrictions on publication', 1848, PD by age. 'Childs' is not in the record (medium: wood engraving); credit corrected."}
+- {card: what-black-means, file: what-black-means.jpg, verdict: ok, note: "Commons self, CC BY-SA 4.0 by Carlos Figueroa (Wikimedia Chile), 2020-01-13. Adichie is quoted in the card."}
+- {card: work-songs, file: work-songs.jpg, verdict: ok, note: "PD-Gottlieb (dedicated to the public domain via LoC), gottlieb.13561. Matches."}
+- {card: wpa-narratives, file: wpa-narratives.jpg, verdict: ok, note: "LoC: 'No known restrictions on reproduction'; US government work (WPA FWP); Hannah Crasson, 1937-ca. 1938. Dignified portrait; matches."}
+- {card: zong, file: zong.jpg, verdict: ok, note: "PD-old-100; National Library of Wales, lithograph ~1810, artist Chantrey per Commons. Contextual: Sharp is named in the card."}

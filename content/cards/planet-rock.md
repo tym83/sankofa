@@ -24,6 +24,8 @@ sources:
   - {title: "The Guardian: Bambaataa civil default judgment", url: "https://www.theguardian.com/music/2025/may/23/hip-hop-pioneer-afrika-bambaataa-loses-civil-case-suing-him-for-child-sexual-abuse"}
   - {title: "theGrio (9 April 2026)", url: "https://thegrio.com/2026/04/09/hip-hop-pioneer-afrika-bambaataa-dies-at-age-67/"}
   - {title: "Complex (2026)", url: "https://www.complex.com/music/a/backwoodsaltar/afrika-bambaataa-dead-hip-hop-pioneer"}
+media:
+  - {"type": "image", "file": "planet-rock.jpg", "caption": "Afrika Bambaataa performing in Eindhoven, the Netherlands, 5 December 1998", "credit": "Mika-photography (Mikael Väisänen); resized for display", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Afrika_Bambaataa.jpg"}
 ---
 A German band's music, a Japanese drum machine, and a dollar a record for
 Kraftwerk: that was "Planet Rock". In 1982 Afrika Bambaataa cut it with

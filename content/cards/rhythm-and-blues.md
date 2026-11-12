@@ -25,6 +25,8 @@ sources:
   - {title: "NPR Forebears: Ruth Brown (2017) (via WEAA syndication page)", url: "https://www.weaa.org/2017-10-23/forebears-ruth-brown-the-fabulous-miss-rhythm"}
   - {title: "New-York Historical / NYU: Atlantic Recording Company records, historical note", url: "https://findingaids.library.nyu.edu/nyhs/timeinc_ms3009_rg51/"}
   - {title: "Rock & Roll Hall of Fame: Ruth Brown", url: "https://www.rockhall.com/inductees/ruth-brown"}
+media:
+  - {"type": "image", "file": "rhythm-and-blues.jpg", "caption": "Ruth Brown performing, 10 September 2005", "credit": "caviera (-cp on Flickr); resized for display", "license": "CC BY 2.0", "url": "https://commons.wikimedia.org/wiki/File:Ruth_Brown.jpg"}
 ---
 Billboard once ranked Black popular records under the name "Race". Jerry
 Wexler, a young writer editing its charts, proposed another: "rhythm and

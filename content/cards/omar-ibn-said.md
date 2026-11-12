@@ -23,6 +23,8 @@ sources:
   - {title: "Hunwick, Journal of Arabic and Islamic Studies: captured 1806/7, sold in South Carolina", url: "https://journals.uio.no/JAIS/article/view/4572"}
   - {title: "National Humanities Center: Omar ibn Said autobiography with contextual documents", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf"}
   - {title: "Library of Congress press release: Unique Autobiography Written in Arabic by an Enslaved Scholar Goes Online (15 January 2019)", url: "https://www.loc.gov/item/prn-19-004/only-known-surviving-muslim-american-slave-autobiography-goes-online-at-the-library-of-congress/2019-01-15/"}
+media:
+  - {"type": "image", "file": "omar-ibn-said.jpg", "caption": "Opening of Omar ibn Said's Arabic manuscript The Life of Omar ben Saeed, 1831, which begins with Sūrat al-Mulk", "credit": "Omar ibn Said; Library of Congress, African and Middle Eastern Division, Omar Ibn Said Collection; resized for display", "license": "Public domain", "url": "https://www.loc.gov/item/2018371864/"}
 ---
 In 1831 an enslaved man in North Carolina wrote his life in Arabic and
 opened it with verses of the Qur'an. Omar ibn Said was a Fula scholar from
