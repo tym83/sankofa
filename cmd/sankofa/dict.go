@@ -25,6 +25,7 @@ func dictCmd() *cobra.Command {
 Links are marked with the book they lead to: ❝ voices, ▤ archives, ✶ heirs.
 
 Keys: tab/shift+tab select a link, enter follow it, backspace go back,
+/ or i the index with search, e trade your copy (male/female edition),
 r random card, o show the atlas link, q quit.`,
 		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -224,7 +225,14 @@ type dictModel struct {
 	back     []*card.Card
 	sel      int
 	width    int
+	height   int
 	showLink bool
+	note     string
+
+	// The index: every card, filtered by what the reader types.
+	index bool
+	query string
+	pick  int
 }
 
 func newDictModel(s *card.Set, st *reader.State, c *card.Card) *dictModel {
@@ -249,7 +257,12 @@ func (m *dictModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.WindowSizeMsg:
 		m.width = min(msg.Width, 100)
+		m.height = msg.Height
 	case tea.KeyMsg:
+		if m.index {
+			return m.updateIndex(msg)
+		}
+		m.note = ""
 		links := m.cur.Links()
 		switch msg.String() {
 		case "q", "ctrl+c", "esc":
@@ -276,6 +289,19 @@ func (m *dictModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 		case "r":
 			m.open(m.set.ForEdition(unreadCard(m.set, m.st), m.st.Edition), true)
+		case "/", "i":
+			m.index, m.query, m.pick = true, "", 0
+		case "e":
+			if m.st.Edition == card.EditionMale {
+				m.st.Edition = card.EditionFemale
+			} else {
+				m.st.Edition = card.EditionMale
+			}
+			_ = m.st.Save()
+			if m.cur.Pair != "" {
+				m.open(m.set.ForEdition(m.cur.ID, m.st.Edition), false)
+			}
+			m.note = tr("Your copy is now") + ": " + editionName(m.st.Edition)
 		case "o":
 			m.showLink = !m.showLink
 		}
@@ -283,7 +309,85 @@ func (m *dictModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, nil
 }
 
+// matches lists cards whose title, place or kind contains the query.
+func (m *dictModel) matches() []*card.Card {
+	q := strings.ToLower(m.query)
+	var out []*card.Card
+	for _, id := range m.set.Order {
+		c := m.set.ByID[id]
+		if c.Edition != card.EditionBoth && c.Edition != m.st.Edition {
+			continue
+		}
+		hay := strings.ToLower(c.Title + " " + c.Places[0].Name + " " + tr(c.Kind) + " " + yearsOf(c))
+		if q == "" || strings.Contains(hay, q) {
+			out = append(out, c)
+		}
+	}
+	return out
+}
+
+func (m *dictModel) updateIndex(k tea.KeyMsg) (tea.Model, tea.Cmd) {
+	list := m.matches()
+	switch k.Type {
+	case tea.KeyEsc:
+		m.index = false
+	case tea.KeyCtrlC:
+		return m, tea.Quit
+	case tea.KeyEnter:
+		if len(list) > 0 {
+			m.index = false
+			m.open(list[min(m.pick, len(list)-1)], true)
+		}
+	case tea.KeyUp, tea.KeyShiftTab:
+		if m.pick > 0 {
+			m.pick--
+		}
+	case tea.KeyDown, tea.KeyTab:
+		if m.pick < len(list)-1 {
+			m.pick++
+		}
+	case tea.KeyBackspace:
+		if r := []rune(m.query); len(r) > 0 {
+			m.query = string(r[:len(r)-1])
+			m.pick = 0
+		}
+	case tea.KeyRunes, tea.KeySpace:
+		m.query += string(k.Runes)
+		if k.Type == tea.KeySpace {
+			m.query += " "
+		}
+		m.pick = 0
+	}
+	return m, nil
+}
+
+func (m *dictModel) indexView() string {
+	var b strings.Builder
+	list := m.matches()
+	b.WriteString(stTitle.Render(tr("Index")) + "  " + stMeta.Render(fmt.Sprintf(tr("%d cards"), len(list))) + "\n\n")
+	b.WriteString("› " + m.query + "▏\n\n")
+	rows := max(5, m.height-8)
+	start := 0
+	if m.pick >= rows {
+		start = m.pick - rows + 1
+	}
+	for i := start; i < len(list) && i < start+rows; i++ {
+		c := list[i]
+		line := fmt.Sprintf("%s %-40s %s · %s", booksOf(c), trim(c.Title, 40), yearsOf(c), tr(c.Kind))
+		if i == m.pick {
+			b.WriteString(stSel.Render(line) + "\n")
+		} else {
+			b.WriteString(line + "\n")
+		}
+	}
+	b.WriteString("\n" + stFooter.Render(tr("type to search · ↑↓ choose · enter open · esc back")))
+	return b.String()
+}
+
 func (m *dictModel) View() string {
+	if m.index {
+		return m.indexView()
+	}
 	c := m.cur
 	var b strings.Builder
 	place := ""
@@ -339,7 +443,10 @@ func (m *dictModel) View() string {
 	if m.st.Edition == card.EditionFemale {
 		ed = tr("female")
 	}
-	b.WriteString("\n" + stFooter.Render(fmt.Sprintf(tr("tab link · enter open · backspace back · r random · o atlas · q quit   [%s copy · %d read]"), ed, len(m.st.Path))))
+	if m.note != "" {
+		b.WriteString("\n" + stWow.Render(m.note))
+	}
+	b.WriteString("\n" + stFooter.Render(fmt.Sprintf(tr("tab link · enter open · backspace back · / index · r random · e copy · o atlas · q quit   [%s copy · %d read]"), ed, len(m.st.Path))))
 	return b.String()
 }
 
