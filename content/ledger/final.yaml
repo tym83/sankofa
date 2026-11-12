@@ -1,0 +1,1049 @@
+# Phase 3 ledger: the facts each final card and chapter uses, with their
+# status path: agreed (both agents confirmed), recheck-confirmed (one
+# confirmed, the other confirmed on re-check), corrected (used in the
+# corrected form both agents support), disputed (kept only as contested,
+# with the card dispute field set). Media facts are listed when the media
+# entry is kept.
+achebe:
+  - {status: recheck-confirmed, fact: "Achebe was born in Ogidi in eastern Nigeria in 1930"}
+  - {status: recheck-confirmed, fact: "He was working in Lagos when he mailed the manuscript"}
+  - {status: agreed, fact: "He mailed his handwritten novel to a London typing agency, which went silent / it vanished there (also wow)"}
+  - {status: agreed, fact: "Angela Beattie retrieved the manuscript"}
+  - {status: corrected, fact: "Beattie, his broadcasting supervisor, visited the agency while on leave and demanded that it post the typed manuscript to Lagos; personal collection is not what Achebe's account says."}
+  - {status: agreed, fact: "Heinemann printed 2,000 copies in 1958"}
+  - {status: recheck-confirmed, fact: "He took the title from Yeats's 'The Second Coming'"}
+  - {status: recheck-confirmed, fact: "He wrote out of indignation at Joyce Cary's Mister Johnson, to tell an Igbo village's story from the inside"}
+  - {status: recheck-confirmed, fact: "Heinemann built the African Writers Series around it in 1962, with Achebe as editorial adviser for ten years"}
+  - {status: recheck-confirmed, fact: "In 1975 at Amherst he called Conrad's Heart of Darkness racist"}
+  - {status: agreed, fact: "Media: Achebe at Asbury Hall, Buffalo, 25 Sep 2008; Stuart C. Shapiro via Wikimedia Commons; CC BY 3.0"}
+adinkra:
+  - {status: agreed, fact: "The Akan Sankofa sign literally means 'go back and get it' (also wow)"}
+  - {status: recheck-confirmed, fact: "Ntonso, near Kumasi, still stamps adinkra"}
+  - {status: recheck-confirmed, fact: "In 1817 Thomas Bowdich, on a mission to the Asante capital, acquired a stamped adinkra cloth (now in the British Museum)"}
+  - {status: agreed, fact: "The Sankofa sign is drawn as a bird looking back"}
+  - {status: recheck-confirmed, fact: "Sankofa expresses heritage as a tool to build the future"}
+  - {status: disputed, fact: "A heart of tacks on a colonial-era coffin lid at New York's African Burial Ground was hailed as Sankofa, a reading now contested"}
+  - {status: agreed, fact: "Media: stamped adinkra cloth acquired by Bowdich in Kumasi 1817, British Museum; photo of 2D work, public domain via Wikimedia Commons"}
+adlam:
+  - {status: agreed, fact: "Brothers Ibrahima and Abdoulaye Barry created Adlam for Fulani in Guinea in 1989"}
+  - {status: recheck-confirmed, fact: "The brothers were aged 14 and 10 (also wow)"}
+  - {status: recheck-confirmed, fact: "They invented it in Nzérékoré"}
+  - {status: recheck-confirmed, fact: "The script has 28 letters and runs right to left"}
+  - {status: agreed, fact: "Its name comes from its first four letters (A, D, L, M) and is an acronym for 'the alphabet that protects my people from vanishing'"}
+  - {status: recheck-confirmed, fact: "Unicode encoded it in version 9.0 in 2016"}
+afrobeat:
+  - {status: agreed, fact: "In 1969 Fela Ransome-Kuti spent months in Los Angeles (also wow: politicised in LA in 1969)"}
+  - {status: corrected, fact: "Izsadore introduced him to Malcolm X and other Black Power/revolutionary thinkers"}
+  - {status: agreed, fact: "Drummer Tony Allen drove the music"}
+  - {status: recheck-confirmed, fact: "Fela said that without Tony Allen there would be no afrobeat"}
+  - {status: recheck-confirmed, fact: "After the album Zombie attacked the military, soldiers stormed his Kalakuta Republic commune in 1977"}
+  - {status: recheck-confirmed, fact: "About a thousand soldiers took part"}
+  - {status: recheck-confirmed, fact: "They threw his mother, the activist Funmilayo Ransome-Kuti, from a window"}
+  - {status: recheck-confirmed, fact: "Funmilayo Ransome-Kuti died in 1978"}
+  - {status: recheck-confirmed, fact: "In 1978 he married 27 women in one day"}
+  - {status: agreed, fact: "Media: Celluloid Records promotional photo of Fela, 1986, unknown photographer, public domain in US (no notice)"}
+amen-break:
+  - {status: recheck-confirmed, fact: "The Winstons were an integrated soul band"}
+  - {status: recheck-confirmed, fact: "Leader Richard L. Spencer wrote and sang 'Color Him Father', a 1969 hit that won a Grammy"}
+  - {status: agreed, fact: "The Amen break comes from 'Amen, Brother'"}
+  - {status: recheck-confirmed, fact: "'Amen, Brother' was the instrumental B-side; Gregory C. Coleman was the drummer"}
+  - {status: agreed, fact: "The break was looped in hip-hop"}
+  - {status: recheck-confirmed, fact: "It was then sped up and chopped into jungle and drum and bass"}
+  - {status: recheck-confirmed, fact: "It became one of the most sampled recordings ever (wow)"}
+  - {status: corrected, fact: "As reported in 2015–2017, Spencer and Coleman had received no sample royalties. The 2015 crowdfunding payment was a voluntary gift, not royalty income; avoid an undated all-time absolute."}
+  - {status: recheck-confirmed, fact: "Spencer learned how famous the break was only in 1996"}
+  - {status: disputed, fact: "Coleman died reportedly homeless and broke"}
+  - {status: recheck-confirmed, fact: "In 2015 UK DJ Martyn Webster crowdfunded for Spencer"}
+  - {status: disputed, fact: "more than £20,000"}
+  - {status: recheck-confirmed, fact: "Spencer died in 2020"}
+amo:
+  - {status: recheck-confirmed, fact: "Amo was born near Axim on the Gold Coast"}
+  - {status: recheck-confirmed, fact: "As a small child he reached the Brunswick-Wolfenbuettel ducal court and served as a 'court Moor'"}
+  - {status: agreed, fact: "At Halle in 1729 he defended a disputation on the rights of Moors in Europe (also wow)"}
+  - {status: agreed, fact: "The disputation argued Africans had the same claim as Europeans not to be enslaved in Europe (also wow)"}
+  - {status: agreed, fact: "The text is lost; only later summaries survive (also wow)"}
+  - {status: recheck-confirmed, fact: "In 1734 at Wittenberg he took his doctorate with De humanae mentis apatheia"}
+  - {status: recheck-confirmed, fact: "He lectured at Halle and Jena"}
+  - {status: recheck-confirmed, fact: "Facing racist hostility, he went home to Axim around 1747"}
+  - {status: agreed, fact: "Media: title page of De humanae mentis apatheia (Wittenberg 1734), Staatsbibliothek zu Berlin scan, public domain"}
+anthony-johnson:
+  - {status: recheck-confirmed, fact: "He arrived in Virginia in 1621 on the James as 'Antonio, a Negro' (also wow)"}
+  - {status: recheck-confirmed, fact: "He survived the 1622 Indian attack on the Bennett plantation"}
+  - {status: agreed, fact: "He won his freedom (became free) (also wow)"}
+  - {status: recheck-confirmed, fact: "With his wife Mary he followed the Bennetts to the Eastern Shore"}
+  - {status: recheck-confirmed, fact: "He became a landowner holding 250 acres (also wow)"}
+  - {status: agreed, fact: "His servant John Casor claimed his indenture was over"}
+  - {status: agreed, fact: "On 8 March 1655 the Northampton court ordered Casor returned to 'his said master Anthony Johnson' (also wow)"}
+  - {status: disputed, fact: "It is often called America's first legal slave case; that label is contested"}
+aro-and-dahomey:
+  - {status: recheck-confirmed, fact: "The Atlantic trade needed African sellers; states and merchant networks supplied them"}
+  - {status: agreed, fact: "In the Bight of Biafra, with no large state, Aro merchants of Arochukwu drove the trade's expansion through Igboland"}
+  - {status: recheck-confirmed, fact: "In 1999 Benin's president Mathieu Kerekou convened a reconciliation conference to ask forgiveness for the slave trade (also wow)"}
+ashleys-sack:
+  - {status: agreed, fact: "Rose gave her nine-year-old daughter Ashley, sold in South Carolina, a sack holding a tattered dress, three handfuls of pecans and a braid of Rose's hair (also wow)"}
+  - {status: agreed, fact: "The embroidery is signed Ruth Middleton 1921, Ashley's granddaughter (also wow)"}
+  - {status: disputed, fact: "Auslander traced a Rose and an Ashley to the Charleston estate of Robert Martin, who died in 1852"}
+  - {status: recheck-confirmed, fact: "The sack was displayed at Middleton Place and the Smithsonian's NMAAHC"}
+bamum:
+  - {status: agreed, fact: "King Ibrahim Njoya of Bamum in western Cameroon invented the Bamum script"}
+  - {status: recheck-confirmed, fact: "He began with roughly 500 signs for things and actions, a memory aid more than a script (also wow)"}
+  - {status: agreed, fact: "The script was progressively simplified from pictorial signs"}
+  - {status: disputed, fact: "According to the EAP, the French administration after WWI destroyed his libraries and press and banned the teaching"}
+  - {status: agreed, fact: "Media: King Njoya's school in Foumban, c. 1910, Bamum Script and Archives Project via Commons, public domain"}
+banjo:
+  - {status: agreed, fact: "Enslaved Africans in the Caribbean and the American South rebuilt West African gourd lutes into the (gourd, skin-headed) banjo"}
+  - {status: corrected, fact: "The Old Plantation depicts a banjo and drum in late-eighteenth-century South Carolina; dates range approximately 1785–1790."}
+  - {status: recheck-confirmed, fact: "Joel Sweeney, a white Virginian who learned from Black players, helped make the banjo a minstrel stage instrument"}
+  - {status: agreed, fact: "Media: 'The Old Plantation', watercolour attributed to John Rose, SC c.1785-1790, gourd banjo and drum; via Colonial Williamsburg; public domain"}
+benin-bronzes:
+  - {status: recheck-confirmed, fact: "The Oba's brass casters, Igun Eronmwon, formed a royal guild (also wow)"}
+  - {status: recheck-confirmed, fact: "They worked in lost wax (wax model over clay core, clay over wax, wax melted out, metal poured)"}
+  - {status: recheck-confirmed, fact: "The casters put the Portuguese newcomers onto the palace plaques as foreign merchants (also wow)"}
+  - {status: agreed, fact: "In 1897 a British force took Benin City and carried off objects to Europe"}
+  - {status: recheck-confirmed, fact: "Thousands of objects were carried off"}
+  - {status: agreed, fact: "In 2022 the Horniman Museum transferred ownership of 72 objects to Nigeria"}
+  - {status: recheck-confirmed, fact: "In December 2022 Germany's foreign minister handed 20 back in Abuja"}
+  - {status: agreed, fact: "Media: Met plaque with two Portuguese merchants, via Wikimedia Commons, CC0"}
+big-mama-thornton:
+  - {status: recheck-confirmed, fact: "In August 1952 Thornton got/recorded 'Hound Dog'"}
+  - {status: recheck-confirmed, fact: "Jerry Leiber and Mike Stoller offered her the song"}
+  - {status: recheck-confirmed, fact: "Released by Houston's Peacock Records in 1953, it went to number one on the R&B chart (also wow)"}
+  - {status: agreed, fact: "Elvis Presley's version came in 1956 (wow: three years after hers)"}
+  - {status: recheck-confirmed, fact: "Elvis's version brought him fame and a fortune; in a 1974 interview she set his millions against her own zero"}
+  - {status: recheck-confirmed, fact: "Her own song 'Ball and Chain' became a signature for Janis Joplin"}
+  - {status: disputed, fact: "Dispute: sales uncertain, Robey reported over 500,000, others two million"}
+  - {status: recheck-confirmed, fact: "Thornton lived 1926-1984"}
+  - {status: agreed, fact: "Media: Thornton at 'Blues Is a Woman', Newport Jazz Festival, 1980, Barbara Weinberg Barefield, CC BY-SA 3.0"}
+blues:
+  - {status: agreed, fact: "Around 1903 W. C. Handy, waiting for a train at Tutwiler, heard a man press/slide a knife on his guitar strings (also wow)"}
+  - {status: recheck-confirmed, fact: "Handy was the 'Father of the Blues' (wow)"}
+  - {status: recheck-confirmed, fact: "The man sang 'Goin' where the Southern cross' the Dog'"}
+  - {status: recheck-confirmed, fact: "Handy called it the weirdest music he had ever heard"}
+  - {status: agreed, fact: "Handy built a career publishing such tunes"}
+  - {status: corrected, fact: "Mamie Smith's 1920 Crazy Blues opened a major market for Black female blues singers. 'First blues stars on record' needs that scope; blues recordings by white performers predate 1920."}
+  - {status: recheck-confirmed, fact: "Bessie Smith made her Columbia debut in 1923"}
+  - {status: agreed, fact: "Media: W. C. Handy, 17 July 1941, Carl Van Vechten, Library of Congress, public domain"}
+bridgetower:
+  - {status: agreed, fact: "Beethoven's 'Kreutzer' violin sonata (Op. 47) was written for George Bridgetower (also wow)"}
+  - {status: recheck-confirmed, fact: "Bridgetower was a virtuoso of African descent"}
+  - {status: agreed, fact: "Bridgetower and Beethoven gave the first performance on 24 May 1803"}
+  - {status: recheck-confirmed, fact: "On the autograph, now in the Beethoven-Haus Bonn, Beethoven wrote the joking Italian dedication to 'il Mulatto Brischdauer gran pazzo e compositore mulattico'"}
+  - {status: disputed, fact: "The friendship broke, reportedly over a woman"}
+  - {status: agreed, fact: "The printed sonata was dedicated to the French violinist Rodolphe Kreutzer"}
+  - {status: recheck-confirmed, fact: "The sonata was printed in 1805"}
+  - {status: agreed, fact: "Media: drawing of Bridgetower by Henry Edridge, British Museum 1876,0708.2379, public domain"}
+brookes:
+  - {status: recheck-confirmed, fact: "In 1788 British abolitionists commissioned a drawing of how people were packed aboard the Liverpool slave ship Brooks (Brookes)"}
+  - {status: disputed, fact: "The date of the first Plymouth version is disputed between late 1788 and March 1789"}
+  - {status: recheck-confirmed, fact: "The Plymouth version was a single plan of bodies laid in rows inside a hull"}
+  - {status: agreed, fact: "In London James Phillips printed it as Description of a Slave Ship (1789)"}
+  - {status: agreed, fact: "Media: Stowage of the British slave ship Brookes, Library of Congress Printed Ephemera Collection, public domain"}
+burleigh-dvorak:
+  - {status: agreed, fact: "Burleigh was at Dvořák's National Conservatory in New York"}
+  - {status: recheck-confirmed, fact: "He came from Erie to the Conservatory in 1892 (also wow 'from Erie')"}
+  - {status: agreed, fact: "He sang Dvořák the old plantation songs/spirituals before the New World Symphony (also wow)"}
+  - {status: recheck-confirmed, fact: "The New World Symphony premiered in December 1893"}
+  - {status: recheck-confirmed, fact: "Burleigh set spirituals for voice and piano like art songs, above all 'Deep River' (1916-17)"}
+  - {status: disputed, fact: "Dispute: Burleigh said Dvořák quoted 'Swing Low, Sweet Chariot'; how directly the symphony borrows is debated"}
+  - {status: agreed, fact: "Media: Harry T. Burleigh, New York, March 1917, Mishkin Studio, public domain"}
+candomble:
+  - {status: recheck-confirmed, fact: "Casa Branca was founded behind the Barroquinha church in Salvador"}
+  - {status: disputed, fact: "It was founded around 1830 (also wow)"}
+  - {status: recheck-confirmed, fact: "Its Yoruba name is Ilê Axé Iyá Nassô Oká; Bahians call it Casa Branca"}
+  - {status: recheck-confirmed, fact: "The Gantois (led by Mãe Menininha) and Ilê Axé Opô Afonjá descend from it (also wow)"}
+  - {status: agreed, fact: "In 1984 the national heritage council voted to list it, the first terreiro so protected"}
+  - {status: recheck-confirmed, fact: "Ruth Landes worked in Salvador's houses in 1938-39, found them led by women, and called her 1947 book The City of Women"}
+capoeira:
+  - {status: agreed, fact: "Two players meet in a circle, fight and dance at once, while the berimbau sets the pace and others sing and clap"}
+  - {status: recheck-confirmed, fact: "Brazil's 1890 penal code punished capoeiragem (displays of agility in streets and squares) with two to six months in prison (also wow)"}
+  - {status: disputed, fact: "Bimba's school opened in 1932 and was the first formal school"}
+  - {status: recheck-confirmed, fact: "Mestre Pastinha kept the older Angola style"}
+  - {status: agreed, fact: "In 2014 UNESCO inscribed the capoeira circle as intangible heritage of humanity (also wow)"}
+  - {status: agreed, fact: "Media: Rugendas, 'Jogar capoëra ou danse de la guerre', Rio, lithograph published 1835 in Voyage pittoresque, public domain"}
+carolina-maria-de-jesus:
+  - {status: recheck-confirmed, fact: "She was from Sacramento, Minas Gerais, and had two years of school (also wow)"}
+  - {status: agreed, fact: "In São Paulo she built a shack in the Canindé favela and raised three children"}
+  - {status: agreed, fact: "She made a living collecting scrap/waste paper (also wow)"}
+  - {status: recheck-confirmed, fact: "Reporter Audálio Dantas saw the notebooks in 1958 and printed excerpts"}
+  - {status: agreed, fact: "Quarto de Despejo was published in 1960"}
+  - {status: disputed, fact: "How much Dantas edited it is contested"}
+  - {status: recheck-confirmed, fact: "As Child of the Dark it reached English readers"}
+  - {status: agreed, fact: "Media: signing Quarto de Despejo, August 1960; Correio da Manhã collection, Arquivo Nacional; Public Domain Mark"}
+chicago-defender:
+  - {status: agreed, fact: "Robert S. Abbott founded the Chicago Defender in 1905"}
+  - {status: disputed, fact: "It was printed in his landlord's kitchen (also wow)"}
+  - {status: agreed, fact: "The Defender urged Black Southerners to move north"}
+  - {status: recheck-confirmed, fact: "It printed jobs up north"}
+  - {status: agreed, fact: "In early 1917 it set 15 May as the start of the 'Great Northern Drive' (also wow)"}
+  - {status: agreed, fact: "Black Pullman porters hid bundles on southbound trains (also wow)"}
+  - {status: recheck-confirmed, fact: "Some towns tried to ban it"}
+  - {status: recheck-confirmed, fact: "It passed 100,000 copies"}
+chicago-house:
+  - {status: agreed, fact: "Frankie Knuckles played at the Warehouse"}
+  - {status: recheck-confirmed, fact: "In 1977 Knuckles moved from New York into the Warehouse, at 206 South Jefferson Street"}
+  - {status: recheck-confirmed, fact: "Young, mostly Black and gay men danced at the Warehouse"}
+  - {status: disputed, fact: "Knuckles first saw the name 'house music' on a shop sign; a friend explained it as what he played at the Warehouse"}
+  - {status: recheck-confirmed, fact: "On 12 July 1979 radio DJ Steve Dahl blew up disco records at Comiskey Park (also wow)"}
+  - {status: agreed, fact: "In 2004 Chicago named a stretch of Jefferson Street Frankie Knuckles Way"}
+  - {status: disputed, fact: "Dispute: Disco Demolition as racist and homophobic; Dahl denies it, Lawrence and historians read it that way"}
+  - {status: agreed, fact: "Media: Frankie Knuckles Way, June 2022, Sarah Stierch via Wikimedia Commons, CC BY 4.0"}
+cindy-campbell:
+  - {status: agreed, fact: "On 11 August 1973 Cindy Campbell held a party in the recreation room of 1520 Sedgwick Avenue, the Bronx (also wow)"}
+  - {status: recheck-confirmed, fact: "She was still in high school (also wow)"}
+  - {status: agreed, fact: "She needed money for new clothes for the school year (also wow)"}
+  - {status: recheck-confirmed, fact: "She wrote invitations on index cards"}
+  - {status: agreed, fact: "She asked her brother Clive to play the music; he became DJ Kool Herc"}
+  - {status: disputed, fact: "The night is commonly called the birth of hip-hop, though no genre starts at one party (also wow)"}
+  - {status: recheck-confirmed, fact: "Herc was born in Kingston and grew up inside its sound-system culture"}
+  - {status: agreed, fact: "Media: 1520 Sedgwick Avenue photographed July 2009, Bigtimepeace, public domain"}
+claudia-jones:
+  - {status: recheck-confirmed, fact: "Born in Trinidad in 1915"}
+  - {status: recheck-confirmed, fact: "Raised in Harlem"}
+  - {status: recheck-confirmed, fact: "Communist Party activist in New York, jailed four times, deported to Britain in 1955 amid McCarthyism (also wow)"}
+  - {status: agreed, fact: "In March 1958 she founded the West Indian Gazette"}
+  - {status: recheck-confirmed, fact: "The West Indian Gazette was founded in Brixton"}
+  - {status: recheck-confirmed, fact: "In summer 1958 race riots broke out in Notting Hill and Nottingham (also wow)"}
+  - {status: agreed, fact: "She staged a Caribbean carnival at St Pancras Town Hall in January 1959 (also wow)"}
+  - {status: recheck-confirmed, fact: "The carnival was partly televised"}
+  - {status: recheck-confirmed, fact: "Indoor carnivals fed the outdoor Notting Hill Carnival, first held in 1966, two years after her death"}
+  - {status: recheck-confirmed, fact: "She is buried in Highgate next to Karl Marx"}
+  - {status: recheck-confirmed, fact: "Further: English Heritage blue plaque at 6 Meadow Road, Vauxhall"}
+clotilda:
+  - {status: agreed, fact: "In 1860, more than 50 years after the US banned the slave trade, captives were smuggled to Mobile (also wow)"}
+  - {status: recheck-confirmed, fact: "Timothy Meaher, a Mobile shipbuilder/businessman, organised the smuggling"}
+  - {status: recheck-confirmed, fact: "Captain William Foster sailed the schooner Clotilda to Ouidah in Dahomey"}
+  - {status: disputed, fact: "Foster bought 110 men, women and children"}
+  - {status: agreed, fact: "Foster burned the ship to hide the evidence"}
+  - {status: agreed, fact: "Freed in 1865, the survivors reunited, bought land and built African Town (also wow)"}
+  - {status: recheck-confirmed, fact: "In 1927 Zora Neale Hurston interviewed Oluale Kossola (Cudjo Lewis); Barracoon waited until 2018"}
+  - {status: recheck-confirmed, fact: "In May 2019 the Alabama Historical Commission identified the wreck"}
+  - {status: agreed, fact: "Media: Cudjo Lewis in Africatown, 1914, Emma Langdon Roche, public domain"}
+combahee-raid:
+  - {status: agreed, fact: "In June 1863 Harriet Tubman and Union forces raided plantations on South Carolina's Combahee River"}
+  - {status: recheck-confirmed, fact: "On the night of 1 June 1863 three gunboats left Beaufort with the 2nd South Carolina Volunteers, Col. James Montgomery and Tubman"}
+  - {status: disputed, fact: "More than 700, or 750, people were freed (also wow and dispute field)"}
+  - {status: recheck-confirmed, fact: "In 1974 Black feminists in Boston took their name from the raid: the Combahee River Collective"}
+  - {status: agreed, fact: "Media: Harriet Tubman carte de visite, Auburn NY, c.1868-69, Benjamin F. Powelson, public domain"}
+cowries:
+  - {status: recheck-confirmed, fact: "In the Maldives molluscs were collected on coconut-leaf mats laid on the water and dried on the beach (also wow)"}
+  - {status: recheck-confirmed, fact: "Sailors took the shells to the great market of Bengal"}
+  - {status: agreed, fact: "Europeans bought cowries mainly for West Africa, where buyers preferred them"}
+  - {status: recheck-confirmed, fact: "Cowries were shipped to the Bight of Benin between the 16th and 19th centuries"}
+  - {status: agreed, fact: "Cowries were paid directly for captives (also wow)"}
+crazy-blues:
+  - {status: recheck-confirmed, fact: "Perry Bradford persuaded OKeh to use Mamie Smith, a vaudeville singer and dancer"}
+  - {status: agreed, fact: "On 10 August 1920 she recorded Bradford's 'Crazy Blues' with her Jazz Hounds"}
+  - {status: disputed, fact: "NPR reports 10,000 copies in the first week and 75,000 within a month; a million is unproven"}
+  - {status: agreed, fact: "Crazy Blues opened the 'race records' market (also wow)"}
+  - {status: recheck-confirmed, fact: "Next came Bessie Smith and the blues boom"}
+  - {status: agreed, fact: "Media audio: Crazy Blues, OKeh 4169, recorded 10 August 1920, music by Perry Bradford, Internet Archive transfer, public domain"}
+  - {status: agreed, fact: "Media image: OKeh advertisement, The Talking Machine World, 15 January 1921, public domain"}
+dave-the-potter:
+  - {status: agreed, fact: "Dave was an enslaved potter in the potteries of Edgefield, South Carolina"}
+  - {status: recheck-confirmed, fact: "Dave was born into slavery around 1800 and turned huge alkaline-glazed storage jars"}
+  - {status: recheck-confirmed, fact: "Dave signed and dated a jar in 1834 (also wow)"}
+  - {status: agreed, fact: "He kept writing his name, dates and couplets on jars for decades (also wow: carving poems)"}
+  - {status: recheck-confirmed, fact: "On 16 August 1857 he wrote 'I wonder where is all my relation / Friendship to all—and every nation'"}
+  - {status: recheck-confirmed, fact: "Freed in the 1860s, he became David Drake"}
+  - {status: recheck-confirmed, fact: "In 2025 the MFA Boston returned two of his jars to his descendants"}
+  - {status: agreed, fact: "Media: storage jar signed Dave, 1858, Met 2020.7, CC0 (Met Open Access)"}
+  - {status: recheck-confirmed, fact: "Media caption: jar made at Stony Bluff Manufactory, Edgefield District"}
+detroit-techno:
+  - {status: recheck-confirmed, fact: "Juan Atkins, Derrick May and Kevin Saunderson met at high school in Belleville and became the Belleville Three"}
+  - {status: agreed, fact: "Atkins and Richard Davis worked together as Cybotron"}
+  - {status: disputed, fact: "Cybotron released 'Clear' in 1982"}
+  - {status: disputed, fact: "Atkins took the word techno from Alvin Toffler's The Third Wave (also wow)"}
+  - {status: agreed, fact: "Atkins's label was Metroplex"}
+  - {status: recheck-confirmed, fact: "In 1991, in post-Wall Berlin, Underground Resistance's 'X-101' was the first release on the new Tresor label (also wow: Berlin as second home)"}
+  - {status: agreed, fact: "Juan Atkins died in 2026"}
+  - {status: agreed, fact: "Media: Juan Atkins photo, January 2010, Angie Linder, CC BY-SA 2.0"}
+  - {status: agreed, fact: "Media: Tresor club in the former Heizkraftwerk Mitte (since 2007), September 2008, Boca Dorada, CC BY-SA 2.0"}
+douglass-covey:
+  - {status: corrected, fact: "1834 (Narrative's own date is 1833)"}
+  - {status: recheck-confirmed, fact: "Douglass was a boy of about sixteen (also wow)"}
+  - {status: recheck-confirmed, fact: "Covey was a farmer near St. Michael's, Maryland, known as a 'negro-breaker' (wow: the man hired to break him)"}
+  - {status: agreed, fact: "Covey never laid a hand on / whipped Douglass again (also wow)"}
+  - {status: recheck-confirmed, fact: "He called it 'the turning-point in my career as a slave'"}
+  - {status: recheck-confirmed, fact: "In 1838 he escaped north"}
+  - {status: agreed, fact: "Media: frontispiece portrait from the 1845 Narrative, public domain"}
+du-bois-infographics:
+  - {status: recheck-confirmed, fact: "The 1900 Exposition Universelle in Paris had a Negro Exhibit in the American section"}
+  - {status: recheck-confirmed, fact: "The exhibit was put together by Thomas J. Calloway, Du Bois, Booker T. Washington and Daniel Murray of the Library of Congress"}
+  - {status: recheck-confirmed, fact: "The exhibit's job was to show African American economic and social progress since emancipation"}
+  - {status: agreed, fact: "Du Bois and his Atlanta University students drew charts of Black America for the 1900 Paris world's fair (also wow)"}
+  - {status: recheck-confirmed, fact: "The charts were in English and French"}
+  - {status: recheck-confirmed, fact: "The charts were drawn by hand and survive in the Library of Congress's Daniel Murray collection"}
+emmett-till:
+  - {status: agreed, fact: "Emmett Till was fourteen and killed in Mississippi in 1955"}
+  - {status: recheck-confirmed, fact: "He came from Chicago to visit family in the Mississippi Delta"}
+  - {status: corrected, fact: "The encounter at Bryant's store in Money occurred on 24 August 1955. Accounts differ over what Till did; describe the whistling allegation as disputed and do not imply the accusation was formally made that same day."}
+  - {status: recheck-confirmed, fact: "Four nights later Roy Bryant and J. W. Milam took him from his great-uncle's house; his body was found in the Tallahatchie River"}
+  - {status: agreed, fact: "His mother Mamie Till-Mobley held an open-casket funeral in Chicago (also wow)"}
+  - {status: recheck-confirmed, fact: "The funeral was at Roberts Temple"}
+  - {status: agreed, fact: "Jet published photographs of Till's body (also wow)"}
+  - {status: recheck-confirmed, fact: "The Jet photographer was David Jackson and Jet ran the pictures in September"}
+  - {status: recheck-confirmed, fact: "An all-white jury acquitted both men in about an hour (also wow: acquitted)"}
+  - {status: recheck-confirmed, fact: "In January 1956, safe from retrial, they sold their confession to Look (also wow)"}
+  - {status: disputed, fact: "Whether Carolyn Bryant later recanted is contested (Tyson's account, tapes, family denial, DOJ 2021; also dispute field)"}
+  - {status: recheck-confirmed, fact: "The 1956 Look confession is considered incomplete, concealing others involved (dispute field)"}
+  - {status: recheck-confirmed, fact: "In 2022 a law in his name made lynching a federal hate crime"}
+equiano:
+  - {status: agreed, fact: "In 1789 Equiano published his life story in London"}
+  - {status: recheck-confirmed, fact: "It was paid for in advance by subscribers"}
+  - {status: recheck-confirmed, fact: "The subscriber list opens with the Prince of Wales (also wow)"}
+  - {status: recheck-confirmed, fact: "The Narrative became a bestseller and ran to nine editions by 1794 (also wow)"}
+  - {status: recheck-confirmed, fact: "It tells of a childhood in Igbo country, kidnapping and the Middle Passage"}
+  - {status: recheck-confirmed, fact: "In 1766 he bought his own freedom for GBP 40"}
+  - {status: disputed, fact: "Carretta found a 1759 baptism record and a 1773 Navy muster roll giving his birthplace as Carolina (also wow, dispute)"}
+  - {status: disputed, fact: "Whether the African chapters are memory or gathered testimony is still contested"}
+  - {status: agreed, fact: "Media: 1789 first-edition frontispiece, W. Dent and D. Orme, British Library, CC0"}
+freedoms-journal:
+  - {status: agreed, fact: "Freedom's Journal was launched on 16 March 1827"}
+  - {status: agreed, fact: "It was launched by two free Black men, Samuel Cornish and John Russwurm, in New York"}
+  - {status: agreed, fact: "It was the first African American owned and operated newspaper in the US (also wow)"}
+  - {status: agreed, fact: "Its first front page declared 'We wish to plead our own cause. Too long have others spoken for us.' (also wow)"}
+  - {status: agreed, fact: "The weekly carried news, biographies, births and deaths, and attacks on slavery and discrimination"}
+  - {status: recheck-confirmed, fact: "When Russwurm declared for colonization in 1829, readers abandoned the paper"}
+  - {status: recheck-confirmed, fact: "The last issue is dated 28 March 1829"}
+  - {status: recheck-confirmed, fact: "By the end of 1829 Russwurm was in Liberia"}
+  - {status: recheck-confirmed, fact: "Russwurm later governed Maryland-in-Liberia"}
+  - {status: agreed, fact: "Media: front page of vol. 1 no. 3, New York, 30 March 1827, public domain"}
+funk:
+  - {status: agreed, fact: "Stubblefield's short solo on 'Funky Drummer' (1970) has been sampled on hundreds of songs, hip-hop above all (also wow)"}
+  - {status: agreed, fact: "Samples include Public Enemy's 'Fight the Power' (1989)"}
+  - {status: corrected, fact: "He received little financial reward (very little royalties)"}
+  - {status: agreed, fact: "In 1976 Parliament-Funkadelic landed a Mothership on stage"}
+  - {status: agreed, fact: "The Mothership show presented Black 'afronauts', Afrofuturism"}
+  - {status: agreed, fact: "A Mothership replica now stands in the Smithsonian"}
+  - {status: agreed, fact: "Media: P-Funk Mothership replica at NMAAHC opening, September 2016, Fuzheado, CC BY-SA 4.0"}
+gannibal:
+  - {status: agreed, fact: "He was seized/kidnapped as a boy and brought to Peter the Great (also wow)"}
+  - {status: recheck-confirmed, fact: "He was held in Constantinople"}
+  - {status: recheck-confirmed, fact: "He was brought to Peter around 1705"}
+  - {status: agreed, fact: "The tsar was his godfather (wow: Peter the Great's godson)"}
+  - {status: agreed, fact: "Peter sent him to France to study military engineering"}
+  - {status: recheck-confirmed, fact: "Back home he served as an engineer, fell into disgrace after Peter's death and rose again under Elizabeth"}
+  - {status: agreed, fact: "He rose to general-in-chief (also wow 'a general')"}
+  - {status: recheck-confirmed, fact: "He died in 1781"}
+  - {status: disputed, fact: "His birthplace is disputed: Ethiopia (old account) vs the Logone sultanate near Lake Chad (Gnammankou)"}
+  - {status: agreed, fact: "His great-grandson was Alexander Pushkin, Russia's national poet (also wow)"}
+  - {status: recheck-confirmed, fact: "Pushkin began a novel about him in 1827"}
+general-dumas:
+  - {status: agreed, fact: "Thomas-Alexandre was born in Saint-Domingue in 1762"}
+  - {status: recheck-confirmed, fact: "His birthplace was Jérémie"}
+  - {status: agreed, fact: "He was the son of Marie-Cessette, an enslaved woman, and nobleman Antoine Davy de la Pailleterie (also wow)"}
+  - {status: agreed, fact: "He was the father of the novelist Alexandre Dumas (wow)"}
+  - {status: recheck-confirmed, fact: "His father pawned the boy before bringing him to France"}
+  - {status: agreed, fact: "He enlisted under his mother's surname"}
+  - {status: agreed, fact: "He served in the Black Legion"}
+  - {status: recheck-confirmed, fact: "In 1792 Saint-Georges made him second in command of the Black Legion"}
+  - {status: agreed, fact: "Within a year (1793) he was a general"}
+  - {status: recheck-confirmed, fact: "He commanded whole armies, including the Army of the Alps"}
+  - {status: agreed, fact: "Sailing home from Egypt in 1799, his leaking ship put in at Taranto, where he was held prisoner for two years"}
+  - {status: agreed, fact: "He came back broken and died in 1806"}
+  - {status: agreed, fact: "Media: engraving by Jacques Marchand after Lethière, Paris 1797-99, BnF Gallica, public domain"}
+gospel:
+  - {status: agreed, fact: "Thomas A. Dorsey is called the father of gospel music (wow)"}
+  - {status: agreed, fact: "He was a blues pianist known as 'Georgia Tom' (wow)"}
+  - {status: recheck-confirmed, fact: "Dorsey came to Chicago from Georgia in 1916"}
+  - {status: recheck-confirmed, fact: "As Georgia Tom he led Ma Rainey's band"}
+  - {status: agreed, fact: "He began setting sacred words to blues patterns"}
+  - {status: agreed, fact: "His wife Nettie and their son died in 1932 (also wow)"}
+  - {status: corrected, fact: "Nettie died in childbirth; the son died the next day."}
+  - {status: agreed, fact: "In his grief he wrote 'Take My Hand, Precious Lord' (also wow)"}
+  - {status: recheck-confirmed, fact: "In 1933 he co-founded a national convention of gospel choirs"}
+  - {status: agreed, fact: "He later teamed with Mahalia Jackson"}
+  - {status: recheck-confirmed, fact: "Mahalia Jackson had arrived from New Orleans"}
+  - {status: agreed, fact: "Media: Mahalia Jackson, 1962, Carl Van Vechten, Library of Congress, public domain"}
+granville-sharp:
+  - {status: agreed, fact: "Sharp was a government clerk in the Ordnance Office (also wow)"}
+  - {status: recheck-confirmed, fact: "He worked at the Tower of London (also wow)"}
+  - {status: agreed, fact: "In 1765 he took in Jonathan Strong, beaten and thrown into the street by his master (also wow)"}
+  - {status: agreed, fact: "He later stopped Strong's shipment to Jamaica"}
+  - {status: recheck-confirmed, fact: "In 1783 Equiano brought him the Zong killings (also wow)"}
+  - {status: recheck-confirmed, fact: "Sharp pressed for murder charges over the Zong"}
+  - {status: recheck-confirmed, fact: "In 1787 he was involved in founding the Society for Effecting the Abolition of the Slave Trade"}
+  - {status: recheck-confirmed, fact: "He championed the Province of Freedom, a settlement for Black Londoners in Sierra Leone"}
+  - {status: agreed, fact: "Media: portrait print about 1810, after Francis Legatt Chantrey, National Library of Wales, public domain"}
+  - {status: corrected, fact: "lithograph portrait print"}
+gullah:
+  - {status: recheck-confirmed, fact: "Descendants of enslaved West and Central Africans on the Sea Islands of the Carolinas and Georgia made Gullah, a creole"}
+  - {status: agreed, fact: "Many called it broken English until Lorenzo Dow Turner"}
+  - {status: agreed, fact: "Turner published Africanisms in the Gullah Dialect (1949)"}
+  - {status: agreed, fact: "Amelia Dawley in Georgia sang Turner a song she could not translate (also wow, 1933)"}
+  - {status: agreed, fact: "The song was Mende (also wow)"}
+  - {status: agreed, fact: "Decades later researchers found a woman in Sierra Leone who knew the same funeral song (also wow)"}
+  - {status: recheck-confirmed, fact: "The village was Senehun Ngola"}
+  - {status: agreed, fact: "In 1997 Dawley's family went there"}
+  - {status: recheck-confirmed, fact: "The film The Language You Cry In (1998) tells the story"}
+  - {status: agreed, fact: "Media: sweetgrass basket, Jud McCranie (Bubba73), CC BY-SA 4.0"}
+haitian-revolution:
+  - {status: agreed, fact: "The enslaved of northern Saint-Domingue rose in 1791"}
+  - {status: recheck-confirmed, fact: "The rising followed a ceremony at Bois Caiman, in August 1791"}
+  - {status: recheck-confirmed, fact: "Under Toussaint Louverture they fought off British and Spanish armies"}
+  - {status: recheck-confirmed, fact: "Napoleon tried to restore slavery in 1802"}
+  - {status: agreed, fact: "Haiti became independent in 1804"}
+  - {status: recheck-confirmed, fact: "Dessalines beat Napoleon's troops and proclaimed Haiti on 1 January 1804"}
+  - {status: agreed, fact: "In 1825 France demanded an indemnity of 150 million francs to compensate former planters (also wow)"}
+  - {status: agreed, fact: "The indemnity was later cut to 90 million francs"}
+  - {status: recheck-confirmed, fact: "In 2022 the New York Times traced the payments over decades"}
+  - {status: disputed, fact: "Buck-Morss (2000) holds Hegel built master and slave out of Haitian news, a contested thesis"}
+  - {status: agreed, fact: "Media: Toussaint Louverture on horseback, Bonneville print, Gallica btv1b8413164j, public domain"}
+hannah-crafts:
+  - {status: recheck-confirmed, fact: "In 2001 Henry Louis Gates Jr. bought the manuscript novel at Swann Galleries, New York, for $8,500 (also wow)"}
+  - {status: recheck-confirmed, fact: "The novel was handwritten probably in the 1850s (also wow)"}
+  - {status: recheck-confirmed, fact: "The manuscript came from Dorothy Porter Wesley's collection"}
+  - {status: agreed, fact: "The title page named the author 'Hannah Crafts, a fugitive slave recently escaped from North Carolina'"}
+  - {status: agreed, fact: "Published in 2002 as The Bondwoman's Narrative"}
+  - {status: recheck-confirmed, fact: "It became a bestseller (also wow)"}
+  - {status: disputed, fact: "In 2013, after a decade of research, Gregg Hecimovich named Hannah Bond, enslaved by John Hill Wheeler; widely accepted though still argued"}
+henrietta-lacks:
+  - {status: recheck-confirmed, fact: "She came to Johns Hopkins Hospital in Baltimore with cervical cancer"}
+  - {status: agreed, fact: "In 1951 doctors kept a sample of her tumour cells without asking her (also wow)"}
+  - {status: agreed, fact: "She died in 1951"}
+  - {status: corrected, fact: "Lacks was 30 when the cervical biopsy was taken in February 1951; she turned 31 on 1 August and died that October. Age 30 is calculated from the documented birth and biopsy dates. Her cells were obtained without her knowledge and the HeLa lineage continues in culture."}
+  - {status: agreed, fact: "HeLa became the first immortalised human cell line, still dividing in laboratories worldwide (also wow)"}
+  - {status: corrected, fact: "HeLa cells were used in research and testing supporting polio-vaccine development; they were not an ingredient injected in the vaccine."}
+  - {status: recheck-confirmed, fact: "Her family was left out"}
+  - {status: corrected, fact: "Skloot's 2010 book brought the story to a much wider public. Her identity and cell-line history had been publicly discussed before 2010."}
+  - {status: agreed, fact: "In 2013 the NIH gave the family a say over access to the HeLa genome"}
+  - {status: recheck-confirmed, fact: "In 2023 the family settled a lawsuit against Thermo Fisher Scientific on confidential terms"}
+  - {status: agreed, fact: "Media: statue by Helen Wilson-Roe, Royal Fort House, Bristol, unveiled October 2021; photo 14GTR, CC BY-SA 4.0"}
+  - {status: agreed, fact: "Media: HeLa cells under the electron microscope, 1976, NIH, public domain"}
+highlife:
+  - {status: agreed, fact: "In the Gold Coast brass bands, sailors' palm-wine guitar and ballroom orchestras met"}
+  - {status: recheck-confirmed, fact: "Jacob Sam and his Kumasi Trio's 'Yaa Amponsah' is often heard as highlife's prototype"}
+  - {status: agreed, fact: "By the 1920s orchestras played for the elite in Accra's clubs and onlookers outside named it 'high life' (also wow)"}
+  - {status: agreed, fact: "E. T. Mensah and the Tempos spread highlife"}
+  - {status: recheck-confirmed, fact: "After the war Mensah took it out of the ballroom with a small swing-style band"}
+  - {status: recheck-confirmed, fact: "Tempos tours lit up Nigeria; Bobby Benson's brass sound in Lagos followed"}
+  - {status: recheck-confirmed, fact: "Victor Olaiya became a star"}
+hip-hop:
+  - {status: agreed, fact: "DJ Kool Herc is Clive Campbell, born in Kingston, Jamaica"}
+  - {status: recheck-confirmed, fact: "He brought Jamaica's sound-system culture to the Bronx"}
+  - {status: recheck-confirmed, fact: "His father's big speakers powered the parties"}
+  - {status: agreed, fact: "The merry-go-round: switching between two turntables so the funk/soul drum break ran as long as he liked"}
+  - {status: recheck-confirmed, fact: "He used two copies of the same record (also wow)"}
+  - {status: agreed, fact: "The party usually dated as the start is Cindy Campbell's, August 1973"}
+  - {status: recheck-confirmed, fact: "Grandmaster Flash and Afrika Bambaataa built on it"}
+  - {status: recheck-confirmed, fact: "'Rapper's Delight' (1979) took rap to a mass market, rode Chic's 'Good Times' bass line and ended in shared writing credits"}
+  - {status: agreed, fact: "Media: DJ Kool Herc, Hunts Point, the Bronx, 28 Feb 2009; Bigtimepeace via Wikimedia Commons; public domain"}
+hurston:
+  - {status: recheck-confirmed, fact: "Hurston grew up in Eatonville, one of the first US towns incorporated by Black people"}
+  - {status: recheck-confirmed, fact: "Her father became mayor of Eatonville"}
+  - {status: recheck-confirmed, fact: "She studied anthropology at Barnard under Franz Boas"}
+  - {status: recheck-confirmed, fact: "She went south to collect folklore"}
+  - {status: agreed, fact: "She sat with Kossola (Cudjo Lewis), a Clotilda survivor, and took down his story in his own speech"}
+  - {status: recheck-confirmed, fact: "She did so in Mobile in 1927"}
+  - {status: agreed, fact: "Publishers wanted it rewritten in standard English; she refused, and Barracoon appeared only in 2018 (also wow)"}
+  - {status: recheck-confirmed, fact: "She wrote Their Eyes Were Watching God (1937) in seven weeks"}
+  - {status: recheck-confirmed, fact: "She died in a county welfare home in Fort Pierce in 1960 and lay in an unmarked grave"}
+  - {status: recheck-confirmed, fact: "Alice Walker located the grave in 1973 and placed a stone reading 'A Genius of the South'"}
+ida-b-wells:
+  - {status: agreed, fact: "Ida B. Wells co-owned the Memphis Free Speech"}
+  - {status: agreed, fact: "Her friend Thomas Moss and two partners in a Black grocery were lynched in 1892"}
+  - {status: recheck-confirmed, fact: "In May 1892 she wrote 'Nobody in this section of the country believes the old thread-bare lie that Negro men rape white women'"}
+  - {status: agreed, fact: "Threats forced her out of Memphis; she could not go home"}
+  - {status: disputed, fact: "She was in New York when businessmen met to threaten lynching, and creditors sold the press"}
+  - {status: agreed, fact: "Southern Horrors appeared in 1892 and A Red Record in 1895"}
+  - {status: recheck-confirmed, fact: "They built their case on lynchings reported by white newspapers, above all the Chicago Tribune's annual tallies (also wow), quoting 'Out of their own mouths shall the murderers be condemned'"}
+  - {status: agreed, fact: "Media: Ida B. Wells, about 1893, Mary Garrity, National Portrait Gallery, public domain (PD-US-expired)"}
+ira-aldridge:
+  - {status: disputed, fact: "Dispute field: birth year 1807 (Folger) vs 1805 (Encyclopedia of Ukraine); London debut October 1825 vs 1826"}
+  - {status: recheck-confirmed, fact: "Barred from a real career in New York, where he had acted with the African Grove company"}
+  - {status: recheck-confirmed, fact: "He sailed for Britain at seventeen"}
+  - {status: recheck-confirmed, fact: "In October 1825 he made his London debut at the Royal Coburg (now the Old Vic) as Oroonoko in The Revolt of Surinam"}
+  - {status: agreed, fact: "He became famous as Othello"}
+  - {status: recheck-confirmed, fact: "He became famous as Aaron the Moor"}
+  - {status: agreed, fact: "He toured Europe, playing in English to casts speaking German or Swedish"}
+  - {status: recheck-confirmed, fact: "In November 1858 he played Othello in St Petersburg, with Taras Shevchenko in the audience"}
+  - {status: recheck-confirmed, fact: "Shevchenko was a poet born a serf; they became friends"}
+  - {status: agreed, fact: "Shevchenko drew him in St Petersburg on 25 December 1858 (also media caption)"}
+  - {status: recheck-confirmed, fact: "He died on tour in Łódź in 1867"}
+  - {status: agreed, fact: "Media: credit Taras Shevchenko; Taras Shevchenko National Museum, Kyiv; public domain"}
+jacobs-garret:
+  - {status: agreed, fact: "In 1835 Harriet Jacobs hid in a crawlspace at her grandmother's house in Edenton, North Carolina"}
+  - {status: recheck-confirmed, fact: "She was escaping Dr. James Norcom and his years of sexual threats"}
+  - {status: agreed, fact: "'The garret was only nine feet long, and seven wide. The highest part was three feet high' (also wow)"}
+  - {status: agreed, fact: "She stayed nearly seven years (also wow)"}
+  - {status: agreed, fact: "Through a hole she watched her children in the street (also wow)"}
+  - {status: agreed, fact: "In 1842 she escaped by boat to the North"}
+  - {status: agreed, fact: "In 1861 she published Incidents in the Life of a Slave Girl under the name Linda Brent"}
+  - {status: agreed, fact: "Media: Harriet Jacobs in 1894, only known formal portrait, Gilbert Studios, public domain"}
+jazz:
+  - {status: agreed, fact: "On Sunday afternoons enslaved Africans gathered in Congo Square to drum, sing and dance"}
+  - {status: corrected, fact: "No recording of Bolden is known to survive. Avoid the stronger claim that none was ever made."}
+  - {status: agreed, fact: "The first jazz record, 'Livery Stable Blues' (Victor, 1917), was cut by the white Original Dixieland Jass Band from New Orleans (also wow)"}
+  - {status: recheck-confirmed, fact: "The ODJB claimed they had invented jazz rather than credit their Black teachers (also wow)"}
+  - {status: agreed, fact: "From 1925 in Chicago, Armstrong's Hot Five and Hot Seven turned jazz into a soloist's art"}
+  - {status: agreed, fact: "Armstrong came north in 1922 when King Oliver sent for him"}
+  - {status: agreed, fact: "Media: Buddy Bolden about 1905, unknown photographer, Willie Cornish collection, public domain"}
+jerry-lawson:
+  - {status: recheck-confirmed, fact: "Lawson grew up in Queens building ham radios and selling walkie-talkies"}
+  - {status: agreed, fact: "Lawson was a Black engineer at Fairchild in Silicon Valley"}
+  - {status: recheck-confirmed, fact: "He built a coin-op game, Demolition Derby, in his garage on Fairchild's F8 microprocessor and tested it in a pizza parlour"}
+  - {status: recheck-confirmed, fact: "Fairchild put him in charge of its video products"}
+  - {status: agreed, fact: "His team's Channel F (1976) was the first home console with interchangeable cartridges (also wow)"}
+  - {status: recheck-confirmed, fact: "Fairchild called the cartridges Videocarts"}
+  - {status: recheck-confirmed, fact: "The Atari 2600 soon eclipsed the Channel F"}
+  - {status: recheck-confirmed, fact: "Lawson was one of the first Black engineers in Silicon Valley"}
+  - {status: recheck-confirmed, fact: "Lawson was an early Homebrew Computer Club member"}
+  - {status: recheck-confirmed, fact: "Lawson later founded Video Soft"}
+  - {status: agreed, fact: "Media: Fairchild Channel F console, Evan-Amos via Wikimedia Commons, CC BY-SA 3.0"}
+juan-latino:
+  - {status: agreed, fact: "As an enslaved Black boy in the household of the future Duke of Sessa he went with his young master to grammar classes in Granada (also wow)"}
+  - {status: agreed, fact: "He went on to teach (Latin) in Granada, becoming a Latin professor (also wow)"}
+  - {status: disputed, fact: "In 1573 (or 1572) a Granada printer issued his Latin verse"}
+  - {status: agreed, fact: "The volume was led by the Austrias Carmen, an epic on Don John of Austria's victory at Lepanto"}
+  - {status: recheck-confirmed, fact: "In 1605 Cervantes's prefatory verses to Don Quixote mention 'el negro Juan Lati-' (ladino) (also wow)"}
+  - {status: disputed, fact: "His birthplace is disputed"}
+kente:
+  - {status: agreed, fact: "Kente is woven in long narrow strips on horizontal looms, then sewn edge to edge into a large cloth"}
+  - {status: recheck-confirmed, fact: "Asante tradition says two men of Bonwire learned the craft by watching a spider spin its web"}
+  - {status: agreed, fact: "Ewe weavers to the east have their own tradition"}
+  - {status: agreed, fact: "Kente designs are named, after proverbs, sayings or events"}
+  - {status: recheck-confirmed, fact: "Kente stoles became a fixture of Black graduations in the United States"}
+  - {status: agreed, fact: "Media: weaver at narrow-strip loom, Bonwire, 2019, Sadads, CC BY-SA 4.0"}
+liberia:
+  - {status: recheck-confirmed, fact: "In 1816 white Americans founded the American Colonization Society to move free Black people to Africa"}
+  - {status: recheck-confirmed, fact: "Its first settlers sailed in 1820"}
+  - {status: agreed, fact: "Liberia was founded by Black American settlers (wow: formerly enslaved Americans)"}
+  - {status: recheck-confirmed, fact: "Editors like John Russwurm of Freedom's Journal followed to Liberia"}
+  - {status: agreed, fact: "In 1847 Liberia declared itself a sovereign republic"}
+  - {status: agreed, fact: "The settlers mostly kept apart from the peoples already there and filled the government"}
+  - {status: agreed, fact: "In 1930 an international commission had African American scholar Charles S. Johnson as the U.S. member"}
+  - {status: agreed, fact: "The commission found officials shipping forced labour to Fernando Po (also wow)"}
+  - {status: recheck-confirmed, fact: "It named Vice President Yancy and called the conditions 'scarcely distinguishable from slave raiding'"}
+  - {status: agreed, fact: "President King resigned"}
+mansa-musa:
+  - {status: agreed, fact: "In 1324 Musa, ruler of Mali, stopped in Cairo on his way to Mecca"}
+  - {status: agreed, fact: "Musa's gold flooded the Cairo market, depressing its value (al-Umari)"}
+  - {status: recheck-confirmed, fact: "Half a century later a Majorcan mapmaker painted 'Musse Melly' on the Catalan Atlas as the richest king of the region"}
+  - {status: agreed, fact: "The map shows Musa crowned, holding a gold disc"}
+  - {status: agreed, fact: "Media: Catalan Atlas sheet 6 detail, c. 1375, attributed to Abraham Cresques, BnF via Commons, public domain"}
+misogyny-in-hip-hop:
+  - {status: recheck-confirmed, fact: "In 1991 Dr. Dre assaulted hip-hop journalist Dee Barnes"}
+  - {status: corrected, fact: "U.N.I.T.Y. was released in 1993 and won the Grammy in 1995. Both sources support its critique of misogyny and violence."}
+  - {status: agreed, fact: "Moya Bailey, as a Spelman student, organised a protest against Nelly's 'Tip Drill' video (also wow)"}
+  - {status: recheck-confirmed, fact: "The protest was in 2004 (also wow)"}
+  - {status: recheck-confirmed, fact: "Asha Jennings co-led the protest"}
+  - {status: disputed, fact: "Who cancelled the 2004 bone-marrow drive is disputed (dispute field)"}
+  - {status: agreed, fact: "In 2010 Bailey wrote down a name for it: misogynoir (also wow)"}
+  - {status: recheck-confirmed, fact: "In 2015 Dre publicly apologised to the women he had hurt"}
+nanny-of-the-maroons:
+  - {status: agreed, fact: "Nanny led the Windward Maroons of Jamaica's Blue Mountains against the British"}
+  - {status: recheck-confirmed, fact: "The Maroons fought with guerrilla ambushes in the hills"}
+  - {status: agreed, fact: "Legends such as Nanny catching bullets are not supported by any document"}
+  - {status: recheck-confirmed, fact: "When Captain Quao signed a peace treaty in 1739, Nanny reportedly opposed it"}
+  - {status: disputed, fact: "A 1740 land patent, still in the Jamaica Archives, granted 500 acres to Nanny and her people"}
+  - {status: agreed, fact: "Jamaica made her a National Hero"}
+  - {status: recheck-confirmed, fact: "She is Jamaica's first and only woman National Hero"}
+  - {status: disputed, fact: "The year of her national-hero status is given variously as 1975, 1976 and 1982"}
+  - {status: agreed, fact: "She is on Jamaica's 500-dollar note"}
+nardal-sisters:
+  - {status: agreed, fact: "Paulette Nardal and her sisters from Martinique hosted a salon in Clamart (also wow)"}
+  - {status: agreed, fact: "Paulette and the Haitian Leo Sajous launched La Revue du monde noir in 1931"}
+  - {status: agreed, fact: "The Revue was bilingual in French and English"}
+  - {status: agreed, fact: "It lasted six issues"}
+  - {status: recheck-confirmed, fact: "It lasted about six months"}
+  - {status: recheck-confirmed, fact: "The salon predated Cesaire coining the word Negritude (wow)"}
+ngugi:
+  - {status: agreed, fact: "Ngũgĩ co-wrote a Gikuyu play staged by a community theatre in Kenya"}
+  - {status: recheck-confirmed, fact: "In 1977 peasants and workers at the Kamiriithu cultural centre near Limuru staged Ngaahika Ndeenda, 'I Will Marry When I Want', which Ngũgĩ co-wrote"}
+  - {status: agreed, fact: "He was held without charge in prison from 1977 (also wow: jailed without charge for the play)"}
+  - {status: recheck-confirmed, fact: "He was arrested that December (1977)"}
+  - {status: recheck-confirmed, fact: "He was held until December 1978"}
+  - {status: agreed, fact: "In prison, on toilet paper, he wrote Caitaani Mũtharaba-Inĩ, Devil on the Cross, his first Gikuyu novel (also wow)"}
+  - {status: recheck-confirmed, fact: "Police later razed the theatre"}
+  - {status: recheck-confirmed, fact: "Decolonising the Mind (1986), he wrote, was his farewell to English"}
+  - {status: recheck-confirmed, fact: "He died in the United States in May 2025"}
+  - {status: agreed, fact: "Media: Ngũgĩ at the Library of Congress, 9 May 2019, Shawn Miller, CC0"}
+nko:
+  - {status: agreed, fact: "Souleymane Kante from Kankan, Guinea, invented N'Ko around 1949 while living in Bingerville, Cote d'Ivoire (also wow)"}
+  - {status: agreed, fact: "N'Ko was made for the Manding languages"}
+  - {status: disputed, fact: "Kante acted after reading that Africans lacked writing of their own (also wow, dispute)"}
+  - {status: recheck-confirmed, fact: "Users mark 14 April 1949 as Alphabet Day"}
+  - {status: agreed, fact: "A grassroots literacy movement spread N'Ko"}
+  - {status: recheck-confirmed, fact: "The movement spread it through textbooks and a Qur'an translation"}
+  - {status: agreed, fact: "N'Ko is part of Unicode (wow)"}
+  - {status: corrected, fact: "N'Ko was encoded in Unicode 5.0 in 2006, enabling standardized digital representation. Actual support on particular phones/computers arrived separately."}
+  - {status: agreed, fact: "Media: tomb of Solomana Kante, photographed 2017, LamineNoracisse, CC BY-SA 3.0"}
+nollywood:
+  - {status: disputed, fact: "When the tapes stopped selling he put an original story on them (also wow)"}
+  - {status: recheck-confirmed, fact: "The story was written with Okechukwu Ogunjiofor"}
+  - {status: agreed, fact: "Living in Bondage (1992) was shot in Igbo"}
+  - {status: recheck-confirmed, fact: "It was made for 150,000 naira"}
+  - {status: disputed, fact: "It sold 100,000 copies in weeks or over a million, by different counts"}
+  - {status: recheck-confirmed, fact: "It is remembered as the first Nollywood blockbuster (also wow: usually called Nollywood's first hit)"}
+  - {status: recheck-confirmed, fact: "Nnebue had already made Yoruba-language films before it"}
+  - {status: recheck-confirmed, fact: "Further: Living in Bondage was directed by Chris Obi Rapu"}
+  - {status: agreed, fact: "Media: crew shooting a Nollywood film in Awka, May 2015, Bestvillage, CC BY-SA 4.0"}
+nsibidi:
+  - {status: agreed, fact: "In the Cross River region of Nigeria and Cameroon the Ekpe (leopard) society kept knowledge in nsibidi, ideographic/abstract and gestural signs"}
+  - {status: agreed, fact: "Members wear ukara, cotton wrappers with the signs dyed in indigo"}
+  - {status: agreed, fact: "In 1911 Elphinstone Dayrell printed a set of nsibidi signs in a London journal (also media caption/credit: JRAI 41, sign for two people talking, public domain)"}
+  - {status: recheck-confirmed, fact: "Enslaved Cross River Africans carried Ekpe to Cuba and rebuilt lodges in Havana and Matanzas as the Abakuá society (also wow: crossed the Atlantic)"}
+nzinga:
+  - {status: agreed, fact: "Njinga negotiated with the Portuguese"}
+  - {status: recheck-confirmed, fact: "In 1622 Njinga, sister of the king of Ndongo, went to Luanda to negotiate peace"}
+  - {status: agreed, fact: "Offered a mat while the governor sat in a chair, she had an attendant kneel and sat on them (also wow)"}
+  - {status: agreed, fact: "She fought the Portuguese until her death in 1663"}
+  - {status: agreed, fact: "She took the kingdom of Matamba"}
+  - {status: recheck-confirmed, fact: "She allied with the Dutch when they seized Luanda in the 1640s"}
+  - {status: agreed, fact: "She was a slave trader who sold war captives to the Portuguese"}
+  - {status: agreed, fact: "In Angola she is a national heroine"}
+  - {status: disputed, fact: "Dispute: birth year 1582 (Heywood) or 1583 (SAHO)"}
+  - {status: disputed, fact: "Dispute: her reputation is contested between colonial/missionary and nationalist historians"}
+  - {status: agreed, fact: "Media: Ann Zingha, queen of Matamba, 19th-century lithograph, Francois Villain, Schomburg Center NYPL, public domain"}
+octavia-butler:
+  - {status: recheck-confirmed, fact: "Butler grew up in Pasadena, raised by a mother who worked as a maid"}
+  - {status: agreed, fact: "Kindred (1979) brought slavery into science fiction through time travel"}
+  - {status: agreed, fact: "In 1995 she became the first science fiction writer to receive a MacArthur Fellowship (also wow)"}
+  - {status: corrected, fact: "Butler wrote affirmations predicting bestseller status. The notes document her ambitions; they do not establish that writing affirmations caused commercial success."}
+  - {status: agreed, fact: "She first reached the New York Times bestseller list in 2020, fourteen years after her 2006 death (also wow)"}
+  - {status: recheck-confirmed, fact: "The 2020 bestseller was Parable of the Sower"}
+  - {status: agreed, fact: "Media: Butler signing Fledgling, 25 October 2005, Nikolas Coukouma, CC BY-SA 2.5"}
+oliver-golden:
+  - {status: agreed, fact: "In 1931 Oliver Golden led a team of Black American agronomists to a Soviet cotton project in Uzbekistan (also wow)"}
+  - {status: disputed, fact: "Golden was a Tuskegee graduate (also wow)"}
+  - {status: agreed, fact: "Golden came with Bertha Bialek"}
+  - {status: agreed, fact: "Yelena Khanga, their granddaughter, became a journalist"}
+  - {status: recheck-confirmed, fact: "Khanga became a TV host (wow: Moscow talk-show host)"}
+  - {status: recheck-confirmed, fact: "Khanga wrote the family's story"}
+omar-ibn-said:
+  - {status: agreed, fact: "Omar ibn Said was a Fula scholar from Futa Toro in West Africa"}
+  - {status: recheck-confirmed, fact: "He was landed in Charleston as a slave"}
+  - {status: agreed, fact: "He fled a cruel owner"}
+  - {status: agreed, fact: "He was jailed in Fayetteville, North Carolina, and wrote in Arabic on the walls of his cell"}
+  - {status: recheck-confirmed, fact: "He lived with the Owens until his death"}
+  - {status: disputed, fact: "He died in 1863"}
+  - {status: agreed, fact: "In 1831 he wrote his life in Arabic, opening with verses of the Qur'an (also wow)"}
+  - {status: agreed, fact: "It is the only known slave autobiography written in Arabic in America (also wow)"}
+palmares:
+  - {status: agreed, fact: "Palmares was a community of people fleeing slavery centred on the Serra da Barriga in present-day Alagoas"}
+  - {status: recheck-confirmed, fact: "From around 1600 people who fled Pernambuco sugar plantations built a network of villages there"}
+  - {status: recheck-confirmed, fact: "It beat back Dutch and Portuguese expeditions for decades (wow: held out about a century)"}
+  - {status: agreed, fact: "Zumbi led Palmares"}
+  - {status: recheck-confirmed, fact: "Ganga Zumba led it before Zumbi"}
+  - {status: corrected, fact: "Domingos Jorge Velho's force captured Macaco in 1694. 'Deadliest' is an unsupported superlative; the 1694 fall and Zumbi's 1695 death are separate events."}
+  - {status: agreed, fact: "Zumbi was killed on 20 November 1695 (wow: day its last leader died)"}
+  - {status: recheck-confirmed, fact: "Zumbi escaped the 1694 attack and his head was sent to Recife"}
+  - {status: agreed, fact: "Brazil's Black movement made 20 November its own"}
+  - {status: agreed, fact: "Law 14.759 of December 2023 made it a national holiday, Dia de Zumbi e da Consciencia Negra (also wow)"}
+  - {status: agreed, fact: "Media: Palmares on a 1647 Dutch map, Frans Post, public domain"}
+  - {status: agreed, fact: "Media: Serra da Barriga 2018, Vanderlei Almeida de Oliveira, CC BY-SA 4.0"}
+paper-bag-test:
+  - {status: disputed, fact: "The paper bag test: those darker than a brown bag were refused entry to clubs, fraternities, sororities"}
+  - {status: agreed, fact: "Audrey Elisa Kerr researched in Black Washington whether the test was real or an urban myth"}
+  - {status: disputed, fact: "The bag itself remains contested; the colour preference is measurable"}
+  - {status: recheck-confirmed, fact: "A 2011 Villanova study of over 12,000 imprisoned Black women in North Carolina found light-skinned women got sentences about 12% shorter"}
+partus-1662:
+  - {status: agreed, fact: "Elizabeth Key was the daughter of English planter Thomas Key and an enslaved African woman"}
+  - {status: agreed, fact: "She was baptised and held far beyond the nine years her father had set"}
+  - {status: agreed, fact: "She won her freedom in 1656"}
+  - {status: agreed, fact: "English common law said a child followed the father"}
+  - {status: agreed, fact: "In December 1662 the General Assembly enacted that children 'shalbe held bond or free only according to the condition of the mother' (also wow)"}
+  - {status: disputed, fact: "The Assembly's 1662 act answered Key's case"}
+  - {status: agreed, fact: "In 1667 the assembly enacted that baptism did not free an enslaved person"}
+phillis-wheatley:
+  - {status: agreed, fact: "A London bookseller published Poems on Various Subjects, Religious and Moral by Phillis in 1773"}
+  - {status: recheck-confirmed, fact: "Publication was in September 1773"}
+  - {status: recheck-confirmed, fact: "Phillis was brought from Africa as a child and enslaved in a Boston household"}
+  - {status: agreed, fact: "The book opens with an attestation by eighteen prominent Boston men, from Governor Hutchinson to John Hancock, that the poems were 'written by Phillis' (also wow)"}
+  - {status: recheck-confirmed, fact: "Her frontispiece portrait is credited to Scipio Moorhead, enslaved by a Boston minister"}
+  - {status: recheck-confirmed, fact: "The book includes 'To S. M. a young African Painter, on seeing his Works'"}
+  - {status: agreed, fact: "In 1775 she sent George Washington a poem"}
+  - {status: agreed, fact: "In February 1776 Washington replied, inviting her to visit him in Cambridge"}
+  - {status: recheck-confirmed, fact: "Washington wrote he would be 'happy to see a person so favourd by the Muses'"}
+planet-rock:
+  - {status: agreed, fact: "In 1982 Afrika Bambaataa cut 'Planet Rock' with producer Arthur Baker"}
+  - {status: recheck-confirmed, fact: "It was for Tom Silverman's new label Tommy Boy"}
+  - {status: agreed, fact: "The track drew on Kraftwerk"}
+  - {status: recheck-confirmed, fact: "Bambaataa already played 'Trans-Europe Express' in his sets; 'Numbers' beat used too"}
+  - {status: agreed, fact: "They rebuilt both on a Roland TR-808 (also wow: Japanese drum machine)"}
+  - {status: recheck-confirmed, fact: "Kraftwerk were angry and Tommy Boy paid them a dollar a record (also wow)"}
+  - {status: disputed, fact: "From 2016 several (at least a dozen) men accused Bambaataa of abusing them as boys; he denied it, was never criminally charged; Savage amended his account in 2024"}
+  - {status: agreed, fact: "In 2025 he lost a civil suit by default"}
+  - {status: recheck-confirmed, fact: "He died in 2026"}
+radio-haiti:
+  - {status: disputed, fact: "Around 1970 the agronomist Jean Dominique bought a Port-au-Prince station (also dispute field)"}
+  - {status: agreed, fact: "Dominique and Michèle Montas, his wife and co-anchor, ran the station and broadcast news and commentary in Creole"}
+  - {status: recheck-confirmed, fact: "It was the first station in Haiti to deliver news in Creole (also wow)"}
+  - {status: recheck-confirmed, fact: "On 28 November 1980 the Duvalier regime raided it and the couple went into exile (wow: survived a raid)"}
+  - {status: agreed, fact: "Dominique was killed in 2000 (also wow)"}
+  - {status: recheck-confirmed, fact: "He was shot dead outside the station on 3 April 2000"}
+  - {status: agreed, fact: "Threats closed the station"}
+  - {status: disputed, fact: "The station closed by 2003"}
+  - {status: agreed, fact: "Its tapes are open online at Duke"}
+  - {status: disputed, fact: "The tapes go back to 1957"}
+reggae:
+  - {status: agreed, fact: "Ska slowed into rocksteady and then reggae, taking in US soul and rhythm and blues"}
+  - {status: corrected, fact: "Sound systems appeared in the late 1940s; selector/deejay roles and toasting developed subsequently, especially in the 1950s. Do not project the mature format onto the first systems."}
+  - {status: agreed, fact: "In 1968 the Maytals recorded 'Do the Reggay' (also wow: 1968 record)"}
+  - {status: recheck-confirmed, fact: "'Do the Reggay' was the first song to use the name (also wow)"}
+  - {status: disputed, fact: "Toots Hibbert said the word came to him in Trench Town from 'streggay', slang for a badly dressed person (also wow, dispute field)"}
+  - {status: agreed, fact: "In 2018 UNESCO inscribed reggae music of Jamaica as intangible heritage"}
+rhythm-and-blues:
+  - {status: agreed, fact: "Billboard ranked Black popular records under the name 'Race'"}
+  - {status: agreed, fact: "Jerry Wexler, a young writer editing Billboard's charts, proposed 'rhythm and blues'"}
+  - {status: agreed, fact: "Billboard renamed the chart in 1949"}
+  - {status: recheck-confirmed, fact: "Atlantic Records was founded in 1947"}
+  - {status: recheck-confirmed, fact: "Atlantic became known as 'The House that Ruth Built' thanks to Ruth Brown"}
+rinse-fm:
+  - {status: agreed, fact: "In 1994, on Notting Hill Carnival weekend, teenage Geeneus and friends started Rinse in a council-flat kitchen in Tower Hamlets with decks and an aerial (also wow)"}
+  - {status: recheck-confirmed, fact: "Geeneus was 16 and the friends were Slimzee, Target and Wiley"}
+  - {status: agreed, fact: "For years Rinse was a pirate with transmitters on Bow tower blocks, pursued by the DTI (later Ofcom)"}
+  - {status: recheck-confirmed, fact: "Transmitters were moved from block to block and torn down by the DTI/Ofcom"}
+  - {status: recheck-confirmed, fact: "In 2005 Slimzee got an ASBO (also wow: co-founder got an ASBO)"}
+  - {status: agreed, fact: "Rinse carried jungle into garage, grime and dubstep"}
+  - {status: agreed, fact: "In June 2010 Ofcom granted Rinse a community licence"}
+robert-smalls:
+  - {status: agreed, fact: "In May 1862 Robert Smalls, enslaved pilot of the Confederate transport Planter, took it out of Charleston Harbor with the enslaved crew"}
+  - {status: recheck-confirmed, fact: "Smalls was 23"}
+  - {status: recheck-confirmed, fact: "On the night of 12 May the white crewmen went ashore"}
+  - {status: disputed, fact: "They fired the boilers around 3 a.m. (also wow)"}
+  - {status: agreed, fact: "They picked up their families at another wharf"}
+  - {status: recheck-confirmed, fact: "They steamed past Fort Sumter with Smalls giving the right signals in the captain's hat (also wow)"}
+  - {status: disputed, fact: "Sixteen people reached the Union blockade and freedom"}
+  - {status: agreed, fact: "He handed the ship to the Union Navy (wow)"}
+  - {status: agreed, fact: "He then piloted for the Union Navy"}
+  - {status: agreed, fact: "He bought the Beaufort house of the man who had enslaved him"}
+  - {status: agreed, fact: "He served in the US House"}
+  - {status: recheck-confirmed, fact: "He served parts of five terms"}
+  - {status: agreed, fact: "Media: Robert Smalls, Brady/Handy studio, Library of Congress cwpbh.03683, 1870s, public domain"}
+  - {status: agreed, fact: "Media: gunboat Planter, Harper's Weekly 14 June 1862 p. 372, public domain"}
+rock-n-roll:
+  - {status: agreed, fact: "In March 1951 Ike Turner's Kings of Rhythm cut 'Rocket 88' at Sam Phillips's studio in Memphis; it was issued under singer Jackie Brenston's name (also wow)"}
+  - {status: recheck-confirmed, fact: "'Rocket 88' is a song about an Oldsmobile"}
+  - {status: disputed, fact: "It is often called the first rock and roll record, though that is debated"}
+  - {status: recheck-confirmed, fact: "In 1951 in Cleveland DJ Alan Freed began playing R&B and calling it rock and roll"}
+  - {status: recheck-confirmed, fact: "Fats Domino came from New Orleans"}
+  - {status: recheck-confirmed, fact: "Labels aimed separate versions at white buyers"}
+  - {status: agreed, fact: "Media: Chuck Berry publicity photograph, 1957, Universal Attractions, public domain"}
+rosetta-tharpe:
+  - {status: recheck-confirmed, fact: "She was a Pentecostal gospel singer with a guitar (also wow)"}
+  - {status: agreed, fact: "In fall 1938 she appeared at the Cotton Club in Manhattan"}
+  - {status: agreed, fact: "In 1938 she made her first Decca records"}
+  - {status: recheck-confirmed, fact: "Her first Decca records included 'Rock Me'"}
+  - {status: recheck-confirmed, fact: "She and Sammy Price released 'Strange Things Happening Every Day', No. 2 on the race chart"}
+  - {status: disputed, fact: "'Strange Things Happening Every Day' dates to 1944 (dispute: PBS 1944, NPR 1945)"}
+  - {status: recheck-confirmed, fact: "In 1964 at a disused Manchester railway station she played electric guitar for television"}
+  - {status: recheck-confirmed, fact: "She died in 1973"}
+  - {status: recheck-confirmed, fact: "Her Philadelphia grave stayed unmarked until fans paid for a stone (also wow)"}
+  - {status: disputed, fact: "The headstone was placed in 2009"}
+  - {status: agreed, fact: "In 2018 the Rock & Roll Hall of Fame inducted her for musical influence"}
+  - {status: agreed, fact: "Media: 1938 publicity photograph with guitar, James J. Kriegsmann, public domain"}
+saint-georges:
+  - {status: agreed, fact: "Joseph Bologne was born in Guadeloupe (also wow)"}
+  - {status: agreed, fact: "He became a celebrated fencer and violinist"}
+  - {status: recheck-confirmed, fact: "In 1772 he played his own concertos with the Concert des Amateurs"}
+  - {status: agreed, fact: "He soon led the Concert des Amateurs (1773)"}
+  - {status: recheck-confirmed, fact: "When it folded in 1781 he founded the Concert de la Loge Olympique, a Masonic orchestra"}
+  - {status: agreed, fact: "Haydn wrote his six Paris symphonies for the Loge Olympique, which ordered them (also wow)"}
+  - {status: corrected, fact: "Haydn composed the six symphonies in 1785–1786; their first Paris performances were probably in 1787. The scholarly study preserves that qualification, while the Philharmonie dates No. 84’s premiere to 1787."}
+  - {status: recheck-confirmed, fact: "In 1792 he became colonel of a cavalry legion of men of colour"}
+samba:
+  - {status: recheck-confirmed, fact: "Migrants carried samba de roda south to Rio"}
+  - {status: recheck-confirmed, fact: "Bahian 'aunts' led the Black neighbourhood around Praça Onze, called Little Africa; Tia Ciata the best known"}
+  - {status: agreed, fact: "Tia Ciata was a Bahian woman whose house near Praça Onze in Rio hosted samba and religious gatherings (also wow)"}
+  - {status: recheck-confirmed, fact: "Tia Ciata was born in 1854"}
+  - {status: recheck-confirmed, fact: "Tia Ciata was initiated in candomblé"}
+  - {status: agreed, fact: "In 1916 Pelo Telefone took shape at Tia Ciata's"}
+  - {status: recheck-confirmed, fact: "Donga registered Pelo Telefone at the National Library on 27 November 1916 (also wow)"}
+  - {status: recheck-confirmed, fact: "Pelo Telefone was the hit of the 1917 carnival"}
+  - {status: disputed, fact: "Pelo Telefone was Brazil's first samba (wow)"}
+  - {status: disputed, fact: "Other regulars said the tune was collective; half the party claimed to have written it (also wow)"}
+slavevoyages:
+  - {status: recheck-confirmed, fact: "A CD-ROM of 27,233 voyages followed in 1999"}
+  - {status: agreed, fact: "SlaveVoyages is a free database/website, launched in 2008 (also wow)"}
+  - {status: recheck-confirmed, fact: "The website launched on 5 December 2008"}
+  - {status: recheck-confirmed, fact: "Between 1500 and 1866 traders forced 12.5 million Africans aboard"}
+  - {status: recheck-confirmed, fact: "The African Origins database lists nearly 100,000 liberated people by name and asks visitors to help trace their origins (also wow)"}
+sojourner-truth:
+  - {status: agreed, fact: "Sojourner Truth spoke at a women's rights convention in Akron, Ohio, in 1851"}
+  - {status: agreed, fact: "Marius Robinson printed her words in the Anti-Slavery Bugle in 1851 (also wow)"}
+  - {status: recheck-confirmed, fact: "Robinson's report appeared that June"}
+  - {status: recheck-confirmed, fact: "Robinson's report reads 'I am a woman's rights.'"}
+  - {status: agreed, fact: "There is no 'Ain't I a woman?' in Robinson's report; the refrain arrived in 1863 with Frances Gage's version (also wow: twelve years later)"}
+  - {status: recheck-confirmed, fact: "Gage gave Truth the dialect of an enslaved Southerner"}
+  - {status: recheck-confirmed, fact: "Truth was born enslaved in Ulster County, New York, and grew up speaking Low Dutch"}
+spirituals:
+  - {status: agreed, fact: "Enslaved people made the spirituals"}
+  - {status: recheck-confirmed, fact: "Spirituals drew on Bible stories, hymns and call-and-response"}
+  - {status: agreed, fact: "In 1871 Fisk students left Nashville on tour to raise money for their struggling freedmen's school (also wow)"}
+  - {status: recheck-confirmed, fact: "On 6 October 1871 nine students left, carrying the whole treasury for travel (also wow)"}
+  - {status: disputed, fact: "They raised about $40,000 on their first tour"}
+  - {status: agreed, fact: "They sang for Queen Victoria (also wow)"}
+  - {status: recheck-confirmed, fact: "Spirituals fed gospel"}
+  - {status: agreed, fact: "Media: Fisk Jubilee Singers in London, about 1876, unknown photographer, public domain"}
+  - {status: corrected, fact: "The documented royal portrait was a painting. The evidence does not establish that Victoria commissioned the separate photograph; do not transfer the painting’s commission history to that image."}
+steelpan:
+  - {status: recheck-confirmed, fact: "People answered with tamboo bamboo"}
+  - {status: agreed, fact: "Young men in Port of Spain hammered metal containers (oil drums) into tuned notes (also wow)"}
+  - {status: recheck-confirmed, fact: "Winston 'Spree' Simon and Ellie Mannette were among the pioneers"}
+  - {status: recheck-confirmed, fact: "In July 1951 TASPO played the Festival of Britain and changed minds"}
+  - {status: recheck-confirmed, fact: "In 2024 Parliament voted the steelpan the national instrument"}
+  - {status: corrected, fact: "Henderson's steelband was central to the early outdoor Notting Hill events and also played Jones's indoor carnivals. The outdoor carnival had multiple origins, not a simple institutional succession."}
+  - {status: agreed, fact: "Media: tenor steel pan, Nationaal Museum van Wereldculturen TM-2586-1, CC BY-SA 3.0"}
+stolen-legacy:
+  - {status: recheck-confirmed, fact: "In 1954 George G. M. James, a college teacher in Arkansas, published Stolen Legacy"}
+  - {status: agreed, fact: "Stolen Legacy said Greek philosophy was stolen Egyptian philosophy and that Aristotle took his ideas from Egyptian texts in the Library of Alexandria"}
+  - {status: agreed, fact: "Aristotle died before the Library of Alexandria was founded under the Ptolemies (also wow)"}
+  - {status: disputed, fact: "The story is a myth (historians and classicists reject it)"}
+  - {status: disputed, fact: "Mary Lefkowitz took it apart in 1996"}
+stono-drum-ban:
+  - {status: agreed, fact: "In 1739 enslaved rebels marched toward Spanish Florida hoping to claim freedom there"}
+  - {status: recheck-confirmed, fact: "The rising began on Sunday 9 September 1739 near the Stono River south of Charleston, when they broke into a store and took guns"}
+  - {status: agreed, fact: "Some accounts say they beat drums (also wow: rebels marched with drums)"}
+  - {status: recheck-confirmed, fact: "They shouted 'Liberty!'"}
+  - {status: recheck-confirmed, fact: "Their numbers grew to perhaps a hundred"}
+  - {status: agreed, fact: "The militia crushed them"}
+  - {status: agreed, fact: "In 1740 the colony answered with the Negro Act, which restricted enslaved people's drums"}
+  - {status: disputed, fact: "Dance historians argue the rhythm moved into the body: patting juba, hambone, later tap and stepping"}
+sun-ra:
+  - {status: recheck-confirmed, fact: "Herman Poole Blount was born in Birmingham, Alabama, in 1914 and later denied both the birth and the name (also wow)"}
+  - {status: recheck-confirmed, fact: "In Chicago he legally became Le Sony'r Ra in 1952"}
+  - {status: agreed, fact: "He built the Arkestra in the 1950s"}
+  - {status: agreed, fact: "He ran El Saturn Records"}
+  - {status: recheck-confirmed, fact: "From 1968 the band lived in a Philadelphia house"}
+  - {status: recheck-confirmed, fact: "In the early 1990s the critic Mark Dery named the idea Afrofuturism"}
+  - {status: agreed, fact: "Media: Sun Ra at the New England Conservatory, Boston, 27 February 1992, Pandelis Karayorgis, CC BY-SA 2.5"}
+sunjata:
+  - {status: agreed, fact: "Sunjata Keita founded the Mali Empire in the early thirteenth century"}
+  - {status: recheck-confirmed, fact: "He did so after defeating Sumaoro Kanté, king of Sosso"}
+  - {status: agreed, fact: "His story lives as oral performance by the jeli (griot)"}
+  - {status: recheck-confirmed, fact: "The jeli is trained from childhood and sings the epic to the balafon"}
+  - {status: agreed, fact: "Media: El Hadji Sékou Kouyaté, 2017 ceremony, Ursula Branscheid via Wikimedia Commons, CC BY-SA 4.0"}
+talking-drums:
+  - {status: agreed, fact: "Yoruba is tonal and the drums copy the tones of speech"}
+  - {status: recheck-confirmed, fact: "Yoruba has three pitches: low, mid and high"}
+  - {status: agreed, fact: "The dundun is an hourglass drum"}
+  - {status: agreed, fact: "Hide cords join the two drumheads; squeezed under the arm they tighten the skins and bend the pitch"}
+  - {status: recheck-confirmed, fact: "In the Congo forest the missionary John Carrington learned the Kele drum language"}
+  - {status: recheck-confirmed, fact: "Drummers wrap each word in stock phrases and repeat them"}
+  - {status: recheck-confirmed, fact: "James Gleick opens his history of information with this"}
+  - {status: agreed, fact: "Media: Yoruba drummer plays gangan, Nigeria, 2024, Tijani Taofeek Bamidele, CC BY-SA 4.0"}
+timbuktu-manuscripts:
+  - {status: agreed, fact: "Timbuktu's families kept books for centuries"}
+  - {status: recheck-confirmed, fact: "Books were kept in household libraries and later the state Ahmed Baba Institute"}
+  - {status: agreed, fact: "Armed (jihadist) groups took Timbuktu in 2012 (also wow)"}
+  - {status: recheck-confirmed, fact: "They took the city on 1 April 2012"}
+  - {status: recheck-confirmed, fact: "Abdel Kader Haidara, keeper of the Mamma Haidara library and head of SAVAMA-DCI, organised the escape"}
+  - {status: agreed, fact: "Librarians smuggled the manuscripts out of Timbuktu to Bamako (also wow)"}
+  - {status: recheck-confirmed, fact: "Some manuscripts left by cart or by boat on the Niger"}
+  - {status: disputed, fact: "About 350,000 manuscripts were rescued (National Geographic count) (also wow)"}
+  - {status: recheck-confirmed, fact: "Before fleeing in early 2013 the militants destroyed manuscripts at the Ahmed Baba Institute"}
+  - {status: agreed, fact: "Media: Kashf al-Ghummah, Mamma Haidara library; LoC exhibition via Wikimedia Commons; public domain"}
+tuskegee:
+  - {status: agreed, fact: "In 1932 the USPHS enrolled 600 Black men in Macon County, 399 with syphilis and 201 without (also wow)"}
+  - {status: agreed, fact: "The men were not offered penicillin (wow: long after it became the standard cure)"}
+  - {status: corrected, fact: "The study ran from 1932 to 1972 and initially enrolled 399 men with syphilis and 201 controls. The number 399 is the initial infected cohort, not 399 people who each survived untreated for all forty years; effective treatment was withheld by the study."}
+  - {status: recheck-confirmed, fact: "In 1966 Peter Buxtun, a PHS employee in San Francisco, wrote to the CDC objecting and was rebuffed for years"}
+  - {status: recheck-confirmed, fact: "In 1972 he gave documents to the AP; Jean Heller's story ran on 25 July"}
+  - {status: agreed, fact: "The study ended in 1972"}
+  - {status: recheck-confirmed, fact: "In 1997 President Clinton apologised"}
+  - {status: recheck-confirmed, fact: "The last participant died in 2004"}
+  - {status: agreed, fact: "Media: photograph of participants, National Archives at Atlanta, public domain"}
+  - {status: corrected, fact: "DHEW, Public Health Service, Venereal Disease Branch"}
+tutuola:
+  - {status: recheck-confirmed, fact: "Amos Tutuola was born in Abeokuta in 1920"}
+  - {status: recheck-confirmed, fact: "He worked as a government employee in Lagos (wow: government messenger in Lagos)"}
+  - {status: agreed, fact: "The book draws on Yoruba tales, with fantastic creatures and a journey (also wow)"}
+  - {status: recheck-confirmed, fact: "Plot: a man who drinks palm wine all day walks to Deads' Town to bring back his dead tapster (also wow)"}
+  - {status: recheck-confirmed, fact: "He wrote it in his own English (wow)"}
+  - {status: agreed, fact: "The Palm-Wine Drinkard was published in 1952"}
+  - {status: recheck-confirmed, fact: "It was published by Faber in London"}
+  - {status: agreed, fact: "Dylan Thomas was wildly enthusiastic about it"}
+  - {status: recheck-confirmed, fact: "Thomas's review was in The Observer and called it 'bewitching' (wow)"}
+  - {status: disputed, fact: "Many Nigerian readers called the English broken and the stories borrowed; reception split along continental lines (also dispute field)"}
+underground-railroad-myths:
+  - {status: agreed, fact: "The quilt code (signals in quilt patterns hung out) comes from one family's oral account in Tobin and Dobard's Hidden in Plain View"}
+  - {status: disputed, fact: "Hidden in Plain View was published in 1998"}
+  - {status: disputed, fact: "Giles R. Wright and quilt historians found no mention in 19th-century slave narratives or 1930s interviews (also wow: no 19th-century source)"}
+  - {status: recheck-confirmed, fact: "'Follow the Drinking Gourd' was first printed by H. B. Parks in 1928 (also wow)"}
+  - {status: disputed, fact: "The song as a sung map from Mobile to the Ohio; the route reading is contested"}
+  - {status: recheck-confirmed, fact: "William Still of the Philadelphia Vigilance Committee logged hundreds of fugitives and published them in 1872"}
+vai-script:
+  - {status: agreed, fact: "In the early 1830s a script for Vai was created in western Liberia"}
+  - {status: recheck-confirmed, fact: "Its creator was Momolu Duwalu Bukele of Jondu"}
+  - {status: agreed, fact: "It is a syllabary"}
+  - {status: agreed, fact: "It served for letters and accounts"}
+  - {status: agreed, fact: "Media: Specimen of Vai writing by M. Massaquoi, 1911, public domain"}
+walkers-appeal:
+  - {status: recheck-confirmed, fact: "Walker was born in Wilmington, North Carolina, to a free mother"}
+  - {status: agreed, fact: "He ran a clothing business in Boston (also wow)"}
+  - {status: recheck-confirmed, fact: "The business was on Brattle Street"}
+  - {status: agreed, fact: "In 1829 he published his Appeal, a call to resist slavery"}
+  - {status: agreed, fact: "He asked sailors heading south to carry copies"}
+  - {status: disputed, fact: "According to Garnet, Georgians put a price on Walker's head"}
+  - {status: recheck-confirmed, fact: "He died in Boston in 1830"}
+wedgwood-medallion:
+  - {status: agreed, fact: "In 1787 the new Committee for the Abolition of the Slave Trade adopted a seal of a kneeling chained Black man asking 'Am I Not a Man and a Brother?'"}
+  - {status: agreed, fact: "Josiah Wedgwood, a leading abolitionist, had it made in jasperware that year"}
+  - {status: recheck-confirmed, fact: "It was probably modelled by William Hackwood"}
+  - {status: agreed, fact: "Wedgwood gave the cameos away free (also wow)"}
+  - {status: recheck-confirmed, fact: "In 1788 Wedgwood sent a batch to Benjamin Franklin in Philadelphia"}
+  - {status: agreed, fact: "People set them into snuffbox lids and jewellery"}
+  - {status: agreed, fact: "Media: Wedgwood anti-slavery medallion, modelled by Hackwood, c. 1787, Walters Art Museum photo, CC BY-SA 3.0"}
+what-black-means:
+  - {status: agreed, fact: "Virginia's 1924 Racial Integrity Act called white a person with 'no trace whatsoever of any blood other than Caucasian'"}
+  - {status: agreed, fact: "The Act had a small allowance for descendants of Pocahontas"}
+  - {status: recheck-confirmed, fact: "Brazil's 1976 household survey, letting people name their own colour, recorded 136 terms (also wow)"}
+  - {status: recheck-confirmed, fact: "The terms ranged from morena to clara"}
+  - {status: recheck-confirmed, fact: "The census today offers five categories: branca, preta, parda, amarela, indigena"}
+  - {status: recheck-confirmed, fact: "Growing up in Nigeria Adichie thought of herself as Igbo"}
+  - {status: agreed, fact: "Adichie says identity in Nigeria was ethnic and religious, and she became Black in America (also wow)"}
+work-songs:
+  - {status: agreed, fact: "One voice sang a line and the crew answered with a refrain, timing the strokes of work"}
+  - {status: recheck-confirmed, fact: "In the 1790s a doctor working in Sierra Leone described rowers singing with a soloist and a chorus (also wow)"}
+  - {status: agreed, fact: "A worker alone sent out a holler, a long bending cry"}
+  - {status: recheck-confirmed, fact: "The songs lived on in road gangs and prisons"}
+  - {status: recheck-confirmed, fact: "In 1947 and 1948 Alan Lomax taped wood-cutting songs and hollers at Parchman Farm (also wow)"}
+wpa-narratives:
+  - {status: agreed, fact: "The Federal Writers' Project, a New Deal program, sent writers to interview people born into slavery"}
+  - {status: recheck-confirmed, fact: "The interviews took place between 1936 and 1938"}
+  - {status: agreed, fact: "The Library of Congress holds more than 2,300 first-person accounts (also wow: interviewed more than 2,300 people)"}
+  - {status: recheck-confirmed, fact: "Most interviewers were white, some from former slaveholding families"}
+  - {status: agreed, fact: "Interviewers were told to capture 'dialect', which often came out as stereotype"}
+  - {status: agreed, fact: "Answers changed with the colour of the interviewer (also wow)"}
+yaa-asantewaa:
+  - {status: recheck-confirmed, fact: "In March 1900 Governor Frederick Hodgson held a durbar in Kumasi (also wow)"}
+  - {status: recheck-confirmed, fact: "Kumasi was Asante's capital, whose king Prempeh had been exiled by the British"}
+  - {status: recheck-confirmed, fact: "Hodgson asked the chiefs to hand over the Golden Stool"}
+  - {status: recheck-confirmed, fact: "The Golden Stool holds the soul of the Asante nation"}
+  - {status: agreed, fact: "Yaa Asantewaa, Queen Mother of Ejisu, led the rising that followed"}
+  - {status: agreed, fact: "She was exiled to the Seychelles"}
+  - {status: agreed, fact: "She died in the Seychelles in 1921"}
+  - {status: disputed, fact: "Dispute: later accounts say Hodgson demanded to sit on the Stool; his wife's memoir says he asked for it to be handed over"}
+  - {status: disputed, fact: "Her birth year about 1840 is traditional"}
+  - {status: agreed, fact: "Media: British garrison besieged in Kumasi fort, 1900, from Armitage and Montanaro (1901), public domain"}
+zong:
+  - {status: recheck-confirmed, fact: "In late 1781 the Liverpool-owned slave ship Zong overshot Jamaica"}
+  - {status: agreed, fact: "The crew threw Africans into the sea in 1781"}
+  - {status: disputed, fact: "More than 130 Africans were thrown into the sea (also wow: more than 130 murdered)"}
+  - {status: agreed, fact: "The owners claimed the dead on insurance as lost cargo (also wow)"}
+  - {status: agreed, fact: "In 1783 a jury found for the owners"}
+  - {status: recheck-confirmed, fact: "Equiano carried the news to Granville Sharp"}
+  - {status: recheck-confirmed, fact: "Sharp demanded a murder trial and never got one"}
+  - {status: recheck-confirmed, fact: "In May Lord Mansfield's court granted the insurers a new trial; there is no evidence it was ever held"}
+  - {status: recheck-confirmed, fact: "In 2008 M. NourbeSe Philip built Zong! only from the words of the case report Gregson v. Gilbert"}
+v0:
+  - {status: recheck-confirmed, fact: "Mansa Musa of Mali made a pilgrimage to Mecca"}
+  - {status: recheck-confirmed, fact: "A map drawn in Mallorca around 1375 shows him enthroned, holding gold"}
+  - {status: recheck-confirmed, fact: "Along the Niger bend scholars copied books"}
+  - {status: recheck-confirmed, fact: "When jihadists held Timbuktu in 2012, librarians carried hundreds of thousands of manuscripts out in trunks"}
+  - {status: recheck-confirmed, fact: "Griots of the Sunjata epic still sing the founding of Mali"}
+  - {status: recheck-confirmed, fact: "Talking drums carry the tones of Yoruba speech"}
+  - {status: recheck-confirmed, fact: "Akan cloth carries adinkra signs, among them Sankofa, 'go back and get it'"}
+  - {status: corrected, fact: "Kente patterns are traditionally named, often with proverbs or historical associations. These museum accounts support that practice, not an exceptionless assertion that every pattern by every weaver has a name."}
+  - {status: agreed, fact: "In Benin City a royal guild cast the plaques called the Benin Bronzes"}
+  - {status: recheck-confirmed, fact: "Some plaques show Portuguese traders"}
+  - {status: recheck-confirmed, fact: "Cowries came from the Maldives, were money across West Africa and became the price of human beings"}
+  - {status: agreed, fact: "Hero: Mansa Musa enthroned holding gold, Catalan Atlas sheet 6, c. 1375, attributed to Abraham Cresques, BnF via Commons, public domain"}
+v1:
+  - {status: recheck-confirmed, fact: "SlaveVoyages lists the names of almost 100,000 Africans taken off the ships"}
+  - {status: recheck-confirmed, fact: "In 1999 the president of Benin asked forgiveness for the African part in the trade"}
+  - {status: recheck-confirmed, fact: "Equiano was, or so he wrote, a boy taken from Igboland"}
+  - {status: agreed, fact: "Equiano bought his freedom"}
+  - {status: recheck-confirmed, fact: "Equiano wrote a bestseller"}
+  - {status: recheck-confirmed, fact: "In 1783 Equiano brought the Zong story to Granville Sharp"}
+  - {status: agreed, fact: "The Brookes plan showed bodies packed like goods"}
+  - {status: recheck-confirmed, fact: "The Wedgwood medallion asked 'Am I Not a Man and a Brother?' and was worn as jewellery"}
+  - {status: agreed, fact: "In Virginia the 1662 law made slavery pass from mother to child"}
+  - {status: recheck-confirmed, fact: "Anthony Johnson became a free landowner"}
+  - {status: recheck-confirmed, fact: "Long after the US banned the trade, the Clotilda landed captives in Alabama in 1860, and survivors built African Town"}
+  - {status: agreed, fact: "Hero: plan of the Brookes, printed by James Phillips, London, 1789; British Library; public domain"}
+v2:
+  - {status: corrected, fact: "According to the later account repeated in these histories, Nzinga used an attendant as a seat to meet the governor at equal height. Present it as a famous reported episode, not an independently documented verbatim encounter."}
+  - {status: recheck-confirmed, fact: "Palmares held out for about a century in the hills of northeast Brazil"}
+  - {status: corrected, fact: "The Windward Maroons secured a treaty in 1739, signed by Quao. Nanny reportedly opposed it; the separate Leeward treaty was signed by Cudjoe. Do not imply that Nanny signed multiple treaties."}
+  - {status: corrected, fact: "South Carolina's 1740 law restricted enslaved people's use of drums, horns and other loud instruments by penalizing owners who permitted it. It was not a general ban on every colonial inhabitant playing such instruments."}
+  - {status: agreed, fact: "The Haitian Revolution founded a nation (Haiti, 1804)"}
+  - {status: corrected, fact: "France imposed an indemnity in 1825 as the price of recognizing Haitian independence, already declared in 1804. It was payment for recognition under coercion, not the original purchase of emancipation."}
+  - {status: disputed, fact: "Some scholars think news of Haiti shaped Hegel's master and slave; contested"}
+  - {status: recheck-confirmed, fact: "Walker's Appeal was carried south"}
+  - {status: agreed, fact: "Robert Smalls escaped by steaming a Confederate ship (the Planter)"}
+  - {status: recheck-confirmed, fact: "Smalls put on a captain's hat and steamed past Fort Sumter"}
+  - {status: agreed, fact: "Harriet Tubman's Combahee raid carried more than 700 people out of slavery"}
+  - {status: corrected, fact: "The expedition travelled on the night of 1–2 June 1863 and the raid and liberation continued on 2 June. 'In one night' compresses operations that extended into the following morning."}
+  - {status: corrected, fact: "The quilt-code story is a modern claim without established contemporary documentation. The sources support calling it unsubstantiated, not a demonstrated deliberate fabrication."}
+v3:
+  - {status: agreed, fact: "Phillis Wheatley, enslaved, printed her poems in 1773"}
+  - {status: corrected, fact: "Eighteen Boston men signed the published attestation of Wheatley's authorship. 'Had to' implies a compulsory tribunal not established by the surviving attestation."}
+  - {status: recheck-confirmed, fact: "In North Carolina Omar ibn Said wrote his life in Arabic"}
+  - {status: recheck-confirmed, fact: "In New York, Freedom's Journal opened with 'We wish to plead our own cause'"}
+  - {status: agreed, fact: "Douglass fought Covey and was never whipped by him again"}
+  - {status: agreed, fact: "Harriet Jacobs lay nearly seven years in a crawlspace"}
+  - {status: recheck-confirmed, fact: "Sojourner Truth's famous refrain is not in the 1851 report of her speech"}
+  - {status: recheck-confirmed, fact: "Dave the Potter carved poems into his jars"}
+  - {status: corrected, fact: "According to Ruth Middleton's 1921 embroidered family account, Rose packed the sack for Ashley before their separation by sale. Present the provenance as an attributed family history."}
+  - {status: recheck-confirmed, fact: "A Georgia family in Gullah country kept a song also known in Sierra Leone"}
+  - {status: recheck-confirmed, fact: "The banjo came from West African lutes"}
+  - {status: recheck-confirmed, fact: "Ida B. Wells counted the lynched to prove it was terror"}
+v4:
+  - {status: recheck-confirmed, fact: "Asked to name their own colour, Brazilians in 1976 gave 136 answers"}
+  - {status: recheck-confirmed, fact: "A Nigerian novelist says she became Black only when she landed in America"}
+  - {status: recheck-confirmed, fact: "Gannibal, a kidnapped African boy, became Peter the Great's godson, a general, and the great-grandfather of Pushkin"}
+  - {status: corrected, fact: "African priestesses founded Casa Branca and related Salvador religious lineages according to their traditions. 'Still stand' should refer to surviving institutions, not necessarily original buildings."}
+  - {status: recheck-confirmed, fact: "Capoeira was a crime in the 1890 penal code and is now heritage of humanity"}
+  - {status: corrected, fact: "Pelo Telefone, associated with Tia Ciata's gatherings, was registered in 1916 and became the breakthrough 1917 samba hit. Its absolute priority is disputed by scholars documenting earlier sambas."}
+  - {status: corrected, fact: "Several participants disputed Donga's authorship and claimed collective creation. 'Half the party' is an unsupported numerical embellishment."}
+  - {status: recheck-confirmed, fact: "In a São Paulo favela Carolina Maria de Jesus wrote a diary on paper from the trash"}
+  - {status: recheck-confirmed, fact: "In 1930 a League of Nations inquiry found Liberia's government shipping its own people as forced labour"}
+  - {status: recheck-confirmed, fact: "A Vai man dreamed that a stranger taught him to write, and the Vai script was born"}
+  - {status: agreed, fact: "In Cameroon King Njoya invented Bamum"}
+  - {status: recheck-confirmed, fact: "Njoya refined Bamum into a syllabary"}
+  - {status: agreed, fact: "The steelpan was made out of oil drums (metal containers) in Trinidad"}
+  - {status: corrected, fact: "Young Port of Spain musicians developed steelpan amid percussion restrictions and local experimentation. The bans were part of the context, not a demonstrably sufficient single cause."}
+  - {status: agreed, fact: "Hero: Rugendas, Jogar capoëra ou danse de la guerre, from Voyage pittoresque dans le Brésil (1835), public domain"}
+v5:
+  - {status: recheck-confirmed, fact: "In Granada Juan Latino taught Latin and appears in the opening verses of Don Quixote"}
+  - {status: corrected, fact: "Amo's lost 1729 disputation concerned the rights of Africans in Europe. Its surviving summary suggests a Roman-law argument; do not present the full lost argument as directly recoverable."}
+  - {status: recheck-confirmed, fact: "In Paris Saint-Georges ran the orchestra that ordered Haydn's Paris symphonies"}
+  - {status: corrected, fact: "Beethoven prepared and premiered the Sonata op. 47 with Bridgetower in Vienna in May 1803. 'Greatest' is an aesthetic judgment; the piece was later dedicated to Kreutzer."}
+  - {status: recheck-confirmed, fact: "General Dumas was born to an enslaved woman in Saint-Domingue"}
+  - {status: agreed, fact: "In 1900 W. E. B. Du Bois drew Black America in colour charts for Paris"}
+  - {status: agreed, fact: "Mamie Smith recorded 'Crazy Blues'"}
+  - {status: recheck-confirmed, fact: "'Crazy Blues' opened the market for 'race records'"}
+  - {status: recheck-confirmed, fact: "Jazz came from New Orleans"}
+  - {status: corrected, fact: "Thomas A. Dorsey, a former blues pianist in Chicago, helped shape modern Black gospel. The entire gospel tradition did not originate with one person."}
+  - {status: recheck-confirmed, fact: "The Chicago Defender called people north, and railroad porters smuggled it south"}
+  - {status: recheck-confirmed, fact: "On the Gold Coast highlife grew in the ballrooms"}
+  - {status: corrected, fact: "The Nardal salon met in Clamart, outside Paris, including Sunday gatherings. Use 'near Paris' for the precise location."}
+  - {status: disputed, fact: "Négritude began at the Nardal salon"}
+  - {status: recheck-confirmed, fact: "Hurston carried a Clotilda survivor's own words into a book that waited until 2018"}
+v6:
+  - {status: recheck-confirmed, fact: "Rosetta Tharpe played gospel guitar years before rock and roll had a name"}
+  - {status: corrected, fact: "Billboard renamed its chart rhythm and blues in 1949; the phrase had already appeared in its reporting. Do not equate the chart renaming with the first use of the words."}
+  - {status: agreed, fact: "Big Mama Thornton's 'Hound Dog' came three years before Elvis's"}
+  - {status: recheck-confirmed, fact: "Thornton's 'Hound Dog' was a number one"}
+  - {status: disputed, fact: "Thornton was paid by most accounts about $500"}
+  - {status: recheck-confirmed, fact: "Funk drum breaks would build hip-hop"}
+  - {status: recheck-confirmed, fact: "In 1955 Emmett Till's mother kept his coffin open"}
+  - {status: recheck-confirmed, fact: "For forty years the US Public Health Service watched Black men with syphilis go untreated (Tuskegee)"}
+  - {status: corrected, fact: "Lacks was 30 when the cervical biopsy was taken in February 1951; she turned 31 on 1 August and died that October. Age 30 is calculated from the documented birth and biopsy dates. Her cells were obtained without her knowledge and the HeLa lineage continues in culture."}
+  - {status: recheck-confirmed, fact: "Achebe told an Igbo village from the inside in Things Fall Apart"}
+  - {status: recheck-confirmed, fact: "Tutuola wrote a Yoruba journey in his own English"}
+  - {status: agreed, fact: "Ngugi wrote a novel in Gikuyu on prison toilet paper"}
+  - {status: disputed, fact: "Reggae got its name in Trench Town"}
+  - {status: recheck-confirmed, fact: "In London Claudia Jones answered the 1958 riots with a carnival"}
+  - {status: recheck-confirmed, fact: "Radio Haiti gave the news in Creole and paid for it"}
+v7:
+  - {status: recheck-confirmed, fact: "Sun Ra came from Birmingham, Alabama"}
+  - {status: recheck-confirmed, fact: "Sun Ra said he had been carried to Saturn"}
+  - {status: agreed, fact: "Octavia Butler won a MacArthur grant"}
+  - {status: recheck-confirmed, fact: "Butler was the first science fiction writer to win a MacArthur grant"}
+  - {status: agreed, fact: "On 11 August 1973 Cindy Campbell threw a party and her brother played the records"}
+  - {status: agreed, fact: "The party was in a Bronx rec room"}
+  - {status: recheck-confirmed, fact: "The party raised money for back-to-school clothes"}
+  - {status: recheck-confirmed, fact: "Her brother's name is Clive"}
+  - {status: agreed, fact: "That night is commonly called the birthday of hip-hop"}
+  - {status: recheck-confirmed, fact: "Planet Rock set Kraftwerk's melody to a Japanese drum machine"}
+  - {status: corrected, fact: "Atkins linked his terminology to Alvin Toffler's techno-rebels; the 1988 compilation also helped fix the genre name. A single book-to-genre naming event oversimplifies the accounts."}
+  - {status: recheck-confirmed, fact: "Detroit techno found a second home in Berlin"}
+  - {status: recheck-confirmed, fact: "Chicago house took its name from the Warehouse club"}
+  - {status: recheck-confirmed, fact: "Rinse FM started in a council-flat kitchen and helped make grime"}
+  - {status: recheck-confirmed, fact: "Jerry Lawson led the team behind swappable game cartridges"}
+  - {status: agreed, fact: "Two brothers invented Adlam for the Fulani language"}
+  - {status: corrected, fact: "Nnebue's Living in Bondage became a breakthrough video hit in 1992. Earlier Nigerian and Yoruba-language video films preclude treating this as the industry's literal beginning."}
+  - {status: agreed, fact: "Hero: Sun Ra Arkestra at ZXZW festival, Tilburg, 21 September 2008, Tobias Akerboom, CC BY 2.0"}
