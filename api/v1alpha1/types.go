@@ -96,6 +96,24 @@ type CardSpec struct {
 	Dispute string `json:"dispute,omitempty"`
 	// The card text with [[id]] cross-references.
 	Body string `json:"body"`
+	// Translations by language code. Facts never differ from the original.
+	// +optional
+	Translations map[string]CardText `json:"translations,omitempty"`
+}
+
+// CardText is a card in another language.
+type CardText struct {
+	Title string `json:"title"`
+	Wow   string `json:"wow"`
+	// +optional
+	Places []string `json:"places,omitempty"`
+	// +optional
+	Further []string `json:"further,omitempty"`
+	// +optional
+	Dispute string `json:"dispute,omitempty"`
+	// +optional
+	Captions []string `json:"captions,omitempty"`
+	Body     string   `json:"body"`
 }
 
 // Card is an entry of the Sankofa dictionary. Read it with `sankofa dict`, or
@@ -149,6 +167,18 @@ type QuestSpec struct {
 	// For cluster quests: the check that must pass, e.g. "package rock-n-roll Installed".
 	// +optional
 	Check string `json:"check,omitempty"`
+	// Translations by language code.
+	// +optional
+	Translations map[string]QuestText `json:"translations,omitempty"`
+}
+
+// QuestText is a quest in another language.
+type QuestText struct {
+	Title  string `json:"title"`
+	Prompt string `json:"prompt"`
+	// +optional
+	Choices []string `json:"choices,omitempty"`
+	Reveal  string   `json:"reveal"`
 }
 
 // Quest is a game that helps to understand. Play it with `sankofa quest`.

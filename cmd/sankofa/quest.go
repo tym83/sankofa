@@ -90,6 +90,12 @@ func loadQuestList(cmd *cobra.Command) ([]v1alpha1.Quest, error) {
 }
 
 func play(cmd *cobra.Command, q *v1alpha1.Quest, st *reader.State) error {
+	if t, ok := q.Spec.Translations[lang]; ok {
+		q.Spec.Title, q.Spec.Prompt, q.Spec.Reveal = t.Title, t.Prompt, t.Reveal
+		if len(t.Choices) == len(q.Spec.Choices) {
+			q.Spec.Choices = t.Choices
+		}
+	}
 	w := cmd.OutOrStdout()
 	in := bufio.NewReader(cmd.InOrStdin())
 	fmt.Fprintf(w, "%s\n\n%s\n\n", stTitle.Render(q.Spec.Title), wrap(q.Spec.Prompt, 78))
@@ -105,12 +111,12 @@ func play(cmd *cobra.Command, q *v1alpha1.Quest, st *reader.State) error {
 		fmt.Fprintln(w)
 		if q.Spec.Type == "quiz" && q.Spec.Answer != nil {
 			if n == *q.Spec.Answer {
-				fmt.Fprintln(w, stLink.Render("Right."))
+				fmt.Fprintln(w, stLink.Render(tr("Right.")))
 			} else {
-				fmt.Fprintf(w, "%s The answer is: %s\n", stWow.Render("Not quite."), q.Spec.Choices[*q.Spec.Answer])
+				fmt.Fprintf(w, "%s "+tr("The answer is:")+" %s\n", stWow.Render(tr("Not quite.")), q.Spec.Choices[*q.Spec.Answer])
 			}
 		} else {
-			fmt.Fprintln(w, stMeta.Render("There is no right answer. Here is what happened:"))
+			fmt.Fprintln(w, stMeta.Render(tr("There is no right answer. Here is what happened:")))
 		}
 	case "walk":
 		s, err := loadCards(cmd)
@@ -134,7 +140,7 @@ func play(cmd *cobra.Command, q *v1alpha1.Quest, st *reader.State) error {
 	}
 	fmt.Fprintln(w, wrap(q.Spec.Reveal, 78))
 	if len(q.Spec.Cards) > 0 {
-		fmt.Fprintf(w, "\nRead on: sankofa dict %s\n", q.Spec.Cards[0])
+		fmt.Fprintf(w, "\n"+tr("Read on: sankofa dict %s\n"), q.Spec.Cards[0])
 	}
 	if !done(st, q.Name) {
 		st.Done = append(st.Done, q.Name)
@@ -144,7 +150,7 @@ func play(cmd *cobra.Command, q *v1alpha1.Quest, st *reader.State) error {
 
 func ask(w io.Writer, in *bufio.Reader, n int) int {
 	for {
-		fmt.Fprintf(w, "\nYour choice (1-%d, q to quit): ", n)
+		fmt.Fprintf(w, "\n"+tr("Your choice (1-%d, q to quit): "), n)
 		line, err := in.ReadString('\n')
 		line = strings.TrimSpace(line)
 		if line == "q" || (err != nil && line == "") {

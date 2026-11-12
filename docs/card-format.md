@@ -2,7 +2,7 @@
 
 A card is a short piece of culture that makes a reader say "wow" and go further. It is not an encyclopedia entry: who or what it is, the main thing, the surprising moment, where to look next. Details are one search away.
 
-Cards live in `content/cards/<id>.md` (English, primary). A Russian translation sits next to it as `<id>.ru.md` with the same front matter keys `title`, `wow` and the body.
+Cards live in `content/cards/<id>.md` (English, primary). Translations sit next to them as `<id>.<lang>.md` (see "Translations" below).
 
 ```markdown
 ---
@@ -62,3 +62,25 @@ Media files for cards and chapters live in `content/media/`.
 
 - Genre cards (`kind: genre`) list the genres they grew from in `roots: [blues, gospel]`. This is the dependency graph `sankofa genre why/rdeps` walks and the order in which genre packages install.
 - People whose work was taken or popularised by others without credit or pay get `tags: [uncredited]` and `genres: [...]`; `sankofa genre audit <genre>` shows them as undeclared dependencies.
+
+# Translations
+
+`content/cards/<id>.ru.md`:
+
+```markdown
+---
+title: Джордж Бриджтауэр
+wow: Самую знаменитую скрипичную сонату Бетховена написали для него, а не для Крейцера.
+places: ["Вена", "Лондон"]          # same order as the card's places
+further: ["Бетховен, Соната для скрипки № 9 ля мажор, соч. 47"]   # same order
+captions: ["..."]                   # media captions, same order as media
+dispute: "..."                      # only when the card has a dispute
+---
+Body in Russian, with every [[id|link]] of the original kept (link text translated).
+```
+
+Sources are not translated. Facts never differ from the original. The linter checks
+that every link of the original survives and that list lengths match.
+
+Chapters: `content/chapters/<id>.ru.md` with `title`, `kicker` and the body.
+Quests: `content/quests/<name>.ru.yaml` with `title`, `prompt`, `choices`, `reveal`.

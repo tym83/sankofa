@@ -1,0 +1,32 @@
+package main
+
+// tr translates the few interface words the CLI prints around cards.
+func tr(s string) string {
+	if lang != "ru" {
+		return s
+	}
+	if t, ok := ru[s]; ok {
+		return t
+	}
+	return s
+}
+
+var ru = map[string]string{
+	"Further":           "Дальше",
+	"Further:":          "Дальше:",
+	"Sources":           "Источники",
+	"Sources:":          "Источники:",
+	"Disputed: ":        "Спорно: ",
+	"Atlas:":            "Атлас:",
+	"Atlas: ":           "Атлас: ",
+	"← referenced by: ": "← ссылаются: ",
+	"Right.":            "Верно.",
+	"Not quite.":        "Не совсем.",
+	"The answer is:":    "Ответ:",
+	"There is no right answer. Here is what happened:": "Правильного ответа нет. Вот что было на самом деле:",
+	"Read on: sankofa dict %s\n":                       "Читать дальше: sankofa dict %s\n",
+	"Your choice (1-%d, q to quit): ":                  "Твой выбор (1–%d, q — выйти): ",
+	"tab link · enter open · backspace back · r random · o atlas · q quit   [%s copy · %d read]": "tab ссылка · enter открыть · backspace назад · r случайная · o атлас · q выход   [%s экземпляр · прочитано %d]",
+	"male":   "мужской",
+	"female": "женский",
+}

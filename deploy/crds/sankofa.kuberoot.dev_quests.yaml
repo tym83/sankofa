@@ -83,6 +83,27 @@ spec:
                 type: string
               to:
                 type: string
+              translations:
+                additionalProperties:
+                  description: QuestText is a quest in another language.
+                  properties:
+                    choices:
+                      items:
+                        type: string
+                      type: array
+                    prompt:
+                      type: string
+                    reveal:
+                      type: string
+                    title:
+                      type: string
+                  required:
+                  - prompt
+                  - reveal
+                  - title
+                  type: object
+                description: Translations by language code.
+                type: object
               type:
                 enum:
                 - dilemma

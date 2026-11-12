@@ -1,6 +1,8 @@
 package card
 
 import (
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 )
@@ -102,5 +104,34 @@ func TestResolved(t *testing.T) {
 	}
 	if a.Body != "see [[b]] and [[b|her]]" {
 		t.Fatal("Resolved must not change the original")
+	}
+}
+
+func TestTranslations(t *testing.T) {
+	dir := t.TempDir()
+	write := func(name, body string) {
+		if err := os.WriteFile(filepath.Join(dir, name), []byte(body), 0o644); err != nil {
+			t.Fatal(err)
+		}
+	}
+	write("a.md", strings.Replace(good, "Hello [[b|friend]] and [[b]].", "See [[b]].", 1))
+	write("b.md", strings.Replace(strings.Replace(good, "id: a", "id: b", 1), "Hello [[b|friend]] and [[b]].", "x", 1))
+	write("a.ru.md", "---\ntitle: А\nwow: ого\n---\nСм. [[b]].\n")
+	write("b.ru.md", "---\ntitle: Бэ\nwow: ого\n---\nикс\n")
+	s, err := LoadDir(dir)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if errs := s.Validate(); len(errs) != 0 {
+		t.Fatal(errs)
+	}
+	ru := s.Resolved(s.ByID["a"]).Localized("ru")
+	if ru.Title != "А" || ru.Body != "См. [[b|Бэ]]." {
+		t.Fatalf("%q %q", ru.Title, ru.Body)
+	}
+	write("a.ru.md", "---\ntitle: А\nwow: ого\n---\nБез ссылки.\n")
+	s, _ = LoadDir(dir)
+	if errs := s.Validate(); len(errs) == 0 {
+		t.Fatal("a translation that loses a link must fail")
 	}
 }

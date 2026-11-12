@@ -17,6 +17,7 @@ func main() {
 		SilenceErrors: true,
 	}
 	root.PersistentFlags().String("content", envOr("SANKOFA_CONTENT", ""), "read cards from a local content directory instead of the cluster")
+	root.PersistentFlags().StringVar(&lang, "lang", envOr("SANKOFA_LANG", "en"), "language of the cards: en or ru")
 	kubeFlags.AddFlags(root.PersistentFlags())
 	root.AddCommand(contentCmd(), dictCmd(), tellCmd(), fetchCmd(), obituariesCmd(), creditsCmd(), genreCmd(), questCmd(), crumbCmd(), waitCmd(), atlasCmd(), storyCmd(), kgotlaCmd())
 	if err := root.Execute(); err != nil {

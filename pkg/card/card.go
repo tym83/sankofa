@@ -111,6 +111,74 @@ type Card struct {
 
 	Body string `json:"body"`
 	File string `json:"-"`
+
+	// Translations by language code, from <id>.<lang>.md next to the card.
+	Translations map[string]*Translation `json:"translations,omitempty"`
+}
+
+// Translation is a card in another language. Facts never differ from the
+// original: only title, hook, body, place names, "further" and captions are
+// translated; sources stay as they are.
+type Translation struct {
+	Title    string   `json:"title"`
+	Wow      string   `json:"wow"`
+	Places   []string `json:"places,omitempty"`  // translated place names, same order
+	Further  []string `json:"further,omitempty"` // translated "further" items, same order
+	Dispute  string   `json:"dispute,omitempty"`
+	Captions []string `json:"captions,omitempty"` // translated media captions, same order
+	Body     string   `json:"body"`
+}
+
+// Languages that cards may be translated into.
+var Languages = []string{"ru"}
+
+// Localized returns the card in a language, falling back to the original for
+// anything not translated.
+func (c *Card) Localized(lang string) *Card {
+	t := c.Translations[lang]
+	if t == nil {
+		return c
+	}
+	out := *c
+	out.Title, out.Wow, out.Body = t.Title, t.Wow, t.Body
+	if t.Dispute != "" {
+		out.Dispute = t.Dispute
+	}
+	if len(t.Further) == len(c.Further) {
+		out.Further = t.Further
+	}
+	if len(t.Places) == len(c.Places) {
+		out.Places = append([]Place(nil), c.Places...)
+		for i := range out.Places {
+			out.Places[i].Name = t.Places[i]
+		}
+	}
+	if len(t.Captions) == len(c.Media) {
+		out.Media = append([]Media(nil), c.Media...)
+		for i := range out.Media {
+			out.Media[i].Caption = t.Captions[i]
+		}
+	}
+	return &out
+}
+
+// ParseTranslation reads <id>.<lang>.md.
+func ParseTranslation(data []byte) (*Translation, error) {
+	data = bytes.TrimPrefix(data, []byte("\xef\xbb\xbf"))
+	if !bytes.HasPrefix(data, []byte("---\n")) {
+		return nil, errors.New("missing front matter")
+	}
+	rest := data[4:]
+	end := bytes.Index(rest, []byte("\n---\n"))
+	if end < 0 {
+		return nil, errors.New("unterminated front matter")
+	}
+	var t Translation
+	if err := yaml.UnmarshalStrict(rest[:end], &t); err != nil {
+		return nil, fmt.Errorf("front matter: %w", err)
+	}
+	t.Body = strings.TrimSpace(string(rest[end+5:]))
+	return &t, nil
 }
 
 var linkRe = regexp.MustCompile(`\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]`)
@@ -189,7 +257,7 @@ func LoadFS(fsys fs.FS) (*Set, error) {
 		if err != nil {
 			return err
 		}
-		if d.IsDir() || path.Ext(p) != ".md" || strings.HasSuffix(p, ".ru.md") {
+		if d.IsDir() || path.Ext(p) != ".md" || isTranslation(p) {
 			return nil
 		}
 		data, err := fs.ReadFile(fsys, p)
@@ -212,7 +280,37 @@ func LoadFS(fsys fs.FS) (*Set, error) {
 		return nil, err
 	}
 	sort.Strings(s.Order)
+	for _, id := range s.Order {
+		c := s.ByID[id]
+		dir := path.Dir(c.File)
+		for _, lang := range Languages {
+			data, err := fs.ReadFile(fsys, path.Join(dir, id+"."+lang+".md"))
+			if errors.Is(err, fs.ErrNotExist) {
+				continue
+			}
+			if err != nil {
+				return nil, err
+			}
+			t, err := ParseTranslation(data)
+			if err != nil {
+				return nil, fmt.Errorf("%s.%s.md: %w", id, lang, err)
+			}
+			if c.Translations == nil {
+				c.Translations = map[string]*Translation{}
+			}
+			c.Translations[lang] = t
+		}
+	}
 	return s, nil
+}
+
+func isTranslation(p string) bool {
+	for _, lang := range Languages {
+		if strings.HasSuffix(p, "."+lang+".md") {
+			return true
+		}
+	}
+	return false
 }
 
 var idRe = regexp.MustCompile(`^[a-z0-9]+(-[a-z0-9]+)*$`)
@@ -297,6 +395,43 @@ func (s *Set) Validate() []error {
 				bad(c, "genre %q is not a genre card", g)
 			}
 		}
+		for lang, t := range c.Translations {
+			tc := &Card{Body: t.Body}
+			if strings.TrimSpace(t.Title) == "" || strings.TrimSpace(t.Wow) == "" || strings.TrimSpace(t.Body) == "" {
+				bad(c, "%s translation needs title, wow and body", lang)
+			}
+			if n := len(strings.Fields(tc.PlainBody())); n > MaxBodyWords*13/10 {
+				bad(c, "%s translation has %d words, want at most %d", lang, n, MaxBodyWords*13/10)
+			}
+			want := map[string]int{}
+			for _, l := range c.Links() {
+				want[l.Target]++
+			}
+			got := map[string]int{}
+			for _, l := range tc.Links() {
+				got[l.Target]++
+				if _, ok := s.ByID[l.Target]; !ok {
+					bad(c, "%s translation links to unknown card %q", lang, l.Target)
+				}
+			}
+			for id := range want {
+				if got[id] == 0 {
+					bad(c, "%s translation lost the link to %q", lang, id)
+				}
+			}
+			if len(t.Places) > 0 && len(t.Places) != len(c.Places) {
+				bad(c, "%s translation has %d places, want %d", lang, len(t.Places), len(c.Places))
+			}
+			if len(t.Further) > 0 && len(t.Further) != len(c.Further) {
+				bad(c, "%s translation has %d further items, want %d", lang, len(t.Further), len(c.Further))
+			}
+			if len(t.Captions) > 0 && len(t.Captions) != len(c.Media) {
+				bad(c, "%s translation has %d captions, want %d", lang, len(t.Captions), len(c.Media))
+			}
+			if (t.Dispute != "") != (c.Dispute != "") {
+				bad(c, "%s translation must translate the dispute exactly when the card has one", lang)
+			}
+		}
 		for _, g := range c.Roots {
 			if c.Kind != KindGenre {
 				bad(c, "only genre cards have roots")
@@ -355,21 +490,40 @@ func (s *Set) ForEdition(id, edition string) *Card {
 
 // Resolved returns a copy of the card whose bare [[id]] links carry the
 // target's title as their text, so readers see "Olaudah Equiano", not
-// "equiano".
+// "equiano". Translations get the target's title in their own language.
 func (s *Set) Resolved(c *Card) *Card {
 	out := *c
+	out.Body = s.resolveBody(c.Body, "")
+	if len(c.Translations) > 0 {
+		out.Translations = map[string]*Translation{}
+		for lang, t := range c.Translations {
+			tt := *t
+			tt.Body = s.resolveBody(t.Body, lang)
+			out.Translations[lang] = &tt
+		}
+	}
+	return &out
+}
+
+func (s *Set) resolveBody(body, lang string) string {
+	tmp := &Card{Body: body}
 	var b strings.Builder
 	last := 0
-	for _, l := range c.Links() {
-		b.WriteString(c.Body[last:l.Start])
-		if t := s.ByID[l.Target]; t != nil && !l.Explicit {
-			b.WriteString("[[" + l.Target + "|" + t.Title + "]]")
-		} else {
-			b.WriteString(c.Body[l.Start:l.End])
+	for _, l := range tmp.Links() {
+		b.WriteString(body[last:l.Start])
+		t := s.ByID[l.Target]
+		switch {
+		case t == nil || l.Explicit:
+			b.WriteString(body[l.Start:l.End])
+		default:
+			title := t.Title
+			if tr := t.Translations[lang]; lang != "" && tr != nil {
+				title = tr.Title
+			}
+			b.WriteString("[[" + l.Target + "|" + title + "]]")
 		}
 		last = l.End
 	}
-	b.WriteString(c.Body[last:])
-	out.Body = b.String()
-	return &out
+	b.WriteString(body[last:])
+	return b.String()
 }

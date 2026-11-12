@@ -31,6 +31,12 @@ func FromCard(c *card.Card) *Card {
 	for _, m := range c.Media {
 		o.Spec.Media = append(o.Spec.Media, Media(m))
 	}
+	for lang, t := range c.Translations {
+		if o.Spec.Translations == nil {
+			o.Spec.Translations = map[string]CardText{}
+		}
+		o.Spec.Translations[lang] = CardText(*t)
+	}
 	return o
 }
 
@@ -55,6 +61,13 @@ func ToCard(o *Card) *card.Card {
 	}
 	for _, m := range s.Media {
 		c.Media = append(c.Media, card.Media(m))
+	}
+	for lang, t := range s.Translations {
+		if c.Translations == nil {
+			c.Translations = map[string]*card.Translation{}
+		}
+		tt := card.Translation(t)
+		c.Translations[lang] = &tt
 	}
 	return c
 }

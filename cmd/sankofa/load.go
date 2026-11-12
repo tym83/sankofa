@@ -30,8 +30,23 @@ func kubeClient() (client.Client, error) {
 	return client.New(cfg, client.Options{Scheme: scheme})
 }
 
-// loadCards reads cards from --content, or from the cluster.
+// lang is the reader's language.
+var lang = "en"
+
+// loadCards reads cards from --content, or from the cluster, in the reader's
+// language.
 func loadCards(cmd *cobra.Command) (*card.Set, error) {
+	s, err := loadCardsRaw(cmd)
+	if err != nil || lang == "" || lang == "en" {
+		return s, err
+	}
+	for _, id := range s.Order {
+		s.ByID[id] = s.Resolved(s.ByID[id]).Localized(lang)
+	}
+	return s, nil
+}
+
+func loadCardsRaw(cmd *cobra.Command) (*card.Set, error) {
 	if dir, _ := cmd.Flags().GetString("content"); dir != "" {
 		return card.LoadDir(dir)
 	}

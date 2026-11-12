@@ -167,20 +167,20 @@ func printCard(w io.Writer, s *card.Set, c *card.Card, osc bool) {
 	}
 	fmt.Fprintln(w, wrap(body, 78))
 	if c.Dispute != "" {
-		fmt.Fprintf(w, "\nDisputed: %s\n", c.Dispute)
+		fmt.Fprintf(w, "\n%s%s\n", tr("Disputed: "), c.Dispute)
 	}
 	if len(c.Further) > 0 {
-		fmt.Fprintln(w, "\nFurther:")
+		fmt.Fprintln(w, "\n"+tr("Further:"))
 		for _, f := range c.Further {
 			fmt.Fprintln(w, "  ·", f)
 		}
 	}
-	fmt.Fprintln(w, "\nSources:")
+	fmt.Fprintln(w, "\n"+tr("Sources:"))
 	for _, src := range c.Sources {
 		fmt.Fprintln(w, "  ·", atlas.Hyperlink(osc && src.URL != "", src.URL, src.Title))
 	}
 	u := atlas.ForCard(c).URL()
-	fmt.Fprintln(w, "\nAtlas:", atlas.Hyperlink(osc, u, u))
+	fmt.Fprintln(w, "\n"+tr("Atlas:"), atlas.Hyperlink(osc, u, u))
 }
 
 func wrap(s string, width int) string {
@@ -319,27 +319,27 @@ func (m *dictModel) View() string {
 	b.WriteString(body + "\n")
 
 	if c.Dispute != "" {
-		b.WriteString("\n" + stWow.Render("Disputed: ") + wrap(c.Dispute, m.width-14) + "\n")
+		b.WriteString("\n" + stWow.Render(tr("Disputed: ")) + wrap(c.Dispute, m.width-14) + "\n")
 	}
 	if len(c.Further) > 0 {
-		b.WriteString("\n" + stMeta.Render("Further") + "\n")
+		b.WriteString("\n" + stMeta.Render(tr("Further")) + "\n")
 		for _, f := range c.Further {
 			b.WriteString("  · " + f + "\n")
 		}
 	}
 	if bl := m.set.Backlinks(c.ID); len(bl) > 0 {
-		b.WriteString("\n" + stMeta.Render("← referenced by: ") + strings.Join(bl, ", ") + "\n")
+		b.WriteString("\n" + stMeta.Render(tr("← referenced by: ")) + strings.Join(bl, ", ") + "\n")
 	}
-	b.WriteString("\n" + stDim.Render("Sources: "+sourceTitles(c)) + "\n")
+	b.WriteString("\n" + stDim.Render(tr("Sources")+": "+sourceTitles(c)) + "\n")
 	if m.showLink {
 		u := atlas.ForCard(c).URL()
-		b.WriteString("\n" + stFooter.Render("Atlas: ") + atlas.Hyperlink(true, u, u) + "\n")
+		b.WriteString("\n" + stFooter.Render(tr("Atlas: ")) + atlas.Hyperlink(true, u, u) + "\n")
 	}
-	ed := "male"
+	ed := tr("male")
 	if m.st.Edition == card.EditionFemale {
-		ed = "female"
+		ed = tr("female")
 	}
-	b.WriteString("\n" + stFooter.Render(fmt.Sprintf("tab link · enter open · backspace back · r random · o atlas · q quit   [%s copy · %d read]", ed, len(m.st.Path))))
+	b.WriteString("\n" + stFooter.Render(fmt.Sprintf(tr("tab link · enter open · backspace back · r random · o atlas · q quit   [%s copy · %d read]"), ed, len(m.st.Path))))
 	return b.String()
 }
 

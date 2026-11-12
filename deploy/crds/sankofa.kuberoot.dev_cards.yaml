@@ -172,6 +172,38 @@ spec:
                 type: array
               title:
                 type: string
+              translations:
+                additionalProperties:
+                  description: CardText is a card in another language.
+                  properties:
+                    body:
+                      type: string
+                    captions:
+                      items:
+                        type: string
+                      type: array
+                    dispute:
+                      type: string
+                    further:
+                      items:
+                        type: string
+                      type: array
+                    places:
+                      items:
+                        type: string
+                      type: array
+                    title:
+                      type: string
+                    wow:
+                      type: string
+                  required:
+                  - body
+                  - title
+                  - wow
+                  type: object
+                description: Translations by language code. Facts never differ from
+                  the original.
+                type: object
               wow:
                 description: The one-line hook.
                 type: string
