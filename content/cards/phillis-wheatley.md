@@ -10,6 +10,8 @@ places:
 zoom: 4
 era: v3
 books: [voices]
+edition: f
+pair: first-poets
 further:
   - "Phillis Wheatley, Poems on Various Subjects, Religious and Moral (London: A. Bell, 1773)"
   - "Massachusetts Historical Society: Phillis Wheatley, From Our Cabinet"

@@ -9,6 +9,8 @@ places:
 zoom: 4
 era: v5
 books: [voices, heirs]
+edition: m
+pair: first-poets
 further:
   - "Elizabeth R. Wright, The Epic of Juan Latino: Dilemmas of Race and Religion in Renaissance Spain (University of Toronto Press, 2016)"
   - "Cervantes, Don Quixote, Part I (1605): the prefatory poem by Urganda la desconocida"

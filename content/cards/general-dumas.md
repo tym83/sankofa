@@ -11,6 +11,8 @@ places:
 zoom: 4
 era: v5
 books: [archives, heirs]
+edition: m
+pair: warriors
 further:
   - "Tom Reiss, The Black Count: Glory, Revolution, Betrayal, and the Real Count of Monte Cristo (2012; Pulitzer Prize for Biography, 2013)"
 sources:

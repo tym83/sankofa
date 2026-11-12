@@ -11,6 +11,8 @@ places:
 zoom: 3
 era: v2
 books: [archives, heirs]
+edition: f
+pair: river
 further:
   - "The Combahee River Collective Statement (April 1977)"
   - "Harriet Tubman and 2nd South Carolina Volunteers monument, Beaufort (2024)"

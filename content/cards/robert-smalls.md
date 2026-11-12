@@ -10,6 +10,8 @@ places:
 zoom: 4
 era: v2
 books: [archives, heirs]
+edition: m
+pair: river
 further:
   - "Robert Smalls House, Beaufort (Reconstruction Era National Historical Park)"
   - "Harper's Weekly, 14 June 1862: the gunboat Planter"
