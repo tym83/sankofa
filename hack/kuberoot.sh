@@ -51,6 +51,7 @@ p=root/'hack/hetzner.sh'
 s=p.read_text().replace('exec -i builder ', 'exec -i sankofa-builder ').replace('exec -it builder ', 'exec -it sankofa-builder ')
 s=s.replace('get pod builder ', 'get pod sankofa-builder ')
 s=s.replace('kubectl --context "$CTX"', 'kubectl --kubeconfig "$KUBECONFIG" --context "$CTX"')
+s=s.replace('-artifacts /work/out/$arch -trust', r'-artifacts /work/out/$arch -version \"\$(cat /work/out/$arch/VERSION)\" -trust')
 p.write_text(s)
 p=root/'hack/hetzner/node.yaml'
 s=p.read_text().replace('http://builder.', 'http://sankofa-builder.').replace('cpu: 4','cpu: 1').replace('memory: 8Gi','memory: 4Gi')
