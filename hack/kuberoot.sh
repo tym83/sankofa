@@ -56,4 +56,9 @@ p=root/'hack/hetzner/node.yaml'
 s=p.read_text().replace('http://builder.', 'http://sankofa-builder.').replace('cpu: 4','cpu: 1').replace('memory: 8Gi','memory: 4Gi')
 p.write_text(s)
 PY
+# The baked node profile stays Sankofa; kuberoot.distro selects the base
+# package subscription. No unpublished kuberoot-sankofa meta package is needed.
+if [[ $1 = media && " $* " != *" kuberoot.distro="* ]]; then
+  set -- "$@" kuberoot.distro=edge
+fi
 KUBEROOT_DISTRO=sankofa "$work/hack/hetzner.sh" "$@"

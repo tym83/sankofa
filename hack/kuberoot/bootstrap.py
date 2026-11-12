@@ -64,7 +64,8 @@ def installed(ip):
 
 for ip in IPS:
     config = wait(lambda: read(ip, 'osconfigs')['items'][0])
-    assert config['status']['distro'] == 'sankofa', f'{ip} is not a Sankofa node'
+    assert config['status']['distro'] == 'kuberoot', f'{ip} is not a kuberoot node'
+    assert any(s['metadata']['name'] == 'griot' for s in read(ip, 'nodeservices')['items']), f'{ip} lacks the Sankofa node service'
 
 if MODE == 'install':
     for ip in IPS:

@@ -18,7 +18,9 @@ Service `sankofa-system/griot` не имеет selector. Griot регистри�
 в Endpoints, порт HTTPS — 8443. Сертификат соответствует DNS-имени Service;
 его CA повторно записывается в APIService истории и конфигурации вебхуков.
 CRD, namespace, RBAC и вебхуки устанавливаются как addons. Карточки и квесты
-встроены в Griot. Собственные контейнерные образы и registry не нужны.
+встроены в Griot. Собственные контейнерные образы и registry не нужны. Носитель по умолчанию
+передаёт `kuberoot.distro=edge` для подписки на базовые пакеты; встроенный
+профиль служб остаётся Sankofa.
 Служба узла использует admin kubeconfig по схеме референсной интеграции;
 RBAC ServiceAccount сохранён и для обычного запуска Griot как Deployment.
 

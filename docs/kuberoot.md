@@ -18,7 +18,8 @@ as its HTTPS Endpoint, on port 8443, and reconciles serving CA bundles into
 the history APIService and admission configurations. The serving certificate
 matches the Service DNS name. CRDs, namespace, RBAC and webhooks are addons;
 card and quest content is embedded in Griot. No Sankofa container image or
-registry is involved. Node startup uses the admin kubeconfig, as in the
+registry is involved. Media defaults to `kuberoot.distro=edge` for the base
+package subscription; the baked node-service profile remains Sankofa. Node startup uses the admin kubeconfig, as in the
 reference node-service integration; the addon ServiceAccount RBAC also remains
 available for the ordinary Deployment installation.
 
