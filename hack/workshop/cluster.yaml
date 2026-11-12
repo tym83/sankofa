@@ -1,0 +1,18 @@
+# The museum cluster: Sankofa installed as add-ons on a nested Kubernetes.
+apiVersion: apps.cozystack.io/v1alpha1
+kind: Kubernetes
+metadata:
+  name: museum
+  namespace: tenant-sankofa
+spec:
+  version: v1.35
+  storageClass: replicated
+  controlPlane:
+    replicas: 1
+  nodeGroups:
+    md0:
+      minReplicas: 2
+      maxReplicas: 3
+      instanceType: u1.large
+      diskSize: 30Gi
+      storageClass: replicated
