@@ -30,7 +30,9 @@ func TestKgotlaGuard(t *testing.T) {
 	council := v1alpha1.Kgotla{ObjectMeta: metav1.ObjectMeta{Name: "drop-prod"}, Spec: v1alpha1.KgotlaSpec{
 		Target: v1alpha1.Target{Resource: "namespaces", Name: "prod"}, Voices: []string{"ama", "kofi"}, Chief: "naledi", Reason: "migrated",
 	}}
-	list := func(cs ...v1alpha1.Kgotla) Councils { return func(context.Context) ([]v1alpha1.Kgotla, error) { return cs, nil } }
+	list := func(cs ...v1alpha1.Kgotla) Councils {
+		return func(context.Context) ([]v1alpha1.Kgotla, error) { return cs, nil }
+	}
 
 	if Kgotla(list())(r, req).Allowed {
 		t.Fatal("protected namespace deleted without a council")

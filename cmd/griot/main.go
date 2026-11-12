@@ -43,6 +43,7 @@ import (
 	"github.com/tym83/sankofa/pkg/card"
 	"github.com/tym83/sankofa/pkg/credits"
 	"github.com/tym83/sankofa/pkg/history"
+	"github.com/tym83/sankofa/pkg/pulse"
 )
 
 const managedBy = "griot"
@@ -57,12 +58,13 @@ func main() {
 		retention  = flag.Duration("retention", 30*24*time.Hour, "how long to keep changes (the last record of each object stays)")
 		noSync     = flag.Bool("no-sync", false, "do not sync cards and quests")
 		noRecord   = flag.Bool("no-record", false, "do not record history")
+		pulseAddr  = flag.String("pulse", ":8081", "plain-HTTP listen address of the public pulse stream (empty to disable)")
 	)
 	flag.Parse()
 	log := slog.New(slog.NewTextHandler(os.Stderr, nil))
 	ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer cancel()
-	if err := run(ctx, log, *kubeconfig, *db, *listen, *apiService, *host, *retention, !*noSync, !*noRecord); err != nil {
+	if err := run(ctx, log, *kubeconfig, *db, *listen, *apiService, *host, *pulseAddr, *retention, !*noSync, !*noRecord); err != nil {
 		log.Error("griot", "err", err)
 		os.Exit(1)
 	}
@@ -75,7 +77,7 @@ func restConfig(path string) (*rest.Config, error) {
 	return rest.InClusterConfig()
 }
 
-func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiService, host string, retention time.Duration, sync, record bool) error {
+func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiService, host, pulseAddr string, retention time.Duration, sync, record bool) error {
 	cfg, err := restConfig(kubeconfig)
 	if err != nil {
 		return err
@@ -95,7 +97,21 @@ func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiS
 			log.Error("sync cards", "err", err)
 		}
 	}
+	if pulseAddr != "" {
+		hub := &pulse.Hub{}
+		go hub.Run(ctx, kube)
+		pm := http.NewServeMux()
+		pm.Handle("/pulse", hub)
+		ps := &http.Server{Addr: pulseAddr, Handler: pm, ReadHeaderTimeout: 10 * time.Second}
+		go func() { <-ctx.Done(); _ = ps.Close() }()
+		go func() {
+			if err := ps.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+				log.Error("pulse", "err", err)
+			}
+		}()
+	}
 	if !record {
+		<-ctx.Done()
 		return nil
 	}
 	store, err := history.Open(dbPath)
