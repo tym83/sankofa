@@ -20,6 +20,8 @@ sources:
   - {title: "Yale News: Henry Louis Gates Jr. to donate rare manuscript", url: "https://news.yale.edu/2003/05/28/henry-louis-gates-jr-donate-rare-manuscript-female-slave-yale"}
   - {title: "Harvard Gazette: Solving the mystery of The Bondwoman’s Narrative", url: "https://news.harvard.edu/gazette/story/2023/12/solving-the-mystery-of-the-bondwomans-narrative/"}
   - {title: "LAist: Interview with Gregg Hecimovich about Hannah Crafts", url: "https://laist.com/shows/take-two/professor-ids-slave-woman-who-wrote-a-bondwomans-narrative"}
+media:
+  - {"type": "image", "file": "hannah-crafts.jpg", "caption": "Henry Louis Gates Jr., 18 July 2013", "credit": "Oregon State University; resized for display", "license": "CC BY-SA 2.0", "url": "https://commons.wikimedia.org/wiki/File:Henry_Louis_Gates,_Jr.jpg"}
 ---
 A novel handwritten probably in the 1850s waited generations for its
 readers. In 2001 Henry Louis Gates Jr. bought the manuscript at Swann

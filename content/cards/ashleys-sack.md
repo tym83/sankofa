@@ -21,5 +21,7 @@ sources:
   - {title: "Southern Spaces: Auslander (2016)", url: "https://southernspaces.org/2016/slaverys-traces-search-ashleys-sack"}
   - {title: "Central Washington University news (2017)", url: "https://www.cwu.edu/about/media-resources/news/slavery-era-embroidery-excites-historians-evokes-heartbreak-of-its-time"}
   - {title: "CBS News, 60 Minutes (2016)", url: "https://www.cbsnews.com/news/artifacts-that-will-send-a-chill-down-your-spine/"}
+media:
+  - {"type": "image", "file": "ashleys-sack.jpg", "caption": "Ashley's Sack, embroidered by Ruth Middleton with the story of Rose's gift to her daughter", "credit": "Shameran81; courtesy Middleton Place; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Ashley%27s_Sack_(Slave_Sack_c._mid-19th_century).jpg"}
 ---
 A cotton sack holds a whole family's memory. When nine-year-old Ashley was sold in South Carolina, her mother Rose gave her a sack with a tattered dress, three handfuls of pecans and a braid of Rose's hair. Generations later, Ashley's granddaughter embroidered that story onto the sack and signed it "Ruth Middleton 1921". Mark Auslander traced a Rose and an Ashley to the Charleston estate of Robert Martin, who died in 1852, a reconstruction rather than proof. The sack has been shown at Middleton Place and at the Smithsonian's African American history museum. Compare [[dave-the-potter]], [[partus-1662]] and [[wpa-narratives]].

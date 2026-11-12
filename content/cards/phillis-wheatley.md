@@ -22,6 +22,8 @@ sources:
   - {title: "Phillis Wheatley: Poems on Various Subjects, full text", url: "https://www.gutenberg.org/cache/epub/409/pg409.html"}
   - {title: "National Archives, Founders Online: Washington to Wheatley, 28 February 1776", url: "https://founders.archives.gov/documents/Washington/03-03-02-0281"}
   - {title: "Somerville Museum: Phillis Wheatley and George Washington", url: "https://www.somervillemuseum.org/museum-blog/first-flag-poetry-rlmgh"}
+media:
+  - {"type": "image", "file": "phillis-wheatley.jpg", "caption": "Frontispiece of Poems on Various Subjects, London, 1773", "credit": "Credited to Scipio Moorhead; Library of Congress Prints and Photographs Division; resized for display", "license": "Public domain", "url": "https://www.loc.gov/item/2002712199/"}
 ---
 Eighteen of Boston's most prominent men, from Governor Thomas Hutchinson to
 John Hancock, put their names in her book to assure the world that the
