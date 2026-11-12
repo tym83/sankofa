@@ -5,6 +5,7 @@ import os
 import pathlib
 import subprocess
 import time
+import tempfile
 import uuid
 
 CONFIG = os.environ['SANKOFA_KUBECONFIG']
@@ -14,11 +15,12 @@ CLI = os.environ.get('SANKOFA_CLI', 'sankofa')
 PREFIX = 'sankofa-e2e-' + uuid.uuid4().hex[:8]
 NS, PRIVATE = PREFIX, PREFIX + '-private'
 created = []
+CACHE = tempfile.TemporaryDirectory(prefix='sankofa-e2e-cache-')
 
 
 def command(binary, args, data=None, check=True):
     env = dict(os.environ, SANKOFA_CONTENT='')
-    p = subprocess.run([binary, '--kubeconfig', CONFIG, '--context', CONTEXT, *args],
+    p = subprocess.run([binary, '--kubeconfig', CONFIG, '--context', CONTEXT, '--cache-dir', CACHE.name, *args],
                        input=data, text=True, capture_output=True, timeout=90, env=env)
     if check and p.returncode:
         raise RuntimeError(f'{binary} {args}: {p.stdout}\n{p.stderr}')

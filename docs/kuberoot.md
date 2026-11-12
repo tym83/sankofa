@@ -129,3 +129,24 @@ its serving certificate and repairs trust without discarding disk memory.
 Upstream runner reference: <https://github.com/kubernetes-sigs/hydrophone>.
 Recorded stand results belong in the session journal and retained evidence;
 the acceptance target above is not a claim of a completed run.
+
+## Signed updates and persistence
+
+For a change to the node binaries or profile, build with a new
+`KUBEROOT_VERSION`, then run `hack/kuberoot.sh bundle amd64`. The bundle, digest
+and signature are in `/work/out/amd64/bundles`. From the builder, run
+`python3 hack/kuberoot/upgrade.py VERSION BUNDLE_URL SHA256 IP1 IP2 IP3`.
+Use the builder Service address on port 8080 for BUNDLE_URL. Each node verifies
+the signature against its baked release key, stages the inactive slot, reboots,
+and must report the requested release as Good before the next node is updated.
+
+Before conformance, `hack/e2e/persistence.py` additionally verifies that a
+recorded deletion remains fetchable after a real control-plane reboot. Set
+`SANKOFA_NODE_IP` and `SANKOFA_NODE_KUBECONFIG=/work/trust/admin.kubeconfig`
+beside the feature-suite variables. This check intentionally reboots the
+control plane; run it while no other test is active.
+
+Griot's node-service profile sets `KUBE_FEATURE_WatchListClient=false` on this
+edge/kine base: the initial streaming-list bookmark did not complete on the
+stand. Ordinary LIST followed by WATCH preserves the resource-version boundary
+and allows the recorder to start. Upstream conformance selection is unchanged.
