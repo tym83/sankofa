@@ -155,7 +155,7 @@ func printCard(w io.Writer, s *card.Set, c *card.Card, osc bool) {
 	if len(c.Places) > 0 {
 		place = c.Places[0].Name
 	}
-	fmt.Fprintf(w, "%s %s\n%s · %s · %s\n\n%s\n\n", booksOf(c), c.Title, yearsOf(c), place, c.Kind, c.Wow)
+	fmt.Fprintf(w, "%s %s\n%s · %s · %s\n\n%s\n\n", booksOf(c), c.Title, yearsOf(c), place, tr(c.Kind), c.Wow)
 	body := c.Body
 	for _, l := range c.Links() {
 		t := s.ByID[l.Target]
