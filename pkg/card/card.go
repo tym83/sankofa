@@ -117,10 +117,11 @@ var linkRe = regexp.MustCompile(`\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]`)
 
 // Link is a cross-reference inside the body: [[id]] or [[id|text]].
 type Link struct {
-	Target string
-	Text   string
-	Start  int
-	End    int
+	Target   string
+	Text     string
+	Explicit bool // written as [[id|text]]
+	Start    int
+	End      int
 }
 
 // Links returns cross-references in body order.
@@ -130,6 +131,7 @@ func (c *Card) Links() []Link {
 		l := Link{Target: c.Body[m[2]:m[3]], Start: m[0], End: m[1]}
 		if m[4] >= 0 {
 			l.Text = c.Body[m[4]:m[5]]
+			l.Explicit = true
 		} else {
 			l.Text = l.Target
 		}
@@ -349,4 +351,25 @@ func (s *Set) ForEdition(id, edition string) *Card {
 		}
 	}
 	return c
+}
+
+// Resolved returns a copy of the card whose bare [[id]] links carry the
+// target's title as their text, so readers see "Olaudah Equiano", not
+// "equiano".
+func (s *Set) Resolved(c *Card) *Card {
+	out := *c
+	var b strings.Builder
+	last := 0
+	for _, l := range c.Links() {
+		b.WriteString(c.Body[last:l.Start])
+		if t := s.ByID[l.Target]; t != nil && !l.Explicit {
+			b.WriteString("[[" + l.Target + "|" + t.Title + "]]")
+		} else {
+			b.WriteString(c.Body[l.Start:l.End])
+		}
+		last = l.End
+	}
+	b.WriteString(c.Body[last:])
+	out.Body = b.String()
+	return &out
 }

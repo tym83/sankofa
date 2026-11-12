@@ -20,7 +20,7 @@ sources:
   - {title: "Isabel Wilkerson, The Warmth of Other Suns: The Epic Story of America's Great Migration (Random House, 2010)"}
   - {title: "The Phillips Collection: Jacob Lawrence, The Migration Series"}
 media:
-  - {"type": "image", "file": "great-migration.jpg", "caption": "Part of the Easter parade on the South Side of Chicago, April 1941. Photograph by Russell Lee for the Farm Security Administration", "credit": "Lee, Russell, 1903-1986, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Easter_parade_Southside_Chicago_8a29956v.jpg"}
+  - {"type": "image", "file": "great-migration.jpg", "caption": "Part of the Easter parade on the South Side of Chicago, April 1941. Photograph by Russell Lee for the Farm Security Administration", "credit": "Russell Lee, Farm Security Administration, Library of Congress, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Easter_parade_Southside_Chicago_8a29956v.jpg"}
 ---
 Between about 1910 and 1970 some six million Black Southerners moved to the
 cities of the North and West, one family at a time, by train and bus. They left

@@ -1,0 +1,68 @@
+# The public, read-only way into the museum cluster: anyone with the published
+# kubeconfig may read cards and quests and the memory of what they can see.
+# Nothing else, and never writes.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: visitor
+  namespace: sankofa-museum
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: visitor-token
+  namespace: sankofa-museum
+  annotations: {kubernetes.io/service-account.name: visitor}
+type: kubernetes.io/service-account-token
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sankofa:visitor
+rules:
+  - apiGroups: ["sankofa.kuberoot.dev"]
+    resources: ["cards", "quests", "kgotlas"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["history.sankofa.kuberoot.dev"]
+    resources: ["timelines", "clustertimelines"]
+    verbs: ["get", "list"]
+  - apiGroups: ["apiextensions.k8s.io"]
+    resources: ["customresourcedefinitions"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: sankofa:visitor
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: ClusterRole, name: sankofa:visitor}
+subjects: [{kind: ServiceAccount, name: visitor, namespace: sankofa-museum}]
+---
+# Visitors share a small, queued slice of the API server, so a crowd of
+# watches cannot starve the cluster itself.
+apiVersion: flowcontrol.apiserver.k8s.io/v1
+kind: PriorityLevelConfiguration
+metadata:
+  name: sankofa-visitors
+spec:
+  type: Limited
+  limited:
+    nominalConcurrencyShares: 5
+    lendablePercent: 0
+    limitResponse:
+      type: Queue
+      queuing: {queues: 16, handSize: 4, queueLengthLimit: 20}
+---
+apiVersion: flowcontrol.apiserver.k8s.io/v1
+kind: FlowSchema
+metadata:
+  name: sankofa-visitors
+spec:
+  priorityLevelConfiguration: {name: sankofa-visitors}
+  matchingPrecedence: 500
+  distinguisherMethod: {type: ByUser}
+  rules:
+    - subjects: [{kind: ServiceAccount, serviceAccount: {name: visitor, namespace: sankofa-museum}}]
+      resourceRules:
+        - {verbs: ["*"], apiGroups: ["*"], resources: ["*"], clusterScope: true, namespaces: ["*"]}
+      nonResourceRules:
+        - {verbs: ["*"], nonResourceURLs: ["*"]}

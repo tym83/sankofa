@@ -46,6 +46,7 @@ r random card, o show the atlas link, q quit.`,
 			if c == nil {
 				return fmt.Errorf("no card %q", start)
 			}
+			c = s.Resolved(c)
 			if plain || !isTerminal(cmd.OutOrStdout()) {
 				st.Visit(c.ID)
 				_ = st.Save()
@@ -236,7 +237,7 @@ func (m *dictModel) open(c *card.Card, push bool) {
 	if push && m.cur != nil {
 		m.back = append(m.back, m.cur)
 	}
-	m.cur = c
+	m.cur = m.set.Resolved(c)
 	m.sel = 0
 	m.showLink = false
 	m.st.Visit(c.ID)

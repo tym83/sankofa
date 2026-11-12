@@ -66,3 +66,48 @@ test('reduced motion still reaches the deep-linked point', async ({ browser }) =
   await expect(page.locator('.atlas-bar .when')).toContainText('1900–1935');
   await ctx.close();
 });
+
+test('the descent opens at a deep-linked year and keeps the year in the link', async ({ page }) => {
+  await page.goto('/#t=1803&view=descent');
+  await expect(page.locator('.descent.open')).toBeVisible();
+  await expect.poll(async () => Number(await page.locator('.dm-year').textContent())).toBeGreaterThan(1795);
+  expect(Number(await page.locator('.dm-year').textContent())).toBeLessThan(1811);
+  await page.locator('.descent').evaluate((el) => el.scrollBy(0, 3000));
+  await expect.poll(() => page.evaluate(() => Number(new URLSearchParams(location.hash.slice(1)).get('t')))).toBeGreaterThan(1810);
+  expect(page.url()).toContain('view=descent');
+  const card = page.locator('.descent a.dc').first();
+  const id = await card.getAttribute('data-card');
+  await page.locator('.descent').evaluate((el, id) => el.querySelector(`a.dc[data-card="${id}"]`)!.scrollIntoView({ block: 'center' }), id);
+  await card.click();
+  await expect(page.locator('.drawer.on article.card')).toBeVisible();
+});
+
+test('the cover leads into the descent', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('link', { name: 'Descend through seven centuries' }).click();
+  await expect(page.locator('.descent.open')).toBeVisible();
+  await expect(page.locator('.dm-year')).toHaveText(/^13\d\d$/);
+});
+
+test('the listening room plays a labelled demo when the cluster is not reachable', async ({ page }) => {
+  await page.goto('/#view=listen');
+  await expect(page.locator('.listen.open')).toBeVisible();
+  await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/, { timeout: 8000 });
+  await expect(page.locator('.l-node')).toHaveCount(3);
+  await page.getByRole('button', { name: 'Start listening' }).click();
+  await expect(page.locator('.listen.playing')).toBeVisible();
+  await expect(page.locator('.l-call .slot').first()).toBeAttached({ timeout: 8000 });
+  await page.getByRole('button', { name: 'Stop' }).click();
+  await expect(page.locator('.listen.playing')).toHaveCount(0);
+});
+
+test('the listening room plays the live cluster from /pulse', async ({ page }) => {
+  const voices = { type: 'voices', at: '2026-11-12T10:00:00Z', voices: [{ node: 'cp-1', alive: true, late: 0.1, ready: 2, notReady: 1 }, { node: 'w-1', alive: false, late: 1.3, ready: 0, notReady: 2 }] };
+  const lease = { type: 'lease', node: 'cp-1', at: '2026-11-12T10:00:01Z', leaseSeconds: 40 };
+  await page.route('**/pulse', (r) => r.fulfill({ status: 200, headers: { 'content-type': 'text/event-stream', 'cache-control': 'no-cache' }, body: `retry: 60000\ndata: ${JSON.stringify(voices)}\n\ndata: ${JSON.stringify(lease)}\n\n` }));
+  await page.goto('/#view=listen');
+  await expect(page.locator('.l-badge')).toHaveText(/Live/);
+  await expect(page.locator('.l-node')).toHaveCount(2);
+  await expect(page.locator('.l-node.silent')).toHaveCount(1);
+  await expect(page.locator('.l-status')).toContainText('1 of 2 nodes playing');
+});

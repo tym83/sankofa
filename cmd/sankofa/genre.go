@@ -227,7 +227,7 @@ func writeRecipe(out string, s *card.Set, g *card.Card, owner map[string]string,
 		if owner[id] != g.ID {
 			continue
 		}
-		o := v1alpha1.FromCard(s.ByID[id])
+		o := v1alpha1.FromCard(s.Resolved(s.ByID[id]))
 		o.Labels["sankofa.kuberoot.dev/genre"] = g.ID
 		data, err := yaml.Marshal(o)
 		if err != nil {

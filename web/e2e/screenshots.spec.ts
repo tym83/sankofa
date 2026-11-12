@@ -3,7 +3,7 @@ import { test, type Page } from '@playwright/test';
 
 test.skip(!process.env.SCREENSHOTS, 'set SCREENSHOTS=1');
 test.describe.configure({ mode: 'serial' });
-test.setTimeout(300_000);
+test.setTimeout(480_000);
 
 const dir = 'screenshots';
 const shot = (page: Page, name: string, project: string) => page.screenshot({ path: `${dir}/${project}-${name}.png` });
@@ -83,6 +83,20 @@ test('key views', async ({ page }, info) => {
   await page.reload();
   await settle(page, 2000);
   await shot(page, '40-card-over-story', p);
+
+  for (const y of [1300, 1500, 1781, 1880, 1925, 1965, 2010]) {
+    await page.goto(`/#t=${y}&view=descent`);
+    await page.reload();
+    await settle(page, 2600);
+    await shot(page, `60-descent-${y}`, p);
+  }
+
+  await page.goto('/#view=listen');
+  await page.reload();
+  await settle(page, 4500);
+  await page.getByRole('button', { name: 'Start listening' }).click();
+  await settle(page, 6000);
+  await shot(page, '70-listening-room', p);
 
   await page.evaluate(() => {
     localStorage.setItem('sankofa.theme', 'light');

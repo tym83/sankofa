@@ -29,7 +29,7 @@ func Credits(resolve Resolve, enforce bool) Handler {
 		if err := json.Unmarshal(req.Object.Raw, &pod); err != nil {
 			return Allow()
 		}
-		ctx, cancel := context.WithTimeout(r.Context(), 8*time.Second)
+		ctx, cancel := context.WithTimeout(r.Context(), 13*time.Second)
 		defer cancel()
 		var problems []string
 		for _, c := range append(pod.Spec.InitContainers, pod.Spec.Containers...) {

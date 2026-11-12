@@ -11,4 +11,5 @@ km apply -f deploy/crds/ >/dev/null
 km apply -f dist/griot.yaml >/dev/null
 km apply -f deploy/webhooks.yaml >/dev/null
 km -n sankofa-system rollout status deploy/griot --timeout=180s
+km wait --for=condition=Available apiservice/v1alpha1.history.sankofa.kuberoot.dev --timeout=120s >/dev/null
 echo "$img"

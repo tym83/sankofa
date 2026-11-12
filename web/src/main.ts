@@ -3,12 +3,15 @@ import type { App } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { CardSet } from './lib/cards';
 import { sortChapters } from './lib/chapters';
-import { formatFragment, safeParse, type Point } from './lib/fragment';
+import { formatFragment } from './lib/fragment';
+import { formatRoute, parseRoute, screenOf, type Route } from './lib/route';
 import * as reader from './lib/reader';
 import { copyText, h, svgIcon, toast } from './lib/dom';
 import { buildStory } from './views/story';
 import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
+import { Descent } from './views/descent';
+import { Listen } from './views/listen';
 
 async function load<T>(url: string): Promise<T> {
   const r = await fetch(url);
@@ -16,25 +19,16 @@ async function load<T>(url: string): Promise<T> {
   return r.json() as Promise<T>;
 }
 
-interface Route {
-  point: Point;
-  ch?: string;
-}
-
 function readRoute(): Route {
-  const hash = location.hash.slice(1);
-  const ch = new URLSearchParams(hash).get('ch') ?? undefined;
-  return { point: safeParse(hash), ch };
+  return parseRoute(location.hash);
 }
 
 function writeRoute(r: Route, push: boolean): void {
-  const frag = [formatFragment(r.point), r.ch ? `ch=${encodeURIComponent(r.ch)}` : ''].filter(Boolean).join('&');
+  const frag = formatRoute(r);
   const url = frag ? `#${frag}` : location.pathname + location.search;
   if (url === (location.hash || location.pathname + location.search)) return;
   history[push ? 'pushState' : 'replaceState'](null, '', url);
 }
-
-const isAtlas = (r: Route) => !r.ch && !!(r.point.path?.length || r.point.from || r.point.place || r.point.zoom);
 
 async function start(): Promise<void> {
   const loading = h('div.loading', { role: 'progressbar', 'aria-label': 'Loading the museum' });
@@ -74,7 +68,7 @@ async function start(): Promise<void> {
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
-      if (!atlas.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
+      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
       writeRoute(route, opts.push ?? true);
     },
     closeCard() {
@@ -82,6 +76,7 @@ async function start(): Promise<void> {
     },
     openAtlas(p, push = true) {
       cardDrawer.close(true);
+      if (descent.isOpen) descent.close();
       bookDrawer.close(true);
       route = { point: p };
       writeRoute(route, push);
@@ -109,6 +104,14 @@ async function start(): Promise<void> {
         }),
       );
     },
+    openDescent(year, push = true) {
+      cardDrawer.close(true);
+      bookDrawer.close(true);
+      if (atlas.isOpen) atlas.close();
+      route = { point: year ? { from: year } : {}, view: 'descent' };
+      writeRoute(route, push);
+      descent.open(year);
+    },
     chapterInView(id) {
       chapterNow = id;
     },
@@ -118,6 +121,23 @@ async function start(): Promise<void> {
   };
 
   const atlas = new Atlas(app);
+  const descent = new Descent(app);
+  descent.onYear = (year) => {
+    route = { point: { from: year, focus: route.point.focus }, view: 'descent' };
+    writeRoute(route, false);
+  };
+  const listen = new Listen(app);
+  listen.onClose = () => {
+    listen.close();
+    route = { point: {}, ch: chapterNow ?? undefined };
+    writeRoute(route, false);
+  };
+  descent.onClose = () => {
+    descent.close();
+    cardDrawer.close(true);
+    route = { point: {}, ch: chapterNow ?? undefined };
+    writeRoute(route, false);
+  };
   atlas.onChange = (p) => {
     route = { point: p };
     writeRoute(route, false);
@@ -135,6 +155,8 @@ async function start(): Promise<void> {
   };
 
   setupNav(app, atlas);
+  document.querySelector('[data-open-descent]')?.prepend(svgIcon('down'));
+  document.querySelector('[data-open-listen]')?.prepend(svgIcon('wave'));
   buildStory(app, document.getElementById('story')!);
   trackChapters(app);
   loading.remove();
@@ -155,6 +177,23 @@ async function start(): Promise<void> {
 
   // Inline card links anywhere open the card in place.
   document.addEventListener('click', (e) => {
+    const l = (e.target as Element).closest<HTMLElement>('[data-listen]');
+    if (l) {
+      e.preventDefault();
+      if (descent.isOpen) descent.close();
+      if (atlas.isOpen) atlas.close();
+      cardDrawer.close(true);
+      route = { point: {}, view: 'listen' };
+      writeRoute(route, true);
+      listen.open();
+      return;
+    }
+    const d = (e.target as Element).closest<HTMLElement>('[data-descent]');
+    if (d) {
+      e.preventDefault();
+      app.openDescent(d.dataset.descent ? Number(d.dataset.descent) : undefined);
+      return;
+    }
     const a = (e.target as Element).closest<HTMLElement>('[data-card]');
     if (a) {
       e.preventDefault();
@@ -164,20 +203,30 @@ async function start(): Promise<void> {
     const ch = (e.target as Element).closest<HTMLElement>('a[data-chapter]');
     if (ch) {
       e.preventDefault();
+      if (descent.isOpen) descent.onClose?.();
       scrollToChapter(ch.dataset.chapter!);
     }
   });
 
   const apply = (initial: boolean) => {
     route = readRoute();
-    if (isAtlas(route)) {
+    const screen = screenOf(route);
+    if (screen !== 'listen' && listen.isOpen) listen.close();
+    if (screen === 'listen') {
+      if (atlas.isOpen) atlas.close();
+      if (descent.isOpen) descent.close();
+      listen.open();
+    } else if (screen === 'descent') {
+      if (atlas.isOpen) atlas.close();
+      descent.open(route.point.from);
+    } else if (screen === 'atlas') {
+      if (descent.isOpen) descent.close();
       atlas.open(route.point);
-      if (route.point.focus) app.openCard(route.point.focus, { push: false });
-      else cardDrawer.close(true);
-      return;
+    } else {
+      if (atlas.isOpen) atlas.close();
+      if (descent.isOpen) descent.close();
+      if (route.ch && (initial || route.ch !== chapterNow)) scrollToChapter(route.ch, initial);
     }
-    if (atlas.isOpen) atlas.close();
-    if (route.ch && (initial || route.ch !== chapterNow)) scrollToChapter(route.ch, initial);
     if (route.point.focus) app.openCard(route.point.focus, { push: false });
     else cardDrawer.close(true);
   };

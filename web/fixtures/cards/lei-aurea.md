@@ -17,7 +17,7 @@ sources:
   - {title: "Brazil, Lei nº 3.353, de 13 de maio de 1888", url: "https://www.planalto.gov.br/ccivil_03/leis/lim/lim3353.htm"}
   - {title: "Angela Alonso, The Last Abolition: The Brazilian Antislavery Movement, 1868–1888 (Cambridge University Press, 2021)"}
 media:
-  - {"type": "image", "file": "lei-aurea.jpg", "caption": "The Lei Áurea, signed by Princess Isabel on 13 May 1888", "credit": "File:Lei Áurea (Golden Law).tif: Senado Imperial derivative work: DarwIn, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Lei_%C3%81urea_(Golden_Law).jpg"}
+  - {"type": "image", "file": "lei-aurea.jpg", "caption": "The Lei Áurea, signed by Princess Isabel on 13 May 1888", "credit": "Senado Imperial do Brasil, 1888, via Wikimedia Commons", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Lei_%C3%81urea_(Golden_Law).jpg"}
 ---
 Article 1 declares slavery in Brazil extinct from the date of the law. Article 2
 revokes everything to the contrary. Princess Isabel signed it in Rio de Janeiro

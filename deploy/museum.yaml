@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sankofa-museum
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: museum
+  namespace: sankofa-museum
+  labels: {app.kubernetes.io/name: museum}
+spec:
+  replicas: 2
+  selector: {matchLabels: {app.kubernetes.io/name: museum}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: museum}
+    spec:
+      securityContext: {runAsNonRoot: true, runAsUser: 101, seccompProfile: {type: RuntimeDefault}}
+      containers:
+        - name: museum
+          image: MUSEUM_IMAGE
+          ports: [{name: http, containerPort: 8080}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources:
+            requests: {cpu: 20m, memory: 32Mi}
+            limits: {memory: 128Mi}
+          securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: museum
+  namespace: sankofa-museum
+spec:
+  selector: {app.kubernetes.io/name: museum}
+  ports: [{name: http, port: 80, targetPort: http}]
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: museum
+  namespace: sankofa-museum
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: MUSEUM_HOST
+      http:
+        paths:
+          - {path: /, pathType: Prefix, backend: {service: {name: museum, port: {name: http}}}}

@@ -5,8 +5,10 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/spf13/cobra"
+	"sigs.k8s.io/yaml"
 
 	"github.com/tym83/sankofa/api/v1alpha1"
 	"github.com/tym83/sankofa/pkg/card"
@@ -25,6 +27,7 @@ func contentCmd() *cobra.Command {
 			}
 			errs := s.Validate()
 			errs = append(errs, lintQuests(filepath.Join(args[0], "..", "quests"), s)...)
+			errs = append(errs, lintChapters(filepath.Join(args[0], "..", "chapters"), s)...)
 			for _, e := range errs {
 				fmt.Fprintln(cmd.ErrOrStderr(), e)
 			}
@@ -77,7 +80,7 @@ type ExportedCard struct {
 func Export(s *card.Set) map[string]any {
 	cards := make([]ExportedCard, 0, len(s.Order))
 	for _, id := range s.Order {
-		cards = append(cards, ExportedCard{Card: s.ByID[id], Backlinks: s.Backlinks(id)})
+		cards = append(cards, ExportedCard{Card: s.Resolved(s.ByID[id]), Backlinks: s.Backlinks(id)})
 	}
 	return map[string]any{"version": 1, "cards": cards}
 }
@@ -126,6 +129,69 @@ func lintQuests(dir string, s *card.Set) []error {
 			if s.ByID[c] == nil {
 				bad("unknown card %q", c)
 			}
+		}
+	}
+	return errs
+}
+
+// chapter is the front matter of a museum chapter.
+type chapter struct {
+	ID     string       `json:"id"`
+	Title  string       `json:"title"`
+	Kicker string       `json:"kicker"`
+	Years  []int        `json:"years"`
+	Hero   *card.Media  `json:"hero,omitempty"`
+	Places []card.Place `json:"places,omitempty"`
+	Cards  []string     `json:"cards"`
+}
+
+// lintChapters checks chapters against the cards: ids, links and length.
+func lintChapters(dir string, s *card.Set) []error {
+	entries, err := os.ReadDir(dir)
+	if os.IsNotExist(err) {
+		return nil
+	}
+	if err != nil {
+		return []error{err}
+	}
+	var errs []error
+	for _, e := range entries {
+		if e.IsDir() || filepath.Ext(e.Name()) != ".md" || strings.HasSuffix(e.Name(), ".ru.md") {
+			continue
+		}
+		data, err := os.ReadFile(filepath.Join(dir, e.Name()))
+		if err != nil {
+			return append(errs, err)
+		}
+		bad := func(f string, a ...any) {
+			errs = append(errs, fmt.Errorf("chapter %s: %s", e.Name(), fmt.Sprintf(f, a...)))
+		}
+		parts := strings.SplitN(string(data), "\n---\n", 2)
+		if !strings.HasPrefix(string(data), "---\n") || len(parts) != 2 {
+			bad("missing front matter")
+			continue
+		}
+		var ch chapter
+		if err := yaml.UnmarshalStrict([]byte(strings.TrimPrefix(parts[0], "---\n")), &ch); err != nil {
+			bad("front matter: %v", err)
+			continue
+		}
+		if ch.ID == "" || ch.Title == "" {
+			bad("needs id and title")
+		}
+		for _, id := range ch.Cards {
+			if s.ByID[id] == nil {
+				bad("unknown card %q", id)
+			}
+		}
+		body := &card.Card{Body: parts[1]}
+		for _, l := range body.Links() {
+			if s.ByID[l.Target] == nil {
+				bad("link to unknown card %q", l.Target)
+			}
+		}
+		if n := len(strings.Fields(body.PlainBody())); n < 80 || n > 450 {
+			bad("text has %d words, want 80..450", n)
 		}
 	}
 	return errs

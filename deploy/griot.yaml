@@ -120,7 +120,7 @@ spec:
         - name: griot
           image: ko://github.com/tym83/sankofa/cmd/griot
           args: ["--db=/var/lib/griot/memory.db"]
-          ports: [{name: https, containerPort: 8443}]
+          ports: [{name: https, containerPort: 8443}, {name: pulse, containerPort: 8081}]
           readinessProbe: {httpGet: {path: /readyz, port: https, scheme: HTTPS}}
           livenessProbe: {httpGet: {path: /livez, port: https, scheme: HTTPS}, periodSeconds: 20}
           resources:
@@ -139,7 +139,7 @@ metadata:
   namespace: sankofa-system
 spec:
   selector: {app.kubernetes.io/name: griot}
-  ports: [{name: https, port: 443, targetPort: https}]
+  ports: [{name: https, port: 443, targetPort: https}, {name: pulse, port: 8081, targetPort: pulse}]
 ---
 apiVersion: apiregistration.k8s.io/v1
 kind: APIService
