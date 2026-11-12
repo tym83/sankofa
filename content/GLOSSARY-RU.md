@@ -21,6 +21,7 @@
 | English | Русский |
 |---|---|
 | Africa Before | Африка до |
+| Asante / Ashanti | Асанте (не Ашанти) |
 | Middle Passage | Средний путь (с прописной; путь через Атлантику) |
 | Underground Railroad | Подземная железная дорога |
 | enslaved people | порабощённые люди; «рабы» — там, где так в оригинале (slaves) |
@@ -54,6 +55,8 @@
 | Their Eyes Were Watching God | «Их глаза видели Бога» |
 | Born in Slavery (WPA) | «Рождённые в рабстве» |
 | Walker's Appeal | «Воззвание» Дэвида Уокера |
+| Follow the Drinking Gourd | «Следуй за Ковшом» (Ковш — Большая Медведица) |
+| Hidden in Plain View | «Спрятано на виду» |
 | Am I Not a Man and a Brother? | «Разве я не человек и не брат?» |
 | Ain't I a Woman? | «Разве я не женщина?» |
 | The Palm-Wine Drinkard | «Путешествие в Город Мёртвых» (русское издание) |
