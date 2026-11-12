@@ -2,7 +2,7 @@
 id: oliver-golden
 kind: person
 title: Oliver Golden
-wow: In 1931 a Tuskegee graduate led Black American cotton experts to Soviet Uzbekistan, and his granddaughter became a Moscow talk-show host.
+wow: "In 1931 a Black American led a team of agronomists to Soviet Uzbekistan, and his granddaughter became a Moscow talk-show host."
 years: [1931]
 places:
   - {name: "Yangiyul, Uzbekistan", lat: 41.1122, lon: 69.0472}
@@ -13,19 +13,20 @@ books: [heirs]
 further:
   - "Yelena Khanga with Susan Jacoby, Soul to Soul: The Story of a Black Russian American Family, 1865-1992 (W. W. Norton, 1992)"
   - "Langston Hughes, I Wonder as I Wander (1956), the Uzbekistan chapters"
+dispute: "Sources differ on whether Golden graduated from Tuskegee or attended it and left without graduating."
 sources:
-  - {title: "Tamara J. Walker, The Enduring Lesson of Langston Hughes' Christmas in Uzbekistan (TIME, Made by History, 2023)", url: "https://time.com/6550243/langston-hughes-uzbekistan-christmas/"}
-  - {title: "BlackPast: Yelena Khanga (1962- )", url: "https://blackpast.org/global-african-history/khanga-yelena-1962/"}
-  - {title: "Wilson Center, KennanX podcast: Yelena Khanga on family and growing up in the USSR (2020)", url: "https://www.wilsoncenter.org/audio/kennanx-episode-7-yelena-khanga-family-growing-ussr-and-black-lives-matter"}
+  - {title: "Meredith Roman: Soul to Soul, Journal of Russian American Studies,2022", url: "https://journals.ku.edu/jras/article/download/17979/16210"}
+  - {title: "Colonial Beach Historical Society and Museum: African American history", url: "https://www.cbhistoryandmuseum.org/african-american-history"}
+  - {title: "Indiana University Libraries: African Americans in Soviet Russia", url: "https://guides.libraries.indiana.edu/c.php?g=792963&p=5681557"}
+  - {title: "RFE/RL: Russian Blacks and Obama visit,2009", url: "https://www.rferl.org/amp/For_Russian_Blacks_Obama_Visit_Stirs_Special_Interest/1770531.html"}
+  - {title: "Radio Svoboda (in Russian)", url: "https://www.svoboda.org/a/27667216.html"}
+  - {title: "Lily Golden, Autobiography: Institute of Africa, daughter Yelena a journalist, Moscow television, Soul to Soul", url: "https://africana.ru/Golden/info/autobiography.htm"}
+  - {title: "Wilson Center KennanX (2020): Khanga, journalist, talk show host, author of Soul to Soul", url: "https://www.wilsoncenter.org/audio/kennanx-episode-7-yelena-khanga-family-growing-ussr-and-black-lives-matter"}
 ---
-Mississippi-born, a First World War veteran and a Tuskegee graduate who had
-studied under George Washington Carver, Oliver Golden could find work at
-home only as a Pullman porter and dishwasher. So he recruited a team of
-Black agronomists for a Soviet cotton project. On 7 November 1931, the
-revolution's anniversary, they pulled into Moscow, then settled in
-Yangiyul, Uzbekistan. Golden came with Bertha Bialek, a daughter of Polish
-Jewish immigrants, disowned by her family for loving him; they had met in jail after a
-union protest. At Christmas 1932 the group fed a visiting Langston Hughes
-pumpkin pie. Their daughter Lily became a
-historian; her daughter Yelena Khanga became a journalist and TV host and wrote
-the family's story. Compare [[gannibal]] and [[what-black-means]].
+In 1931 Oliver Golden led a team of Black American agronomists to a Soviet
+cotton project in Uzbekistan. He had studied at Tuskegee, though accounts
+differ on whether he graduated. He came with Bertha Bialek, and the story
+did not end with him: their granddaughter, Yelena Khanga, became a
+journalist and a television host in Moscow, and wrote the family's story.
+Compare [[gannibal]], an African in Russia two centuries earlier, and
+[[what-black-means]].
