@@ -5,6 +5,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"crypto/ecdsa"
 	"crypto/elliptic"
@@ -18,9 +19,11 @@ import (
 	"fmt"
 	"log/slog"
 	"math/big"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"strconv"
 	"strings"
 	"syscall"
@@ -55,6 +58,7 @@ func main() {
 		listen     = flag.String("listen", ":8443", "aggregated API listen address")
 		apiService = flag.String("apiservice", "v1alpha1."+history.Group, "APIService to keep the CA bundle of")
 		host       = flag.String("host", "griot.sankofa-system.svc", "DNS name in the serving certificate")
+		register   = flag.String("register", "", "node IP to register as the Griot service endpoint (single control plane)")
 		retention  = flag.Duration("retention", 30*24*time.Hour, "how long to keep changes (the last record of each object stays)")
 		noSync     = flag.Bool("no-sync", false, "do not sync cards and quests")
 		noRecord   = flag.Bool("no-record", false, "do not record history")
@@ -64,7 +68,7 @@ func main() {
 	log := slog.New(slog.NewTextHandler(os.Stderr, nil))
 	ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer cancel()
-	if err := run(ctx, log, *kubeconfig, *db, *listen, *apiService, *host, *pulseAddr, *retention, !*noSync, !*noRecord); err != nil {
+	if err := run(ctx, log, *kubeconfig, *db, *listen, *apiService, *host, *pulseAddr, *retention, !*noSync, !*noRecord, *register); err != nil {
 		log.Error("griot", "err", err)
 		os.Exit(1)
 	}
@@ -77,7 +81,10 @@ func restConfig(path string) (*rest.Config, error) {
 	return rest.InClusterConfig()
 }
 
-func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiService, host, pulseAddr string, retention time.Duration, sync, record bool) error {
+func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiService, host, pulseAddr string, retention time.Duration, sync, record bool, register string) error {
+	if register != "" && net.ParseIP(register) == nil {
+		return fmt.Errorf("invalid --register IP %q", register)
+	}
 	cfg, err := restConfig(kubeconfig)
 	if err != nil {
 		return err
@@ -90,12 +97,8 @@ func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiS
 	if err != nil {
 		return err
 	}
-	if sync {
-		// Cards are content: a bad card must not stop the cluster's memory.
-		// The collection is linted at build time; here a failure is a warning.
-		if err := syncCards(ctx, log, cl); err != nil {
-			log.Error("sync cards", "err", err)
-		}
+	if sync && !record {
+		return syncCards(ctx, log, cl)
 	}
 	if pulseAddr != "" {
 		hub := &pulse.Hub{}
@@ -113,6 +116,9 @@ func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiS
 	if !record {
 		<-ctx.Done()
 		return nil
+	}
+	if err := os.MkdirAll(filepath.Dir(dbPath), 0700); err != nil {
+		return err
 	}
 	store, err := history.Open(dbPath)
 	if err != nil {
@@ -132,17 +138,12 @@ func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiS
 	if err != nil {
 		return err
 	}
-	if err := publishCA(ctx, cl, apiService, caPEM); err != nil {
-		log.Warn("could not publish CA bundle to APIService", "err", err)
-	}
 	mux := http.NewServeMux()
 	mux.Handle("/", (&history.API{Store: store, Auth: auth, Kube: kube}).Handler())
 	webhooks(mux, cl, kube)
-	for _, name := range []string{"sankofa-validating", "sankofa-mutating"} {
-		if err := publishWebhookCA(ctx, cl, name, caPEM); err != nil {
-			log.Warn("could not publish CA bundle to webhook configuration", "name", name, "err", err)
-		}
-	}
+	// Addons and the node service start independently. Reconcile until they
+	// exist, and repair CA bundles after addon reapplication or a restart.
+	go reconcile(ctx, log, cl, apiService, caPEM, register, sync)
 	srv := &http.Server{
 		Addr:    listen,
 		Handler: mux,
@@ -294,6 +295,14 @@ func publishCA(ctx context.Context, cl client.Client, name string, ca []byte) er
 	obj.SetAPIVersion("apiregistration.k8s.io/v1")
 	obj.SetKind("APIService")
 	obj.SetName(name)
+	if err := cl.Get(ctx, client.ObjectKey{Name: name}, obj); err != nil {
+		return err
+	}
+	current, _, _ := unstructured.NestedString(obj.Object, "spec", "caBundle")
+	insecure, _, _ := unstructured.NestedBool(obj.Object, "spec", "insecureSkipTLSVerify")
+	if current == base64.StdEncoding.EncodeToString(ca) && !insecure {
+		return nil
+	}
 	patch := fmt.Sprintf(`{"spec":{"caBundle":%q,"insecureSkipTLSVerify":false}}`, base64.StdEncoding.EncodeToString(ca))
 	return cl.Patch(ctx, obj, client.RawPatch(types.MergePatchType, []byte(patch)))
 }
@@ -342,6 +351,7 @@ func publishWebhookCA(ctx context.Context, cl client.Client, name string, ca []b
 	if err := cl.Get(ctx, client.ObjectKey{Name: name}, obj); err != nil {
 		return err
 	}
+	before := obj.DeepCopy()
 	hooks, _, _ := unstructured.NestedSlice(obj.Object, "webhooks")
 	for i := range hooks {
 		h := hooks[i].(map[string]any)
@@ -349,5 +359,10 @@ func publishWebhookCA(ctx context.Context, cl client.Client, name string, ca []b
 		hooks[i] = h
 	}
 	_ = unstructured.SetNestedSlice(obj.Object, hooks, "webhooks")
+	a, _ := before.MarshalJSON()
+	b, _ := obj.MarshalJSON()
+	if bytes.Equal(a, b) {
+		return nil
+	}
 	return cl.Update(ctx, obj)
 }
