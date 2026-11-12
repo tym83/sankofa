@@ -103,7 +103,8 @@ HYDROPHONE=/work/bin/hydrophone hack/e2e/conformance.sh
 Use Hydrophone v0.8.0 from its official release, verifying the release
 checksum before extracting it. The conformance script pins the official
 Kubernetes v1.37.2 image by SHA-256 index digest, checks three Ready nodes and
-Sankofa API/webhooks, then runs the complete conformance selection serially.
+Sankofa API/webhooks, then runs the complete conformance selection with four workers
+(`CONFORMANCE_PARALLEL` overrides the worker count).
 It retains stdout, upstream JUnit/e2e logs, image identity, runner version,
 node and webhook state, and a strict summary under `/work/results`. It requires
 **462 passed, zero failed, zero skipped conformance cases**. There is no skip

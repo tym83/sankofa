@@ -9,6 +9,8 @@ OUT=${CONFORMANCE_OUT:-/work/results/conformance-$(date -u +%Y%m%dT%H%M%SZ)}
 mkdir -p "$OUT"
 KUBECTL=${KUBECTL:-kubectl}
 HYDROPHONE=${HYDROPHONE:-hydrophone}
+PARALLEL=${CONFORMANCE_PARALLEL:-4}
+[[ $PARALLEL =~ ^[1-9][0-9]*$ ]] || { echo "Invalid CONFORMANCE_PARALLEL" >&2; exit 1; }
 k() { "$KUBECTL" --kubeconfig "$SANKOFA_KUBECONFIG" --context "$SANKOFA_CONTEXT" "$@"; }
 # Pin the official multi-architecture index, verified against the registry.
 IMAGE=registry.k8s.io/conformance@sha256:d503a15722ea23662c482b72ce01ee6e9efec1e8b9c2d3834aa0c51bb2d0832a
@@ -40,7 +42,7 @@ trap 'rm -f "$config"' EXIT
 k config view --minify --flatten --raw > "$config"
 set +e
 "$HYDROPHONE" --kubeconfig "$config" --conformance --conformance-image "$IMAGE" \
-  --parallel 1 --output-dir "$OUT" 2>&1 | tee "$OUT/hydrophone.log"
+  --parallel "$PARALLEL" --output-dir "$OUT" 2>&1 | tee "$OUT/hydrophone.log"
 status=${PIPESTATUS[0]}
 set -e
 printf '%s\n' "$status" > "$OUT/exit-status.txt"

@@ -102,7 +102,8 @@ HYDROPHONE=/work/bin/hydrophone hack/e2e/conformance.sh
 Используйте Hydrophone v0.8.0 из официального release и проверьте checksum
 архива перед распаковкой. Conformance-скрипт закрепляет официальный образ
 Kubernetes v1.37.2 по SHA-256 digest индекса, проверяет три Ready-узла,
-APIService и вебхуки Sankofa, затем запускает весь conformance последовательно.
+APIService и вебхуки Sankofa, затем запускает весь conformance в четыре потока
+(число потоков меняется через `CONFORMANCE_PARALLEL`).
 В `/work/results` сохраняются вывод, JUnit и e2e-логи upstream, идентификатор
 образа, версия runner, состояние узлов и вебхуков, строгий итоговый отчёт.
 Успех требует **462 пройденных теста, ноль ошибок и ноль пропущенных
