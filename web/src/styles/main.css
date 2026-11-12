@@ -2026,3 +2026,33 @@ main:focus,
   fill: transparent;
   stroke: none;
 }
+
+.atlas {
+  overflow: hidden;
+}
+@media (max-width: 720px) {
+  .atlas-time {
+    max-height: 30svh;
+    overflow-y: auto;
+  }
+  .hero .credit {
+    top: calc(var(--nav-h) + 10px);
+    bottom: auto;
+    left: var(--gutter);
+    right: var(--gutter);
+    text-align: left;
+    max-width: none;
+  }
+  .atlas-bar .when {
+    font-size: 11px;
+  }
+}
+@media (max-width: 720px) {
+  .atlas-bar .label,
+  .geo .route-label tspan.sub {
+    display: none;
+  }
+  .geo .route-label {
+    font-size: 12px;
+  }
+}
