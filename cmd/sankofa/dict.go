@@ -291,7 +291,7 @@ func (m *dictModel) View() string {
 		place = c.Places[0].Name
 	}
 	b.WriteString(stTitle.Render(booksOf(c)+" "+c.Title) + "\n")
-	b.WriteString(stMeta.Render(yearsOf(c)+" · "+place+" · "+c.Kind) + "\n\n")
+	b.WriteString(stMeta.Render(yearsOf(c)+" · "+place+" · "+tr(c.Kind)) + "\n\n")
 	b.WriteString(stWow.Render(wrap(c.Wow, m.width-4)) + "\n\n")
 
 	// Render the body with styled links. Wrap first on plain text, then style
