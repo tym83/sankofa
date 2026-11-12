@@ -1,0 +1,373 @@
+package main
+
+import (
+	"fmt"
+	"io"
+	"math/rand/v2"
+	"os"
+	"strings"
+
+	tea "github.com/charmbracelet/bubbletea"
+	"github.com/charmbracelet/lipgloss"
+	"github.com/spf13/cobra"
+
+	"github.com/tym83/sankofa/pkg/atlas"
+	"github.com/tym83/sankofa/pkg/card"
+	"github.com/tym83/sankofa/pkg/reader"
+)
+
+func dictCmd() *cobra.Command {
+	var plain bool
+	c := &cobra.Command{
+		Use:   "dict [CARD]",
+		Short: "Read the dictionary: follow links between cards, endlessly",
+		Long: `An endless dictionary in the manner of Pavić's Dictionary of the Khazars.
+Links are marked with the book they lead to: ❝ voices, ▤ archives, ✶ heirs.
+
+Keys: tab/shift+tab select a link, enter follow it, backspace go back,
+r random card, o show the atlas link, q quit.`,
+		Args: cobra.MaximumNArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			s, err := loadCards(cmd)
+			if err != nil {
+				return err
+			}
+			st, err := reader.Load()
+			if err != nil {
+				return err
+			}
+			start := ""
+			if len(args) == 1 {
+				start = args[0]
+			} else {
+				start = unreadCard(s, st)
+			}
+			c := s.ForEdition(start, st.Edition)
+			if c == nil {
+				return fmt.Errorf("no card %q", start)
+			}
+			if plain || !isTerminal(cmd.OutOrStdout()) {
+				st.Visit(c.ID)
+				_ = st.Save()
+				printCard(cmd.OutOrStdout(), s, c, false)
+				return nil
+			}
+			m := newDictModel(s, st, c)
+			if _, err := tea.NewProgram(m, tea.WithAltScreen()).Run(); err != nil {
+				return err
+			}
+			return st.Save()
+		},
+	}
+	c.Flags().BoolVar(&plain, "plain", false, "print the card instead of opening the reader")
+	c.AddCommand(pathCmd())
+	return c
+}
+
+func pathCmd() *cobra.Command {
+	c := &cobra.Command{Use: "path", Short: "Your own book: the path you walked through the dictionary"}
+	c.AddCommand(&cobra.Command{
+		Use:   "export",
+		Short: "Print a link that replays your path in the museum",
+		RunE: func(cmd *cobra.Command, _ []string) error {
+			st, err := reader.Load()
+			if err != nil {
+				return err
+			}
+			if len(st.Path) == 0 {
+				return fmt.Errorf("your path is empty: open some cards with `sankofa dict` first")
+			}
+			p := atlas.Point{Focus: st.Path[0], Path: st.Path}
+			fmt.Fprintln(cmd.OutOrStdout(), p.URL())
+			return nil
+		},
+	})
+	c.AddCommand(&cobra.Command{
+		Use:   "import URL",
+		Short: "Walk someone else's path: it may hold the other edition's voice",
+		Args:  cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			s, err := loadCards(cmd)
+			if err != nil {
+				return err
+			}
+			p, err := atlas.Parse(args[0])
+			if err != nil {
+				return err
+			}
+			for _, id := range p.Path {
+				if c := s.ByID[id]; c != nil {
+					printCard(cmd.OutOrStdout(), s, c, false)
+					fmt.Fprintln(cmd.OutOrStdout())
+				}
+			}
+			return nil
+		},
+	})
+	return c
+}
+
+// unreadCard picks a card the reader has not opened yet.
+func unreadCard(s *card.Set, st *reader.State) string {
+	var fresh []string
+	for _, id := range s.Order {
+		if !st.Seen(id) && s.ByID[id].Edition == card.EditionBoth {
+			fresh = append(fresh, id)
+		}
+	}
+	if len(fresh) == 0 {
+		fresh = s.Order
+	}
+	return fresh[rand.IntN(len(fresh))]
+}
+
+func isTerminal(w io.Writer) bool {
+	f, ok := w.(*os.File)
+	if !ok {
+		return false
+	}
+	fi, err := f.Stat()
+	return err == nil && fi.Mode()&os.ModeCharDevice != 0
+}
+
+func booksOf(c *card.Card) string {
+	var b []string
+	for _, k := range c.Books {
+		b = append(b, card.BookSymbols[k])
+	}
+	return strings.Join(b, "")
+}
+
+func yearsOf(c *card.Card) string {
+	switch len(c.Years) {
+	case 1:
+		return fmt.Sprint(c.Years[0])
+	case 2:
+		return fmt.Sprintf("%d–%d", c.Years[0], c.Years[1])
+	}
+	return ""
+}
+
+// printCard renders a card as plain text, with OSC 8 links when asked.
+func printCard(w io.Writer, s *card.Set, c *card.Card, osc bool) {
+	place := ""
+	if len(c.Places) > 0 {
+		place = c.Places[0].Name
+	}
+	fmt.Fprintf(w, "%s %s\n%s · %s · %s\n\n%s\n\n", booksOf(c), c.Title, yearsOf(c), place, c.Kind, c.Wow)
+	body := c.Body
+	for _, l := range c.Links() {
+		t := s.ByID[l.Target]
+		sym := ""
+		if t != nil && len(t.Books) > 0 {
+			sym = card.BookSymbols[t.Books[0]]
+		}
+		body = strings.Replace(body, c.Body[l.Start:l.End], l.Text+sym, 1)
+	}
+	fmt.Fprintln(w, wrap(body, 78))
+	if c.Dispute != "" {
+		fmt.Fprintf(w, "\nDisputed: %s\n", c.Dispute)
+	}
+	if len(c.Further) > 0 {
+		fmt.Fprintln(w, "\nFurther:")
+		for _, f := range c.Further {
+			fmt.Fprintln(w, "  ·", f)
+		}
+	}
+	fmt.Fprintln(w, "\nSources:")
+	for _, src := range c.Sources {
+		fmt.Fprintln(w, "  ·", atlas.Hyperlink(osc && src.URL != "", src.URL, src.Title))
+	}
+	u := atlas.ForCard(c).URL()
+	fmt.Fprintln(w, "\nAtlas:", atlas.Hyperlink(osc, u, u))
+}
+
+func wrap(s string, width int) string {
+	var out []string
+	for _, para := range strings.Split(s, "\n\n") {
+		words := strings.Fields(para)
+		line := ""
+		for _, w := range words {
+			if line != "" && lipgloss.Width(line)+1+lipgloss.Width(w) > width {
+				out = append(out, line)
+				line = w
+				continue
+			}
+			if line == "" {
+				line = w
+			} else {
+				line += " " + w
+			}
+		}
+		out = append(out, line, "")
+	}
+	return strings.TrimRight(strings.Join(out, "\n"), "\n")
+}
+
+// --- interactive reader ---
+
+var (
+	stTitle  = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#F2C14E"))
+	stMeta   = lipgloss.NewStyle().Foreground(lipgloss.Color("#8A8A8A"))
+	stWow    = lipgloss.NewStyle().Italic(true).Foreground(lipgloss.Color("#E07A5F"))
+	stLink   = lipgloss.NewStyle().Underline(true).Foreground(lipgloss.Color("#81B29A"))
+	stSel    = lipgloss.NewStyle().Reverse(true).Foreground(lipgloss.Color("#81B29A"))
+	stDim    = lipgloss.NewStyle().Foreground(lipgloss.Color("#6C6C6C"))
+	stFooter = lipgloss.NewStyle().Foreground(lipgloss.Color("#5F87AF"))
+)
+
+type dictModel struct {
+	set      *card.Set
+	st       *reader.State
+	cur      *card.Card
+	back     []*card.Card
+	sel      int
+	width    int
+	showLink bool
+}
+
+func newDictModel(s *card.Set, st *reader.State, c *card.Card) *dictModel {
+	m := &dictModel{set: s, st: st, width: 80}
+	m.open(c, false)
+	return m
+}
+
+func (m *dictModel) open(c *card.Card, push bool) {
+	if push && m.cur != nil {
+		m.back = append(m.back, m.cur)
+	}
+	m.cur = c
+	m.sel = 0
+	m.showLink = false
+	m.st.Visit(c.ID)
+}
+
+func (m *dictModel) Init() tea.Cmd { return nil }
+
+func (m *dictModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+	switch msg := msg.(type) {
+	case tea.WindowSizeMsg:
+		m.width = min(msg.Width, 100)
+	case tea.KeyMsg:
+		links := m.cur.Links()
+		switch msg.String() {
+		case "q", "ctrl+c", "esc":
+			return m, tea.Quit
+		case "tab", "right", "down":
+			if len(links) > 0 {
+				m.sel = (m.sel + 1) % len(links)
+			}
+		case "shift+tab", "left", "up":
+			if len(links) > 0 {
+				m.sel = (m.sel - 1 + len(links)) % len(links)
+			}
+		case "enter":
+			if len(links) > 0 {
+				if t := m.set.ForEdition(links[m.sel].Target, m.st.Edition); t != nil {
+					m.open(t, true)
+				}
+			}
+		case "backspace", "b":
+			if n := len(m.back); n > 0 {
+				prev := m.back[n-1]
+				m.back = m.back[:n-1]
+				m.open(prev, false)
+			}
+		case "r":
+			m.open(m.set.ForEdition(unreadCard(m.set, m.st), m.st.Edition), true)
+		case "o":
+			m.showLink = !m.showLink
+		}
+	}
+	return m, nil
+}
+
+func (m *dictModel) View() string {
+	c := m.cur
+	var b strings.Builder
+	place := ""
+	if len(c.Places) > 0 {
+		place = c.Places[0].Name
+	}
+	b.WriteString(stTitle.Render(booksOf(c)+" "+c.Title) + "\n")
+	b.WriteString(stMeta.Render(yearsOf(c)+" · "+place+" · "+c.Kind) + "\n\n")
+	b.WriteString(stWow.Render(wrap(c.Wow, m.width-4)) + "\n\n")
+
+	// Render the body with styled links. Wrap first on plain text, then style
+	// link texts in place so wrapping stays correct.
+	links := c.Links()
+	var sb strings.Builder
+	last := 0
+	for i, l := range links {
+		sb.WriteString(c.Body[last:l.Start])
+		sym := ""
+		if t := m.set.ByID[l.Target]; t != nil && len(t.Books) > 0 {
+			sym = card.BookSymbols[t.Books[0]]
+		}
+		txt := strings.ReplaceAll(l.Text+sym, " ", " ")
+		if i == m.sel {
+			sb.WriteString("\x00S" + txt + "\x00E")
+		} else {
+			sb.WriteString("\x00L" + txt + "\x00E")
+		}
+		last = l.End
+	}
+	sb.WriteString(c.Body[last:])
+	body := wrap(sb.String(), m.width-4)
+	body = styleMarks(body)
+	b.WriteString(body + "\n")
+
+	if c.Dispute != "" {
+		b.WriteString("\n" + stWow.Render("Disputed: ") + wrap(c.Dispute, m.width-14) + "\n")
+	}
+	if len(c.Further) > 0 {
+		b.WriteString("\n" + stMeta.Render("Further") + "\n")
+		for _, f := range c.Further {
+			b.WriteString("  · " + f + "\n")
+		}
+	}
+	if bl := m.set.Backlinks(c.ID); len(bl) > 0 {
+		b.WriteString("\n" + stMeta.Render("← referenced by: ") + strings.Join(bl, ", ") + "\n")
+	}
+	b.WriteString("\n" + stDim.Render("Sources: "+sourceTitles(c)) + "\n")
+	if m.showLink {
+		u := atlas.ForCard(c).URL()
+		b.WriteString("\n" + stFooter.Render("Atlas: ") + atlas.Hyperlink(true, u, u) + "\n")
+	}
+	ed := "male"
+	if m.st.Edition == card.EditionFemale {
+		ed = "female"
+	}
+	b.WriteString("\n" + stFooter.Render(fmt.Sprintf("tab link · enter open · backspace back · r random · o atlas · q quit   [%s copy · %d read]", ed, len(m.st.Path))))
+	return b.String()
+}
+
+func styleMarks(s string) string {
+	var out strings.Builder
+	for {
+		i := strings.Index(s, "\x00")
+		if i < 0 {
+			out.WriteString(s)
+			break
+		}
+		out.WriteString(s[:i])
+		kind := s[i+1]
+		j := strings.Index(s[i:], "\x00E")
+		txt := strings.ReplaceAll(s[i+2:i+j], " ", " ")
+		if kind == 'S' {
+			out.WriteString(stSel.Render(txt))
+		} else {
+			out.WriteString(stLink.Render(txt))
+		}
+		s = s[i+j+2:]
+	}
+	return out.String()
+}
+
+func sourceTitles(c *card.Card) string {
+	var t []string
+	for _, s := range c.Sources {
+		t = append(t, s.Title)
+	}
+	return strings.Join(t, "; ")
+}

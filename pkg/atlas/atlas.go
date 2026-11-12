@@ -19,7 +19,8 @@ type Point struct {
 	From, To int // years; zero means unset
 	Place    string
 	Zoom     int
-	Focus    string // card id
+	Focus    string   // card id
+	Path     []string // a reader's path, replayed by the museum
 }
 
 // Base returns the museum base URL.
@@ -51,6 +52,9 @@ func (p Point) Fragment() string {
 	}
 	if p.Focus != "" {
 		v.Set("focus", p.Focus)
+	}
+	if len(p.Path) > 0 {
+		v.Set("path", strings.Join(p.Path, "."))
 	}
 	return v.Encode()
 }
@@ -86,6 +90,9 @@ func Parse(s string) (Point, error) {
 	}
 	p.Place = v.Get("place")
 	p.Focus = v.Get("focus")
+	if path := v.Get("path"); path != "" {
+		p.Path = strings.Split(path, ".")
+	}
 	return p, nil
 }
 
@@ -95,4 +102,21 @@ func Hyperlink(enabled bool, target, text string) string {
 		return text
 	}
 	return "\x1b]8;;" + target + "\x1b\\" + text + "\x1b]8;;\x1b\\"
+}
+
+// Slug turns a place name into the place key used in fragments.
+func Slug(name string) string {
+	var b strings.Builder
+	dash := false
+	for _, r := range strings.ToLower(name) {
+		switch {
+		case r >= 'a' && r <= 'z' || r >= '0' && r <= '9':
+			b.WriteRune(r)
+			dash = false
+		case !dash && b.Len() > 0:
+			b.WriteByte('-')
+			dash = true
+		}
+	}
+	return strings.TrimSuffix(b.String(), "-")
 }

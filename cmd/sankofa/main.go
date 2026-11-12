@@ -17,7 +17,7 @@ func main() {
 		SilenceErrors: true,
 	}
 	root.PersistentFlags().String("content", envOr("SANKOFA_CONTENT", ""), "read cards from a local content directory instead of the cluster")
-	root.AddCommand(contentCmd())
+	root.AddCommand(contentCmd(), dictCmd())
 	if err := root.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, "sankofa:", err)
 		os.Exit(1)
