@@ -244,7 +244,8 @@ export class GeoMap {
     const [x, y] = this.projection([lon, lat]) ?? [this.w / 2, this.h / 2];
     // Keep the point a little right of centre on wide screens: text lives on the left.
     const cx = this.opts.interactive || this.w < 720 ? (this.w - this.inset) / 2 : this.w * 0.62;
-    return zoomIdentity.translate(cx, this.h / 2).scale(k).translate(-x, -y);
+    const cy = !this.opts.interactive && this.w < 720 ? this.h * 0.34 : this.h / 2;
+    return zoomIdentity.translate(cx, cy).scale(k).translate(-x, -y);
   }
 
   jump(lon: number, lat: number, k: number): void {

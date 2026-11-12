@@ -1029,11 +1029,12 @@ button {
 }
 .finale h2 {
   font-size: clamp(40px, 6vw, 86px);
+  text-wrap: balance;
   font-weight: 350;
   letter-spacing: -0.025em;
   line-height: 0.98;
   margin: 12px 0 18px;
-  max-width: 16ch;
+  max-width: 20ch;
   font-variation-settings: 'SOFT' 80, 'WONK' 1, 'opsz' 144;
 }
 .finale > p {
@@ -2013,4 +2014,15 @@ main:focus,
 }
 .tl .life.long rect:first-child {
   fill-opacity: 0.35;
+}
+
+.tl .life.bead rect:first-child {
+  fill-opacity: 1;
+}
+
+.tl .life rect.hit,
+.tl .life:hover rect.hit,
+.tl .life.on rect.hit {
+  fill: transparent;
+  stroke: none;
 }

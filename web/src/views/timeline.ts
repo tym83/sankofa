@@ -93,9 +93,11 @@ export class Timeline {
     const placed = items.map((c) => {
       const [a, b] = span(c);
       const x0 = x(a);
-      const x1 = Math.max(x(b), x0 + 4);
+      // Lives are bars; events, works and objects are beads at their first year.
+      const life = c.kind === 'person' && b > a;
+      const x1 = life ? Math.max(x(b), x0 + 4) : x0 + 6;
       const lw = c.title.length * (compact ? 5.6 : 6.4) + 10;
-      const long = b - a > LONG;
+      const long = life && b - a > LONG;
       const need = (long ? x0 + lw : Math.max(x1, x0 + lw)) + 8;
       let row = rows.findIndex((end) => end < x0);
       if (row < 0 && rows.length < maxRows) row = rows.length;
@@ -149,7 +151,7 @@ export class Timeline {
       const [a, b] = span(p.c);
       const g = gLife
         .append('g')
-        .attr('class', p.long ? 'life long' : 'life')
+        .attr('class', `life${p.long ? ' long' : ''}${p.x1 - p.x0 <= 6 ? ' bead' : ''}`)
         .attr('data-id', p.c.id)
         .attr('tabindex', 0)
         .attr('role', 'button')
@@ -167,14 +169,14 @@ export class Timeline {
         .attr('y', barY)
         .attr('width', p.x1 - p.x0)
         .attr('height', p.long ? 2 : compact ? 5 : 7)
-        .attr('rx', 3);
+        .attr('rx', p.x1 - p.x0 <= 6 ? 3 : 3);
       if (p.labelled) g.append('text').attr('x', p.x0).attr('y', barY - 3).text(p.c.title);
       g.append('rect')
         .attr('x', p.x0 - 2)
         .attr('y', y)
         .attr('width', Math.max(p.x1 - p.x0, p.labelled ? p.c.title.length * 6 : 6) + 4)
         .attr('height', rowH)
-        .attr('fill', 'transparent');
+        .attr('class', 'hit');
     }
 
     if (this.opts.brush) {

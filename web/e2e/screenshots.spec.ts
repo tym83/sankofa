@@ -3,6 +3,7 @@ import { test, type Page } from '@playwright/test';
 
 test.skip(!process.env.SCREENSHOTS, 'set SCREENSHOTS=1');
 test.describe.configure({ mode: 'serial' });
+test.setTimeout(300_000);
 
 const dir = 'screenshots';
 const shot = (page: Page, name: string, project: string) => page.screenshot({ path: `${dir}/${project}-${name}.png` });
