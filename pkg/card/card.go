@@ -7,7 +7,9 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"io/fs"
 	"os"
+	"path"
 	"path/filepath"
 	"regexp"
 	"sort"
@@ -91,12 +93,12 @@ type Card struct {
 	ID      string   `json:"id"`
 	Kind    string   `json:"kind"`
 	Title   string   `json:"title"`
-	Wow     string   `json:"wow"`             // one-line hook shown in crumbs
-	Years   []int    `json:"years"`           // [from] or [from, to]
-	Places  []Place  `json:"places"`          // first is the main point
-	Zoom    int      `json:"zoom"`            // 1..5, see docs/card-format.md
-	Era     string   `json:"era,omitempty"`   // v0..v7
-	Books   []string `json:"books"`           // voices | archives | heirs
+	Wow     string   `json:"wow"`           // one-line hook shown in crumbs
+	Years   []int    `json:"years"`         // [from] or [from, to]
+	Places  []Place  `json:"places"`        // first is the main point
+	Zoom    int      `json:"zoom"`          // 1..5, see docs/card-format.md
+	Era     string   `json:"era,omitempty"` // v0..v7
+	Books   []string `json:"books"`         // voices | archives | heirs
 	Edition string   `json:"edition,omitempty"`
 	Pair    string   `json:"pair,omitempty"` // id shared by an m/f pair
 	Tags    []string `json:"tags,omitempty"`
@@ -175,16 +177,19 @@ type Set struct {
 }
 
 // LoadDir loads every *.md file under dir.
-func LoadDir(dir string) (*Set, error) {
+func LoadDir(dir string) (*Set, error) { return LoadFS(os.DirFS(dir)) }
+
+// LoadFS loads every *.md file (except *.ru.md translations) in fsys.
+func LoadFS(fsys fs.FS) (*Set, error) {
 	s := &Set{ByID: map[string]*Card{}}
-	err := filepath.WalkDir(dir, func(p string, d os.DirEntry, err error) error {
+	err := fs.WalkDir(fsys, ".", func(p string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
-		if d.IsDir() || filepath.Ext(p) != ".md" || strings.HasSuffix(p, ".ru.md") {
+		if d.IsDir() || path.Ext(p) != ".md" || strings.HasSuffix(p, ".ru.md") {
 			return nil
 		}
-		data, err := os.ReadFile(p)
+		data, err := fs.ReadFile(fsys, p)
 		if err != nil {
 			return err
 		}
