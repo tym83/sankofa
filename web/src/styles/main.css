@@ -2056,3 +2056,34 @@ main:focus,
     font-size: 12px;
   }
 }
+
+/* Book marks: ❝ voices, ▤ archives, ✶ heirs, drawn as inline SVG. */
+.sym {
+  display: inline-flex;
+  gap: 0.12em;
+  vertical-align: 0.05em;
+}
+.sym svg.bm {
+  width: 0.72em;
+  height: 0.72em;
+}
+.bm.voices {
+  color: var(--voices);
+}
+.bm.archives {
+  color: var(--archives);
+}
+.bm.heirs {
+  color: var(--heirs);
+}
+.xref .sym {
+  vertical-align: 0.3em;
+  margin-right: 0.18em;
+}
+.xref .sym svg.bm {
+  width: 0.74em;
+  height: 0.74em;
+}
+.graphic .img img {
+  padding-bottom: 96px;
+}

@@ -1,7 +1,7 @@
 import type { Card, Chapter, Book } from './lib/types';
-import { CardSet, bookSymbols, segments } from './lib/cards';
+import { CardSet, segments } from './lib/cards';
 import { slug, type Point } from './lib/fragment';
-import { h } from './lib/dom';
+import { bookMarks, h } from './lib/dom';
 
 export interface App {
   set: CardSet;
@@ -39,7 +39,6 @@ export function richText(app: App, text: string): DocumentFragment {
       continue;
     }
     const book: Book | undefined = target.books[0];
-    const symbols = bookSymbols(target.books);
     frag.append(
       h(
         `a.xref.${book ?? 'heirs'}`,
@@ -48,7 +47,7 @@ export function richText(app: App, text: string): DocumentFragment {
           'data-card': s.target,
           title: `${target.title}: ${target.wow}`,
         },
-        h('span.sym', { 'aria-hidden': 'true' }, symbols),
+        bookMarks(target.books),
         // A bare [[some-id]] reads as words in prose.
         s.text === s.target ? s.text.replace(/-/g, ' ') : s.text,
       ),

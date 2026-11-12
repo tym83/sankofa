@@ -1,10 +1,10 @@
 import type { App } from '../app';
 import { cardPoint, EDITION_NAME, richText } from '../app';
 import type { Card } from '../lib/types';
-import { BOOK_NAMES, BOOK_SYMBOLS, ERAS } from '../lib/types';
-import { bookSymbols, formatYears, KIND_LABEL } from '../lib/cards';
+import { BOOK_NAMES, ERAS } from '../lib/types';
+import { formatYears, KIND_LABEL } from '../lib/cards';
 import { formatFragment, terminalCommand } from '../lib/fragment';
-import { copyText, h, svgIcon, toast } from '../lib/dom';
+import { bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
@@ -139,7 +139,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     h(
       'div.books',
       {},
-      c.books.map((b) => h(`span.book.${b}`, {}, h('span.sym', { 'aria-hidden': 'true' }, BOOK_SYMBOLS[b]), BOOK_NAMES[b])),
+      c.books.map((b) => h(`span.book.${b}`, {}, bookMarks([b]), BOOK_NAMES[b])),
     ),
     ...notices,
     h('div.text', {}, ...paragraphs),
@@ -161,7 +161,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
             'div.chips',
             {},
             [...sameGenre, ...backlinks.filter((b) => !sameGenre.includes(b))].map((b) =>
-              h('a.chip', { href: `#focus=${b.id}`, 'data-card': b.id }, h('span.sym', { 'aria-hidden': 'true' }, bookSymbols(b.books)), b.title),
+              h('a.chip', { href: `#focus=${b.id}`, 'data-card': b.id }, bookMarks(b.books), b.title),
             ),
           ),
         )
@@ -234,7 +234,7 @@ export function renderBook(app: App, path: string[], actions: { share(): void; r
           'ol.path-list',
           {},
           cards.map((c) =>
-            h('li', {}, h('button', { 'data-card': c.id }, h('b', {}, bookSymbols(c.books) + ' ' + c.title), h('span', {}, c.wow))),
+            h('li', {}, h('button', { 'data-card': c.id }, h('b', {}, bookMarks(c.books), ' ', c.title), h('span', {}, c.wow))),
           ),
         )
       : null,

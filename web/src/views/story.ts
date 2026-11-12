@@ -4,8 +4,8 @@ import type { App } from '../app';
 import { EDITION_NAME, richText } from '../app';
 import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
-import { bookSymbols, formatYears, KIND_LABEL, links } from '../lib/cards';
-import { h, reducedMotion, revealOnScroll } from '../lib/dom';
+import { formatYears, KIND_LABEL, links } from '../lib/cards';
+import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
@@ -16,6 +16,7 @@ export function buildStory(app: App, main: HTMLElement): void {
   coverMap(main.querySelector<HTMLElement>('.cover-map'));
   const edition = main.querySelector('[data-edition]');
   if (edition) edition.textContent = EDITION_NAME[app.edition];
+  main.querySelectorAll<HTMLElement>('[data-book]').forEach((b) => b.replaceWith(bookMarks([b.dataset.book!])));
 
   main.append(toc(app));
   for (const ch of app.chapters) main.append(chapter(app, ch));
@@ -109,7 +110,7 @@ function chapter(app: App, ch: Chapter): HTMLElement {
         'section.interlude',
         { style: `--era:${color}` },
         h('blockquote.reveal', {}, pick.wow),
-        h('a.btn.attr.reveal', { href: `#focus=${pick.id}`, 'data-card': pick.id }, `${bookSymbols(pick.books)} ${pick.title}, ${formatYears(pick.years)} →`),
+        h('a.btn.attr.reveal', { href: `#focus=${pick.id}`, 'data-card': pick.id }, bookMarks(pick.books), `${pick.title}, ${formatYears(pick.years)} →`),
       )
     : null;
 
@@ -148,7 +149,7 @@ export function teaser(app: App, c: Card): HTMLElement {
     h(
       'div.tx',
       {},
-      h('div.k', {}, h('span', {}, KIND_LABEL[c.kind] ?? c.kind), h('span', {}, formatYears(c.years)), h('span.bk', { 'aria-hidden': 'true' }, bookSymbols(c.books))),
+      h('div.k', {}, h('span', {}, KIND_LABEL[c.kind] ?? c.kind), h('span', {}, formatYears(c.years)), h('span.bk', {}, bookMarks(c.books))),
       h('b', {}, c.title),
       h('span.w', {}, c.wow),
     ),

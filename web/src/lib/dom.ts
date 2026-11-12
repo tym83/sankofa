@@ -97,3 +97,29 @@ export function revealOnScroll(root: ParentNode = document): void {
   );
   els.forEach((e) => io.observe(e));
 }
+
+const BOOK_PATHS: Record<string, string> = {
+  // ❝ the Book of Voices: two quotation marks
+  voices: 'M3 14c0-4 2-7 5-8l1 1.6C7.4 8.6 6.6 10 6.5 11.5H9V18H3v-4Zm9 0c0-4 2-7 5-8l1 1.6c-1.6 1-2.4 2.4-2.5 3.9H18V18h-6v-4Z',
+  // ▤ the Book of Archives: a ledger page with ruled lines
+  archives: 'M4 4h16v16H4V4Zm2 2v3h12V6H6Zm0 5v2h12v-2H6Zm0 4v3h12v-3H6Z',
+  // ✶ the Book of Heirs: a six-pointed star
+  heirs: 'M12 2l2.2 6.2L20.7 7l-4.4 5 4.4 5-6.5-1.2L12 22l-2.2-6.2L3.3 17l4.4-5-4.4-5 6.5 1.2L12 2Z',
+};
+
+/** The book symbols as inline SVG, so they render the same on every system. */
+export function bookMarks(books: string[] | undefined): HTMLElement {
+  const span = h('span.sym', { 'aria-hidden': 'true' });
+  for (const b of books ?? []) {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('class', `bm ${b}`);
+    const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p.setAttribute('d', BOOK_PATHS[b] ?? '');
+    p.setAttribute('fill', 'currentColor');
+    p.setAttribute('fill-rule', 'evenodd');
+    svg.append(p);
+    span.append(svg);
+  }
+  return span;
+}
