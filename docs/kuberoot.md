@@ -71,6 +71,13 @@ This boots the installed system without its media disk. Read the new VMI
 addresses before joining; addresses can change across a stop/start. Do not
 repeat the initial `node` command on installed VMs, since it reattaches media.
 
+On this workshop, the VMInstance Helm controller can wait for Ready while
+applying Halted and delay the next start. After setting the desired system-only
+Always spec, run `python3 hack/kuberoot/start-installed.py` on the workstation.
+It checks the desired state and mirrors it only to our three stopped underlying
+VirtualMachines, without modifying disk contents or other tenants. It is a no-op if the
+installed-disk configuration is already applied.
+
 Run `hack/kuberoot/bootstrap.py join IP1 IP2 IP3` in the builder. It waits for
 healthy installed boot slots and joins nodes 2 and 3 as workers using the node
 API. The resulting private kubeconfig is `/work/kube/sankofa.conf`; never copy
