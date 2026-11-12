@@ -9,8 +9,9 @@ import { formatYears, span } from '../lib/cards';
 import { bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
 import { eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
-import { count, t, yearsAgo } from '../lib/i18n';
-import { buildScale, chapterAt, chapterCentres, lanes, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
+import { count, pick, t, yearsAgo } from '../lib/i18n';
+import { LEVEL_NAMES } from './map';
+import { buildScale, chapterAt, chapterCentres, chaptersAt, lanes, levelCards, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
 import { interpolateRgb } from 'd3-interpolate';
 import { scaleLinear } from 'd3-scale';
 
@@ -44,8 +45,12 @@ export class Descent {
   private idle = 0;
   private lastYear = -1;
   private centres?: Map<string, number>;
-  /** Where each chapter header sits; the era shown is the last one passed. */
-  private heads: { id: string; top: number }[] = [];
+  /** The level of generalisation, as in the atlas: 1 centuries … 5 one document. */
+  level = 3;
+  private fontsWatched = false;
+  private levelBtns: HTMLButtonElement[] = [];
+  private levelHint: HTMLElement;
+  onLevel?: (level: number) => void;
   onYear?: (year: number) => void;
   onClose?: () => void;
 
@@ -59,13 +64,29 @@ export class Descent {
     this.sun = h('div.d-sun', { 'aria-hidden': 'true' });
     this.stars = h('div.d-stars', { 'aria-hidden': 'true' });
     this.track = h('div.d-track');
+    const levels = h('div.d-levels', { role: 'group', 'aria-label': t('Zoom level') });
+    LEVEL_NAMES.forEach((name, i) => {
+      const b = h('button', { 'aria-pressed': 'false', title: name, onclick: () => this.setLevel(i + 1) }, h('b', {}, String(i + 1)), h('span', {}, name)) as HTMLButtonElement;
+      this.levelBtns.push(b);
+      levels.append(b);
+    });
+    this.levelHint = h(
+      'div.d-hint',
+      { role: 'note' },
+      pick({
+        en: 'Choose how much to see: 1 shows only the great movements and a few landmarks per century, 5 every card.',
+        ru: 'Выберите, сколько видеть: на уровне 1 — только большие движения и несколько вех на век, на уровне 5 — все карточки.',
+      }),
+      h('button.icon-btn', { 'aria-label': t('Close'), onclick: () => this.dismissHint() }, svgIcon('close')),
+    );
     const bar = h(
       'header.d-bar',
       {},
       h('span.d-title', {}, t('Through the centuries')),
+      levels,
       h('button.icon-btn', { 'aria-label': t('Leave the descent'), onclick: () => this.onClose?.() }, svgIcon('close')),
     );
-    this.el = h('section.descent', { 'aria-label': t('Through the centuries: a descent from 1300 to today'), tabindex: '-1' }, this.sun, this.stars, bar, meter, this.track);
+    this.el = h('section.descent', { 'aria-label': t('Through the centuries: a descent from 1300 to today'), tabindex: '-1' }, this.sun, this.stars, bar, this.levelHint, meter, this.track);
     this.el.addEventListener('scroll', () => this.onScroll(), { passive: true });
     this.el.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') this.onClose?.();
@@ -83,15 +104,65 @@ export class Descent {
     return this.el.classList.contains('open');
   }
 
-  open(year?: number): void {
+  open(year?: number, level?: number): void {
     const first = !this.isOpen;
     this.el.classList.add('open');
     document.body.classList.add('locked');
+    if (level && level !== this.level) {
+      this.level = level;
+      this.built = false;
+    }
+    this.paintLevels();
     if (!this.built) this.layout();
+    if (first) this.showHint();
+    // Card heights are measured: measure again once the faces are in.
+    if (!this.fontsWatched && document.fonts) {
+      this.fontsWatched = true;
+      void document.fonts.ready.then(() => this.isOpen && this.layout(this.yearNow()));
+      document.fonts.addEventListener?.('loadingdone', () => this.isOpen && this.layout(this.yearNow()));
+    }
     if (first) this.el.focus({ preventScroll: true });
     if (year) this.goTo(year, !first);
     else if (first) this.el.scrollTop = 0;
     this.onScroll();
+  }
+
+  /** Change the level and keep the reader at the same year. */
+  setLevel(level: number): void {
+    const l = Math.max(1, Math.min(5, level));
+    if (l === this.level) return;
+    const year = this.yearNow();
+    this.level = l;
+    this.paintLevels();
+    this.dismissHint();
+    this.layout(year);
+    this.onLevel?.(l);
+  }
+
+  private paintLevels(): void {
+    this.levelBtns.forEach((b, i) => {
+      b.classList.toggle('on', i + 1 === this.level);
+      b.setAttribute('aria-pressed', String(i + 1 === this.level));
+    });
+  }
+
+  private showHint(): void {
+    let seen = false;
+    try {
+      seen = localStorage.getItem('sankofa.descentHint') === '1';
+    } catch {
+      /* private mode */
+    }
+    this.levelHint.classList.toggle('on', !seen);
+  }
+
+  private dismissHint(): void {
+    this.levelHint.classList.remove('on');
+    try {
+      localStorage.setItem('sankofa.descentHint', '1');
+    } catch {
+      /* private mode */
+    }
   }
 
   close(): void {
@@ -113,7 +184,8 @@ export class Descent {
   private railEras(): HTMLElement[] {
     return ERAS.map((e) => {
       const ch = this.app.chapters.find((c) => c.id === e.id);
-      const [a, b] = ch?.years.length ? [ch.years[0], ch.years[1] ?? NOW] : [e.from, e.to];
+      const [a0, b] = ch?.years.length ? [ch.years[0], ch.years[1] ?? NOW] : [e.from, e.to];
+      const a = Math.max(START, a0);
       const f = (y: number) => ((y - START) / (NOW - START)) * 100;
       return h('b', {
         style: `top:${f(a)}%;height:${Math.max(1, f(b) - f(a))}%;--era:${eraColor(e.id)};left:${ERAS.indexOf(e) % 2 ? 5 : 0}px`,
@@ -138,13 +210,18 @@ export class Descent {
         const ago = NOW - year;
         this.meterAgo.textContent = yearsAgo(ago);
         this.centres ??= chapterCentres(this.app.chapters, (id) => this.app.set.get(id)?.years[0]);
-        const line = this.el.scrollTop + this.el.clientHeight * 0.45;
-        const passed = this.heads.filter((x) => x.top <= line).pop();
-        const ch = passed ? this.app.chapters.find((c) => c.id === passed.id) : chapterAt(this.app.chapters, year, this.centres);
-        const label = ch ? `${ch.id} · ${ch.title}` : '';
-        if (this.meterEra.textContent !== label) {
-          this.meterEra.textContent = label;
+        // Chapters overlap in time: name the one this year belongs to most,
+        // and list the others that are also running.
+        const ch = chapterAt(this.app.chapters, year, this.centres);
+        const also = chaptersAt(this.app.chapters, year).filter((c) => c !== ch);
+        const key = `${ch?.id}|${also.map((c) => c.id).join()}`;
+        if (this.meterEra.dataset.key !== key) {
+          this.meterEra.dataset.key = key;
           this.meterEra.style.setProperty('--era', eraColor(ch?.id));
+          this.meterEra.replaceChildren(
+            ch ? h('span.main', {}, `${ch.id} · ${ch.title}`) : '',
+            also.length ? h('span.also', {}, pick({ en: 'also: ', ru: 'а также: ' }), ...also.map((c) => h('i', { style: `--era:${eraColor(c.id)}`, title: c.title }, c.id))) : '',
+          );
         }
       }
       clearTimeout(this.idle);
@@ -157,7 +234,8 @@ export class Descent {
     const app = this.app;
     const W = this.el.clientWidth || window.innerWidth;
     const mobile = W < 760;
-    const cards = readerCards(app.set, app.edition).filter((c) => c.years.length);
+    const all = readerCards(app.set, app.edition).filter((c) => c.years.length);
+    const cards = levelCards(all, this.level);
     const cardIndex = new Map(cards.map((c) => [c.id, c]));
 
     // Geometry of the columns.
@@ -175,7 +253,6 @@ export class Descent {
     const colW = Math.min(440, (W - cardsX - right - colGap * (cols - 1)) / cols);
 
     this.track.replaceChildren();
-    this.heads = [];
     this.lastYear = -1;
     const layer = (cls: string) => {
       const l = h(`div.${cls}`);
@@ -195,19 +272,6 @@ export class Descent {
       const el = this.cardEl(c, colW);
       els.set('card:' + c.id, el);
       list.push({ kind: 'card', id: c.id, year: Math.max(START, span(c)[0]), h: 0 });
-    }
-    for (const ch of app.chapters) {
-      if (!ch.years.length) continue;
-      const el = h(
-        'div.d-chapter',
-        { style: `--era:${eraColor(ch.id)}` },
-        h('span.v', {}, ch.id),
-        h('b', {}, ch.title),
-        h('span.k', {}, ch.kicker),
-        h('a.d-read', { href: `#ch=${ch.id}`, 'data-chapter': ch.id }, t('Read the chapter →')),
-      );
-      els.set('chapter:' + ch.id, el);
-      list.push({ kind: 'chapter', id: ch.id, year: ch.years[0], h: 0 });
     }
     for (const m of MOVEMENTS) {
       const el = h('div.d-move', { style: `--era:${eraColor(m.era)}` }, h('small', {}, t('Movement')), h('b', {}, m.title), h('span', {}, m.sub));
@@ -250,6 +314,14 @@ export class Descent {
       h('div.kicker', {}, t('{from} – {to}', { from: START, to: NOW })),
       h('h2', {}, t('Through the centuries')),
       h('p', {}, t('Seven hundred years of Black culture, one year at a time. Scroll down: every screen is time, and the deeper you go, the closer you come to today.')),
+      h(
+        'p.d-count',
+        {},
+        pick({
+          en: `Level ${this.level}, ${LEVEL_NAMES[this.level - 1].toLowerCase()}: ${count(cards.length, 'card', 'en')} of ${all.length}. Change the level at the top.`,
+          ru: `Уровень ${this.level}, «${LEVEL_NAMES[this.level - 1].toLowerCase()}»: ${count(cards.length, 'card', 'ru')} из ${all.length}. Уровень меняется вверху.`,
+        }),
+      ),
       h('div.d-down', { 'aria-hidden': 'true' }, h('i')),
     );
     const outro = h(
@@ -279,6 +351,24 @@ export class Descent {
         }),
       );
     });
+
+    // Chapters as lanes beside the cards: each starts at its first year and
+    // runs down its span, so a card visibly sits inside its chapters.
+    if (!mobile) {
+      const chs = app.chapters.filter((c) => c.years.length);
+      chs.forEach((ch, i) => {
+        const y0 = scale.y(Math.max(START, ch.years[0]));
+        const y1 = scale.y(ch.years[1] ?? NOW);
+        const x = cardsX - 14 - (chs.length - 1 - i) * 5;
+        bands.append(
+          h(
+            'a.d-lane',
+            { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `top:${y0}px;height:${Math.max(30, y1 - y0)}px;left:${x}px;--era:${eraColor(ch.id)}`, title: `${ch.id} · ${ch.title} · ${ch.kicker}` },
+            h('span', {}, `${ch.id} · ${ch.title}`),
+          ),
+        );
+      });
+    }
 
     // The axis: centuries large, decades small.
     for (let y = START; y <= NOW; y += 10) {
@@ -324,9 +414,7 @@ export class Descent {
       el.style.left = `${x}px`;
       items.append(el);
       if (p.item.kind === 'card') threads.push(this.thread(p, axisX, x, mobile));
-      if (p.item.kind === 'chapter') this.heads.push({ id: p.item.id, top: p.top });
     }
-    this.heads.sort((a, b) => a.top - b.top);
     svgHost.insertAdjacentHTML(
       'afterbegin',
       `<svg class="d-threads" width="${W}" height="${end}" viewBox="0 0 ${W} ${end}" aria-hidden="true">${threads.join('')}</svg>`,
@@ -391,7 +479,7 @@ export class Descent {
       h(
         'div.tx',
         {},
-        h('small', {}, h('b', {}, String(a)), h('i.pl', {}, c.places[0].name), bookMarks(c.books)),
+        h('small', {}, c.era ? h('span.era', { title: this.app.chapters.find((x) => x.id === c.era)?.title ?? '' }, c.era) : null, h('b', {}, String(a)), h('i.pl', {}, c.places[0].name), bookMarks(c.books)),
         h('strong', {}, c.title),
         h('span.w', {}, c.wow),
         c.years.length > 1 && c.years[1] !== a ? h('em', {}, formatYears(c.years)) : null,

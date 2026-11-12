@@ -4094,3 +4094,228 @@ details.k8s .term {
     right: 16px;
   }
 }
+
+/* ---------- descent: level control, chapter lanes, cards that hold their text ---------- */
+.descent .d-bar {
+  gap: 16px;
+}
+.d-levels {
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(8, 8, 18, 0.62);
+  border: 1px solid rgba(242, 233, 216, 0.16);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-family: var(--font-sans);
+  margin: 0 auto;
+}
+.d-levels button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: transparent;
+  color: rgba(242, 233, 216, 0.72);
+  padding: 5px 12px 5px 5px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.d-levels button b {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba(242, 233, 216, 0.3);
+  font-size: 11px;
+}
+.d-levels button:hover {
+  color: #f2e9d8;
+}
+.d-levels button.on {
+  background: rgba(227, 171, 61, 0.18);
+  color: #f2e9d8;
+}
+.d-levels button.on b {
+  background: #e3ab3d;
+  border-color: #e3ab3d;
+  color: #16120a;
+}
+.d-hint {
+  position: fixed;
+  top: calc(var(--nav-h) + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  max-width: min(560px, calc(100vw - 24px));
+  padding: 8px 8px 8px 16px;
+  border-radius: 10px;
+  background: #f2e9d8;
+  color: #16120a;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
+}
+.d-hint.on {
+  display: flex;
+}
+.d-hint .icon-btn {
+  flex: none;
+  color: #16120a;
+  width: 30px;
+  height: 30px;
+}
+.d-count {
+  margin-top: 18px !important;
+  font-family: var(--font-sans);
+  font-size: 14px !important;
+  color: rgba(242, 233, 216, 0.6) !important;
+}
+.d-lane {
+  position: absolute;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(var(--era), color-mix(in srgb, var(--era) 35%, transparent));
+  opacity: 0.75;
+  text-decoration: none;
+}
+.d-lane:hover {
+  opacity: 1;
+  width: 5px;
+}
+.d-lane span {
+  position: absolute;
+  top: 0;
+  right: 7px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--era);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.d-lane:hover span {
+  opacity: 1;
+}
+.dc small .era {
+  flex: none;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--era);
+  border: 1px solid color-mix(in srgb, var(--era) 60%, transparent);
+  border-radius: 999px;
+  padding: 0 6px;
+  line-height: 15px;
+}
+.dc {
+  grid-template-columns: 112px minmax(0, 1fr);
+  overflow: hidden;
+}
+.dc.noimg,
+.dc.big {
+  grid-template-columns: minmax(0, 1fr);
+}
+.dc .tx,
+.dc small,
+.dc strong,
+.dc .w {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+.dc small {
+  flex-wrap: wrap;
+  row-gap: 2px;
+}
+.dc small .pl {
+  flex: 1 1 auto;
+}
+.dm-era .main {
+  display: block;
+}
+.dm-era .also {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 11px;
+  color: rgba(242, 233, 216, 0.55);
+}
+.dm-era .also i {
+  font-style: normal;
+  color: var(--era);
+  margin-right: 6px;
+  font-weight: 600;
+}
+@media (max-width: 1100px) {
+  .d-levels button span {
+    display: none;
+  }
+  .d-levels button {
+    padding: 4px;
+  }
+}
+@media (max-width: 760px) {
+  .descent .d-bar {
+    justify-content: center;
+    padding: 0 8px;
+    top: 72px;
+    height: 44px;
+  }
+  .d-levels {
+    margin: 0;
+  }
+  .descent .d-bar > .icon-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  .dc {
+    grid-template-columns: 76px minmax(0, 1fr);
+  }
+  .dm-era .also {
+    display: none;
+  }
+  .d-hint {
+    top: 124px;
+  }
+}
+.d-lane span {
+  writing-mode: horizontal-tb;
+  transform: none;
+  right: 10px;
+  top: -7px;
+  opacity: 0.9;
+  font-weight: 600;
+  text-align: right;
+}
+.d-lane span::after {
+  content: ' ↓';
+}
+.dm-era {
+  min-height: 0;
+}
+.dm-rail {
+  margin-top: 20px;
+}
+@media (max-width: 1100px) {
+  .d-levels button.on span {
+    display: inline;
+  }
+  .d-levels button.on {
+    padding-right: 10px;
+  }
+}

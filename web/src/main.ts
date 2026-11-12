@@ -153,9 +153,10 @@ async function start(): Promise<void> {
   const atlas = new Atlas(app);
   const descent = new Descent(app);
   descent.onYear = (year) => {
-    route = { point: { from: year, focus: route.point.focus }, view: 'descent' };
+    route = { point: { from: year, zoom: descent.level, focus: route.point.focus }, view: 'descent' };
     writeRoute(route, false);
   };
+  descent.onLevel = () => descent.onYear?.(Math.round(descent.year));
   const engine = new Engine(app);
   engine.onClose = () => {
     engine.close();
@@ -270,7 +271,7 @@ async function start(): Promise<void> {
     closeOverlays(screen);
     if (screen === 'listen') listen.open();
     else if (screen === 'engine') engine.open();
-    else if (screen === 'descent') descent.open(route.point.from);
+    else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);
     else if (screen === 'atlas') atlas.open(route.point);
     else if (route.ch && (initial || route.ch !== chapterNow)) scrollToChapter(route.ch, initial);
     if (route.point.focus) app.openCard(route.point.focus, { push: false });

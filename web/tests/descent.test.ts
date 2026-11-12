@@ -77,3 +77,21 @@ describe('hero map frame', () => {
     expect(ne - nw).toBeLessThan(e - w);
   });
 });
+
+import { levelCards } from '../src/lib/descentModel';
+describe('descent levels', () => {
+  const mk = (id: string, zoom: number, year: number, media = false) => ({ id, zoom, years: [year], media: media ? [{}] : undefined });
+  const cards = [mk('a', 1, 1500), mk('b', 3, 1510, true), mk('c', 4, 1520), mk('d', 5, 1530), mk('e', 4, 1910), mk('f', 3, 1920), mk('g', 5, 1930)];
+  it('reveals more cards as the level rises', () => {
+    const n = [1, 2, 3, 4, 5].map((l) => levelCards(cards, l).length);
+    for (let i = 1; i < n.length; i++) expect(n[i]).toBeGreaterThanOrEqual(n[i - 1]);
+    expect(n[4]).toBe(cards.length);
+    expect(n[0]).toBeLessThan(n[4]);
+  });
+  it('keeps landmarks in every century at level 1', () => {
+    const ids = levelCards(cards, 1).map((c) => c.id);
+    expect(ids).toContain('a');
+    expect(ids).toContain('b');
+    expect(ids.some((id) => ['e', 'f', 'g'].includes(id))).toBe(true);
+  });
+});

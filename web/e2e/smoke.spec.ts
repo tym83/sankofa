@@ -235,3 +235,27 @@ test('a chapter leads with a few cards and reveals the rest on request', async (
     expect(await strip.locator('.teaser').count()).toBeGreaterThan(before);
   }
 });
+
+test('descent cards hold their text and the level control changes what is shown', async ({ page }) => {
+  for (const url of ['/#view=descent&zoom=5', '/#view=descent&zoom=5&lang=ru']) {
+    await page.goto(url);
+    await page.reload();
+    await expect(page.locator('.descent.open')).toBeVisible();
+    await page.evaluate(() => document.fonts.ready);
+    await page.waitForTimeout(400);
+    const spill = await page.locator('.descent a.dc').evaluateAll((els) =>
+      els.filter((e) => e.scrollHeight > e.clientHeight + 1 || e.scrollWidth > e.clientWidth + 1 || [...e.querySelectorAll('.tx')].some((t) => t.scrollWidth > t.clientWidth + 1)).map((e) => e.getAttribute('data-card')),
+    );
+    expect(spill).toEqual([]);
+  }
+  const all = await page.locator('.descent a.dc').count();
+  await page.locator('.d-levels button').first().click();
+  await expect.poll(() => page.locator('.descent a.dc').count()).toBeLessThan(all);
+  const one = await page.locator('.descent a.dc').count();
+  expect(one).toBeGreaterThan(0);
+  expect(page.url()).toContain('zoom=1');
+  await page.locator('.d-levels button').nth(3).click();
+  await expect.poll(() => page.locator('.descent a.dc').count()).toBeGreaterThan(one);
+  await expect(page.locator('.descent .d-chapter')).toHaveCount(0);
+  await expect(page.locator('.dm-era .main')).not.toBeEmpty();
+});

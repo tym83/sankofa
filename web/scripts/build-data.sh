@@ -27,5 +27,7 @@ echo "media: $(ls web/public/media | wc -l | tr -d ' ') files"
 # offered in the engine room when the stand has produced one.
 if [ -f dist/visitor.kubeconfig ]; then
   cp dist/visitor.kubeconfig web/public/visitor.kubeconfig
+  # Readable by the unprivileged web server (the source is 0600).
+  chmod 0644 web/public/visitor.kubeconfig
   echo "visitor kubeconfig: included"
 fi

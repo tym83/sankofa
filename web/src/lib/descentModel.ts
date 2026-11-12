@@ -139,3 +139,43 @@ export function chapterCentres(chapters: Chapter[], year: (id: string) => number
   }
   return out;
 }
+
+/** Landmarks kept per century at the general levels, so no century goes blank. */
+// Kept at every higher level too, so raising the level never hides a card.
+const LANDMARKS = [2, 3, 3, 3, 3];
+
+/**
+ * The cards a level of generalisation shows, like the atlas zoom: 1 centuries
+ * (the few landmark cards of each century), 2 regions, 3 cities and genres,
+ * 4 people, 5 every single document.
+ */
+export function levelCards<T extends { id: string; zoom: number; years: number[]; media?: unknown[] }>(cards: T[], level: number): T[] {
+  const lvl = Math.max(1, Math.min(5, Math.round(level)));
+  if (lvl >= 5) return cards;
+  const keep = new Set(cards.filter((c) => c.zoom <= lvl).map((c) => c.id));
+  const n = LANDMARKS[lvl - 1];
+  if (n) {
+    const byCentury = new Map<number, T[]>();
+    for (const c of cards) {
+      const k = Math.floor(Math.max(START, c.years[0]) / 100);
+      byCentury.set(k, [...(byCentury.get(k) ?? []), c]);
+    }
+    for (const group of byCentury.values()) {
+      const ranked = [...group].sort((a, b) => a.zoom - b.zoom || Number(!!b.media?.length) - Number(!!a.media?.length) || a.years[0] - b.years[0]);
+      let added = group.filter((c) => keep.has(c.id)).length;
+      for (const c of ranked) {
+        if (added >= n) break;
+        if (!keep.has(c.id)) {
+          keep.add(c.id);
+          added++;
+        }
+      }
+    }
+  }
+  return cards.filter((c) => keep.has(c.id));
+}
+
+/** Every chapter whose span holds the year. */
+export function chaptersAt(chapters: Chapter[], year: number): Chapter[] {
+  return chapters.filter((c) => c.years.length && c.years[0] <= year && (c.years[1] ?? NOW) >= year);
+}
