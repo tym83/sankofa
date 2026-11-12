@@ -723,7 +723,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: calc(var(--nav-h) + 24px) var(--gutter) 64px clamp(16px, 42vw, 640px);
+  padding: calc(var(--nav-h) + 24px) var(--gutter) 112px clamp(16px, 42vw, 640px);
   transform: scale(1.03);
   transition: transform 6s linear;
 }

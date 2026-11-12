@@ -163,7 +163,7 @@ func syncCards(ctx context.Context, log *slog.Logger, cl client.Client) error {
 	}
 	keep := map[string]bool{}
 	for _, id := range set.Order {
-		o := v1alpha1.FromCard(set.ByID[id])
+		o := v1alpha1.FromCard(set.Resolved(set.ByID[id]))
 		o.Labels["app.kubernetes.io/managed-by"] = managedBy
 		if err := cl.Patch(ctx, o, client.Apply, client.FieldOwner(managedBy), client.ForceOwnership); err != nil {
 			return fmt.Errorf("card %s: %w", id, err)

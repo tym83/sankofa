@@ -91,3 +91,16 @@ func TestBacklinks(t *testing.T) {
 		t.Fatal(got)
 	}
 }
+
+func TestResolved(t *testing.T) {
+	a := mk(t, "a", "", "", "see [[b]] and [[b|her]]")
+	b := mk(t, "b", "", "", "x")
+	b.Title = "Bessie Smith"
+	s := set(a, b)
+	if got := s.Resolved(a).Body; got != "see [[b|Bessie Smith]] and [[b|her]]" {
+		t.Fatal(got)
+	}
+	if a.Body != "see [[b]] and [[b|her]]" {
+		t.Fatal("Resolved must not change the original")
+	}
+}

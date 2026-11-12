@@ -234,7 +234,7 @@ export class Atlas {
       b.setAttribute('aria-pressed', String(i + 1 === this.level));
     });
     const t = this.p.from ? formatYears(this.p.to ? [this.p.from, this.p.to] : [this.p.from]) : '1300 – today';
-    this.when.textContent = `${t} · ${LEVEL_NAMES[this.level - 1]} · ${layers.visible.length} cards`;
+    this.when.textContent = `${t} · ${LEVEL_NAMES[this.level - 1]} · ${layers.visible.length} ${layers.visible.length === 1 ? 'card' : 'cards'}`;
     this.renderPathbar(path);
   }
 

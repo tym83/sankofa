@@ -77,7 +77,7 @@ type ExportedCard struct {
 func Export(s *card.Set) map[string]any {
 	cards := make([]ExportedCard, 0, len(s.Order))
 	for _, id := range s.Order {
-		cards = append(cards, ExportedCard{Card: s.ByID[id], Backlinks: s.Backlinks(id)})
+		cards = append(cards, ExportedCard{Card: s.Resolved(s.ByID[id]), Backlinks: s.Backlinks(id)})
 	}
 	return map[string]any{"version": 1, "cards": cards}
 }
