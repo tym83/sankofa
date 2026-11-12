@@ -1,0 +1,137 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sankofa-system
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: griot
+  namespace: sankofa-system
+---
+# Griot must read everything to remember everything. Secret values are
+# redacted before they reach the store; reads of the memory are authorised
+# per caller with SubjectAccessReview.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sankofa:griot
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["sankofa.kuberoot.dev"]
+    resources: ["cards", "quests"]
+    verbs: ["create", "update", "patch", "delete"]
+  - apiGroups: ["authorization.k8s.io"]
+    resources: ["subjectaccessreviews"]
+    verbs: ["create"]
+  - apiGroups: ["apiregistration.k8s.io"]
+    resources: ["apiservices"]
+    resourceNames: ["v1alpha1.history.sankofa.kuberoot.dev"]
+    verbs: ["patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: sankofa:griot
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: ClusterRole, name: sankofa:griot}
+subjects: [{kind: ServiceAccount, name: griot, namespace: sankofa-system}]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: sankofa:griot:auth-reader
+  namespace: kube-system
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: Role, name: extension-apiserver-authentication-reader}
+subjects: [{kind: ServiceAccount, name: griot, namespace: sankofa-system}]
+---
+# Everyone who may read an object may read its memory.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sankofa:memory-reader
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+rules:
+  - apiGroups: ["history.sankofa.kuberoot.dev"]
+    resources: ["timelines", "clustertimelines"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sankofa:card-reader
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+rules:
+  - apiGroups: ["sankofa.kuberoot.dev"]
+    resources: ["cards", "quests"]
+    verbs: ["get", "list", "watch"]
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: griot-memory
+  namespace: sankofa-system
+spec:
+  accessModes: ["ReadWriteOnce"]
+  resources: {requests: {storage: 2Gi}}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: griot
+  namespace: sankofa-system
+  labels: {app.kubernetes.io/name: griot}
+spec:
+  replicas: 1 # one keeper of memory: SQLite on a ReadWriteOnce volume
+  strategy: {type: Recreate}
+  selector: {matchLabels: {app.kubernetes.io/name: griot}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: griot}
+    spec:
+      serviceAccountName: griot
+      securityContext: {runAsNonRoot: true, runAsUser: 65532, fsGroup: 65532, seccompProfile: {type: RuntimeDefault}}
+      containers:
+        - name: griot
+          image: ko://github.com/tym83/sankofa/cmd/griot
+          args: ["--db=/var/lib/griot/memory.db"]
+          ports: [{name: https, containerPort: 8443}]
+          readinessProbe: {httpGet: {path: /readyz, port: https, scheme: HTTPS}}
+          livenessProbe: {httpGet: {path: /livez, port: https, scheme: HTTPS}, periodSeconds: 20}
+          resources:
+            requests: {cpu: 50m, memory: 128Mi}
+            limits: {memory: 512Mi}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
+          volumeMounts: [{name: memory, mountPath: /var/lib/griot}]
+      volumes:
+        - name: memory
+          persistentVolumeClaim: {claimName: griot-memory}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: griot
+  namespace: sankofa-system
+spec:
+  selector: {app.kubernetes.io/name: griot}
+  ports: [{name: https, port: 443, targetPort: https}]
+---
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  name: v1alpha1.history.sankofa.kuberoot.dev
+spec:
+  group: history.sankofa.kuberoot.dev
+  version: v1alpha1
+  groupPriorityMinimum: 1000
+  versionPriority: 15
+  service: {name: griot, namespace: sankofa-system, port: 443}
+  # Griot writes its own CA here on start.
+  insecureSkipTLSVerify: true
