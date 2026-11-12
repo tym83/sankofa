@@ -7,8 +7,11 @@ anchor = "      - name: kube-scheduler\n        after: apiserver\n"
 if text.count("\n  name: edge\n") != 1 or text.count(anchor) != 1:
     sys.exit("edge profile changed: expected metadata and control-plane scheduler")
 text = text.replace("\n  name: edge\n", "\n  name: sankofa\n", 1)
+# Kine does not complete the initial streaming-list bookmark on this base.
+# Ordinary LIST followed by WATCH retains the resource-version boundary.
 service = '''      - name: griot
         after: apiserver
+        env: [KUBE_FEATURE_WatchListClient=false]
         args:
         - /usr/bin/griot
         - --kubeconfig={{kube "admin.kubeconfig"}}

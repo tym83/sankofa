@@ -14,9 +14,9 @@ b() { k exec -i sankofa-builder -c tools -- "$@"; }
 case ${1:-} in
   builder) k apply -f "$ROOT/distro/kuberoot/sankofa/builder.yaml"; exit ;;
   node|console) [[ ${2:-} =~ ^sankofa-[a-z0-9-]+$ ]] || { echo 'Node names must start with sankofa-' >&2; exit 1; } ;;
-  build|media) [[ ${2:-} = amd64 || ${2:-} = arm64 ]] || { echo 'Expected amd64 or arm64' >&2; exit 1; } ;;
+  build|media|bundle) [[ ${2:-} = amd64 || ${2:-} = arm64 ]] || { echo 'Expected amd64 or arm64' >&2; exit 1; } ;;
   sync|test|sh) ;;
-  *) echo 'Usage: hack/kuberoot.sh builder|build ARCH|media ARCH [args]|node sankofa-N ARCH|console sankofa-N|sync|test|sh [command]' >&2; exit 1 ;;
+  *) echo 'Usage: hack/kuberoot.sh builder|build ARCH|media ARCH [args]|bundle ARCH|node sankofa-N ARCH|console sankofa-N|sync|test|sh [command]' >&2; exit 1 ;;
 esac
 if [[ $1 = node ]]; then
   [[ ${3:-} = amd64 || ${3:-} = arm64 ]] || { echo 'Expected amd64 or arm64' >&2; exit 1; }
