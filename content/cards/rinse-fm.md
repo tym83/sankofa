@@ -19,7 +19,5 @@ sources:
   - {title: "Building: Pirate DJ silenced in rooftop radio purge (22 April 2005)", url: "https://www.building.co.uk/pirate-dj-silenced-in-rooftop-radio-purge/3050083.article"}
   - {title: "Dummy: The Dummy guide to Rinse FM", url: "https://dmy.co/features/the-dummy-guide-to-rinse-fm/"}
   - {title: "RadioToday: Ofcom awards London licences", url: "https://radiotoday.co.uk/2010/06/ofcom-rejects-16-applications/"}
-media:
-  - {"type": "image", "file": "rinse-fm.jpg", "caption": "Khadejia hosting Rinse FM, 21 March 2022", "credit": "Khadejia; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Khadejia_Hosting_Rinse.jpg"}
 ---
 In 1994, on Notting Hill Carnival weekend, 16-year-old Geeneus and his friends Slimzee, Target and Wiley set up decks and an aerial in a council-flat kitchen in Tower Hamlets. That was Rinse. For years it was a pirate: its transmitters sat on the tower blocks of Bow and were moved from block to block while the DTI, later Ofcom, tore them down. In 2005 Slimzee was served an ASBO. Through it all Rinse carried jungle into garage, grime and dubstep, and in June 2010 Ofcom granted the old outlaw a community licence. Hear the [[amen-break]] in its jungle, the [[reggae]] sound systems behind it, and the wider story of [[hip-hop]].

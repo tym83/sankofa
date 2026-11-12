@@ -21,7 +21,7 @@ sources:
   - {title: "PBS Africans in America: David Walker", url: "https://www.pbs.org/wgbh/aia/part4/4p2930.html"}
   - {title: "National Park Service: David Walker", url: "https://www.nps.gov/people/david-walker.htm"}
 media:
-  - {"type": "image", "file": "walkers-appeal.jpg", "caption": "Frontispiece and title page of Walker's Appeal, with Henry Highland Garnet's sketch of his life, New York, 1848", "credit": "Wood engraving by Childs; Library of Congress Prints and Photographs Division; resized for display", "license": "Public domain", "url": "https://www.loc.gov/item/92513183/"}
+  - {"type": "image", "file": "walkers-appeal.jpg", "caption": "Frontispiece and title page of Walker's Appeal, with Henry Highland Garnet's sketch of his life, New York, 1848", "credit": "Wood engraving; Library of Congress Prints and Photographs Division; resized for display", "license": "Public domain", "url": "https://www.loc.gov/item/92513183/"}
 ---
 A Boston clothes dealer wrote a call to resist slavery and asked sailors
 heading south to carry copies with them. David Walker was born in

@@ -19,8 +19,6 @@ sources:
   - {title: "University of Tennessee Press: The Paper Bag Principle", url: "https://utpress.org/9781621902652/the-paper-bag-principle/"}
   - {title: "theGrio (2011)", url: "https://thegrio.com/2011/06/23/is-justice-colorblind-in-post-racial-america"}
   - {title: "Viglione, Hannon and DeFina: The impact of light skin on prison time for black female offenders (2011)", url: "https://www.sciencedirect.com/science/article/abs/pii/S0362331910000923"}
-media:
-  - {"type": "image", "file": "paper-bag-test.jpg", "caption": "Fifteenth Street Presbyterian Church, 1701 15th Street NW, Washington, D.C., 27 June 2008", "credit": "AgnosticPreachersKid at en.wikipedia; resized for display", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Fifteenth_Street_Presbyterian_Church_DC.JPG"}
 ---
 Hold a brown paper bag to someone's arm; if their skin is darker, they are
 not let into the club, the fraternity or the sorority. That is the story,

@@ -22,8 +22,6 @@ sources:
   - {title: "NEH: Voices of Change, preserving Radio Haiti", url: "https://www.neh.gov/divisions/preservation/featured-project/tune-in-tuesdays-voices-change-preserving-radio-haiti"}
   - {title: "Amnesty International: Haiti, Jean Dominique investigation, 2002 report", url: "https://www.amnesty.org/fr/wp-content/uploads/sites/8/2021/06/amr360012002fr.pdf"}
   - {title: "Committee to Protect Journalists: Radio Haiti and Michele Montas, March 2003", url: "https://cpj.org/2003/03/six-men-indicted-for-journalists-murderalleged-mas/"}
-media:
-  - {"type": "image", "file": "radio-haiti.jpg", "caption": "Perkins Library at Duke University, 10 November 2006", "credit": "Bluedog423; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:PerkinsLibrary.jpg"}
 ---
 The first station in Haiti to deliver news in Creole paid dearly for it.
 Around 1970, or in the 1960s by another account, the agronomist Jean

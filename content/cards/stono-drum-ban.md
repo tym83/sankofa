@@ -22,7 +22,5 @@ sources:
   - {title: "Charleston County Public Library: Nic Butler, A Banjer on the Bay", url: "https://www.ccpl.org/charleston-time-machine/banjer-bay-charleston-1766"}
   - {title: "Step Afrika!: Drumfolk", url: "https://www.stepafrika.org/drumfolk/"}
   - {title: "Google Arts & Culture: Tap Dance Is Timeless", url: "https://artsandculture.google.com/story/dAWh62nmpiwMJA"}
-media:
-  - {"type": "image", "file": "stono-drum-ban.jpg", "caption": "Stono Rebellion site on Highway 17, 23 January 2013", "credit": "ProfReader; resized for display", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Stono_Rebellion_site_-_Jan_23_2013.jpg"}
 ---
 Some accounts say the Stono rebels beat drums as they marched, and the colony answered by going after the drums. On Sunday 9 September 1739, near the Stono River south of Charleston, enslaved men broke into a store, took guns and marched toward Spanish Florida, hoping to claim freedom there. They shouted "Liberty!", and their numbers grew to perhaps a hundred before the militia crushed them. In 1740 South Carolina passed the Negro Act, which restricted enslaved people's drums. Dance historians argue that the rhythm then moved into the body: patting juba, hambone, and later tap and stepping. See [[banjo]], [[talking-drums]] and [[steelpan]].

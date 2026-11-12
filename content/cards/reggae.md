@@ -24,7 +24,7 @@ sources:
   - {title: "Associated Press via Boston.com: Toots Hibbert, beloved reggae star, dead at 77 (Hillel Italie, 12 September 2020)", url: "https://www.boston.com/culture/obituaries/2020/09/12/toots-hibbert-beloved-reggae-star-dead-at-77/"}
   - {title: "UNESCO Multimedia Archives: Reggae Music of Jamaica", url: "https://www.unesco.org/archives/multimedia/document-4760"}
 media:
-  - {"type": "image", "file": "reggae.jpg", "caption": "Toots Hibbert performing with Toots and the Maytals in Orlando, Florida, 29 April 2010", "credit": "Karl Simpson; watermark removed by R8cocin8; resized for display", "license": "CC BY-SA 2.0", "url": "https://commons.wikimedia.org/wiki/File:Toots-Hibbert.jpg"}
+  - {"type": "image", "file": "reggae.jpg", "caption": "Toots Hibbert performing with Toots and the Maytals in Orlando, Florida, 29 April 2010", "credit": "Karl Simpson; resized for display", "license": "CC BY-SA 2.0", "url": "https://commons.wikimedia.org/wiki/File:Toots-Hibbert.jpg"}
 ---
 The first song to use the name was the Maytals' "Do the Reggay", recorded
 in 1968. Toots Hibbert said the word came to him in Trench Town from

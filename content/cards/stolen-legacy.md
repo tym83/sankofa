@@ -20,7 +20,5 @@ sources:
   - {title: "Bryn Mawr Classical Review 1996.05.07: Lawrence Tritle on Lefkowitz", url: "https://bmcr.brynmawr.edu/1996/1996.05.07"}
   - {title: "UCL Digital Egypt: Alexandria library", url: "https://www.ucl.ac.uk/museums-static/digitalegypt/writing/library/alexandria.html"}
   - {title: "Christopher Shields, Stanford Encyclopedia of Philosophy: Aristotle", url: "https://plato.stanford.edu/entries/aristotle/"}
-media:
-  - {"type": "image", "file": "stolen-legacy.jpg", "caption": "Interior of the modern Bibliotheca Alexandrina, 11 February 2020", "credit": "Randa Mostafa1; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Library_of_Alexandria_(1).jpg"}
 ---
 One date sinks the story that Aristotle looted Egypt's wisdom: he died before the Library of Alexandria was founded under the Ptolemies. The story comes from Stolen Legacy, published in 1954 by George G. M. James, a college teacher in Arkansas. It said Greek philosophy was stolen Egyptian philosophy and that Aristotle took his ideas from Egyptian texts in the Library. Historians and classicists reject the thesis; Mary Lefkowitz took it apart in 1996. Real African learning needs no theft: see [[timbuktu-manuscripts]], [[amo]] and [[what-black-means]].
