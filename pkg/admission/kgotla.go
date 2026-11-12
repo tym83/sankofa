@@ -41,19 +41,29 @@ func Kgotla(list Councils) Handler {
 		if err != nil {
 			return Deny(503, "kgotla: cannot read councils: %v", err)
 		}
+		// For a Namespace the request's namespace is the namespace itself.
+		ns := req.Namespace
+		if req.Resource.Group == "" && req.Resource.Resource == "namespaces" {
+			ns = ""
+		}
+		var pending *v1alpha1.Kgotla
 		for i := range cs {
 			k := &cs[i]
 			t := k.Spec.Target
-			if t.Group != req.Resource.Group || t.Resource != req.Resource.Resource || t.Name != req.Name || t.Namespace != req.Namespace {
+			if t.Group != req.Resource.Group || t.Resource != req.Resource.Resource || t.Name != req.Name || t.Namespace != ns {
 				continue
 			}
 			if !k.Decided() {
-				return Deny(403, "kgotla %s has not decided yet: everyone must speak and %s speaks last (`sankofa kgotla speak %s`)", k.Name, k.Spec.Chief, k.Name)
+				pending = k
+				continue
 			}
 			if last := k.Spec.Spoken[len(k.Spec.Spoken)-1].At.Time; time.Since(last) > CouncilTTL {
-				return Deny(403, "kgotla %s decided more than %s ago; call a new council", k.Name, CouncilTTL)
+				continue
 			}
 			return Allow("kgotla " + k.Name + " decided: " + k.Spec.Reason)
+		}
+		if pending != nil {
+			return Deny(403, "kgotla %s has not decided yet: everyone must speak and %s speaks last (`sankofa kgotla speak %s`)", pending.Name, pending.Spec.Chief, pending.Name)
 		}
 		return Deny(403, "%s/%s is protected: call a council first (`sankofa kgotla call %s/%s --voices ... --chief ... --reason ...`)", req.Resource.Resource, req.Name, req.Resource.Resource, req.Name)
 	}

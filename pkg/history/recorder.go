@@ -142,8 +142,11 @@ func (r *Recorder) observe(ctx context.Context, gr schema.GroupResource, o any, 
 	}
 	switch {
 	case deleted:
+		// The last writer is not the one who deleted it; the watch does not
+		// say who did.
 		rec.Verb = Died
 		rec.At = time.Now().UTC()
+		rec.Manager = ""
 	case last == "" || lastVerb == Died:
 		rec.Verb = Born
 	case last == hash:

@@ -24,8 +24,8 @@ for pod in $(km -n sankofa-registry get pods -l app=registry -o name); do
   km -n sankofa-registry port-forward "$pod" "$port:5000" >/dev/null 2>&1 &
   pf=$!
   for _ in $(seq 1 30); do curl -sf "http://localhost:$port/v2/" >/dev/null && break; sleep 0.5; done
-  ref=$(crane push --insecure "$tar" "localhost:$port/sankofa/$name:dev" 2>/dev/null)
-  kill $pf
+  ref=$(crane push --insecure "$tar" "localhost:$port/sankofa/$name:dev")
+  kill $pf 2>/dev/null || true; wait $pf 2>/dev/null || true
   d=${ref##*@}
   if [[ -n $digest && $d != "$digest" ]]; then echo "digest differs between nodes: $digest vs $d" >&2; exit 1; fi
   digest=$d

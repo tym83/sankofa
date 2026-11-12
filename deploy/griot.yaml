@@ -151,5 +151,4 @@ spec:
   groupPriorityMinimum: 1000
   versionPriority: 15
   service: {name: griot, namespace: sankofa-system, port: 443}
-  # Griot writes its own CA here on start.
-  insecureSkipTLSVerify: true
+  # caBundle: Griot writes its own CA here on start.

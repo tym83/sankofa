@@ -169,7 +169,11 @@ references are not restored: the object is born again.`,
 			if _, err := ri.Patch(cmd.Context(), u.GetName(), types.ApplyPatchType, data, metav1.PatchOptions{FieldManager: "sankofa-fetch", Force: &force}); err != nil {
 				return err
 			}
-			fmt.Fprintf(cmd.OutOrStdout(), "%s fetched back (%s).\n", args[0], tl.Story)
+			from := "as last seen alive"
+			if ts != "" {
+				from = "as it was at " + ts
+			}
+			fmt.Fprintf(cmd.OutOrStdout(), "%s fetched back, %s. Sankofa: go back and fetch it.\n", args[0], from)
 			return nil
 		},
 	}

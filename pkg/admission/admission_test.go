@@ -26,7 +26,7 @@ var r = (&http.Request{}).WithContext(context.Background())
 
 func TestKgotlaGuard(t *testing.T) {
 	ns := map[string]any{"apiVersion": "v1", "kind": "Namespace", "metadata": map[string]any{"name": "prod", "labels": map[string]any{Protected: "protected"}}}
-	req := &admissionv1.AdmissionRequest{Operation: admissionv1.Delete, Name: "prod", Resource: metav1.GroupVersionResource{Version: "v1", Resource: "namespaces"}, OldObject: raw(ns)}
+	req := &admissionv1.AdmissionRequest{Operation: admissionv1.Delete, Name: "prod", Namespace: "prod", Resource: metav1.GroupVersionResource{Version: "v1", Resource: "namespaces"}, OldObject: raw(ns)}
 	council := v1alpha1.Kgotla{ObjectMeta: metav1.ObjectMeta{Name: "drop-prod"}, Spec: v1alpha1.KgotlaSpec{
 		Target: v1alpha1.Target{Resource: "namespaces", Name: "prod"}, Voices: []string{"ama", "kofi"}, Chief: "naledi", Reason: "migrated",
 	}}
