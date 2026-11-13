@@ -217,7 +217,7 @@ test('the demo lets you break a node and hear it fall silent', async ({ page }) 
   const broken = page.locator('.l-node.broken');
   await expect(broken).toHaveCount(1);
   await expect(broken.locator('.st')).toContainText(/late|опаздывает/);
-  await expect.poll(async () => Number((await broken.locator('.st').textContent())?.match(/(\d+)\s*s late/)?.[1] ?? 0)).toBeGreaterThan(1);
+  await expect.poll(async () => Number((await broken.locator('.st').textContent())?.match(/(\d+)\s*s\s*late|late\s*(\d+)/)?.slice(1).find(Boolean) ?? 0)).toBeGreaterThan(1);
   await expect(page.getByRole('button', { name: 'Mend the node' })).toBeVisible();
 });
 
