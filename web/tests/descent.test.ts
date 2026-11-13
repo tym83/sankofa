@@ -90,8 +90,9 @@ describe('descent levels', () => {
   });
   it('keeps landmarks in every century at level 1', () => {
     const ids = levelCards(cards, 1).map((c) => c.id);
+    // one landmark per century: the zoom-1 card stands for the 1500s
     expect(ids).toContain('a');
-    expect(ids).toContain('b');
+    expect(ids).not.toContain('b');
     expect(ids.some((id) => ['e', 'f', 'g'].includes(id))).toBe(true);
   });
 });
