@@ -461,6 +461,9 @@ test('the music map fits the viewport; descent level 1 shows eras; Renaissance o
   await expect(page.locator('.d-era').first()).toBeAttached();
   await page.goto('about:blank');
   await page.goto('/');
+  // Chapter pictures load only as they come near.
+  await expect(page.locator('#ch-v5 .hero.portrait img')).not.toHaveAttribute('src', /./);
+  await page.locator('#ch-v5 .hero').scrollIntoViewIfNeeded();
   await expect(page.locator('#ch-v5 .hero.portrait img')).toHaveAttribute('src', /hurston/);
 });
 
@@ -484,4 +487,23 @@ test('the room state stays consistent: late node not counted, pods return gradua
   await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back · 0 ready/);
   await page.clock.runFor(7000);
   await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back · [12] ready/);
+});
+
+test('a step reached by a jump is the active one and never shows the previous picture', async ({ page }, info) => {
+  test.skip(info.project.name === 'mobile', 'phones show pictures inside the steps');
+  await page.goto('/');
+  const steel = page.locator('.step', { hasText: 'oil drums' });
+  await steel.evaluate((e) => e.scrollIntoView({ block: 'center' }));
+  await expect(steel).toHaveClass(/\bon\b/);
+  await page.waitForTimeout(600);
+  await expect(page.locator('#ch-v4 .graphic.show-img, #ch-v4 .show-img')).toHaveCount(0);
+});
+
+test('the engine room wraps long YAML and copies from a corner icon', async ({ page }) => {
+  await page.goto('/#view=engine');
+  const pre = page.locator('.term.multi:not(.table) pre').first();
+  await expect(pre).toContainText('wow: >-');
+  const overflow = await pre.evaluate((e) => e.scrollWidth - e.clientWidth);
+  expect(overflow).toBeLessThanOrEqual(1);
+  await expect(page.locator('.term.multi button.copy').first()).toHaveAttribute('aria-label', /Copy/);
 });

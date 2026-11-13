@@ -5,7 +5,7 @@ import { EDITION_NAME, richText } from '../app';
 import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL, links } from '../lib/cards';
-import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
+import { vtags, bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { eraColor, isNonPlace } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
@@ -44,17 +44,34 @@ function coverMap(host: HTMLElement | null): void {
   });
 }
 
-function heroImg(app: App, ch: Chapter, eager: boolean, pos?: string): HTMLElement | null {
+function heroImg(app: App, ch: Chapter, eager: boolean, pos?: string, sizes = '100vw'): HTMLElement | null {
   if (!ch.hero?.file) return null;
-  return h('img', {
+  const src = mediaSrc(app, ch.hero.file, [sizes === '100vw' ? 1600 : 480]);
+  const img = h('img', {
     style: pos ? `object-position:${pos}` : undefined,
-    ...mediaSrc(app, ch.hero.file, [1600]),
-    sizes: '100vw',
+    sizes,
     alt: ch.hero.caption ?? '',
-    loading: eager ? 'eager' : 'lazy',
     decoding: 'async',
     fetchpriority: eager ? 'high' : undefined,
-  });
+  }) as HTMLImageElement;
+  const load = () => {
+    if (src.srcset) img.srcset = src.srcset;
+    img.src = src.src;
+  };
+  if (eager) load();
+  else {
+    // Only the cover frame loads up front; the others when they come within a screen.
+    const io = new IntersectionObserver(
+      (es) => {
+        if (!es.some((e) => e.isIntersecting)) return;
+        io.disconnect();
+        load();
+      },
+      { rootMargin: '100% 0px' },
+    );
+    io.observe(img);
+  }
+  return img;
 }
 
 /**
@@ -74,7 +91,7 @@ function heroMap(app: App, ch: Chapter): HTMLElement {
       if (started || !entries.some((e) => e.isIntersecting)) return;
       started = true;
       io.disconnect();
-      const map = new GeoMap(host, { frame });
+      const map = new GeoMap(host, { frame, maxLabels: () => (window.innerWidth < 720 ? 2 : Infinity) });
       map.ready.then(() => {
         map.setPoints(
           cards.map((c) => ({
@@ -143,8 +160,8 @@ function toc(app: App): HTMLElement {
         h(
           'a.toc-item.reveal',
           { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `--era:${eraColor(ch.id)}` },
-          heroImg(app, withHero(app, ch).ch, false, withHero(app, ch).pos) ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, ch.id),
-          h('span.num', {}, pick({ en: `Chapter ${app.chapters.indexOf(ch) + 1}`, ru: `Глава ${app.chapters.indexOf(ch) + 1}` }), h('small', {}, ` · ${t('release')} ${ch.id}`)),
+          heroImg(app, withHero(app, ch).ch, false, withHero(app, ch).pos, '(max-width: 720px) 46vw, 300px') ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, ch.id),
+          h('span.num', {}, pick({ en: `Chapter ${app.chapters.indexOf(ch) + 1}`, ru: `Глава ${app.chapters.indexOf(ch) + 1}` }), h('small', {}, ...vtags(` · ${t('release')} ${ch.id}`))),
           h('span.t', {}, h('b', {}, ch.title), h('span', {}, ch.kicker)),
         ),
       ),
@@ -253,7 +270,7 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
     ? h(
         'section.strip',
         {},
-        h('h3', {}, t('In {chapter}: {cards}', { chapter: ch.id, cards: count(cards.length, 'card') })),
+        h('h3', {}, ...vtags(t('In {chapter}: {cards}', { chapter: ch.id, cards: count(cards.length, 'card') }))),
         h('div.strip-row', {}, stripCards.slice(0, LEAD).map((c) => teaser(app, c))),
         more,
         chapterCoda(ch.id, count(cards.length, 'card')),
@@ -326,7 +343,7 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
       // Never under the text column; on phones at most three names.
       // On phones the step box covers the lower part of the map.
       avoid: () => (phone() ? [[0, mapHost.clientHeight * 0.52, mapHost.clientWidth, mapHost.clientHeight]] : [[0, 0, Math.min(mapHost.clientWidth * 0.42, 620), mapHost.clientHeight]]),
-      maxLabels: () => (phone() ? 3 : 5),
+      maxLabels: () => (phone() ? 2 : 5),
     });
     return map;
   };
@@ -404,17 +421,34 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
   // Another chapter's map never shows its labels behind this one's steps.
   new IntersectionObserver((es) => graphic.classList.toggle('away', !es[0].isIntersecting), { threshold: 0.02 }).observe(graphic.parentElement!);
 
-  const io = new IntersectionObserver(
-    (entries) => {
-      for (const e of entries) {
-        if (e.isIntersecting) activate(Number((e.target as HTMLElement).dataset.step));
-      }
+  // The active step is the last one whose top has passed two thirds of the
+  // screen. Read from positions, not from a thin crossing band, so a jump
+  // (a link, a search, a fast fling) lands on the right step and picture.
+  let queued = false;
+  const pickStep = () => {
+    queued = false;
+    const line = window.innerHeight * 0.67;
+    let k = 0;
+    steps.forEach((s, j) => {
+      if (s.getBoundingClientRect().top < line) k = j;
+    });
+    if (map || current >= 0) activate(k);
+  };
+  const onScroll = () => {
+    if (!queued) {
+      queued = true;
+      requestAnimationFrame(pickStep);
+    }
+  };
+  new IntersectionObserver(
+    (es) => {
+      if (es[0].isIntersecting) {
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      } else window.removeEventListener('scroll', onScroll);
     },
-    // A step takes over as soon as it enters the lower third: the picture
-    // changes with the words, not one card behind them.
-    { rootMargin: '-66% 0px -33% 0px' },
-  );
-  steps.forEach((s) => io.observe(s));
+    { rootMargin: '0px' },
+  ).observe(el);
 }
 
 function finale(app: App): HTMLElement {

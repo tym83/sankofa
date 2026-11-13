@@ -4,7 +4,7 @@ import type { Card } from '../lib/types';
 import { BOOK_NAMES, ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL } from '../lib/cards';
 import { formatFragment, terminalCommand } from '../lib/fragment';
-import { bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
+import { vtags, bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
 import { edition, lang, t } from '../lib/i18n';
 import { cardYaml } from '../lib/cardYaml';
@@ -39,7 +39,7 @@ export class Drawer {
     if (!this.isOpen) this.returnTo = document.activeElement;
     const close = h('button.icon-btn.close', { 'aria-label': t('Close'), onclick: () => this.close() }, svgIcon('close'));
     // A sticky header holds the close button, so it never covers the text.
-    const bar = h('div.drawer-bar', {}, h('span.drawer-label', {}, content.dataset.label ?? ''), close);
+    const bar = h('div.drawer-bar', {}, h('span.drawer-label', {}, ...vtags(content.dataset.label ?? '')), close);
     this.el.replaceChildren(bar, content);
     this.el.scrollTop = 0;
     this.el.classList.add('on');
@@ -137,7 +137,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     h(
       'div.meta',
       {},
-      h('span.era-tag', {}, `${c.era ?? ''} ${era ? '· ' + era.label : ''}`),
+      h('span.era-tag', {}, ...vtags(`${c.era ?? ''} ${era ? '· ' + era.label : ''}`)),
       h('span', {}, KIND_LABEL[c.kind] ?? c.kind),
       h('span', {}, formatYears(c.years)),
       h('span', {}, c.places.map((p) => p.name).join(' → ')),

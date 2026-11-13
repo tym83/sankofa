@@ -3,7 +3,7 @@
 import type { App } from '../app';
 import type { Point } from '../lib/fragment';
 import { terminalCommand } from '../lib/fragment';
-import { copyText, h, svgIcon, toast } from '../lib/dom';
+import { vtags, copyText, h, svgIcon, toast } from '../lib/dom';
 import { atlasLayers, eraColor, readerCards } from '../lib/atlasModel';
 import { formatYears, span } from '../lib/cards';
 import { ERAS, type Card } from '../lib/types';
@@ -63,7 +63,7 @@ export class Atlas {
     const legend = h(
       'div.legend',
       { 'aria-hidden': 'true' },
-      ERAS.map((e) => h('span', { style: `--c:${eraColor(e.id)}` }, h('i'), `${e.id} ${e.label}`)),
+      ERAS.map((e) => h('span', { style: `--c:${eraColor(e.id)}` }, h('i'), ...vtags(`${e.id} ${e.label}`))),
       h(
         'span.legend-note',
         {},

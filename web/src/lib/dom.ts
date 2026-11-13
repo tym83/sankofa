@@ -22,13 +22,14 @@ export function h<K extends keyof HTMLElementTagNameMap>(tag: K | string, attrs:
 
 export const reducedMotion = (): boolean => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-export function svgIcon(name: 'sun' | 'moon' | 'map' | 'book' | 'close' | 'term' | 'link' | 'prev' | 'next' | 'down' | 'wave'): SVGSVGElement {
+export function svgIcon(name: 'sun' | 'moon' | 'map' | 'book' | 'close' | 'term' | 'link' | 'prev' | 'next' | 'down' | 'wave' | 'copy'): SVGSVGElement {
   const paths: Record<string, string> = {
     sun: 'M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z',
     moon: 'M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z',
     map: 'M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14',
     book: 'M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Zm0 16a2 2 0 0 1 2-2h13v2',
     close: 'M6 6l12 12M18 6 6 18',
+    copy: 'M9 9h11v11H9V9Zm-4 6H4V4h11v1',
     term: 'm5 8 4 4-4 4m6 0h8',
     link: 'M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1',
     prev: 'M15 6l-6 6 6 6',
@@ -124,4 +125,9 @@ export function bookMarks(books: string[] | undefined): HTMLElement {
     span.append(svg);
   }
   return span;
+}
+
+/** Version tags (v0…v7) kept lowercase inside labels that are set in capitals. */
+export function vtags(text: string): (string | HTMLElement)[] {
+  return text.split(/\b(v\d)\b/).map((part, i) => (i % 2 ? h('span.vtag', {}, part) : part)).filter((p) => p !== '');
 }

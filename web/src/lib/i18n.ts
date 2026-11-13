@@ -128,6 +128,7 @@ export const RU: Record<string, string> = {
   Copy: 'Копировать',
   'Copy failed': 'Не удалось скопировать',
   'Command copied': 'Команда скопирована',
+  'Copied': 'Скопировано',
   'Link copied': 'Ссылка скопирована',
   'Link to your path copied': 'Ссылка на ваш путь скопирована',
   'This card is not written yet': 'Эта карточка ещё не написана',
@@ -278,7 +279,7 @@ export const RU: Record<string, string> = {
   'talking drums': 'говорящие барабаны',
   'the spirituals': 'спиричуэлс',
   'The bell is the control plane, keeping the West African 12/8 timeline of seven strokes in twelve pulses that every drum in the ensemble locks to, the way {talk} carry speech in rhythm. Each node is a drum with its own interlocking part: it plays while its Lease is fresh, stumbles as heartbeats come late, and falls silent when the node stops. Then the cluster calls and every ready pod answers, as in {spirit}; a pod that is not ready leaves its answer empty, and you hear the gap.':
-    'Колокол — это управляющий слой кластера: он держит западноафриканский колокольный рисунок 12/8, семь ударов на двенадцать долей, по которой сверяется каждый барабан ансамбля, — так {talk} передают речь ритмом. Каждый узел — барабан со своей партией, вплетённой в общий узор: он играет, пока узел вовремя подаёт сигнал «я жив», сбивается, когда сердцебиение запаздывает, и замолкает, когда узел останавливается. Потом кластер зовёт, и каждый готовый под откликается, как в {spirit}; под, который не готов, оставляет место отклика пустым — и вы слышите эту паузу.',
+    'Колокол — это управляющий слой кластера: он держит западноафриканский колокольный рисунок 12/8, семь ударов на двенадцать долей, по которому сверяется каждый барабан ансамбля, — так {talk} передают речь ритмом. Каждый узел — барабан со своей партией, вплетённой в общий узор: он играет, пока узел вовремя подаёт сигнал «я жив», сбивается, когда сердцебиение запаздывает, и замолкает, когда узел останавливается. Потом кластер зовёт, и каждый готовый под откликается, как в {spirit}; под, который не готов, оставляет место отклика пустым — и вы слышите эту паузу.',
 };
 
 /** The one way the museum counts its cards: "96 cards in your copy · 102 in both". */

@@ -528,6 +528,12 @@ export class GeoMap {
       const r = this.getBoundingClientRect();
       if (r.width) boxes.push([r.left - own.left - 4, r.top - own.top - 2, r.right - own.left + 4, r.bottom - own.top + 2]);
     });
+    // No label covers another place's dot.
+    for (const p of this.points) {
+      if (p.out) continue;
+      const [x, y] = this.xy(p.lon, p.lat);
+      boxes.push([x - 5, y - 5, x + 5, y + 5]);
+    }
     const budget = this.opts.maxLabels?.() ?? Infinity;
     let shown = 0;
     const order = [...this.points].sort((a, b) => Number(!!b.focus) - Number(!!a.focus) || Number(!!b.lit) - Number(!!a.lit) || b.priority - a.priority);
@@ -551,7 +557,7 @@ export class GeoMap {
       }
       const [x, y] = this.xy(p.lon, p.lat);
       // Long names are shortened on narrow maps rather than run off the edge.
-      const text = shortLabel(p.label, this.w < 520 ? 22 : 40);
+      const text = shortLabel(p.label, this.w < 520 ? 30 : 40);
       if (node.textContent !== text) node.textContent = text;
       node.classList.remove('hide');
       const measured = (node as SVGTextContentElement).getComputedTextLength?.() || 0;
