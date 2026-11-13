@@ -5534,3 +5534,94 @@ a.r-artist:hover {
     padding-top: 6px;
   }
 }
+
+/* ---------- listening room: subtitles and guests ---------- */
+.l-what {
+  font-size: clamp(17px, 1.35vw, 20px);
+  line-height: 1.55;
+  max-width: 42ch;
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border-left: 3px solid var(--gold);
+  background: rgba(227, 171, 61, 0.08);
+  border-radius: 0 6px 6px 0;
+}
+.l-what b {
+  color: var(--gold);
+  font-weight: 600;
+}
+.l-subs {
+  list-style: none;
+  margin: 6px auto 0;
+  padding: 0;
+  min-height: 4.6em;
+  max-width: 44ch;
+  text-align: center;
+  font-family: var(--font-sans);
+}
+.l-subs li {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(242, 233, 216, 0.4);
+  animation: subin 0.5s var(--ease);
+}
+.l-subs li:first-child {
+  font-size: 16px;
+  color: #f2e9d8;
+  font-weight: 500;
+}
+@keyframes subin {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+.l-next {
+  margin: 4px 0 0;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.l-pod.guest {
+  fill: #e3ab3d;
+  filter: drop-shadow(0 0 8px rgba(227, 171, 61, 0.9));
+  animation: guestin 0.8s var(--ease);
+  transform-box: view-box;
+}
+@keyframes guestin {
+  from {
+    opacity: 0;
+  }
+}
+@media (max-width: 900px) {
+  .l-subs {
+    min-height: 3.2em;
+  }
+  .l-subs li:nth-child(n + 3) {
+    display: none;
+  }
+}
+.l-what-short {
+  display: none;
+}
+@media (max-width: 900px) {
+  .l-what-short {
+    display: block;
+    margin: 0 auto 4px;
+    padding: 0 16px;
+    max-width: 40ch;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.45;
+    color: rgba(242, 233, 216, 0.85);
+  }
+  .listen .l-ring {
+    height: 32svh;
+  }
+}
+@media (min-width: 901px) {
+  .listen .l-ring {
+    max-height: calc(100svh - var(--nav-h) - 190px);
+  }
+}

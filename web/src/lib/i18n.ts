@@ -58,6 +58,7 @@ const NOUNS: Record<string, { en: [string, string]; ru: [string, string, string]
   year: { en: ['year', 'years'], ru: ['год', 'года', 'лет'] },
   node: { en: ['node', 'nodes'], ru: ['узел', 'узла', 'узлов'] },
   pod: { en: ['pod', 'pods'], ru: ['под', 'пода', 'подов'] },
+  program: { en: ['program', 'programs'], ru: ['программа', 'программы', 'программ'] },
   // after «из»: из 1 узла, из 3 узлов, из 21 узла
   nodeOf: { en: ['node', 'nodes'], ru: ['узла', 'узлов', 'узлов'] },
 };

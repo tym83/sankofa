@@ -4,8 +4,9 @@
 import type { App } from '../app';
 import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
-import { count, pick, t } from '../lib/i18n';
-import { BELL, PARTS, PULSES, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, simulate, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
+import { count, lang, pick, t } from '../lib/i18n';
+import { subtitle, type Sub } from '../lib/subtitles';
+import { BELL, GUEST_EVERY, GUEST_PART, PARTS, PULSES, guestPitch, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, simulate, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
 const PULSE = 0.2; // seconds per pulse: one 12/8 cycle is 2.4 s
 const AHEAD = 0.15;
@@ -40,6 +41,21 @@ class Source {
   private lastDemo = 0;
   onChange?: () => void;
   onLease?: (node: string) => void;
+  onPod?: (phase: 'joined' | 'left', name: string, node: string) => void;
+  /** Guest voices now playing: workload name → node. */
+  guests = new Map<string, string>();
+  /** When the last guest joined (ms), to guess the next one. */
+  lastGuestAt = 0;
+
+  private pod(phase: 'joined' | 'left', name: string, node: string): void {
+    if (phase === 'joined') {
+      if (this.guests.has(name)) return;
+      this.guests.set(name, node);
+      this.lastGuestAt = performance.now();
+    } else if (!this.guests.delete(name)) return;
+    this.onPod?.(phase, name, node);
+    this.onChange?.();
+  }
 
   start(): void {
     this.started = performance.now();
@@ -61,6 +77,7 @@ class Source {
         this.base = e.voices;
         this.onChange?.();
       } else if (e.type === 'lease' && e.node) this.onLease?.(e.node);
+      else if (e.type === 'pod' && e.phase && e.name) this.pod(e.phase, e.name, e.node ?? '');
     };
     this.es.onerror = () => {
       if (this.mode === 'connecting' || (this.mode !== 'live' && performance.now() - this.started > 2500)) this.demo();
@@ -85,6 +102,11 @@ class Source {
       const t = (performance.now() - t0) / 1000;
       this.base = demoVoices(t);
       for (const l of demoLeases(this.lastDemo, t)) this.onLease?.(l.node);
+      // In the demo a guest drummer sits in for 30 s of every minute.
+      const m = ((t % 60) + 60) % 60;
+      const node = this.base[2]?.node ?? this.base[0]?.node ?? '';
+      if (m >= 8 && m < 38) this.pod('joined', 'guest-drummer', node);
+      else this.pod('left', 'guest-drummer', node);
       this.lastDemo = t;
       this.onChange?.();
     };
@@ -169,6 +191,21 @@ class Ensemble {
     n.stop(t + 0.06);
   }
 
+  /** A guest's voice: a bright plucked tone, unlike the drums and the hum. */
+  pluck(t: number, f: number, gain: number): void {
+    const g = this.env(t, gain, 0.5, 0.003);
+    const o = this.ctx.createOscillator();
+    o.type = 'square';
+    o.frequency.value = f;
+    const lp = this.ctx.createBiquadFilter();
+    lp.type = 'lowpass';
+    lp.frequency.setValueAtTime(f * 6, t);
+    lp.frequency.exponentialRampToValueAtTime(f * 1.2, t + 0.3);
+    o.connect(lp).connect(g);
+    o.start(t);
+    o.stop(t + 0.55);
+  }
+
   /** A hummed voice for the call and the answers. */
   voice(t: number, f: number, gain: number): void {
     const g = this.env(t, gain, 0.34, 0.025);
@@ -212,6 +249,8 @@ export class Listen {
   private gNodes: SVGGElement;
   private gPods = document.createElementNS(NS, 'g');
   private moveNote: HTMLElement;
+  private subs = h('ul.l-subs', { 'aria-live': 'polite', 'aria-label': 'Subtitles' });
+  private next = h('p.l-next');
   private hand: SVGLineElement;
   private bellDots: SVGCircleElement[] = [];
   private callRow: HTMLElement;
@@ -265,11 +304,12 @@ export class Listen {
       h('div.kicker', {}, t('The cluster, played live')),
       h('h2', {}, t('The listening room')),
       h(
-        'p.l-plain',
+        'p.l-what',
         {},
+        h('b', {}, pick({ en: 'What you are hearing. ', ru: 'Что вы слышите. ' })),
         pick({
-          en: 'Every machine in the museum’s cluster plays a drum, and a bell keeps time for all of them. While a machine is healthy, its drum keeps up with the bell; when its heartbeat comes late, the drum stumbles; when it stops, you hear the gap it leaves. Every other bar the cluster calls, and the programs running on a machine answer. A program that cannot answer leaves a silence, and you can hear it.',
-          ru: 'Каждая машина в кластере музея играет на барабане, а колокол держит для всех общий ритм. Пока машина здорова, её барабан идёт вровень с колоколом; когда её сердцебиение запаздывает, барабан сбивается; когда машина останавливается, в ансамбле слышна дыра. Через такт кластер зовёт, и программы, работающие на машине, откликаются. Программа, которая не может ответить, оставляет тишину — и её слышно.',
+          en: 'A bell keeps time, each machine of the museum plays a drum, and every other bar the cluster calls and its programs answer. A healthy cluster sounds steady on purpose; every few minutes a guest drummer joins for a minute, and the words under the circle say what just happened.',
+          ru: 'Колокол держит ритм, каждая машина музея играет на барабане, а через такт кластер зовёт — и его программы отвечают. Здоровый кластер и должен звучать ровно; раз в несколько минут на минуту вступает приглашённый барабанщик, а подписи под кругом говорят, что сейчас произошло.',
         }),
       ),
       ctlSlot,
@@ -301,7 +341,15 @@ export class Listen {
         ru: 'Его поды снова запустились на узлах, которые продолжают играть. В настоящем кластере Kubernetes сначала ждёт тайм-аут: по умолчанию пять минут после того, как узел перестал отвечать.',
       }),
     );
-    const stage = h('div.l-stage', {}, this.svg, this.callRow, this.moveNote);
+    const whatShort = h(
+      'p.l-what-short',
+      {},
+      pick({
+        en: 'A bell keeps time, each machine plays a drum, the cluster calls and its programs answer. The words below say what just happened.',
+        ru: 'Колокол держит ритм, каждая машина играет на барабане, кластер зовёт — программы отвечают. Подписи ниже говорят, что сейчас произошло.',
+      }),
+    );
+    const stage = h('div.l-stage', {}, whatShort, this.svg, this.callRow, this.subs, this.next, this.moveNote);
     // On phones the controls sit under the drums, so pressing them shows what happens.
     const place = () => (window.innerWidth <= 900 ? stage.append(ctl) : ctlSlot.append(ctl));
     place();
@@ -316,7 +364,10 @@ export class Listen {
     this.source.onLease = (node) => {
       this.accents.add(node);
       this.flash(node);
+      this.say({ kind: 'lease', drum: this.drumOf(node) });
     };
+    this.source.onPod = (phase, name, node) => this.say(phase === 'joined' ? { kind: 'join', name, drum: this.drumOf(node) } : { kind: 'leave', name, drum: this.drumOf(node) });
+    window.setInterval(() => this.isOpen && this.paintNext(), 1000);
     this.render();
   }
 
@@ -397,8 +448,19 @@ export class Listen {
       ens.drum(Math.max(t, at), TUNINGS[k % TUNINGS.length], p.gain, accent);
       this.cues.push({ at, kind: 'node', node: v.node, accent });
     });
+    for (const [name] of this.source.guests) {
+      if (GUEST_PART[i] === 'x') ens.pluck(t, guestPitch(name), 0.12);
+    }
     // Call-and-response every other cycle, so the drums can breathe.
-    if (i === 0) this.current = this.cycle % 2 === 0 ? exchange(voices, this.cycle / 2) : null;
+    if (i === 0) {
+      this.current = this.cycle % 2 === 0 ? exchange(voices, this.cycle / 2) : null;
+      const ex = this.current;
+      if (ex) {
+        const v = voices.find((x) => x.node === ex.node);
+        const at = t - this.ens!.ctx.currentTime;
+        window.setTimeout(() => this.say({ kind: 'call', drum: this.drumOf(ex.node), ready: v?.ready ?? 0, silent: v?.notReady ?? 0 }), Math.max(0, at * 1000));
+      }
+    }
     const ex = this.current;
     if (!ex) return;
     const callAt = [0, 1, 3].indexOf(i);
@@ -503,12 +565,56 @@ export class Listen {
       g.querySelector('path.late')!.setAttribute('d', path);
     });
     this.renderPods(voices);
+    this.narrate(voices);
     for (const [node, g] of this.nodeEls) {
       if (!seen.has(node)) {
         g.remove();
         this.nodeEls.delete(node);
       }
     }
+  }
+
+  private drumOf(node: string): string {
+    const k = this.source.voices.findIndex((v) => v.node === node);
+    return k >= 0 ? drumName(k) : node;
+  }
+
+  /** One line of subtitles; the newest on top, the older fading below. */
+  private say(s: Sub): void {
+    if (!this.isOpen) return;
+    const line = h('li', {}, subtitle(s, lang()));
+    this.subs.prepend(line);
+    while (this.subs.children.length > 3) this.subs.lastElementChild!.remove();
+  }
+
+  private lastState = new Map<string, string>();
+
+  /** Watch the voices for a node going down and its pods moving on. */
+  private narrate(voices: SimVoice[]): void {
+    voices.forEach((v, k) => {
+      const state = v.evicted ? 'moved' : !v.alive ? 'down' : 'up';
+      const was = this.lastState.get(v.node);
+      this.lastState.set(v.node, state);
+      if (!was || was === state) return;
+      if (state === 'down') this.say({ kind: 'down', drum: drumName(k) });
+      if (state === 'moved') this.say({ kind: 'moved', drum: drumName(k), n: voices.reduce((a, x) => a + (x.adopted ?? 0), 0) });
+    });
+  }
+
+  private paintNext(): void {
+    const g = this.source.guests;
+    if (g.size) {
+      this.next.textContent = pick({ en: `Guest playing now: ${[...g.keys()].join(', ')}`, ru: `Сейчас играет гость: ${[...g.keys()].join(', ')}` });
+      return;
+    }
+    if (!this.source.lastGuestAt || this.source.mode !== 'live') {
+      this.next.textContent = pick({ en: 'Every few minutes a guest drummer joins.', ru: 'Каждые несколько минут вступает приглашённый барабанщик.' });
+      return;
+    }
+    const left = Math.max(0, Math.round(GUEST_EVERY - (performance.now() - this.source.lastGuestAt) / 1000));
+    const mm = Math.floor(left / 60);
+    const ss = String(left % 60).padStart(2, '0');
+    this.next.textContent = pick({ en: `Next guest drummer in about ${mm}:${ss}`, ru: `Следующий гость примерно через ${mm}:${ss}` });
   }
 
   private podEls = new Map<string, SVGCircleElement>();
@@ -537,6 +643,23 @@ export class Listen {
       const y = 300 + Math.sin(a + spread * 1.6) * 166;
       c.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
       c.setAttribute('class', `l-pod${p.ok ? '' : ' off'}`);
+    }
+    // Guests: a bright dot that appears with the voice and leaves with it.
+    for (const [name, node] of this.source.guests) {
+      const id = `guest:${name}`;
+      seen.add(id);
+      let c = this.podEls.get(id);
+      if (!c) {
+        c = document.createElementNS(NS, 'circle');
+        c.setAttribute('r', '9');
+        this.gPods.append(c);
+        this.podEls.set(id, c);
+      }
+      const at = Math.max(0, voices.findIndex((v) => v.node === node));
+      const a = (at / n) * Math.PI * 2 - Math.PI / 2 + Math.PI / n - 0.42;
+      c.style.transform = `translate(${(300 + Math.cos(a) * 222).toFixed(1)}px, ${(300 + Math.sin(a) * 222).toFixed(1)}px)`;
+      c.setAttribute('class', 'l-pod guest');
+      c.setAttribute('aria-label', name);
     }
     for (const [id, c] of this.podEls) {
       if (!seen.has(id)) {

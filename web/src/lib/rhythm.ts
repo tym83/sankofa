@@ -25,18 +25,22 @@ export interface Voice {
 }
 
 export interface PulseEvent {
-  type: 'voices' | 'lease';
+  type: 'voices' | 'lease' | 'pod';
   at?: string;
   node?: string;
   voices?: Voice[];
   leaseSeconds?: number;
+  /** for pods: joined (became ready) | left (stopped or became unready) */
+  phase?: 'joined' | 'left';
+  /** for pods: the workload's name */
+  name?: string;
 }
 
 /** Parse one SSE data line; unknown or broken data is ignored. */
 export function parsePulse(data: string): PulseEvent | null {
   try {
     const e = JSON.parse(data);
-    if (e && (e.type === 'voices' || e.type === 'lease')) return e as PulseEvent;
+    if (e && (e.type === 'voices' || e.type === 'lease' || (e.type === 'pod' && (e.phase === 'joined' || e.phase === 'left') && e.name))) return e as PulseEvent;
   } catch {
     /* ignore */
   }
@@ -232,3 +236,16 @@ export function podsOf(voices: SimVoice[]): Pod[] {
   }
   return [...out, ...movers];
 }
+
+/** Guest voices: a pod that joins plays its own part until it leaves. */
+export const GUEST_PART = 'x..x..x.x.x.';
+
+/** A timbre per workload, stable across visits: a pitch from the name. */
+export function guestPitch(name: string): number {
+  let h = 0;
+  for (const c of name) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  return [523.25, 587.33, 659.25, 783.99, 880][h % 5];
+}
+
+/** The guest drummer CronJob runs every 4 minutes; its pod plays about 60 s. */
+export const GUEST_EVERY = 240;

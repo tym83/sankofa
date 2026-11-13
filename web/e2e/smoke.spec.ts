@@ -310,12 +310,12 @@ test('the listening room moves pods off a node that is declared down', async ({ 
   await page.goto('/#view=listen');
   await page.clock.runFor(5000);
   await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/);
-  const pods = await page.locator('.l-pod').count();
+  const pods = await page.locator('.l-pod:not(.guest)').count();
   await page.getByRole('button', { name: 'Break a node' }).click();
   await expect(page.locator('.l-pod.off').first()).toBeAttached();
   await page.clock.runFor(17000);
   await expect(page.locator('.l-move')).toBeVisible();
-  await expect(page.locator('.l-pod')).toHaveCount(pods);
+  await expect(page.locator('.l-pod:not(.guest)')).toHaveCount(pods);
   await expect(page.locator('.l-node.broken .st')).toContainText(/moved|переехали/);
 });
 
@@ -348,4 +348,40 @@ test('roots: Cyrillic search finds an artist and the chain ends at a museum card
   await expect(page.locator('.r-src a')).not.toHaveCount(0);
   await end.click();
   await expect(page.locator('.drawer.on article.card')).toBeVisible();
+});
+
+test('the listening room narrates leases, calls and a guest drummer joining and leaving', async ({ page }) => {
+  const voices = { type: 'voices', at: '2026-11-12T10:00:00Z', voices: [{ node: 'cp-1', alive: true, late: 0.1, ready: 3, notReady: 0 }, { node: 'w-1', alive: true, late: 0.1, ready: 2, notReady: 0 }] };
+  const ev = (o: object) => `data: ${JSON.stringify(o)}\n\n`;
+  await page.route('**/pulse', (r) =>
+    r.fulfill({
+      status: 200,
+      headers: { 'content-type': 'text/event-stream', 'cache-control': 'no-cache' },
+      body:
+        'retry: 60000\n' +
+        ev(voices) +
+        ev({ type: 'lease', node: 'cp-1', at: 'x', leaseSeconds: 40 }) +
+        ev({ type: 'pod', phase: 'joined', name: 'guest-drummer', node: 'w-1', at: 'x' }),
+    }),
+  );
+  await page.goto('/#view=listen');
+  await expect(page.locator('.l-badge')).toHaveText(/Live/);
+  await expect(page.locator('.l-what')).toContainText('What you are hearing');
+  await expect(page.locator('.l-subs')).toContainText('Atsimevu checked in: alive');
+  await expect(page.locator('.l-subs li').first()).toHaveText('A new voice joins: guest-drummer on Sogo');
+  await expect(page.locator('.l-pod.guest')).toHaveCount(1);
+  await expect(page.locator('.l-next')).toContainText('guest-drummer');
+});
+
+test('in the demo the guest drummer comes and goes, in Russian too', async ({ page }) => {
+  await page.clock.install();
+  await page.goto('/#view=listen&lang=ru');
+  await page.clock.runFor(5000);
+  await expect(page.locator('.l-badge')).toHaveText(/демо/);
+  await page.clock.runFor(10000);
+  await expect(page.locator('.l-subs')).toContainText('Вступает новый голос: guest-drummer');
+  await expect(page.locator('.l-pod.guest')).toHaveCount(1);
+  await page.clock.runFor(31000);
+  await expect(page.locator('.l-subs')).toContainText('guest-drummer уходит');
+  await expect(page.locator('.l-pod.guest')).toHaveCount(0);
 });
