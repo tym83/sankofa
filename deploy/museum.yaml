@@ -42,8 +42,16 @@ kind: Ingress
 metadata:
   name: museum
   namespace: sankofa-museum
+  annotations:
+    # With cert-manager and this ClusterIssuer (hack/stand/letsencrypt.yaml)
+    # the certificate is issued automatically; without them nginx serves its
+    # default certificate.
+    cert-manager.io/cluster-issuer: letsencrypt
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts: [MUSEUM_HOST]
+      secretName: museum-tls
   rules:
     - host: MUSEUM_HOST
       http:
