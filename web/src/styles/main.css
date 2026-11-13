@@ -4889,3 +4889,117 @@ img {
 .tl .life.dim {
   opacity: 0.2;
 }
+
+/* ---------- descent: a solid level bar, era ribbons, the reading desk ---------- */
+.descent .d-bar {
+  background: rgba(8, 7, 14, 0.94);
+  border-bottom: 1px solid rgba(242, 233, 216, 0.08);
+}
+.d-intro {
+  padding-top: var(--nav-h);
+}
+.descent.lvl1 .d-lane {
+  width: 18px;
+  border-radius: 4px;
+  opacity: 0.55;
+}
+.descent.lvl1 .d-lane span {
+  opacity: 1;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  top: 14px;
+  right: auto;
+  left: 2px;
+  color: #0c0b12;
+  font-size: 11px;
+}
+.descent.lvl1 .d-lane span::after {
+  content: '';
+}
+.d-desk {
+  display: none;
+}
+.descent.lvl5 .d-desk {
+  display: block;
+  position: fixed;
+  top: calc(var(--nav-h) + 16px);
+  right: var(--gutter);
+  bottom: 24px;
+  width: calc(36vw - var(--gutter) - 8px);
+  z-index: 4;
+  overflow-y: auto;
+  border-radius: 6px;
+  background: #efe7d6;
+  color: #1c1a2a;
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.8);
+}
+.desk-in {
+  padding: 22px 24px 26px;
+  border-top: 5px solid var(--era);
+}
+.desk-in figure {
+  margin: 0 0 14px;
+}
+.desk-in figure img {
+  width: 100%;
+  max-height: 38vh;
+  object-fit: contain;
+  background: #e2d8c4;
+}
+.desk-in small {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b5a3a;
+}
+.desk-in h3 {
+  font-size: clamp(26px, 2.4vw, 36px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 6px 0 10px;
+}
+.desk-wow {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+.desk-body {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.desk-in .btn {
+  color: #1c1a2a;
+  border-color: #1c1a2a;
+}
+.desk-in .xref {
+  color: #1c1a2a;
+}
+.descent.lvl5 a.dc:not(.desk-on) {
+  opacity: 0.55;
+}
+.descent.lvl5 a.dc.desk-on {
+  border-color: var(--era);
+  opacity: 1;
+}
+@media (max-width: 760px) {
+  .descent.lvl5 .d-desk {
+    top: auto;
+    left: 8px;
+    right: 8px;
+    width: auto;
+    bottom: 8px;
+    height: 42svh;
+  }
+  .descent.lvl5 .d-track {
+    padding-bottom: 44svh;
+  }
+  .descent .d-bar {
+    background: rgba(8, 7, 14, 0.96);
+  }
+  .dmeter {
+    background: rgba(8, 7, 14, 0.96);
+  }
+}

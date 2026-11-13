@@ -11,7 +11,8 @@ import { eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
 import { count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
-import { mediaSrc } from '../lib/media';
+import { mediaSrc, progressive } from '../lib/media';
+import { richText } from '../app';
 import { buildScale, chapterAt, chapterCentres, chaptersAt, lanes, levelCards, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
 import { interpolateRgb } from 'd3-interpolate';
 import { scaleLinear } from 'd3-scale';
@@ -52,6 +53,8 @@ export class Descent {
   private levelBtns: HTMLButtonElement[] = [];
   private levelHint: HTMLElement;
   onLevel?: (level: number) => void;
+  private desk = h('aside.d-desk', { 'aria-live': 'polite' });
+  private deskId = '';
   onYear?: (year: number) => void;
   onClose?: () => void;
 
@@ -87,7 +90,7 @@ export class Descent {
       levels,
       h('button.icon-btn', { 'aria-label': t('Leave the descent'), onclick: () => this.onClose?.() }, svgIcon('close')),
     );
-    this.el = h('section.descent', { 'aria-label': t('Through the centuries: a descent from 1300 to today'), tabindex: '-1' }, this.sun, this.stars, bar, this.levelHint, meter, this.track);
+    this.el = h('section.descent', { 'aria-label': t('Through the centuries: a descent from 1300 to today'), tabindex: '-1' }, this.sun, this.stars, bar, this.levelHint, meter, this.track, this.desk);
     this.el.addEventListener('scroll', () => this.onScroll(), { passive: true });
     this.el.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') this.onClose?.();
@@ -227,6 +230,7 @@ export class Descent {
           );
         }
       }
+      if (this.level === 5) this.updateDesk();
       clearTimeout(this.idle);
       this.idle = window.setTimeout(() => this.isOpen && this.onYear?.(Math.round(this.yearNow())), 250);
     });
@@ -242,18 +246,20 @@ export class Descent {
     const cardIndex = new Map(cards.map((c) => [c.id, c]));
 
     // Geometry of the columns.
-    const axisX = mobile ? 14 : Math.max(330, W * 0.24);
+    const desk = this.level === 5;
+    const axisX = mobile ? 14 : desk ? Math.max(230, W * 0.17) : Math.max(330, W * 0.24);
     const livesX = axisX + (mobile ? 8 : 18);
     const laneW = mobile ? 6 : 15;
     const maxLanes = mobile ? 5 : 9;
     const livesW = laneW * maxLanes;
     const treeX = livesX + livesW + (mobile ? 0 : 20);
-    const treeW = mobile ? 0 : Math.min(170, W * 0.11);
+    const treeW = mobile || desk ? 0 : Math.min(170, W * 0.11);
     const cardsX = treeX + treeW + (mobile ? 8 : 24);
-    const cols = mobile ? 1 : W > 1180 ? 2 : 1;
+    const cols = mobile || desk || this.level === 1 ? 1 : W > 1180 ? 2 : 1;
     const colGap = 26;
-    const right = mobile ? 12 : 48;
-    const colW = Math.min(440, (W - cardsX - right - colGap * (cols - 1)) / cols);
+    // At level 5 the right side is the reading desk.
+    const right = mobile ? 12 : desk ? Math.max(48, W * 0.36) : 48;
+    const colW = Math.min(desk ? 360 : 440, (W - cardsX - right - colGap * (cols - 1)) / cols);
 
     this.track.replaceChildren();
     this.lastYear = -1;
@@ -309,6 +315,10 @@ export class Descent {
     const placed = place(list, scale, cols);
     const end = Math.max(scale.height, ...placed.map((p) => p.top + p.item.h + bottom));
     this.track.style.height = `${end}px`;
+    this.el.classList.toggle('lvl1', this.level === 1);
+    this.el.classList.toggle('lvl5', desk);
+    this.deskId = '';
+    if (!desk) this.desk.replaceChildren();
 
     // Intro and outro.
     const intro = h(
@@ -362,7 +372,7 @@ export class Descent {
       chs.forEach((ch, i) => {
         const y0 = scale.y(Math.max(START, ch.years[0]));
         const y1 = scale.y(ch.years[1] ?? NOW);
-        const x = cardsX - 14 - (chs.length - 1 - i) * 5;
+        const x = cardsX - 14 - (chs.length - 1 - i) * (this.level === 1 ? 24 : 5);
         bands.append(
           h(
             'a.d-lane',
@@ -509,6 +519,41 @@ export class Descent {
       { root: this.el, rootMargin: '200% 0px' },
     );
     imgs.forEach((i) => io.observe(i));
+  }
+
+  /** Level 5: the card under the reading line, laid open on the desk. */
+  private updateDesk(): void {
+    const line = this.el.clientHeight * 0.45;
+    let best: HTMLElement | undefined;
+    let bestD = Infinity;
+    for (const el of this.track.querySelectorAll<HTMLElement>('a.dc')) {
+      const r = el.getBoundingClientRect();
+      const d = r.top > line ? r.top - line : r.bottom < line ? line - r.bottom : 0;
+      if (d < bestD) {
+        bestD = d;
+        best = el;
+      }
+    }
+    const id = best?.dataset.card ?? '';
+    if (id === this.deskId) return;
+    this.deskId = id;
+    this.track.querySelectorAll('a.dc.desk-on').forEach((e) => e.classList.remove('desk-on'));
+    best?.classList.add('desk-on');
+    const c = id ? this.app.set.get(id) : undefined;
+    if (!c) return void this.desk.replaceChildren();
+    const img = c.media?.find((m) => m.type === 'image');
+    this.desk.replaceChildren(
+      h(
+        'div.desk-in',
+        { style: `--era:${eraColor(c.era)}` },
+        img ? h('figure', {}, progressive(this.app, img.file, { want: 960, sizes: '40vw', alt: img.caption ?? c.title }).img, h('figcaption.credit', {}, img.caption ?? '')) : null,
+        h('small', {}, `${c.era ?? ''} · ${formatYears(c.years)} · ${c.places[0].name}`),
+        h('h3', {}, c.title),
+        h('p.desk-wow', {}, c.wow),
+        h('div.desk-body', {}, richText(this.app, c.body.split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' '))),
+        h('a.btn', { href: `#focus=${c.id}`, 'data-card': c.id }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' })),
+      ),
+    );
   }
 
   private reveal(): void {

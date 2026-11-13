@@ -142,7 +142,7 @@ export function chapterCentres(chapters: Chapter[], year: (id: string) => number
 
 /** Landmarks kept per century at the general levels, so no century goes blank. */
 // Kept at every higher level too, so raising the level never hides a card.
-const LANDMARKS = [2, 3, 3, 3, 3];
+const LANDMARKS = [1, 3, 3, 3, 3];
 
 /**
  * The cards a level of generalisation shows, like the atlas zoom: 1 centuries
