@@ -166,7 +166,7 @@ export class Atlas {
       else if (p.path?.length) this.map!.fit(this.pathCards().map((c) => [c.places[0].lon, c.places[0].lat]), LEVEL_K[3], dur);
       else if (this.level >= 2) {
         // Open where there is something to see, not on the open sea.
-        const c = this.nearestContent() ?? [-28, 18];
+        const c = this.densest() ?? [-28, 18];
         this.map!.flyTo(c[0], c[1], k, dur);
       } else this.map!.flyTo(-28, 18, k, dur);
     });
@@ -216,6 +216,23 @@ export class Atlas {
     else this.map?.setLevel(this.level);
     this.draw(false);
     this.emit();
+  }
+
+  /** The place with the most cards around it at this level: where a fresh atlas opens. */
+  private densest(): [number, number] | undefined {
+    const layers = atlasLayers(this.app.set, { level: this.level, from: this.p.from, to: this.p.to, edition: this.app.edition });
+    const pts = layers.visible.map((c) => [c.places[0].lon, c.places[0].lat] as [number, number]);
+    const r = [0, 30, 12, 8, 5][this.level - 1] ?? 8;
+    let best: [number, number] | undefined;
+    let bestN = 0;
+    for (const p of pts) {
+      const near = pts.filter((q) => Math.hypot((q[0] - p[0]) * Math.cos((p[1] * Math.PI) / 180), q[1] - p[1]) < r);
+      if (near.length > bestN) {
+        bestN = near.length;
+        best = [near.reduce((s, q) => s + q[0], 0) / near.length, near.reduce((s, q) => s + q[1], 0) / near.length];
+      }
+    }
+    return best;
   }
 
   /** At cities, people and documents, go to the nearest thing to look at, never an empty sea. */

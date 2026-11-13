@@ -5065,3 +5065,10 @@ html.panel-open body {
     color: #6b5a3a;
   }
 }
+/* The atlas never grows wider than the screen (the era chips scroll instead). */
+.atlas {
+  grid-template-columns: minmax(0, 1fr);
+}
+.atlas > * {
+  min-width: 0;
+}
