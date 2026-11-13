@@ -4191,7 +4191,7 @@ details.k8s .term {
   opacity: 1;
   width: 5px;
 }
-.d-lane span {
+.d-lane > span {
   position: absolute;
   top: 0;
   right: 7px;
@@ -4205,7 +4205,7 @@ details.k8s .term {
   opacity: 0;
   transition: opacity 0.2s;
 }
-.d-lane:hover span {
+.d-lane:hover > span {
   opacity: 1;
 }
 .dc small .era {
@@ -4293,7 +4293,7 @@ details.k8s .term {
     top: 124px;
   }
 }
-.d-lane span {
+.d-lane > span {
   writing-mode: horizontal-tb;
   transform: none;
   right: 10px;
@@ -4302,7 +4302,7 @@ details.k8s .term {
   font-weight: 600;
   text-align: right;
 }
-.d-lane span::after {
+.d-lane > span::after {
   content: ' ↓';
 }
 .dm-era {
@@ -4903,7 +4903,7 @@ img {
   border-radius: 4px;
   opacity: 0.55;
 }
-.descent.lvl1 .d-lane span {
+.descent.lvl1 .d-lane > span {
   opacity: 1;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -4913,7 +4913,7 @@ img {
   color: #0c0b12;
   font-size: 11px;
 }
-.descent.lvl1 .d-lane span::after {
+.descent.lvl1 .d-lane > span::after {
   content: '';
 }
 .d-desk {
@@ -5417,7 +5417,7 @@ a.r-artist:hover {
   line-height: 1.1;
   margin: 4px 0 6px;
 }
-.r-card span {
+.r-card > div > span {
   display: block;
   font-size: 15px;
   line-height: 1.4;
@@ -6556,7 +6556,7 @@ a.r-artist:hover {
     padding-bottom: 44svh;
   }
 }
-.descent .d-lane span,
+.descent .d-lane > span,
 .dm-era,
 .d-era b,
 .d-chapter b {
@@ -7053,4 +7053,10 @@ html:lang(ru) .r-edge-head {
   .listen .l-stage {
     top: calc(var(--nav-h) + 4px);
   }
+}
+/* the run that carries a version tag stays inline, whatever the label's span rules */
+.vt,
+.vt .vtag {
+  display: inline !important;
+  writing-mode: inherit;
 }

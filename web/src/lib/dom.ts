@@ -130,5 +130,5 @@ export function bookMarks(books: string[] | undefined): HTMLElement {
 /** Version tags (v0…v7) kept lowercase inside labels that are set in capitals. */
 export function vtags(text: string): HTMLElement[] {
   // One inline run, so a flex or grid label still sees a single item.
-  return [h('span', {}, ...text.split(/\b(v\d)\b/).map((part, i) => (i % 2 ? h('span.vtag', {}, part) : part)).filter((p) => p !== ''))];
+  return [h('span.vt', {}, ...text.split(/\b(v\d)\b/).map((part, i) => (i % 2 ? h('span.vtag', {}, part) : part)).filter((p) => p !== ''))];
 }
