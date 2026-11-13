@@ -9,7 +9,7 @@ genreRu: "альтернативный поп"
 links:
   - to: "root:the-beatles"
     claim: "Billie Eilish names the Beatles as a formative musical influence, having grown up listening to them."
-    claimRu: "Билли Айлиш называет Beatles одним из главных музыкальных влияний: она выросла на их записях."
+    claimRu: "Билли Айлиш называет The Beatles музыкой, которая её сформировала: она выросла на их записях."
     sources:
       - {"title": "NME: Billie Eilish — Glastonbury cover interview", "url": "https://www.nme.com/big-reads/billie-eilish-cover-interview-2022-glastonbury-festival-3253169"}
       - {"title": "MusicRadar: Billie Eilish names the Beatles song she wishes she had written", "url": "https://www.musicradar.com/news/billie-eilish-lunch-finneas-guitar"}

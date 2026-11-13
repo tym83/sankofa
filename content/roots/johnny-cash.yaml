@@ -8,8 +8,9 @@ genre: "Country"
 genreRu: "кантри"
 links:
   - to: "card:work-songs"
-    claim: "Johnny Cash recorded “Rock Island Line”."
-    claimRu: "Джонни Кэш записал «Rock Island Line»."
+    claim: "Johnny Cash recorded “Rock Island Line”, a song John Lomax first recorded in 1934 from a convict work group in an Arkansas prison."
+    claimRu: "Джонни Кэш записал «Rock Island Line» — песню, которую Джон Ломакс впервые записал в 1934 году от рабочей бригады заключённых в арканзасской тюрьме."
     sources:
       - {"title": "Johnny Cash: Rock Island Line — official recording catalogue", "url": "https://www.johnnycash.com/track/rock-island-line/"}
       - {"title": "Library of Congress: From Mule-een to New Orleans — What Was Lead Belly Saying?", "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"}
+      - {"title": "CALS Encyclopedia of Arkansas: The Rock Island Line (song)", "url": "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"}

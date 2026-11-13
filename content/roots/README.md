@@ -19,7 +19,9 @@ Cyrillic aliases support Russian search.
 Research notes are in `../ledger/roots-{rock,pop,modern,extra}.json`; matching
 `-review.json` files record independent second-agent checks against both
 sources. SHA-256 hashes bind each review to the English and Russian claim.
-A changed claim needs renewed review. Validation counts are recorded in
+A changed claim needs renewed review. The second independent check of every
+link, with its verdict and two sources, is in
+[`roots-check.yaml`](../ledger/roots-check.yaml). Validation counts are recorded in
 [`roots-validation.json`](../ledger/roots-validation.json).
 
 Example (also stored in `oasis.yaml`):
