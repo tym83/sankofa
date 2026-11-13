@@ -288,3 +288,32 @@ test('each chapter ends on the cluster, and maps never stack labels', async ({ p
   });
   expect(overlaps).toBe(0);
 });
+
+test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.cover-lang')).toHaveCount(0);
+  await page.locator('a.xref').first().evaluate((el) => el.scrollIntoView({ block: 'center' }));
+  await page.locator('a.xref').first().click();
+  await expect(page.locator('.drawer.on')).toBeVisible();
+  const y = await page.evaluate(() => window.scrollY);
+  await page.mouse.wheel(0, 800);
+  await page.waitForTimeout(300);
+  expect(await page.evaluate(() => window.scrollY)).toBe(y);
+  await page.keyboard.press('Escape');
+  const sig = page.locator('.sig-counter');
+  if (await sig.count()) await expect(sig.locator('.sig-q')).toHaveText(/nearly|almost|about|почти|около/);
+});
+
+test('the listening room moves pods off a node that is declared down', async ({ page }) => {
+  await page.clock.install();
+  await page.goto('/#view=listen');
+  await page.clock.runFor(5000);
+  await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/);
+  const pods = await page.locator('.l-pod').count();
+  await page.getByRole('button', { name: 'Break a node' }).click();
+  await expect(page.locator('.l-pod.off').first()).toBeAttached();
+  await page.clock.runFor(17000);
+  await expect(page.locator('.l-move')).toBeVisible();
+  await expect(page.locator('.l-pod')).toHaveCount(pods);
+  await expect(page.locator('.l-node.broken .st')).toContainText(/moved|переехали/);
+});

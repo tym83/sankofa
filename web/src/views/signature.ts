@@ -30,6 +30,21 @@ export function firstBigNumber(text: string): number | undefined {
   return m ? Number(m[1].replace(/,/g, '')) : undefined;
 }
 
+const QUALIFIERS: Record<string, { en: string; ru: string }> = {
+  nearly: { en: 'nearly', ru: 'почти' },
+  almost: { en: 'almost', ru: 'почти' },
+  about: { en: 'about', ru: 'около' },
+  around: { en: 'around', ru: 'около' },
+  over: { en: 'over', ru: 'более' },
+  'more than': { en: 'more than', ru: 'более' },
+};
+
+/** The word that qualifies that number in the card ("nearly 100,000"), if any. */
+export function qualifierOf(text: string): keyof typeof QUALIFIERS | undefined {
+  const m = text.match(/\b(nearly|almost|about|around|over|more than)\s+\d{1,3}(?:,\d{3})+/i);
+  return m ? (m[1].toLowerCase() as keyof typeof QUALIFIERS) : undefined;
+}
+
 export function signature(app: App, chapterId: string, cards: Card[], fallback?: Card): HTMLElement | null {
   const plan = PLAN[chapterId];
   const c = (plan && cards.find((x) => x.id === plan.card)) ?? fallback;
@@ -43,19 +58,21 @@ export function signature(app: App, chapterId: string, cards: Card[], fallback?:
   const link = h('a.btn.attr', { href: `#focus=${c.id}`, 'data-card': c.id }, kindLink(c));
   const era = `--era:var(--${chapterId})`;
 
-  if (kind === 'counter') return counter(n!, c, link, era);
+  if (kind === 'counter') return counter(n!, qualifierOf(`${raw.wow} ${raw.body}`), c, link, era);
   if (kind === 'plate') return plate(app, c, link, era);
   if (kind === 'insert') return insert(app, c, link, era);
   return h('section.interlude.sig', { style: era }, h('blockquote.reveal', {}, c.wow), link);
 }
 
-function counter(n: number, c: Card, link: HTMLElement, era: string): HTMLElement {
+function counter(n: number, q: string | undefined, c: Card, link: HTMLElement, era: string): HTMLElement {
   const fmt = (v: number) => v.toLocaleString(lang() === 'ru' ? 'ru-RU' : 'en-US').replace(/ /g, ' ');
   const num = h('div.sig-num', { 'aria-label': fmt(n) }, reducedMotion() ? fmt(n) : '0');
   const el = h(
     'section.sig.sig-counter',
     { style: era },
     h('div.kicker', {}, pick({ en: 'Names, not cargo', ru: 'Имена, а не груз' })),
+    // The card's own wording stays with the number: "nearly 100,000".
+    q ? h('div.sig-q', {}, pick(QUALIFIERS[q])) : null,
     num,
     h('p.sig-wow', {}, c.wow),
     link,

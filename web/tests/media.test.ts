@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { mediaSrc, setVariants } from '../src/lib/media';
-import { firstBigNumber } from '../src/views/signature';
+import { firstBigNumber, qualifierOf } from '../src/views/signature';
 
 const app = { media: (f: string) => `media/${f}` };
 
@@ -21,6 +21,8 @@ describe('signature numbers', () => {
   it('reads the number a card already states', () => {
     expect(firstBigNumber('lists the names of almost 100,000 Africans')).toBe(100000);
     expect(firstBigNumber('no numbers here, 1781')).toBeUndefined();
+    expect(qualifierOf('A free database lists nearly 100,000 Africans')).toBe('nearly');
+    expect(qualifierOf('lists 100,000 names')).toBeUndefined();
   });
 });
 

@@ -240,7 +240,7 @@ function chapter(app: App, ch: Chapter): HTMLElement {
 
   const el = h(
     'article.chapter',
-    { id: `ch-${ch.id}`, 'data-chapter': ch.id, 'aria-labelledby': `title-${ch.id}`, style: `--era:${color}` },
+    { id: `ch-${ch.id}`, 'data-chapter': ch.id, 'aria-labelledby': `title-${ch.id}`, style: `--era:${color}`, class: `rhythm-${app.chapters.indexOf(ch) % 3}` },
     hero,
     scrolly,
     interlude,

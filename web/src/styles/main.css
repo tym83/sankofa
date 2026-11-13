@@ -5003,3 +5003,65 @@ img {
     background: rgba(8, 7, 14, 0.96);
   }
 }
+
+html.panel-open,
+html.panel-open body {
+  overflow: hidden;
+}
+.sig-q {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(26px, 3.4vw, 46px);
+  color: var(--era, var(--gold));
+  margin-bottom: -0.6em;
+}
+
+/* Phone rhythm: three ways to lay out a chapter's steps, taken in turn. */
+@media (max-width: 720px) {
+  /* rhythm-1: words on the page itself, the map dimmed behind */
+  .chapter.rhythm-1 .graphic .map {
+    opacity: 0.35;
+  }
+  .chapter.rhythm-1 .step {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    font-size: 21px;
+    line-height: 1.5;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9);
+    padding: 0 6px;
+  }
+  .chapter.rhythm-1 .step.on {
+    border: 0;
+  }
+  .chapter.rhythm-1 .step .where {
+    color: var(--era);
+  }
+  /* rhythm-2: a paper card, picture after the words */
+  .chapter.rhythm-2 .step {
+    background: #efe7d6;
+    color: #1c1a2a;
+    border: 0;
+    border-top: 4px solid var(--era);
+    display: flex;
+    flex-direction: column;
+  }
+  .chapter.rhythm-2 .step .xref {
+    color: #1c1a2a;
+  }
+  .chapter.rhythm-2 .step .where {
+    color: #6b5a3a;
+  }
+  .chapter.rhythm-2 .step .step-fig {
+    order: 3;
+    margin: 14px -8px 0;
+  }
+  .chapter.rhythm-2 .step-fig img {
+    background: #e2d8c4;
+  }
+  .chapter.rhythm-2 .step-fig figcaption {
+    color: #6b5a3a;
+  }
+}

@@ -44,6 +44,8 @@ export class Drawer {
     this.el.scrollTop = 0;
     this.el.classList.add('on');
     this.scrim.classList.add('on');
+    // The page behind stays still while a panel is open.
+    document.documentElement.classList.add('panel-open');
     requestAnimationFrame(() => {
       if (this.isOpen) (this.el.querySelector<HTMLElement>('h2') ?? this.el).focus({ preventScroll: true });
     });
@@ -53,6 +55,7 @@ export class Drawer {
     if (!this.isOpen) return;
     this.el.classList.remove('on');
     this.scrim.classList.remove('on');
+    document.documentElement.classList.remove('panel-open');
     if (this.returnTo instanceof HTMLElement || this.returnTo instanceof SVGElement) (this.returnTo as HTMLElement).focus?.({ preventScroll: true });
     if (!silent) this.onClose?.();
   }
