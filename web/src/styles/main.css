@@ -6343,3 +6343,41 @@ a.r-artist:hover {
     padding: 0 0 4px 4px;
   }
 }
+@media (max-width: 900px) {
+  /* The pinned drums and controls always fit one phone screen. */
+  .listen .l-ring {
+    height: 34svh !important;
+  }
+  .listen .l-stage {
+    max-height: 100svh;
+    overflow: hidden;
+    z-index: 3;
+  }
+  .listen .l-what-short {
+    font-size: 13px;
+  }
+  .listen .l-subs {
+    min-height: 2.6em;
+  }
+  .listen .l-subs li:first-child {
+    font-size: 14px;
+  }
+  .listen .l-subs li:nth-child(n + 2) {
+    display: none;
+  }
+  .listen .l-next,
+  .listen .l-move {
+    font-size: 11.5px;
+  }
+  .listen .l-ctl .l-start {
+    padding: 0.45em 1.1em;
+  }
+  .listen .l-ctl .btn {
+    font-size: 13px;
+    padding: 0.45em 0.9em;
+  }
+  .listen .l-text {
+    position: relative;
+    z-index: 1;
+  }
+}
