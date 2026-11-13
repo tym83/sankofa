@@ -96,3 +96,11 @@ describe('descent levels', () => {
     expect(ids.some((id) => ['e', 'f', 'g'].includes(id))).toBe(true);
   });
 });
+
+import { sameStart } from '../src/views/descent';
+describe('reading desk', () => {
+  it('drops a hook that the body repeats', () => {
+    expect(sameStart('Asante tradition says two men of Bonwire learned to weave kente.', 'Asante tradition says two men of Bonwire learned to weave kente by watching.')).toBe(true);
+    expect(sameStart('A free database lists nearly 100,000 Africans.', 'The [[slavevoyages|SlaveVoyages]] project began in 1999.')).toBe(false);
+  });
+});

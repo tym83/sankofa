@@ -17,6 +17,7 @@ import { hideTip, showTip } from './tip';
 
 /** The cover's own picture; a chapter that would repeat it opens on its map. */
 const COVER_IMAGE = 'hero-v0.jpg';
+const LEAD_CARDS = 4;
 
 export function buildStory(app: App, main: HTMLElement): void {
   coverMap(main.querySelector<HTMLElement>('.cover-map'));
@@ -224,11 +225,15 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
   });
   const scrolly = h('div.scrolly', {}, graphic, h('div.steps', {}, steps));
 
-  const fallback = cards.find((c, i) => i > 0 && c.wow.length < 140) ?? cards[0];
+  // The interlude never repeats a hook the strip right below will show again.
+  const fallback = cards.slice(LEAD_CARDS).find((c) => c.wow.length < 140) ?? cards.find((c, i) => i > 0 && c.wow.length < 140) ?? cards[0];
   const interlude = signature(app, ch.id, cards, fallback);
 
-  const LEAD = 4;
-  const rest = cards.slice(LEAD);
+  const LEAD = LEAD_CARDS;
+  // The card the signature already set large goes to the end of the strip.
+  const sigId = SIGNATURE_CARD[ch.id];
+  const stripCards = [...cards.filter((c) => c.id !== sigId), ...cards.filter((c) => c.id === sigId)];
+  const rest = stripCards.slice(LEAD);
   const more = rest.length
     ? h(
         'button.btn.more',
@@ -249,7 +254,7 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
         'section.strip',
         {},
         h('h3', {}, t('In {chapter}: {cards}', { chapter: ch.id, cards: count(cards.length, 'card') })),
-        h('div.strip-row', {}, cards.slice(0, LEAD).map((c) => teaser(app, c))),
+        h('div.strip-row', {}, stripCards.slice(0, LEAD).map((c) => teaser(app, c))),
         more,
         chapterCoda(ch.id, count(cards.length, 'card')),
       )

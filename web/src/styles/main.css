@@ -6544,3 +6544,21 @@ a.r-artist:hover {
   display: block;
   padding: 6px;
 }
+/* level 5: the column steps aside for the desk, the outro too */
+.descent.lvl5 .d-outro,
+.descent.lvl5 .d-intro {
+  right: 38vw;
+}
+@media (max-width: 760px) {
+  .descent.lvl5 .d-outro,
+  .descent.lvl5 .d-intro {
+    right: 0;
+    padding-bottom: 44svh;
+  }
+}
+.descent .d-lane span,
+.dm-era,
+.d-era b,
+.d-chapter b {
+  hyphens: manual !important;
+}

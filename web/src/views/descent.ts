@@ -571,7 +571,8 @@ export class Descent {
         img ? h('figure', {}, progressive(this.app, img.file, { want: 960, sizes: '40vw', alt: img.caption ?? c.title }).img, h('figcaption.credit', {}, img.caption ?? '')) : null,
         h('small', {}, `${c.era ?? ''} · ${formatYears(c.years)} · ${c.places[0].name}`),
         h('h3', {}, c.title),
-        h('p.desk-wow', {}, c.wow),
+        // The hook only when the body does not open with the same words.
+        sameStart(c.wow, c.body) ? null : h('p.desk-wow', {}, c.wow),
         h('div.desk-body', {}, richText(this.app, c.body.split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' '))),
         h('a.btn', { href: `#focus=${c.id}`, 'data-card': c.id }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' })),
       ),
@@ -618,4 +619,12 @@ function starfield(n: number): string {
     out.push(`${x}vw ${y}vh${big} rgba(242,233,216,${a})`);
   }
   return out.join(',');
+}
+
+/** Whether a text opens with (almost) the same sentence as the hook. */
+export function sameStart(hook: string, body: string): boolean {
+  const norm = (x: string) => x.replace(/\[\[[^|\]]+\|?([^\]]*)\]\]/g, '$1').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  const a = norm(hook);
+  const b = norm(body).slice(0, a.length + 10);
+  return a.length > 20 && b.startsWith(a.slice(0, Math.floor(a.length * 0.8)));
 }
