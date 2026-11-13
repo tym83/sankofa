@@ -3,6 +3,7 @@ name: "The White Stripes"
 aliases: ["уайт страйпс", "вайт страйпс", "джек уайт"]
 years: [1997]
 place: {"name": "Detroit", "lat": 42.3314, "lon": -83.0458}
+placeRu: "Детройт"
 genre: "Garage rock and blues rock"
 genreRu: "гаражный рок и блюз-рок"
 links:

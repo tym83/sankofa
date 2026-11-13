@@ -4,6 +4,7 @@ nameRu: "Кинг Табби"
 aliases: ["кинг табби", "осборн раддок"]
 years: [1941, 1989]
 place: {"name": "Kingston, Jamaica", "lat": 17.9712, "lon": -76.7936}
+placeRu: "Кингстон, Ямайка"
 genre: "Dub"
 genreRu: "даб"
 story: "King Tubby made existing Jamaican rhythm tracks into material for new music. By removing and returning parts and adding echo, he helped develop dub."

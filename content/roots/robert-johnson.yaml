@@ -4,6 +4,7 @@ nameRu: "Роберт Джонсон"
 aliases: ["роберт джонсон"]
 years: [1911, 1938]
 place: {"name": "Hazlehurst, Mississippi", "lat": 31.8604, "lon": -90.3959}
+placeRu: "Хейзлхерст, Миссисипи"
 genre: "Delta blues"
 genreRu: "дельта-блюз"
 links:

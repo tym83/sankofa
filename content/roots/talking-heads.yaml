@@ -3,6 +3,7 @@ name: "Talking Heads"
 aliases: ["токинг хедс", "токинг хэдс", "дэвид бирн"]
 years: [1975]
 place: {"name": "New York", "lat": 40.7128, "lon": -74.006}
+placeRu: "Нью-Йорк"
 genre: "New wave and art rock"
 genreRu: "новая волна и арт-рок"
 story: "Talking Heads turned to Fela Kuti’s Afrobeat while making Remain in Light. It became a source for their own music on that album."

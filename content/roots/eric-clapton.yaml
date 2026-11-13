@@ -4,6 +4,7 @@ nameRu: "Эрик Клэптон"
 aliases: ["эрик клэптон", "эрик клептон"]
 years: [1945]
 place: {"name": "Ripley, Surrey", "lat": 51.3007, "lon": -0.491}
+placeRu: "Рипли, Суррей"
 genre: "Blues rock"
 genreRu: "блюз-рок"
 links:

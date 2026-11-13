@@ -4,6 +4,7 @@ nameRu: "The Police"
 aliases: ["полис", "стинг", "Sting"]
 years: [1977]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
 genre: "New wave"
 genreRu: "новая волна"
 story: "Sting built the chorus of “So Lonely” on Bob Marley’s “No Woman, No Cry”, and the Police made switching between punk and reggae their own. Andy Summers says reggae bass lines also let Sting play and sing at the same time."

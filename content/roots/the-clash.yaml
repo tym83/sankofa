@@ -4,6 +4,7 @@ nameRu: "The Clash"
 aliases: ["клэш", "клаш"]
 years: [1976]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
 genre: "Punk rock"
 genreRu: "панк-рок"
 story: "The Clash brought Junior Murvin’s “Police and Thieves” into their repertoire. They also worked with reggae producer Lee “Scratch” Perry on “Complete Control”."

@@ -4,6 +4,7 @@ nameRu: "Аквариум"
 aliases: ["аквариум", "борис гребенщиков", "БГ", "Akvarium"]
 years: [1972]
 place: {"name": "Leningrad (Saint Petersburg)", "lat": 59.9343, "lon": 30.3351}
+placeRu: "Ленинград (Санкт-Петербург)"
 genre: "Rock / reggae"
 genreRu: "рок / регги"
 story: "Aquarium’s link to Black music runs through reggae. Their song “Vavilon” was first written in that style."

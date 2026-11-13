@@ -12,6 +12,7 @@ place:
   name: London
   lat: 51.5074
   lon: -0.1278
+placeRu: "Лондон"
 genre: Soul and jazz
 genreRu: соул и джаз
 links:

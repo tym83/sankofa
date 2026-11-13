@@ -4,6 +4,7 @@ nameRu: "Боб Марли"
 aliases: ["боб марли", "роберт неста марли"]
 years: [1945, 1981]
 place: {"name": "Nine Mile, Jamaica", "lat": 18.298, "lon": -77.278}
+placeRu: "Найн-Майл, Ямайка"
 genre: "Reggae"
 genreRu: "регги"
 story: "Lee “Scratch” Perry paired the Wailers with Aston and Carlton Barrett on bass and drums. Their work together helped define roots reggae."

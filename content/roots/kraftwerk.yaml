@@ -3,6 +3,7 @@ name: "Kraftwerk"
 aliases: ["крафтверк", "крафтверкк"]
 years: [1970]
 place: {"name": "Düsseldorf", "lat": 51.2277, "lon": 6.7735}
+placeRu: "Дюссельдорф"
 genre: "Electronic music"
 genreRu: "электронная музыка"
 story: "Kraftwerk’s electronic music also drew on funk. James Brown was among the band’s influences."

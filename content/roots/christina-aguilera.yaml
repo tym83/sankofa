@@ -11,6 +11,7 @@ place:
   name: New York City
   lat: 40.7128
   lon: -74.006
+placeRu: "Нью-Йорк"
 genre: Pop and soul
 genreRu: поп и соул
 links:

@@ -11,6 +11,7 @@ place:
   name: Los Angeles
   lat: 34.0522
   lon: -118.2437
+placeRu: "Лос-Анджелес"
 genre: Soul and blues
 genreRu: соул и блюз
 links:

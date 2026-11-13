@@ -4,6 +4,7 @@ nameRu: "Машина времени"
 aliases: ["машина времени", "андрей макаревич", "Time Machine"]
 years: [1969]
 place: {"name": "Moscow", "lat": 55.7558, "lon": 37.6173}
+placeRu: "Москва"
 genre: "Rock"
 genreRu: "рок"
 story: "The Beatles were among Andrey Makarevich’s early songwriting influences. This connects Mashina Vremeni to the music he learned from as he began writing songs."

@@ -4,6 +4,7 @@ nameRu: "Television"
 aliases: ["телевижн", "телевижен", "Том Верлен", "Tom Verlaine"]
 years: [1973]
 place: {"name": "New York City", "lat": 40.7128, "lon": -74.006}
+placeRu: "Нью-Йорк"
 genre: "Art rock"
 genreRu: "арт-рок"
 links:

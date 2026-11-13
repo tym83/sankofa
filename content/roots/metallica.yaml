@@ -4,6 +4,7 @@ nameRu: "Metallica"
 aliases: ["металлика", "металика"]
 years: [1981]
 place: {"name": "Los Angeles", "lat": 34.0522, "lon": -118.2437}
+placeRu: "Лос-Анджелес"
 genre: "Thrash metal"
 genreRu: "трэш-метал"
 links:

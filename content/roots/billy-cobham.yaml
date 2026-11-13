@@ -4,6 +4,7 @@ nameRu: "Билли Кобэм"
 aliases: ["билли кобэм", "билли кобхэм"]
 years: [1944]
 place: {"name": "Colón, Panama", "lat": 9.3547, "lon": -79.9006}
+placeRu: "Колон, Панама"
 genre: "Jazz fusion"
 genreRu: "джаз-фьюжн"
 story: "Billy Cobham played with Miles Davis before joining the Mahavishnu Orchestra. His work with that band put him at the heart of early jazz fusion."

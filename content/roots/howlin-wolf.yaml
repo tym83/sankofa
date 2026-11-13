@@ -4,6 +4,7 @@ nameRu: "Хаулин Вулф"
 aliases: ["хаулин вулф"]
 years: [1910, 1976]
 place: {"name": "White Station, Mississippi", "lat": 33.6748, "lon": -88.6503}
+placeRu: "Уайт-Стейшен, Миссисипи"
 genre: "Blues"
 genreRu: "блюз"
 links:

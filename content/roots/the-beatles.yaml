@@ -4,6 +4,7 @@ nameRu: "The Beatles"
 aliases: ["битлз", "битлс"]
 years: [1960]
 place: {"name": "Liverpool", "lat": 53.4084, "lon": -2.9916}
+placeRu: "Ливерпуль"
 genre: "Rock"
 genreRu: "рок"
 links:

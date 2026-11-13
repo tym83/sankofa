@@ -4,6 +4,7 @@ nameRu: "Литл Ричард"
 aliases: ["литл ричард"]
 years: [1932, 2020]
 place: {"name": "Macon, Georgia", "lat": 32.8407, "lon": -83.6324}
+placeRu: "Мейкон, Джорджия"
 genre: "Rock and roll"
 genreRu: "рок-н-ролл"
 links:

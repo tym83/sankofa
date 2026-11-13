@@ -4,6 +4,7 @@ nameRu: "Ван Моррисон"
 aliases: ["ван моррисон", "вэн моррисон", "Them"]
 years: [1945]
 place: {"name": "Belfast", "lat": 54.5973, "lon": -5.9301}
+placeRu: "Белфаст"
 genre: "R&B / soul / folk rock"
 genreRu: "ритм-энд-блюз / соул / фолк-рок"
 links:

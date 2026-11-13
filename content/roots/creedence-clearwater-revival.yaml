@@ -4,6 +4,7 @@ nameRu: "Creedence Clearwater Revival"
 aliases: ["криденс", "криденс клируотер ривайвл", "CCR"]
 years: [1967]
 place: {"name": "El Cerrito, California", "lat": 37.9161, "lon": -122.3108}
+placeRu: "Эль-Серрито, Калифорния"
 genre: "Roots rock / blues rock"
 genreRu: "рутс-рок / блюз-рок"
 links:

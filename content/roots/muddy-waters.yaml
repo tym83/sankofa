@@ -4,6 +4,7 @@ nameRu: "Мадди Уотерс"
 aliases: ["мадди уотерс"]
 years: [1913, 1983]
 place: {"name": "Issaquena County, Mississippi", "lat": 32.755, "lon": -91.002}
+placeRu: "округ Иссакуина, Миссисипи"
 genre: "Blues"
 genreRu: "блюз"
 links:

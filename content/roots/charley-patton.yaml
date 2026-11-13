@@ -4,6 +4,7 @@ nameRu: "Чарли Паттон"
 aliases: ["чарли паттон"]
 years: [1891, 1934]
 place: {"name": "Edwards, Mississippi", "lat": 32.3307, "lon": -90.6057}
+placeRu: "Эдвардс, Миссисипи"
 genre: "Delta blues"
 genreRu: "дельта-блюз"
 links:

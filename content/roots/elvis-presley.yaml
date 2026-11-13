@@ -4,6 +4,7 @@ nameRu: "Элвис Пресли"
 aliases: ["элвис", "elvis"]
 years: [1935, 1977]
 place: {"name": "Tupelo, Mississippi", "lat": 34.2576, "lon": -88.7034}
+placeRu: "Тупело, Миссисипи"
 genre: "Rock and roll"
 genreRu: "рок-н-ролл"
 links:

@@ -4,6 +4,7 @@ nameRu: "Биг Мама Торнтон"
 aliases: ["биг мама торнтон"]
 years: [1926, 1984]
 place: {"name": "Ariton, Alabama", "lat": 31.6002, "lon": -85.7188}
+placeRu: "Аритон, Алабама"
 genre: "Blues / rhythm and blues"
 genreRu: "блюз / ритм-н-блюз"
 links:

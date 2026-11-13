@@ -4,6 +4,7 @@ nameRu: "Фела Кути"
 aliases: ["фела кути", "фела аникулапо кути"]
 years: [1938, 1997]
 place: {"name": "Abeokuta, Nigeria", "lat": 7.1475, "lon": 3.3619}
+placeRu: "Абеокута, Нигерия"
 genre: "Afrobeat"
 genreRu: "афробит"
 story: "Fela Kuti joined West African highlife to jazz, soul and funk in Afrobeat. James Brown was one of the musicians who shaped that fusion."

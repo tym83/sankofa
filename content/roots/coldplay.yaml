@@ -3,6 +3,7 @@ name: "Coldplay"
 aliases: ["колдплей", "колдплэй"]
 years: [1997]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
 genre: "Pop rock"
 genreRu: "поп-рок"
 story: "The riff in Coldplay’s “Talk” came from Kraftwerk’s “Computer Love”. A synthesizer melody became a guitar part in the new recording."

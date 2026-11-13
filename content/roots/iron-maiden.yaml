@@ -4,6 +4,7 @@ nameRu: "Iron Maiden"
 aliases: ["айрон мейден", "айрон мэйден", "железная дева"]
 years: [1975]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
 genre: "Heavy metal"
 genreRu: "хеви-метал"
 links:

@@ -4,6 +4,7 @@ nameRu: "Чак Берри"
 aliases: ["чак берри"]
 years: [1926, 2017]
 place: {"name": "St. Louis, Missouri", "lat": 38.627, "lon": -90.1994}
+placeRu: "Сент-Луис, Миссури"
 genre: "Rock and roll"
 genreRu: "рок-н-ролл"
 links:

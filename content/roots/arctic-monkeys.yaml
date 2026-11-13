@@ -3,6 +3,7 @@ name: "Arctic Monkeys"
 aliases: ["арктик манкиз", "арктик монкис"]
 years: [2002]
 place: {"name": "Sheffield", "lat": 53.3811, "lon": -1.4701}
+placeRu: "Шеффилд"
 genre: "Indie rock"
 genreRu: "инди-рок"
 story: "For AM, Arctic Monkeys turned to Dr. Dre’s hip-hop rhythms. Their recorded repertoire also includes Barbara Lewis’s “Baby I’m Yours”, performed with the 747s."

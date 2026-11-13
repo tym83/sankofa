@@ -4,6 +4,7 @@ nameRu: "Мумий Тролль"
 aliases: ["мумий тролль", "илья лагутенко"]
 years: [1983]
 place: {"name": "Vladivostok", "lat": 43.1155, "lon": 131.8855}
+placeRu: "Владивосток"
 genre: "Rock / pop"
 genreRu: "рок / поп"
 story: "Mumiy Troll’s documented connection here runs through Aquarium’s “Prekrasny diletant”. The band recorded it for the 2012 Re:Aquarium tribute."

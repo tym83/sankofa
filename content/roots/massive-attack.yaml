@@ -3,6 +3,7 @@ name: "Massive Attack"
 aliases: ["массив атак", "мэссив атак"]
 years: [1988]
 place: {"name": "Bristol", "lat": 51.4545, "lon": -2.5879}
+placeRu: "Бристоль"
 genre: "Trip hop"
 genreRu: "трип-хоп"
 story: "“Safe from Harm” runs on a loop of Billy Cobham’s “Stratus”. The bass-and-drums groove of his 1973 recording became Massive Attack’s rhythm section."

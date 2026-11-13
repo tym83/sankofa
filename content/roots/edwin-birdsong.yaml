@@ -4,6 +4,7 @@ nameRu: "Эдвин Бёрдсонг"
 aliases: ["эдвин бёрдсонг", "эдвин бердсонг"]
 years: [1941, 2019]
 place: {"name": "Los Angeles", "lat": 34.0522, "lon": -118.2437}
+placeRu: "Лос-Анджелес"
 genre: "Jazz funk"
 genreRu: "джаз-фанк"
 story: "Edwin Birdsong’s jazz-funk took shape in collaboration with Roy Ayers. Together they made records that joined jazz to funk."

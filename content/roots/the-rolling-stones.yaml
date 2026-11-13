@@ -4,6 +4,7 @@ nameRu: "The Rolling Stones"
 aliases: ["роллинг стоунз", "роллинг стоунс"]
 years: [1962]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
 genre: "Rock"
 genreRu: "рок"
 links:

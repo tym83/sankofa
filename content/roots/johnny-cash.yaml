@@ -4,6 +4,7 @@ nameRu: "Джонни Кэш"
 aliases: ["джонни кэш", "джонни кеш"]
 years: [1932, 2003]
 place: {"name": "Kingsland, Arkansas", "lat": 33.859, "lon": -92.2932}
+placeRu: "Кингсленд, Арканзас"
 genre: "Country"
 genreRu: "кантри"
 links:

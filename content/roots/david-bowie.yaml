@@ -4,6 +4,7 @@ nameRu: "Дэвид Боуи"
 aliases: ["боуи", "дэвид боуи"]
 years: [1947, 2016]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
 genre: "Art rock"
 genreRu: "арт-рок"
 story: "Nina Simone’s interpretation of “Wild Is the Wind” inspired David Bowie. He made his own recording of the song for Station to Station."

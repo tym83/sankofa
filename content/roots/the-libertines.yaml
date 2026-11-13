@@ -4,6 +4,7 @@ nameRu: "The Libertines"
 aliases: ["либерти́нс", "либертинс", "Пит Доэрти", "Пит Дохерти", "Pete Doherty", "Peter Doherty", "Карл Барат"]
 years: [1997]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
 genre: "Indie rock"
 genreRu: "инди-рок"
 story: "The Libertines’ debut, Up the Bracket, was recorded with Mick Jones. The producer connected their first album to a musician from the Clash."

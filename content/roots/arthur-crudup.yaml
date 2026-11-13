@@ -4,6 +4,7 @@ nameRu: "Артур Крадап"
 aliases: ["артур крадап"]
 years: [1905, 1974]
 place: {"name": "Forest, Mississippi", "lat": 32.3646, "lon": -89.4742}
+placeRu: "Форест, Миссисипи"
 genre: "Blues"
 genreRu: "блюз"
 links:

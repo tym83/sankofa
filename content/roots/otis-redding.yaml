@@ -4,6 +4,7 @@ nameRu: "Отис Реддинг"
 aliases: ["отис реддинг"]
 years: [1941, 1967]
 place: {"name": "Dawson, Georgia", "lat": 31.7735, "lon": -84.4466}
+placeRu: "Доусон, Джорджия"
 genre: "Soul"
 genreRu: "соул"
 story: "Otis Redding’s voice grew out of church singing. That upbringing was one of the foundations of his music."

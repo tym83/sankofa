@@ -4,6 +4,7 @@ nameRu: "Джеймс Браун"
 aliases: ["джеймс браун"]
 years: [1933, 2006]
 place: {"name": "Barnwell, South Carolina", "lat": 33.2449, "lon": -81.3587}
+placeRu: "Барнуэлл, Южная Каролина"
 genre: "Soul and funk"
 genreRu: "соул и фанк"
 story: "Gospel supplied the vocal intensity that James Brown carried into rhythm and blues. That gospel voice also powered his funk."

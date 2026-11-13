@@ -4,6 +4,7 @@ nameRu: "Боб Дилан"
 aliases: ["дилан", "боб дилан"]
 years: [1941]
 place: {"name": "Duluth, Minnesota", "lat": 46.7867, "lon": -92.1005}
+placeRu: "Дулут, Миннесота"
 genre: "Folk rock"
 genreRu: "фолк-рок"
 links:

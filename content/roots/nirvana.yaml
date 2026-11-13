@@ -4,6 +4,7 @@ nameRu: "Nirvana"
 aliases: ["нирвана", "Курт Кобейн", "Kurt Cobain"]
 years: [1987]
 place: {"name": "Aberdeen, Washington", "lat": 46.9754, "lon": -123.8157}
+placeRu: "Абердин, Вашингтон"
 genre: "Grunge"
 genreRu: "гранж"
 links:

@@ -4,6 +4,7 @@ nameRu: "Джимми Клифф"
 aliases: ["джимми клифф", "джеймс чеймберс"]
 years: [1944, 2025]
 place: {"name": "Somerton, Saint James, Jamaica", "lat": 18.383, "lon": -77.8}
+placeRu: "Сомертон, Сент-Джеймс, Ямайка"
 genre: "Reggae and soul"
 genreRu: "регги и соул"
 story: "Jimmy Cliff’s singing began in church. That gospel experience preceded his recording career."

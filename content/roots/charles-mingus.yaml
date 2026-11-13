@@ -4,6 +4,7 @@ nameRu: "Чарльз Мингус"
 aliases: ["чарльз мингус", "мингус"]
 years: [1922, 1979]
 place: {"name": "Nogales, Arizona", "lat": 31.3404, "lon": -110.9343}
+placeRu: "Ногалес, Аризона"
 genre: "Jazz"
 genreRu: "джаз"
 story: "Charles Mingus’s early musical world included the singing he heard in church. The gospel singing and preaching of his youth later fed compositions such as “Better Git It in Your Soul”."

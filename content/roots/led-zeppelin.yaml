@@ -4,6 +4,7 @@ nameRu: "Led Zeppelin"
 aliases: ["лед зеппелин", "лед цеппелин"]
 years: [1968]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
 genre: "Hard rock"
 genreRu: "хард-рок"
 links:

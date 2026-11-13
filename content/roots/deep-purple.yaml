@@ -4,6 +4,7 @@ nameRu: "Deep Purple"
 aliases: ["дип пёрпл", "дип перпл"]
 years: [1968]
 place: {"name": "Hertford, England", "lat": 51.7958, "lon": -0.078}
+placeRu: "Хартфорд, Англия"
 genre: "Hard rock"
 genreRu: "хард-рок"
 links:

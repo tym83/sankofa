@@ -4,6 +4,7 @@ nameRu: "Ледбелли"
 aliases: ["ледбелли"]
 years: [1888, 1949]
 place: {"name": "Mooringsport, Louisiana", "lat": 32.6876, "lon": -93.961}
+placeRu: "Мурингспорт, Луизиана"
 genre: "Folk / blues"
 genreRu: "фолк / блюз"
 links:

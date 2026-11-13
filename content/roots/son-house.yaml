@@ -4,6 +4,7 @@ nameRu: "Сон Хаус"
 aliases: ["сон хаус"]
 years: [1902, 1988]
 place: {"name": "Lyon, Mississippi", "lat": 34.2179, "lon": -90.5415}
+placeRu: "Лайон, Миссисипи"
 genre: "Delta blues"
 genreRu: "дельта-блюз"
 links:
