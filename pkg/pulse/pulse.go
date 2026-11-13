@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"net/http"
 	"sort"
+	"strings"
 	"sync"
 	"time"
 
@@ -21,7 +22,9 @@ import (
 
 // Event is one beat sent to listeners.
 type Event struct {
-	Type     string    `json:"type"` // lease | voices
+	Type     string    `json:"type"`            // lease | voices | pod
+	Phase    string    `json:"phase,omitempty"` // for pods: joined (became ready) | left (stopped or became unready)
+	Name     string    `json:"name,omitempty"`  // for pods: the workload's name, not the pod hash
 	Node     string    `json:"node,omitempty"`
 	At       time.Time `json:"at"`
 	Voices   []Voice   `json:"voices,omitempty"`
@@ -106,12 +109,53 @@ func (h *Hub) pod(o any, deleted bool) {
 	}
 	key := p.Namespace + "/" + p.Name
 	h.mu.Lock()
+	was := h.pods[key] != nil && ready(h.pods[key])
 	if deleted {
 		delete(h.pods, key)
 	} else {
 		h.pods[key] = p
 	}
+	now := !deleted && ready(p)
 	h.mu.Unlock()
+	if was != now {
+		phase := "left"
+		if now {
+			phase = "joined"
+		}
+		h.publish(Event{Type: "pod", Phase: phase, Node: p.Spec.NodeName, Name: workload(p), At: time.Now().UTC()})
+	}
+}
+
+func ready(p *corev1.Pod) bool {
+	if p.Status.Phase != corev1.PodRunning {
+		return false
+	}
+	for _, c := range p.Status.Conditions {
+		if c.Type == corev1.PodReady && c.Status == corev1.ConditionTrue {
+			return true
+		}
+	}
+	return false
+}
+
+// workload names a pod by what it belongs to: its app label, or its name
+// without the generated suffix.
+func workload(p *corev1.Pod) string {
+	for _, k := range []string{"app.kubernetes.io/name", "app", "k8s-app"} {
+		if v := p.Labels[k]; v != "" {
+			return v
+		}
+	}
+	if len(p.OwnerReferences) > 0 {
+		n := p.OwnerReferences[0].Name
+		if p.OwnerReferences[0].Kind == "ReplicaSet" {
+			if i := strings.LastIndex(n, "-"); i > 0 {
+				n = n[:i]
+			}
+		}
+		return n
+	}
+	return p.Name
 }
 
 // Voices summarises nodes: alive or silent, and how many pods answer.
