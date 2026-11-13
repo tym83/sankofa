@@ -26,7 +26,7 @@ media:                  # optional, public domain or open licence only
   - {type: image, file: bridgetower.jpg, caption: "...", credit: "...", license: "Public domain", url: "https://commons.wikimedia.org/..."}
 dispute: ""             # set when a claim is contested; say what is disputed
 ---
-The body: 40–130 words, a story, not a reference. Cross-references are
+The body: 40–140 words, a story, not a reference. Cross-references are
 written [[zong]] or [[zong|the Zong massacre]] and must point to existing cards.
 ```
 
@@ -93,4 +93,4 @@ Genres, instruments, scripts and languages (`kind: genre | instrument | script |
 must first explain what the thing is — how it sounds or works, where and when it
 arose, what it was for, its main forms and names — and only then tell the story
 that makes it memorable, and finally where it came from and what grew out of it.
-Up to 220 words.
+Up to 235 words.
