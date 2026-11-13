@@ -313,8 +313,8 @@ export class Listen {
     const text = h(
       'div.l-text',
       {},
-      h('div.kicker', {}, t('The cluster, played live')),
-      h('h2', {}, t('The listening room')),
+      h('div.kicker.l-head-wide', {}, t('The cluster, played live')),
+      h('h2.l-head-wide', {}, t('The listening room')),
       h(
         'p.l-what',
         {},
@@ -368,7 +368,7 @@ export class Listen {
     place();
     window.matchMedia('(max-width: 900px)').addEventListener('change', place);
     const bar = h('header.d-bar', {}, h('span.d-title', {}, t('The listening room')), h('button.icon-btn', { 'aria-label': t('Leave the listening room'), onclick: () => this.onClose?.() }, svgIcon('close')));
-    this.el = h('section.listen', { 'aria-label': t('The listening room'), tabindex: '-1' }, bar, h('div.l-wrap', {}, text, stage));
+    this.el = h('section.listen', { 'aria-label': t('The listening room'), tabindex: '-1' }, bar, h('div.l-wrap', {}, h('header.l-head-phone', {}, h('div.kicker', {}, t('The cluster, played live')), h('h2', {}, t('The listening room'))), text, stage));
     this.el.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') this.onClose?.();
     });
@@ -678,7 +678,12 @@ export class Listen {
   private paintNext(): void {
     const g = this.source.guests;
     if (g.size) {
-      this.next.textContent = pick({ en: `Guest playing now: ${[...g.keys()].join(', ')}`, ru: `Сейчас играет гость: ${[...g.keys()].join(', ')}` });
+      const names = [...g.keys()];
+      const list = (and: string) => (names.length > 1 ? `${names.slice(0, -1).join(', ')} ${and} ${names[names.length - 1]}` : names[0]);
+      this.next.textContent =
+        names.length > 1
+          ? pick({ en: `Guests playing now: ${list('and')}`, ru: `Сейчас играют гости: ${list('и')}` })
+          : pick({ en: `Guest playing now: ${list('and')}`, ru: `Сейчас играет гость: ${list('и')}` });
       return;
     }
     if (!this.source.lastGuestAt || this.source.mode !== 'live') {

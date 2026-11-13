@@ -1,7 +1,7 @@
 // The two copies, said plainly: what differs, which one you hold, a switch to
 // the other, and the list of pairs straight from the cards.
 import type { App } from '../app';
-import { h } from '../lib/dom';
+import { h, reducedMotion } from '../lib/dom';
 import { lang, pick } from '../lib/i18n';
 import { setEdition } from '../lib/reader';
 import type { Card } from '../lib/types';
@@ -56,7 +56,7 @@ export function editionNote(app: App): HTMLElement {
     const met = p[mine];
     const g = NAMES[gone.id];
     const m = NAMES[met.id];
-    return ru ? { gone: g?.gen ?? `«${gone.title}»`, met: m?.acc ?? `«${met.title}»` } : { gone: g?.en ?? gone.title, met: m?.en ?? met.title };
+    return ru ? { gone: g?.gen ?? `«${gone.title}»`, met: m?.acc ?? `«${met.title}»` } : { gone: g?.en ?? (gone.inline || `“${gone.title}”`), met: m?.en ?? (met.inline || `“${met.title}”`) };
   });
   const swapText = swaps.length
     ? ru
@@ -89,6 +89,8 @@ export function editionNote(app: App): HTMLElement {
       onclick: () => {
         box.hidden = !box.hidden;
         listBtn.setAttribute('aria-expanded', String(!box.hidden));
+        // The list opens below the fold on most screens: bring it into view.
+        if (!box.hidden) box.scrollIntoView({ block: 'nearest', behavior: reducedMotion() ? 'auto' : 'smooth' });
       },
     },
     ru ? RU_ALL[n] || `Все пары (${n})` : n === 2 ? 'Both pairs' : `All ${EN_NUM[n] ?? n} pairs`,

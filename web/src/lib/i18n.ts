@@ -179,7 +179,7 @@ export const RU: Record<string, string> = {
 
   // card panel
   'Contested.': 'Об этом спорят.',
-  'You followed a link to {title}. In your {edition} this place is held by another voice.':
+  'You followed a link to “{title}”. In your {edition} this place is held by another voice.':
     'Вы шли по ссылке к странице «{title}». В вашем {edition} на этом месте звучит другой голос.',
   'From the other copy.': 'Из другого экземпляра.',
   "You hold the {edition}; this page reached you through another reader's path.": 'У вас в руках {edition}; эта страница пришла к вам по пути другого читателя.',

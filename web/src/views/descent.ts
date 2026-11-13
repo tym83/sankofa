@@ -25,12 +25,13 @@ const SKY = scaleLinear<string>()
 const SUN = scaleLinear().domain([1300, 1480, 1600, 1880, 1930, 1960, 1990]).range([0.6, 0.38, 0.06, 0.08, 0.16, 0.06, 0]).clamp(true);
 const STARS = scaleLinear().domain([1945, 1975, 2005]).range([0, 0.55, 1]).clamp(true);
 
+// Read when drawn, not when the module loads: the language is set later.
 const QUIET = [
-  'The archive is quiet here. The people were not.',
-  'Few records survive from these years. Absence of evidence, not of lives.',
-  'A long stretch with no card yet. Somebody was singing.',
-  'Silence in the sources. Keep going.',
-].map((q) => t(q));
+  { en: 'The archive is quiet here. The people were not.', ru: 'Архив здесь молчит. Люди — нет.' },
+  { en: 'Few records survive from these years. Absence of evidence, not of lives.', ru: 'От этих лет почти не осталось записей. Нет свидетельств — но жизни были.' },
+  { en: 'A long stretch with no card yet. Somebody was singing.', ru: 'Долгий отрезок без единой карточки. Кто-то в это время пел.' },
+  { en: 'Silence in the sources. Keep going.', ru: 'Источники молчат. Идите дальше.' },
+];
 
 export class Descent {
   readonly el: HTMLElement;
@@ -176,7 +177,10 @@ export class Descent {
 
   goTo(year: number, smooth = false): void {
     if (!this.scale) return;
-    const top = this.scale.y(year) - this.el.clientHeight * 0.45;
+    let top = this.scale.y(year) - this.el.clientHeight * 0.45;
+    // Never stop with the introduction half under the top bar: show it whole.
+    const intro = this.el.querySelector<HTMLElement>('.d-intro');
+    if (intro && top < intro.getBoundingClientRect().bottom - this.el.getBoundingClientRect().top + this.el.scrollTop) top = 0;
     this.el.scrollTo({ top: Math.max(0, top), behavior: smooth && !reducedMotion() ? 'smooth' : 'auto' });
   }
 
@@ -309,7 +313,7 @@ export class Descent {
       list.push({ kind: 'movement', id: m.id, year: m.years[0], h: 0 });
     }
     quietStretches(cards).forEach((q, i) => {
-      const el = h('div.d-quiet', {}, h('span', {}, `${q.from} — ${q.to}`), QUIET[i % QUIET.length]);
+      const el = h('div.d-quiet', {}, h('span', {}, `${q.from} — ${q.to}`), pick(QUIET[i % QUIET.length]));
       els.set('quiet:' + i, el);
       list.push({ kind: 'quiet', id: String(i), year: Math.round((q.from + q.to) / 2), h: 0, from: q.from, to: q.to });
     });

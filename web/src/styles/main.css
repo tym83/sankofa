@@ -7029,3 +7029,28 @@ html:lang(ru) .r-edge-head {
 .r-member:hover b {
   text-decoration: underline;
 }
+/* Phones: the title first, clear of the top bar, then the pinned instrument. */
+.l-head-phone {
+  display: none;
+}
+@media (max-width: 900px) {
+  .listen .l-wrap {
+    padding-top: calc(var(--nav-h) + 16px);
+  }
+  .l-head-phone {
+    display: block;
+    order: -2;
+    padding: 0 4px;
+  }
+  .l-head-phone h2 {
+    margin: 6px 0 0;
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: 1;
+  }
+  .l-head-wide {
+    display: none;
+  }
+  .listen .l-stage {
+    top: calc(var(--nav-h) + 4px);
+  }
+}

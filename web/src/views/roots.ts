@@ -229,7 +229,7 @@ export class Roots {
       const sub = groups.length > 1;
       groups.forEach((g, gi) => {
         const from = this.refName(n.ref);
-        const to = g.map((c) => this.inlineName(c.ref));
+        const to = g.map((c) => this.refName(c.ref));
         // A line into a museum card carries the card's years. No "N years back":
         // the data does not say whether a year is a birth or a band's founding,
         // and subtracting one from the other compares unlike things.
@@ -288,13 +288,6 @@ export class Roots {
   }
 
   /** A name as it reads inside a sentence: "the blues", «блюз». */
-  private inlineName(ref: string): string {
-    if (ref.startsWith('card:')) {
-      const c = this.app.set.get(ref.slice(5));
-      return c?.inline || c?.title || ref.slice(5);
-    }
-    return this.refName(ref);
-  }
 
   /** One step, told between the two names it joins. */
   private edgeEl(l: RootLink, from: string, to: string[], i: number, year?: string): HTMLElement {
@@ -376,7 +369,7 @@ export class Roots {
       h(
         'div',
         {},
-        h('small', {}, pick({ en: 'In the museum', ru: 'В музее' }), ...vtags(` · ${c.era ?? ''} · ${formatYears(c.years)}`)),
+        h('small', {}, ...vtags(`${pick({ en: 'In the museum', ru: 'В музее' })} · ${c.era ?? ''} · ${formatYears(c.years)}`)),
         h('b', {}, c.title),
         h('span', {}, c.wow),
       ),

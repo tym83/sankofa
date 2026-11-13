@@ -26,9 +26,10 @@ export function subtitle(s: Sub, l: Lang): string {
       return ru ? `Кластер зовёт ${s.drum} — ${answer}${quiet}` : `The cluster calls ${s.drum}: ${answer}${quiet}`;
     }
     case 'join':
-      return ru ? `Вступает новый голос: ${s.name} на барабане ${s.drum}` : `A new voice joins: ${s.name} on ${s.drum}`;
+      // Workload names are names, not words: the sentence says what they are.
+      return ru ? `Вступает новая программа ${s.name} на барабане ${s.drum}` : `A new program, ${s.name}, joins on ${s.drum}`;
     case 'leave':
-      return ru ? `${s.name} уходит` : `${s.name} leaves`;
+      return ru ? `Программа ${s.name} уходит` : `The ${s.name} program leaves`;
     case 'down':
       return ru ? `${s.drum} замолчал и объявлен выбывшим` : `${s.drum} has fallen silent and is declared down`;
     case 'stopped':

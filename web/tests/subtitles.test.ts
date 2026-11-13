@@ -7,8 +7,8 @@ describe('listening room subtitles', () => {
     expect(subtitle({ kind: 'lease', drum: 'Atsimevu' }, 'en')).toBe('Atsimevu checked in: alive');
     expect(subtitle({ kind: 'call', drum: 'Sogo', ready: 12, silent: 0 }, 'en')).toBe('The cluster calls Sogo: 12 programs answer');
     expect(subtitle({ kind: 'call', drum: 'Sogo', ready: 1, silent: 2 }, 'en')).toBe('The cluster calls Sogo: 1 program answers, 2 silent');
-    expect(subtitle({ kind: 'join', name: 'guest-drummer', drum: 'Sogo' }, 'en')).toBe('A new voice joins: guest-drummer on Sogo');
-    expect(subtitle({ kind: 'leave', name: 'guest-drummer', drum: 'Sogo' }, 'en')).toBe('guest-drummer leaves');
+    expect(subtitle({ kind: 'join', name: 'guest-drummer', drum: 'Sogo' }, 'en')).toBe('A new program, guest-drummer, joins on Sogo');
+    expect(subtitle({ kind: 'leave', name: 'guest-drummer', drum: 'Sogo' }, 'en')).toBe('The guest-drummer program leaves');
   });
 
   it('and in Russian with proper plurals', () => {
@@ -17,7 +17,7 @@ describe('listening room subtitles', () => {
     expect(subtitle({ kind: 'call', drum: 'Sogo', ready: 3, silent: 0 }, 'ru')).toBe('Кластер зовёт Sogo — 3 программы отвечают');
     expect(subtitle({ kind: 'call', drum: 'Sogo', ready: 12, silent: 21 }, 'ru')).toBe('Кластер зовёт Sogo — 12 программ отвечают, 21 программа молчит');
     expect(subtitle({ kind: 'call', drum: 'Sogo', ready: 0, silent: 4 }, 'ru')).toBe('Кластер зовёт Sogo — никто не отвечает');
-    expect(subtitle({ kind: 'join', name: 'guest-drummer', drum: 'Sogo' }, 'ru')).toBe('Вступает новый голос: guest-drummer на барабане Sogo');
+    expect(subtitle({ kind: 'join', name: 'guest-drummer', drum: 'Sogo' }, 'ru')).toBe('Вступает новая программа guest-drummer на барабане Sogo');
   });
 
   it('reads pod events from the stream', () => {

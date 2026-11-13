@@ -370,7 +370,7 @@ test('the listening room narrates leases, calls and a guest drummer joining and 
   await expect(page.locator('.l-badge')).toHaveText(/Live/);
   await expect(page.locator('.l-what')).toContainText('What you are hearing');
   await expect(page.locator('.l-subs')).toContainText('Atsimevu checked in: alive');
-  await expect(page.locator('.l-subs li').first()).toHaveText('A new voice joins: guest-drummer on Sogo');
+  await expect(page.locator('.l-subs li').first()).toHaveText('A new program, guest-drummer, joins on Sogo');
   await expect(page.locator('.l-pod.guest')).toHaveCount(1);
   await expect(page.locator('.l-next')).toContainText('guest-drummer');
 });
@@ -381,10 +381,10 @@ test('in the demo the guest drummer comes and goes, in Russian too', async ({ pa
   await page.clock.runFor(5000);
   await expect(page.locator('.l-badge')).toHaveText(/демо/);
   await page.clock.runFor(10000);
-  await expect(page.locator('.l-subs')).toContainText('Вступает новый голос: guest-drummer');
+  await expect(page.locator('.l-subs')).toContainText('Вступает новая программа guest-drummer');
   await expect(page.locator('.l-pod.guest')).toHaveCount(1);
   await page.clock.runFor(31000);
-  await expect(page.locator('.l-subs')).toContainText('guest-drummer уходит');
+  await expect(page.locator('.l-subs')).toContainText('Программа guest-drummer уходит');
   await expect(page.locator('.l-pod.guest')).toHaveCount(0);
 });
 
@@ -543,4 +543,11 @@ test('a band goes on through its member instead of a separate step', async ({ pa
   await page.goto('/#view=roots&artist=the-velvet-underground');
   await expect(page.locator('.r-member').first()).toContainText('Lou Reed, of The Velvet Underground');
   await expect(page.locator('.r-col')).not.toContainText('years back');
+});
+
+test('Russian descent speaks Russian in its empty stretches', async ({ page }) => {
+  await page.goto('/#view=descent&lang=ru');
+  const quiet = page.locator('.d-quiet').first();
+  await expect(quiet).toBeAttached();
+  await expect(quiet).not.toContainText(/archive|records|stretch|sources/i);
 });

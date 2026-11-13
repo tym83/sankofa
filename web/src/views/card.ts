@@ -102,7 +102,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       h(
         'div.notice.edition',
         {},
-        t('You followed a link to {title}. In your {edition} this place is held by another voice.', { title: ctx.asked.title, edition: edition(app.edition, 'prep') }) + ' ',
+        t('You followed a link to “{title}”. In your {edition} this place is held by another voice.', { title: ctx.asked.title, edition: edition(app.edition, 'prep') }) + ' ',
         t('This story in the other copy:') + ' ',
         pairLink(app, ctx.asked),
         '.',
