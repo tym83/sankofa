@@ -26,7 +26,15 @@ type Source struct {
 // Link is one documented step of influence. To is either another artist of
 // the collection ("root:<id>") or a museum card ("card:<id>").
 type Link struct {
-	To      string   `json:"to"`
+	To string `json:"to"`
+	// Kind of borrowing: influence (named as an influence), cover (recorded
+	// their song), sample (used a recording), member (played in the band),
+	// producer, scene (came out of the same scene), teacher.
+	Kind string `json:"kind,omitempty"`
+	// What exactly was borrowed, for covers and samples: the song or the
+	// recording and what of it (beat, handclaps, a riff).
+	What    string   `json:"what,omitempty"`
+	WhatRU  string   `json:"whatRu,omitempty"`
 	Claim   string   `json:"claim"`
 	Sources []Source `json:"sources"`
 	// Russian translation of the claim.
@@ -45,6 +53,8 @@ type Artist struct {
 	GenreRU string     `json:"genreRu,omitempty"`
 	Links   []Link     `json:"links"`
 }
+
+var validKinds = map[string]bool{"influence": true, "cover": true, "sample": true, "member": true, "producer": true, "scene": true, "teacher": true}
 
 // Set is a loaded collection.
 type Set struct {
@@ -102,6 +112,12 @@ func (s *Set) Validate(cards *card.Set) []error {
 			bad("needs at least one link")
 		}
 		for i, l := range a.Links {
+			if l.Kind != "" && !validKinds[l.Kind] {
+				bad("link %d: unknown kind %q", i, l.Kind)
+			}
+			if (l.Kind == "sample" || l.Kind == "cover") && l.What == "" {
+				bad("link %d: a %s must say what was taken", i, l.Kind)
+			}
 			if strings.TrimSpace(l.Claim) == "" {
 				bad("link %d has no claim", i)
 			}

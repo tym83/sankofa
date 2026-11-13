@@ -54,3 +54,10 @@ go run ./cmd/sankofa roots "Metallica" --content content/cards
 go run ./cmd/sankofa roots "Мумий Тролль" --lang ru --content content/cards
 go run ./cmd/sankofa content export content/cards -o /tmp/sankofa-content.json
 ```
+
+Kinds: `influence` (named as an influence), `cover` (recorded their song —
+say which in `what`), `sample` (used their recording — say which and what of
+it in `what`, e.g. "the handclaps and beat of 'X'"), `member` (played in the
+band), `producer`, `scene` (grew out of the same scene), `teacher`. Chains go
+deep: intermediate artists are their own files with their own roots, and a
+chain that reaches a genre card continues through that card's `roots`.
