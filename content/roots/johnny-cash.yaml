@@ -11,6 +11,25 @@ links:
     claim: "Johnny Cash recorded “Rock Island Line”, a song John Lomax first recorded in 1934 from a convict work group in an Arkansas prison."
     claimRu: "Джонни Кэш записал «Rock Island Line» — песню, которую Джон Ломакс впервые записал в 1934 году от рабочей бригады заключённых в арканзасской тюрьме."
     sources:
-      - {"title": "Johnny Cash: Rock Island Line — official recording catalogue", "url": "https://www.johnnycash.com/track/rock-island-line/"}
-      - {"title": "Library of Congress: From Mule-een to New Orleans — What Was Lead Belly Saying?", "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"}
-      - {"title": "CALS Encyclopedia of Arkansas: The Rock Island Line (song)", "url": "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"}
+      - title: "Johnny Cash: Rock Island Line — official recording catalogue"
+        url: "https://www.johnnycash.com/track/rock-island-line/"
+      - title: "Library of Congress: From Mule-een to New Orleans — What Was Lead Belly Saying?"
+        url: "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
+      - title: "CALS Encyclopedia of Arkansas: The Rock Island Line (song)"
+        url: "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"
+    kind: "cover"
+    what: "“Rock Island Line”: Cash’s performance of the song first documented by Lomax in an Arkansas prison in 1934."
+    whatRu: "«Rock Island Line»: исполнение Кэшем песни, впервые записанной Ломаксом в арканзасской тюрьме в 1934 году."
+  - to: "root:lonnie-donegan"
+    kind: "cover"
+    claim: "Johnny Cash’s “Rock Island Line” followed Lonnie Donegan’s hit rendition."
+    claimRu: "Джонни Кэш записал «Rock Island Line» вслед за ставшей хитом версией Лонни Донегана."
+    what: "“Rock Island Line”: Cash’s own performance of the traditional song, following Donegan’s hit version."
+    whatRu: "«Rock Island Line»: собственное исполнение традиционной песни Кэшем вслед за ставшей хитом версией Донегана."
+    sources:
+      - title: "Library of Congress: From Mule-een to New Orleans"
+        url: "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
+      - title: "Minnesota Public Radio: The Story of Rock Island Line"
+        url: "https://archive.mpr.org/stories/2002/10/11/the-story-of-rock-island-line"
+story: "Johnny Cash recorded “Rock Island Line” after Lonnie Donegan’s hit rendition. The song reaches back to a convict work group recorded by John Lomax in an Arkansas prison in 1934."
+storyRu: "Джонни Кэш записал «Rock Island Line» вслед за ставшей хитом версией Лонни Донегана. Песня восходит к рабочей бригаде заключённых, которую Джон Ломакс записал в арканзасской тюрьме в 1934 году."

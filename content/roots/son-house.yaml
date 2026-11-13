@@ -1,0 +1,20 @@
+id: "son-house"
+name: "Son House"
+nameRu: "Сон Хаус"
+aliases: ["сон хаус"]
+years: [1902, 1988]
+place: {"name": "Lyon, Mississippi", "lat": 34.2179, "lon": -90.5415}
+genre: "Delta blues"
+genreRu: "дельта-блюз"
+links:
+  - to: "card:blues"
+    kind: "scene"
+    claim: "Son House developed his guitar playing within the Mississippi Delta’s blues community."
+    claimRu: "Сон Хаус выработал свою гитарную манеру в блюзовой среде дельты Миссисипи."
+    sources:
+      - title: "National Park Service: Son House"
+        url: "https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm"
+      - title: "Mississippi Encyclopedia: Blues"
+        url: "https://mississippiencyclopedia.org/entries/blues/"
+story: "Son House developed as a guitarist in the Mississippi Delta. Its blues community was the setting in which his playing took shape."
+storyRu: "Сон Хаус становился гитаристом в дельте Миссисипи. Его манера складывалась в местной блюзовой среде."

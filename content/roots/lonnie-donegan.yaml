@@ -1,0 +1,31 @@
+id: "lonnie-donegan"
+name: "Lonnie Donegan"
+nameRu: "Лонни Донеган"
+aliases: ["лонни донеган"]
+years: [1931, 2002]
+place: {"name": "Glasgow", "lat": 55.8642, "lon": -4.2518}
+genre: "Skiffle"
+genreRu: "скиффл"
+links:
+  - to: "root:lead-belly"
+    kind: "influence"
+    claim: "Lead Belly’s repertoire was central to Lonnie Donegan’s musical formation."
+    claimRu: "Репертуар Ледбелли занимал центральное место в музыкальном становлении Лонни Донегана."
+    sources:
+      - title: "Library of Congress: Lead Belly — Introduction"
+        url: "https://guides.loc.gov/leadbelly-folklife"
+      - title: "Document Records: Lonnie Donegan interview, page 2"
+        url: "https://www.document-records.com/pdf/Lonnie%20Donegan%20Transcript%20Page%202%20PDF.pdf"
+  - to: "root:lead-belly"
+    kind: "cover"
+    claim: "Lonnie Donegan learned “Rock Island Line” from Lead Belly’s recording."
+    claimRu: "Лонни Донеган выучил «Rock Island Line» по записи Ледбелли."
+    what: "“Rock Island Line”: Donegan re-recorded the song from Lead Belly’s repertoire."
+    whatRu: "«Rock Island Line»: Донеган заново записал песню из репертуара Ледбелли."
+    sources:
+      - title: "Library of Congress: Lead Belly — Introduction"
+        url: "https://guides.loc.gov/leadbelly-folklife"
+      - title: "Document Records: Lonnie Donegan interview, page 2"
+        url: "https://www.document-records.com/pdf/Lonnie%20Donegan%20Transcript%20Page%202%20PDF.pdf"
+story: "Lead Belly’s repertoire was central to Lonnie Donegan’s musical formation. Donegan learned “Rock Island Line” from his recording and made his own version."
+storyRu: "Репертуар Ледбелли занимал центральное место в музыкальном становлении Лонни Донегана. Донеган выучил «Rock Island Line» по его записи и создал собственную версию."

@@ -1,0 +1,20 @@
+id: "lead-belly"
+name: "Lead Belly"
+nameRu: "Ледбелли"
+aliases: ["ледбелли"]
+years: [1888, 1949]
+place: {"name": "Mooringsport, Louisiana", "lat": 32.6876, "lon": -93.961}
+genre: "Folk / blues"
+genreRu: "фолк / блюз"
+links:
+  - to: "card:work-songs"
+    kind: "influence"
+    claim: "Lead Belly learned “Rock Island Line” from singers in Arkansas prisons and brought it into his own repertoire."
+    claimRu: "Ледбелли перенял «Rock Island Line» у певцов в арканзасских тюрьмах и включил её в свой репертуар."
+    sources:
+      - title: "Library of Congress: From Mule-een to New Orleans"
+        url: "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
+      - title: "Encyclopedia of Arkansas: The Rock Island Line"
+        url: "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"
+story: "Lead Belly heard “Rock Island Line” from singers in Arkansas prisons. He brought the song into his own repertoire."
+storyRu: "Ледбелли услышал «Rock Island Line» от певцов в арканзасских тюрьмах. Он включил песню в собственный репертуар."
