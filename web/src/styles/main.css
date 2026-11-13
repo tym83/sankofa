@@ -6381,3 +6381,96 @@ a.r-artist:hover {
     z-index: 1;
   }
 }
+
+/* ---------- roots: one column, paths that meet are drawn meeting ---------- */
+.r-col {
+  position: relative;
+  padding-left: 72px;
+  max-width: 660px;
+  margin: 0 auto;
+}
+.r-rail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+.r-rail path {
+  fill: none;
+  stroke: rgba(227, 171, 61, 0.75);
+  stroke-width: 2;
+}
+.r-rail path.lin {
+  stroke-dasharray: 3 5;
+}
+.r-rail path.k-sample { stroke: var(--k-sample); }
+.r-rail path.k-cover { stroke: var(--k-cover); }
+.r-rail path.k-member { stroke: var(--k-member); }
+.r-rail path.k-producer { stroke: var(--k-producer); }
+.r-rail path.k-teacher { stroke: var(--k-teacher); }
+.r-rail circle {
+  fill: #e3ab3d;
+  stroke: #0c0b12;
+  stroke-width: 2;
+}
+.r-rail circle.merge {
+  fill: #fff3d6;
+  stroke: #e3ab3d;
+}
+.r-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 6px;
+}
+.r-row > .r-artist,
+.r-row > .r-card {
+  width: 100% !important;
+  max-width: none;
+  min-width: 0;
+}
+.r-row .r-link {
+  width: 100%;
+  justify-items: start;
+}
+.r-row .r-line {
+  display: none;
+}
+.r-row .r-claim {
+  text-align: left;
+  max-width: none;
+  padding: 18px 0 12px;
+}
+.r-row .r-src {
+  justify-content: flex-start;
+}
+.r-from {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+.r-merge {
+  margin: 4px 0 0 !important;
+  font-style: italic;
+  font-size: 15px !important;
+  color: #fff3d6;
+}
+.r-row .r-card {
+  grid-template-columns: 120px minmax(0, 1fr);
+}
+@media (max-width: 720px) {
+  .r-col {
+    padding-left: 40px;
+  }
+  .r-rail {
+    transform: translateX(-26px);
+  }
+  .r-row .r-card {
+    grid-template-columns: 76px minmax(0, 1fr);
+  }
+}

@@ -214,3 +214,58 @@ export function longestRoots(all: Artist[], cards: Map<string, LineageCard>, n =
     });
   return rows.sort((x, y) => y.chain.length - x.chain.length || Number(!!y.borrowed) - Number(!!x.borrowed) || x.artist.name.localeCompare(y.artist.name)).slice(0, n);
 }
+
+export interface DagEdge {
+  from: string;
+  to: string;
+  link?: RootLink;
+  lineage?: boolean;
+}
+
+export interface Dag {
+  /** refs in reading order: each after everything that leads to it */
+  order: string[];
+  /** incoming edges per ref, in order of their sources */
+  incoming: Map<string, DagEdge[]>;
+  edges: DagEdge[];
+}
+
+/**
+ * The tree as a graph with shared vertices: every artist and card appears
+ * once, and paths that reach the same node converge on it. Order is by the
+ * longest way from the artist, so a node comes after all that leads to it.
+ */
+export function toDag(tree: TreeNode): Dag {
+  const edges: DagEdge[] = [];
+  const seenEdge = new Set<string>();
+  const firstSeen: string[] = [];
+  const walk = (n: TreeNode) => {
+    if (!firstSeen.includes(n.ref)) firstSeen.push(n.ref);
+    for (const c of n.children) {
+      const key = `${n.ref}>${c.ref}`;
+      if (!seenEdge.has(key)) {
+        seenEdge.add(key);
+        edges.push({ from: n.ref, to: c.ref, link: c.link, lineage: c.lineage });
+      }
+      walk(c);
+    }
+  };
+  walk(tree);
+  const depth = new Map<string, number>([[tree.ref, 0]]);
+  for (let pass = 0; pass < firstSeen.length; pass++) {
+    let changed = false;
+    for (const e of edges) {
+      const d = (depth.get(e.from) ?? 0) + 1;
+      if ((depth.get(e.to) ?? -1) < d) {
+        depth.set(e.to, d);
+        changed = true;
+      }
+    }
+    if (!changed) break;
+  }
+  const order = [...firstSeen].sort((a, b) => depth.get(a)! - depth.get(b)! || firstSeen.indexOf(a) - firstSeen.indexOf(b));
+  const incoming = new Map<string, DagEdge[]>();
+  for (const e of edges) incoming.set(e.to, [...(incoming.get(e.to) ?? []), e]);
+  for (const list of incoming.values()) list.sort((x, y) => order.indexOf(x.from) - order.indexOf(y.from));
+  return { order, incoming, edges };
+}

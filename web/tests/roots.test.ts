@@ -90,3 +90,22 @@ describe('deep roots', () => {
     expect(top[0].chain).toHaveLength(6);
   });
 });
+
+import { toDag } from '../src/lib/roots';
+describe('roots as a graph', () => {
+  const cards = new Map([
+    ['rock-n-roll', { id: 'rock-n-roll', roots: ['rhythm-and-blues', 'blues'] }],
+    ['rhythm-and-blues', { id: 'rhythm-and-blues', roots: ['blues'] }],
+    ['blues', { id: 'blues', roots: ['work-songs'] }],
+    ['work-songs', { id: 'work-songs' }],
+  ]);
+  it('merges shared nodes and orders each after all that leads to it', () => {
+    const d = toDag(extendLineage(buildTree(byId.get('oasis')!, byId), cards));
+    expect(d.order.filter((r) => r === 'card:blues')).toHaveLength(1);
+    expect(d.order.filter((r) => r === 'card:work-songs')).toHaveLength(1);
+    expect(d.order.indexOf('card:blues')).toBeGreaterThan(d.order.indexOf('card:rhythm-and-blues'));
+    expect(d.order[d.order.length - 1]).toBe('card:work-songs');
+    // the blues is reached two ways: from rock and roll and from rhythm and blues
+    expect(d.incoming.get('card:blues')!.map((e) => e.from).sort()).toEqual(['card:rhythm-and-blues', 'card:rock-n-roll']);
+  });
+});
