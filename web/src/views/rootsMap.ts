@@ -30,6 +30,7 @@ export class RootsMap {
   private pinned?: string;
   private built = false;
   private phone = false;
+  private early = 0.28;
   onClose?: () => void;
 
   constructor(
@@ -110,8 +111,11 @@ export class RootsMap {
     this.phone = window.innerWidth < 760;
     const W = this.stage.clientWidth || window.innerWidth;
     const years = [Math.min(...g.nodes.map((n) => n.year)) - 10, Math.min(new Date().getFullYear(), Math.max(...g.nodes.map((n) => n.year)) + 6)] as [number, number];
-    const H = this.phone ? Math.max(1600, g.nodes.length * 30) : Math.max(this.stage.clientHeight, 700) * 1.25;
-    layout(g, W, H, years);
+    // Phones: a map under two screens tall, the empty 1800s squeezed, so the
+    // first screen holds the roots and the artists who grew straight from them.
+    const H = this.phone ? Math.max(1000, (this.stage.clientHeight || window.innerHeight * 0.7) * 1.7) : Math.max(this.stage.clientHeight, 700) * 1.25;
+    this.early = this.phone ? 0.14 : 0.28;
+    layout(g, W, H, years, this.early);
     this.svg.setAttribute('viewBox', `0 0 ${W} ${this.phone ? H : this.stage.clientHeight || H}`);
     // On phones keep labels clear of both edges.
     if (this.phone) {
@@ -159,10 +163,18 @@ export class RootsMap {
     }
     this.placeLabels();
     this.showInfo();
-    // Phones open on the roots at the bottom of the tall map, where every chain ends.
+    // Phones open on the roots at the bottom, with the artists above them, and
+    // say that later artists are further up.
     if (this.phone) {
       const deepest = Math.max(...g.nodes.map((n) => n.y!));
-      requestAnimationFrame(() => (this.stage.scrollTop = Math.max(0, deepest + 90 - this.stage.clientHeight)));
+      requestAnimationFrame(() => {
+        this.stage.scrollTop = Math.max(0, deepest + 90 - this.stage.clientHeight);
+        this.placeLabels();
+        const hint = h('div.rm-scroll-hint', { 'aria-hidden': 'true' }, h('span', {}, pick({ en: '↑ Later artists are further up', ru: '↑ Выше — более поздние исполнители' })));
+        this.stage.prepend(hint);
+        // Armed after the opening jump, so only the reader's own scroll hides it.
+        setTimeout(() => this.stage.addEventListener('scroll', () => hint.classList.add('gone'), { once: true, passive: true }), 400);
+      });
     }
   }
 
@@ -173,7 +185,7 @@ export class RootsMap {
     const axis = document.createElementNS(NS, 'g');
     axis.setAttribute('class', 'rm-axis');
     for (let y = Math.ceil(years[0] / 50) * 50; y <= years[1]; y += y < 1900 ? 50 : 25) {
-      const py = yearY(y, H, years);
+      const py = yearY(y, H, years, this.early);
       axis.innerHTML += `<line x1="0" x2="${W}" y1="${py}" y2="${py}"/><text x="8" y="${py - 4}">${y}</text>`;
     }
     // A glow under the roots.
@@ -271,6 +283,14 @@ export class RootsMap {
     if (!this.phone) this.gAll.style.setProperty('--lk', String(1 / Math.max(0.5, k)));
     const order = [...g.nodes].sort((a, b) => Number(priority?.has(b.id) ?? 0) - Number(priority?.has(a.id) ?? 0) || Number(b.card) - Number(a.card) || b.support - a.support);
     const budget = this.phone ? 70 : Math.round(46 * Math.max(1, k));
+    // On a phone with nothing lit, name only the roots and the six best-known
+    // artists on screen; tapping lights and names a whole chain.
+    const view = this.stage.getBoundingClientRect();
+    const onScreen = (n: GNode) => {
+      const r = this.nodeEls.get(n.id)!.getBoundingClientRect();
+      return r.top >= view.top && r.bottom <= view.bottom;
+    };
+    const famous = this.phone && !priority ? new Set(order.filter((n) => !n.card && onScreen(n)).slice(0, 6).map((n) => n.id)) : undefined;
     // Show every candidate, measure where it really lands, keep those that fit.
     const lbls = order.map((n) => ({ n, el: this.nodeEls.get(n.id)!.querySelector('text') as SVGTextElement }));
     lbls.forEach(({ el }) => el.classList.remove('hide'));
@@ -280,7 +300,7 @@ export class RootsMap {
     const hits = (r: DOMRect) => boxes.some((b) => r.left < b.right + 3 && r.right > b.left - 3 && r.top < b.bottom + 1 && r.bottom > b.top - 1);
     lbls.forEach(({ n, el }, i) => {
       let r = rects[i];
-      const want = priority ? priority.has(n.id) || n.card : true;
+      const want = priority ? priority.has(n.id) || n.card : famous ? famous.has(n.id) || n.card : true;
       // Every root keeps its name: above its dot, or below it if that is taken.
       if (n.card) {
         const rr = radius(n);

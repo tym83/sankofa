@@ -4,7 +4,7 @@ import type { App } from '../app';
 import { placeName, buildTree, chainLine, deepest, endCards, extendLineage, groupChildren, KIND_LABEL, quotes, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
 import { vtags, copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
 import { formatYears } from '../lib/cards';
-import { count, lang, pick, t } from '../lib/i18n';
+import { lang, pick, t } from '../lib/i18n';
 import { mediaSrc } from '../lib/media';
 import { eraColor } from '../lib/atlasModel';
 
@@ -203,34 +203,40 @@ export class Roots {
     const tree = extendLineage(buildTree(a, this.byId), this.lineage);
     const ends = endCards(tree);
     let step = 0;
-    const yearOf = (ref: string) => (ref.startsWith('card:') ? this.app.set.get(ref.slice(5))?.years[0] : this.byId.get(ref)?.years[0]);
     // A chain of chains: each step is told on the connector between exactly
     // the two names it joins; where an artist has several roots, each is its
     // own indented sub-chain; a node met before is a short pointer back.
     const seen = new Set<string>();
-    const render = (n: TreeNode, isRoot: boolean): HTMLElement[] => {
+    const render = (n: TreeNode, isRoot: boolean, band?: string): HTMLElement[] => {
       const out: HTMLElement[] = [];
       if (seen.has(n.ref)) {
         out.push(h('p.r-again', {}, pick({ en: `${this.refName(n.ref)}: as above`, ru: `${this.refName(n.ref)} — см. выше` })));
         return out;
       }
       seen.add(n.ref);
-      const el = n.ref.startsWith('card:') ? this.cardEl(n.ref.slice(5), step++, !!n.lineage) : this.artistEl(n.ref, isRoot, step++);
+      // A band's member is not a step of its own: the band's chain goes on
+      // through the member's roots ("Lou Reed, of The Velvet Underground").
+      const el = band
+        ? this.memberEl(n.ref, band, step++)
+        : n.ref.startsWith('card:')
+          ? this.cardEl(n.ref.slice(5), step++, !!n.lineage)
+          : this.artistEl(n.ref, isRoot, step++);
       out.push(el);
-      const groups = groupChildren(n);
+      const all = groupChildren(n);
+      const members = all.filter((g) => g.length === 1 && g[0].link?.kind === 'member' && !g[0].ref.startsWith('card:'));
+      for (const g of members) out.push(...render(g[0], false, n.ref));
+      const groups = all.filter((g) => !members.includes(g));
       const sub = groups.length > 1;
       groups.forEach((g, gi) => {
         const from = this.refName(n.ref);
         const to = g.map((c) => this.inlineName(c.ref));
-        const yFrom = yearOf(n.ref);
-        const yTo = yearOf(g[0].ref);
-        // "N years back" only between two artists; an edge into a museum card
-        // carries the card's own years instead.
-        const intoCard = g[0].ref.startsWith('card:') || n.ref.startsWith('card:');
+        // A line into a museum card carries the card's years. No "N years back":
+        // the data does not say whether a year is a birth or a band's founding,
+        // and subtracting one from the other compares unlike things.
         const target = g[0].ref.startsWith('card:') ? this.app.set.get(g[0].ref.slice(5)) : undefined;
-        const gap = !intoCard && yFrom !== undefined && yTo !== undefined && yFrom > yTo ? yFrom - yTo : 0;
-        const when = intoCard ? (target ? formatYears(target.years) : undefined) : yTo;
-        const edge = g[0].lineage ? this.lineageEdge(from, to, step++, gap, when) : this.edgeEl(g[0].link!, from, to, step++, gap, when);
+        // An artist's own years are on its plate right below.
+        const when = target ? formatYears(target.years) : undefined;
+        const edge = g[0].lineage ? this.lineageEdge(from, to, step++, when) : this.edgeEl(g[0].link!, from, to, step++, when);
         const body = [edge, ...g.flatMap((c) => render(c, false))];
         out.push(sub ? h('div.r-sub', { style: `--b:${gi}` }, h('span.r-branch-no', {}, pick({ en: `root ${gi + 1} of ${groups.length}`, ru: `корень ${gi + 1} из ${groups.length}` })), ...body) : h('div.r-run', {}, ...body));
       });
@@ -291,7 +297,7 @@ export class Roots {
   }
 
   /** One step, told between the two names it joins. */
-  private edgeEl(l: RootLink, from: string, to: string[], i: number, gap: number, year?: number | string): HTMLElement {
+  private edgeEl(l: RootLink, from: string, to: string[], i: number, year?: string): HTMLElement {
     const L = lang();
     const kind = l.kind ? KIND_LABEL[l.kind] : undefined;
     const what = quotes((L === 'ru' && l.whatRu) || l.what || '', L);
@@ -302,22 +308,37 @@ export class Roots {
       h('div.r-edge-head', {}, h('b', {}, from), h('span.r-arrow', { 'aria-hidden': 'true' }, '→'), h('b', {}, to.join(pick({ en: ' and ', ru: ' и ' }))), kind ? h('span.r-kind', {}, h('i', { 'aria-hidden': 'true' }, kind.glyph), pick(kind)) : null),
       // One sentence per step: what was borrowed when it is named, else the claim.
       h('p.r-say', { title: what ? claim : undefined }, what || claim),
-      h('div.r-edge-foot', {}, this.gapEl(gap, year), h('ul.r-src', {}, l.sources.map((s) => h('li', {}, h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title))))),
+      h('div.r-edge-foot', {}, this.gapEl(year), h('ul.r-src', {}, l.sources.map((s) => h('li', {}, h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title))))),
     );
   }
 
-  private lineageEdge(from: string, to: string[], i: number, gap: number, year?: number | string): HTMLElement {
+  private lineageEdge(from: string, to: string[], i: number, year?: string): HTMLElement {
     return h(
       'div.r-edge.r-lin.r-anim',
       { style: `--i:${i}` },
       h('div.r-edge-head', {}, h('b', {}, from), h('span.r-arrow', { 'aria-hidden': 'true' }, '→'), h('b', {}, to.join(pick({ en: ' and ', ru: ' и ' }))), h('span.r-kind', {}, h('i', { 'aria-hidden': 'true' }, '↓'), pick({ en: 'grew out of', ru: 'выросло из' }))),
-      h('div.r-edge-foot', {}, this.gapEl(gap, year)),
+      h('div.r-edge-foot', {}, this.gapEl(year)),
     );
   }
 
   private endYears(ref: string): string {
     const c = ref.startsWith('card:') ? this.app.set.get(ref.slice(5)) : undefined;
     return c ? `, ${c.places[0].name}, ${formatYears(c.years)}` : '';
+  }
+
+  /** A member through whom a band's chain continues. */
+  private memberEl(id: string, band: string, i: number): HTMLElement {
+    const a = this.byId.get(id);
+    const b = this.byId.get(band);
+    const name = a ? this.nameOf(a) : id;
+    const of = b ? this.nameOf(b) : band;
+    return h(
+      'a.r-member.r-anim',
+      { href: `#view=roots&artist=${id}`, 'data-artist': id, style: `--i:${i}`, title: pick({ en: 'Follow this artist’s own roots', ru: 'Проследить корни этого исполнителя' }) },
+      h('b', {}, name),
+      pick({ en: `, of ${of}`, ru: ` из ${of}` }),
+      a ? h('small', {}, ` · ${formatYears(a.years)}`) : null,
+    );
   }
 
   private artistEl(id: string, isRoot: boolean, i: number): HTMLElement {
@@ -339,10 +360,9 @@ export class Roots {
       : h('a.r-artist.r-anim', { href: `#view=roots&artist=${id}`, 'data-artist': id, style, title: pick({ en: 'Follow this artist’s own roots', ru: 'Проследить корни этого исполнителя' }) }, ...body);
   }
 
-  /** The time between two steps, written on the line: '← 13 years · 1968'. */
-  private gapEl(gap: number, year?: number | string): HTMLElement | null {
-    if (!year) return null;
-    return h('span.r-gap', {}, gap ? pick({ en: `${gap} ${gap === 1 ? 'year' : 'years'} back · ${year}`, ru: `на ${count(gap, 'year', 'ru')} раньше · ${year}` }) : String(year));
+  /** The years of the museum card a line leads into. */
+  private gapEl(year?: string): HTMLElement | null {
+    return year ? h('span.r-gap', {}, year) : null;
   }
 
   private cardEl(id: string, i: number, deep = false): HTMLElement {

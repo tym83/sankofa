@@ -109,16 +109,17 @@ export function headline(g: Graph): { total: number; root?: GNode; count: number
  * bottom), links pull together, nodes keep apart. `h` grows with the years.
  */
 /** Height for a year: the last century gets most of it, where the artists are. */
-export function yearY(year: number, h: number, years: [number, number]): number {
+export function yearY(year: number, h: number, years: [number, number], early = 0.28): number {
   const [y0, y1] = years;
   const split = Math.min(y1 - 1, Math.max(y0 + 1, 1900));
   const t = Math.max(y0, Math.min(y1, year));
-  const f = t <= split ? ((t - y0) / (split - y0)) * 0.28 : 0.28 + ((t - split) / (y1 - split)) * 0.72;
+  // Before 1900 there are only roots, so that century takes `early` of the height.
+  const f = t <= split ? ((t - y0) / (split - y0)) * early : early + ((t - split) / (y1 - split)) * (1 - early);
   return h - 50 - f * (h - 100);
 }
 
-export function layout(g: Graph, w: number, h: number, years: [number, number]): void {
-  const yOf = (year: number) => yearY(year, h, years);
+export function layout(g: Graph, w: number, h: number, years: [number, number], early = 0.28): void {
+  const yOf = (year: number) => yearY(year, h, years, early);
   // Artists start spread across the width by their family: the root card
   // their first link reaches, so related lines grow side by side.
   const fam = new Map<string, number>();
