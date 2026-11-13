@@ -19,6 +19,10 @@ export function quotes(text: string, lang: string): string {
       // apostrophes inside or at the end of a word: Sony’r, don’t, Jacobs’
       .replace(/(\p{L})'(?=\p{L})/gu, '$1’')
       .replace(/(\p{L}s)'(?=\s|[.,;:!?)]|$)/gu, '$1’')
+      // a mark at the very start of a text node that follows a word or a link
+      // ("Till’s", "Thornton’s", "” said") closes rather than opens
+      .replace(/^'(?=s\b|\s|[.,;:!?)]|$)/u, '’')
+      .replace(/^"(?=\s|[.,;:!?)]|$)/u, ru ? '»' : '”')
       // double quotes: opening after start, space or bracket; closing otherwise
       .replace(/(^|[\s(\[—–-])"/gu, `$1${ru ? '«' : '“'}`)
       .replace(/"/g, ru ? '»' : '”')

@@ -71,3 +71,13 @@ describe('credits in Russian', () => {
     expect(localizeCredit('Public domain', 'en')).toBe('Public domain');
   });
 });
+
+import { quotes } from '../src/lib/typo';
+describe('typographer quotes', () => {
+  it('curls quotes and apostrophes, closing one that starts a node after a link', () => {
+    expect(quotes(`Le Sony'r Ra said "go"`, 'en')).toBe('Le Sony’r Ra said “go”');
+    expect(quotes(`'s funeral`, 'en')).toBe('’s funeral');
+    expect(quotes(`" said Ida`, 'en')).toBe('” said Ida');
+    expect(quotes(`он сказал "иди"`, 'ru')).toBe('он сказал «иди»');
+  });
+});

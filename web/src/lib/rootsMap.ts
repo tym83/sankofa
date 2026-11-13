@@ -151,8 +151,11 @@ export function layout(g: Graph, w: number, h: number, years: [number, number], 
     .force('collide', forceCollide<GNode>((n) => radius(n) + (n.card ? 26 : 14)))
     .stop();
   for (let i = 0; i < 300; i++) sim.tick();
-  // Keep room for labels at both edges.
-  for (const n of g.nodes) n.x = Math.max(70, Math.min(w - 70, n.x ?? w / 2));
+  // Use the whole width: stretch the settled layout edge to edge, keeping
+  // room for labels at both sides.
+  const xs = g.nodes.map((n) => n.x ?? w / 2);
+  const [lo, hi] = [Math.min(...xs), Math.max(...xs)];
+  for (const n of g.nodes) n.x = hi > lo ? 70 + (((n.x ?? w / 2) - lo) / (hi - lo)) * (w - 140) : w / 2;
 }
 
 export function radius(n: GNode): number {

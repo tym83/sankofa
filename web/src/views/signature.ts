@@ -45,16 +45,41 @@ export function qualifierOf(text: string): keyof typeof QUALIFIERS | undefined {
   return m ? (m[1].toLowerCase() as keyof typeof QUALIFIERS) : undefined;
 }
 
-export function signature(app: App, chapterId: string, cards: Card[], fallback?: Card): HTMLElement | null {
+/** Content words of a text, for telling whether one line repeats another. */
+function words(text: string): Set<string> {
+  return new Set((text.toLowerCase().match(/[\p{L}\d][\p{L}\d’'-]{3,}/gu) ?? []).map((w) => w.replace(/[’']s$/, '')));
+}
+
+/** True when most of the line's words already stand in the nearby text. */
+export function repeats(line: string, near: string): boolean {
+  const w = words(line);
+  if (!w.size) return false;
+  const n = words(near);
+  let hit = 0;
+  w.forEach((x) => n.has(x) && hit++);
+  return hit / w.size >= 0.5;
+}
+
+/** The card's line that the nearby steps have not already said, or ''. */
+export function freshLine(c: Card, near: string): string {
+  const candidates = [c.wow, ...c.body.split(/(?<=[.!?])\s+/).map((x) => x.replace(/\[\[[^|\]]*\|?([^\]]*)\]\]/g, '$1').trim())].filter((x) => x.length > 30 && x.length < 220);
+  return candidates.find((x) => !repeats(x, near)) ?? '';
+}
+
+export function signature(app: App, chapterId: string, cards: Card[], fallback?: Card, near = ''): HTMLElement | null {
   const plan = PLAN[chapterId];
-  const c = (plan && cards.find((x) => x.id === plan.card)) ?? fallback;
-  if (!c) return null;
+  const c0 = (plan && cards.find((x) => x.id === plan.card)) ?? fallback;
+  if (!c0) return null;
+  // An interlude never repeats a fact the step beside it has just told.
+  const line = freshLine(c0, near);
+  const c = { ...c0, wow: line };
   const img = c.media?.find((m) => m.type === 'image');
   let kind: Kind = plan && plan.card === c.id ? plan.kind : 'quote';
   if ((kind === 'plate' || kind === 'insert') && !img) kind = 'quote';
   const raw = app.raw(c.id) ?? c;
   const n = kind === 'counter' ? firstBigNumber(`${raw.wow} ${raw.body}`) : undefined;
-  if (kind === 'counter' && !n) kind = 'quote';
+  if (kind === 'counter' && (!n || near.replace(/[\s,\u00a0\u202f]/g, '').includes(String(n)))) kind = 'quote';
+  if (kind === 'quote' && !line) return null;
   const link = h('a.btn.attr', { href: `#focus=${c.id}`, 'data-card': c.id }, kindLink(c));
   const era = `--era:var(--${chapterId})`;
 
@@ -137,7 +162,20 @@ function insert(app: App, c: Card, link: HTMLElement, era: string): HTMLElement 
   const el = h(
     'section.sig.sig-insert',
     { style: era },
-    h('div.sig-sticky', {}, h('div.sig-stage', {}, cart, slot, done), h('div.sig-cap', {}, h('b', {}, c.title), h('p', {}, c.wow), link, h('p.credit', {}, m.caption ? m.caption + ' · ' : '', m.credit, ' · ', m.license))),
+    h(
+      'div.sig-sticky',
+      {},
+      h('div.sig-stage', {}, cart, slot, done),
+      h(
+        'div.sig-cap',
+        {},
+        h('b', {}, c.title),
+        c.wow ? h('p', {}, c.wow) : null,
+        h('p.sig-hint', {}, pick({ en: 'Scroll on to slide the cartridge into the console; when it seats, the console reads READY.', ru: 'Прокручивайте дальше — картридж войдёт в приставку, а когда сядет на место, она покажет ГОТОВО.' })),
+        link,
+        h('p.credit', {}, m.caption ? m.caption + ' · ' : '', m.credit, ' · ', m.license),
+      ),
+    ),
   );
   if (!reducedMotion()) {
     let raf = 0;

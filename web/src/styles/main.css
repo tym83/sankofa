@@ -7313,3 +7313,99 @@ html:lang(ru) .xref {
   height: 30px;
   font-size: 18px;
 }
+/* Lives in the descent: a name never runs past its own bar into a neighbour's. */
+.d-life span {
+  max-height: calc(100% - 14px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* The descent's introduction speaks in one face. */
+.d-intro .d-count,
+.d-intro .d-why {
+  font-family: var(--font-display) !important;
+  font-size: 16px !important;
+  margin-top: 14px !important;
+  max-width: 42ch;
+}
+/* Phones: the music map's canvas pans, so its labels can be read at full size. */
+@media (max-width: 760px) {
+  .rm-node .lbl {
+    font-size: 13.5px;
+  }
+  .rm-node.card .lbl {
+    font-size: 16px;
+  }
+}
+/* Atlas: nothing smaller than 12px on screen (its timeline is drawn wide and scaled down). */
+.atlas .tl text,
+.atlas .tl .life text {
+  font-size: 14px;
+}
+.geo .region text,
+.geo .route-label tspan.sub {
+  font-size: 12px;
+}
+.atlas .geo .pt .lbl {
+  font-size: 12.5px;
+}
+/* Listening room: the explanation is editorial text, and on wide screens the
+   instrument stays in view beside it, larger, filling its column. */
+.listen .l-lede {
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(242, 233, 216, 0.82);
+  max-width: 52ch;
+}
+@media (min-width: 901px) {
+  .listen .l-wrap {
+    align-items: start;
+  }
+  .listen .l-stage {
+    position: sticky;
+    top: calc(var(--nav-h) + 12px);
+    align-self: start;
+  }
+  .listen .l-ring {
+    width: min(100%, 720px);
+    max-height: calc(100svh - var(--nav-h) - 260px);
+  }
+}
+/* The chapter tag sits inside the bar: on hover it shows, and the active
+   chapter's tag lives in the bar itself, never under it over the steps. */
+.progress a span {
+  top: -2px;
+  font-size: 9.5px;
+}
+.progress a.on span {
+  opacity: 0;
+}
+.progress a:hover span {
+  opacity: 0.9;
+}
+/* Chapter heroes: the kicker and title stay readable over busy photographs. */
+.hero .hero-text::before {
+  content: '';
+  position: absolute;
+  inset: -40px -60px -30px -60px;
+  z-index: -1;
+  background: radial-gradient(ellipse at 30% 70%, rgba(10, 9, 16, 0.78), rgba(10, 9, 16, 0) 70%);
+  pointer-events: none;
+}
+.hero .release .kicker {
+  text-shadow: 0 1px 10px rgba(10, 9, 16, 0.9), 0 0 2px rgba(10, 9, 16, 0.9);
+}
+/* The console set piece says what it does. */
+.sig-hint {
+  margin: 10px 0 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: rgba(242, 233, 216, 0.7);
+  transition: opacity 0.4s;
+}
+.sig-insert.in .sig-hint {
+  opacity: 0;
+}
+.hero .hero-text {
+  isolation: isolate;
+}

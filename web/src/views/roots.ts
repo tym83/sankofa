@@ -268,7 +268,7 @@ export class Roots {
         'div.r-tree',
         { 'data-root': id },
         story ? h('p.r-story', {}, story) : null,
-        h('p.r-count', {}, pick({ en: `${a.paths.length} ${a.paths.length === 1 ? 'chain leads' : 'chains lead'} back to ${ends.length} ${ends.length === 1 ? 'card' : 'cards'} of the museum`, ru: `${count(a.paths.length, 'chain', 'ru')} ${a.paths.length % 10 === 1 && a.paths.length % 100 !== 11 ? 'ведёт' : 'ведут'} к карточкам музея: ${ends.length}` })),
+        h('p.r-count', {}, pick({ en: `${a.paths.length} ${a.paths.length === 1 ? 'chain leads' : 'chains lead'} back to ${ends.length} ${ends.length === 1 ? 'card' : 'cards'} of the museum`, ru: `${count(a.paths.length, 'chain', 'ru')} ${a.paths.length % 10 === 1 && a.paths.length % 100 !== 11 ? 'ведёт' : 'ведут'} к ${toCardsRu(ends.length)} музея` })),
         column,
       ),
       close,
@@ -384,4 +384,11 @@ function searchIcon(): SVGSVGElement {
 /** A group, not a person: one year (founding) and a name that is not a person's. */
 export function isGroup(a: Pick<Artist, 'years' | 'name'>): boolean {
   return a.years.length === 1 && (/^the\s/i.test(a.name) || !/^[A-Z][a-z]+\s[A-Z][a-z]+$/.test(a.name));
+}
+
+/** «к трём карточкам», «к одной карточке»: the dative, in words up to ten. */
+function toCardsRu(n: number): string {
+  const words = ['', 'одной', 'двум', 'трём', 'четырём', 'пяти', 'шести', 'семи', 'восьми', 'девяти', 'десяти'];
+  const noun = n % 10 === 1 && n % 100 !== 11 ? 'карточке' : 'карточкам';
+  return `${words[n] ?? n} ${noun}`;
 }

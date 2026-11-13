@@ -55,6 +55,8 @@ export function pluralRu(n: number, forms: [string, string, string]): string {
 
 const NOUNS: Record<string, { en: [string, string]; ru: [string, string, string] }> = {
   card: { en: ['card', 'cards'], ru: ['карточка', 'карточки', 'карточек'] },
+  // after «из»: из 1 карточки, из 99 карточек
+  cardOf: { en: ['card', 'cards'], ru: ['карточки', 'карточек', 'карточек'] },
   chain: { en: ['chain', 'chains'], ru: ['цепочка', 'цепочки', 'цепочек'] },
   year: { en: ['year', 'years'], ru: ['год', 'года', 'лет'] },
   node: { en: ['node', 'nodes'], ru: ['узел', 'узла', 'узлов'] },
@@ -165,8 +167,6 @@ export const RU: Record<string, string> = {
   'Eight releases': 'Восемь релизов',
   'Eight chapters': 'Восемь глав',
   release: 'релиз',
-  'Each era ships as a release of the distribution, from v0 to v7. Begin anywhere; every card leads somewhere else.':
-    'Каждая эпоха — глава и одновременно релиз дистрибутива, от v0 до v7. Начните откуда угодно: каждая карточка ведёт дальше.',
   'The places of this chapter · map data: Natural Earth, public domain': 'Места этой главы · картографические данные: Natural Earth, общественное достояние',
   'In {chapter}: {cards}': 'В {chapter}: {cards}',
   'See all {cards}': 'Показать все: {cards}',
@@ -180,12 +180,9 @@ export const RU: Record<string, string> = {
 
   // card panel
   'Contested.': 'Об этом спорят.',
-  'You followed a link to “{title}”. In your {edition} this place is held by another voice.':
-    'Вы шли по ссылке к странице «{title}». В вашем {edition} на этом месте звучит другой голос.',
   'From the other copy.': 'Из другого экземпляра.',
   "You hold the {edition}; this page reached you through another reader's path.": 'У вас в руках {edition}; эта страница пришла к вам по пути другого читателя.',
   'Its counterpart in your copy is': 'Её пара в вашем экземпляре —',
-  'This story in the other copy:': 'Эта история в другом экземпляре:',
   'Only in the {edition}.': 'Только в {edition}.',
   'Go further': 'Куда смотреть дальше',
   'Cards that lead here': 'Сюда ведут',

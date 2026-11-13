@@ -524,10 +524,11 @@ test('the copy switch flips a paired card at once, and the pairs list links both
   });
   await page.goto('/#focus=douglass-covey');
   await expect(page.locator('.card h2, #card-title').first()).toContainText('Harriet Jacobs');
-  await expect(page.locator('.notice.edition')).toContainText('This story in the other copy');
+  await expect(page.locator('.notice.edition')).toContainText('This story belongs to the other copy');
   await page.goto('/');
   const note = page.locator('.opener .ed-note:visible');
-  await expect(note).toContainText('Yours is the female copy: instead of Frederick Douglass you will meet Harriet Jacobs');
+  await expect(note).toContainText(/In\sthe\sfemale\scopy\syou\sread\s[^;]*Harriet\sJacobs/);
+  await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy/);
   // The pairs come from the data: count them there.
   const pairs = await page.evaluate(async () => {
     const d = await (await fetch('data/cards.json')).json();
@@ -538,7 +539,7 @@ test('the copy switch flips a paired card at once, and the pairs list links both
   await expect(note.locator('.ed-pairs li')).toHaveCount(pairs);
   await expect(note).toContainText(`They differ in ${words[pairs]} places`);
   await note.getByRole('button', { name: 'Open the male copy' }).click();
-  await expect(page.locator('.opener .ed-note:visible')).toContainText('Yours is the male copy: instead of Harriet Jacobs you will meet Frederick Douglass');
+  await expect(page.locator('.opener .ed-note:visible')).toContainText(/Yours\sis\sthe\smale\scopy/);
   await page.goto('/#focus=jacobs-garret');
   await expect(page.locator('.card h2, #card-title').first()).toContainText('Frederick Douglass');
 });
@@ -598,5 +599,31 @@ test('a first visit on a phone names the top-bar icons once', async ({ browser, 
   await strip.getByRole('button').click();
   await expect(strip).toHaveCount(0);
   await page.reload();
+  await expect(page.locator('.nav-legend')).toHaveCount(0);
+});
+
+test('switching language keeps the reader in the same chapter', async ({ page }) => {
+  await page.goto('/#ch=v4');
+  await page.waitForTimeout(800);
+  await page.locator('#ch-v4 .step').nth(2).evaluate((e) => e.scrollIntoView({ block: 'center' }));
+  await page.waitForTimeout(500);
+  await page.locator('[data-lang-switch]').click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
+  const mid = () =>
+    page.evaluate(() => {
+      const y = innerHeight / 2;
+      return [...document.querySelectorAll<HTMLElement>('article.chapter')].find((a) => {
+        const r = a.getBoundingClientRect();
+        return r.top <= y && r.bottom >= y;
+      })?.dataset.chapter;
+    });
+  await expect.poll(mid, { timeout: 6000 }).toBe('v4');
+});
+
+test('the phone icon legend never covers an open view', async ({ browser, baseURL }, info) => {
+  test.skip(info.project.name !== 'mobile', 'phones only');
+  const page = await (await browser.newContext({ ...info.project.use, baseURL })).newPage();
+  await page.goto('/#view=descent');
+  await expect(page.locator('.descent.open')).toBeVisible();
   await expect(page.locator('.nav-legend')).toHaveCount(0);
 });

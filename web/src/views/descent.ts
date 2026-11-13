@@ -3,7 +3,7 @@
 // era, cards surface at their year, lives run alongside as bars and genres
 // branch from their roots.
 import type { App } from '../app';
-import type { Card, Chapter } from '../lib/types';
+import type { Card } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, span } from '../lib/cards';
 import { vtags, bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
@@ -28,7 +28,7 @@ const STARS = scaleLinear().domain([1945, 1975, 2005]).range([0, 0.55, 1]).clamp
 // Read when drawn, not when the module loads: the language is set later.
 const QUIET = [
   { en: 'The archive is quiet here. The people were not.', ru: 'Архив здесь молчит. Люди — нет.' },
-  { en: 'Few records survive from these years. Absence of evidence, not of lives.', ru: 'От этих лет почти не осталось записей. Нет свидетельств — но жизни были.' },
+  { en: 'Few records survive from these years. Absence of evidence, not of lives.', ru: 'От этих лет почти не осталось записей. Документов нет, но люди жили.' },
   { en: 'A long stretch with no card yet. Somebody was singing.', ru: 'Долгий отрезок без единой карточки. Кто-то в это время пел.' },
   { en: 'Silence in the sources. Keep going.', ru: 'Источники молчат. Идите дальше.' },
 ];
@@ -80,7 +80,7 @@ export class Descent {
       { role: 'note' },
       pick({
         en: 'Choose how much to see: 1 shows only the great movements and a few landmarks per century, 5 every card.',
-        ru: 'Выберите, сколько видеть: на уровне 1 — только большие движения и несколько вех на век, на уровне 5 — все карточки.',
+        ru: 'Выберите, сколько видеть: на уровне 1 — только главные течения и несколько вех на век, на уровне 5 — все карточки.',
       }),
       h('button.icon-btn', { 'aria-label': t('Close'), onclick: () => this.dismissHint() }, svgIcon('close')),
     );
@@ -202,24 +202,6 @@ export class Descent {
     });
   }
 
-  /** The chapter of the card or era panel at the reading line, if any. */
-  private eraOnScreen(): Chapter | undefined {
-    const box = this.el.getBoundingClientRect();
-    const line = box.top + this.el.clientHeight * 0.45;
-    let best: HTMLElement | undefined;
-    let dist = 260;
-    this.track.querySelectorAll<HTMLElement>('a.dc[data-card], a.d-era[data-chapter]').forEach((e) => {
-      const r = e.getBoundingClientRect();
-      const d = line < r.top ? r.top - line : line > r.bottom ? line - r.bottom : 0;
-      if (d < dist) {
-        dist = d;
-        best = e;
-      }
-    });
-    const id = best?.dataset.chapter ?? (best?.dataset.card ? this.app.set.get(best.dataset.card)?.era : undefined);
-    return id ? this.app.chapters.find((c) => c.id === id) : undefined;
-  }
-
   private onScroll(): void {
     if (this.raf) return;
     this.raf = requestAnimationFrame(() => {
@@ -240,8 +222,8 @@ export class Descent {
         this.centres ??= chapterCentres(this.app.chapters, (id) => this.app.set.get(id)?.years[0]);
         // Chapters overlap in time: name the one this year belongs to most,
         // and list the others that are also running.
-        // The era of the card on screen, when there is one, not of the year alone.
-        const ch = this.eraOnScreen() ?? chapterAt(this.app.chapters, year, this.centres);
+        // The era is a function of the year alone, the same at every level.
+        const ch = chapterAt(this.app.chapters, year, this.centres);
         const also = chaptersAt(this.app.chapters, year).filter((c) => c !== ch);
         const key = `${ch?.id}|${also.map((c) => c.id).join()}`;
         if (this.meterEra.dataset.key !== key) {
@@ -303,12 +285,8 @@ export class Descent {
     for (const c of cards) {
       const el = this.cardEl(c, colW);
       els.set('card:' + c.id, el);
-      // A card sits in its own era: one dated by a recent event (Kente's 2024
-      // inscription, the 2012 rescue in Timbuktu) is placed where its era ends,
-      // not at "today".
-      const era = app.chapters.find((x) => x.id === c.era);
-      const [e0, e1] = era?.years.length ? [era.years[0], era.years[1] ?? NOW] : [START, NOW];
-      list.push({ kind: 'card', id: c.id, year: Math.max(START, Math.min(Math.max(span(c)[0], e0), e1)), h: 0 });
+      // Every card at its own start year, so the year beside it is the year it shows.
+      list.push({ kind: 'card', id: c.id, year: Math.max(START, span(c)[0]), h: 0 });
     }
     // Level 1 is a summary: each era opens with its picture, title and span.
     if (this.level === 1) {
@@ -336,7 +314,9 @@ export class Descent {
       els.set('movement:' + m.id, el);
       list.push({ kind: 'movement', id: m.id, year: m.years[0], h: 0 });
     }
-    quietStretches(cards).forEach((q, i) => {
+    // A stretch is quiet only if nothing at all is placed in it: no card, era panel or movement.
+    const placedYears = [...cards, ...(this.level === 1 ? app.chapters.filter((c) => c.years.length) : []), ...MOVEMENTS] as { years: number[] }[];
+    quietStretches(placedYears as Card[]).forEach((q, i) => {
       const el = h('div.d-quiet', {}, h('span', {}, `${q.from} — ${q.to}`), pick(QUIET[i % QUIET.length]));
       els.set('quiet:' + i, el);
       list.push({ kind: 'quiet', id: String(i), year: Math.round((q.from + q.to) / 2), h: 0, from: q.from, to: q.to });
@@ -355,7 +335,7 @@ export class Descent {
 
     const top = this.el.clientHeight * 1.05;
     const bottom = this.el.clientHeight * 0.9;
-    const scale = (this.scale = buildScale(
+    let scale = (this.scale = buildScale(
       list.map((it) => ({ year: it.year, need: (it.h + 22) / (it.kind === 'card' ? cols : 1) })),
       top,
       bottom,
@@ -363,6 +343,10 @@ export class Descent {
       (mobile ? 0.9 : 1) * (this.level === 1 ? 0.4 : 1),
     ));
     const placed = place(list, scale, cols);
+    // One column stacks cards and drifts from the even scale: on phones the
+    // years follow the cards themselves, so the year in the header is the
+    // year of the card beside it.
+    if (cols === 1) scale = this.scale = followPlaced(scale, placed);
     const end = Math.max(scale.height, ...placed.map((p) => p.top + p.item.h + bottom));
     this.track.style.height = `${end}px`;
     this.el.classList.toggle('lvl1', this.level === 1);
@@ -377,7 +361,7 @@ export class Descent {
       h('div.kicker', {}, t('{from} – {to}', { from: START, to: NOW })),
       h('h2', {}, t('Through the centuries')),
       h('p', {}, t('Seven hundred years of Black culture, one year at a time. Scroll down: every screen is time, and the deeper you go, the closer you come to today.')),
-      h('p.d-why', {}, pick({ en: 'The descent is the museum in detail: the atlas shows where, the descent how it unfolded year by year.', ru: 'Спуск — музей в подробностях: атлас показывает где, спуск — как всё разворачивалось год за годом.' })),
+      h('p.d-why', {}, pick({ en: 'The descent is the museum in detail: the atlas shows where, the descent how it unfolded year by year.', ru: 'Здесь музей в подробностях: атлас показывает, где всё происходило, а этот путь — как оно разворачивалось год за годом.' })),
       h(
         'p.d-count',
         {},
@@ -662,4 +646,37 @@ export function sameStart(hook: string, body: string): boolean {
   const a = norm(hook);
   const b = norm(body).slice(0, a.length + 10);
   return a.length > 20 && b.startsWith(a.slice(0, Math.floor(a.length * 0.8)));
+}
+
+/** A scale whose years run through the placed items: monotone interpolation. */
+function followPlaced(base: Scale, placed: Placed[]): Scale {
+  const pts: [number, number][] = [];
+  for (const p of [...placed].sort((a, b) => a.top - b.top)) {
+    if (p.item.kind === 'quiet') continue;
+    const y = p.top + Math.min(p.item.h / 2, 80);
+    const yr = p.item.year;
+    if (!pts.length || (yr >= pts[pts.length - 1][1] && y > pts[pts.length - 1][0])) pts.push([y, yr]);
+  }
+  if (pts.length < 2) return base;
+  pts.unshift([base.y(START), START]);
+  const last = pts[pts.length - 1];
+  pts.push([Math.max(last[0] + 1, base.y(NOW)), NOW]);
+  const year = (py: number) => {
+    if (py <= pts[0][0]) return START;
+    for (let i = 0; i < pts.length - 1; i++) {
+      const [y0, a] = pts[i];
+      const [y1, b] = pts[i + 1];
+      if (py <= y1) return a + ((py - y0) / Math.max(1, y1 - y0)) * (b - a);
+    }
+    return NOW;
+  };
+  const y = (yr: number) => {
+    for (let i = 0; i < pts.length - 1; i++) {
+      const [y0, a] = pts[i];
+      const [y1, b] = pts[i + 1];
+      if (yr <= b) return b === a ? y0 : y0 + ((yr - a) / (b - a)) * (y1 - y0);
+    }
+    return pts[pts.length - 1][0];
+  };
+  return { y, year, height: base.height };
 }

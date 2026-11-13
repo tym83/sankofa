@@ -61,7 +61,7 @@ const MECHANISMS: Mechanism[] = [
     },
     does: {
       en: 'Write H in a CronJob’s minute and the cluster picks a free beat for it, so jobs do not all start at once.',
-      ru: 'Напишите H в минутах CronJob — и кластер выберет для задачи свободную долю, чтобы задачи не стартовали разом.',
+      ru: 'Поставьте H вместо минут в расписании CronJob — и кластер сам выберет для задачи свободную долю, чтобы задачи не стартовали разом.',
     },
     cmd: "kubectl create cronjob drum --image=busybox --schedule='H 3 * * *' -- date",
   },
@@ -172,7 +172,7 @@ export class Engine {
           {},
           pick({
             en: `Your copy of the museum holds ${count(mine, 'card', 'en')}; each is a Card object of the API group sankofa.kuberoot.dev. Griot, the cluster’s memory, loads them from the content repository; the museum and the terminal read the same objects.`,
-            ru: `В вашем экземпляре музея ${count(mine, 'card', 'ru')}; каждая — объект Card из группы API sankofa.kuberoot.dev. Griot, память кластера, загружает их из репозитория содержания, а музей и терминал читают одни и те же объекты.`,
+            ru: `В вашем экземпляре музея ${count(mine, 'card', 'ru')}; каждая — объект Card из группы API sankofa.kuberoot.dev. Griot, память кластера, загружает их из репозитория с карточками, а музей и терминал читают одни и те же объекты.`,
           }),
         ),
         h('div.e-count', { 'aria-hidden': 'true' }, h('b', {}, String(mine)), h('span', {}, pick({ en: 'Card objects', ru: 'объектов Card' }))),

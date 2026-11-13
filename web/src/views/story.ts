@@ -164,7 +164,7 @@ function toc(app: App): HTMLElement {
   return h(
     'section.toc',
     { id: 'contents', 'aria-label': t('Contents') },
-    h('div.toc-head', {}, h('h2', {}, t('Eight chapters')), h('p', {}, t('Each era ships as a release of the distribution, from v0 to v7. Begin anywhere; every card leads somewhere else.'))),
+    h('div.toc-head', {}, h('h2', {}, t('Eight chapters')), h('p', {}, pick({ en: 'Begin anywhere: every card leads somewhere else.', ru: 'Начните откуда угодно: каждая карточка ведёт дальше.' }))),
     h(
       'div.toc-grid',
       {},
@@ -261,8 +261,12 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
   });
   const steps = ch.steps.map((s, i) => {
     const sc = stepCards(app, s);
-    const anchor = sc.find((c) => !isNonPlace(c)) ?? sc[0];
-    const where = anchor ? (isNonPlace(anchor) ? formatYears(anchor.years) : `${anchor.places[0].name} · ${formatYears(anchor.years)}`) : ch.kicker;
+    // The label belongs to the paragraph's first linked card alone: its place
+    // and its own year, never a span stretched across several cards.
+    const anchor = sc[0];
+    const year = anchor?.years.length ? formatYears([anchor.years[0]]) : '';
+    // The chapter's opening step speaks for the whole chapter: its own span and place.
+    const where = i === 0 || !anchor ? ch.kicker : isNonPlace(anchor) ? year : `${anchor.places[0].name}${year ? ' · ' + year : ''}`;
     const img = stepImage[i]?.media?.find((m) => m.type === 'image');
     return h(
       `div.step${i === 0 ? '.first' : ''}`,
@@ -277,7 +281,8 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
 
   // The interlude never repeats a hook the strip right below will show again.
   const fallback = cards.slice(LEAD_CARDS).find((c) => c.wow.length < 140) ?? cards.find((c, i) => i > 0 && c.wow.length < 140) ?? cards[0];
-  const interlude = signature(app, ch.id, cards, fallback);
+  const near = ch.steps.join(' ').replace(/\[\[[^|\]]*\|?([^\]]*)\]\]/g, '$1');
+  const interlude = signature(app, ch.id, cards, fallback, near);
 
   const LEAD = LEAD_CARDS;
   // The card the signature already set large goes to the end of the strip.
@@ -498,7 +503,7 @@ function finale(app: App): HTMLElement {
     h('div.kicker', {}, t('The atlas')),
     h('h2', { id: 'finale-title' }, t('Seven centuries on one map')),
     h('p', {}, t('Every card has a place and a time. Brush the years, zoom from oceans to a single page, and watch the routes the music and the people took.')),
-    h('p.finale-why', {}, pick({ en: 'The timeline below is the whole museum in time, seven centuries in one sweep; the atlas lays it out in space, the descent goes through it in detail.', ru: 'Лента времени ниже — весь музей во времени, семь веков одним взглядом; атлас раскладывает его в пространстве, спуск проходит его в подробностях.' })),
+    h('p.finale-why', {}, pick({ en: 'The timeline below is the whole museum in time, seven centuries in one sweep; the atlas lays it out in space, the descent goes through it in detail.', ru: 'Лента времени ниже показывает весь музей во времени — семь веков одним взглядом. Атлас раскладывает его в пространстве, а «Сквозь века» ведёт по нему год за годом.' })),
     h(
       'div.actions',
       {},

@@ -293,7 +293,8 @@ export class Atlas {
     const when = this.p.from ? formatYears(this.p.to ? [this.p.from, this.p.to] : [this.p.from]) : t('1300 – today');
     // One sentence, not a stat row.
     const n = layers.points.filter((p) => !p.out).length;
-    this.when.textContent = pick({ en: `${count(n, 'card', 'en')} on the map, ${when}.`, ru: `На карте ${count(n, 'card', 'ru')}, ${when}.` });
+    const mine = readerCards(this.app.set, this.app.edition).length;
+    this.when.textContent = pick({ en: `${n} of ${count(mine, 'card', 'en')} have a place on the map, ${when}.`, ru: `На карте ${n} из ${count(mine, 'cardOf', 'ru')}, ${when}.` });
     this.renderPathbar(path);
     this.renderList(layers.points.filter((p) => !p.out).map((p) => this.app.set.get(p.id)).filter((c): c is Card => !!c));
   }

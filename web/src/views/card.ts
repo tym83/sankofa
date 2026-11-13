@@ -6,7 +6,7 @@ import { formatYears, KIND_LABEL } from '../lib/cards';
 import { formatFragment, terminalCommand } from '../lib/fragment';
 import { vtags, bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
-import { edition, lang, t } from '../lib/i18n';
+import { edition, lang, pick, t } from '../lib/i18n';
 import { editionNote, pairLink } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
@@ -102,10 +102,10 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       h(
         'div.notice.edition',
         {},
-        t('You followed a link to “{title}”. In your {edition} this place is held by another voice.', { title: ctx.asked.title, edition: edition(app.edition, 'prep') }) + ' ',
-        t('This story in the other copy:') + ' ',
-        pairLink(app, ctx.asked),
-        '.',
+        // Said once, plainly: whose story this is, and how to read the other.
+        h('b', {}, pick({ en: 'This story belongs to the other copy.', ru: 'Эта история — из другого экземпляра.' }) + ' '),
+        pick({ en: `In yours, the chapter tells “${c.title}”. `, ru: `В вашем глава рассказывает «${c.title}». ` }),
+        pairLink(app, ctx.asked, pick({ en: 'Read the other one →', ru: 'Прочитать ту историю →' })),
       ),
     );
   } else if (ctx.foreign) {
@@ -126,9 +126,8 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
         'div.notice.edition',
         {},
         h('b', {}, t('Only in the {edition}.', { edition: edition(c.edition, 'prep') }) + ' '),
-        partner ? t('This story in the other copy:') + ' ' : '',
-        partner ? pairLink(app, partner) : '',
-        partner ? '.' : '',
+        partner ? pick({ en: `In the other copy, the chapter tells “${partner.title}”. `, ru: `В другом экземпляре глава рассказывает «${partner.title}». ` }) : '',
+        partner ? pairLink(app, partner, pick({ en: 'Read it →', ru: 'Прочитать →' })) : '',
       ),
     );
   }

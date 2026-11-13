@@ -4,17 +4,18 @@ import type { App } from '../app';
 import { h, reducedMotion } from '../lib/dom';
 import { lang, pick } from '../lib/i18n';
 import { setEdition } from '../lib/reader';
+import { rememberPlace } from '../lib/place';
 import type { Card } from '../lib/types';
 
-/** Short names for the lead sentence, in the cases Russian needs. */
-const NAMES: Record<string, { en: string; acc: string; gen: string }> = {
-  'douglass-covey': { en: 'Frederick Douglass', acc: 'Фредерика Дугласа', gen: 'Фредерика Дугласа' },
-  'jacobs-garret': { en: 'Harriet Jacobs', acc: 'Гарриет Джейкобс', gen: 'Гарриет Джейкобс' },
-  tuskegee: { en: 'the Tuskegee study', acc: 'исследование в Таскиги', gen: 'исследования в Таскиги' },
-  'henrietta-lacks': { en: 'Henrietta Lacks', acc: 'Генриетту Лакс', gen: 'Генриетты Лакс' },
+/** Short names for the list sentence; Russian in the nominative. */
+const NAMES: Record<string, { en: string; ru: string }> = {
+  'douglass-covey': { en: 'Frederick Douglass', ru: 'Фредерик Дуглас' },
+  'jacobs-garret': { en: 'Harriet Jacobs', ru: 'Гарриет Джейкобс' },
+  tuskegee: { en: 'the Tuskegee study', ru: 'исследование в Таскиги' },
+  'henrietta-lacks': { en: 'Henrietta Lacks', ru: 'Генриетта Лакс' },
+  'robert-smalls': { en: 'Robert Smalls', ru: 'Роберт Смоллс' },
+  'combahee-raid': { en: 'the Combahee River Raid', ru: 'рейд на реке Комбахи' },
 };
-/** The two pairs the lead sentence names, in this order. */
-const LEAD = ['freedom', 'consent'];
 
 const EN_NUM = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 const RU_IN = ['ни в одном месте', 'в одном месте', 'в двух местах', 'в трёх местах', 'в четырёх местах', 'в пяти местах', 'в шести местах', 'в семи местах', 'в восьми местах', 'в девяти местах', 'в десяти местах'];
@@ -35,12 +36,20 @@ export function editionPairs(app: Pick<App, 'set'>): Pair[] {
     p[c.edition] = c;
     by.set(c.pair, p);
   }
-  return [...by.values()].filter((p): p is Pair => !!p.m && !!p.f);
+  // In the order the chapters tell them.
+  return [...by.values()].filter((p): p is Pair => !!p.m && !!p.f).sort((a, b) => (a.m.era ?? '').localeCompare(b.m.era ?? ''));
 }
 
 /** Switch copies at once and rebuild the museum where the reader is. */
 export function switchEdition(to: 'm' | 'f'): void {
   setEdition(to);
+  // Come back to the same place in the story after the rebuild.
+  const here = rememberPlace();
+  if (here && !/(^|[#&])view=/.test(location.hash)) {
+    const q = new URLSearchParams(location.hash.slice(1));
+    q.set('ch', here.ch);
+    history.replaceState(null, '', `#${q.toString()}`);
+  }
   location.reload();
 }
 
@@ -50,22 +59,14 @@ export function editionNote(app: App): HTMLElement {
   const mine = app.edition;
   const other = mine === 'f' ? 'm' : 'f';
   const n = pairs.length;
-  const lead = LEAD.map((id) => pairs.find((p) => p.id === id)).filter(Boolean) as Pair[];
-  const swaps = lead.map((p) => {
-    const gone = p[other];
-    const met = p[mine];
-    const g = NAMES[gone.id];
-    const m = NAMES[met.id];
-    return ru ? { gone: g?.gen ?? `«${gone.title}»`, met: m?.acc ?? `«${met.title}»` } : { gone: g?.en ?? (gone.inline || `“${gone.title}”`), met: m?.en ?? (met.inline || `“${met.title}”`) };
-  });
-  const swapText = swaps.length
-    ? ru
-      ? ': ' + swaps.map((s, i) => (i === 0 ? `вместо ${s.gone} вы встретите ${s.met}` : `вместо ${s.gone} — ${s.met}`)).join(', ')
-      : ': ' + swaps.map((s, i) => (i === 0 ? `instead of ${s.gone} you will meet ${s.met}` : `instead of ${s.gone}, ${s.met}`)).join(', ')
-    : '';
+  // Every pair from the data, in each copy's own words.
+  const name = (c: Card) => (ru ? NAMES[c.id]?.ru ?? `«${c.title}»` : NAMES[c.id]?.en ?? (c.inline || `“${c.title}”`));
+  const join = (xs: string[]) => (xs.length > 1 ? `${xs.slice(0, -1).join(', ')} ${ru ? 'и' : 'and'} ${xs[xs.length - 1]}` : xs.join(''));
+  const fList = join(pairs.map((p) => name(p.f)));
+  const mList = join(pairs.map((p) => name(p.m)));
   const text = ru
-    ? `Как у Павича, у музея два экземпляра — мужской и женский. Они расходятся ${RU_IN[n] ?? `в ${n} местах`}: одну и ту же тему рассказывает то мужской, то женский голос. У вас — ${mine === 'f' ? 'женский' : 'мужской'}${swapText}.`
-    : `Like Pavić’s dictionary, this museum has two copies, a male and a female one. They differ in ${EN_NUM[n] ?? n} places: the same theme is told by a man’s voice in one copy and a woman’s in the other. Yours is the ${mine === 'f' ? 'female' : 'male'} copy${swapText}.`;
+    ? `Как у Павича, у музея два экземпляра — мужской и женский. Они расходятся ${RU_IN[n] ?? `в ${n} местах`}: одну и ту же тему там рассказывают разные истории. В женском экземпляре — ${fList}; в мужском — ${mList}. У вас — ${mine === 'f' ? 'женский' : 'мужской'}.`
+    : `Like Pavić’s dictionary, this museum has two copies, a male and a female one. They differ in ${EN_NUM[n] ?? n} places, where the same theme is told through a different story. In the female copy you read ${fList}; in the male copy, ${mList}. Yours is the ${mine === 'f' ? 'female' : 'male'} copy.`;
 
   const list = h(
     'ol.ed-pairs',
@@ -110,7 +111,7 @@ export function editionNote(app: App): HTMLElement {
 }
 
 /** A card of either copy, opened as it is (not swapped for the reader's own). */
-export function pairLink(app: App, c: Card): HTMLElement {
+export function pairLink(app: App, c: Card, label?: string): HTMLElement {
   return h(
     'a',
     {
@@ -122,6 +123,6 @@ export function pairLink(app: App, c: Card): HTMLElement {
         app.openCard(c.id, { exact: true });
       },
     },
-    c.title,
+    label ?? c.title,
   );
 }

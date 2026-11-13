@@ -9,7 +9,7 @@ import 'd3-transition';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { buildGraph, grewFrom, headline, layout, radius, reach, yearY, type GEdge, type GNode, type Graph, type MapCard } from '../lib/rootsMap';
-import { nbsp } from '../lib/typo';
+import { nbsp, quotes } from '../lib/typo';
 import { placeName, KIND_LABEL, searchArtists, type Artist, type LinkKind } from '../lib/roots';
 
 const NS = 'http://www.w3.org/2000/svg';
@@ -219,7 +219,7 @@ export class RootsMap {
       el.setAttribute('aria-label', `${n.label}, ${n.year}`);
       const r = radius(n);
       el.innerHTML = `${n.card ? `<circle class="halo" r="${r * 3.2}" fill="url(#rm-glow)"/>` : ''}<circle class="dot" r="${r}"/><text class="lbl" y="${-r - 5}" text-anchor="middle"></text>`;
-      el.querySelector('text')!.textContent = n.label;
+      el.querySelector('text')!.textContent = quotes(n.label, lang());
       el.addEventListener('mouseenter', () => !this.pinned && this.light(n.id));
       el.addEventListener('mouseleave', () => !this.pinned && this.light());
       el.addEventListener('focus', () => this.light(n.id));
@@ -309,6 +309,7 @@ export class RootsMap {
     let self = '';
     const over = (r: DOMRect, b: DOMRect) => r.left < b.right + 3 && r.right > b.left - 3 && r.top < b.bottom + 1 && r.bottom > b.top - 1;
     const hits = (r: DOMRect) => boxes.some((b) => over(r, b)) || [...dots].some(([id, b]) => id !== self && b.width > 0 && over(r, b));
+    const bigRoots = new Set(g.nodes.filter((x) => x.card).sort((a, b) => b.support - a.support).slice(0, 3).map((x) => x.id));
     lbls.forEach(({ n, el }, i) => {
       self = n.id;
       let r = rects[i];
@@ -326,7 +327,9 @@ export class RootsMap {
           if (!hits(r)) break;
         }
       }
-      const free = n.card || !hits(r);
+      // Roots keep their names unless they would print over another label;
+      // the three biggest roots always keep theirs.
+      const free = !hits(r) || (n.card && bigRoots.has(n.id));
       const ok = want && free && shown < budget && r.width > 0;
       el.classList.toggle('hide', !ok);
       if (ok) {
