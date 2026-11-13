@@ -133,8 +133,8 @@ type Card struct {
 }
 
 // Translation is a card in another language. Facts never differ from the
-// original: only title, hook, body, place names, "further" and captions are
-// translated; sources stay as they are.
+// original: only title, hook, body, place names, "further" and the media
+// captions, credits and licences are translated; sources stay as they are.
 type Translation struct {
 	Title    string   `json:"title"`
 	Wow      string   `json:"wow"`
@@ -142,6 +142,8 @@ type Translation struct {
 	Further  []string `json:"further,omitempty"` // translated "further" items, same order
 	Dispute  string   `json:"dispute,omitempty"`
 	Captions []string `json:"captions,omitempty"` // translated media captions, same order
+	Credits  []string `json:"credits,omitempty"`  // translated media credits, same order
+	Licenses []string `json:"licenses,omitempty"` // translated licence names, same order
 	Body     string   `json:"body"`
 }
 
@@ -169,10 +171,20 @@ func (c *Card) Localized(lang string) *Card {
 			out.Places[i].Name = t.Places[i]
 		}
 	}
-	if len(t.Captions) > 0 && len(t.Captions) <= len(c.Media) {
+	caps := len(t.Captions) > 0 && len(t.Captions) <= len(c.Media)
+	credits, licenses := len(t.Credits) == len(c.Media), len(t.Licenses) == len(c.Media)
+	if len(c.Media) > 0 && (caps || credits || licenses) {
 		out.Media = append([]Media(nil), c.Media...)
-		for i := range t.Captions {
-			out.Media[i].Caption = t.Captions[i]
+		for i := range out.Media {
+			if caps && i < len(t.Captions) {
+				out.Media[i].Caption = t.Captions[i]
+			}
+			if credits && t.Credits[i] != "" {
+				out.Media[i].Credit = t.Credits[i]
+			}
+			if licenses && t.Licenses[i] != "" {
+				out.Media[i].License = t.Licenses[i]
+			}
 		}
 	}
 	return &out
@@ -443,6 +455,12 @@ func (s *Set) Validate() []error {
 			}
 			if len(t.Captions) > len(c.Media) {
 				bad(c, "%s translation has %d captions for %d media", lang, len(t.Captions), len(c.Media))
+			}
+			if len(t.Credits) > 0 && len(t.Credits) != len(c.Media) {
+				bad(c, "%s translation has %d credits for %d media", lang, len(t.Credits), len(c.Media))
+			}
+			if len(t.Licenses) > 0 && len(t.Licenses) != len(c.Media) {
+				bad(c, "%s translation has %d licenses for %d media", lang, len(t.Licenses), len(c.Media))
 			}
 			if (t.Dispute != "") != (c.Dispute != "") {
 				bad(c, "%s translation must translate the dispute exactly when the card has one", lang)

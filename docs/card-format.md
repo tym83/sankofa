@@ -74,6 +74,8 @@ wow: Самую знаменитую скрипичную сонату Бетх�
 places: ["Вена", "Лондон"]          # same order as the card's places
 further: ["Бетховен, Соната для скрипки № 9 ля мажор, соч. 47"]   # same order
 captions: ["..."]                   # media captions, same order as media
+credits: ["..."]                    # media credits, one per media item
+licenses: ["общественное достояние"] # licence names, one per media item
 dispute: "..."                      # only when the card has a dispute
 ---
 Body in Russian, with every [[id|link]] of the original kept (link text translated).

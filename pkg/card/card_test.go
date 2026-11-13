@@ -135,3 +135,19 @@ func TestTranslations(t *testing.T) {
 		t.Fatal("a translation that loses a link must fail")
 	}
 }
+
+func TestLocalizedMedia(t *testing.T) {
+	c := &Card{
+		Media: []Media{{Type: "image", File: "x.jpg", Caption: "Jar", Credit: "Dave; The Met", License: "Public domain"}},
+		Translations: map[string]*Translation{"ru": {
+			Title: "Т", Captions: []string{"Кувшин"}, Credits: []string{"Дейв; Метрополитен-музей"}, Licenses: []string{"общественное достояние"},
+		}},
+	}
+	m := c.Localized("ru").Media[0]
+	if m.Caption != "Кувшин" || m.Credit != "Дейв; Метрополитен-музей" || m.License != "общественное достояние" || m.File != "x.jpg" {
+		t.Fatalf("%+v", m)
+	}
+	if c.Media[0].Credit != "Dave; The Met" {
+		t.Fatal("Localized must not change the original")
+	}
+}

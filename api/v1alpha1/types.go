@@ -113,6 +113,10 @@ type CardText struct {
 	Dispute string `json:"dispute,omitempty"`
 	// +optional
 	Captions []string `json:"captions,omitempty"`
+	// +optional
+	Credits []string `json:"credits,omitempty"`
+	// +optional
+	Licenses []string `json:"licenses,omitempty"`
 	Body     string   `json:"body"`
 }
 

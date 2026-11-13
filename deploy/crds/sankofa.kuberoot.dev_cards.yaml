@@ -182,9 +182,17 @@ spec:
                       items:
                         type: string
                       type: array
+                    credits:
+                      items:
+                        type: string
+                      type: array
                     dispute:
                       type: string
                     further:
+                      items:
+                        type: string
+                      type: array
+                    licenses:
                       items:
                         type: string
                       type: array

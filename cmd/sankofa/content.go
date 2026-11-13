@@ -212,6 +212,8 @@ type chapterText struct {
 	Title       string `json:"title"`
 	Kicker      string `json:"kicker"`
 	HeroCaption string `json:"heroCaption,omitempty"`
+	HeroCredit  string `json:"heroCredit,omitempty"`
+	HeroLicense string `json:"heroLicense,omitempty"`
 }
 
 // lintChapterTranslation checks <id>.<lang>.md: same links, same paragraphs.
