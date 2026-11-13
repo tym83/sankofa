@@ -7241,15 +7241,17 @@ html:lang(ru) .xref {
     margin-left: 6px;
     font-size: 12px;
   }
-  .atlas-bar {
-    flex-wrap: wrap;
-  }
   .atlas-bar .when {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-    font-size: 11.5px;
-    line-height: 1.35;
+    display: none;
+  }
+  .atlas-when {
+    margin: 4px 16px 10px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--ink-2);
+  }
+  .levels button.on .short {
+    white-space: nowrap;
   }
   .atlas-why {
     display: none;
@@ -7408,4 +7410,19 @@ html:lang(ru) .xref {
 }
 .hero .hero-text {
   isolation: isolate;
+}
+@media (max-width: 720px) {
+  .levels button.on {
+    grid-template-columns: 22px auto;
+    padding-right: 10px;
+  }
+  .levels button.on span.short {
+    display: inline;
+  }
+}
+@media (max-width: 720px) {
+  .atlas-bar .sp {
+    display: block;
+    flex: 1;
+  }
 }

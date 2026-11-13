@@ -312,7 +312,8 @@ export class Atlas {
     const items = [...visible].sort((a, b) => span(a)[0] - span(b)[0]).map((c) =>
       h('button.atlas-item', { role: 'listitem', onclick: () => this.focus(c.id), style: `--era:${eraColor(c.era)}` }, h('span.y', {}, formatYears(c.years)), h('b', {}, c.title), h('span.pl', {}, c.places[0].name)),
     );
-    this.list.replaceChildren(chips, ...items);
+    // The atlas sentence reads under the map on phones, where it has room.
+    this.list.replaceChildren(h('p.atlas-when', {}, this.when.textContent ?? ''), chips, ...items);
   }
 
   private renderPathbar(path: Card[]): void {
