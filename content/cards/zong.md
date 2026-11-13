@@ -23,6 +23,8 @@ sources:
   - {title: "Insurance Museum (132 total; 122 thrown, 10 jumped, 29 Nov–early Dec)", url: "https://insurance.museum/?p=17318"}
   - {title: "McGill Faculty of Law: Zong! 'composed entirely from the words of ... Gregson v. Gilbert'", url: "https://mcgill.ca/law/node/8889"}
   - {title: "M. NourbeSe Philip: Set Speaks, author’s account of Zong!", url: "https://www.setspeaks.com/backstory/"}
+media:
+  - {type: "image", file: "zong.jpg", caption: "Report of Gregson v. Gilbert, Douglas's Reports, vol. 3, 1831, p. 232", credit: "Oxford University copy, digitised by Google, via Internet Archive", license: "Public domain", url: "https://archive.org/details/reportscasesarg04glengoog/page/n248/mode/1up"}
 ---
 More than 130 Africans were thrown into the sea, and the owners then claimed
 them on insurance as lost cargo. In late 1781 the Liverpool-owned slave ship
