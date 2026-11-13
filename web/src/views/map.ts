@@ -282,7 +282,10 @@ export class GeoMap {
     const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
     const wide = !this.opts.interactive && this.w >= 720;
     const availW = wide ? this.w * 0.5 : this.w * 0.8;
-    const k = Math.max(0.8, Math.min(maxK, availW / Math.max(1, x1 - x0), (this.h * 0.62) / Math.max(1, y1 - y0)));
+    // On a phone the step box covers the lower half: fit into the upper part.
+    const phone = !this.opts.interactive && this.w < 720;
+    const availH = phone ? this.h * 0.4 : this.h * 0.62;
+    const k = Math.max(0.8, Math.min(maxK, (phone ? this.w * 0.78 : availW) / Math.max(1, x1 - x0), availH / Math.max(1, y1 - y0)));
     const c = this.projection.invert?.([(x0 + x1) / 2, (y0 + y1) / 2]) ?? [-20, 10];
     this.flyTo(c[0], c[1], k, duration);
   }

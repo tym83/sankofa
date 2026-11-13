@@ -4,7 +4,7 @@ import type { App } from '../app';
 import { buildTree, chainLine, deepest, endCards, extendLineage, foldRun, KIND_LABEL, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
 import { copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
 import { formatYears } from '../lib/cards';
-import { lang, pick, t } from '../lib/i18n';
+import { count, lang, pick, t } from '../lib/i18n';
 import { mediaSrc } from '../lib/media';
 import { eraColor } from '../lib/atlasModel';
 
@@ -203,10 +203,19 @@ export class Roots {
     const tree = extendLineage(buildTree(a, this.byId), this.lineage);
     const ends = endCards(tree);
     let step = 0;
+    const yearOf = (ref: string) => (ref.startsWith('card:') ? this.app.set.get(ref.slice(5))?.years[0] : this.byId.get(ref)?.years[0]);
+    const parentYear = new Map<TreeNode, number | undefined>();
+    const mark = (n: TreeNode) => n.children.forEach((c) => (parentYear.set(c, yearOf(n.ref)), mark(c)));
+    mark(tree);
     const one = (n: TreeNode, isRoot = false): HTMLElement[] => {
       const parts: HTMLElement[] = [];
-      if (n.link) parts.push(this.linkEl(n.link, step++));
-      if (n.lineage) parts.push(this.lineageEl(step++));
+      const gap = (() => {
+        const a = parentYear.get(n);
+        const b = yearOf(n.ref);
+        return a !== undefined && b !== undefined && a > b ? a - b : 0;
+      })();
+      if (n.link) parts.push(this.linkEl(n.link, step++, gap, yearOf(n.ref)));
+      if (n.lineage) parts.push(this.lineageEl(step++, gap, yearOf(n.ref)));
       parts.push(n.ref.startsWith('card:') ? this.cardEl(n.ref.slice(5), step++, n.lineage) : this.artistEl(n.ref, isRoot, step++));
       return parts;
     };
@@ -282,7 +291,12 @@ export class Roots {
       ),
       close,
     );
-    this.el.scrollTo({ top: 0, behavior: 'auto' });
+    // The answer is the chain: bring it up and fold the header away.
+    this.el.classList.add('chosen');
+    requestAnimationFrame(() => {
+      const top = this.stage.getBoundingClientRect().top + this.el.scrollTop - 70;
+      this.el.scrollTo({ top: Math.max(0, top), behavior: reducedMotion() ? 'auto' : 'smooth' });
+    });
     if (!reducedMotion()) requestAnimationFrame(() => this.stage.querySelectorAll('.r-anim').forEach((x) => x.classList.add('in')));
     else this.stage.querySelectorAll('.r-anim').forEach((x) => x.classList.add('in'));
   }
@@ -296,20 +310,29 @@ export class Roots {
     const a = this.byId.get(id);
     if (!a) return h('div.r-artist', {}, id);
     const genre = (lang() === 'ru' && a.genreRu) || a.genre;
-    const body = [h('small', {}, `${formatYears(a.years)} · ${a.place.name}`), h('b', {}, this.nameOf(a)), h('span', {}, genre)];
+    // No photographs yet: a typographic plate, tinted by the artist's genre.
+    let hue = 0;
+    for (const ch of a.genre) hue = (hue * 31 + ch.charCodeAt(0)) % 360;
+    const name = this.nameOf(a);
+    const initial = name.replace(/^the\s+/i, '').charAt(0);
+    const body = [
+      h('span.r-mono', { 'aria-hidden': 'true' }, initial),
+      h('div.r-plate', {}, h('small', {}, `${formatYears(a.years)} · ${a.place.name}`), h('b', {}, name), h('span', {}, genre)),
+    ];
+    const style = `--i:${i};--hue:${hue}`;
     return isRoot
-      ? h(`div.r-artist.r-root.r-anim`, { style: `--i:${i}` }, ...body)
-      : h('a.r-artist.r-anim', { href: `#view=roots&artist=${id}`, 'data-artist': id, style: `--i:${i}`, title: pick({ en: 'Follow this artist’s own roots', ru: 'Проследить корни этого исполнителя' }) }, ...body);
+      ? h(`div.r-artist.r-root.r-anim`, { style }, ...body)
+      : h('a.r-artist.r-anim', { href: `#view=roots&artist=${id}`, 'data-artist': id, style, title: pick({ en: 'Follow this artist’s own roots', ru: 'Проследить корни этого исполнителя' }) }, ...body);
   }
 
-  private linkEl(l: RootLink, i: number): HTMLElement {
+  private linkEl(l: RootLink, i: number, gap = 0, year?: number): HTMLElement {
     const claim = (lang() === 'ru' && l.claimRu) || l.claim;
     const what = (lang() === 'ru' && l.whatRu) || l.what;
     const kind = l.kind ? KIND_LABEL[l.kind] : undefined;
     return h(
       `div.r-link.r-anim${l.kind ? `.k-${l.kind}` : ''}`,
       { style: `--i:${i}` },
-      h('i.r-line', { 'aria-hidden': 'true' }),
+      h('i.r-line', { 'aria-hidden': 'true' }, this.gapEl(gap, year)),
       h(
         'div.r-claim',
         {},
@@ -326,12 +349,18 @@ export class Roots {
     );
   }
 
+  /** The time between two steps, written on the line: '← 13 years · 1968'. */
+  private gapEl(gap: number, year?: number): HTMLElement | null {
+    if (!year) return null;
+    return h('span.r-gap', {}, gap ? pick({ en: `${gap} ${gap === 1 ? 'year' : 'years'} back · ${year}`, ru: `на ${count(gap, 'year', 'ru')} раньше · ${year}` }) : String(year));
+  }
+
   /** The museum's own lineage: one genre grew out of an older one. */
-  private lineageEl(i: number): HTMLElement {
+  private lineageEl(i: number, gap = 0, year?: number): HTMLElement {
     return h(
       'div.r-link.r-lineage.r-anim',
       { style: `--i:${i}` },
-      h('i.r-line', { 'aria-hidden': 'true' }),
+      h('i.r-line', { 'aria-hidden': 'true' }, this.gapEl(gap, year)),
       h('div.r-claim', {}, h('span.r-kind', {}, h('b', { 'aria-hidden': 'true' }, '↓'), pick({ en: 'grew out of', ru: 'выросло из' }))),
     );
   }
