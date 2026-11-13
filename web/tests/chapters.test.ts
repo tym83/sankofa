@@ -105,3 +105,26 @@ heroCaption: Корабль «Брукс»
     expect(localizeCard(c, 'ru').media![0]).toEqual({ type: 'image', file: 'd.jpg', caption: 'Кувшин', credit: 'Дейв; Метрополитен-музей', license: 'общественное достояние' });
   });
 });
+
+describe('translated credits', () => {
+  const base: Card = {
+    id: 'x', kind: 'person', title: 'X', wow: 'w', years: [1900], zoom: 4, books: ['heirs'], sources: [], body: 'b',
+    places: [{ name: 'Vienna', lat: 48, lon: 16 }],
+    media: [{ type: 'image', file: 'x.jpg', credit: 'Someone; resized for display', license: 'Public domain' }],
+  };
+  it('uses the translators’ credits and licences verbatim', () => {
+    const c = localizeCard({ ...base, translations: { ru: { title: 'Икс', wow: 'в', body: 'т', credits: ['Некто; переведено'], licenses: ['свободная'] } } }, 'ru');
+    expect(c.media![0]).toMatchObject({ credit: 'Некто; переведено', license: 'свободная' });
+  });
+  it('falls back to the fixed list', () => {
+    const c = localizeCard({ ...base, translations: { ru: { title: 'Икс', wow: 'в', body: 'т' } } }, 'ru');
+    expect(c.media![0]).toMatchObject({ credit: 'Someone; размер изменён для показа', license: 'общественное достояние' });
+  });
+  it('reads the chapter hero credit and licence, with the fallback', () => {
+    const tr = parseChapterTranslation('---\ntitle: Т\nheroCredit: "Британская библиотека"\nheroLicense: "свободная"\n---\nтекст');
+    const ch = localizeChapter({ ...parseChapter(SRC), translations: { ru: tr } }, 'ru');
+    expect(ch.hero).toMatchObject({ credit: 'Британская библиотека', license: 'свободная' });
+    const fb = localizeChapter({ ...parseChapter(SRC), translations: { ru: { title: 'Т' } } }, 'ru');
+    expect(fb.hero?.license).toBe('общественное достояние');
+  });
+});

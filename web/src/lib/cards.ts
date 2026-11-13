@@ -159,7 +159,7 @@ export function localizeChapter(ch: Chapter, lang: string): Chapter {
     ...ch,
     title: tr.title || ch.title,
     kicker: tr.kicker || ch.kicker,
-    hero: ch.hero ? { ...ch.hero, caption: tr.heroCaption || ch.hero.caption, credit: tr.heroCredit || ch.hero.credit, license: tr.heroLicense || ch.hero.license } : ch.hero,
+    hero: ch.hero ? { ...ch.hero, caption: tr.heroCaption || ch.hero.caption, credit: tr.heroCredit || localizeCredit(ch.hero.credit, lang as 'ru'), license: tr.heroLicense || localizeCredit(ch.hero.license, lang as 'ru') } : ch.hero,
     steps,
     textLang: steps === ch.steps ? 'en' : lang,
   };
