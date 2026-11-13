@@ -1,7 +1,7 @@
 import type { Book, Card, Chapter, Edition, Place } from './types';
 import { BOOK_SYMBOLS } from './types';
 import { slug } from './fragment';
-import { t } from './i18n';
+import { localizeCredit, t } from './i18n';
 
 // Same expression as pkg/card linkRe.
 const LINK_RE = /\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g;
@@ -132,7 +132,9 @@ export function overlaps(c: { years: number[] }, from?: number, to?: number): bo
  * of the wrong length stays in English. Place names keep their English form
  * in `en`, because fragments are built from it.
  */
-export function localizeCard(c: Card, lang: string): Card {
+export function localizeCard(c0: Card, lang: string): Card {
+  // Licences and the museum's own credit words are translated; names stay.
+  const c: Card = lang === 'en' || !c0.media ? c0 : { ...c0, media: c0.media.map((m) => ({ ...m, credit: localizeCredit(m.credit, lang as 'ru'), license: localizeCredit(m.license, lang as 'ru') })) };
   const tr = lang === 'en' ? undefined : c.translations?.[lang];
   if (!tr || !tr.title) return { ...c, textLang: 'en' };
   const out: Card = { ...c, title: tr.title, wow: tr.wow || c.wow, body: tr.body || c.body, textLang: tr.body ? lang : 'en' };

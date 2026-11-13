@@ -287,3 +287,26 @@ export function copyCount(mine: number, total: number, l: Lang = current): strin
     ? `${count(mine, 'card', 'ru')} в вашем экземпляре · ${total} в обоих`
     : `${count(mine, 'card', 'en')} in your copy · ${total} in both`;
 }
+
+/** Licence words and the museum's own credit phrases, in the reader's language. Names stay as they are. */
+const CREDIT_RU: [RegExp, string][] = [
+  [/\bPublic domain\b/gi, 'общественное достояние'],
+  [/\bPublic Domain Mark\b/g, 'знак общественного достояния'],
+  [/released by the photographer/g, 'передано фотографом'],
+  [/US: published (\d{4}) without copyright notice/g, 'США: опубликовано в $1 году без знака охраны авторского права'],
+  [/cropped to the lettering and resized for display/g, 'обрезано по надписи, размер изменён для показа'],
+  [/resized for display/g, 'размер изменён для показа'],
+  [/scan via /g, 'скан: '],
+  [/image via /g, 'изображение: '],
+  [/transfer via /g, 'оцифровка: '],
+  [/via Wikimedia Commons/g, 'через Викисклад'],
+  [/via /g, 'через '],
+  [/courtesy /g, 'предоставлено: '],
+  [/\bAttributed to /g, 'приписывается: '],
+  [/\bphotograph by /gi, 'фото: '],
+];
+
+export function localizeCredit(s: string, l: Lang = current): string {
+  if (l !== 'ru' || !s) return s;
+  return CREDIT_RU.reduce((acc, [re, to]) => acc.replace(re, to), s);
+}

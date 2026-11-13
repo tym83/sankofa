@@ -60,3 +60,14 @@ describe('typography', () => {
     expect(nbsp('the starships of Sun Ra', 'en')).toBe('the starships of Sun Ra');
   });
 });
+
+import { localizeCredit } from '../src/lib/i18n';
+describe('credits in Russian', () => {
+  it('translates licences and the museum’s own phrases, keeps names', () => {
+    expect(localizeCredit('Public domain', 'ru')).toBe('общественное достояние');
+    expect(localizeCredit('Carl Van Vechten; Library of Congress; resized for display', 'ru')).toBe('Carl Van Vechten; Library of Congress; размер изменён для показа');
+    expect(localizeCredit('Attributed to Abraham Cresques; BnF, via Wikimedia Commons', 'ru')).toBe('приписывается: Abraham Cresques; BnF, через Викисклад');
+    expect(localizeCredit('CC BY-SA 4.0', 'ru')).toBe('CC BY-SA 4.0');
+    expect(localizeCredit('Public domain', 'en')).toBe('Public domain');
+  });
+});
