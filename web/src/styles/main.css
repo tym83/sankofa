@@ -6979,3 +6979,53 @@ html:lang(ru) .r-edge-head {
   font-size: 15px;
   margin-bottom: 18px;
 }
+.sig-q {
+  transition: opacity 0.6s var(--ease);
+}
+.sig-q.wait {
+  opacity: 0;
+}
+.rm-scroll-hint {
+  position: sticky;
+  top: 10px;
+  height: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease);
+}
+.rm-scroll-hint span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(7, 7, 13, 0.8);
+  border: 1px solid rgba(242, 233, 216, 0.18);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.rm-scroll-hint.gone {
+  opacity: 0;
+}
+/* a band's chain going on through one of its members */
+.r-member {
+  display: block;
+  margin: 10px 0 4px;
+  padding: 8px 14px;
+  border-left: 3px solid var(--line-2, rgba(242, 233, 216, 0.24));
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.r-member b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.r-member small {
+  color: var(--ink-3, var(--ink-2));
+}
+.r-member:hover b {
+  text-decoration: underline;
+}

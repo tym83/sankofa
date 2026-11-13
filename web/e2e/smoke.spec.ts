@@ -530,3 +530,17 @@ test('the copy switch flips a paired card at once, and the pairs list links both
   await page.goto('/#focus=jacobs-garret');
   await expect(page.locator('.card h2, #card-title').first()).toContainText('Frederick Douglass');
 });
+
+test('one name per chapter: era tags read the chapter titles', async ({ page }) => {
+  await page.goto('/#view=atlas');
+  await expect(page.locator('.atlas')).toContainText('Renaissance');
+  await expect(page.locator('body')).not.toContainText('Harlem and Négritude');
+  await page.goto('/#lang=ru');
+  await expect(page.locator('.opener .lede:visible')).toContainText('«Сопротивление»');
+});
+
+test('a band goes on through its member instead of a separate step', async ({ page }) => {
+  await page.goto('/#view=roots&artist=the-velvet-underground');
+  await expect(page.locator('.r-member').first()).toContainText('Lou Reed, of The Velvet Underground');
+  await expect(page.locator('.r-col')).not.toContainText('years back');
+});

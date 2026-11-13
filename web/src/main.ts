@@ -1,6 +1,7 @@
 import './styles/main.css';
 import type { App } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
+import { ERAS } from './lib/types';
 import { CardSet, localizeCard, localizeChapter } from './lib/cards';
 import { sortChapters } from './lib/chapters';
 import { formatFragment } from './lib/fragment';
@@ -74,6 +75,8 @@ async function start(): Promise<void> {
   const rawCards = new Map(cardsFile.cards.map((c) => [c.id, c]));
   const set = new CardSet(cardsFile.cards.map((c) => localizeCard(c, current)));
   const chapters = sortChapters(chaptersFile.chapters.map((c) => localizeChapter(c, current))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
+  // One name per release: every era label is the chapter's own title.
+  for (const e of ERAS) e.label = chapters.find((c) => c.id === e.id)?.title ?? e.label;
   const cardDrawer = new Drawer(t('Card'));
   const bookDrawer = new Drawer(t('Your book'));
   const pathListeners: ((p: string[]) => void)[] = [];

@@ -67,12 +67,14 @@ export function signature(app: App, chapterId: string, cards: Card[], fallback?:
 function counter(n: number, q: string | undefined, c: Card, link: HTMLElement, era: string): HTMLElement {
   const fmt = (v: number) => v.toLocaleString(lang() === 'ru' ? 'ru-RU' : 'en-US').replace(/ /g, ' ');
   const num = h('div.sig-num', { 'aria-label': fmt(n) }, reducedMotion() ? fmt(n) : '0');
+  // "nearly" belongs to the final number, so it appears only once the count lands.
+  const qEl = q ? h(`div.sig-q${reducedMotion() ? '' : '.wait'}`, {}, pick(QUALIFIERS[q])) : null;
   const el = h(
     'section.sig.sig-counter',
     { style: era },
     h('div.kicker', {}, pick({ en: 'Names, not cargo', ru: 'Имена, а не груз' })),
     // The card's own wording stays with the number: "nearly 100,000".
-    q ? h('div.sig-q', {}, pick(QUALIFIERS[q])) : null,
+    qEl,
     num,
     h('p.sig-wow', {}, c.wow),
     link,
@@ -88,6 +90,7 @@ function counter(n: number, q: string | undefined, c: Card, link: HTMLElement, e
           const p = Math.min(1, (now - t0) / dur);
           num.textContent = fmt(Math.round(n * (1 - Math.pow(1 - p, 3))));
           if (p < 1) requestAnimationFrame(tick);
+          else qEl?.classList.remove('wait');
         };
         requestAnimationFrame(tick);
       },

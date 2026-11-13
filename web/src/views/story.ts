@@ -22,6 +22,12 @@ const LEAD_CARDS = 4;
 
 export function buildStory(app: App, main: HTMLElement): void {
   coverMap(main.querySelector<HTMLElement>('.cover-map'));
+  // The opener names the chapters by their own titles.
+  main.querySelectorAll<HTMLElement>('[data-chapter-list]').forEach((el) => {
+    const ru = (el.closest<HTMLElement>('[data-l]')?.dataset.l ?? lang()) === 'ru';
+    const names = app.chapters.map((c) => (ru ? `«${c.title}»` : c.title.replace(/^The /, 'the ')));
+    el.textContent = names.length > 1 ? `${names.slice(0, -1).join(', ')} ${ru ? 'и' : 'and'} ${names[names.length - 1]}` : names.join('');
+  });
   main.querySelectorAll<HTMLElement>('[data-edition-note]').forEach((el) => el.replaceWith(editionNote(app)));
   main.querySelectorAll<HTMLElement>('[data-book]').forEach((b) => b.replaceWith(bookMarks([b.dataset.book!])));
 
@@ -400,7 +406,10 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
       const coords: [number, number][] = (sc.filter((c) => !isNonPlace(c)).length ? sc.filter((c) => !isNonPlace(c)).flatMap((c) => c.places) : [...ch.places, ...chapterCards.map((c) => c.places[0])]).map((p) => [p.lon, p.lat]);
       if (i === 0) routes.forEach((r) => r.legs.forEach((l) => coords.push(l.from, l.to)));
       const zoom = sc.length ? Math.min(...sc.map((c) => c.zoom)) : 2;
-      m.fit(coords, LEVEL_K[Math.max(0, Math.min(3, zoom - 2))], current === 0 ? 0 : 1700);
+      // A step about one place zooms to its region, never a dark world with one dot;
+      // places far apart still fit, since this is only the closest the map may come.
+      const cap = LEVEL_K[Math.max(0, Math.min(3, zoom - 2))];
+      m.fit(coords, i === 0 ? cap : Math.max(LEVEL_K[2], cap), current === 0 ? 0 : 1700);
     });
   };
 
@@ -419,13 +428,14 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
   // Another chapter's map never shows its labels behind this one's steps.
   new IntersectionObserver((es) => graphic.classList.toggle('away', !es[0].isIntersecting), { threshold: 0.02 }).observe(graphic.parentElement!);
 
-  // The active step is the last one whose top has passed two thirds of the
-  // screen. Read from positions, not from a thin crossing band, so a jump
-  // (a link, a search, a fast fling) lands on the right step and picture.
+  // The active step is the last one whose box has come into the lower part
+  // of the screen: steps are most of a screen apart, so by then the one before
+  // has scrolled away and the words on screen always own the picture. Read from
+  // positions, not a crossing band, so jumps and flings land right too.
   let queued = false;
   const pickStep = () => {
     queued = false;
-    const line = window.innerHeight * 0.67;
+    const line = window.innerHeight * 0.85;
     let k = 0;
     steps.forEach((s, j) => {
       if (s.getBoundingClientRect().top < line) k = j;

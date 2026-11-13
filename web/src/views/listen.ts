@@ -331,7 +331,7 @@ export class Listen {
         h('b', {}, pick({ en: 'Technically. ', ru: 'Технически. ' })),
         richText(
           app,
-          t('The bell is the control plane, keeping the West African 12/8 timeline of seven strokes in twelve pulses that every drum in the ensemble locks to, the way {talk} carry speech in rhythm. Each node is a drum with its own interlocking part: it plays while its Lease is fresh, stumbles as heartbeats come late, and falls silent when the node stops. Then the cluster calls and every ready pod answers, as in {spirit}; a pod that is not ready leaves its answer empty, and you hear the gap.', { talk, spirit }),
+          t('The bell is the control plane. It keeps the West African 12/8 timeline, seven strokes in twelve pulses, and every drum in an ensemble, {talk} included, plays its own part locked to that one shared pattern; the nodes keep time against the control plane in the same way. Each node is a drum with its own interlocking part: it plays while its Lease is fresh, stumbles as heartbeats come late, and falls silent when the node stops. Then the cluster calls and every ready pod answers, as in {spirit}; a pod that is not ready leaves its answer empty, and you hear the gap.', { talk, spirit }),
         ),
       ),
       h(
@@ -694,6 +694,8 @@ export class Listen {
     const pods = podsOf(voices);
     const n = Math.max(1, voices.length);
     const slot = new Map<number, number>();
+    const total = new Map<number, number>();
+    for (const p of pods) total.set(p.at, (total.get(p.at) ?? 0) + 1);
     const seen = new Set<string>();
     for (const p of pods) {
       seen.add(p.id);
@@ -707,10 +709,15 @@ export class Listen {
       const j = slot.get(p.at) ?? 0;
       slot.set(p.at, j + 1);
       const a = nodeAngle(p.at, n);
-      // a little arc of dots inside the node, clear of its name
-      const spread = (j - 4) * 0.075;
-      const x = 300 + Math.cos(a + spread * 1.6) * 150;
-      const y = 300 + Math.sin(a + spread * 1.6) * 150;
+      // A short arc of dots inside the node, clear of its name: at most twelve
+      // to a row, further rows closer in, so a busy node never wraps the ring.
+      const ROW = 12;
+      const row = Math.floor(j / ROW);
+      const inRow = Math.min(ROW, (total.get(p.at) ?? 1) - row * ROW);
+      const spread = (j % ROW - (inRow - 1) / 2) * 0.085;
+      const r = 150 - row * 15;
+      const x = 300 + Math.cos(a + spread) * r;
+      const y = 300 + Math.sin(a + spread) * r;
       c.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
       c.setAttribute('class', `l-pod${p.ok ? '' : ' off'}`);
     }
@@ -811,7 +818,7 @@ export class Listen {
     this.status.textContent = st.total
       ? t('{alive} of {total} playing · {ready} answering', { alive: st.playing, total: count(st.total, 'nodeOf'), ready: count(st.ready, 'pod') }) +
         (late.length ? ' · ' + pick({ en: `${late.join(', ')} late`, ru: `опаздывает: ${late.join(', ')}` }) : '') +
-        (st.silent ? ' · ' + t('{n} silent pods', { n: st.silent }) : '')
+        (st.silent ? ' · ' + pick({ en: `${st.silent} silent ${st.silent === 1 ? 'pod' : 'pods'}`, ru: `молчат: ${st.silent}` }) : '')
       : m === 'connecting'
         ? t('Listening for the cluster…')
         : t('No nodes yet.');
