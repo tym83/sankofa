@@ -9,7 +9,7 @@ import 'd3-transition';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { buildGraph, grewFrom, headline, layout, radius, reach, yearY, type GEdge, type GNode, type Graph, type MapCard } from '../lib/rootsMap';
-import { KIND_LABEL, searchArtists, type Artist, type LinkKind } from '../lib/roots';
+import { placeName, KIND_LABEL, searchArtists, type Artist, type LinkKind } from '../lib/roots';
 
 const NS = 'http://www.w3.org/2000/svg';
 const KINDS: (LinkKind | 'lineage')[] = ['influence', 'cover', 'sample', 'interpolation', 'member', 'producer', 'collaboration', 'scene', 'teacher', 'lineage'];
@@ -52,7 +52,7 @@ export class RootsMap {
         if (first) this.focusOn(first.dataset.id!);
       }
     });
-    const legend = h(
+    const legendList = h(
       'ul.rm-legend',
       { 'aria-label': pick({ en: 'Kinds of links', ru: 'Виды связей' }) },
       KINDS.map((k) =>
@@ -64,8 +64,17 @@ export class RootsMap {
         ),
       ),
     );
+    // On phones the key folds away behind one line; on wide screens it stays open.
+    const legend = h('details.rm-key', { open: window.innerWidth >= 760 ? '' : undefined }, h('summary', {}, pick({ en: 'Colours of the links', ru: 'Цвета связей' })), legendList);
     const bar = h('header.d-bar', {}, h('span.d-title', {}, pick({ en: 'The music map', ru: 'Карта музыки' })), h('button.icon-btn', { 'aria-label': t('Close'), onclick: () => this.onClose?.() }, svgIcon('close')));
-    this.head = h('div.rm-head', {}, h('div.kicker', {}, t('Roots')), h('h2', {}), h('div.rm-search', {}, this.input, this.results));
+    this.head = h(
+      'div.rm-head',
+      {},
+      h('div.kicker', {}, t('Roots')),
+      h('h2', {}),
+      h('div.rm-search', {}, this.input, this.results),
+      h('p.rm-hint-line', {}, pick({ en: 'Tap an artist to light its way to the roots.', ru: 'Коснитесь исполнителя — загорится его путь к корням.' })),
+    );
     this.el = h('section.rmap', { 'aria-label': pick({ en: 'The music map', ru: 'Карта музыки' }), tabindex: '-1' }, bar, this.head, this.stage, legend, this.info);
     this.el.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') this.onClose?.();
@@ -150,6 +159,11 @@ export class RootsMap {
     }
     this.placeLabels();
     this.showInfo();
+    // Phones open on the roots at the bottom of the tall map, where every chain ends.
+    if (this.phone) {
+      const deepest = Math.max(...g.nodes.map((n) => n.y!));
+      requestAnimationFrame(() => (this.stage.scrollTop = Math.max(0, deepest + 90 - this.stage.clientHeight)));
+    }
   }
 
   private draw(W: number, H: number, years: [number, number]): void {
@@ -222,6 +236,7 @@ export class RootsMap {
   }
 
   private showInfo(n?: GNode, set?: Set<string>): void {
+    this.info.classList.toggle('idle', !n);
     if (!n) {
       this.info.replaceChildren(
         h('p.rm-hint', {}, pick({ en: 'Tap an artist to light its way to the roots; a glowing root, to see all that grew from it.', ru: 'Коснитесь исполнителя — загорится его путь к корням; светящегося корня — всё, что из него выросло.' })),
@@ -241,7 +256,7 @@ export class RootsMap {
     const a = this.artists.find((x) => x.id === n.id)!;
     const story = (lang() === 'ru' && a.storyRu) || a.story;
     this.info.replaceChildren(
-      h('small', {}, `${a.years[0]} · ${a.place.name}`),
+      h('small', {}, `${a.years[0]} · ${placeName(a, lang())}`),
       h('b', {}, this.nameOf(a)),
       ...(story ? [h('p', {}, story)] : []),
       h('a.btn', { href: `#view=roots&artist=${a.id}`, 'data-artist-roots': a.id }, pick({ en: 'Follow the chain →', ru: 'Пройти по цепочке →' })),

@@ -29,6 +29,7 @@ export interface Artist {
   place: { name: string; lat: number; lon: number };
   genre: string;
   genreRu?: string;
+  placeRu?: string;
   /** 2–3 sentences: how the artist grew out of the tradition */
   story?: string;
   storyRu?: string;
@@ -289,4 +290,9 @@ export function groupChildren(n: TreeNode): TreeNode[][] {
     else groups.push([c]);
   }
   return groups;
+}
+
+/** An artist's place in the reader's language. */
+export function placeName(a: Pick<Artist, 'place' | 'placeRu'>, lang: string): string {
+  return (lang === 'ru' && a.placeRu) || a.place.name;
 }

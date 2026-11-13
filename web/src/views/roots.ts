@@ -1,8 +1,8 @@
 // Roots: type a band or an artist and watch the chain grow back, link by
 // sourced link, to a card of the museum.
 import type { App } from '../app';
-import { buildTree, chainLine, deepest, endCards, extendLineage, groupChildren, KIND_LABEL, quotes, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
-import { copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
+import { placeName, buildTree, chainLine, deepest, endCards, extendLineage, groupChildren, KIND_LABEL, quotes, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
+import { vtags, copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
 import { formatYears } from '../lib/cards';
 import { count, lang, pick, t } from '../lib/i18n';
 import { mediaSrc } from '../lib/media';
@@ -121,7 +121,7 @@ export class Roots {
           `li.r-hit${i === 0 ? '.on' : ''}`,
           { role: 'option', 'aria-selected': String(i === 0), 'data-id': a.id, onmousedown: (e: Event) => (e.preventDefault(), this.pick(a.id)) },
           h('b', {}, this.nameOf(a)),
-          h('span', {}, `${(lang() === 'ru' && a.genreRu) || a.genre} · ${formatYears(a.years)} · ${a.place.name}`),
+          h('span', {}, `${(lang() === 'ru' && a.genreRu) || a.genre} · ${formatYears(a.years)} · ${placeName(a, lang())}`),
         ),
       ),
     );
@@ -224,8 +224,13 @@ export class Roots {
         const to = g.map((c) => this.inlineName(c.ref));
         const yFrom = yearOf(n.ref);
         const yTo = yearOf(g[0].ref);
-        const gap = yFrom !== undefined && yTo !== undefined && yFrom > yTo ? yFrom - yTo : 0;
-        const edge = g[0].lineage ? this.lineageEdge(from, to, step++, gap, yTo) : this.edgeEl(g[0].link!, from, to, step++, gap, yTo);
+        // "N years back" only between two artists; an edge into a museum card
+        // carries the card's own years instead.
+        const intoCard = g[0].ref.startsWith('card:') || n.ref.startsWith('card:');
+        const target = g[0].ref.startsWith('card:') ? this.app.set.get(g[0].ref.slice(5)) : undefined;
+        const gap = !intoCard && yFrom !== undefined && yTo !== undefined && yFrom > yTo ? yFrom - yTo : 0;
+        const when = intoCard ? (target ? formatYears(target.years) : undefined) : yTo;
+        const edge = g[0].lineage ? this.lineageEdge(from, to, step++, gap, when) : this.edgeEl(g[0].link!, from, to, step++, gap, when);
         const body = [edge, ...g.flatMap((c) => render(c, false))];
         out.push(sub ? h('div.r-sub', { style: `--b:${gi}` }, h('span.r-branch-no', {}, pick({ en: `root ${gi + 1} of ${groups.length}`, ru: `корень ${gi + 1} из ${groups.length}` })), ...body) : h('div.r-run', {}, ...body));
       });
@@ -286,7 +291,7 @@ export class Roots {
   }
 
   /** One step, told between the two names it joins. */
-  private edgeEl(l: RootLink, from: string, to: string[], i: number, gap: number, year?: number): HTMLElement {
+  private edgeEl(l: RootLink, from: string, to: string[], i: number, gap: number, year?: number | string): HTMLElement {
     const L = lang();
     const kind = l.kind ? KIND_LABEL[l.kind] : undefined;
     const what = quotes((L === 'ru' && l.whatRu) || l.what || '', L);
@@ -301,7 +306,7 @@ export class Roots {
     );
   }
 
-  private lineageEdge(from: string, to: string[], i: number, gap: number, year?: number): HTMLElement {
+  private lineageEdge(from: string, to: string[], i: number, gap: number, year?: number | string): HTMLElement {
     return h(
       'div.r-edge.r-lin.r-anim',
       { style: `--i:${i}` },
@@ -326,7 +331,7 @@ export class Roots {
     const initial = name.replace(/^the\s+/i, '').charAt(0);
     const body = [
       h('span.r-mono', { 'aria-hidden': 'true' }, initial),
-      h('div.r-plate', {}, h('small', {}, `${formatYears(a.years)} · ${a.place.name}`), h('b', {}, name), h('span', {}, genre)),
+      h('div.r-plate', {}, h('small', {}, `${formatYears(a.years)} · ${placeName(a, lang())}`), h('b', {}, name), h('span', {}, genre)),
     ];
     const style = `--i:${i};--hue:${hue}`;
     return isRoot
@@ -335,7 +340,7 @@ export class Roots {
   }
 
   /** The time between two steps, written on the line: '← 13 years · 1968'. */
-  private gapEl(gap: number, year?: number): HTMLElement | null {
+  private gapEl(gap: number, year?: number | string): HTMLElement | null {
     if (!year) return null;
     return h('span.r-gap', {}, gap ? pick({ en: `${gap} ${gap === 1 ? 'year' : 'years'} back · ${year}`, ru: `на ${count(gap, 'year', 'ru')} раньше · ${year}` }) : String(year));
   }
@@ -351,7 +356,7 @@ export class Roots {
       h(
         'div',
         {},
-        h('small', {}, pick({ en: 'In the museum', ru: 'В музее' }), ` · ${c.era ?? ''} · ${formatYears(c.years)}`),
+        h('small', {}, pick({ en: 'In the museum', ru: 'В музее' }), ...vtags(` · ${c.era ?? ''} · ${formatYears(c.years)}`)),
         h('b', {}, c.title),
         h('span', {}, c.wow),
       ),
