@@ -90,6 +90,19 @@ const MECHANISMS: Mechanism[] = [
     cmd: 'kubectl get leases -n kube-node-lease',
     link: { hash: '#view=listen', en: 'Listen to the cluster', ru: 'Послушать кластер' },
   },
+  {
+    name: 'Roots',
+    culture: {
+      en: 'Rock, pop and metal grew from the blues, gospel and rhythm and blues, one documented step at a time.',
+      ru: 'Рок, поп и метал выросли из блюза, госпела и ритм-энд-блюза — шаг за документированным шагом.',
+    },
+    does: {
+      en: 'Every artist is traced, link by sourced link, back to a card of the museum; every link carries two sources.',
+      ru: 'Каждого исполнителя можно проследить звено за звеном до карточки музея; у каждого звена два источника.',
+    },
+    cmd: 'sankofa content lint content/cards',
+    link: { hash: '#view=roots', en: 'Find your band’s roots', ru: 'Найти корни своей группы' },
+  },
 ];
 
 function term(cmd: string, multiline = false): HTMLElement {
@@ -177,7 +190,7 @@ export class Engine {
               h('p.e-culture', {}, pick(m.culture)),
               h('p.e-does', {}, pick(m.does)),
               term(m.cmd),
-              m.link ? h('a.btn', { href: m.link.hash, 'data-listen': '' }, pick(m.link)) : null,
+              m.link ? h('a.btn', { href: m.link.hash, [m.link.hash.includes('roots') ? 'data-roots' : 'data-listen']: '' }, pick(m.link)) : null,
             ),
           ),
         ),

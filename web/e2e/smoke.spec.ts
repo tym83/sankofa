@@ -193,7 +193,7 @@ test('the engine room shows cards as Kubernetes objects', async ({ page }) => {
   await expect(page.locator('.engine.open')).toBeVisible();
   await expect(page.locator('.engine .term pre').first()).toContainText('kubectl get cards');
   await expect(page.locator('.e-yaml pre')).toContainText('kind: Card');
-  await expect(page.locator('.e-card')).toHaveCount(6);
+  await expect(page.locator('.e-card')).toHaveCount(7);
 });
 
 test('#view=atlas opens the atlas on first load, and a card shows its object', async ({ page }) => {
@@ -287,4 +287,35 @@ test('each chapter ends on the cluster, and maps never stack labels', async ({ p
     return n;
   });
   expect(overlaps).toBe(0);
+});
+
+test('roots: Cyrillic search finds an artist and the chain ends at a museum card', async ({ page, request }) => {
+  const data = await (await request.get('data/cards.json')).json();
+  const artists = data.roots ?? [];
+  test.skip(!artists.length, 'no roots exported');
+  const a = [...artists].sort((x: { paths: string[][] }, y: { paths: string[][] }) => Math.max(...y.paths.map((p) => p.length)) - Math.max(...x.paths.map((p) => p.length)))[0];
+  const cyr = [a.nameRu, ...(a.aliases ?? [])].find((n: string) => /[А-Яа-яЁё]/.test(n ?? ''));
+  await page.goto('/#view=roots');
+  await expect(page.locator('.roots.open')).toBeVisible();
+  if (cyr) {
+    await page.locator('.r-input').fill(cyr.slice(0, 4));
+    await expect(page.locator(`.r-hit[data-id="${a.id}"]`)).toBeVisible();
+    await page.locator('.r-input').press('Enter');
+  } else {
+    await page.goto(`/#view=roots&artist=${a.id}`);
+  }
+  await expect(page.locator(`.r-tree[data-root="${a.id}"]`)).toBeVisible();
+  await expect(page).toHaveURL(new RegExp(`artist=${a.id}`));
+
+  // A deep link renders the chain and it ends at a card.
+  await page.goto('about:blank');
+  await page.goto(`/#view=roots&artist=${a.id}`);
+  const end = page.locator('.r-tree .r-card').last();
+  await expect(end).toBeVisible();
+  const cardId = await end.getAttribute('data-card');
+  expect(a.paths.some((p: string[]) => p[p.length - 1] === `card:${cardId}` || p[p.length - 1].startsWith('card:'))).toBe(true);
+  await expect(page.locator('.r-claim').first()).toBeVisible();
+  await expect(page.locator('.r-src a')).not.toHaveCount(0);
+  await end.click();
+  await expect(page.locator('.drawer.on article.card')).toBeVisible();
 });

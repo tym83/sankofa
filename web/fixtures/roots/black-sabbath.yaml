@@ -1,0 +1,15 @@
+id: black-sabbath
+name: Black Sabbath
+nameRu: Black Sabbath
+aliases: [блэк саббат, черный шабаш]
+years: [1968, 2017]
+place: {name: Birmingham, lat: 52.4862, lon: -1.8904}
+genre: Heavy metal
+genreRu: хеви-метал
+links:
+  - to: card:blues
+    claim: "[placeholder] Before Black Sabbath, the band played the blues under the name Earth."
+    claimRu: "[заглушка] До Black Sabbath группа играла блюз под названием Earth."
+    sources:
+      - {title: "Placeholder source: BBC Music", url: "https://www.bbc.co.uk/music"}
+      - {title: "Placeholder source: Rolling Stone", url: "https://www.rollingstone.com/"}

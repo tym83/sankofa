@@ -105,6 +105,7 @@ export function edition(e: 'm' | 'f', form: 'nom' | 'prep' = 'nom'): string {
 export const RU: Record<string, string> = {
   // nav and shell
   'The engine room': 'Машинное отделение',
+  Roots: 'Корни',
   'Engine room': 'Машинное отделение',
   'This card is a Kubernetes object': 'Эта карточка — объект Kubernetes',
   'Read it in the terminal': 'Прочитать в терминале',
