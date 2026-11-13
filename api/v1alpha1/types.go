@@ -58,6 +58,9 @@ type CardSpec struct {
 	// +kubebuilder:validation:Enum=person;genre;place;object;language;script;instrument;event;media;work;myth;comparison
 	Kind  string `json:"kind"`
 	Title string `json:"title"`
+	// The name inside a sentence, e.g. "the blues".
+	// +optional
+	Inline string `json:"inline,omitempty"`
 	// The one-line hook.
 	Wow string `json:"wow"`
 	// +kubebuilder:validation:MinItems=1
@@ -104,7 +107,9 @@ type CardSpec struct {
 // CardText is a card in another language.
 type CardText struct {
 	Title string `json:"title"`
-	Wow   string `json:"wow"`
+	// +optional
+	Inline string `json:"inline,omitempty"`
+	Wow    string `json:"wow"`
 	// +optional
 	Places []string `json:"places,omitempty"`
 	// +optional

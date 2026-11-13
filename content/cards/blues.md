@@ -2,6 +2,7 @@
 id: blues
 kind: genre
 title: The blues
+inline: "the blues"
 wow: "The \"Father of the Blues\" first heard it from a stranger at a Mississippi railway station, sliding a knife along his guitar strings."
 years: [1890, 1930]
 places:

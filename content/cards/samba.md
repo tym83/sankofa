@@ -2,6 +2,7 @@
 id: samba
 kind: genre
 title: Samba
+inline: "samba"
 wow: "The song registered in 1916 as a samba took shape at a Bahian woman's gatherings in Rio, and who wrote it is still argued over."
 years: [1916, 1917]
 places:

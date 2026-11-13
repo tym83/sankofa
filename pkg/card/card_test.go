@@ -151,3 +151,13 @@ func TestLocalizedMedia(t *testing.T) {
 		t.Fatal("Localized must not change the original")
 	}
 }
+
+func TestInlineNames(t *testing.T) {
+	a := mk(t, "a", "", "", "Spirituals fed the [[b]]. [[b]] grew.")
+	b := mk(t, "b", "", "", "x")
+	b.Title, b.Inline = "The blues", "the blues"
+	s := set(a, b)
+	if got := s.Resolved(a).Body; got != "Spirituals fed the [[b|blues]]. [[b|The blues]] grew." {
+		t.Fatal(got)
+	}
+}

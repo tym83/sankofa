@@ -2,6 +2,7 @@
 id: rhythm-and-blues
 kind: genre
 title: Rhythm and blues
+inline: "rhythm and blues"
 wow: "Billboard once filed Black popular records under \"Race\"; a young writer editing its charts gave the music a new name: rhythm and blues."
 years: [1949, 1960]
 places:

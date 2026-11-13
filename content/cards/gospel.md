@@ -2,6 +2,7 @@
 id: gospel
 kind: genre
 title: Gospel
+inline: "gospel"
 wow: "The father of gospel music was a blues pianist called \"Georgia Tom\", who wrote his best-known song in his grief after his wife and baby son died."
 years: [1932]
 places:

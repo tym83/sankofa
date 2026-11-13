@@ -109,12 +109,13 @@ type Card struct {
 	ID      string   `json:"id"`
 	Kind    string   `json:"kind"`
 	Title   string   `json:"title"`
-	Wow     string   `json:"wow"`           // one-line hook shown in crumbs
-	Years   []int    `json:"years"`         // [from] or [from, to]
-	Places  []Place  `json:"places"`        // first is the main point
-	Zoom    int      `json:"zoom"`          // 1..5, see docs/card-format.md
-	Era     string   `json:"era,omitempty"` // v0..v7
-	Books   []string `json:"books"`         // voices | archives | heirs
+	Inline  string   `json:"inline,omitempty"` // the name inside a sentence: "the blues"
+	Wow     string   `json:"wow"`              // one-line hook shown in crumbs
+	Years   []int    `json:"years"`            // [from] or [from, to]
+	Places  []Place  `json:"places"`           // first is the main point
+	Zoom    int      `json:"zoom"`             // 1..5, see docs/card-format.md
+	Era     string   `json:"era,omitempty"`    // v0..v7
+	Books   []string `json:"books"`            // voices | archives | heirs
 	Edition string   `json:"edition,omitempty"`
 	Pair    string   `json:"pair,omitempty"` // id shared by an m/f pair
 	Tags    []string `json:"tags,omitempty"`
@@ -137,6 +138,7 @@ type Card struct {
 // captions, credits and licences are translated; sources stay as they are.
 type Translation struct {
 	Title    string   `json:"title"`
+	Inline   string   `json:"inline,omitempty"`
 	Wow      string   `json:"wow"`
 	Places   []string `json:"places,omitempty"`  // translated place names, same order
 	Further  []string `json:"further,omitempty"` // translated "further" items, same order
@@ -544,20 +546,43 @@ func (s *Set) resolveBody(body, lang string) string {
 	var b strings.Builder
 	last := 0
 	for _, l := range tmp.Links() {
-		b.WriteString(body[last:l.Start])
+		before := body[last:l.Start]
 		t := s.ByID[l.Target]
-		switch {
-		case t == nil || l.Explicit:
+		if t == nil || l.Explicit {
+			b.WriteString(before)
 			b.WriteString(body[l.Start:l.End])
-		default:
-			title := t.Title
-			if tr := t.Translations[lang]; lang != "" && tr != nil {
-				title = tr.Title
-			}
-			b.WriteString("[[" + l.Target + "|" + title + "]]")
+			last = l.End
+			continue
 		}
+		title, inline := t.Title, t.Inline
+		if tr := t.Translations[lang]; lang != "" && tr != nil {
+			title, inline = tr.Title, tr.Inline
+		}
+		name := title
+		if inline != "" && !sentenceStart(body[:l.Start]) {
+			name = inline
+		}
+		// "the [[blues]]" must not become "the The blues".
+		if lb := strings.ToLower(before); strings.HasSuffix(lb, "the ") && strings.HasPrefix(strings.ToLower(name), "the ") {
+			name = name[4:]
+		}
+		b.WriteString(before)
+		b.WriteString("[[" + l.Target + "|" + name + "]]")
 		last = l.End
 	}
 	b.WriteString(body[last:])
 	return b.String()
+}
+
+// sentenceStart reports whether text before a link ends a sentence or is empty.
+func sentenceStart(before string) bool {
+	t := strings.TrimRight(before, " \n\t\u00a0")
+	if t == "" {
+		return true
+	}
+	switch t[len(t)-1] {
+	case '.', '!', '?', ':':
+		return true
+	}
+	return false
 }

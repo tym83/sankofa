@@ -2,6 +2,7 @@
 id: detroit-techno
 kind: genre
 title: Detroit techno
+inline: "Detroit techno"
 wow: "Techno ran from three high-school friends in a small Michigan town to a Berlin that had just lost its Wall."
 years: [1981]
 places:

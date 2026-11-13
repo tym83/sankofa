@@ -2,6 +2,7 @@
 id: chicago-house
 kind: genre
 title: Chicago house
+inline: "Chicago house"
 wow: "House music is named after a club: in Knuckles's own account, a shop sign's \"house music\" meant what he played at the Warehouse."
 years: [1977]
 places:

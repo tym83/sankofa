@@ -2,6 +2,7 @@
 id: jazz
 kind: genre
 title: Jazz
+inline: "jazz"
 wow: "The first jazz record, in 1917, was made by a white band from New Orleans that then claimed to have invented the music it had learned from Black musicians."
 years: [1898, 1928]
 places:

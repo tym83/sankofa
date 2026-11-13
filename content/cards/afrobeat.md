@@ -2,6 +2,7 @@
 id: afrobeat
 kind: genre
 title: Afrobeat
+inline: "Afrobeat"
 wow: "Afrobeat turned political in Los Angeles in 1969, when an activist introduced a Lagos bandleader to Malcolm X and the Black Power thinkers."
 years: [1969]
 places:

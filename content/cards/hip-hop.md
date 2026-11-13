@@ -2,6 +2,7 @@
 id: hip-hop
 kind: genre
 title: Hip-hop
+inline: "hip-hop"
 wow: "Hip-hop began with a trick: two copies of the same funk record on two turntables, so the drum break never had to end."
 years: [1973]
 places:

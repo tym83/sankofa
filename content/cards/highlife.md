@@ -2,6 +2,7 @@
 id: highlife
 kind: genre
 title: Highlife
+inline: "highlife"
 wow: "The name came from the people outside: Gold Coast onlookers outside the elite ballrooms called the music inside the 'high life'."
 years: [1920]
 places:

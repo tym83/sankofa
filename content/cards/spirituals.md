@@ -2,6 +2,7 @@
 id: spirituals
 kind: genre
 title: Spirituals
+inline: "spirituals"
 wow: "The students who carried spirituals from Nashville to Queen Victoria had not dreamed of singing them in public: the songs belonged to slavery."
 years: [1780, 1878]
 places:

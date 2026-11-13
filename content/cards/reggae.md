@@ -2,6 +2,7 @@
 id: reggae
 kind: genre
 title: Reggae
+inline: "reggae"
 wow: "The first song to use the word reggae came out in 1968, and its singer said the word came from Trench Town slang for someone who dresses badly."
 years: [1968]
 places:

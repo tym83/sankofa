@@ -2,6 +2,7 @@
 id: work-songs
 kind: genre
 title: Work songs and field hollers
+inline: "work songs and field hollers"
 wow: "In the 1790s a doctor in Sierra Leone heard rowers singing as leader and chorus; in 1947 Alan Lomax taped work songs at Mississippi's Parchman Farm."
 years: [1790, 1948]
 places:

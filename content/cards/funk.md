@@ -2,6 +2,7 @@
 id: funk
 kind: genre
 title: Funk
+inline: "funk"
 wow: "A short drum break from 1970 has been sampled on hundreds of records, hip-hop above all, while the drummer who played it got very little for it."
 years: [1965, 1980]
 places:

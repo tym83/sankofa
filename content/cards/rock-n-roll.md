@@ -2,6 +2,7 @@
 id: rock-n-roll
 kind: genre
 title: Rock and roll
+inline: "rock and roll"
 wow: "The record often called the first rock and roll single came out under the singer's name, though the band was Ike Turner's."
 years: [1951, 1959]
 places:
