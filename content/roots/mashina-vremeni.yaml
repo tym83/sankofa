@@ -1,0 +1,17 @@
+id: "mashina-vremeni"
+name: "Mashina Vremeni"
+nameRu: "Машина времени"
+aliases: ["машина времени", "андрей макаревич", "Time Machine"]
+years: [1969]
+place: {"name": "Moscow", "lat": 55.7558, "lon": 37.6173}
+genre: "Rock"
+genreRu: "рок"
+links:
+  - to: "root:the-beatles"
+    claim: "Mashina Vremeni’s Andrey Makarevich names the Beatles among his early songwriting influences."
+    claimRu: "Андрей Макаревич из «Машины времени» называет The Beatles среди тех, кто повлиял на него, когда он начинал писать песни."
+    sources:
+      - title: "Colta: Andrey Makarevich interview, June 2019"
+        url: "https://www.colta.ru/articles/music_modern/21682-andrey-makarevich-rebyata-eto-pro-vas-pro-vseh"
+      - title: "Radio Liberty: Andrey Makarevich interview, December 2003"
+        url: "https://www.svoboda.org/a/24197864.html"

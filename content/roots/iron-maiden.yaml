@@ -1,0 +1,17 @@
+id: "iron-maiden"
+name: "Iron Maiden"
+nameRu: "Iron Maiden"
+aliases: ["айрон мейден", "айрон мэйден", "железная дева"]
+years: [1975]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+genre: "Heavy metal"
+genreRu: "хеви-метал"
+links:
+  - to: "root:led-zeppelin"
+    claim: "Iron Maiden recorded a cover of Led Zeppelin’s “Communication Breakdown”."
+    claimRu: "Iron Maiden записали свою версию песни Led Zeppelin «Communication Breakdown»."
+    sources:
+      - title: "Metal Injection: Iron Maiden’s cover of Led Zeppelin’s Communication Breakdown"
+        url: "https://metalinjection.net/editorials/back-in-the-day/iron-zeppelin-iron-maidens-kick-ass-cover-of-led-zeppelins-communication-breakdown"
+      - title: "Far Out: The 10 greatest covers of Led Zeppelin songs"
+        url: "https://faroutmagazine.co.uk/led-zeppelin-greatest-covers-jeff-buckley-iron-maiden/"

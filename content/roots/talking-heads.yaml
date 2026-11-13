@@ -1,0 +1,16 @@
+id: talking-heads
+name: "Talking Heads"
+aliases: ["токинг хедс", "токинг хэдс", "дэвид бирн"]
+years: [1975]
+place: {"name": "New York", "lat": 40.7128, "lon": -74.006}
+genre: "New wave and art rock"
+genreRu: "новая волна и арт-рок"
+links:
+  - to: card:afrobeat
+    claim: "Talking Heads drew on Fela Kuti's Afrobeat when making Remain in Light."
+    claimRu: "Работая над Remain in Light, Talking Heads опирались на афробит Фелы Кути."
+    sources:
+      - title: "Library of Congress: Remain in Light — Talking Heads"
+        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
+      - title: "Pitchfork: Talking Heads — Remain in Light"
+        url: "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/"

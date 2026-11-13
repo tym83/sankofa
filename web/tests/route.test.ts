@@ -30,6 +30,13 @@ describe('route', () => {
     expect(screenOf(parseRoute('view=engine'))).toBe('engine');
   });
 
+  it('roots the roots view on an artist', () => {
+    const r = parseRoute('#view=roots&artist=metallica&lang=ru');
+    expect(screenOf(r)).toBe('roots');
+    expect(r.artist).toBe('metallica');
+    expect(formatRoute({ point: {}, view: 'roots', artist: 'metallica' })).toBe('view=roots&artist=metallica');
+  });
+
   it('ignores unknown views', () => {
     expect(parseRoute('view=nope').view).toBeUndefined();
   });

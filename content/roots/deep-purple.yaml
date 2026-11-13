@@ -1,0 +1,17 @@
+id: "deep-purple"
+name: "Deep Purple"
+nameRu: "Deep Purple"
+aliases: ["дип пёрпл", "дип перпл"]
+years: [1968]
+place: {"name": "Hertford", "lat": 51.7958, "lon": -0.078}
+genre: "Hard rock"
+genreRu: "хард-рок"
+links:
+  - to: "card:rock-n-roll"
+    claim: "Deep Purple performed Little Richard’s “Lucille” in their 1972 concerts."
+    claimRu: "Deep Purple исполняли «Lucille» Литл Ричарда на концертах 1972 года."
+    sources:
+      - title: "MOJO: Deep Purple Made in Japan reviewed"
+        url: "https://www.mojo4music.com/articles/new-music/deep-purple-made-in-japan-reviewed-revered-72-live-album-remixed-and-expanded/"
+      - title: "metal.de: Deep Purple — In Concert ’72 reissue review"
+        url: "https://www.metal.de/reviews/deep-purple-in-concert-72-re-release-58099/"

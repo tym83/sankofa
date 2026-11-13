@@ -1,0 +1,15 @@
+id: "christina-aguilera"
+name: "Christina Aguilera"
+nameRu: "Кристина Агилера"
+aliases: ["кристина агилера", "кристина агильера"]
+years: [1980]
+place: {"name": "New York City", "lat": 40.7128, "lon": -74.006}
+genre: "Pop and soul"
+genreRu: "поп и соул"
+links:
+  - to: "card:rhythm-and-blues"
+    claim: "Christina Aguilera performed Etta James’s signature song “At Last” at James’s funeral."
+    claimRu: "Кристина Агилера исполнила «At Last», одну из главных песен Этты Джеймс, на её похоронах."
+    sources:
+      - {"title": "NME: Christina Aguilera performs At Last at Etta James’s funeral", "url": "https://www.nme.com/news/music/etta-james-1270497"}
+      - {"title": "ABC News: Christina Aguilera and Stevie Wonder pay tribute to Etta James", "url": "https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute"}

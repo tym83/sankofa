@@ -17,7 +17,18 @@ fi
 echo "content: $src"
 
 mkdir -p web/public/data web/public/media
-go run ./cmd/sankofa content export "$src/cards" -o web/public/data/cards.json
+cards="$src/cards"
+# Roots come from <content>/roots next to the cards. Until the real collection
+# has any artist, export the placeholder artists in web/fixtures/roots instead.
+if ! ls "$src/roots"/*.yaml >/dev/null 2>&1 && [ "$src" != web/fixtures ]; then
+  tmp=$(mktemp -d)
+  trap 'rm -rf "$tmp"' EXIT
+  ln -s "$root/$src/cards" "$tmp/cards"
+  ln -s "$web/fixtures/roots" "$tmp/roots"
+  cards="$tmp/cards"
+  echo "roots: placeholders from web/fixtures/roots"
+fi
+go run ./cmd/sankofa content export "$cards" -o web/public/data/cards.json
 node "$web/scripts/build-chapters.ts" "$src/chapters" web/public/data/chapters.json
 if [ -d "$src/media" ]; then
   cp -R "$src/media/." web/public/media/

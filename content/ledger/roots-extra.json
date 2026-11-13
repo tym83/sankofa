@@ -1,0 +1,208 @@
+{
+  "batch": "extra",
+  "checkedAt": "2026-11-12",
+  "researcher": "primary",
+  "method": "Each retained link was checked against two opened sources. Notes are paraphrases, not quotations. Dates for people are lifespans; a single year means birth. Dates for bands begin with formation. Place is birthplace or formation city.",
+  "links": [
+    {
+      "artist": "aquarium",
+      "to": "card:reggae",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "Kommersant Weekend: 10 albums of September",
+          "url": "https://www.kommersant.ru/doc/4493505",
+          "evidence": "The Aquarium subsection explicitly identifies Vavilon as originally written as reggae. Full body retrieved with urllib.",
+          "opened": true
+        },
+        {
+          "title": "Colta: Interview with Levsha Patsan about Aquarium in Dub",
+          "url": "https://www.colta.ru/articles/music_modern/26051-levsha-patsan-intervyu-albom-akvarium-in-dub-li-skretch-perri-pesni-bg",
+          "evidence": "The producer discusses Vavilon as an early Soviet reggae song and identifies its roots-reggae style.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    },
+    {
+      "artist": "mumiy-troll",
+      "to": "root:aquarium",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "Muzykalnaya Pravda: Lagutenko’s Prekrasny diletant",
+          "url": "https://www.newlookmedia.ru/?p=24869",
+          "evidence": "December 2012 report names the cover and includes Lagutenko explaining his interpretation. Opened via Python urllib after web timeouts.",
+          "opened": true
+        },
+        {
+          "title": "Afisha Volna: Nick Cave, The Killers, R.E.M., Mumiy Troll and others",
+          "url": "https://daily.afisha.ru/archive/volna/archive/week_playlist_041212/",
+          "evidence": "December 4, 2012 roundup identifies Mumiy Troll’s recording as the final cover in the Aquarium tribute.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    },
+    {
+      "artist": "mashina-vremeni",
+      "to": "root:the-beatles",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "Colta: Andrey Makarevich interview, June 2019",
+          "url": "https://www.colta.ru/articles/music_modern/21682-andrey-makarevich-rebyata-eto-pro-vas-pro-vseh",
+          "evidence": "At the start of the interview Makarevich explicitly confirms the Beatles as a songwriting influence.",
+          "opened": true
+        },
+        {
+          "title": "Radio Liberty: Andrey Makarevich interview, December 2003",
+          "url": "https://www.svoboda.org/a/24197864.html",
+          "evidence": "Near the end, asked about Beatles influence on his band, Makarevich acknowledges their profound impression.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    },
+    {
+      "artist": "janis-joplin",
+      "to": "card:big-mama-thornton",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "Smithsonian Folkways: Big Mama Thornton, Ball N’ Chain liner notes",
+          "url": "https://folkways-media.si.edu/docs/folkways/artwork/ARH00305.pdf",
+          "evidence": "Chris Strachwitz’s liner notes, PDF page 3, identify Thornton’s composition and Joplin’s recording.",
+          "opened": true
+        },
+        {
+          "title": "The Guardian: Big Mama Thornton profile",
+          "url": "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis",
+          "evidence": "Confirms the cover.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    },
+    {
+      "artist": "eric-clapton",
+      "to": "card:blues",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "Eric Clapton: Official biography",
+          "url": "https://ericclapton.com/pages/about",
+          "evidence": "The paragraph following Reptile describes the Robert Johnson covers assembled into the March 2004 album.",
+          "opened": true
+        },
+        {
+          "title": "All About Jazz: Me and Mr. Johnson review",
+          "url": "https://www.allaboutjazz.com/me-and-mr-johnson-eric-clapton-reprise-review-by-doug-collette/",
+          "evidence": "Doug Collette reviews the Robert Johnson tribute and lists all fourteen songs with Johnson credits.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    },
+    {
+      "artist": "joss-stone",
+      "to": "root:the-white-stripes",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "musicOMH: Joss Stone — The Soul Sessions",
+          "url": "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions",
+          "evidence": "John Murphy’s 2003 review explicitly describes the White Stripes cover and changed title.",
+          "opened": true
+        },
+        {
+          "title": "Apple Music: The Soul Sessions editorial album note",
+          "url": "https://music.apple.com/us/album/the-soul-sessions/712408255",
+          "evidence": "Editorial note identifies the White Stripes original and Stone’s remake; linked music video bears the Boy title.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    },
+    {
+      "artist": "creedence-clearwater-revival",
+      "to": "card:rhythm-and-blues",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "Concord: Creedence Clearwater Revival, 40th Anniversary Edition",
+          "url": "https://concord.com/concord-albums/creedence-clearwater-revival-40th-anniv-edition/",
+          "evidence": "Record label identifies the Screamin’ Jay Hawkins cover on the debut album.",
+          "opened": true
+        },
+        {
+          "title": "El País: El salvaje más truculento",
+          "url": "https://elpais.com/cultura/2025-05-26/el-salvaje-mas-truculento.html",
+          "evidence": "Diego A. Manrique identifies Creedence among the artists who recorded Hawkins’s song.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    },
+    {
+      "artist": "deep-purple",
+      "to": "card:rock-n-roll",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "MOJO: Deep Purple Made in Japan reviewed",
+          "url": "https://www.mojo4music.com/articles/new-music/deep-purple-made-in-japan-reviewed-revered-72-live-album-remixed-and-expanded/",
+          "evidence": "James McNair identifies Lucille as Little Richard’s song in the 1972 Japan recordings; expanded tracklist dates it to Osaka, August 16.",
+          "opened": true
+        },
+        {
+          "title": "metal.de: Deep Purple — In Concert ’72 reissue review",
+          "url": "https://www.metal.de/reviews/deep-purple-in-concert-72-re-release-58099/",
+          "evidence": "Markus Endres identifies the Little Richard cover in the BBC concert recorded in London on March 9, 1972. Independent performance corroborates the shared cover claim.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    },
+    {
+      "artist": "van-morrison",
+      "to": "card:blues",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "Mississippi Blues Trail: Big Joe Williams",
+          "url": "https://msbluestrail.org/blues-trail-markers/big-joe-williams",
+          "evidence": "Historical marker text lists Van Morrison with Them among artists who covered Williams’s signature song.",
+          "opened": true
+        },
+        {
+          "title": "Connswater Community Greenway: Mystic of the East — The Van Morrison Trail",
+          "url": "https://s3-eu-west-1.amazonaws.com/vanmorrisoncom/downloads/Mystic-of-the-East_The-Van-Morrison-Trail-Interactive-Map.pdf",
+          "evidence": "Printed page 7 (PDF page 4) identifies Them’s recording as a Big Joe Williams cover. Independent Belfast heritage guide hosted by the artist.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    },
+    {
+      "artist": "joe-cocker",
+      "to": "card:rhythm-and-blues",
+      "status": "researched",
+      "sources": [
+        {
+          "title": "NPR Morning Edition: Singer Joe Cocker dies at 70 (BPR transcript)",
+          "url": "https://www.bpr.org/2014-12-23/singer-joe-cocker-dies-of-lung-cancer-at-70",
+          "evidence": "Archival Cocker interview explains how he changed the rhythm of the Ray Charles number.",
+          "opened": true
+        },
+        {
+          "title": "Contemporary Musicians: Joe Cocker (Encyclopedia.com)",
+          "url": "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker",
+          "evidence": "Joan Goldsworthy and Bruce Walker describe the title cover and album tribute to Charles. Avoided conflicting discography date; no date claimed.",
+          "opened": true
+        }
+      ],
+      "secondReview": "confirmed in roots-extra-review.json"
+    }
+  ]
+}

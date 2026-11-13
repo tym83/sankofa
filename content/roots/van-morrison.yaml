@@ -1,0 +1,17 @@
+id: "van-morrison"
+name: "Van Morrison"
+nameRu: "Ван Моррисон"
+aliases: ["ван моррисон", "вэн моррисон", "Them"]
+years: [1945]
+place: {"name": "Belfast", "lat": 54.5973, "lon": -5.9301}
+genre: "R&B / soul / folk rock"
+genreRu: "ритм-энд-блюз / соул / фолк-рок"
+links:
+  - to: "card:blues"
+    claim: "Van Morrison, with Them, recorded Big Joe Williams’s blues standard “Baby Please Don’t Go”."
+    claimRu: "Ван Моррисон в составе Them записал блюзовый стандарт Биг Джо Уильямса «Baby Please Don’t Go»."
+    sources:
+      - title: "Mississippi Blues Trail: Big Joe Williams"
+        url: "https://msbluestrail.org/blues-trail-markers/big-joe-williams"
+      - title: "uDiscover Music: Baby, Please Don’t Go — Exploring Songs of the Blues"
+        url: "https://www.udiscovermusic.com/stories/roots-blues-baby-please-dont-go"

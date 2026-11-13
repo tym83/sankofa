@@ -1,0 +1,15 @@
+id: "dolly-parton"
+name: "Dolly Parton"
+nameRu: "Долли Партон"
+aliases: ["долли партон"]
+years: [1946]
+place: {"name": "Sevier County, Tennessee", "lat": 35.8036, "lon": -83.5284}
+genre: "Country"
+genreRu: "кантри"
+links:
+  - to: "root:the-beatles"
+    claim: "Dolly Parton recorded the Beatles’ “Let It Be” with Paul McCartney and Ringo Starr for Rockstar."
+    claimRu: "Долли Партон записала «Let It Be» группы Beatles вместе с Полом Маккартни и Ринго Старром для альбома Rockstar."
+    sources:
+      - {"title": "Dolly Parton: Let It Be release announcement", "url": "https://www.dollyparton.com/news/dolly-parton-releases-her-powerful-rendition-of-rock-classic-let-it-be"}
+      - {"title": "Reuters / The Fiji Times: Surviving Beatles join Dolly Parton on Let It Be", "url": "https://www.fijitimes.com.fj/surviving-beatles-join-dolly-parton-on-let-it-be-cover/"}

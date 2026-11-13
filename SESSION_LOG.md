@@ -63,3 +63,38 @@
 - Coverage/integrity audit: 43/43 card additions, 4/4 requested heroes, 47/47 matching ledger records and file hashes; all derivatives decode as JPEG, are at most 1600 pixels on the long edge and below 600,000 bytes. Total derivative size: 15,301,804 bytes. All card/chapter prose and every non-media field match b6293c5.
 - Work committed in small signed-off semantic batches on feat/media, with one final Assisted-by trailer per commit. No push or publication performed. Independent licence re-check remains for the reviewer named in MEDIA.md.
 - No open questions for this media task.
+
+### 2026-11-12 — Roots brief started
+- Goal: complete ROOTS.md in this worktree (feat/roots): about 50 documented artist ancestry entries, Russian translations/search aliases, connected museum-card endpoints, and two independent authoritative opened sources per link.
+- Scope: ROOTS.md supersedes the older distribution task and worktree instructions for this task. No stand changes, push, or publication.
+- Initial state: clean feat/roots; content/roots contains only the format README. Its explicit two-agent verification requirement governs research and cross-review.
+- Next: research concrete links in batches, cross-review every retained link, lint the full content and graph, and commit signed-off semantic batches.
+
+## Open questions — Roots
+- None.
+
+### 2026-11-12 — Roots research batches
+- Rock batch: 14 entries researched and written. Pop batch: 13 entries researched and written. Extra batch: 10 entries researched and written, including Aquarium, Mumiy Troll and Mashina Vremeni.
+- Evidence is recorded per link in content/ledger/roots-*.json. Search excerpts and inaccessible pages are not counted as opened evidence; direct HTTP retrieval is recorded when used.
+- Independent cross-review underway. Initial six extra entries confirmed by a second agent against both sources.
+- Kino's proposed reggae/post-punk path remains excluded: the examined interviews did not establish one adequately corroborated link. Other Russian entries use specific covers/collaboration or explicit songwriting testimony.
+- Next: finish modern batch and all cross-reviews, verify complete graph, run lint/CLI/export and relevant Go checks, then commit logical batches.
+
+### 2026-11-12 — Roots research and cross-review complete
+- Added 50 artists with 50 concrete links, including all requested example artists and three Russian/Soviet bands. Every retained edge has two opened independent sources and a separate second-agent review of both sources and the Russian translation.
+- Cross-review narrowed Swift, Cash and Libertines claims to what both sources establish. Aquarium now connects through the originally reggae song Vavilon, avoiding a later collaboration as the endpoint of an earlier cover. Replaced the inaccessible Dylan source with an independently opened academic publication.
+- Four research ledgers and four review ledgers retain the evidence trail; review hashes bind the final English and Russian claims. Documented metadata conventions and corrected BTS formation year and Paul Simon birthplace.
+- Relevant Go tests pass: ./pkg/roots, ./content, ./cmd/sankofa. Next: final lint, export/graph audit and CLI checks, then signed-off batch commits.
+
+### 2026-11-12 — Roots final validation
+- Content lint passes: 102 cards OK, including roots validation. Relevant Go tests pass for ./pkg/roots, ./content and ./cmd/sankofa.
+- Export contains exactly 50 artists and 50 links; all 50 paths end at existing museum cards (11 distinct endpoints), with no cycles or missing references. Maximum path length is two edges.
+- Verified all 86 review hashes (14 whole-file hashes and 72 claim/translation hashes), all research/review source URL pairs, distinct researcher/reviewer identities, and translated genres/Cyrillic aliases for every entry.
+- CLI passes 100 lookups: every English artist name and one Cyrillic alias per artist. Listing has exactly 50 entries. Additional owner-example lookup for Pete Doherty and Russian Mumiy Troll path succeeds. Local CLI examples require --content content/cards because the default card loader uses the cluster.
+- Validation counts saved in content/ledger/roots-validation.json; git diff --check passes. No Go code, museum cards, stand resources or public deployment changed.
+- Next: commit four content batches and a final documentation/audit batch; do not push.
+
+### 2026-11-12 — Roots completed
+- Committed the reviewed catalog in four signed-off batches: 7e2a199 (rock), d98c283 (electronic/alternative), 23014f1 (pop/country), 9d1dbcd (Russian/blues/soul).
+- Final documentation/audit commit records conventions, usable local CLI examples, all validation counts and this session journal. All ROOTS.md deliverables are complete; no open questions.
+- Each commit uses an English feat(content) subject, sign-off and exactly one final Assisted-by trailer. No push or publication performed.

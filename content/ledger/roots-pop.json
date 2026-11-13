@@ -1,0 +1,312 @@
+{
+  "metadataConvention": "Solo artists: birth/death years and birthplace. Bands: formation year and origin city.",
+  "entries": [
+    {
+      "artist": "taylor-swift",
+      "to": "card:funk",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Taylor Swift recorded a cover of Earth, Wind & Fire’s “September”.",
+      "sources": [
+        {
+          "title": "NPR / WBGO: Taylor Swift Covers Earth, Wind & Fire’s September",
+          "url": "https://www.wbgo.org/2018-04-13/you-know-what-fine-taylor-swift-covers-earth-wind-fires-september",
+          "opened": true,
+          "evidence": "Stephen Thompson reports the Spotify Singles cover in his April 2018 review."
+        },
+        {
+          "title": "Library of Congress: Rickey Vincent on September",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf",
+          "opened": true,
+          "evidence": "The recording-history essay identifies Swift among artists who covered the Earth, Wind & Fire song. It documents the original’s R&B success."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "madonna",
+      "to": "card:funk",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Madonna and Stephen Bray drew on Sly and the Family Stone’s funk for “Express Yourself”.",
+      "sources": [
+        {
+          "title": "Rhino: May 1989 — Madonna Releases Express Yourself",
+          "url": "https://www.rhino.com/article/may-1989-madonna-releases-express-yourself",
+          "opened": true,
+          "evidence": "The record-label history names the co-writers and describes the song as their tribute to Sly and the Family Stone."
+        },
+        {
+          "title": "Attitude: Ten reasons Like a Prayer remains an all-time classic",
+          "url": "https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/",
+          "opened": true,
+          "evidence": "The album retrospective explicitly identifies Sly and the Family Stone’s funk as inspiration for the Stephen Bray co-write."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "eminem",
+      "to": "card:funk",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Eminem’s “My Name Is” uses the riff from Labi Siffre’s funk recording “I Got The…”.",
+      "sources": [
+        {
+          "title": "MusicRadar: Chas and Dave played on a classic Eminem track",
+          "url": "https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it",
+          "opened": true,
+          "evidence": "The article identifies the Siffre recording, its session players, and its use by Dr. Dre for My Name Is; it calls the source track funk."
+        },
+        {
+          "title": "Buffalo Toronto Public Media: Labi Siffre & Eminem",
+          "url": "https://www.btpm.org/the-bridge/sample-this/labi-siffre-and-eminem",
+          "opened": true,
+          "evidence": "The programme description explicitly names I Got The… as the source used in My Name Is."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "amy-winehouse",
+      "to": "card:jazz",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Amy Winehouse recorded the jazz standard “Moody’s Mood for Love” on her debut album Frank.",
+      "sources": [
+        {
+          "title": "NME: The Amy Winehouse Band on why she was so special",
+          "url": "https://www.nme.com/features/music-interviews/amy-winehouse-band-dale-davis-3612156",
+          "opened": true,
+          "evidence": "Bassist Dale Davis discusses Winehouse’s cover on Frank and rehearsing it with her. Opened through Python urllib because web open returned 403."
+        },
+        {
+          "title": "Beat: Frank is a testament to the brilliance of Amy Winehouse",
+          "url": "https://beat.com.au/16-years-on-frank-is-a-testament-to-the-brilliance-of-amy-winehouse/",
+          "opened": true,
+          "evidence": "The independent album retrospective identifies Moody’s Mood for Love among the jazz-standard covers on her debut."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "adele",
+      "to": "root:bob-dylan",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Adele recorded Bob Dylan’s “Make You Feel My Love”.",
+      "sources": [
+        {
+          "title": "Rolling Stone: Every Adele Song, Ranked — Make You Feel My Love",
+          "url": "https://au.rollingstone.com/music/music-lists/every-adele-song-ranked-35015/make-you-feel-my-love-35062/",
+          "opened": true,
+          "evidence": "The Make You Feel My Love entry identifies Dylan as the writer of the cover on Adele’s debut; opened the article again at line 500 to reach the entry."
+        },
+        {
+          "title": "SRF: Adele bringt Emotionen in Dylans Song",
+          "url": "https://www.srf.ch/kultur/musik/cover-me-special-adele-bringt-emotionen-in-dylans-song",
+          "opened": true,
+          "evidence": "The broadcaster compares Adele’s recording with Dylan’s original and explicitly credits his songwriting."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "ed-sheeran",
+      "to": "root:eminem",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Ed Sheeran learned Eminem’s The Marshall Mathers LP by heart as a child, practising its rapid rap delivery.",
+      "sources": [
+        {
+          "title": "ABC News: How Eminem Helped Ed Sheeran Overcome Stuttering",
+          "url": "https://abcnews.com/Entertainment/eminem-helped-ed-sheeran-overcome-stuttering/story?id=31661107",
+          "opened": true,
+          "evidence": "Reports Sheeran’s 2015 speech: he memorised the album before age ten and copied its rapid, melodic, percussive delivery."
+        },
+        {
+          "title": "The Standard: Ed Sheeran on Eminem and his childhood stutter",
+          "url": "https://www.standard.co.uk/showbiz/ed-sheeran-eminem-cured-his-childhood-stutter-friendship-howard-stern-b1081401.html",
+          "opened": true,
+          "evidence": "Reports a separate 2023 Howard Stern interview in which Sheeran recalls learning and repeatedly rapping the same album."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "billie-eilish",
+      "to": "root:the-beatles",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Billie Eilish names the Beatles as a formative musical influence, having grown up listening to them.",
+      "sources": [
+        {
+          "title": "NME: Billie Eilish — Glastonbury cover interview",
+          "url": "https://www.nme.com/big-reads/billie-eilish-cover-interview-2022-glastonbury-festival-3253169",
+          "opened": true,
+          "evidence": "In the 2022 interview Eilish credits the Beatles with raising her musically and inspiring her love of music. Opened via Python urllib after web returned 403."
+        },
+        {
+          "title": "MusicRadar: Billie Eilish names the Beatles song she wishes she had written",
+          "url": "https://www.musicradar.com/news/billie-eilish-lunch-finneas-guitar",
+          "opened": true,
+          "evidence": "Reports a separate 2024 BBC interview where Eilish names the Beatles her greatest inspiration and childhood listening."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "johnny-cash",
+      "to": "card:work-songs",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Johnny Cash recorded “Rock Island Line”.",
+      "sources": [
+        {
+          "title": "Johnny Cash: Rock Island Line — official recording catalogue",
+          "url": "https://www.johnnycash.com/track/rock-island-line/",
+          "opened": true,
+          "evidence": "The official catalogue documents Cash’s released recording. Its introductory tollgate narrative is the feature discussed in the Library of Congress analysis."
+        },
+        {
+          "title": "Library of Congress: From Mule-een to New Orleans — What Was Lead Belly Saying?",
+          "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/",
+          "opened": true,
+          "evidence": "Stephen Winick traces the song to Kelly Pace’s Arkansas prison work group and specifically identifies Cash’s version as learned from Donegan rather than directly from Lead Belly."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "dolly-parton",
+      "to": "root:the-beatles",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Dolly Parton recorded the Beatles’ “Let It Be” with Paul McCartney and Ringo Starr for Rockstar.",
+      "sources": [
+        {
+          "title": "Dolly Parton: Let It Be release announcement",
+          "url": "https://www.dollyparton.com/news/dolly-parton-releases-her-powerful-rendition-of-rock-classic-let-it-be",
+          "opened": true,
+          "evidence": "The official announcement identifies the Beatles cover and McCartney and Starr’s participation on the Rockstar recording."
+        },
+        {
+          "title": "Reuters / The Fiji Times: Surviving Beatles join Dolly Parton on Let It Be",
+          "url": "https://www.fijitimes.com.fj/surviving-beatles-join-dolly-parton-on-let-it-be-cover/",
+          "opened": true,
+          "evidence": "Reuters reports the released cover, the album, and the two Beatles’ musical contributions; this is independent newsroom coverage of the recording."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "abba",
+      "to": "card:rhythm-and-blues",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "For “Dancing Queen”, ABBA took rhythmic inspiration from soul singer George McCrae’s “Rock Your Baby”.",
+      "sources": [
+        {
+          "title": "Library of Congress: Carl Magnus Palm on Arrival",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf",
+          "opened": true,
+          "evidence": "The historian explains that ABBA listened to McCrae’s hit to make the Dancing Queen groove more danceable."
+        },
+        {
+          "title": "Rolling Stone: ABBA — Dancing Queen",
+          "url": "https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/",
+          "opened": true,
+          "evidence": "The song entry explicitly credits the hit by soul singer McCrae as inspiration for Dancing Queen."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "bts",
+      "to": "root:eminem",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "BTS leader RM counts Eminem among the rappers who influenced him.",
+      "sources": [
+        {
+          "title": "El País: Interview with BTS leader RM",
+          "url": "https://english.elpais.com/culture/2023-03-15/rm-the-leader-of-k-pop-band-bts-we-work-so-hard-in-korea-because-70-years-ago-there-was-nothing.html",
+          "opened": true,
+          "evidence": "The 2023 interview explicitly identifies Eminem among RM’s cited influences, in the discussion of his aspiration to become a rapper."
+        },
+        {
+          "title": "Rolling Stone Korea: RM and Pharrell Williams in conversation",
+          "url": "https://rollingstone.co.kr/the-cover/the-cover-print-cover/18024",
+          "opened": true,
+          "evidence": "Brian Hiatt’s introduction, available in English below the Korean text, identifies Eminem among the musicians who drew the young RM into music."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "george-michael",
+      "to": "card:rhythm-and-blues",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "George Michael recorded “I Knew You Were Waiting (For Me)” as a duet with Aretha Franklin.",
+      "sources": [
+        {
+          "title": "Recording Academy: George Michael",
+          "url": "https://www.grammy.com/artists/george-michael/12041",
+          "opened": true,
+          "evidence": "The artist profile names the Franklin duet and its R&B performance award."
+        },
+        {
+          "title": "MusicRadar: Mick Hucknall on George Michael’s Aretha Franklin duet",
+          "url": "https://www.musicradar.com/artists/i-was-so-jealous-of-george-michael-mick-hucknall-says-he-was-simply-green-with-envy-when-he-learned-that-the-former-wham-star-was-recording-a-duet-with-aretha-franklin",
+          "opened": true,
+          "evidence": "The article identifies the duet and its performers, alongside Hucknall’s recollection of hearing about the collaboration."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    },
+    {
+      "artist": "christina-aguilera",
+      "to": "card:rhythm-and-blues",
+      "researcher": "pop_roots",
+      "researchStatus": "confirmed",
+      "checked": "2026-11-12",
+      "claim": "Christina Aguilera performed Etta James’s signature song “At Last” at James’s funeral.",
+      "sources": [
+        {
+          "title": "NME: Christina Aguilera performs At Last at Etta James’s funeral",
+          "url": "https://www.nme.com/news/music/etta-james-1270497",
+          "opened": true,
+          "evidence": "The report describes Aguilera’s performance at the memorial, with a performance video. Full article opened via Python urllib."
+        },
+        {
+          "title": "ABC News: Christina Aguilera and Stevie Wonder pay tribute to Etta James",
+          "url": "https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute",
+          "opened": true,
+          "evidence": "The memorial report independently describes Aguilera singing At Last and her expressed admiration for James."
+        }
+      ],
+      "secondReview": "confirmed in roots-pop-review.json"
+    }
+  ],
+  "metadataChecks": [
+    {
+      "artist": "bts",
+      "url": "https://snapshot.apple.com/us/band/6670612859",
+      "opened": true,
+      "evidence": "Apple artist profile dates formation to 2010 in Seoul, distinct from the 2013 debut."
+    }
+  ]
+}

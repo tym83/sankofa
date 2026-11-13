@@ -85,6 +85,8 @@ export interface Chapter {
 export interface CardsFile {
   version: number;
   cards: Card[];
+  /** artists traced back to museum cards (pkg/roots), when exported */
+  roots?: import('./roots').Artist[];
 }
 
 export interface ChaptersFile {

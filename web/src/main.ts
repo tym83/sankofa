@@ -17,6 +17,7 @@ import { Atlas } from './views/atlas';
 import { Descent } from './views/descent';
 import { Listen } from './views/listen';
 import { Engine } from './views/engine';
+import { Roots } from './views/roots';
 
 async function load<T>(url: string): Promise<T> {
   const r = await fetch(url);
@@ -99,7 +100,7 @@ async function start(): Promise<void> {
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
-      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
+      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
       writeRoute(route, opts.push ?? true);
     },
     closeCard() {
@@ -165,7 +166,18 @@ async function start(): Promise<void> {
     route = { point: {}, ch: chapterNow ?? undefined };
     writeRoute(route, false);
   };
+  const roots = new Roots(app, cardsFile.roots ?? []);
+  roots.onArtist = (artist) => {
+    route = { point: {}, view: 'roots', artist };
+    writeRoute(route, true);
+  };
+  roots.onClose = () => {
+    roots.close();
+    route = { point: {}, ch: chapterNow ?? undefined };
+    writeRoute(route, false);
+  };
   const closeOverlays = (keep?: string) => {
+    if (keep !== 'roots' && roots.isOpen) roots.close();
     if (keep !== 'atlas' && atlas.isOpen) atlas.close();
     if (keep !== 'descent' && descent.isOpen) descent.close();
     if (keep !== 'listen' && listen.isOpen) listen.close();
@@ -229,6 +241,16 @@ async function start(): Promise<void> {
 
   // Inline card links anywhere open the card in place.
   document.addEventListener('click', (e) => {
+    const ro = (e.target as Element).closest<HTMLElement>('[data-roots]');
+    if (ro) {
+      e.preventDefault();
+      cardDrawer.close(true);
+      closeOverlays('roots');
+      route = { point: {}, view: 'roots' };
+      writeRoute(route, true);
+      roots.open();
+      return;
+    }
     const en = (e.target as Element).closest<HTMLElement>('[data-engine]');
     if (en) {
       e.preventDefault();
@@ -274,6 +296,7 @@ async function start(): Promise<void> {
     closeOverlays(screen);
     if (screen === 'listen') listen.open();
     else if (screen === 'engine') engine.open();
+    else if (screen === 'roots') roots.open(route.artist);
     else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);
     else if (screen === 'atlas') atlas.open(route.point);
     else if (route.ch && (initial || route.ch !== chapterNow)) scrollToChapter(route.ch, initial);

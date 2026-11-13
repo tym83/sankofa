@@ -1,0 +1,17 @@
+id: "metallica"
+name: "Metallica"
+nameRu: "Metallica"
+aliases: ["металлика", "металика"]
+years: [1981]
+place: {"name": "Los Angeles", "lat": 34.0522, "lon": -118.2437}
+genre: "Thrash metal"
+genreRu: "трэш-метал"
+links:
+  - to: "root:black-sabbath"
+    claim: "Metallica recorded Black Sabbath’s “Sabbra Cadabra”, inserting a passage from “A National Acrobat”."
+    claimRu: "Metallica записали «Sabbra Cadabra» группы Black Sabbath, включив в неё фрагмент «A National Acrobat»."
+    sources:
+      - title: "Distorted Sound: Heavy Music History — Garage Inc."
+        url: "https://distortedsoundmag.com/heavy-music-history-garage-inc-metallica/"
+      - title: "Metal Hammer: The story of Metallica’s Garage Inc."
+        url: "https://www.loudersound.com/bands-artists/metallica-load-cover-songs-story-album"

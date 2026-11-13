@@ -1,0 +1,17 @@
+id: "oasis"
+name: "Oasis"
+nameRu: "Oasis"
+aliases: ["оазис", "Лиам Галлахер", "Ноэл Галлахер"]
+years: [1991]
+place: {"name": "Manchester", "lat": 53.4808, "lon": -2.2426}
+genre: "Britpop"
+genreRu: "брит-поп"
+links:
+  - to: "root:the-beatles"
+    claim: "Oasis included their cover of the Beatles’ “I Am the Walrus” on The Masterplan."
+    claimRu: "Oasis включили свою версию песни The Beatles «I Am the Walrus» в сборник The Masterplan."
+    sources:
+      - title: "Apple Music: The Masterplan — editorial album notes"
+        url: "https://music.apple.com/us/album/the-masterplan/1517453693"
+      - title: "Pitchfork: Oasis — The Masterplan"
+        url: "https://pitchfork.com/reviews/albums/5930-the-masterplan/"

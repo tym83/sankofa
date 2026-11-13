@@ -1,0 +1,16 @@
+id: daft-punk
+name: "Daft Punk"
+aliases: ["дафт панк"]
+years: [1993]
+place: {"name": "Paris", "lat": 48.8566, "lon": 2.3522}
+genre: "French house"
+genreRu: "французский хаус"
+links:
+  - to: card:chicago-house
+    claim: "On 'Teachers', Daft Punk named Chicago house musicians among their influences."
+    claimRu: "В «Teachers» Daft Punk назвали музыкантов чикаго-хауса среди тех, кто на них повлиял."
+    sources:
+      - title: "Complex: A Guide to Daft Punk"
+        url: "https://www.complex.com/music/a/david-drake/a-guide-to-daft-punk"
+      - title: "Rolling Stone: Paul Johnson, Celebrated Chicago House Producer, Dead at 50"
+        url: "https://au.rollingstone.com/music/music-news/paul-johnson-dead-28588/"

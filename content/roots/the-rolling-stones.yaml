@@ -1,0 +1,17 @@
+id: "the-rolling-stones"
+name: "The Rolling Stones"
+nameRu: "The Rolling Stones"
+aliases: ["роллинг стоунз", "роллинг стоунс"]
+years: [1962]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+genre: "Rock"
+genreRu: "рок"
+links:
+  - to: "card:blues"
+    claim: "The Rolling Stones released the blues song “Little Red Rooster” as a single."
+    claimRu: "The Rolling Stones выпустили блюзовую песню «Little Red Rooster» отдельным синглом."
+    sources:
+      - title: "The Current (MPR): Today in Music History — the Stones record a blues standard"
+        url: "https://www.thecurrent.org/feature/2019/08/28/today-in-music-history-the-stones-record-a-blues-standard"
+      - title: "uDiscover Music: Little Red Rooster, the first blues record to top the UK singles chart"
+        url: "https://www.udiscovermusic.com/stories/the-first-blues-record-to-top-the-uk-singles-chart"

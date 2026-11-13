@@ -1,0 +1,21 @@
+id: the-beatles
+name: The Beatles
+nameRu: The Beatles
+aliases: [битлз, битлы, beatles]
+years: [1960, 1970]
+place: {name: Liverpool, lat: 53.4084, lon: -2.9916}
+genre: Rock
+genreRu: рок
+links:
+  - to: card:rock-n-roll
+    claim: "[placeholder] The Beatles recorded Chuck Berry's \"Roll Over Beethoven\" and Little Richard's \"Long Tall Sally\"."
+    claimRu: "[заглушка] The Beatles записали «Roll Over Beethoven» Чака Берри и «Long Tall Sally» Литтл Ричарда."
+    sources:
+      - {title: "Placeholder source: NPR Music", url: "https://www.npr.org/music"}
+      - {title: "Placeholder source: The Guardian", url: "https://www.theguardian.com/music"}
+  - to: card:rhythm-and-blues
+    claim: "[placeholder] \"Twist and Shout\" on the Beatles' first album was a cover of the Isley Brothers' rhythm and blues record."
+    claimRu: "[заглушка] «Twist and Shout» на первом альбоме The Beatles — кавер ритм-энд-блюзовой записи Isley Brothers."
+    sources:
+      - {title: "Placeholder source: BBC Music", url: "https://www.bbc.co.uk/music"}
+      - {title: "Placeholder source: Rolling Stone", url: "https://www.rollingstone.com/"}

@@ -191,3 +191,21 @@ test('signatures and the broken node', async ({ page }, info) => {
   await settle(page, 5000);
   await shot(page, '96-listen-broken', p);
 });
+
+test('roots', async ({ page }, info) => {
+  const p = info.project.name;
+  for (const [url, name, type] of [
+    ['/#view=roots', '97-roots-search', 'met'],
+    ['/#view=roots&artist=oasis', '98-roots-chain', ''],
+    ['/#view=roots&lang=ru', '99-ru-roots-search', 'битл'],
+    ['/#view=roots&artist=metallica&lang=ru', '99-ru-roots-chain', ''],
+  ]) {
+    await page.goto('about:blank');
+    await page.goto(url);
+    await settle(page, 1500);
+    if (type) await page.locator('.r-input').fill(type);
+    else await page.locator('.r-tree').evaluate((el) => el.closest('.roots')!.scrollTo(0, el.getBoundingClientRect().top - 80));
+    await settle(page, 3200);
+    await shot(page, name, p);
+  }
+});

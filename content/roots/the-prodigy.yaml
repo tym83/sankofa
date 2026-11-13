@@ -1,0 +1,16 @@
+id: the-prodigy
+name: "The Prodigy"
+aliases: ["продиджи", "зе продиджи", "продижи"]
+years: [1990]
+place: {"name": "Braintree", "lat": 51.8787, "lon": 0.5529}
+genre: "Big beat and rave"
+genreRu: "биг-бит и рейв"
+links:
+  - to: card:hip-hop
+    claim: "The Prodigy's 'Smack My Bitch Up' samples 'Give the Drummer Some' by Ultramagnetic MCs."
+    claimRu: "В «Smack My Bitch Up» The Prodigy звучит сэмпл из «Give the Drummer Some» группы Ultramagnetic MCs."
+    sources:
+      - title: "MusicTech: Landmark Productions — The Prodigy, The Fat of the Land"
+        url: "https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/"
+      - title: "Justin Morey: Copyright Management and its Effect on the Sampling Practice of UK Dance Music Producers"
+        url: "https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf"

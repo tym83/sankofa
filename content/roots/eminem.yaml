@@ -1,0 +1,15 @@
+id: "eminem"
+name: "Eminem"
+nameRu: "Эминем"
+aliases: ["эминем", "маршалл мэтерс", "слим шейди"]
+years: [1972]
+place: {"name": "St. Joseph, Missouri", "lat": 39.7675, "lon": -94.8467}
+genre: "Hip-hop"
+genreRu: "хип-хоп"
+links:
+  - to: "card:funk"
+    claim: "Eminem’s “My Name Is” uses the riff from Labi Siffre’s funk recording “I Got The…”."
+    claimRu: "В «My Name Is» Эминема использован рифф из фанковой записи Лаби Сиффре «I Got The…»."
+    sources:
+      - {"title": "MusicRadar: Chas and Dave played on a classic Eminem track", "url": "https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it"}
+      - {"title": "Rolling Stone: Labi Siffre’s Biggest Moment Was an Eminem Sample", "url": "https://www.rollingstone.com/music/music-features/the-holdovers-song-crying-laughing-loving-lying-labi-siffre-1234939657/"}

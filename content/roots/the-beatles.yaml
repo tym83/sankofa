@@ -1,0 +1,17 @@
+id: "the-beatles"
+name: "The Beatles"
+nameRu: "The Beatles"
+aliases: ["битлз", "битлс"]
+years: [1960]
+place: {"name": "Liverpool", "lat": 53.4084, "lon": -2.9916}
+genre: "Rock"
+genreRu: "рок"
+links:
+  - to: "card:rhythm-and-blues"
+    claim: "The Beatles recorded “Twist and Shout” after the Isley Brothers made it an R&B hit."
+    claimRu: "The Beatles записали «Twist and Shout» вслед за The Isley Brothers, которые сделали эту песню хитом ритм-н-блюза."
+    sources:
+      - title: "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music, 1997)"
+        url: "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
+      - title: "Far Out: Twist and Shout — the one-take Beatles song that nearly killed John Lennon"
+        url: "https://faroutmagazine.co.uk/one-take-beatles-hit-nearly-killed-john-lennon/"

@@ -3,20 +3,23 @@
 // atlas.Parse ignores these keys, so terminal links stay compatible.
 import { formatFragment, goQueryEscape, safeParse, type Point } from './fragment';
 
-export type View = 'descent' | 'listen' | 'atlas' | 'engine';
+export type View = 'descent' | 'listen' | 'atlas' | 'engine' | 'roots';
 
 export interface Route {
   point: Point;
   ch?: string;
   view?: View;
+  /** the artist the roots view is rooted on */
+  artist?: string;
 }
 
 export function parseRoute(hash: string): Route {
   const s = hash.startsWith('#') ? hash.slice(1) : hash;
   const q = new URLSearchParams(s);
   const v = q.get('view');
-  const view = v === 'descent' || v === 'listen' || v === 'atlas' || v === 'engine' ? v : undefined;
-  return { point: safeParse(s), ch: q.get('ch') ?? undefined, view };
+  const view = v === 'descent' || v === 'listen' || v === 'atlas' || v === 'engine' || v === 'roots' ? v : undefined;
+  const artist = q.get('artist') ?? undefined;
+  return { point: safeParse(s), ch: q.get('ch') ?? undefined, view, ...(artist ? { artist } : {}) };
 }
 
 /** The fragment for a route: atlas keys as Go writes them, museum keys after. */
@@ -24,6 +27,7 @@ export function formatRoute(r: Route): string {
   const extra: string[] = [];
   if (r.ch) extra.push('ch=' + goQueryEscape(r.ch));
   if (r.view) extra.push('view=' + r.view);
+  if (r.artist) extra.push('artist=' + goQueryEscape(r.artist));
   return [formatFragment(r.point), ...extra].filter(Boolean).join('&');
 }
 
