@@ -8,3 +8,5 @@ SESSION_LOG.md
 __pycache__/
 *.pyc
 features-results.json
+/sankofa
+/griot
