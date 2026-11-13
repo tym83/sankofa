@@ -51,7 +51,11 @@ type Artist struct {
 	Place   card.Place `json:"place"`
 	Genre   string     `json:"genre"`
 	GenreRU string     `json:"genreRu,omitempty"`
-	Links   []Link     `json:"links"`
+	// Story tells in two or three sentences how the artist grew out of the
+	// tradition, built only from the facts of its own links.
+	Story   string `json:"story,omitempty"`
+	StoryRU string `json:"storyRu,omitempty"`
+	Links   []Link `json:"links"`
 }
 
 var validKinds = map[string]bool{"influence": true, "cover": true, "sample": true, "member": true, "producer": true, "scene": true, "teacher": true}
