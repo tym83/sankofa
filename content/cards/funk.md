@@ -6,7 +6,7 @@ inline: "funk"
 wow: "A short drum break from 1970 has been sampled on hundreds of records, hip-hop above all, while the drummer who played it got very little for it."
 years: [1965, 1980]
 places:
-  - {name: "United States (regional origin; Cincinnati marker)", lat: 39.1446, lon: -84.4766}
+  - {name: "United States", lat: 39.1446, lon: -84.4766}
 zoom: 3
 era: v6
 books: [heirs]

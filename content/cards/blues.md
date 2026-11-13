@@ -6,7 +6,7 @@ inline: "the blues"
 wow: "The \"Father of the Blues\" first heard it from a stranger at a Mississippi railway station, sliding a knife along his guitar strings."
 years: [1890, 1930]
 places:
-  - {name: "American South (regional origin; Tutwiler marker)", lat: 34.0145, lon: -90.4318}
+  - {name: "American South", lat: 34.0145, lon: -90.4318}
   - {name: "Memphis, Tennessee", lat: 35.1495, lon: -90.0490}
 zoom: 3
 era: v5

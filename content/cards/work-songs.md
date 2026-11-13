@@ -6,7 +6,7 @@ inline: "work songs and field hollers"
 wow: "In the 1790s a doctor in Sierra Leone heard rowers singing as leader and chorus; in 1947 Alan Lomax taped work songs at Mississippi's Parchman Farm."
 years: [1790, 1948]
 places:
-  - {name: "West and Central Africa (regional roots; Sierra Leone marker)", lat: 8.4840, lon: -13.2299}
+  - {name: "West and Central Africa", lat: 8.4840, lon: -13.2299}
   - {name: "Parchman Farm, Mississippi", lat: 33.9168, lon: -90.5137}
 zoom: 3
 era: v3

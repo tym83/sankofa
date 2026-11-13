@@ -1,7 +1,7 @@
 ---
 title: Нсибиди
 wow: "Общество леопарда с реки Кросс хранило знания в тайных знаках, а его порабощённые члены перенесли само общество через Атлантику — в Гавану."
-places: ["Район реки Кросс (область происхождения; на карте — Калабар)", "Гавана", "Матансас"]
+places: ["Район реки Кросс", "Гавана", "Матансас"]
 further:
   - "Айвор Л. Миллер, «Голос леопарда: африканские тайные общества и Куба» (Voice of the Leopard: African Secret Societies and Cuba; University Press of Mississippi, 2009)"
   - "Лидия Кабрера, «Anaforuana: ritual y símbolos de la iniciación en la sociedad secreta Abakuá» (1975)"

@@ -6,7 +6,7 @@ inline: "rhythm and blues"
 wow: "Billboard once filed Black popular records under \"Race\"; a young writer editing its charts gave the music a new name: rhythm and blues."
 years: [1949, 1960]
 places:
-  - {name: "Urban United States (regional origin; New York City marker)", lat: 40.7128, lon: -74.0060}
+  - {name: "Urban United States", lat: 40.7128, lon: -74.0060}
   - {name: "Los Angeles", lat: 34.0522, lon: -118.2437}
 zoom: 3
 era: v6

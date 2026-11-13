@@ -5,7 +5,7 @@ title: Gullah Geechee
 wow: "In 1933 a Georgia woman sang a linguist a song she could not translate; decades later a woman in a Sierra Leone village knew the same Mende funeral song."
 years: [1933, 1998]
 places:
-  - {name: "Coastal South Carolina and Georgia (regional origin; Sea Islands marker)", lat: 32.3900, lon: -80.4700}
+  - {name: "Coastal South Carolina and Georgia", lat: 32.3900, lon: -80.4700}
   - {name: "Harris Neck, Georgia", lat: 31.6346, lon: -81.2690}
   - {name: "Senehun Ngola, southern Sierra Leone (approximate)", lat: 7.7500, lon: -11.7000}
 zoom: 3

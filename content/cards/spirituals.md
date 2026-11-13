@@ -6,7 +6,7 @@ inline: "spirituals"
 wow: "The students who carried spirituals from Nashville to Queen Victoria had not dreamed of singing them in public: the songs belonged to slavery."
 years: [1780, 1878]
 places:
-  - {name: "American South (regional origin; St. Helena Island marker)", lat: 32.3833, lon: -80.5650}
+  - {name: "American South", lat: 32.3833, lon: -80.5650}
   - {name: "Fisk University, Nashville", lat: 36.1689, lon: -86.8053}
   - {name: London, lat: 51.5072, lon: -0.1276}
 zoom: 3

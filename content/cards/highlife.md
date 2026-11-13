@@ -6,7 +6,7 @@ inline: "highlife"
 wow: "The name came from the people outside: Gold Coast onlookers outside the elite ballrooms called the music inside the 'high life'."
 years: [1920]
 places:
-  - {name: "Coastal Ghana (regional origin; Accra marker)", lat: 5.5600, lon: -0.2057}
+  - {name: "Coastal Ghana", lat: 5.5600, lon: -0.2057}
   - {name: "Cape Coast", lat: 5.1053, lon: -1.2466}
   - {name: Lagos, lat: 6.4541, lon: 3.3947}
 zoom: 3

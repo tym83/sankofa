@@ -5,7 +5,7 @@ title: Nsibidi
 wow: "The leopard society of the Cross River kept its knowledge in secret signs, and enslaved members carried the society itself across the Atlantic to Havana."
 years: [1911]
 places:
-  - {name: "Cross River region (regional origin; Calabar marker)", lat: 4.9757, lon: 8.3417}
+  - {name: "Cross River region", lat: 4.9757, lon: 8.3417}
   - {name: Havana, lat: 23.1136, lon: -82.3666}
   - {name: Matanzas, lat: 23.0411, lon: -81.5775}
 zoom: 3

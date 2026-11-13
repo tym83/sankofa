@@ -5,7 +5,7 @@ title: Adinkra and Sankofa
 wow: "Sankofa, the Akan sign this distribution is named after, literally means \"go back and get it\"."
 years: [1817]
 places:
-  - {name: "Akan region (regional origin; Kumasi marker)", lat: 6.6885, lon: -1.6244}
+  - {name: "Akan region", lat: 6.6885, lon: -1.6244}
   - {name: Ntonso, lat: 6.8297, lon: -1.5200}
 zoom: 3
 era: v0
