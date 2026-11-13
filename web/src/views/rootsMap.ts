@@ -252,10 +252,19 @@ export class RootsMap {
     const rects = lbls.map(({ el }) => el.getBoundingClientRect());
     const boxes: DOMRect[] = [];
     let shown = 0;
+    const hits = (r: DOMRect) => boxes.some((b) => r.left < b.right + 3 && r.right > b.left - 3 && r.top < b.bottom + 1 && r.bottom > b.top - 1);
     lbls.forEach(({ n, el }, i) => {
-      const r = rects[i];
+      let r = rects[i];
       const want = priority ? priority.has(n.id) || n.card : true;
-      const free = !boxes.some((b) => r.left < b.right + 3 && r.right > b.left - 3 && r.top < b.bottom + 1 && r.bottom > b.top - 1);
+      // Every root keeps its name: above its dot, or below it if that is taken.
+      if (n.card) {
+        el.setAttribute('y', String(-radius(n) - 5));
+        if (hits(r)) {
+          el.setAttribute('y', String(radius(n) + 16));
+          r = el.getBoundingClientRect();
+        }
+      }
+      const free = n.card || !hits(r);
       const ok = want && free && shown < budget && r.width > 0;
       el.classList.toggle('hide', !ok);
       if (ok) {
@@ -282,13 +291,22 @@ export class RootsMap {
       this.stage.scrollTo({ top: n.y! - this.stage.clientHeight / 3, behavior: reducedMotion() ? 'auto' : 'smooth' });
       return;
     }
+    // Fit the whole way down to the roots, clear of the info plate.
+    const set = reach(this.g!, id);
+    const pts = [...set].map((k) => this.g!.byId.get(k)!);
     const W = this.stage.clientWidth;
     const H = this.stage.clientHeight;
-    const k = Math.max(this.t.k, 1.6);
+    const plate = this.info.getBoundingClientRect();
+    const usableW = W - (W > 900 ? Math.min(plate.width + 40, W * 0.4) : 0);
+    const xs = pts.map((p) => p.x!);
+    const ys = pts.map((p) => p.y!);
+    const pad = 90;
+    const [x0, x1, y0, y1] = [Math.min(...xs) - pad, Math.max(...xs) + pad, Math.min(...ys) - 50, Math.max(...ys) + 50];
+    const k = Math.max(0.5, Math.min(3, usableW / (x1 - x0), H / (y1 - y0)));
     select(this.svg)
       .transition()
       .duration(reducedMotion() ? 0 : 1200)
-      .call(this.zoomer.transform as never, zoomIdentity.translate(W / 2, H / 2.4).scale(k).translate(-n.x!, -n.y!));
+      .call(this.zoomer.transform as never, zoomIdentity.translate((usableW - (x1 - x0) * k) / 2 - x0 * k, (H - (y1 - y0) * k) / 2 - y0 * k).scale(k));
   }
 }
 

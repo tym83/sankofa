@@ -6562,3 +6562,25 @@ a.r-artist:hover {
 .d-chapter b {
   hyphens: manual !important;
 }
+/* kinds in clearly different colours */
+:root {
+  --k-influence: #e3ab3d;
+  --k-cover: #4fc3a1;
+  --k-sample: #ff7a59;
+  --k-member: #7f9cff;
+  --k-producer: #d38cff;
+  --k-scene: #a9b8c9;
+  --k-teacher: #9fd86b;
+  --k-lineage: #fff3d6;
+}
+.rmap.lit .rm-edge.on {
+  stroke: #f0b84a;
+  stroke-opacity: 1;
+  stroke-width: 3;
+}
+.rmap.lit .rm-node.on .dot {
+  fill: #f0b84a;
+}
+.rm-node.card .lbl {
+  display: block !important;
+}
