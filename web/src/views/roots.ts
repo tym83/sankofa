@@ -1,7 +1,7 @@
 // Roots: type a band or an artist and watch the chain grow back, link by
 // sourced link, to a card of the museum.
 import type { App } from '../app';
-import { buildTree, chainLine, endCards, searchArtists, suggestions, type Artist, type RootLink, type TreeNode } from '../lib/roots';
+import { buildTree, chainLine, deepest, endCards, extendLineage, foldRun, KIND_LABEL, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
 import { copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
 import { formatYears } from '../lib/cards';
 import { lang, pick, t } from '../lib/i18n';
@@ -15,6 +15,7 @@ export class Roots {
   private stage: HTMLElement;
   private sugg: HTMLElement;
   private byId: Map<string, Artist>;
+  private lineage: Map<string, LineageCard>;
   private active = -1;
   private current?: string;
   onArtist?: (id: string | undefined) => void;
@@ -25,6 +26,7 @@ export class Roots {
     private artists: Artist[],
   ) {
     this.byId = new Map(artists.map((a) => [a.id, a]));
+    this.lineage = new Map(app.set.all().map((c) => [c.id, { id: c.id, roots: c.roots }] as [string, LineageCard]));
     this.input = h('input.r-input', {
       type: 'search',
       autocomplete: 'off',
@@ -165,7 +167,30 @@ export class Roots {
   }
 
   private renderEmpty(): void {
+    const top = longestRoots(this.artists, this.lineage, 4);
     this.stage.replaceChildren(
+      ...(top.length
+        ? [h(
+            'section.r-longest',
+            {},
+            h('h3', {}, pick({ en: 'The longest roots', ru: 'Самые длинные корни' })),
+            h(
+              'div.r-long-grid',
+              {},
+              top.map(({ artist, chain, borrowed }) =>
+                h(
+                  'a.r-long',
+                  { href: `#view=roots&artist=${artist.id}`, 'data-artist': artist.id },
+                  h('small', {}, pick({ en: `${chain.length - 1} steps back`, ru: `шагов назад: ${chain.length - 1}` })),
+                  h('b', {}, this.nameOf(artist)),
+                  borrowed ? h('span.r-what', {}, (lang() === 'ru' && borrowed.whatRu) || borrowed.what || '') : null,
+                  h('span.r-chain', {}, chainLine(chain, (r) => this.refName(r))),
+                ),
+              ),
+            ),
+            h('a.btn', { href: '#view=roots-map', 'data-roots-map': '' }, pick({ en: 'See every chain on one map →', ru: 'Все цепочки на одной карте →' })),
+          )]
+        : []),
       h('p.r-empty', {}, this.artists.length ? this.emptyLine() : pick({ en: 'The first chains are being written and checked.', ru: 'Первые цепочки пишутся и проверяются.' })),
     );
   }
@@ -175,24 +200,62 @@ export class Roots {
     const a = this.byId.get(id);
     this.current = id;
     if (!a) return this.renderEmpty();
-    const tree = buildTree(a, this.byId);
+    const tree = extendLineage(buildTree(a, this.byId), this.lineage);
     const ends = endCards(tree);
     let step = 0;
-    const node = (n: TreeNode): HTMLElement => {
+    const one = (n: TreeNode, isRoot = false): HTMLElement[] => {
       const parts: HTMLElement[] = [];
       if (n.link) parts.push(this.linkEl(n.link, step++));
-      parts.push(n.ref.startsWith('card:') ? this.cardEl(n.ref.slice(5), step++) : this.artistEl(n.ref, n === tree, step++));
-      if (n.children.length === 1) parts.push(node(n.children[0]));
-      else if (n.children.length > 1)
-        parts.push(h('div.r-branches', { style: `--n:${n.children.length}` }, n.children.map((c) => h('div.r-branch', {}, node(c)))));
-      return h('div.r-seq', {}, parts);
+      if (n.lineage) parts.push(this.lineageEl(step++));
+      parts.push(n.ref.startsWith('card:') ? this.cardEl(n.ref.slice(5), step++, n.lineage) : this.artistEl(n.ref, isRoot, step++));
+      return parts;
     };
+    // A node and the run of single steps after it; long runs fold in the middle.
+    const seq = (n: TreeNode, isRoot = false): HTMLElement => {
+      const run: TreeNode[] = [n];
+      let cur = n;
+      while (cur.children.length === 1) {
+        cur = cur.children[0];
+        run.push(cur);
+      }
+      const artists = run.filter((x) => !x.ref.startsWith('card:')).length;
+      const { hide } = foldRun(artists, 4);
+      const out: HTMLElement[] = [];
+      run.forEach((x, i) => {
+        const hidden = hide > 0 && i >= 2 && i < 2 + hide;
+        if (hide > 0 && i === 2) {
+          const box = h('div.r-folded', { hidden: true });
+          const btn = h(
+            'button.r-fold',
+            {
+              'aria-expanded': 'false',
+              onclick: () => {
+                box.hidden = false;
+                box.querySelectorAll('.r-anim').forEach((e) => e.classList.add('in'));
+                btn.remove();
+              },
+            },
+            pick({ en: `+${hide} steps`, ru: `ещё шагов: ${hide}` }),
+          );
+          out.push(btn, box);
+        }
+        const parts = one(x, isRoot && i === 0);
+        if (hidden) (out[out.length - 1] as HTMLElement).append(...parts);
+        else out.push(...parts);
+      });
+      if (cur.children.length > 1)
+        out.push(h('div.r-branches', { style: `--n:${cur.children.length}` }, cur.children.map((c) => h('div.r-branch', {}, seq(c)))));
+      return h('div.r-seq', {}, out);
+    };
+    const node = (n: TreeNode) => seq(n, true);
+    const story = (lang() === 'ru' && a.storyRu) || a.story;
+    const depth = deepest(tree);
     const first = a.paths[0];
     const close = first
       ? h(
           'footer.r-close',
           {},
-          h('p', {}, chainLine(first, (r) => this.refName(r)) + this.endYears(first[first.length - 1])),
+          h('p', {}, chainLine(depth, (r) => this.refName(r)) + this.endYears(depth[depth.length - 1])),
           a.paths.length > 1
             ? h('p.r-more', {}, pick({ en: `and ${a.paths.length - 1} more ${a.paths.length - 1 === 1 ? 'chain' : 'chains'} above`, ru: `и ещё цепочек выше: ${a.paths.length - 1}` }))
             : null,
@@ -213,6 +276,7 @@ export class Roots {
       h(
         'div.r-tree',
         { 'data-root': id },
+        story ? h('p.r-story', {}, story) : null,
         h('p.r-count', {}, pick({ en: `${a.paths.length} ${a.paths.length === 1 ? 'chain' : 'chains'}, ${ends.length} ${ends.length === 1 ? 'root' : 'roots'} in the museum`, ru: `Цепочек: ${a.paths.length}, корней в музее: ${ends.length}` })),
         node(tree),
       ),
@@ -240,13 +304,18 @@ export class Roots {
 
   private linkEl(l: RootLink, i: number): HTMLElement {
     const claim = (lang() === 'ru' && l.claimRu) || l.claim;
+    const what = (lang() === 'ru' && l.whatRu) || l.what;
+    const kind = l.kind ? KIND_LABEL[l.kind] : undefined;
     return h(
-      'div.r-link.r-anim',
+      `div.r-link.r-anim${l.kind ? `.k-${l.kind}` : ''}`,
       { style: `--i:${i}` },
       h('i.r-line', { 'aria-hidden': 'true' }),
       h(
         'div.r-claim',
         {},
+        kind ? h('span.r-kind', {}, h('b', { 'aria-hidden': 'true' }, kind.glyph), pick(kind)) : null,
+        // A cover or a sample names what was taken: that is the surprise.
+        what ? h('p.r-what', {}, what) : null,
         h('p', {}, claim),
         h(
           'ul.r-src',
@@ -257,12 +326,22 @@ export class Roots {
     );
   }
 
-  private cardEl(id: string, i: number): HTMLElement {
+  /** The museum's own lineage: one genre grew out of an older one. */
+  private lineageEl(i: number): HTMLElement {
+    return h(
+      'div.r-link.r-lineage.r-anim',
+      { style: `--i:${i}` },
+      h('i.r-line', { 'aria-hidden': 'true' }),
+      h('div.r-claim', {}, h('span.r-kind', {}, h('b', { 'aria-hidden': 'true' }, '↓'), pick({ en: 'grew out of', ru: 'выросло из' }))),
+    );
+  }
+
+  private cardEl(id: string, i: number, deep = false): HTMLElement {
     const c = this.app.set.forEdition(id, this.app.edition) ?? this.app.set.get(id);
     if (!c) return h('div.r-card', {}, id);
     const img = c.media?.find((m) => m.type === 'image');
     return h(
-      'a.r-card.r-anim',
+      `a.r-card.r-anim${deep ? '.r-deep' : ''}`,
       { href: `#focus=${c.id}`, 'data-card': c.id, style: `--i:${i};--era:${eraColor(c.era)}` },
       img ? h('img', { ...mediaSrc(this.app, img.file, [480]), sizes: '160px', alt: '', loading: 'lazy', decoding: 'async' }) : null,
       h(

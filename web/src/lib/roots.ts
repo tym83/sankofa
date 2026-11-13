@@ -6,8 +6,15 @@ export interface RootSource {
   url: string;
 }
 
+export type LinkKind = 'influence' | 'cover' | 'sample' | 'member' | 'producer' | 'scene' | 'teacher';
+
 export interface RootLink {
   to: string; // root:<id> | card:<id>
+  /** what kind of borrowing (pkg/roots); absent in older data */
+  kind?: LinkKind;
+  /** for covers and samples: which song or recording, and what of it */
+  what?: string;
+  whatRu?: string;
   claim: string;
   claimRu?: string;
   sources: RootSource[];
@@ -22,6 +29,9 @@ export interface Artist {
   place: { name: string; lat: number; lon: number };
   genre: string;
   genreRu?: string;
+  /** 2–3 sentences: how the artist grew out of the tradition */
+  story?: string;
+  storyRu?: string;
   links: RootLink[];
   /** each: artist ids, then the final "card:<id>" */
   paths: string[][];
@@ -72,6 +82,8 @@ export function linkTo(from: Artist | undefined, to: string): RootLink | undefin
 export interface TreeNode {
   ref: string; // artist id, or "card:<id>"
   link?: RootLink;
+  /** a step through the museum's genre lineage (a card's own `roots`) */
+  lineage?: boolean;
   children: TreeNode[];
   /** the number of complete chains through this node */
   weight: number;
@@ -123,4 +135,82 @@ export function chainLine(path: string[], name: (ref: string) => string): string
 export function suggestions(all: Artist[], n = 6): Artist[] {
   const depth = (a: Artist) => Math.max(0, ...a.paths.map((p) => p.length));
   return [...all].filter((a) => a.paths.length).sort((a, b) => depth(b) - depth(a) || b.paths.length - a.paths.length || a.name.localeCompare(b.name)).slice(0, n);
+}
+
+export const KIND_LABEL: Record<LinkKind, { en: string; ru: string; glyph: string }> = {
+  influence: { en: 'named as influence', ru: 'называл влиянием', glyph: '❝' },
+  cover: { en: 'covered', ru: 'перепел', glyph: '↻' },
+  sample: { en: 'sampled', ru: 'взял сэмпл', glyph: '◐' },
+  member: { en: 'played in', ru: 'играл в', glyph: '◎' },
+  producer: { en: 'produced', ru: 'продюсер', glyph: '◇' },
+  scene: { en: 'same scene', ru: 'одна сцена', glyph: '⁂' },
+  teacher: { en: 'taught', ru: 'учил', glyph: '✎' },
+};
+
+/** A museum card as far as lineage needs it: genres name the genres they grew from. */
+export interface LineageCard {
+  id: string;
+  roots?: string[];
+}
+
+/**
+ * Unwind past the card: every card node that is a genre continues through
+ * its `roots`, down to the oldest tradition the museum has. Shared roots are
+ * drawn once per branch; cycles are cut.
+ */
+export function extendLineage(tree: TreeNode, cards: Map<string, LineageCard>, maxDepth = 6): TreeNode {
+  const grow = (n: TreeNode, seen: Set<string>, depth: number) => {
+    if (n.ref.startsWith('card:') && !n.children.length && depth < maxDepth) {
+      const c = cards.get(n.ref.slice(5));
+      for (const r of c?.roots ?? []) {
+        if (seen.has(r) || !cards.has(r)) continue;
+        const child: TreeNode = { ref: `card:${r}`, lineage: true, children: [], weight: n.weight };
+        n.children.push(child);
+        grow(child, new Set([...seen, r]), depth + 1);
+      }
+      return;
+    }
+    n.children.forEach((c) => grow(c, c.ref.startsWith('card:') ? new Set([c.ref.slice(5)]) : seen, depth));
+  };
+  grow(tree, new Set(), 0);
+  return tree;
+}
+
+/** The deepest chain of a tree, as refs from the artist to the oldest card. */
+export function deepest(tree: TreeNode): string[] {
+  let best: string[] = [];
+  const walk = (n: TreeNode, path: string[]) => {
+    const p = [...path, n.ref];
+    if (!n.children.length && p.length > best.length) best = p;
+    n.children.forEach((c) => walk(c, p));
+  };
+  walk(tree, []);
+  return best;
+}
+
+/**
+ * Runs of single steps longer than `keep` are folded: the first and last
+ * steps stay, the middle ones hide behind "+N steps". Returns how many to hide.
+ */
+export function foldRun(length: number, keep = 4): { show: number; hide: number } {
+  if (length <= keep) return { show: length, hide: 0 };
+  return { show: 2, hide: length - 2 };
+}
+
+/**
+ * The teaser on the landing: artists with the deepest chains first, then the
+ * ones whose links name a sample or a cover.
+ */
+export function longestRoots(all: Artist[], cards: Map<string, LineageCard>, n = 4): { artist: Artist; chain: string[]; borrowed?: RootLink }[] {
+  const byId = new Map(all.map((a) => [a.id, a]));
+  const rows = all
+    .filter((a) => a.paths.length)
+    .map((a) => {
+      const chain = deepest(extendLineage(buildTree(a, byId), cards));
+      const borrowed = chain
+        .map((ref, i) => (i ? linkTo(byId.get(chain[i - 1]), ref) : undefined))
+        .find((l) => l && (l.kind === 'sample' || l.kind === 'cover') && l.what);
+      return { artist: a, chain, borrowed };
+    });
+  return rows.sort((x, y) => y.chain.length - x.chain.length || Number(!!y.borrowed) - Number(!!x.borrowed) || x.artist.name.localeCompare(y.artist.name)).slice(0, n);
 }

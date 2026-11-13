@@ -1,0 +1,15 @@
+id: nina-simone-rec
+name: Nina Simone (recording)
+aliases: [нина симон]
+years: [1933, 2003]
+place: {name: Tryon, lat: 35.2085, lon: -82.2384}
+genre: Soul
+genreRu: соул
+links:
+  - to: card:gospel
+    kind: teacher
+    claim: "[placeholder] She learned to play in church in North Carolina."
+    claimRu: "[заглушка] Она училась играть в церкви в Северной Каролине."
+    sources:
+      - {title: "Placeholder source: Rolling Stone", url: "https://www.rollingstone.com/"}
+      - {title: "Placeholder source: The Guardian", url: "https://www.theguardian.com/music"}

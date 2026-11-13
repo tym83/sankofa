@@ -1,3 +1,4 @@
+import { serveFixtureRoots } from './support/roots';
 import { expect, test } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
@@ -384,4 +385,25 @@ test('in the demo the guest drummer comes and goes, in Russian too', async ({ pa
   await page.clock.runFor(31000);
   await expect(page.locator('.l-subs')).toContainText('guest-drummer уходит');
   await expect(page.locator('.l-pod.guest')).toHaveCount(0);
+});
+
+
+test('roots unwind past the card, name the kind of each link and what was borrowed', async ({ page }) => {
+  await serveFixtureRoots(page);
+  await page.goto('/#view=roots&artist=the-prodigy');
+  await expect(page.locator('.r-tree')).toBeVisible();
+  await expect(page.locator('.r-link.k-sample .r-kind')).toContainText('sampled');
+  await expect(page.locator('.r-link.k-sample .r-what')).toContainText('handclaps');
+  // gospel grows from spirituals: the chain goes on past the first card
+  await expect(page.locator('.r-lineage').first()).toBeVisible();
+  await expect(page.locator('.r-card.r-deep').first()).toBeVisible();
+
+  await page.goto('about:blank');
+  await page.goto('/#view=roots&artist=television&lang=ru');
+  await expect(page.locator('.r-story')).toContainText('[заглушка]');
+  await expect(page.locator('.r-kind').first()).toContainText('называл влиянием');
+
+  await page.goto('about:blank');
+  await page.goto('/#view=roots');
+  await expect(page.locator('.r-long').first()).toBeVisible();
 });

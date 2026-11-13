@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildTree, chainLine, endCards, fold, searchArtists, suggestions, type Artist } from '../src/lib/roots';
+import { buildTree, chainLine, deepest, endCards, extendLineage, fold, foldRun, longestRoots, searchArtists, suggestions, type Artist } from '../src/lib/roots';
 
 const link = (to: string) => ({ to, claim: `to ${to}`, sources: [{ title: 'a', url: 'https://a' }, { title: 'b', url: 'https://b' }] });
 const art = (id: string, name: string, links: string[], paths: string[][], extra: Partial<Artist> = {}): Artist => ({
@@ -57,5 +57,36 @@ describe('roots tree', () => {
 
   it('suggests the artists with the longest chains', () => {
     expect(suggestions(all, 2).map((a) => a.id)).toEqual(['oasis', 'metallica']);
+  });
+});
+
+describe('deep roots', () => {
+  const cards = new Map([
+    ['rock-n-roll', { id: 'rock-n-roll', roots: ['rhythm-and-blues', 'blues'] }],
+    ['rhythm-and-blues', { id: 'rhythm-and-blues', roots: ['blues'] }],
+    ['blues', { id: 'blues', roots: ['work-songs'] }],
+    ['work-songs', { id: 'work-songs' }],
+  ]);
+
+  it('unwinds past the card through the genre roots, down to the oldest', () => {
+    const t = extendLineage(buildTree(byId.get('metallica')!, byId), cards);
+    expect(deepest(t)).toEqual(['metallica', 'black-sabbath', 'card:blues', 'card:work-songs']);
+    const o = extendLineage(buildTree(byId.get('oasis')!, byId), cards);
+    expect(deepest(o)).toEqual(['oasis', 'the-beatles', 'card:rock-n-roll', 'card:rhythm-and-blues', 'card:blues', 'card:work-songs']);
+    const rr = o.children[0].children[0];
+    expect(rr.children.every((c) => c.lineage)).toBe(true);
+  });
+
+  it('folds long runs of single steps', () => {
+    expect(foldRun(3)).toEqual({ show: 3, hide: 0 });
+    expect(foldRun(6)).toEqual({ show: 2, hide: 4 });
+  });
+
+  it('puts the deepest chains and named borrowings first', () => {
+    const withSample = [...all];
+    withSample[2] = { ...withSample[2], links: [{ ...withSample[2].links[0], kind: 'sample', what: 'the handclaps of X' }] };
+    const top = longestRoots(withSample, cards, 2);
+    expect(top[0].artist.id).toBe('oasis');
+    expect(top[0].chain).toHaveLength(6);
   });
 });

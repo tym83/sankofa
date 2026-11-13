@@ -1,0 +1,15 @@
+id: the-velvet-underground
+name: The Velvet Underground
+aliases: [велвет андеграунд]
+years: [1964, 1973]
+place: {name: New York, lat: 40.7128, lon: -74.006}
+genre: Rock
+genreRu: рок
+links:
+  - to: root:ornette-coleman
+    kind: influence
+    claim: "[placeholder] Lou Reed said he wanted to play guitar like Ornette Coleman's free jazz."
+    claimRu: "[заглушка] Лу Рид говорил, что хотел играть на гитаре как во фри-джазе Орнетта Коулмана."
+    sources:
+      - {title: "Placeholder source: Rolling Stone", url: "https://www.rollingstone.com/"}
+      - {title: "Placeholder source: The Guardian", url: "https://www.theguardian.com/music"}
