@@ -2,6 +2,8 @@ package main
 
 import (
 	"context"
+	"fmt"
+	"time"
 
 	"github.com/spf13/cobra"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -10,6 +12,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
 	"github.com/tym83/sankofa/api/v1alpha1"
+	"github.com/tym83/sankofa/content"
 	"github.com/tym83/sankofa/pkg/card"
 )
 
@@ -50,12 +53,24 @@ func loadCardsRaw(cmd *cobra.Command) (*card.Set, error) {
 	if dir, _ := cmd.Flags().GetString("content"); dir != "" {
 		return card.LoadDir(dir)
 	}
+	s, err := loadClusterCards()
+	if err == nil {
+		return s, nil
+	}
+	// No cluster at hand: the cards are built into sankofa too.
+	fmt.Fprintln(cmd.ErrOrStderr(), tr("No cluster reachable; reading the cards built into sankofa."))
+	return card.LoadFS(content.Cards())
+}
+
+func loadClusterCards() (*card.Set, error) {
 	c, err := kubeClient()
 	if err != nil {
 		return nil, err
 	}
 	var list v1alpha1.CardList
-	if err := c.List(context.Background(), &list); err != nil {
+	ctx, cancel := context.WithTimeout(context.Background(), 8*time.Second)
+	defer cancel()
+	if err := c.List(ctx, &list); err != nil {
 		return nil, err
 	}
 	s := &card.Set{ByID: map[string]*card.Card{}}

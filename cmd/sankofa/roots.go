@@ -86,7 +86,9 @@ everyone in the collection.`,
 					}
 					indent := strings.Repeat("   ", st.Depth)
 					fmt.Fprintf(w, "%s%s → %s\n", indent, from, to)
-					fmt.Fprintf(w, "%s   %s\n", indent, stDim.Render(wrap(claim, 74-len(indent))))
+					for _, line := range strings.Split(wrap(claim, 74-len(indent)), "\n") {
+						fmt.Fprintf(w, "%s   %s\n", indent, stDim.Render(line))
+					}
 					var srcs []string
 					for _, s := range st.Link.Sources {
 						srcs = append(srcs, atlas.Hyperlink(osc, s.URL, s.Title))
