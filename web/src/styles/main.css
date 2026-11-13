@@ -4858,3 +4858,34 @@ img {
     margin: 8px 0 0;
   }
 }
+
+/* ---------- timeline as a picture ---------- */
+.tl .life rect {
+  fill: var(--era);
+  fill-opacity: 0.85;
+}
+.tl .life text.in {
+  fill: #12101a;
+  font-weight: 600;
+  font-size: 10.5px;
+  paint-order: normal;
+  stroke: none;
+}
+.tl .life text.out {
+  fill: var(--ink-2);
+  font-size: 10.5px;
+}
+.tl .life.bead circle {
+  fill: var(--era);
+  fill-opacity: 0.85;
+}
+.tl .life.bead:hover circle,
+.tl .life.bead.on circle,
+.tl .life.bead:focus circle {
+  r: 5px;
+  fill-opacity: 1;
+  stroke: var(--ink);
+}
+.tl .life.dim {
+  opacity: 0.2;
+}

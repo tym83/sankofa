@@ -532,8 +532,7 @@ export class GeoMap {
       }
       const [x, y] = this.xy(p.lon, p.lat);
       // Long names are shortened on narrow maps rather than run off the edge.
-      const max = this.w < 520 ? 24 : 44;
-      const text = p.label.length > max ? p.label.slice(0, max - 1).trimEnd() + '…' : p.label;
+      const text = shortLabel(p.label, this.w < 520 ? 22 : 40);
       if (node.textContent !== text) node.textContent = text;
       node.classList.remove('hide');
       const measured = (node as SVGTextContentElement).getComputedTextLength?.() || 0;
@@ -579,4 +578,16 @@ export class GeoMap {
 
 export function svgEl<K extends keyof SVGElementTagNameMap>(tag: K): SVGElementTagNameMap[K] {
   return document.createElementNS(NS, tag);
+}
+
+/**
+ * A map label: the name before any colon, comma or bracket ("Partus sequitur
+ * ventrem: Virginia, 1662" → "Partus sequitur ventrem"), cut at a word.
+ */
+export function shortLabel(label: string, max: number): string {
+  let s = label.split(/\s*[:(,—]\s*/)[0] || label;
+  if (s.length <= max) return s;
+  s = s.slice(0, max);
+  const cut = s.lastIndexOf(' ');
+  return (cut > max * 0.5 ? s.slice(0, cut) : s).replace(/[\s,.;]+$/, '') + '…';
 }

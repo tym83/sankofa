@@ -302,8 +302,9 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
     if (map) return map;
     map = new GeoMap(mapHost, {
       // Never under the text column; on phones at most three names.
-      avoid: () => (phone() ? [] : [[0, 0, Math.min(mapHost.clientWidth * 0.42, 620), mapHost.clientHeight]]),
-      maxLabels: () => (phone() ? 3 : 8),
+      // On phones the step box covers the lower part of the map.
+      avoid: () => (phone() ? [[0, mapHost.clientHeight * 0.52, mapHost.clientWidth, mapHost.clientHeight]] : [[0, 0, Math.min(mapHost.clientWidth * 0.42, 620), mapHost.clientHeight]]),
+      maxLabels: () => (phone() ? 3 : 5),
     });
     return map;
   };

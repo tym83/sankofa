@@ -4,7 +4,7 @@ import { scaleLinear, type ScaleLinear } from 'd3-scale';
 import { select, type Selection } from 'd3-selection';
 import { brushX, type BrushBehavior } from 'd3-brush';
 import type { Card } from '../lib/types';
-import { span } from '../lib/cards';
+import { formatYears, span } from '../lib/cards';
 import { eraColor } from '../lib/atlasModel';
 import { t } from '../lib/i18n';
 
@@ -30,7 +30,7 @@ export function yearScale(width: number, left = 24, right = 24): ScaleLinear<num
   const inner = width - left - right;
   return scaleLinear()
     .domain([1300, 1500, 1700, 1850, 1950, NOW])
-    .range([0, 0.1, 0.24, 0.48, 0.78, 1].map((f) => left + f * inner))
+    .range([0, 0.06, 0.15, 0.33, 0.72, 1].map((f) => left + f * inner))
     .clamp(true);
 }
 
@@ -84,30 +84,51 @@ export class Timeline {
     const eraH = compact ? 13 : 16;
     const eraTop = 6;
     const lifeTop = eraTop + eraLanes.length * (eraH + 3) + 12;
-    const rowH = compact ? 17 : 26;
-    const maxRows = compact ? 7 : 16;
-    const LONG = 150; // years: long durations are drawn as faint threads
+    const rowH = compact ? 15 : 20;
+    const maxRows = compact ? 7 : 14;
+    const barH = compact ? 11 : 14;
 
-    // Lives and events: pack rows, keeping room for the label.
+    // Lives are bars with their name inside, or just after the bar when it is
+    // short; everything else is a bead in a strip of its own, named on hover.
     const items = [...this.cards].sort((a, b) => span(a)[0] - span(b)[0]);
     const rows: number[] = [];
-    const placed = items.map((c) => {
+    const placed: { c: Card; x0: number; x1: number; row: number; label: 'in' | 'out' | 'none'; bead: boolean }[] = [];
+    const beads: { c: Card; x: number; lane: number }[] = [];
+    const beadEnds: number[] = [];
+    for (const c of items) {
       const [a, b] = span(c);
       const x0 = x(a);
-      // Lives are bars; events, works and objects are beads at their first year.
       const life = c.kind === 'person' && b > a;
-      const x1 = life ? Math.max(x(b), x0 + 4) : x0 + 6;
-      const lw = textWidth(c.title, compact ? 11 : 11) + 10;
-      const long = life && b - a > LONG;
-      const need = (long ? x0 + lw : Math.max(x1, x0 + lw)) + 8;
-      let row = rows.findIndex((end) => end < x0);
+      if (!life) {
+        let lane = beadEnds.findIndex((e) => e < x0 - 7);
+        if (lane < 0) lane = beadEnds.length < 3 ? beadEnds.length : beadEnds.indexOf(Math.min(...beadEnds));
+        beadEnds[lane] = x0;
+        beads.push({ c, x: x0, lane });
+        continue;
+      }
+      const x1 = Math.max(x(b), x0 + 4);
+      const lw = textWidth(c.title, compact ? 10 : 11) + 12;
+      const inside = x1 - x0 >= lw;
+      const end = (inside ? x1 : x1 + lw) + 6;
+      let row = rows.findIndex((e) => e < x0);
       if (row < 0 && rows.length < maxRows) row = rows.length;
-      const labelled = row >= 0;
-      if (row < 0) row = rows.indexOf(Math.min(...rows));
-      rows[row] = Math.max(rows[row] ?? 0, labelled ? need : x1 + 2);
-      return { c, x0, x1, row, labelled, long };
-    });
-    const axisY = lifeTop + Math.max(1, rows.length) * rowH + 8;
+      if (row < 0) {
+        // No room: the life joins the beads rather than overlap another.
+        let lane = beadEnds.findIndex((e) => e < x0 - 7);
+        if (lane < 0) lane = beadEnds.length < 3 ? beadEnds.length : beadEnds.indexOf(Math.min(...beadEnds));
+        beadEnds[lane] = x0;
+        beads.push({ c, x: x0, lane });
+        continue;
+      }
+      const fits = true;
+      // A label never runs past the right edge of the plot.
+      const label = !fits ? 'none' : inside ? 'in' : x1 + lw < x(NOW) ? 'out' : 'none';
+      rows[row] = Math.max(rows[row] ?? 0, label === 'out' ? end : x1 + 4);
+      placed.push({ c, x0, x1, row, label, bead: false });
+    }
+    const beadTop = lifeTop + Math.max(1, rows.length) * rowH + 6;
+    const lanesH = Math.max(1, beadEnds.length) * 9;
+    const axisY = beadTop + lanesH + 8;
     const H = axisY + 26;
     svg.attr('width', W).attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
 
@@ -147,39 +168,34 @@ export class Timeline {
     now.append('line').attr('x1', x(NOW)).attr('x2', x(NOW)).attr('y1', lifeTop - 6).attr('y2', axisY);
 
     const gLife = svg.append('g');
-    for (const p of placed) {
-      const y = lifeTop + p.row * rowH;
-      const [a, b] = span(p.c);
-      const g = gLife
-        .append('g')
-        .attr('class', `life${p.long ? ' long' : ''}${p.x1 - p.x0 <= 6 ? ' bead' : ''}`)
-        .attr('data-id', p.c.id)
+    const hook = (g: Selection<SVGGElement, unknown, null, undefined>, c: Card) =>
+      g
+        .attr('data-id', c.id)
         .attr('tabindex', 0)
         .attr('role', 'button')
-        .attr('aria-label', `${p.c.title}, ${a === b ? a : `${a} to ${b}`}`)
-        .style('--era', eraColor(p.c.era))
-        .on('click', () => this.opts.onSelect?.(p.c.id))
+        .attr('aria-label', `${c.title}, ${formatYears(c.years)}`)
+        .style('--era', eraColor(c.era))
+        .on('click', () => this.opts.onSelect?.(c.id))
         .on('keydown', (ev: KeyboardEvent) => {
-          if (ev.key === 'Enter') this.opts.onSelect?.(p.c.id);
+          if (ev.key === 'Enter') this.opts.onSelect?.(c.id);
         })
-        .on('mouseenter', (ev: MouseEvent) => this.opts.onHover?.(p.c.id, ev))
+        .on('mouseenter', (ev: MouseEvent) => this.opts.onHover?.(c.id, ev))
         .on('mouseleave', () => this.opts.onHover?.(null));
-      const barY = y + (compact ? 9 : 13);
-      g.append('rect')
-        .attr('x', p.x0)
-        .attr('y', barY)
-        .attr('width', p.x1 - p.x0)
-        .attr('height', p.long ? 2 : compact ? 5 : 7)
-        .attr('rx', p.x1 - p.x0 <= 6 ? 3 : 3);
-      if (p.labelled) g.append('text').attr('x', p.x0).attr('y', barY - 3).text(p.c.title);
-      g.append('rect')
-        .attr('x', p.x0 - 2)
-        .attr('y', y)
-        .attr('width', Math.max(p.x1 - p.x0, p.labelled ? p.c.title.length * 6 : 6) + 4)
-        .attr('height', rowH)
-        .attr('class', 'hit');
+    for (const p of placed) {
+      const y = lifeTop + p.row * rowH;
+      const g = hook(gLife.append('g').attr('class', 'life'), p.c);
+      g.append('rect').attr('x', p.x0).attr('y', y).attr('width', p.x1 - p.x0).attr('height', barH).attr('rx', barH / 2);
+      if (p.label !== 'none')
+        g.append('text')
+          .attr('class', p.label === 'in' ? 'in' : 'out')
+          .attr('x', p.label === 'in' ? p.x0 + 6 : p.x1 + 5)
+          .attr('y', y + barH / 2 + 3.5)
+          .text(p.c.title);
     }
-
+    for (const b of beads) {
+      const g = hook(gLife.append('g').attr('class', 'life bead'), b.c);
+      g.append('circle').attr('cx', b.x).attr('cy', beadTop + b.lane * 9 + 4).attr('r', 3.2);
+    }
     if (this.opts.brush) {
       this.brush = brushX()
         .extent([

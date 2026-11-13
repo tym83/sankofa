@@ -23,3 +23,12 @@ describe('signature numbers', () => {
     expect(firstBigNumber('no numbers here, 1781')).toBeUndefined();
   });
 });
+
+import { shortLabel } from '../src/views/map';
+describe('map labels', () => {
+  it('keep the name and cut at a word', () => {
+    expect(shortLabel('Partus sequitur ventrem: Virginia, 1662', 40)).toBe('Partus sequitur ventrem');
+    expect(shortLabel('Joseph Bologne, Chevalier de Saint-Georges', 40)).toBe('Joseph Bologne');
+    expect(shortLabel('Dahomey the Aro and the African side of the trade', 22)).toBe('Dahomey the Aro and…');
+  });
+});
