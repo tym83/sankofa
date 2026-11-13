@@ -444,3 +444,21 @@ test('breaking a node is told at once and the stopped node never checks in', asy
   const since = lines.findIndex((l) => /You\s+stopped/.test(l));
   expect(lines.slice(0, since).some((l) => /Sogo\s+checked\s+in/.test(l))).toBe(false);
 });
+
+test('the music map fits the viewport; descent level 1 shows eras; Renaissance opens on a photograph', async ({ page }) => {
+  await page.goto('/#view=roots-map');
+  await page.waitForTimeout(1500);
+  const clipped = await page.evaluate(() =>
+    [...document.querySelectorAll('.rm-node .lbl:not(.hide)')].filter((t) => {
+      const r = t.getBoundingClientRect();
+      return r.width && (r.right > innerWidth + 1 || r.left < -1);
+    }).length,
+  );
+  expect(clipped).toBe(0);
+  await page.goto('about:blank');
+  await page.goto('/#view=descent&zoom=1');
+  await expect(page.locator('.d-era').first()).toBeAttached();
+  await page.goto('about:blank');
+  await page.goto('/');
+  await expect(page.locator('#ch-v5 .hero.portrait img')).toHaveAttribute('src', /hurston/);
+});

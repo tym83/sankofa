@@ -99,11 +99,12 @@ export class RootsMap {
     const cards = new Map<string, MapCard>(this.app.set.all().map((c) => [c.id, { id: c.id, title: c.title, years: c.years, roots: c.roots }]));
     const g = (this.g = buildGraph(this.artists, cards, (a) => this.nameOf(a)));
     this.phone = window.innerWidth < 760;
-    const W = Math.max(this.stage.clientWidth || window.innerWidth, this.phone ? 0 : 1100);
+    const W = this.stage.clientWidth || window.innerWidth;
     const years = [Math.min(...g.nodes.map((n) => n.year)) - 10, Math.min(new Date().getFullYear(), Math.max(...g.nodes.map((n) => n.year)) + 6)] as [number, number];
     const H = this.phone ? Math.max(1600, g.nodes.length * 30) : Math.max(this.stage.clientHeight, 700) * 1.25;
     layout(g, W, H, years);
     this.svg.setAttribute('viewBox', `0 0 ${W} ${this.phone ? H : this.stage.clientHeight || H}`);
+    // On phones keep labels clear of both edges.
     if (this.phone) {
       this.svg.setAttribute('height', String(H));
       this.svg.setAttribute('width', String(W));
@@ -126,10 +127,16 @@ export class RootsMap {
         })
         .on('end', () => this.placeLabels());
       select(this.svg).call(this.zoomer);
-      // Start with the roots in view at the bottom.
+      // Fit the whole graph, labels included, into the view.
+      const vw = this.stage.clientWidth;
       const vh = this.stage.clientHeight;
-      const k = Math.min(1, vh / H);
-      select(this.svg).call(this.zoomer.transform, zoomIdentity.translate((W - W * k) / 2, vh - H * k).scale(k));
+      const xs = g.nodes.map((n) => n.x!);
+      const ys = g.nodes.map((n) => n.y!);
+      const pad = 110;
+      const [x0, x1] = [Math.min(...xs) - pad, Math.max(...xs) + pad];
+      const [y0, y1] = [Math.min(...ys) - 40, Math.max(...ys) + 40];
+      const k = Math.min(1.4, vw / (x1 - x0), vh / (y1 - y0));
+      select(this.svg).call(this.zoomer.transform, zoomIdentity.translate((vw - (x1 - x0) * k) / 2 - x0 * k, (vh - (y1 - y0) * k) / 2 - y0 * k).scale(k));
     }
     this.placeLabels();
     this.showInfo();
