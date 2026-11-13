@@ -1,0 +1,26 @@
+id: the-velvet-underground
+name: The Velvet Underground
+nameRu: The Velvet Underground
+aliases:
+- велвет андерграунд
+- вельвет андерграунд
+years:
+- 1965
+place:
+  name: New York City
+  lat: 40.7128
+  lon: -74.006
+genre: Art rock
+genreRu: арт-рок
+story: Lou Reed helped form the Velvet Underground as their singer, guitarist and songwriter. His writing and playing were part of the band’s musical foundation.
+storyRu: Лу Рид стоял у истоков The Velvet Underground как певец, гитарист и автор песен. Его песни и игра стали частью музыкальной основы группы.
+links:
+- to: root:lou-reed
+  kind: member
+  claim: Singer, guitarist and songwriter Lou Reed was a founding member of the Velvet Underground.
+  claimRu: Певец, гитарист и автор песен Лу Рид был одним из основателей The Velvet Underground.
+  sources:
+  - title: 'Aidan Levy: The Velvet Underground & Nico — Library of Congress'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+  - title: 'Guitar World: Lou Reed — 1998 interview'
+    url: https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview

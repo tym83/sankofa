@@ -1,0 +1,1242 @@
+# Second independent check of every edge in roots-deep-new.yaml.
+# Each verdict rests on two sources this checker opened; see README.md for actions.
+checker: second independent fact-check of roots-deep-new.yaml
+checkedOn: '2026-11-12'
+counts:
+  confirmed: 93
+  corrected: 10
+  unverified: 2
+  trivia: 5
+checks:
+- artist: abba
+  to: root:george-mccrae
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'LoC NRPB: Carl Magnus Palm on Arrival'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf
+  - title: 'Rolling Stone: ABBA, Dancing Queen'
+    url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/
+  note: 'Palm: they listened to Rock Your Baby to find the groove; RS: inspired by McCrae''s hit.'
+- artist: adele
+  to: root:etta-james
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'Hot Press: Adele 2008 interview'
+    url: >-
+      https://www.hotpress.com/music/happy-35th-birthday-adele-revisiting-a-classic-2008-interview-22966556
+  - title: 'NPR: Adele, Timeless at 22'
+    url: https://www.npr.org/2011/02/16/133814213/adele-an-unforgettable-voice-timeless-at-22
+  note: Discovered Etta James at 14 (HMV bargain bin). Vogue blocked; replaced with NPR.
+- artist: albert-ayler
+  to: card:spirituals
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'The New Yorker (Brody): Ayler''s Revelations'
+    url: https://www.newyorker.com/culture/the-front-row/the-jubilant-glory-of-albert-aylers-revelations
+  - title: Kevin Whitehead, Fresh Air (TPR copy)
+    url: https://www.tpr.org/2001-05-07/albert-ayler-testifying-the-breaking-point
+  note: >-
+    Melodic candor of spirituals; Goin' Home album. Dead KERA URL replaced with live TPR copy of the same
+    piece.
+- artist: amy-winehouse
+  to: root:dinah-washington
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'GRAMMY Museum: Beyond Black'
+    url: >-
+      https://grammymuseum.org/wp-content/uploads/2020/02/Amy-Winehouse-Exhibit-Press-Release_FINAL-d88d68fdbf.pdf
+  - title: 'Design Museum: Amy, Beyond the Stage'
+    url: https://designmuseum.org/asset/download?id=98f1cd4d-370a-4875-9221-a69f4fe4dc27
+  note: Both exhibitions list Dinah Washington first among her influences.
+- artist: amy-winehouse
+  to: root:marvin-gaye
+  kind: interpolation
+  verdict: corrected
+  sources:
+  - title: 'Classic Motown: Marvin Gaye & Tammi Terrell, United'
+    url: https://classic.motown.com/story/marvin-gaye-tammi-terrell-united/
+  - title: 'NPR The Formula: Salaam Remi on sampling'
+    url: >-
+      https://www.npr.org/2020/05/02/849076752/salaam-remi-sampling-amy-winehouse-nas-apache-marvin-gaye-tammi-terrell
+  note: >-
+    Track is built on a sample of the original recording, not re-played: kind interpolation -> sample,
+    claim/what rewritten; MusicRadar (header only) replaced with NPR. Kept as wow.
+- artist: aquarium
+  to: root:bob-marley
+  kind: influence
+  verdict: unverified
+  sources:
+  - title: Aquarium Blue Album history
+    url: https://aquarium.lipetsk.ru/MESTA/mp3/aquarium.ru-albums/siniy.htm
+  note: >-
+    Official history: in 1980 the band listened loudly to Marley, Sex Pistols, Police, Devo. The RIMA/Sobesednik
+    page is behind a bot wall; no second independent authoritative source names Marley. Removed; Aquarium
+    keeps its card:reggae link.
+- artist: arctic-monkeys
+  to: root:dr-dre
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'NME: Alex Turner, ''It sounds like Dr Dre'''
+    url: https://www.nme.com/news/music/arctic-monkeys-160-1252025
+  - title: 'Happy Mag: Engineering the Sound, AM'
+    url: https://happymag.tv/engineering-the-sound-arctic-monkeys-am/
+  note: Radio X repeats NME; replaced with NME primary.
+- artist: aretha-franklin
+  to: card:gospel
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: Detroit Historical Society
+    url: https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/franklin-aretha
+  - title: TIME
+    url: https://time.com/5367138/aretha-franklin-appreciation/
+  note: First solo in father's church; five years with his travelling gospel show.
+- artist: arthur-crudup
+  to: card:gospel
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Virginia HJ672
+    url: https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf=
+  - title: 'Mississippi Blues Trail: Crudup'
+    url: https://visitmississippi.org/things-to-do/blues-trail/mississippi-blues-trail-arthur-big-boy-crudup/
+  note: Honed talents singing gospel; grew up singing spirituals.
+- artist: bessie-smith
+  to: card:blues
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'NPS: Bessie Smith'
+    url: https://home.nps.gov/locations/lowermsdeltaregion/bessie-smith.htm
+  - title: 'NPR: Bessie Smith, Empress of the Stage'
+    url: https://www.npr.org/2019/08/09/748402597/empress-of-the-stage
+  note: Moses Stokes company, Ma Rainey, TOBA circuit. NMAAHC returns 403; replaced with NPR.
+- artist: big-mama-thornton
+  to: card:big-mama-thornton
+  kind: scene
+  verdict: corrected
+  sources:
+  - title: 'Yale Library: Big Mama Thornton, Early Years'
+    url: https://onlineexhibits.library.yale.edu/s/ohamstruggles/page/bmt1
+  - title: 'Encyclopedia of Alabama: Big Mama Thornton'
+    url: https://encyclopediaofalabama.org/article/willie-mae-big-mama-thornton/
+  note: >-
+    Facts hold. Link pointed at her own card (self-loop); retargeted to card:blues. Folkways 403 replaced
+    with Encyclopedia of Alabama. Note: no artist links to root:big-mama-thornton (Elvis and Joplin link
+    the card directly), so this file is an entry point only.
+- artist: billy-cobham
+  to: root:miles-davis
+  kind: member
+  verdict: confirmed
+  sources:
+  - title: 'Blue Note: Billy Cobham'
+    url: https://www.bluenote.com/artist/billy-cobham/
+  - title: 'Hit Channel: Billy Cobham interview'
+    url: https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/
+  note: Bitches Brew sessions, Jack Johnson, Live-Evil; then Mahavishnu.
+- artist: billy-cobham
+  to: card:jazz
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'Blue Note: Billy Cobham'
+    url: https://www.bluenote.com/artist/billy-cobham/
+  - title: 'Hit Channel: Billy Cobham interview'
+    url: https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/
+  note: "'Fusion's greatest drummer'; Mahavishnu from 1971."
+- artist: black-sabbath
+  to: root:eric-clapton
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Tony Iommi official biography
+    url: https://www.iommi.com/biography/
+  - title: 'Guitar World: Iommi 2008 outtake'
+    url: >-
+      https://www.guitarworld.com/magazine/tony-iommi-talks-dio-van-halen-judas-priest-and-more-outtake-2008-guitar-world-interview
+  note: Mayall-era Clapton as key blues inspiration. Given GW article loaded only its title; replaced.
+- artist: bob-dylan
+  to: root:robert-johnson
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'Keith Negus: Dylan''s phonographic imagination'
+    url: https://research.gold.ac.uk/4704/1/BobDylanPhonographicImag.pdf
+  - title: 'Elijah Wald: Dylan, Van Ronk and Robert Johnson'
+    url: https://elijahwald.com/davdyl.html
+  note: Dylan copied Johnson's lines to study song construction. LA Times blocked; replaced with Wald.
+- artist: bob-marley
+  to: root:lee-scratch-perry
+  kind: producer
+  verdict: confirmed
+  sources:
+  - title: 'Bob Marley estate: History'
+    url: https://www.bobmarley.com/history/
+  - title: Cambridge Companion to Pop and Rock
+    url: https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf
+  note: Perry paired the Wailers with the Barretts.
+- artist: bob-marley
+  to: card:reggae
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'Bob Marley estate: History'
+    url: https://www.bobmarley.com/history/
+  - title: Cambridge Companion to Pop and Rock
+    url: https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf
+  note: Perry sides 'established an enduring paradigm for roots reggae'.
+- artist: charles-mingus
+  to: card:gospel
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Charles Mingus estate
+    url: https://www.charlesmingus.com/mingusbio
+  - title: 'Blue Note: Charles Mingus'
+    url: https://www.bluenote.com/artist/charles-mingus/
+  note: 'Earliest influences: church choir and group singing.'
+- artist: charles-mingus
+  to: card:jazz
+  kind: influence
+  verdict: corrected
+  sources:
+  - title: 'WICN: Charles Mingus, April 2022'
+    url: https://wicn.org/wicn-artist-of-the-month-april-2022-charles-mingus/
+  - title: 'Blue Note: Charles Mingus'
+    url: https://www.bluenote.com/artist/charles-mingus/
+  note: >-
+    A gospel claim pointing at card:jazz said nothing about lineage. Retargeted to card:gospel; claim
+    made concrete: 'Better Git It in Your Soul' inspired by the gospel singing and preaching of his youth
+    (WICN, verified).
+- artist: charley-patton
+  to: card:blues
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'Mississippi Encyclopedia: Charley Patton'
+    url: https://mississippiencyclopedia.org/entries/charley-patton/
+  - title: 'NPS: Charley Patton'
+    url: https://home.nps.gov/locations/lowermsdeltaregion/charley-patton.htm
+  note: Studied Henry Sloan at Dockery.
+- artist: charlie-parker
+  to: card:jazz
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'Ed Komara: Ko Ko (LoC NRPB)'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf
+  - title: 'KCUR: Charlie Parker history tour'
+    url: >-
+      https://www.kcur.org/arts-life/2016-08-29/kansas-citys-charlie-parker-history-tour-requires-a-guide-and-imagination
+  note: Apprenticeship with Kansas City bands.
+- artist: christina-aguilera
+  to: root:etta-james
+  kind: influence
+  verdict: corrected
+  sources:
+  - title: Biography Today (2000) via ERIC
+    url: https://files.eric.ed.gov/fulltext/ED452104.pdf
+  - title: 'ABC News: Etta James funeral tribute'
+    url: >-
+      https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute
+  note: >-
+    'Tried to emulate' overstated; now: grew up on Etta James records introduced by her mother, names
+    James her favourite blues singer.
+- artist: chuck-berry
+  to: card:rhythm-and-blues
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'Rock Hall: Chuck Berry'
+    url: https://rockhall.com/inductees/chuck-berry/
+  - title: Chuck Berry official biography
+    url: https://www.chuckberry.com/biography
+  note: Fusion of blues, R&B and country.
+- artist: creedence-clearwater-revival
+  to: root:little-richard
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'Rock Cellar: John Fogerty interview'
+    url: https://rockcellarmagazine.com/john-fogerty-a-fortunate-son-speaks-the-interview/
+  - title: 'Den of Geek: John Lingan on CCR'
+    url: >-
+      https://www.denofgeek.com/culture/why-creedence-clearwater-revival-remains-the-definitive-band-of-its-era/
+  note: Songwriting spurred on by Little Richard; 'the rasp and the howl'.
+- artist: daft-punk
+  to: root:edwin-birdsong
+  kind: sample
+  verdict: confirmed
+  sources:
+  - title: 'Resident Advisor: Edwin Birdsong obituary'
+    url: https://ra.co/news/43130
+  - title: 'Radio Milwaukee: Sample, Better, Faster, Stronger'
+    url: https://radiomilwaukee.org/2013-05-23/sample-better-faster-stronger
+  note: Cola Bottle Baby is the basis of the track; Birdsong co-credited. Wow.
+- artist: david-bowie
+  to: root:nina-simone
+  kind: cover
+  verdict: trivia
+  sources:
+  - title: Verve/UMe press release
+    url: >-
+      https://www.prnewswire.com/news-releases/nina-simones-historic-philips-years-celebrated-with-vinyl-remasters-of-seven-classic-albums-including-nina-simone-in-concert-wild-is-the-wind-high-priestess-of-soul-300337404.html
+  - title: NPO Radio 2
+    url: >-
+      https://www.nporadio2.nl/nieuws/top2000/93682543-a548-417c-b69e-9b220e4b507b/david-bowies-wild-is-the-wind-is-een-eerbetoon-aan-nina-simone
+  note: >-
+    True but a single cover that duplicates Bowie's existing card:jazz link word for word; no formation
+    shown. Removed; nina-simone was then orphaned and removed.
+- artist: deep-purple
+  to: root:little-richard
+  kind: influence
+  verdict: corrected
+  sources:
+  - title: 'ABC Radio National: Ian Gillan (2006)'
+    url: https://www.abc.net.au/listen/programs/musicshow/ian-gillan/3338452
+  - title: 'Wikimetal: Interview with Ian Gillan (2011)'
+    url: https://www.wikimetal.com.br/en/site/interview-with-ian-gillan
+  note: >-
+    Louder 'making of In Rock' loads only a header. Gillan (Wikimetal): music inspiration came from 'young
+    Elvis, Little Richard, Buddy Holly'; 'it's important, when you're young, to copy ... Little Richard'.
+    Claim now: Little Richard among the singers who first drew Gillan to music.
+- artist: dinah-washington
+  to: card:gospel
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'Encyclopedia of Alabama: Dinah Washington'
+    url: https://encyclopediaofalabama.org/article/dinah-washington/
+  - title: Alabama Music Hall of Fame
+    url: https://www.alamhof.org/dinah-washington-1
+  note: Church choir, piano, Sallie Martin's accompanist.
+- artist: dr-dre
+  to: card:funk
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: LoC NRPB The Chronic (Grove)
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf
+  - title: Pitchfork The Chronic
+    url: https://pitchfork.com/reviews/albums/dr-dre-the-chronic/
+  note: Both sources support the claim, kind and wording.
+- artist: earth-wind-and-fire
+  to: card:jazz
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: EWF official bio
+    url: https://www.earthwindandfire.com/history/biography/
+  - title: Guardian Maurice White obit
+    url: https://www.theguardian.com/music/2016/feb/05/maurice-white-obituary
+  note: >-
+    Official bio: 'basically jazz musicians', Ramsey Lewis Trio; Guardian obituary: White's years in the
+    Ramsey Lewis trio. Link removed with the artist file after the Taylor Swift cover link (95) was removed
+    and Earth, Wind & Fire was orphaned.
+- artist: edwin-birdsong
+  to: card:funk
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: Wax Poetics
+    url: https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/
+  - title: RA obit
+    url: https://ra.co/news/43130
+  note: 'Birdsong–Ayers partnership produced jazz-funk; RA: co-produced three albums with Ayers.'
+- artist: elvis-presley
+  to: root:arthur-crudup
+  kind: cover
+  verdict: confirmed
+  sources:
+  - title: AP via Chicago Sun-Times
+    url: >-
+      https://chicago.suntimes.com/music/2024/07/05/bluesman-arthur-crudup-wrote-thats-all-right-elvis-first-hit-song-but-he-barely-got-paid-for-it
+  - title: Virginia HJ672
+    url: https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf=
+  note: >-
+    AP and the Virginia resolution: Crudup's 1946 song became Presley's first single. A debut built on
+    a Black blues record: kept.
+- artist: eminem
+  to: root:rakim
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Apple Music Zane Lowe via Grungecake
+    url: https://grungecake.com/eminem-apple-music-beats-1/news/74251/
+  - title: SiriusXM Shade 45
+    url: https://www.siriusxm.com/blog/eminem-ll-cool-j-rakim-shade-45
+  note: >-
+    Eminem praises Rakim's multisyllabic internal rhymes; NPR piece mentions Eminem only in passing, replaced
+    with SiriusXM.
+- artist: eminem
+  to: root:labi-siffre
+  kind: sample
+  verdict: confirmed
+  sources:
+  - title: Pitchfork Siffre
+    url: https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/
+  - title: MusicRadar
+    url: >-
+      https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it
+  note: 'Pitchfork: Dre looped the guitar of ''I Got The…'' to launch ''My Name Is''. Wow.'
+- artist: eric-clapton
+  to: root:robert-johnson
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Guitar World King and I
+    url: https://www.guitarworld.com/artists/eric-clapton-king-and-i
+  - title: NPR 2004
+    url: https://www.npr.org/2004/03/30/1798862/eric-clapton-takes-on-robert-johnsons-blues
+  note: >-
+    Teenage Clapton heard Johnson as 'a religious experience'. Pennyblackmusic did not load; replaced
+    with NPR.
+- artist: etta-james
+  to: card:gospel
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: California Museum
+    url: https://californiamuseum.org/inductee/etta-james/
+  - title: Biography.com
+    url: https://www.biography.com/musicians/etta-james
+  note: Both sources support the claim, kind and wording.
+- artist: fela-kuti
+  to: card:afrobeat
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Rock Hall Fela
+    url: https://rockhall.com/inductees/fela-kuti/
+  - title: Trinity Laban
+    url: https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/
+  note: >-
+    Rock Hall: fused highlife, jazz and soul into Afrobeat. As originator, 'scene' would also fit; left
+    as is.
+- artist: fela-kuti
+  to: root:james-brown
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'Rock & Roll Hall of Fame: Fela Kuti'
+    url: https://rockhall.com/inductees/fela-kuti/
+  - title: Inayatullah Contexto Internacional
+    url: https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en
+  note: 'Rock Hall: influenced by James Brown on his US tour; Veal via Inayatullah.'
+- artist: george-mccrae
+  to: card:gospel
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: Beat Instrumental 1975
+    url: https://worldradiohistory.com/UK/Beat-Instrumental/Beat-Instrumental-1975-02-S-OCR.pdf
+  - title: Maxazine 2020
+    url: https://maxazine.com/2020/07/17/george-mccrae-its-all-about-love/
+  note: Both sources support the claim, kind and wording.
+- artist: george-michael
+  to: root:stevie-wonder
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Rock Hall George Michael
+    url: https://rockhall.com/inductees/george-michael/
+  - title: Guardian Elton John
+    url: >-
+      https://www.theguardian.com/global/2017/oct/15/the-george-michael-we-knew-by-elton-john-mariah-carey-james-corden-tatjana-patitz
+  note: Both sources support the claim, kind and wording.
+- artist: george-michael
+  to: root:james-brown
+  kind: sample
+  verdict: confirmed
+  sources:
+  - title: Rolling Stone 500
+    url: >-
+      https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/george-michael-freedom-90-3-30441/
+  - title: MusicRadar Funky Drummer
+    url: >-
+      https://www.musicradar.com/drums/it-was-deemed-that-an-artist-could-sample-an-unrecognisable-portion-of-a-work-without-the-need-to-declare-the-sample-or-indeed-pay-the-original-artist-when-sampling-ruled-the-world-and-drummers-didnt-get-paid
+  note: Hit built on Clyde Stubblefield's 'Funky Drummer' break. Wow.
+- artist: howlin-wolf
+  to: root:charley-patton
+  kind: teacher
+  verdict: confirmed
+  sources:
+  - title: MS Blues Trail Wolf
+    url: https://msbluestrail.org/blues-trail-markers/howlin-wolf
+  - title: NPS Wolf
+    url: https://www.nps.gov/locations/lowermsdeltaregion/howlin-wolf.htm
+  note: >-
+    Blues Trail: Patton taught him showmanship and songs incl. 'Pony Blues'. Mississippi Encyclopedia
+    page empty; replaced with NPS.
+- artist: howlin-wolf
+  to: card:blues
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'Mississippi Blues Trail: Howlin'' Wolf'
+    url: https://msbluestrail.org/blues-trail-markers/howlin-wolf
+  - title: 'National Park Service: Howlin'' Wolf'
+    url: https://www.nps.gov/locations/lowermsdeltaregion/howlin-wolf.htm
+  note: Electric band in West Memphis 1948. Mississippi Encyclopedia replaced with NPS.
+- artist: iron-maiden
+  to: root:deep-purple
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Louder Burning Ambition
+    url: https://www.loudersound.com/features/steve-harris-burning-ambition
+  - title: Guitar World 1988
+    url: >-
+      https://guitarworld.com/gw-archive/steve-harris-and-dave-murray-iron-maiden-open-1988-guitar-world-interview
+  note: >-
+    Harris learned bass playing along to 'Smoke on the Water'. Reverb 403; replaced with Guitar World
+    1988.
+- artist: james-brown
+  to: card:gospel
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Rock Hall Library JB
+    url: https://library.rockhall.com/james_brown
+  - title: 'Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)'
+    url: https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en
+  note: Both sources support the claim, kind and wording.
+- artist: janis-joplin
+  to: root:bessie-smith
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: NPR Fresh Air via NHPR
+    url: https://www.nhpr.org/2019-10-21/new-janis-joplin-biography-reveals-the-hard-work-behind-the-heart
+  - title: Rock Hall Joplin
+    url: https://rockhall.com/inductees/janis-joplin/
+  note: >-
+    George-Warren: after discovering Bessie Smith 'that was all she wrote'. Open University page empty;
+    replaced with Rock Hall.
+- artist: jimmy-cliff
+  to: card:gospel
+  kind: influence
+  verdict: corrected
+  sources:
+  - title: NPR via NCPR
+    url: https://www.northcountrypublicradio.org/news/npr/nx-s1-4526570/reggae-pioneer-jimmy-cliff-dies-at-81
+  - title: Rolling Stone UK
+    url: >-
+      https://www.rollingstone.co.uk/music/news/jimmy-cliff-the-harder-they-come-reggae-giant-dead-at-81-56553/
+  note: 'Cliff first sang in a gospel church: where he began, not an influence. Kind influence -> scene.'
+- artist: joe-cocker
+  to: root:ray-charles
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Encyclopedia.com Contemporary Musicians
+    url: >-
+      https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker
+  - title: Melody Maker 1968
+    url: https://worldradiohistory.com/UK/Melody-Maker/60s/68/Melody-Maker-1968-1019.pdf
+  note: Both sources support the claim, kind and wording.
+- artist: john-coltrane
+  to: card:jazz
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: johncoltrane.com
+    url: https://www.johncoltrane.com/biography
+  - title: Blue Note Coltrane
+    url: https://www.bluenote.com/artist/john-coltrane/
+  note: Both sources support the claim, kind and wording.
+- artist: john-coltrane
+  to: root:miles-davis
+  kind: member
+  verdict: confirmed
+  sources:
+  - title: John Coltrane official biography
+    url: https://www.johncoltrane.com/biography
+  - title: 'Blue Note Records: John Coltrane'
+    url: https://www.bluenote.com/artist/john-coltrane/
+  note: Both sources support the claim, kind and wording.
+- artist: johnny-cash
+  to: root:lonnie-donegan
+  kind: cover
+  verdict: trivia
+  sources:
+  - title: 'Library of Congress Folklife Today: From Mule-een to New Orleans'
+    url: https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/
+  - title: MPR
+    url: https://archive.mpr.org/stories/2002/10/11/the-story-of-rock-island-line
+  note: >-
+    True (Cash's version carries Donegan's added 'tollgate' detail, LoC), but a single cover that says
+    nothing about Cash's formation; Cash keeps his card:work-songs link. Removed; lonnie-donegan was then
+    orphaned and removed with its links 62–63.
+- artist: joss-stone
+  to: root:aretha-franklin
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Guardian Petridis 2003
+    url: https://www.theguardian.com/music/2003/nov/14/popandrock1
+  - title: Ragogna 2011
+    url: https://www.stoned-records.com/news/joss-stone/chatting-with-joss-stone
+  note: Both sources support the claim, kind and wording.
+- artist: junior-murvin
+  to: root:lee-scratch-perry
+  kind: producer
+  verdict: confirmed
+  sources:
+  - title: Pitchfork RIP Murvin
+    url: https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/
+  - title: Rebelbase 2004
+    url: https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004
+  note: Both sources support the claim, kind and wording.
+- artist: junior-murvin
+  to: card:reggae
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'Pitchfork: R.I.P. Junior Murvin'
+    url: https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/
+  - title: 'Rebelbase: Junior Murvin interview (2004)'
+    url: https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004
+  note: Both sources support the claim, kind and wording.
+- artist: king-tubby
+  to: card:reggae
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'Sean Williams: Tubby''s Dub Style (University of Edinburgh)'
+    url: https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf
+  - title: FACT Katz
+    url: https://factmag.com/2015/05/19/king-tubby-beginners-guide-dub-reggae
+  note: Dub techniques at Dromilly Avenue. Reggaeville empty; replaced with FACT.
+- artist: kraftwerk
+  to: root:james-brown
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Quietus Bartos
+    url: https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/
+  - title: Croatian Encyclopedia
+    url: https://enciklopedija.hr/clanak/kraftwerk
+  note: >-
+    Bartos: brought James Brown's 'funky beats' into Kraftwerk in the late 1970s; encyclopedia lists James
+    Brown among influences.
+- artist: labi-siffre
+  to: card:jazz
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: Big Issue
+    url: https://bigissue.com/culture/music/labi-siffre-music-life-career-gay-black-husbands
+  - title: NME, 15 January 1972
+    url: https://www.worldradiohistory.com/UK/New-Musical-Express/1972/NME%201972-01-15.pdf
+  note: jazz guitar in Soho groups late 60s
+- artist: lead-belly
+  to: card:work-songs
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: LoC Folklife blog
+    url: https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/
+  - title: Encyclopedia of Arkansas
+    url: https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/
+  note: Both sources support the claim, kind and wording.
+- artist: led-zeppelin
+  to: root:howlin-wolf
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Interview Magazine 1977
+    url: https://www.interviewmagazine.com/music/new-again-robert-plant
+  - title: Blabbermouth 2015
+    url: https://blabbermouth.net/news/robert-plant-wants-deadhead-like-solo-following
+  note: Both sources support the claim, kind and wording.
+- artist: lee-scratch-perry
+  to: card:reggae
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: NME 1984 Kelly (uncarved)
+    url: https://uncarved.org/dub/scratch.html
+  - title: Songlines obit
+    url: https://www.songlines.co.uk/news/obituary-lee-scratch-perry-1936-2021
+  note: >-
+    Perry made the rhythm track the creative object; Songlines: helped bring dub into being. RA 403; replaced
+    with Songlines.
+- artist: lee-scratch-perry
+  to: root:king-tubby
+  kind: producer
+  verdict: corrected
+  sources:
+  - title: Quietus Katz
+    url: https://thequietus.com/interviews/strange-world-of/king-tubby-best-music/
+  - title: Sean Williams Edinburgh
+    url: https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf
+  note: >-
+    Katz: credit long contested, Perry conceded Tubby engineered while he did effects; Williams: Blackboard
+    Jungle 'heavily featured King Tubby's mixing'. Claim now: co-mixed, with Perry adding effects.
+- artist: little-richard
+  to: card:gospel
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: New Georgia Encyclopedia
+    url: https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/
+  - title: NPR via WYPR
+    url: https://www.wypr.org/2020-05-09/little-richard-the-king-and-queen-of-rock-and-roll-dead-at-87
+  note: Both sources support the claim, kind and wording.
+- artist: lonnie-donegan
+  to: root:lead-belly
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: LoC Lead Belly guide
+    url: https://guides.loc.gov/leadbelly-folklife
+  - title: Document Records Donegan transcript
+    url: https://www.document-records.com/pdf/Lonnie%20Donegan%20Transcript%20Page%202%20PDF.pdf
+  note: >-
+    Donegan: Lead Belly 'very central'. Strong lineage, but removed with the lonnie-donegan file once
+    Johnny Cash's trivia link (50) went and nothing else reached Donegan.
+- artist: lonnie-donegan
+  to: root:lead-belly
+  kind: cover
+  verdict: confirmed
+  sources:
+  - title: 'Library of Congress: Lead Belly — Introduction'
+    url: https://guides.loc.gov/leadbelly-folklife
+  - title: 'Encyclopedia of Arkansas: The Rock Island Line'
+    url: https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/
+  note: >-
+    Donegan learned 'Rock Island Line' from Lead Belly's recording; started skiffle. Removed with the
+    lonnie-donegan file (see 62).
+- artist: lou-reed
+  to: card:rhythm-and-blues
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: NYPL Lou Reed
+    url: https://libguides.nypl.org/loureed
+  - title: MOJO
+    url: https://www.mojo4music.com/articles/stories/lou-reed-interviewed/
+  note: Both sources support the claim, kind and wording.
+- artist: lou-reed
+  to: root:ornette-coleman
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Levy LoC NRPB
+    url: >-
+      https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+  - title: Guitar World 1998
+    url: >-
+      https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview
+  note: Both sources support the claim, kind and wording.
+- artist: madonna
+  to: root:sly-and-the-family-stone
+  kind: influence
+  verdict: trivia
+  sources:
+  - title: Vice
+    url: https://www.vice.com/en/article/like-a-prayer-was-madonnas-first-masterpiece/
+  - title: Attitude
+    url: >-
+      https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/
+  note: >-
+    Both sources call 'Express Yourself' 'Sly and the Family Stone-inspired' in passing; neither ties
+    Stephen Bray to it. One-song stylistic nod, duplicating Madonna's card:funk link. Removed; sly-and-the-family-stone
+    orphaned and removed. Note: the original card:funk link carries the same unsupported Bray wording.
+- artist: marvin-gaye
+  to: card:gospel
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: marvingaye.net
+    url: https://www.marvingaye.net/about/
+  - title: Encyclopedia.com CBB
+    url: https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/gaye-marvin-1959-1984
+  note: Both sources support the claim, kind and wording.
+- artist: massive-attack
+  to: root:billy-cobham
+  kind: sample
+  verdict: corrected
+  sources:
+  - title: Hit Channel Cobham
+    url: https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/
+  - title: MusicTech
+    url: https://www.musictech.net/guides/essential-guide/landmarks-massive-attack/
+  note: >-
+    Cobham confirms the sample and permission. MusicTech: the rhythm section is 'lifted from Billy Cobham's
+    Stratus'. 'what' sharpened to the bass-and-drums groove; Großmann PDF (too large to open) replaced
+    with MusicTech. Wow.
+- artist: metallica
+  to: root:black-sabbath
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Blabbermouth induction speech
+    url: https://blabbermouth.net/news/full-text-of-metallica-s-black-sabbath-induction-speech-available
+  - title: Guitar World 1992
+    url: >-
+      https://www.guitarworld.com/gw-archive/tony-iommi-and-james-hetfield-discuss-life-black-sabbath-and-metallica-1992-guitar-world-interview
+  note: Both sources support the claim, kind and wording.
+- artist: miles-davis
+  to: root:charlie-parker
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Blue Note
+    url: https://www.bluenote.com/artist/miles-davis/
+  - title: American Jazz Museum
+    url: https://americanjazzmuseum.org/exhibits-events/bird-diz-and-miles-the-making-of-miles-davis/
+  note: Both sources support the claim, kind and wording.
+- artist: miles-davis
+  to: card:jazz
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: NEA
+    url: https://www.arts.gov/honors/jazz/miles-davis
+  - title: Blue Note
+    url: https://www.bluenote.com/artist/miles-davis/
+  note: Both sources support the claim, kind and wording.
+- artist: muddy-waters
+  to: root:son-house
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: NPS
+    url: https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm
+  - title: MS Blues Trail
+    url: https://msbluestrail.org/blues-trail-markers/muddy-waters-birthplace
+  note: Both sources support the claim, kind and wording.
+- artist: muddy-waters
+  to: card:blues
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: Rock Hall
+    url: https://www.rockhall.com/inductees/muddy-waters
+  - title: NPS
+    url: https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm
+  note: >-
+    Both given sources dead (Rock Hall PDF 404, Mississippi Encyclopedia empty). Replaced with Rock Hall
+    inductee page ('electrified the blues', Chicago band) and NPS.
+- artist: nina-simone
+  to: card:jazz
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: ninasimone.com
+    url: https://www.ninasimone.com/biography/
+  - title: NC Music HoF
+    url: https://northcarolinamusichalloffame.org/inductee-item/nina-simone/
+  note: >-
+    Midtown Bar & Grill 1954: jazz, blues and classical. Removed with the nina-simone file after Bowie's
+    trivia link (25) went.
+- artist: nirvana
+  to: root:lead-belly
+  kind: cover
+  verdict: confirmed
+  sources:
+  - title: Rolling Stone
+    url: >-
+      https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/
+  - title: Guitar Player
+    url: >-
+      https://www.guitarplayer.com/players/watch-nirvanas-iconic-mtv-unplugged-performance-of-where-did-you-sleep-last-night
+  note: Both sources support the claim, kind and wording.
+- artist: oasis
+  to: root:the-beatles
+  kind: influence
+  verdict: unverified
+  sources:
+  - title: 'Far Out (pointer only): Noel Gallagher on the Beatles'
+    url: https://faroutmagazine.co.uk/noel-gallagher-still-loves-the-beatles-theyre-a-level-above/
+  note: >-
+    Almost certainly true, but LA Times and AllMusic block fetching, MusicRadar shows no Beatles content,
+    and only aggregators (Far Out, Cheat Sheet) remain. Removed; Oasis keeps its 'I Am the Walrus' cover
+    link.
+- artist: ornette-coleman
+  to: card:rhythm-and-blues
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: NEA
+    url: https://www.arts.gov/honors/jazz/ornette-coleman
+  - title: TSHA
+    url: https://www.tshaonline.org/handbook/entries/coleman-ornette
+  note: Both sources support the claim, kind and wording.
+- artist: ornette-coleman
+  to: card:jazz
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'NEA Jazz Masters: Ornette Coleman'
+    url: https://www.arts.gov/honors/jazz/ornette-coleman
+  - title: 'TSHA Handbook of Texas: Coleman, Ornette'
+    url: https://www.tshaonline.org/handbook/entries/coleman-ornette
+  note: >-
+    NEA/TSHA: escape from fixed chord patterns; harmolodics. This describes his contribution to jazz rather
+    than what jazz gave him.
+- artist: otis-redding
+  to: card:gospel
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: NGE
+    url: https://www.georgiaencyclopedia.org/articles/arts-culture/otis-redding-1941-1967
+  - title: otisredding.com
+    url: https://otisredding.com/the-man/
+  note: Both sources support the claim, kind and wording.
+- artist: paul-simon
+  to: root:jimmy-cliff
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: Jamaica Observer
+    url: https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/
+  - title: NPO Radio 2
+    url: https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion
+  note: >-
+    Observer: recorded with the musicians who backed Cliff on the Kong sessions; NPO agrees. Borderline:
+    one session, but the first Jamaican-recorded reggae hit by a US pop star; kept.
+- artist: peter-gabriel
+  to: root:otis-redding
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: petergabriel.com
+    url: https://petergabriel.com/release/sledgehammer/
+  - title: SOS 1987 muzines
+    url: https://www.muzines.co.uk/articles/peter-gabriel-behind-the-mask/1494
+  note: Both sources support the claim, kind and wording.
+- artist: radiohead
+  to: root:charles-mingus
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Irish Times
+    url: https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388
+  - title: 'Dazed: Thom Yorke on Pyramid Song'
+    url: >-
+      https://www.dazeddigital.com/music/article/15435/1/uni-of-yorke-class-1-flylo-the-gaslamp-killer-faltydl
+  note: >-
+    Irish Times: Pyramid Song 'based on Charles Mingus'; Yorke (Dazed): the drumming 'sounded like something
+    from a Charlie Mingus record'. Prog page has no Mingus content; replaced with Dazed.
+- artist: rakim
+  to: root:john-coltrane
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: NPR via CT Public
+    url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
+  - title: Salon 2019
+    url: >-
+      https://salon.com/2019/11/02/rap-legend-rakim-opens-up-about-finding-his-unique-intellectual-sound-and-transforming-hip-hop
+  note: Both sources support the claim, kind and wording.
+- artist: rakim
+  to: card:hip-hop
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'NPR: Eric B. & Rakim change the flow of rap (via Connecticut Public)'
+    url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
+  - title: Apple Music interview with Eminem, transcribed by GRUNGECAKE
+    url: https://grungecake.com/eminem-apple-music-beats-1/news/74251/
+  note: Both sources support the claim, kind and wording.
+- artist: ray-charles
+  to: card:gospel
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Blue Note Ray Charles
+    url: https://www.bluenote.com/artist/ray-charles/
+  - title: Rock Hall Ray Charles
+    url: https://rockhall.com/inductees/ray-charles/
+  note: Both sources support the claim, kind and wording.
+- artist: red-hot-chili-peppers
+  to: root:stevie-wonder
+  kind: cover
+  verdict: trivia
+  sources:
+  - title: RS AU Mother's Milk
+    url: https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/
+  note: >-
+    Higher Ground was a hit single, but a single cover does not show how the band's sound formed; given
+    Guitar World source does not mention it. James Brown link (87) carries the funk lineage. Removed.
+- artist: red-hot-chili-peppers
+  to: root:james-brown
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'Rolling Stone AU: Red Hot Chili Peppers on 25 years of Mother''s Milk'
+    url: https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/
+  - title: Guitar World Flea Mellowship
+    url: >-
+      https://www.guitarworld.com/artists/bassists/how-flea-accidentally-wrote-one-of-his-funkiest-basslines
+  note: >-
+    Rock Hall 'Influence' list names James Brown and Parliament-Funkadelic; RS AU: Kiedis on funk as 'a
+    really important part of our band'.
+- artist: robert-johnson
+  to: root:son-house
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: LoC Komara
+    url: >-
+      https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf
+  - title: Mississippi Encyclopedia
+    url: https://mississippiencyclopedia.org/entries/robert-johnson/
+  note: Both sources support the claim, kind and wording.
+- artist: robert-johnson
+  to: card:blues
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: 'Ed Komara: Robert Johnson, The Complete Recordings (LoC NRPB)'
+    url: >-
+      https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf
+  - title: 'Mississippi Encyclopedia: Robert Johnson'
+    url: https://mississippiencyclopedia.org/entries/robert-johnson/
+  note: Both sources support the claim, kind and wording.
+- artist: sly-and-the-family-stone
+  to: card:gospel
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: official bio
+    url: https://slyandthefamilystone.com/bio/
+  - title: Wax Poetics
+    url: https://magazine.waxpoetics.com/article/cynthia-robinson-family-affair/
+  note: Both sources support the claim, kind and wording.
+- artist: son-house
+  to: card:blues
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: NPS Son House
+    url: https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm
+  - title: Mississippi Encyclopedia Blues
+    url: https://mississippiencyclopedia.org/entries/blues/
+  note: Both sources support the claim, kind and wording.
+- artist: stevie-wonder
+  to: root:ray-charles
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: UMS program
+    url: https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf
+  - title: Biography.com
+    url: https://www.biography.com/musicians/stevie-wonder
+  note: Both sources support the claim, kind and wording.
+- artist: stevie-wonder
+  to: card:gospel
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: University Musical Society program (2013)
+    url: https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf
+  - title: WERS
+    url: https://wers.org/the-vault-of-soul-stevie-wonder/
+  note: Both sources support the claim, kind and wording.
+- artist: talking-heads
+  to: root:fela-kuti
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: LoC Buck Remain in Light
+    url: >-
+      https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf
+  - title: Louder
+    url: https://www.loudersound.com/music/albums/talking-heads-remain-in-light
+  note: Both sources support the claim, kind and wording.
+- artist: taylor-swift
+  to: root:earth-wind-and-fire
+  kind: cover
+  verdict: trivia
+  sources:
+  - title: WBGO
+    url: https://www.wbgo.org/2018-04-13/you-know-what-fine-taylor-swift-covers-earth-wind-fires-september
+  - title: Rolling Stone
+    url: >-
+      https://www.rollingstone.com/music/music-news/hear-taylor-swifts-acoustic-cover-of-earth-wind-fires-september-628643/
+  note: >-
+    A 2018 Spotify Singles one-off cover; no formation. Removed; earth-wind-and-fire orphaned and removed.
+    Swift keeps the original card:funk cover link.
+- artist: television
+  to: root:the-velvet-underground
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'Guitar World: Tom Verlaine guitar style'
+    url: https://www.guitarworld.com/lessons/tom-verlaine-television-style
+  - title: 'Paste: Remembering Tom Verlaine'
+    url: https://www.pastemagazine.com/music/television/remembering-tom-verlaine-of-television
+  note: >-
+    Guitar World: style 'owed a lot to his early influences such as The Velvet Underground'; Paste: Television
+    wanted records that sounded like 'the Velvet Underground jamming with John Coltrane'. Both are critics'
+    assessments, not Verlaine quotes; Hermes excerpt 403, replaced with Paste. Weakest link in the Television
+    chain.
+- artist: television
+  to: root:john-coltrane
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Guitar World 1981 quote
+    url: >-
+      https://www.guitarworld.com/artists/guitarists/the-songs-that-made-tom-verlaine-take-the-guitar-seriously
+  - title: New Yorker Patti Smith
+    url: https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine
+  note: >-
+    GW 1981: Coltrane record in seventh grade led him to the saxophone; Patti Smith: 'embracing John Coltrane
+    and Albert Ayler'. Hermes 403; replaced with The New Yorker.
+- artist: television
+  to: root:albert-ayler
+  kind: influence
+  verdict: corrected
+  sources:
+  - title: 'Patti Smith: He Was Tom Verlaine (The New Yorker)'
+    url: https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine
+  - title: Guardian Williams obit (inkl)
+    url: https://www.inkl.com/news/tom-verlaine-obituary
+  note: >-
+    'Immersed himself' overstated; Patti Smith says 'embracing'. Wording softened; Hermes 403 replaced
+    with Guardian obituary.
+- artist: the-beatles
+  to: root:little-richard
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Beatles Story
+    url: >-
+      https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en
+  - title: Polar Music Prize
+    url: https://www.polarmusicprize.org/laureates/paul-mccartney/
+  note: Both sources support the claim, kind and wording.
+- artist: the-beatles
+  to: root:chuck-berry
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: 'The Beatles Story: The Beatles and Black Music'
+    url: >-
+      https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en
+  - title: 'Polar Music Prize: Paul McCartney'
+    url: https://www.polarmusicprize.org/laureates/paul-mccartney/
+  note: Both sources support the claim, kind and wording.
+- artist: the-clash
+  to: root:junior-murvin
+  kind: cover
+  verdict: confirmed
+  sources:
+  - title: theclash.com
+    url: https://www.theclash.com/music/the-clash
+  - title: Guardian Katz obit (inkl)
+    url: https://www.inkl.com/news/junior-murvin-obituary
+  note: Both sources support the claim, kind and wording.
+- artist: the-clash
+  to: root:lee-scratch-perry
+  kind: producer
+  verdict: confirmed
+  sources:
+  - title: theclash.com Complete Control
+    url: https://www.theclash.com/music/complete-control
+  - title: NME Kelly uncarved
+    url: https://uncarved.org/dub/scratch.html
+  note: 'Official single page: produced by Perry; NME: Perry as co-producer, band later reworked the mix.'
+- artist: the-police
+  to: root:bob-marley
+  kind: influence
+  verdict: corrected
+  sources:
+  - title: Guitar World Sting basslines
+    url: https://www.guitarworld.com/features/stings-10-best-basslines-with-the-police
+  - title: FretBuzz Summers
+    url: https://fretbuzz.co/andy-summers-provides-a-candid-viewfinder-glimpse-at-his-life-as-a-guitarist/
+  note: >-
+    Summers downplays reggae as an influence ('flag of convenience'). Guitar World (archived) and Sting's
+    2000 Revolver quote (via Far Out pointer): 'So Lonely' chorus 'unabashedly culled from No Woman No
+    Cry'. Claim made concrete. Spicer paper (403) replaced with Guitar World.
+- artist: the-prodigy
+  to: root:ultramagnetic-mcs
+  kind: sample
+  verdict: confirmed
+  sources:
+  - title: MusicTech Fat of the Land
+    url: https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/
+  - title: Morey Leeds Beckett
+    url: >-
+      https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf
+  note: Kool Keith's line from 'Give the Drummer Some' looped as the hook. Wow.
+- artist: the-rolling-stones
+  to: root:muddy-waters
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: uDiscover
+    url: https://www.udiscovermusic.com/stories/songs-that-influenced-the-rolling-stones/
+  - title: Chicago Sun-Times
+    url: >-
+      https://chicago.suntimes.com/2017/4/13/18381179/mick-jagger-keith-richards-chat-chicago-blues-exhibitionism
+  note: 'Band named after ''Rollin'' Stone''; Jagger: ''We started off being a blues band''.'
+- artist: the-velvet-underground
+  to: root:lou-reed
+  kind: member
+  verdict: confirmed
+  sources:
+  - title: 'Aidan Levy: The Velvet Underground & Nico (LoC NRPB)'
+    url: >-
+      https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+  - title: 'Guitar World: Lou Reed 1998 interview'
+    url: >-
+      https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview
+  note: Both sources support the claim, kind and wording.
+- artist: the-white-stripes
+  to: root:son-house
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: New Yorker
+    url: https://www.newyorker.com/magazine/2017/03/13/jack-whites-infinite-imagination
+  - title: Louder
+    url: https://www.loudersound.com/features/jack-white-son-house
+  note: Both sources support the claim, kind and wording.
+- artist: ultramagnetic-mcs
+  to: card:hip-hop
+  kind: scene
+  verdict: confirmed
+  sources:
+  - title: SPIN
+    url: https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/
+  - title: cedgee.com
+    url: https://www.cedgee.com/about/
+  note: Both sources support the claim, kind and wording.
+- artist: van-morrison
+  to: root:lead-belly
+  kind: influence
+  verdict: confirmed
+  sources:
+  - title: Guardian 2015
+    url: >-
+      https://www.theguardian.com/music/2015/jun/04/van-morrison-people-who-say-others-difficult-are-difficult-themselves-lead-belly-lonnie-donegan
+  - title: CMHOF
+    url: https://cmhof.imgix.net/content/uploads/2019/05/WM-3-6-Lead-Belly-Bio.pdf
+  note: 'Guardian: Lead Belly records in his father''s collection were formative; CMHOF quote.'
+removedLinks:
+- {artist: aquarium, to: 'root:bob-marley', why: unverified}
+- {artist: oasis, to: 'root:the-beatles', kind: influence, why: unverified}
+- {artist: david-bowie, to: 'root:nina-simone', why: trivia}
+- {artist: johnny-cash, to: 'root:lonnie-donegan', why: trivia}
+- {artist: madonna, to: 'root:sly-and-the-family-stone', why: trivia}
+- {artist: red-hot-chili-peppers, to: 'root:stevie-wonder', why: trivia}
+- {artist: taylor-swift, to: 'root:earth-wind-and-fire', why: trivia}
+- {artist: nina-simone, to: 'card:jazz', why: orphaned artist}
+- {artist: lonnie-donegan, to: 'root:lead-belly', kind: influence, why: orphaned artist}
+- {artist: lonnie-donegan, to: 'root:lead-belly', kind: cover, why: orphaned artist}
+- {artist: sly-and-the-family-stone, to: 'card:gospel', why: orphaned artist}
+- {artist: earth-wind-and-fire, to: 'card:jazz', why: orphaned artist}
+removedArtists: [nina-simone, lonnie-donegan, sly-and-the-family-stone, earth-wind-and-fire]

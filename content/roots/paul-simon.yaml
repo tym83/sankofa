@@ -1,4 +1,4 @@
-id: paul-simon
+id: "paul-simon"
 name: "Paul Simon"
 nameRu: "Пол Саймон"
 aliases: ["пол саймон", "саймон"]
@@ -6,8 +6,20 @@ years: [1941]
 place: {"name": "Newark, New Jersey", "lat": 40.7357, "lon": -74.1724}
 genre: "Folk rock"
 genreRu: "фолк-рок"
+story: "Paul Simon went to Jamaica to record “Mother and Child Reunion”. Musicians who had backed Jimmy Cliff played on the recording."
+storyRu: "Пол Саймон записал «Mother and Child Reunion» на Ямайке. В записи участвовали музыканты, которые аккомпанировали Джимми Клиффу."
 links:
-  - to: card:reggae
+  - to: "card:reggae"
+    kind: "scene"
+    claim: "Paul Simon recorded 'Mother and Child Reunion' in Jamaica with musicians who had backed Jimmy Cliff."
+    claimRu: "Пол Саймон записал «Mother and Child Reunion» на Ямайке с музыкантами, которые аккомпанировали Джимми Клиффу."
+    sources:
+      - title: "Jamaica Observer: Simon’s reggae classics get new life"
+        url: "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/"
+      - title: "NPO Radio 2: Mother & Child Reunion — Paul Simon"
+        url: "https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion"
+  - to: "root:jimmy-cliff"
+    kind: "scene"
     claim: "Paul Simon recorded 'Mother and Child Reunion' in Jamaica with musicians who had backed Jimmy Cliff."
     claimRu: "Пол Саймон записал «Mother and Child Reunion» на Ямайке с музыкантами, которые аккомпанировали Джимми Клиффу."
     sources:

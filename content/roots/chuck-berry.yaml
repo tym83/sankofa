@@ -1,0 +1,20 @@
+id: "chuck-berry"
+name: "Chuck Berry"
+nameRu: "Чак Берри"
+aliases: ["чак берри"]
+years: [1926, 2017]
+place: {"name": "St. Louis, Missouri", "lat": 38.627, "lon": -90.1994}
+genre: "Rock and roll"
+genreRu: "рок-н-ролл"
+links:
+  - to: "card:rhythm-and-blues"
+    kind: "influence"
+    claim: "Chuck Berry developed his rock-and-roll sound by combining blues and R&B with country music."
+    claimRu: "Чак Берри создал свой рок-н-ролльный звук, соединив блюз и ритм-н-блюз с кантри."
+    sources:
+      - title: "Rock & Roll Hall of Fame: Chuck Berry"
+        url: "https://rockhall.com/inductees/chuck-berry/"
+      - title: "Chuck Berry: official biography"
+        url: "https://www.chuckberry.com/biography"
+story: "Chuck Berry’s sound grew from blues and R&B. He combined them with country music to develop his rock and roll."
+storyRu: "Звучание Чака Берри выросло из блюза и ритм-н-блюза. Соединив их с кантри, он создал свой рок-н-ролл."

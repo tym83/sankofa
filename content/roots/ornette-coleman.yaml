@@ -1,0 +1,36 @@
+id: ornette-coleman
+name: Ornette Coleman
+nameRu: Орнетт Коулман
+aliases:
+- орнетт коулман
+- орнетт колман
+years:
+- 1930
+- 2015
+place:
+  name: Fort Worth
+  lat: 32.7555
+  lon: -97.3308
+genre: Free jazz
+genreRu: фри-джаз
+story: Ornette Coleman’s early work was in rhythm-and-blues bands. His later improvisations loosened jazz’s reliance on fixed chord changes.
+storyRu: Орнетт Коулман начинал в ритм-н-блюзовых ансамблях. В позднейших импровизациях он ослабил зависимость джаза от заданной последовательности аккордов.
+links:
+- to: card:rhythm-and-blues
+  kind: scene
+  claim: Ornette Coleman gained his earliest performing experience in rhythm-and-blues bands.
+  claimRu: Первый сценический опыт Орнетт Коулман получил в ритм-н-блюзовых ансамблях.
+  sources:
+  - &id001
+    title: 'National Endowment for the Arts: Ornette Coleman'
+    url: https://www.arts.gov/honors/jazz/ornette-coleman
+  - &id002
+    title: 'Dave Oliphant: Ornette Coleman — Texas State Historical Association'
+    url: https://www.tshaonline.org/handbook/entries/coleman-ornette
+- to: card:jazz
+  kind: influence
+  claim: Ornette Coleman developed a jazz approach that freed improvisation from fixed chord progressions.
+  claimRu: Орнетт Коулман выработал подход к джазу, освобождавший импровизацию от заданной последовательности аккордов.
+  sources:
+  - *id001
+  - *id002

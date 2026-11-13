@@ -1,0 +1,30 @@
+---
+id: bessie-smith
+name: Bessie Smith
+nameRu: Бесси Смит
+aliases:
+- бесси смит
+years:
+- 1894
+- 1937
+place:
+  name: Chattanooga, Tennessee
+  lat: 35.0456
+  lon: -85.3097
+genre: Blues
+genreRu: блюз
+links:
+- to: card:blues
+  kind: scene
+  claim: Bessie Smith developed her blues performance on the Black vaudeville circuit.
+  claimRu: Бесси Смит оттачивала своё блюзовое искусство в гастрольных водевильных
+    труппах чернокожих артистов.
+  sources:
+  - title: 'NPR: Bessie Smith, Empress of the Stage'
+    url: https://www.npr.org/2019/08/09/748402597/empress-of-the-stage
+  - title: 'National Park Service: Bessie Smith'
+    url: https://home.nps.gov/locations/lowermsdeltaregion/bessie-smith.htm
+story: Bessie Smith’s blues grew on the Black vaudeville stage. Touring with those
+  shows gave her a place to develop her performance.
+storyRu: Блюз Бесси Смит рос на водевильной сцене чернокожих артистов. Гастроли с
+  этими труппами стали для неё школой исполнительского мастерства.

@@ -1,0 +1,1156 @@
+{
+  "reviewer": "modern",
+  "independentOf": "pop",
+  "method": "Opened both sources for each of 31 new links and read supporting passages independently. WRH PDFs inaccessible through web were fetched with curl and read using pdftotext (Beat Instrumental February 1975, Melody Maker 19 October 1968, NME 15 January 1972, Record Mirror 4 January 1964). Rejected inaccessible R&R/R&B Report URLs were replaced by researcher with accessible independent interview/official biography before final review. Existing factual links retained; newly added annotations and stories reviewed against those facts. SHA256 binds canonical full link JSON, ensure_ascii=False, sort_keys=True, separators=(comma,colon).",
+  "reviews": [
+    {
+      "artist": "adele",
+      "to": "root:etta-james",
+      "kind": "influence",
+      "claim": "Discovering Etta James at fourteen changed how Adele thought about singing.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "743c78de39bfd82510c14d3e26ec9b59cde2d4f0bedd4a3e34e74b2d0c71dd67",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.vogue.com/article/adele-feeling-groovy",
+          "support": "Vogue interview describes hearing Etta at fourteen as transformative."
+        },
+        {
+          "url": "https://www.hotpress.com/music/happy-35th-birthday-adele-revisiting-a-classic-2008-interview-22966556",
+          "support": "Hot Press separately records the same age and changed approach to singing."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "christina-aguilera",
+      "to": "root:etta-james",
+      "kind": "influence",
+      "claim": "Christina Aguilera grew up listening to Etta James and tried to emulate her singing.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "ef1503406ef5a2ffdc250c7d2d612aad6aabbc6cc0963261c94bd31f43b0cae6",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://files.eric.ed.gov/fulltext/ED452104.pdf",
+          "support": "Biography Today pp.185–187 documents childhood listening and Etta as favourite blues singer."
+        },
+        {
+          "url": "https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute",
+          "support": "ABC reports Aguilera explicitly aspiring to emulate Etta at the funeral."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "amy-winehouse",
+      "to": "root:dinah-washington",
+      "kind": "influence",
+      "claim": "Dinah Washington was one of the jazz singers who shaped Amy Winehouse’s musical style.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "ea2ec9b9162f25f6d0f4fb36a9e9873988a72af8dded744e5f2545896084f753",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://grammymuseum.org/wp-content/uploads/2020/02/Amy-Winehouse-Exhibit-Press-Release_FINAL-d88d68fdbf.pdf",
+          "support": "GRAMMY Museum names Dinah among musical influences."
+        },
+        {
+          "url": "https://designmuseum.org/asset/download?id=98f1cd4d-370a-4875-9221-a69f4fe4dc27",
+          "support": "Design Museum separately places Dinah in the exhibition of influences on her voice and music."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "joss-stone",
+      "to": "root:aretha-franklin",
+      "kind": "influence",
+      "claim": "Joss Stone traces her singing to childhood listening to Aretha Franklin.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "2ea38c544f07117fa6cca6846c6d1c498862aaa07e51a594860d10e59bc33794",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.theguardian.com/music/2003/nov/14/popandrock1",
+          "support": "Guardian: childhood Aretha listening shaped her voice."
+        },
+        {
+          "url": "https://www.stoned-records.com/news/joss-stone/chatting-with-joss-stone",
+          "support": "Independent 2011 Mike Ragogna interview, archived by her label, records Aretha as childhood major influence."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "joe-cocker",
+      "to": "root:ray-charles",
+      "kind": "influence",
+      "claim": "Ray Charles was Joe Cocker’s principal vocal influence from his teenage years.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "d3874c4f98b62905f1d09cbb60bb232a556feb15e86ce62771d7c7e346cf4f75",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker",
+          "support": "Gale/Encyclopedia.com describes heavy teenage Ray Charles influence."
+        },
+        {
+          "url": "https://worldradiohistory.com/UK/Melody-Maker/60s/68/Melody-Maker-1968-1019.pdf",
+          "support": "Melody Maker 19 October 1968 p.8 records Cocker calling Charles his biggest continuing influence."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "janis-joplin",
+      "to": "root:bessie-smith",
+      "kind": "influence",
+      "claim": "Bessie Smith’s blues singing helped shape Janis Joplin’s vocal style.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "c776cdd762d0685498d28e50b89d8818f867f9700680dd19039f2790a6d60f10",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.open.edu/openlearn/history-the-arts/janis-joplin-and-the-sexual-revolution/content-section-5",
+          "support": "Open University identifies Bessie as a substantial influence on her style."
+        },
+        {
+          "url": "https://www.nhpr.org/2019-10-21/new-janis-joplin-biography-reveals-the-hard-work-behind-the-heart",
+          "support": "NPR interview with biographer Holly George-Warren details Bessie repertoire and vocal influence."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "george-michael",
+      "to": "root:stevie-wonder",
+      "kind": "influence",
+      "claim": "Stevie Wonder was one of George Michael’s major musical influences.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "018acc0306e2e9ac78f427e1cd992b5555c3cb2cedf0d3cadd85e4dfd786c5b9",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://rockhall.com/inductees/george-michael/",
+          "support": "Rock Hall explicitly lists Stevie as an influence."
+        },
+        {
+          "url": "https://www.theguardian.com/global/2017/oct/15/the-george-michael-we-knew-by-elton-john-mariah-carey-james-corden-tatjana-patitz",
+          "support": "Elton John recalls Michael naming Stevie among three major influences."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "eminem",
+      "to": "root:rakim",
+      "kind": "influence",
+      "claim": "Rakim’s rhyme patterns helped shape Eminem’s approach to rap.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "30236e0f39cc675e3b598b86d46518927df5d5b74b86c173a876fb427ef6b7cf",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full",
+          "support": "NPR/Fitzgerald names Eminem among rappers influenced by Rakim."
+        },
+        {
+          "url": "https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon",
+          "support": "Eminem Apple Music interview transcript explains Rakim’s internal and multisyllabic rhyme patterns."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "abba",
+      "to": "root:george-mccrae",
+      "kind": "influence",
+      "claim": "For “Dancing Queen”, ABBA took rhythmic inspiration from soul singer George McCrae’s “Rock Your Baby”.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "1f2a5d284af6e88a241d0b78fd4d1cfab61265ff490627f98b48359969ec4b87",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf",
+          "support": "LOC/Palm documents the deliberate listening to Rock Your Baby to find the groove."
+        },
+        {
+          "url": "https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/",
+          "support": "Rolling Stone independently identifies McCrae as inspiration for Dancing Queen."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "madonna",
+      "to": "root:sly-and-the-family-stone",
+      "kind": "influence",
+      "claim": "Madonna and Stephen Bray drew on Sly and the Family Stone’s funk for “Express Yourself”.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "9fe453d13e807cd3cf477c18264a88845f6862c450c03c09ce03a3304c278f2b",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.vice.com/en/article/like-a-prayer-was-madonnas-first-masterpiece/",
+          "support": "VICE identifies Sly’s funk as an inspiration."
+        },
+        {
+          "url": "https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/",
+          "support": "Attitude separately identifies Sly’s funk and the Stephen Bray cowrite."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "taylor-swift",
+      "to": "root:earth-wind-and-fire",
+      "kind": "cover",
+      "claim": "Taylor Swift recorded a cover of Earth, Wind & Fire’s “September”.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "5d74aeb544c57403ec945421219c82a0b06f92717971f7918d9dd530eefc8a13",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.wbgo.org/2018-04-13/you-know-what-fine-taylor-swift-covers-earth-wind-fires-september",
+          "support": "NPR review documents Swift’s Spotify Singles cover."
+        },
+        {
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf",
+          "support": "LOC/Vincent independently names Swift as a performer who covered September."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "red-hot-chili-peppers",
+      "to": "root:stevie-wonder",
+      "kind": "cover",
+      "claim": "Red Hot Chili Peppers recorded a cover of Stevie Wonder's 'Higher Ground'.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "8d407a972cfeb9b15ba59e95b77d64b7171ebe3bf56eabda66a27aa8e209f41d",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/",
+          "support": "Chad Smith’s Rolling Stone interview identifies Higher Ground as their Stevie cover."
+        },
+        {
+          "url": "https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move",
+          "support": "Guitar World documents the 1989 cover and its replacement of clavinet with slap bass."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "eminem",
+      "to": "root:labi-siffre",
+      "kind": "sample",
+      "claim": "Eminem’s “My Name Is” uses the riff from Labi Siffre’s funk recording “I Got The…”.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "3fa9627d9fe827714fb720041d30953ca73524cb83ff015bd0777743eac3b6dc",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it",
+          "support": "MusicRadar identifies sampling of I Got The… by Dr. Dre for My Name Is."
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/",
+          "support": "Pitchfork independently identifies the instrumental phrase looped for Eminem."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "george-michael",
+      "to": "root:james-brown",
+      "kind": "sample",
+      "claim": "George Michael built the beat of “Freedom! ’90” on the drum break from James Brown’s “Funky Drummer”.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "ac1851013143c68b14116bf1e1591c5c3fa2f6a49fb03b0f44807640f045ca52",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/george-michael-freedom-90-3-30441/",
+          "support": "Rolling Stone names the Funky Drummer sample in Freedom! ’90."
+        },
+        {
+          "url": "https://www.musicradar.com/drums/it-was-deemed-that-an-artist-could-sample-an-unrecognisable-portion-of-a-work-without-the-need-to-declare-the-sample-or-indeed-pay-the-original-artist-when-sampling-ruled-the-world-and-drummers-didnt-get-paid",
+          "support": "MusicRadar identifies the drum loop and its Freedom! ’90 use."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "amy-winehouse",
+      "to": "root:marvin-gaye",
+      "kind": "interpolation",
+      "claim": "“Tears Dry on Their Own” reworks the accompaniment of Marvin Gaye and Tammi Terrell’s “Ain’t No Mountain High Enough”.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "9453608cd1b7a8df32d4a4d87b9b83e2e1f2c2dba0a749e826eb8ff84267e4cb",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://classic.motown.com/story/marvin-gaye-tammi-terrell-united/",
+          "support": "Motown identifies the source song and calls it a sample interpolation."
+        },
+        {
+          "url": "https://www.musicradar.com/artists/amy-winehouse-tears-dry-on-their-own-song-story",
+          "support": "MusicRadar describes Remi’s new arrangement using the descending bass line; interpolation classification accurately distinguishes replay."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "etta-james",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Etta James began singing in a church gospel choir at five.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "535c824ed1731a0f3f5d6caa40ee2fc108ac49b2960e7163ea6733b8e3a48172",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://californiamuseum.org/inductee/etta-james/",
+          "support": "California Museum documents church choir singing at five."
+        },
+        {
+          "url": "https://www.biography.com/musicians/etta-james",
+          "support": "Biography.com independently documents the same childhood choir and age."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "aretha-franklin",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Aretha Franklin began her singing career in her father’s church and on his gospel tours.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "32851b33aa76e402c0f0b0d2a43d7ec92f324163f72ee6d50c974e17b57697e9",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/franklin-aretha",
+          "support": "Detroit Historical Society identifies first church solo and father’s gospel touring show."
+        },
+        {
+          "url": "https://time.com/5367138/aretha-franklin-appreciation/",
+          "support": "TIME independently describes childhood church singing followed by gospel circuit work."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "dinah-washington",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Dinah Washington’s musical upbringing began with singing and playing piano in church.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "4b182438ff16d42b44c0c7cbe62f9473d36ea485fabcb061d4029d51d4862288",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.alamhof.org/dinah-washington-1",
+          "support": "Alabama Music Hall of Fame documents church piano and choir direction."
+        },
+        {
+          "url": "https://encyclopediaofalabama.org/article/dinah-washington/",
+          "support": "Encyclopedia of Alabama independently documents her mother’s teaching and choir singing."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "bessie-smith",
+      "to": "card:blues",
+      "kind": "scene",
+      "claim": "Bessie Smith developed her blues performance on the Black vaudeville circuit.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "834ce818e74bc3c3c5754eda0cd0061f80786a384508bf5a10adb13fd6ff990d",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://nmaahc.si.edu/lgbtq/bessie-smith",
+          "support": "Smithsonian explicitly places her vocal development on Black vaudeville stages."
+        },
+        {
+          "url": "https://home.nps.gov/locations/lowermsdeltaregion/bessie-smith.htm",
+          "support": "NPS documents touring-company apprenticeship and later vaudeville performance."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "ray-charles",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "Ray Charles fused gospel expression with rhythm and blues on “I Got a Woman”.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "27de054f345bd5e9b2fd8e60849ee7a0729e0fce942528d3f4d6d20b814cb5a2",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.bluenote.com/artist/ray-charles/",
+          "support": "Blue Note describes gospel-inflected singing in I Got a Woman."
+        },
+        {
+          "url": "https://www.rhino.com/article/single-stories-ray-charles-i-got-a-woman",
+          "support": "Rhino explains its construction from gospel expression and secular lyrics."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "stevie-wonder",
+      "to": "root:ray-charles",
+      "kind": "influence",
+      "claim": "Ray Charles’s rhythm and blues was an early influence on Stevie Wonder.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "fb5a7f07e4d39fb8aa667c151e586f1af0f748619d6e3b6585dc103f502707ef",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://wers.org/the-vault-of-soul-stevie-wonder/",
+          "support": "WERS identifies Ray Charles as an early inspiration."
+        },
+        {
+          "url": "https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf",
+          "support": "UMS programme p.12 explicitly describes Charles’s R&B as an early influence."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "stevie-wonder",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Stevie Wonder’s childhood church choir singing helped form his musical background.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "117966e431a8afb4f95ef5730efbb649cb4bb457a371b7801943f89977e2008d",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf",
+          "support": "WERS documents childhood church choir singing."
+        },
+        {
+          "url": "https://wers.org/the-vault-of-soul-stevie-wonder/",
+          "support": "UMS programme p.12 independently identifies choir and gospel background."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "labi-siffre",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Labi Siffre worked as a jazz musician before his solo recording career.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "a8c9d6bbbab1227811c18d251b45fbf9db84a92ebf74b3afcecd5cd18899c326",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.worldradiohistory.com/UK/New-Musical-Express/1972/NME%201972-01-15.pdf",
+          "support": "NME 15 January 1972 profile documents jazz work before going solo."
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/",
+          "support": "Pitchfork independently details guitar work in a Soho jazz trio and the ensuing solo career."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "george-mccrae",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "George McCrae began developing his singing voice in a choir as a child.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "f350bf7108febcd008b6b32791f870f43e7785c3509d62b5ecc4de46f44dd67d",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://worldradiohistory.com/UK/Beat-Instrumental/Beat-Instrumental-1975-02-S-OCR.pdf",
+          "support": "Beat Instrumental February 1975 documents church gospel choir at six."
+        },
+        {
+          "url": "https://maxazine.com/2020/07/17/george-mccrae-its-all-about-love/",
+          "support": "Maxazine interview corroborates childhood choir as vocal training; it does not independently label that choir gospel. Narrow claim avoids unsupported age or denomination."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "sly-and-the-family-stone",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Before the Family Stone, Sly and his siblings sang and recorded gospel as the Stewart Four.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "a27283514389b28dabe51f77f739c3889096282295aa9eefd93ff20b74a6b9dd",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://slyandthefamilystone.com/bio/",
+          "support": "Official biography documents childhood gospel recording as Stewart Four."
+        },
+        {
+          "url": "https://magazine.waxpoetics.com/article/cynthia-robinson-family-affair/",
+          "support": "Wax Poetics independently documents siblings, group and childhood gospel record."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "earth-wind-and-fire",
+      "to": "card:jazz",
+      "kind": "influence",
+      "claim": "Maurice White built Earth, Wind & Fire’s sound from his background as a jazz musician.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "cad66bc00f2645f91886d91f3e1b0d0e907fb95fc41fea8c2578e7ceecf952c7",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.earthwindandfire.com/history/biography/",
+          "support": "Official history identifies White’s jazz background and its formative role."
+        },
+        {
+          "url": "https://www.rockhall.com/wp-content/uploads/2024/03/Earth__Wind_and_Fire_2000.pdf",
+          "support": "Rock Hall induction essay independently describes Ramsey Lewis experience and jazz foundation."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "nina-simone",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Nina Simone developed her early nightclub repertoire by combining jazz, blues and classical piano.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "b5157c560c5f42f019a9f90f7d90f74d482c213476e0f34cc392653abef6e1be",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.ninasimone.com/biography/",
+          "support": "Estate biography documents early nightclub synthesis of jazz, blues and classical music."
+        },
+        {
+          "url": "https://northcarolinamusichalloffame.org/inductee-item/nina-simone/",
+          "support": "North Carolina Music Hall of Fame independently describes that Atlantic City repertoire."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "marvin-gaye",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Marvin Gaye developed his singing as a child in his father’s church.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "1e809e39c6fc030f8dbd846fd5d3c75eb55f74000ddf58fbef72a05125ffc7bb",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.marvingaye.net/about/",
+          "support": "Official Marvin Gaye biography identifies father’s gospel church as the basis of his music."
+        },
+        {
+          "url": "https://www.worldradiohistory.com/UK/Record-Mirror/60s/64/Record-Mirror-1964-01-04-S-OCR.pdf",
+          "support": "Record Mirror 4 January 1964 independently documents childhood solo and choir singing in his father’s church."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "rakim",
+      "to": "root:john-coltrane",
+      "kind": "influence",
+      "claim": "Rakim modelled the rhythms of his rhymes on John Coltrane’s saxophone playing.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "ee57647c1ac217a95a8c39186bdad7735c2ce8abdaaf08d27530efd5a24c67dd",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full",
+          "support": "NPR contains Rakim’s first-person Coltrane influence account."
+        },
+        {
+          "url": "https://www.westword.com/music/qanda-with-rakim-5676480/",
+          "support": "Westword’s separate interview explains modelling rhymes on Coltrane rhythms."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "red-hot-chili-peppers",
+      "to": "root:james-brown",
+      "kind": "influence",
+      "claim": "James Brown’s funk was one of Red Hot Chili Peppers’ musical influences.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "d905a3286857068aee501e0c085ddfa2d958fdf79f38e1a1fa174b7cecd33b15",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://rockhall.com/inductees/red-hot-chili-peppers/",
+          "support": "Rock Hall names James Brown among RHCP influences."
+        },
+        {
+          "url": "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/",
+          "support": "Chad Smith independently names Brown while explaining the band’s funk education in Rolling Stone."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    },
+    {
+      "artist": "rakim",
+      "to": "card:hip-hop",
+      "kind": "scene",
+      "claim": "Rakim expanded hip-hop’s rhyme patterns with intricate internal rhymes.",
+      "verdict": "pass",
+      "reviewer": "modern",
+      "link_sha256": "ab4a32692eba48a7941862072af25f8c1cdf1b6414f6c6af521287650e81022c",
+      "sourcesOpened": true,
+      "evidence": [
+        {
+          "url": "https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full",
+          "support": "NPR/Fitzgerald describes moving rhyme into the bar and changing hip-hop patterns."
+        },
+        {
+          "url": "https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon",
+          "support": "Eminem’s separate Apple Music interview describes Rakim’s increasingly intricate internal rhymes."
+        }
+      ],
+      "scope": "Full new edge including bilingual claim, classification and what fields where applicable."
+    }
+  ],
+  "annotationReviews": [
+    {
+      "artist": "adele",
+      "verdict": "pass",
+      "story": "Hearing Etta James at fourteen changed how Adele thought about singing. Her recorded repertoire also includes Bob Dylan’s “Make You Feel My Love”.",
+      "storyRu": "Услышав Этту Джеймс в четырнадцать лет, Адель стала иначе относиться к пению. В её записанный репертуар вошла и «Make You Feel My Love» Боба Дилана.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "root:bob-dylan",
+          "kind": "cover",
+          "link_sha256": "ab0a55f4958af0c2296892547a2dc94f49273677544c52489bf64528a0e8e19d"
+        },
+        {
+          "to": "root:etta-james",
+          "kind": "influence",
+          "link_sha256": "743c78de39bfd82510c14d3e26ec9b59cde2d4f0bedd4a3e34e74b2d0c71dd67"
+        }
+      ]
+    },
+    {
+      "artist": "amy-winehouse",
+      "verdict": "pass",
+      "story": "Dinah Washington helped shape Amy Winehouse’s musical style, and Frank included the jazz standard “Moody’s Mood for Love”. On “Tears Dry on Their Own”, she reworked the accompaniment of Marvin Gaye and Tammi Terrell’s “Ain’t No Mountain High Enough”.",
+      "storyRu": "Дайна Вашингтон повлияла на музыкальный стиль Эми Уайнхаус, а в «Frank» вошёл джазовый стандарт «Moody’s Mood for Love». В «Tears Dry on Their Own» она использовала заново сыгранный аккомпанемент «Ain’t No Mountain High Enough» Марвина Гэя и Тамми Террелл.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:jazz",
+          "kind": "cover",
+          "link_sha256": "7282c64842563aa55e6f9689963ddb808dd68157a1207bfd09ed40c3ee026f81"
+        },
+        {
+          "to": "root:dinah-washington",
+          "kind": "influence",
+          "link_sha256": "ea2ec9b9162f25f6d0f4fb36a9e9873988a72af8dded744e5f2545896084f753"
+        },
+        {
+          "to": "root:marvin-gaye",
+          "kind": "interpolation",
+          "link_sha256": "9453608cd1b7a8df32d4a4d87b9b83e2e1f2c2dba0a749e826eb8ff84267e4cb"
+        }
+      ]
+    },
+    {
+      "artist": "christina-aguilera",
+      "verdict": "pass",
+      "story": "Christina Aguilera grew up listening to Etta James and tried to emulate her singing. At James’s funeral, she sang “At Last”.",
+      "storyRu": "Кристина Агилера с детства слушала Этту Джеймс и стремилась петь как она. На похоронах Джеймс она исполнила «At Last».",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:rhythm-and-blues",
+          "kind": "cover",
+          "link_sha256": "58c6f3e589b1f7267b50d5ffb525b2521451880d90b94da181c16ca2f7bd06aa"
+        },
+        {
+          "to": "root:etta-james",
+          "kind": "influence",
+          "link_sha256": "ef1503406ef5a2ffdc250c7d2d612aad6aabbc6cc0963261c94bd31f43b0cae6"
+        }
+      ]
+    },
+    {
+      "artist": "joss-stone",
+      "verdict": "pass",
+      "story": "Joss Stone traces her singing to childhood listening to Aretha Franklin. On The Soul Sessions, she turned the White Stripes’ “Fell in Love with a Girl” into “Fell in Love with a Boy”.",
+      "storyRu": "Джосс Стоун связывает свою манеру пения с тем, как в детстве слушала Арету Франклин. На «The Soul Sessions» она превратила «Fell in Love with a Girl» группы The White Stripes в «Fell in Love with a Boy».",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "root:the-white-stripes",
+          "kind": "cover",
+          "link_sha256": "9282596dfb25d844146a5033b68c9b25ef5ca596d1ed50e422355360b264f4f2"
+        },
+        {
+          "to": "root:aretha-franklin",
+          "kind": "influence",
+          "link_sha256": "2ea38c544f07117fa6cca6846c6d1c498862aaa07e51a594860d10e59bc33794"
+        }
+      ]
+    },
+    {
+      "artist": "joe-cocker",
+      "verdict": "pass",
+      "story": "Ray Charles was Joe Cocker’s principal vocal influence from his teenage years. Cocker later made his own version of Charles’s hit “Unchain My Heart”.",
+      "storyRu": "Рэй Чарльз был главным вокальным ориентиром Джо Кокера ещё с подростковых лет. Позже Кокер записал свою версию его хита «Unchain My Heart».",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:rhythm-and-blues",
+          "kind": "cover",
+          "link_sha256": "585e3a79993180badce4e7d3c78d2a339b64dc68672dd6218d4a9c41a9bdf3a7"
+        },
+        {
+          "to": "root:ray-charles",
+          "kind": "influence",
+          "link_sha256": "d3874c4f98b62905f1d09cbb60bb232a556feb15e86ce62771d7c7e346cf4f75"
+        }
+      ]
+    },
+    {
+      "artist": "janis-joplin",
+      "verdict": "pass",
+      "story": "Bessie Smith’s blues singing helped shape Janis Joplin’s voice. Joplin also brought Big Mama Thornton’s “Ball and Chain” into her recorded repertoire.",
+      "storyRu": "Блюзовое пение Бесси Смит помогло сформировать голос Дженис Джоплин. В её записанный репертуар вошла и «Ball and Chain» Биг Мамы Торнтон.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:big-mama-thornton",
+          "kind": "cover",
+          "link_sha256": "36c026ecc5dbc1c71b6946b44ddd0d7f65b33058ca9dfc7cceda54159f202dba"
+        },
+        {
+          "to": "root:bessie-smith",
+          "kind": "influence",
+          "link_sha256": "c776cdd762d0685498d28e50b89d8818f867f9700680dd19039f2790a6d60f10"
+        }
+      ]
+    },
+    {
+      "artist": "george-michael",
+      "verdict": "pass",
+      "story": "Stevie Wonder was one of George Michael’s major musical influences. Michael sang “I Knew You Were Waiting (For Me)” with Aretha Franklin and built the beat of “Freedom! ’90” from James Brown’s “Funky Drummer”.",
+      "storyRu": "Стиви Уандер был одним из главных музыкальных ориентиров Джорджа Майкла. Майкл спел «I Knew You Were Waiting (For Me)» с Аретой Франклин, а бит «Freedom! ’90» построил на «Funky Drummer» Джеймса Брауна.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:rhythm-and-blues",
+          "kind": "collaboration",
+          "link_sha256": "f88b1b9c25a22ecde572327299d77dc43395e0283f1552bf3559e6619ea3038a"
+        },
+        {
+          "to": "root:stevie-wonder",
+          "kind": "influence",
+          "link_sha256": "018acc0306e2e9ac78f427e1cd992b5555c3cb2cedf0d3cadd85e4dfd786c5b9"
+        },
+        {
+          "to": "root:james-brown",
+          "kind": "sample",
+          "link_sha256": "ac1851013143c68b14116bf1e1591c5c3fa2f6a49fb03b0f44807640f045ca52"
+        }
+      ]
+    },
+    {
+      "artist": "taylor-swift",
+      "verdict": "pass",
+      "story": "Taylor Swift’s recorded repertoire includes a connection to Earth, Wind & Fire. She made her own version of their song “September”.",
+      "storyRu": "В записанном репертуаре Тейлор Свифт есть связь с Earth, Wind & Fire. Она исполнила свою версию их песни «September».",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:funk",
+          "kind": "cover",
+          "link_sha256": "e41674bc4d6c5865e0484edd5eb17bde2d9da88f26f30696bcba7ac623d52439"
+        },
+        {
+          "to": "root:earth-wind-and-fire",
+          "kind": "cover",
+          "link_sha256": "5d74aeb544c57403ec945421219c82a0b06f92717971f7918d9dd530eefc8a13"
+        }
+      ]
+    },
+    {
+      "artist": "dolly-parton",
+      "verdict": "pass",
+      "story": "Dolly Parton reached into the Beatles’ repertoire for Rockstar. She recorded “Let It Be” with Paul McCartney and Ringo Starr.",
+      "storyRu": "Для «Rockstar» Долли Партон обратилась к репертуару The Beatles. Она записала «Let It Be» вместе с Полом Маккартни и Ринго Старром.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "root:the-beatles",
+          "kind": "cover",
+          "link_sha256": "9f453589c9f6fa3f539573a361370ece2d3dd884c3c39a3f9f393c283627f02a"
+        }
+      ]
+    },
+    {
+      "artist": "billie-eilish",
+      "verdict": "pass",
+      "story": "Billie Eilish grew up listening to the Beatles. She names their music as a formative influence.",
+      "storyRu": "Билли Айлиш выросла на записях The Beatles. Она называет их музыку одной из сил, сформировавших её.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "root:the-beatles",
+          "kind": "influence",
+          "link_sha256": "b547c64e90041830a28cd9fdcf019a1e0dfe8473338a544763703579abef3952"
+        }
+      ]
+    },
+    {
+      "artist": "ed-sheeran",
+      "verdict": "pass",
+      "story": "Ed Sheeran learned Eminem’s The Marshall Mathers LP by heart as a child. Practising its rapid delivery was part of his musical education.",
+      "storyRu": "Эд Ширан ещё ребёнком выучил наизусть «The Marshall Mathers LP» Эминема. Упражнения в быстрой рэп-подаче стали частью его музыкального воспитания.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "root:eminem",
+          "kind": "influence",
+          "link_sha256": "82ed0ef6d5731c53bfa44988c96d3e50d2c195b3623919769f630e6b6a8f87bb"
+        }
+      ]
+    },
+    {
+      "artist": "bts",
+      "verdict": "pass",
+      "story": "One of BTS’s documented roots runs through their leader RM. He names Eminem among the rappers who influenced him.",
+      "storyRu": "Одна из документированных связей BTS проходит через лидера группы RM. Он называет Эминема среди рэперов, повлиявших на него.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "root:eminem",
+          "kind": "influence",
+          "link_sha256": "92d501b112d89607a083460852280e4891780d2581d8b73959c396e5c2bc06d3"
+        }
+      ]
+    },
+    {
+      "artist": "eminem",
+      "verdict": "pass",
+      "story": "Rakim’s rhyme patterns helped shape Eminem’s approach to rap. “My Name Is” also carries an older recording inside it: the instrumental riff from Labi Siffre’s “I Got The…”.",
+      "storyRu": "Рифмовка Ракима помогла сформировать подход Эминема к рэпу. А внутри «My Name Is» звучит более ранняя запись — инструментальный рифф из «I Got The…» Лаби Сиффре.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:funk",
+          "kind": "sample",
+          "link_sha256": "27e3f829fef5d4f40e8b1705d39718f168064c3c0cce3a7f009f26f0cf2d258d"
+        },
+        {
+          "to": "root:rakim",
+          "kind": "influence",
+          "link_sha256": "30236e0f39cc675e3b598b86d46518927df5d5b74b86c173a876fb427ef6b7cf"
+        },
+        {
+          "to": "root:labi-siffre",
+          "kind": "sample",
+          "link_sha256": "3fa9627d9fe827714fb720041d30953ca73524cb83ff015bd0777743eac3b6dc"
+        }
+      ]
+    },
+    {
+      "artist": "madonna",
+      "verdict": "pass",
+      "story": "The funk of Sly and the Family Stone fed into Madonna’s “Express Yourself”. Madonna and Stephen Bray drew on that sound while making the song.",
+      "storyRu": "Фанк Sly and the Family Stone вошёл в музыку Мадонны через «Express Yourself». Создавая песню, Мадонна и Стивен Брей опирались на это звучание.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:funk",
+          "kind": "influence",
+          "link_sha256": "bec6ae635d5bc897f2c6945429ccb0042ca4805211ed0a91f1d81f65e9aa5363"
+        },
+        {
+          "to": "root:sly-and-the-family-stone",
+          "kind": "influence",
+          "link_sha256": "9fe453d13e807cd3cf477c18264a88845f6862c450c03c09ce03a3304c278f2b"
+        }
+      ]
+    },
+    {
+      "artist": "abba",
+      "verdict": "pass",
+      "story": "For “Dancing Queen”, ABBA listened to George McCrae’s “Rock Your Baby”. Its rhythm helped them find the feel of their own song.",
+      "storyRu": "Работая над «Dancing Queen», ABBA слушали «Rock Your Baby» Джорджа Маккрея. Его ритм помог им найти звучание собственной песни.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:rhythm-and-blues",
+          "kind": "influence",
+          "link_sha256": "66b32c2207f33bb039c625f81701c9bec95a8c6758a97d91b0efc51788b96d55"
+        },
+        {
+          "to": "root:george-mccrae",
+          "kind": "influence",
+          "link_sha256": "1f2a5d284af6e88a241d0b78fd4d1cfab61265ff490627f98b48359969ec4b87"
+        }
+      ]
+    },
+    {
+      "artist": "red-hot-chili-peppers",
+      "verdict": "pass",
+      "story": "James Brown’s funk was one of Red Hot Chili Peppers’ musical influences. Their recorded repertoire also includes Stevie Wonder’s “Higher Ground”.",
+      "storyRu": "Фанк Джеймса Брауна был одним из музыкальных ориентиров Red Hot Chili Peppers. В их записанный репертуар вошла и «Higher Ground» Стиви Уандера.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:funk",
+          "kind": "cover",
+          "link_sha256": "b2b244ba1e533b2b80a745e966c9ff0e952a037a2f117f9caa4ddb1c04ea005e"
+        },
+        {
+          "to": "root:stevie-wonder",
+          "kind": "cover",
+          "link_sha256": "8d407a972cfeb9b15ba59e95b77d64b7171ebe3bf56eabda66a27aa8e209f41d"
+        },
+        {
+          "to": "root:james-brown",
+          "kind": "influence",
+          "link_sha256": "d905a3286857068aee501e0c085ddfa2d958fdf79f38e1a1fa174b7cecd33b15"
+        }
+      ]
+    },
+    {
+      "artist": "etta-james",
+      "verdict": "pass",
+      "story": "Etta James’s singing began in church. At five, she was already singing in a gospel choir.",
+      "storyRu": "Певческий путь Этты Джеймс начался в церкви. В пять лет она уже пела в госпел-хоре.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "kind": "scene",
+          "link_sha256": "535c824ed1731a0f3f5d6caa40ee2fc108ac49b2960e7163ea6733b8e3a48172"
+        }
+      ]
+    },
+    {
+      "artist": "aretha-franklin",
+      "verdict": "pass",
+      "story": "Aretha Franklin’s singing career began in her father’s church. It continued on his gospel tours.",
+      "storyRu": "Певческая карьера Ареты Франклин началась в церкви отца. Затем она продолжилась в его госпел-гастролях.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "kind": "scene",
+          "link_sha256": "32851b33aa76e402c0f0b0d2a43d7ec92f324163f72ee6d50c974e17b57697e9"
+        }
+      ]
+    },
+    {
+      "artist": "dinah-washington",
+      "verdict": "pass",
+      "story": "Dinah Washington’s musical upbringing began in church. There, she sang and played piano.",
+      "storyRu": "Музыкальное воспитание Дайны Вашингтон началось в церкви. Там она пела и играла на фортепиано.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "kind": "scene",
+          "link_sha256": "4b182438ff16d42b44c0c7cbe62f9473d36ea485fabcb061d4029d51d4862288"
+        }
+      ]
+    },
+    {
+      "artist": "bessie-smith",
+      "verdict": "pass",
+      "story": "Bessie Smith’s blues grew on the Black vaudeville stage. Touring with those shows gave her a place to develop her performance.",
+      "storyRu": "Блюз Бесси Смит рос на водевильной сцене чернокожих артистов. Гастроли с этими труппами стали для неё школой исполнительского мастерства.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:blues",
+          "kind": "scene",
+          "link_sha256": "834ce818e74bc3c3c5754eda0cd0061f80786a384508bf5a10adb13fd6ff990d"
+        }
+      ]
+    },
+    {
+      "artist": "ray-charles",
+      "verdict": "pass",
+      "story": "On “I Got a Woman”, Ray Charles brought gospel expression into rhythm and blues. His singing joined those two traditions in one performance.",
+      "storyRu": "В «I Got a Woman» Рэй Чарльз перенёс выразительность госпела в ритм-н-блюз. Его пение соединило эти две традиции в одной записи.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "kind": "influence",
+          "link_sha256": "27de054f345bd5e9b2fd8e60849ee7a0729e0fce942528d3f4d6d20b814cb5a2"
+        }
+      ]
+    },
+    {
+      "artist": "stevie-wonder",
+      "verdict": "pass",
+      "story": "Stevie Wonder’s musical background included singing in a church choir as a child. Ray Charles’s rhythm and blues was another early influence.",
+      "storyRu": "В детстве Стиви Уандер пел в церковном хоре. Другим ранним влиянием стал ритм-н-блюз Рэя Чарльза.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "root:ray-charles",
+          "kind": "influence",
+          "link_sha256": "fb5a7f07e4d39fb8aa667c151e586f1af0f748619d6e3b6585dc103f502707ef"
+        },
+        {
+          "to": "card:gospel",
+          "kind": "scene",
+          "link_sha256": "117966e431a8afb4f95ef5730efbb649cb4bb457a371b7801943f89977e2008d"
+        }
+      ]
+    },
+    {
+      "artist": "labi-siffre",
+      "verdict": "pass",
+      "story": "Before his solo recording career, Labi Siffre worked as a jazz musician. Jazz was part of his practical musical education.",
+      "storyRu": "До сольной карьеры Лаби Сиффре работал джазовым музыкантом. Джаз стал частью его музыкальной школы на практике.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:jazz",
+          "kind": "scene",
+          "link_sha256": "a8c9d6bbbab1227811c18d251b45fbf9db84a92ebf74b3afcecd5cd18899c326"
+        }
+      ]
+    },
+    {
+      "artist": "george-mccrae",
+      "verdict": "pass",
+      "story": "George McCrae began developing his voice as a child. His early school of singing was a choir.",
+      "storyRu": "Джордж Маккрей начал развивать свой голос ещё ребёнком. Его первой певческой школой стал хор.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "kind": "scene",
+          "link_sha256": "f350bf7108febcd008b6b32791f870f43e7785c3509d62b5ecc4de46f44dd67d"
+        }
+      ]
+    },
+    {
+      "artist": "sly-and-the-family-stone",
+      "verdict": "pass",
+      "story": "Before the Family Stone, Sly sang gospel with his siblings. They recorded that music as the Stewart Four.",
+      "storyRu": "До Family Stone Слай пел госпел с братьями и сёстрами. Они записывали эту музыку под именем Stewart Four.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "kind": "scene",
+          "link_sha256": "a27283514389b28dabe51f77f739c3889096282295aa9eefd93ff20b74a6b9dd"
+        }
+      ]
+    },
+    {
+      "artist": "earth-wind-and-fire",
+      "verdict": "pass",
+      "story": "Earth, Wind & Fire’s sound drew on Maurice White’s experience as a jazz musician. That background was part of the band’s musical foundation.",
+      "storyRu": "Звучание Earth, Wind & Fire опиралось на опыт Мориса Уайта как джазового музыканта. Этот опыт стал частью музыкальной основы группы.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:jazz",
+          "kind": "influence",
+          "link_sha256": "cad66bc00f2645f91886d91f3e1b0d0e907fb95fc41fea8c2578e7ceecf952c7"
+        }
+      ]
+    },
+    {
+      "artist": "nina-simone",
+      "verdict": "pass",
+      "story": "Nina Simone shaped her early repertoire in nightclubs. She combined jazz and blues with classical piano.",
+      "storyRu": "Нина Симон формировала свой ранний репертуар в ночных клубах. Она соединяла джаз и блюз с классическим фортепиано.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:jazz",
+          "kind": "scene",
+          "link_sha256": "b5157c560c5f42f019a9f90f7d90f74d482c213476e0f34cc392653abef6e1be"
+        }
+      ]
+    },
+    {
+      "artist": "marvin-gaye",
+      "verdict": "pass",
+      "story": "Marvin Gaye’s singing began developing in childhood. His father’s church was its early setting.",
+      "storyRu": "Певческий дар Марвина Гэя начал развиваться ещё в детстве. Первой его средой стала церковь отца.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "kind": "scene",
+          "link_sha256": "1e809e39c6fc030f8dbd846fd5d3c75eb55f74000ddf58fbef72a05125ffc7bb"
+        }
+      ]
+    },
+    {
+      "artist": "rakim",
+      "verdict": "pass",
+      "story": "Rakim modelled the rhythms of his rhymes on John Coltrane’s saxophone playing. His intricate internal rhymes expanded hip-hop’s rhyme patterns.",
+      "storyRu": "Раким строил ритм своих рифм по образцу саксофонной игры Джона Колтрейна. Его сложные внутренние рифмы расширили возможности рифмовки в хип-хопе.",
+      "assessment": "Two sentences in each language; all facts occur in own links. All existing and new link kinds read and consistent with claims; covers/samples/interpolation identify specific works and borrowed elements. Cyrillic aliases present.",
+      "links": [
+        {
+          "to": "root:john-coltrane",
+          "kind": "influence",
+          "link_sha256": "ee57647c1ac217a95a8c39186bdad7735c2ce8abdaaf08d27530efd5a24c67dd"
+        },
+        {
+          "to": "card:hip-hop",
+          "kind": "scene",
+          "link_sha256": "ab4a32692eba48a7941862072af25f8c1cdf1b6414f6c6af521287650e81022c"
+        }
+      ]
+    }
+  ]
+}

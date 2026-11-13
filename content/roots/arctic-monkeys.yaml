@@ -1,16 +1,30 @@
-id: arctic-monkeys
+id: "arctic-monkeys"
 name: "Arctic Monkeys"
 aliases: ["арктик манкиз", "арктик монкис"]
 years: [2002]
 place: {"name": "Sheffield", "lat": 53.3811, "lon": -1.4701}
 genre: "Indie rock"
 genreRu: "инди-рок"
+story: "For AM, Arctic Monkeys turned to Dr. Dre’s hip-hop rhythms. Their recorded repertoire also includes Barbara Lewis’s “Baby I’m Yours”, performed with the 747s."
+storyRu: "Работая над «AM», Arctic Monkeys обратились к хип-хоп-ритмам Доктора Дре. Среди их записей есть и «Baby I’m Yours» Барбары Льюис, исполненная вместе с 747s."
 links:
-  - to: card:rhythm-and-blues
+  - to: "card:rhythm-and-blues"
+    kind: "cover"
     claim: "Arctic Monkeys recorded Barbara Lewis's 'Baby I'm Yours' with the 747s."
     claimRu: "Arctic Monkeys вместе с 747s записали кавер на «Baby I’m Yours» Барбары Льюис."
+    what: "Barbara Lewis's 'Baby I'm Yours', recorded by Arctic Monkeys with the 747s."
+    whatRu: "«Baby I’m Yours» Барбары Льюис в исполнении Arctic Monkeys вместе с 747s."
     sources:
       - title: "NME: Arctic Monkeys covers revealed"
         url: "https://www.nme.com/news/music/arctic-monkeys-578-1365201"
       - title: "Complete Music Update: Arctic Monkeys collaborate with 747s on next single"
         url: "https://completemusicupdate.com/arctic-monkeys-collaborate-with-747s-on-next-single/"
+  - to: "root:dr-dre"
+    kind: "influence"
+    claim: "Arctic Monkeys drew on Dr. Dre’s hip-hop rhythms when making AM."
+    claimRu: "Работая над «AM», Arctic Monkeys опирались на хип-хоп-ритмы Доктора Дре."
+    sources:
+      - title: "NME: Alex Turner on new Arctic Monkeys album — ‘It sounds like Dr Dre’"
+        url: "https://www.nme.com/news/music/arctic-monkeys-160-1252025"
+      - title: "Enmore Audio: Engineering the Sound — Arctic Monkeys’ AM"
+        url: "https://happymag.tv/engineering-the-sound-arctic-monkeys-am/"

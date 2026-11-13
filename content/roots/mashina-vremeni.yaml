@@ -6,8 +6,11 @@ years: [1969]
 place: {"name": "Moscow", "lat": 55.7558, "lon": 37.6173}
 genre: "Rock"
 genreRu: "рок"
+story: "The Beatles were among Andrey Makarevich’s early songwriting influences. This connects Mashina Vremeni to the music he learned from as he began writing songs."
+storyRu: "The Beatles были среди ранних ориентиров Андрея Макаревича в сочинении песен. Эта связь ведёт от «Машины времени» к музыке, на которой он учился писать."
 links:
   - to: "root:the-beatles"
+    kind: "influence"
     claim: "Mashina Vremeni’s Andrey Makarevich names the Beatles among his early songwriting influences."
     claimRu: "Андрей Макаревич из «Машины времени» называет The Beatles среди тех, кто повлиял на него, когда он начинал писать песни."
     sources:

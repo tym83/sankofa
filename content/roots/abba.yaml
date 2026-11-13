@@ -1,15 +1,41 @@
-id: "abba"
-name: "ABBA"
-nameRu: "ABBA"
-aliases: ["абба"]
-years: [1972]
-place: {"name": "Stockholm", "lat": 59.3293, "lon": 18.0686}
-genre: "Pop and disco"
-genreRu: "поп и диско"
+---
+id: abba
+name: ABBA
+nameRu: ABBA
+aliases:
+- абба
+years:
+- 1972
+place:
+  name: Stockholm
+  lat: 59.3293
+  lon: 18.0686
+genre: Pop and disco
+genreRu: поп и диско
 links:
-  - to: "card:rhythm-and-blues"
-    claim: "For “Dancing Queen”, ABBA took rhythmic inspiration from soul singer George McCrae’s “Rock Your Baby”."
-    claimRu: "Работая над «Dancing Queen», ABBA вдохновлялись ритмом «Rock Your Baby» соул-певца Джорджа Маккрея."
-    sources:
-      - {"title": "Library of Congress: Carl Magnus Palm on Arrival", "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf"}
-      - {"title": "Rolling Stone: ABBA — Dancing Queen", "url": "https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/"}
+- to: card:rhythm-and-blues
+  claim: For “Dancing Queen”, ABBA took rhythmic inspiration from soul singer George
+    McCrae’s “Rock Your Baby”.
+  claimRu: Работая над «Dancing Queen», ABBA вдохновлялись ритмом «Rock Your Baby»
+    соул-певца Джорджа Маккрея.
+  sources:
+  - title: 'Library of Congress: Carl Magnus Palm on Arrival'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf
+  - title: 'Rolling Stone: ABBA — Dancing Queen'
+    url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/
+  kind: influence
+- to: root:george-mccrae
+  claim: For “Dancing Queen”, ABBA took rhythmic inspiration from soul singer George
+    McCrae’s “Rock Your Baby”.
+  claimRu: Работая над «Dancing Queen», ABBA вдохновлялись ритмом «Rock Your Baby»
+    соул-певца Джорджа Маккрея.
+  sources:
+  - title: 'Library of Congress: Carl Magnus Palm on Arrival'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf
+  - title: 'Rolling Stone: ABBA — Dancing Queen'
+    url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/
+  kind: influence
+story: For “Dancing Queen”, ABBA listened to George McCrae’s “Rock Your Baby”. Its
+  rhythm helped them find the feel of their own song.
+storyRu: Работая над «Dancing Queen», ABBA слушали «Rock Your Baby» Джорджа Маккрея.
+  Его ритм помог им найти звучание собственной песни.

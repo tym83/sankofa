@@ -1,14 +1,19 @@
-id: coldplay
+id: "coldplay"
 name: "Coldplay"
 aliases: ["колдплей", "колдплэй"]
 years: [1997]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
 genre: "Pop rock"
 genreRu: "поп-рок"
+story: "The riff in Coldplay’s “Talk” came from Kraftwerk’s “Computer Love”. A synthesizer melody became a guitar part in the new recording."
+storyRu: "Рифф в «Talk» группы Coldplay пришёл из «Computer Love» Kraftwerk. Синтезаторная мелодия стала гитарной партией в новой записи."
 links:
-  - to: root:kraftwerk
+  - to: "root:kraftwerk"
+    kind: "interpolation"
     claim: "Coldplay used the riff from Kraftwerk's 'Computer Love' in 'Talk'."
     claimRu: "В «Talk» Coldplay использовали рифф из «Computer Love» группы Kraftwerk."
+    what: "The synthesizer riff from Kraftwerk's 'Computer Love', replayed on guitar in 'Talk'."
+    whatRu: "Синтезаторный рифф из «Computer Love» группы Kraftwerk, заново сыгранный на гитаре в «Talk»."
     sources:
       - title: "NPO Radio 2: Coldplay leent de basis voor Talk van Kraftwerk"
         url: "https://www.nporadio2.nl/nieuws/top2000/e21e3ff0-4ff8-495f-9247-c533993bce04/coldplay-leent-de-basis-voor-talk-van-kraftwerk"

@@ -1,4 +1,4 @@
-id: david-bowie
+id: "david-bowie"
 name: "David Bowie"
 nameRu: "Дэвид Боуи"
 aliases: ["боуи", "дэвид боуи"]
@@ -6,10 +6,15 @@ years: [1947, 2016]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
 genre: "Art rock"
 genreRu: "арт-рок"
+story: "Nina Simone’s interpretation of “Wild Is the Wind” inspired David Bowie. He made his own recording of the song for Station to Station."
+storyRu: "Интерпретация «Wild Is the Wind» Нины Симон вдохновила Дэвида Боуи. Он записал собственную версию для «Station to Station»."
 links:
-  - to: card:jazz
+  - to: "card:jazz"
+    kind: "cover"
     claim: "Nina Simone's version of 'Wild Is the Wind' inspired David Bowie to record it for Station to Station."
     claimRu: "Версия «Wild Is the Wind» Нины Симон вдохновила Дэвида Боуи записать эту песню для альбома Station to Station."
+    what: "'Wild Is the Wind', recorded for Station to Station after Nina Simone's interpretation."
+    whatRu: "«Wild Is the Wind», записанная для «Station to Station» под впечатлением от интерпретации Нины Симон."
     sources:
       - title: "NPO Radio 2: David Bowies Wild Is The Wind is een eerbetoon aan Nina Simone"
         url: "https://www.nporadio2.nl/nieuws/top2000/93682543-a548-417c-b69e-9b220e4b507b/david-bowies-wild-is-the-wind-is-een-eerbetoon-aan-nina-simone"

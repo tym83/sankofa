@@ -1,0 +1,2079 @@
+{
+  "reviewer": "pop",
+  "scope": "Independent second review of 32 new rock links and 16 legacy kind/what refinements; sources opened and read independently. English/Russian stories checked against each artist’s own links.",
+  "entries": [
+    {
+      "artist": "the-beatles",
+      "link": {
+        "to": "root:little-richard",
+        "kind": "influence",
+        "claim": "Little Richard’s songs were part of the repertoire through which the Beatles developed as a live band.",
+        "claimRu": "Песни Литл Ричарда входили в репертуар, на котором The Beatles учились играть перед публикой.",
+        "sources": [
+          {
+            "title": "The Beatles Story: The Beatles and Black Music",
+            "url": "https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en"
+          },
+          {
+            "title": "Polar Music Prize: Paul McCartney",
+            "url": "https://www.polarmusicprize.org/laureates/paul-mccartney/"
+          }
+        ]
+      },
+      "linkSha256": "7eb08574a0f8016da5a6e7193e62c132b5673d144b62e2824b403444ae3c3fca",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "The Beatles Story: The Beatles and Black Music",
+          "url": "https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en",
+          "opened": true,
+          "support": "Beatles Story museum, lines 54–74: pre-contract covers and Richard/McCartney vocal repertoire."
+        },
+        {
+          "title": "Polar Music Prize: Paul McCartney",
+          "url": "https://www.polarmusicprize.org/laureates/paul-mccartney/",
+          "opened": true,
+          "support": "Polar Music Prize, line 124: Hamburg performances developed the band using mostly Richard, Berry, Perkins and Holly covers."
+        }
+      ]
+    },
+    {
+      "artist": "the-beatles",
+      "link": {
+        "to": "root:chuck-berry",
+        "kind": "influence",
+        "claim": "Chuck Berry’s songs were a foundation of the Beatles’ early performing repertoire.",
+        "claimRu": "Песни Чака Берри составляли одну из основ раннего концертного репертуара The Beatles.",
+        "sources": [
+          {
+            "title": "The Beatles Story: The Beatles and Black Music",
+            "url": "https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en"
+          },
+          {
+            "title": "Polar Music Prize: Paul McCartney",
+            "url": "https://www.polarmusicprize.org/laureates/paul-mccartney/"
+          }
+        ]
+      },
+      "linkSha256": "2810e6d4b0fa9293363998dae78623151eba367d74a68016c60726957f6092d9",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "The Beatles Story: The Beatles and Black Music",
+          "url": "https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en",
+          "opened": true,
+          "support": "Beatles Story museum, lines 54–74: pre-contract covers and Berry/Lennon repertoire."
+        },
+        {
+          "title": "Polar Music Prize: Paul McCartney",
+          "url": "https://www.polarmusicprize.org/laureates/paul-mccartney/",
+          "opened": true,
+          "support": "Polar Music Prize, line 124: Berry covers belonged to the Hamburg apprenticeship."
+        }
+      ]
+    },
+    {
+      "artist": "little-richard",
+      "link": {
+        "to": "card:gospel",
+        "kind": "influence",
+        "claim": "Little Richard’s vocal style drew on gospel singing.",
+        "claimRu": "Вокальная манера Литл Ричарда выросла из госпела.",
+        "sources": [
+          {
+            "title": "New Georgia Encyclopedia: Little Richard Penniman",
+            "url": "https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/"
+          },
+          {
+            "title": "NPR: Little Richard, the King and Queen of Rock and Roll (WYPR)",
+            "url": "https://www.wypr.org/2020-05-09/little-richard-the-king-and-queen-of-rock-and-roll-dead-at-87"
+          }
+        ]
+      },
+      "linkSha256": "8f6dfc4f7bbce09519889c25e1a9409e5f7382e91d7c3f58c237a0620c03e29b",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "New Georgia Encyclopedia: Little Richard Penniman",
+          "url": "https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/",
+          "opened": true,
+          "support": "Georgia Encyclopedia, lines 78–83: family gospel group and gospel-styled Billy Wright influence."
+        },
+        {
+          "title": "NPR: Little Richard, the King and Queen of Rock and Roll (WYPR)",
+          "url": "https://www.wypr.org/2020-05-09/little-richard-the-king-and-queen-of-rock-and-roll-dead-at-87",
+          "opened": true,
+          "support": "NPR/WYPR, line 321: Richard credited his whoop to gospel singer Marion Williams."
+        }
+      ]
+    },
+    {
+      "artist": "chuck-berry",
+      "link": {
+        "to": "card:rhythm-and-blues",
+        "kind": "influence",
+        "claim": "Chuck Berry developed his rock-and-roll sound by combining blues and R&B with country music.",
+        "claimRu": "Чак Берри создал свой рок-н-ролльный звук, соединив блюз и ритм-н-блюз с кантри.",
+        "sources": [
+          {
+            "title": "Rock & Roll Hall of Fame: Chuck Berry",
+            "url": "https://rockhall.com/inductees/chuck-berry/"
+          },
+          {
+            "title": "Chuck Berry: official biography",
+            "url": "https://www.chuckberry.com/biography"
+          }
+        ]
+      },
+      "linkSha256": "bc7e904bcc42b573e44f24c61766bdae0966ee8d7186f7b4cd8ca517d229ad7a",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Rock & Roll Hall of Fame: Chuck Berry",
+          "url": "https://rockhall.com/inductees/chuck-berry/",
+          "opened": true,
+          "support": "Rock Hall, lines 37 and 55: blues, R&B and country fusion explicitly identified."
+        },
+        {
+          "title": "Chuck Berry: official biography",
+          "url": "https://www.chuckberry.com/biography",
+          "opened": true,
+          "support": "Official biography, lines 47–52: blues foundations and club repertoire, then country riffs."
+        }
+      ]
+    },
+    {
+      "artist": "the-rolling-stones",
+      "link": {
+        "to": "root:muddy-waters",
+        "kind": "influence",
+        "claim": "Muddy Waters was one of the blues models around whom the young Rolling Stones formed their musical identity.",
+        "claimRu": "Мадди Уотерс был одним из блюзовых музыкантов, на которых равнялись молодые The Rolling Stones, вырабатывая своё звучание.",
+        "sources": [
+          {
+            "title": "Chicago Sun-Times: Mick Jagger and Keith Richards on Chicago blues",
+            "url": "https://chicago.suntimes.com/2017/4/13/18381179/mick-jagger-keith-richards-chat-chicago-blues-exhibitionism"
+          },
+          {
+            "title": "uDiscover Music: Blues That Influenced the Rolling Stones",
+            "url": "https://www.udiscovermusic.com/stories/songs-that-influenced-the-rolling-stones/"
+          }
+        ]
+      },
+      "linkSha256": "afd838c8b014a11b0b1e81e29132f6fa11507d8851e1d344454d5ea42287320d",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Chicago Sun-Times: Mick Jagger and Keith Richards on Chicago blues",
+          "url": "https://chicago.suntimes.com/2017/4/13/18381179/mick-jagger-keith-richards-chat-chicago-blues-exhibitionism",
+          "opened": true,
+          "support": "Sun-Times interview, lines 318–356: Jagger identifies Waters as a favorite and formative blues model."
+        },
+        {
+          "title": "uDiscover Music: Blues That Influenced the Rolling Stones",
+          "url": "https://www.udiscovermusic.com/stories/songs-that-influenced-the-rolling-stones/",
+          "opened": true,
+          "support": "uDiscover, lines 119–130: Waters shaped the young band’s playing and singing; shared records helped unite them."
+        }
+      ]
+    },
+    {
+      "artist": "black-sabbath",
+      "link": {
+        "to": "root:eric-clapton",
+        "kind": "influence",
+        "claim": "Tony Iommi developed his early guitar playing under the influence of Eric Clapton’s blues.",
+        "claimRu": "Ранняя гитарная манера Тони Айомми складывалась под влиянием блюза Эрика Клэптона.",
+        "sources": [
+          {
+            "title": "Tony Iommi: official biography",
+            "url": "https://www.iommi.com/biography/"
+          },
+          {
+            "title": "Guitar World: Tony Iommi on Jimmy Page, Brian May and Jethro Tull",
+            "url": "https://www.guitarworld.com/artists/guitarists/tony-iommi-on-jimmy-page-brian-may-and-jethro-tull"
+          }
+        ]
+      },
+      "linkSha256": "8e95aa0aefbc409eaee3025c964c9e24ff5bde8dd1340990fabe4b4af5ae3baf",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Tony Iommi: official biography",
+          "url": "https://www.iommi.com/biography/",
+          "opened": true,
+          "support": "Official Iommi biography, line 28: young guitarist inspired by Clapton."
+        },
+        {
+          "title": "Guitar World: Tony Iommi on Jimmy Page, Brian May and Jethro Tull",
+          "url": "https://www.guitarworld.com/artists/guitarists/tony-iommi-on-jimmy-page-brian-may-and-jethro-tull",
+          "opened": true,
+          "support": "Guitar World interview, lines 243–246: Iommi recalls progressing to Clapton’s John Mayall blues."
+        }
+      ]
+    },
+    {
+      "artist": "eric-clapton",
+      "link": {
+        "to": "root:robert-johnson",
+        "kind": "influence",
+        "claim": "Robert Johnson’s recordings became a formative blues influence on the young Eric Clapton.",
+        "claimRu": "Записи Роберта Джонсона стали одним из главных блюзовых ориентиров юного Эрика Клэптона.",
+        "sources": [
+          {
+            "title": "Guitar World: Eric Clapton — The King and I",
+            "url": "https://www.guitarworld.com/artists/eric-clapton-king-and-i"
+          },
+          {
+            "title": "Pennyblackmusic: Eric Clapton interview",
+            "url": "https://pennyblackmusic.co.uk/Home/Details?Id=22486"
+          }
+        ]
+      },
+      "linkSha256": "08ad0786ea90cc32378d9b6814d897116f84ca4fde50eee3daa7d150677a414e",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Guitar World: Eric Clapton — The King and I",
+          "url": "https://www.guitarworld.com/artists/eric-clapton-king-and-i",
+          "opened": true,
+          "support": "Guitar World, lines 133–169: teenage encounter with Johnson and resulting understanding of R&B/blues patterns."
+        },
+        {
+          "title": "Pennyblackmusic: Eric Clapton interview",
+          "url": "https://pennyblackmusic.co.uk/Home/Details?Id=22486",
+          "opened": true,
+          "support": "Pennyblackmusic interview, lines 59–60: Johnson first among early inspirations."
+        }
+      ]
+    },
+    {
+      "artist": "muddy-waters",
+      "link": {
+        "to": "root:son-house",
+        "kind": "influence",
+        "claim": "Muddy Waters learned from Son House’s Delta blues before developing his Chicago sound.",
+        "claimRu": "Прежде чем создать своё чикагское звучание, Мадди Уотерс учился на дельта-блюзе Сона Хауса.",
+        "sources": [
+          {
+            "title": "Mississippi Blues Trail: Muddy Waters Birthplace",
+            "url": "https://msbluestrail.org/blues-trail-markers/muddy-waters-birthplace"
+          },
+          {
+            "title": "National Park Service: Muddy Waters",
+            "url": "https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm"
+          }
+        ]
+      },
+      "linkSha256": "00f2443efc14e887d15c1d40003cc5b5090d5fa4bcb22848271926f93c54a498",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Mississippi Blues Trail: Muddy Waters Birthplace",
+          "url": "https://msbluestrail.org/blues-trail-markers/muddy-waters-birthplace",
+          "opened": true,
+          "support": "Mississippi Blues Trail, line 36: Son House named among Waters’s Delta influences."
+        },
+        {
+          "title": "National Park Service: Muddy Waters",
+          "url": "https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm",
+          "opened": true,
+          "support": "NPS, lines 24–26: early House influence preceded the Chicago move."
+        }
+      ]
+    },
+    {
+      "artist": "muddy-waters",
+      "link": {
+        "to": "card:blues",
+        "kind": "scene",
+        "claim": "Muddy Waters carried the Delta blues into the electric-band setting of Chicago.",
+        "claimRu": "Мадди Уотерс перенёс дельта-блюз в звучание чикагского ансамбля с электрическими инструментами.",
+        "sources": [
+          {
+            "title": "Mississippi Encyclopedia: Blues",
+            "url": "https://mississippiencyclopedia.org/entries/blues/"
+          },
+          {
+            "title": "Marty Ostrow: Muddy Waters — Rock & Roll Hall of Fame induction essay (1987)",
+            "url": "https://www.rockhall.com/wp-content/uploads/2024/03/Muddy_Waters_1987.pdf"
+          }
+        ]
+      },
+      "linkSha256": "1f0f3dae5e64c33791b15d3c30e93e66ca2eab7969d493ebeeead87164ec4758",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Mississippi Encyclopedia: Blues",
+          "url": "https://mississippiencyclopedia.org/entries/blues/",
+          "opened": true,
+          "support": "Mississippi Encyclopedia Blues, line 32: Waters electrified Delta blues after moving to Chicago."
+        },
+        {
+          "title": "Marty Ostrow: Muddy Waters — Rock & Roll Hall of Fame induction essay (1987)",
+          "url": "https://www.rockhall.com/wp-content/uploads/2024/03/Muddy_Waters_1987.pdf",
+          "opened": true,
+          "support": "Rock Hall 1987 induction essay p1: electric guitar and amplified Chicago band after Delta recordings. Opened official 2024/03 PDF URL."
+        }
+      ]
+    },
+    {
+      "artist": "robert-johnson",
+      "link": {
+        "to": "root:son-house",
+        "kind": "influence",
+        "claim": "Son House was one of the Delta musicians Robert Johnson took as models while developing his blues.",
+        "claimRu": "Сон Хаус был одним из музыкантов дельты Миссисипи, на которых равнялся Роберт Джонсон, создавая свой блюз.",
+        "sources": [
+          {
+            "title": "Library of Congress: The Complete Recordings — Robert Johnson",
+            "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf"
+          },
+          {
+            "title": "Mississippi Encyclopedia: Robert Johnson",
+            "url": "https://mississippiencyclopedia.org/entries/robert-johnson/"
+          }
+        ]
+      },
+      "linkSha256": "be970102a41d11e08c69f0c27cdaa0eb2044513f50a233d165d97182390c499c",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Library of Congress: The Complete Recordings — Robert Johnson",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf",
+          "opened": true,
+          "support": "LoC Komara essay p1: House among Johnson’s regional musical models."
+        },
+        {
+          "title": "Mississippi Encyclopedia: Robert Johnson",
+          "url": "https://mississippiencyclopedia.org/entries/robert-johnson/",
+          "opened": true,
+          "support": "Mississippi Encyclopedia, line 24: House and Brown provided inspiration and tutelage."
+        }
+      ]
+    },
+    {
+      "artist": "robert-johnson",
+      "link": {
+        "to": "card:blues",
+        "kind": "scene",
+        "claim": "Robert Johnson developed his music among the blues musicians of the Mississippi Delta.",
+        "claimRu": "Музыка Роберта Джонсона складывалась в среде блюзовых исполнителей дельты Миссисипи.",
+        "sources": [
+          {
+            "title": "Library of Congress: The Complete Recordings — Robert Johnson",
+            "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf"
+          },
+          {
+            "title": "Mississippi Encyclopedia: Robert Johnson",
+            "url": "https://mississippiencyclopedia.org/entries/robert-johnson/"
+          }
+        ]
+      },
+      "linkSha256": "3a567806b3b43719aeb1095faa1294609b0f1104b329d6aa782253179ed0f30f",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Library of Congress: The Complete Recordings — Robert Johnson",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf",
+          "opened": true,
+          "support": "LoC Komara essay p1: Johnson’s performing career developed among Delta musicians."
+        },
+        {
+          "title": "Mississippi Encyclopedia: Robert Johnson",
+          "url": "https://mississippiencyclopedia.org/entries/robert-johnson/",
+          "opened": true,
+          "support": "Mississippi Encyclopedia, lines 24–30: local models and performing community establish Delta formation."
+        }
+      ]
+    },
+    {
+      "artist": "son-house",
+      "link": {
+        "to": "card:blues",
+        "kind": "scene",
+        "claim": "Son House developed his guitar playing within the Mississippi Delta’s blues community.",
+        "claimRu": "Сон Хаус выработал свою гитарную манеру в блюзовой среде дельты Миссисипи.",
+        "sources": [
+          {
+            "title": "National Park Service: Son House",
+            "url": "https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm"
+          },
+          {
+            "title": "Mississippi Encyclopedia: Blues",
+            "url": "https://mississippiencyclopedia.org/entries/blues/"
+          }
+        ]
+      },
+      "linkSha256": "9499b0b369f603b271e59be54c0018d504df1e2c3c289684da5797ad91082abb",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "National Park Service: Son House",
+          "url": "https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm",
+          "opened": true,
+          "support": "NPS, lines 23–27: local guitar tuition, Rube Lacy influence and work with Delta musicians."
+        },
+        {
+          "title": "Mississippi Encyclopedia: Blues",
+          "url": "https://mississippiencyclopedia.org/entries/blues/",
+          "opened": true,
+          "support": "Mississippi Encyclopedia Blues, lines 30–31: House situated in Patton’s Delta circle."
+        }
+      ]
+    },
+    {
+      "artist": "the-white-stripes",
+      "link": {
+        "to": "root:son-house",
+        "kind": "influence",
+        "claim": "Son House’s stark singing and playing became a guiding model for the White Stripes’ Jack White.",
+        "claimRu": "Суровое, скупое пение и игра Сона Хауса стали ориентиром для Джека Уайта из The White Stripes.",
+        "sources": [
+          {
+            "title": "The New Yorker: Jack White’s Infinite Imagination",
+            "url": "https://www.newyorker.com/magazine/2017/03/13/jack-whites-infinite-imagination"
+          },
+          {
+            "title": "Classic Rock: How Jack White brought Son House to a new generation",
+            "url": "https://www.loudersound.com/features/jack-white-son-house"
+          }
+        ]
+      },
+      "linkSha256": "d81f490b767988172fb0184d7ee6efbcde0e34a985efaa9a0de5867f30224046",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "The New Yorker: Jack White’s Infinite Imagination",
+          "url": "https://www.newyorker.com/magazine/2017/03/13/jack-whites-infinite-imagination",
+          "opened": true,
+          "support": "New Yorker, lines 86–88: White describes House’s song as a guiding artistic statement."
+        },
+        {
+          "title": "Classic Rock: How Jack White brought Son House to a new generation",
+          "url": "https://www.loudersound.com/features/jack-white-son-house",
+          "opened": true,
+          "support": "Classic Rock/Louder, lines 175–184: formative encounter, stark singing and absorbed slide approach."
+        }
+      ]
+    },
+    {
+      "artist": "metallica",
+      "link": {
+        "to": "root:black-sabbath",
+        "kind": "influence",
+        "claim": "Black Sabbath were a formative musical influence on Metallica’s James Hetfield.",
+        "claimRu": "Black Sabbath сыграли важную роль в музыкальном становлении Джеймса Хэтфилда из Metallica.",
+        "sources": [
+          {
+            "title": "Blabbermouth: full Metallica speech inducting Black Sabbath",
+            "url": "https://blabbermouth.net/news/full-text-of-metallica-s-black-sabbath-induction-speech-available"
+          },
+          {
+            "title": "Metal Hammer: James Hetfield on Tony Iommi’s influence",
+            "url": "https://www.loudersound.com/news/metallica-james-hetfield-why-black-sabbath-tony-iommi-riff-lord-2026"
+          }
+        ]
+      },
+      "linkSha256": "76041624b78a8945c37db1e83a3ddfa58a7514c1a9a97c71bf75b629a400229a",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Blabbermouth: full Metallica speech inducting Black Sabbath",
+          "url": "https://blabbermouth.net/news/full-text-of-metallica-s-black-sabbath-induction-speech-available",
+          "opened": true,
+          "support": "Hetfield’s 2006 induction speech, lines 46–50: childhood Sabbath listening and explicit dependence of his musicianship on their sound."
+        },
+        {
+          "title": "Metal Hammer: James Hetfield on Tony Iommi’s influence",
+          "url": "https://www.loudersound.com/news/metallica-james-hetfield-why-black-sabbath-tony-iommi-riff-lord-2026",
+          "opened": true,
+          "support": "Louder report of independent 2026 SiriusXM appearance, lines 176–188: Iommi’s formative rhythm and songwriting influence."
+        }
+      ]
+    },
+    {
+      "artist": "iron-maiden",
+      "link": {
+        "to": "root:deep-purple",
+        "kind": "influence",
+        "claim": "Deep Purple were a formative influence on Iron Maiden’s Steve Harris.",
+        "claimRu": "Deep Purple повлияли на музыкальное становление Стива Харриса из Iron Maiden.",
+        "sources": [
+          {
+            "title": "Reverb: Tony Bacon’s 1992 Steve Harris interview",
+            "url": "https://reverb.com/news/interview-iron-maidens-steve-harris"
+          },
+          {
+            "title": "Dave Ling: Steve Harris — Burning Ambition, Classic Rock",
+            "url": "https://www.loudersound.com/features/steve-harris-burning-ambition"
+          }
+        ]
+      },
+      "linkSha256": "4bd3689a33c2e380ff8dcbc82bd01b118a540ab7b825a9e99dfc94c317002b70",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Reverb: Tony Bacon’s 1992 Steve Harris interview",
+          "url": "https://reverb.com/news/interview-iron-maidens-steve-harris",
+          "opened": true,
+          "support": "Tony Bacon/Reverb interview, line 125: Harris names Purple’s heaviness among desired musical ingredients."
+        },
+        {
+          "title": "Dave Ling: Steve Harris — Burning Ambition, Classic Rock",
+          "url": "https://www.loudersound.com/features/steve-harris-burning-ambition",
+          "opened": true,
+          "support": "Dave Ling/Louder interview, lines 206–208: young fan learned bass with Smoke on the Water. Independent of the Bacon interview."
+        }
+      ]
+    },
+    {
+      "artist": "deep-purple",
+      "link": {
+        "to": "root:little-richard",
+        "kind": "influence",
+        "claim": "Little Richard was among the early musical influences Ian Gillan brought into Deep Purple.",
+        "claimRu": "Литл Ричард был одним из ранних музыкальных ориентиров Иэна Гиллана, повлиявших на его работу в Deep Purple.",
+        "sources": [
+          {
+            "title": "Classic Rock: The making of Deep Purple In Rock",
+            "url": "https://www.loudersound.com/features/deep-purple-the-making-of-in-rock"
+          },
+          {
+            "title": "ABC Radio National: Ian Gillan interview (2006)",
+            "url": "https://www.abc.net.au/listen/programs/musicshow/ian-gillan/3338452"
+          }
+        ]
+      },
+      "linkSha256": "a50b6cbf8df34751d4dbb62235c2461332064eeb62d32aae196d1f0365e67bdc",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Classic Rock: The making of Deep Purple In Rock",
+          "url": "https://www.loudersound.com/features/deep-purple-the-making-of-in-rock",
+          "opened": true,
+          "support": "Classic Rock/Louder interview, lines 229–231: Gillan identifies Richard among influences brought into In Rock."
+        },
+        {
+          "title": "ABC Radio National: Ian Gillan interview (2006)",
+          "url": "https://www.abc.net.au/listen/programs/musicshow/ian-gillan/3338452",
+          "opened": true,
+          "support": "ABC interview, lines 99–103: Richard in early listening background, then influences carried into band."
+        }
+      ]
+    },
+    {
+      "artist": "led-zeppelin",
+      "link": {
+        "to": "root:howlin-wolf",
+        "kind": "influence",
+        "claim": "Robert Plant identifies Howlin’ Wolf as one of his early musical roots.",
+        "claimRu": "Роберт Плант называет Хаулина Вулфа одним из своих ранних музыкальных ориентиров.",
+        "sources": [
+          {
+            "title": "Interview: Robert Plant (1977 interview, republished 2013)",
+            "url": "https://www.interviewmagazine.com/music/new-again-robert-plant"
+          },
+          {
+            "title": "Blabbermouth: Robert Plant on his musical roots (2015)",
+            "url": "https://blabbermouth.net/news/robert-plant-wants-deadhead-like-solo-following"
+          }
+        ]
+      },
+      "linkSha256": "7f07e4515906aa8338f9222fce161f7c6ef1b9b13b574eb64a553af41ddd6fb9",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Interview: Robert Plant (1977 interview, republished 2013)",
+          "url": "https://www.interviewmagazine.com/music/new-again-robert-plant",
+          "opened": true,
+          "support": "Interview Magazine 1977 transcript, lines 175–176: Plant identifies Wolf among early musical roots."
+        },
+        {
+          "title": "Blabbermouth: Robert Plant on his musical roots (2015)",
+          "url": "https://blabbermouth.net/news/robert-plant-wants-deadhead-like-solo-following",
+          "opened": true,
+          "support": "Blabbermouth/Pulse of Radio 2015, line 38: independent Plant statement says hearing Wolf drew him to singing."
+        }
+      ]
+    },
+    {
+      "artist": "howlin-wolf",
+      "link": {
+        "to": "root:charley-patton",
+        "kind": "teacher",
+        "claim": "Charley Patton taught Howlin’ Wolf songs and performance technique.",
+        "claimRu": "Чарли Паттон учил Хаулина Вулфа песням и сценическим приёмам.",
+        "sources": [
+          {
+            "title": "Mississippi Encyclopedia: Howlin’ Wolf",
+            "url": "https://mississippiencyclopedia.org/entries/howlin-wolf/"
+          },
+          {
+            "title": "Mississippi Blues Trail: Howlin’ Wolf",
+            "url": "https://msbluestrail.org/blues-trail-markers/howlin-wolf"
+          }
+        ]
+      },
+      "linkSha256": "f7d1bf7d81dc14775ae975e57831ce0275948265e5b90996071bb6bd56c73927",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Mississippi Encyclopedia: Howlin’ Wolf",
+          "url": "https://mississippiencyclopedia.org/entries/howlin-wolf/",
+          "opened": true,
+          "support": "Mississippi Encyclopedia, line 27: Patton mentored teenage Wolf in songs, guitar and showmanship."
+        },
+        {
+          "title": "Mississippi Blues Trail: Howlin’ Wolf",
+          "url": "https://msbluestrail.org/blues-trail-markers/howlin-wolf",
+          "opened": true,
+          "support": "Mississippi Blues Trail, line 38: explicit teaching of songs and showmanship."
+        }
+      ]
+    },
+    {
+      "artist": "howlin-wolf",
+      "link": {
+        "to": "card:blues",
+        "kind": "scene",
+        "claim": "Howlin’ Wolf adapted the Delta blues of his upbringing to an amplified band.",
+        "claimRu": "Хаулин Вулф перенёс дельта-блюз, на котором вырос, в звучание ансамбля с усиленными инструментами.",
+        "sources": [
+          {
+            "title": "Mississippi Encyclopedia: Howlin’ Wolf",
+            "url": "https://mississippiencyclopedia.org/entries/howlin-wolf/"
+          },
+          {
+            "title": "Mississippi Blues Trail: Howlin’ Wolf",
+            "url": "https://msbluestrail.org/blues-trail-markers/howlin-wolf"
+          }
+        ]
+      },
+      "linkSha256": "d24e7343c47a2f7d8d12dfb6e5e87dd585fd90e572bac520afed74b088e0d2f3",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Mississippi Encyclopedia: Howlin’ Wolf",
+          "url": "https://mississippiencyclopedia.org/entries/howlin-wolf/",
+          "opened": true,
+          "support": "Mississippi Encyclopedia, lines 20–21: upbringing’s blues adapted to amplified small ensembles."
+        },
+        {
+          "title": "Mississippi Blues Trail: Howlin’ Wolf",
+          "url": "https://msbluestrail.org/blues-trail-markers/howlin-wolf",
+          "opened": true,
+          "support": "Mississippi Blues Trail, lines 36–40: Delta performances followed by electric band."
+        }
+      ]
+    },
+    {
+      "artist": "charley-patton",
+      "link": {
+        "to": "card:blues",
+        "kind": "influence",
+        "claim": "At Dockery, Charley Patton developed his blues by studying the playing of local guitarist Henry Sloan.",
+        "claimRu": "На плантации Докери Чарли Паттон развивал свой блюз, изучая игру местного гитариста Генри Слоуна.",
+        "sources": [
+          {
+            "title": "Mississippi Encyclopedia: Charley Patton",
+            "url": "https://mississippiencyclopedia.org/entries/charley-patton/"
+          },
+          {
+            "title": "National Park Service: Charley Patton",
+            "url": "https://home.nps.gov/locations/lowermsdeltaregion/charley-patton.htm"
+          }
+        ]
+      },
+      "linkSha256": "0534ed08b692b34cb782eb89af22d461f76a3d66f35db7c634b832dcd94d9b71",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Mississippi Encyclopedia: Charley Patton",
+          "url": "https://mississippiencyclopedia.org/entries/charley-patton/",
+          "opened": true,
+          "support": "Mississippi Encyclopedia, line 22: Patton studied Henry Sloan at Dockery."
+        },
+        {
+          "title": "National Park Service: Charley Patton",
+          "url": "https://home.nps.gov/locations/lowermsdeltaregion/charley-patton.htm",
+          "opened": true,
+          "support": "NPS, line 22: Patton followed Sloan to gigs after moving to Dockery."
+        }
+      ]
+    },
+    {
+      "artist": "elvis-presley",
+      "link": {
+        "to": "root:arthur-crudup",
+        "kind": "cover",
+        "claim": "Elvis Presley released his debut single with Arthur Crudup’s “That’s All Right”.",
+        "claimRu": "Для своего дебютного сингла Элвис Пресли записал песню Артура Крадапа «That’s All Right».",
+        "what": "“That’s All Right”: Presley’s 1954 debut single re-records Crudup’s blues song.",
+        "whatRu": "«That’s All Right»: на дебютном сингле 1954 года Пресли заново исполнил блюзовую песню Крадапа.",
+        "sources": [
+          {
+            "title": "Associated Press: Arthur Crudup and Elvis’s first hit (Chicago Sun-Times)",
+            "url": "https://chicago.suntimes.com/music/2024/07/05/bluesman-arthur-crudup-wrote-thats-all-right-elvis-first-hit-song-but-he-barely-got-paid-for-it"
+          },
+          {
+            "title": "Virginia General Assembly: Arthur William Crudup commemoration (2023)",
+            "url": "https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf="
+          }
+        ]
+      },
+      "linkSha256": "e87082fd985ab1d051567c8947a907aef4e34d27cd92979bf8d018efd0eea619",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Associated Press: Arthur Crudup and Elvis’s first hit (Chicago Sun-Times)",
+          "url": "https://chicago.suntimes.com/music/2024/07/05/bluesman-arthur-crudup-wrote-thats-all-right-elvis-first-hit-song-but-he-barely-got-paid-for-it",
+          "opened": true,
+          "support": "AP/Chicago Sun-Times, lines 288–314: Crudup song became Presley’s first released single. Does not establish his first private recording."
+        },
+        {
+          "title": "Virginia General Assembly: Arthur William Crudup commemoration (2023)",
+          "url": "https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf=",
+          "opened": true,
+          "support": "Virginia resolution, line 63: Crudup composition named as Presley’s debut single."
+        }
+      ]
+    },
+    {
+      "artist": "arthur-crudup",
+      "link": {
+        "to": "card:gospel",
+        "kind": "influence",
+        "claim": "Arthur Crudup developed his musical skills through gospel singing before his blues recording career.",
+        "claimRu": "До начала карьеры блюзового исполнителя на пластинках Артур Крадап развивал своё музыкальное мастерство, исполняя госпел.",
+        "sources": [
+          {
+            "title": "Mississippi Blues Trail: Arthur Big Boy Crudup",
+            "url": "https://visitmississippi.org/things-to-do/blues-trail/mississippi-blues-trail-arthur-big-boy-crudup/"
+          },
+          {
+            "title": "Virginia General Assembly: Arthur William Crudup commemoration (2023)",
+            "url": "https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf="
+          }
+        ]
+      },
+      "linkSha256": "74b4bf0e04eacbb74cdcf62685ca37d21d5cb41d6f9ee7e6d4020cfe7dafba5a",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Mississippi Blues Trail: Arthur Big Boy Crudup",
+          "url": "https://visitmississippi.org/things-to-do/blues-trail/mississippi-blues-trail-arthur-big-boy-crudup/",
+          "opened": true,
+          "support": "Mississippi Blues Trail/Visit Mississippi, line 31: grew up singing spirituals before guitar and records."
+        },
+        {
+          "title": "Virginia General Assembly: Arthur William Crudup commemoration (2023)",
+          "url": "https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf=",
+          "opened": true,
+          "support": "Virginia resolution, lines 59–60: honed talents singing gospel before secular performances and recording."
+        }
+      ]
+    },
+    {
+      "artist": "bob-dylan",
+      "link": {
+        "to": "root:robert-johnson",
+        "kind": "influence",
+        "claim": "Bob Dylan studied Robert Johnson as a songwriting model.",
+        "claimRu": "Боб Дилан учился писать песни у Роберта Джонсона.",
+        "sources": [
+          {
+            "title": "Keith Negus: Bob Dylan’s phonographic imagination (Popular Music)",
+            "url": "https://research.gold.ac.uk/4704/1/BobDylanPhonographicImag.pdf"
+          },
+          {
+            "title": "Los Angeles Times: Bob Dylan on learning songwriting (2004 interview)",
+            "url": "https://www.latimes.com/entertainment/music/la-et-ms-archives-bob-dylan-20161013-snap-story.html"
+          }
+        ]
+      },
+      "linkSha256": "521fcc6df75c05151ce527d12c2b450b97cab5f35a160042ff8aa1d8861f0a12",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Keith Negus: Bob Dylan’s phonographic imagination (Popular Music)",
+          "url": "https://research.gold.ac.uk/4704/1/BobDylanPhonographicImag.pdf",
+          "opened": true,
+          "support": "Keith Negus, Popular Music pp217–218: repeated Johnson listening shaped Dylan’s songwriting."
+        },
+        {
+          "title": "Los Angeles Times: Bob Dylan on learning songwriting (2004 interview)",
+          "url": "https://www.latimes.com/entertainment/music/la-et-ms-archives-bob-dylan-20161013-snap-story.html",
+          "opened": true,
+          "support": "Los Angeles Times interview: Dylan credits Johnson’s songwriting example."
+        }
+      ]
+    },
+    {
+      "artist": "oasis",
+      "link": {
+        "to": "root:the-beatles",
+        "kind": "influence",
+        "claim": "Noel Gallagher modelled his songwriting on the Beatles.",
+        "claimRu": "Ноэл Галлахер учился писать песни на примере The Beatles.",
+        "sources": [
+          {
+            "title": "Los Angeles Times: Oh, Brothers (1997 Noel Gallagher interview)",
+            "url": "https://www.latimes.com/archives/la-xpm-1997-aug-17-ca-23103-story.html"
+          },
+          {
+            "title": "Joe Bosso: Noel Gallagher — classic MusicRadar interview",
+            "url": "https://www.musicradar.com/news/noel-gallagher-high-flying-birds-guitar-interview"
+          }
+        ]
+      },
+      "linkSha256": "1448b5a6145fc7412f4ffbada28ad60f43b5017c179d5eb05b831321a37dfff3",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Los Angeles Times: Oh, Brothers (1997 Noel Gallagher interview)",
+          "url": "https://www.latimes.com/archives/la-xpm-1997-aug-17-ca-23103-story.html",
+          "opened": true,
+          "support": "Los Angeles Times interview: Gallagher calls Beatles his biggest influence."
+        },
+        {
+          "title": "Joe Bosso: Noel Gallagher — classic MusicRadar interview",
+          "url": "https://www.musicradar.com/news/noel-gallagher-high-flying-birds-guitar-interview",
+          "opened": true,
+          "support": "MusicRadar Joe Bosso interview, lines 214–222: Beatles influence acknowledged; deliberately makes songs sound like them."
+        }
+      ]
+    },
+    {
+      "artist": "johnny-cash",
+      "link": {
+        "to": "root:lonnie-donegan",
+        "kind": "cover",
+        "claim": "Johnny Cash’s “Rock Island Line” followed Lonnie Donegan’s hit rendition.",
+        "claimRu": "Джонни Кэш записал «Rock Island Line» вслед за ставшей хитом версией Лонни Донегана.",
+        "what": "“Rock Island Line”: Cash’s own performance of the traditional song, following Donegan’s hit version.",
+        "whatRu": "«Rock Island Line»: собственное исполнение традиционной песни Кэшем вслед за ставшей хитом версией Донегана.",
+        "sources": [
+          {
+            "title": "Library of Congress: From Mule-een to New Orleans",
+            "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
+          },
+          {
+            "title": "Minnesota Public Radio: The Story of Rock Island Line",
+            "url": "https://archive.mpr.org/stories/2002/10/11/the-story-of-rock-island-line"
+          }
+        ]
+      },
+      "linkSha256": "20a5b57744700d10e4abf8c4e9793e2301d590f79bb1adea182b276f79d3ff79",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Library of Congress: From Mule-een to New Orleans",
+          "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/",
+          "opened": true,
+          "support": "LoC Winick, lines 582–584: Cash version follows Donegan’s distinct tollgate narrative."
+        },
+        {
+          "title": "Minnesota Public Radio: The Story of Rock Island Line",
+          "url": "https://archive.mpr.org/stories/2002/10/11/the-story-of-rock-island-line",
+          "opened": true,
+          "support": "MPR documentary, lines 171–172: Cash recorded his own version after Donegan’s hit."
+        }
+      ]
+    },
+    {
+      "artist": "lonnie-donegan",
+      "link": {
+        "to": "root:lead-belly",
+        "kind": "influence",
+        "claim": "Lead Belly’s repertoire was central to Lonnie Donegan’s musical formation.",
+        "claimRu": "Репертуар Ледбелли занимал центральное место в музыкальном становлении Лонни Донегана.",
+        "sources": [
+          {
+            "title": "Library of Congress: Lead Belly — Introduction",
+            "url": "https://guides.loc.gov/leadbelly-folklife"
+          },
+          {
+            "title": "Document Records: Lonnie Donegan interview, page 2",
+            "url": "https://www.document-records.com/pdf/Lonnie%20Donegan%20Transcript%20Page%202%20PDF.pdf"
+          }
+        ]
+      },
+      "linkSha256": "1051dee27a9a063cacfb904804c56aad547aecdecbf4cb7c742f6c87e4dac24d",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Library of Congress: Lead Belly — Introduction",
+          "url": "https://guides.loc.gov/leadbelly-folklife",
+          "opened": true,
+          "support": "LoC Lead Belly guide, line 19: Lead Belly’s repertoire shaped Donegan and skiffle."
+        },
+        {
+          "title": "Document Records: Lonnie Donegan interview, page 2",
+          "url": "https://www.document-records.com/pdf/Lonnie%20Donegan%20Transcript%20Page%202%20PDF.pdf",
+          "opened": true,
+          "support": "Document Records interview p2, lines 55–63: Donegan explicitly calls Lead Belly central to his music."
+        }
+      ]
+    },
+    {
+      "artist": "lonnie-donegan",
+      "link": {
+        "to": "root:lead-belly",
+        "kind": "cover",
+        "claim": "Lonnie Donegan learned “Rock Island Line” from Lead Belly’s recording.",
+        "claimRu": "Лонни Донеган выучил «Rock Island Line» по записи Ледбелли.",
+        "what": "“Rock Island Line”: Donegan re-recorded the song from Lead Belly’s repertoire.",
+        "whatRu": "«Rock Island Line»: Донеган заново записал песню из репертуара Ледбелли.",
+        "sources": [
+          {
+            "title": "Library of Congress: Lead Belly — Introduction",
+            "url": "https://guides.loc.gov/leadbelly-folklife"
+          },
+          {
+            "title": "Document Records: Lonnie Donegan interview, page 2",
+            "url": "https://www.document-records.com/pdf/Lonnie%20Donegan%20Transcript%20Page%202%20PDF.pdf"
+          }
+        ]
+      },
+      "linkSha256": "5f499f18e28425b7137cd41366cc5f7f63ed97a4a1a41502ba0f68764402f656",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Library of Congress: Lead Belly — Introduction",
+          "url": "https://guides.loc.gov/leadbelly-folklife",
+          "opened": true,
+          "support": "LoC Lead Belly guide, line 19: Donegan learned Rock Island Line from Lead Belly."
+        },
+        {
+          "title": "Document Records: Lonnie Donegan interview, page 2",
+          "url": "https://www.document-records.com/pdf/Lonnie%20Donegan%20Transcript%20Page%202%20PDF.pdf",
+          "opened": true,
+          "support": "Document Records interview p2, lines 55–63: covers acknowledged; Donegan identifies Rock Island Line source as Lead Belly."
+        }
+      ]
+    },
+    {
+      "artist": "lead-belly",
+      "link": {
+        "to": "card:work-songs",
+        "kind": "influence",
+        "claim": "Lead Belly learned “Rock Island Line” from singers in Arkansas prisons and brought it into his own repertoire.",
+        "claimRu": "Ледбелли перенял «Rock Island Line» у певцов в арканзасских тюрьмах и включил её в свой репертуар.",
+        "sources": [
+          {
+            "title": "Library of Congress: From Mule-een to New Orleans",
+            "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
+          },
+          {
+            "title": "Encyclopedia of Arkansas: The Rock Island Line",
+            "url": "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"
+          }
+        ]
+      },
+      "linkSha256": "97375ddaf3ce9f73e96d5f75cd6505a4af1757b14d35a16701cdf90d648ec258",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Library of Congress: From Mule-een to New Orleans",
+          "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/",
+          "opened": true,
+          "support": "LoC Winick, lines 577–579: prison work group collection in 1934 followed by Lead Belly’s adoption."
+        },
+        {
+          "title": "Encyclopedia of Arkansas: The Rock Island Line",
+          "url": "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/",
+          "opened": true,
+          "support": "Arkansas Encyclopedia, lines 13–17: Lead Belly retained song from two Arkansas prison sessions and recorded it repeatedly."
+        }
+      ]
+    },
+    {
+      "artist": "van-morrison",
+      "link": {
+        "to": "root:lead-belly",
+        "kind": "influence",
+        "claim": "Lead Belly was an enduring musical inspiration for Van Morrison.",
+        "claimRu": "Ледбелли оставался для Вана Моррисона источником музыкального вдохновения.",
+        "sources": [
+          {
+            "title": "The Guardian: Van Morrison on Lead Belly (2015 interview)",
+            "url": "https://www.theguardian.com/music/2015/jun/04/van-morrison-people-who-say-others-difficult-are-difficult-themselves-lead-belly-lonnie-donegan"
+          },
+          {
+            "title": "Country Music Hall of Fame: Lead Belly — Musical Bridge Builder",
+            "url": "https://cmhof.imgix.net/content/uploads/2019/05/WM-3-6-Lead-Belly-Bio.pdf"
+          }
+        ]
+      },
+      "linkSha256": "f3c2f6e5d66f371989ffd682c7a251ccde704e92dbd9c3403c0602072b4b8a43",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "The Guardian: Van Morrison on Lead Belly (2015 interview)",
+          "url": "https://www.theguardian.com/music/2015/jun/04/van-morrison-people-who-say-others-difficult-are-difficult-themselves-lead-belly-lonnie-donegan",
+          "opened": true,
+          "support": "Guardian interview: childhood records were formative; influence continued."
+        },
+        {
+          "title": "Country Music Hall of Fame: Lead Belly — Musical Bridge Builder",
+          "url": "https://cmhof.imgix.net/content/uploads/2019/05/WM-3-6-Lead-Belly-Bio.pdf",
+          "opened": true,
+          "support": "Country Music Hall of Fame education PDF: Morrison calls Lead Belly a continuing inspiration. Browser failed; independently read /tmp/roots-rock-leadbelly.txt extracted from original PDF."
+        }
+      ]
+    },
+    {
+      "artist": "creedence-clearwater-revival",
+      "link": {
+        "to": "root:little-richard",
+        "kind": "influence",
+        "claim": "Little Richard was a formative influence on Creedence Clearwater Revival’s John Fogerty.",
+        "claimRu": "Литл Ричард повлиял на музыкальное становление Джона Фогерти из Creedence Clearwater Revival.",
+        "sources": [
+          {
+            "title": "Rock Cellar: John Fogerty — A Fortunate Son Speaks",
+            "url": "https://rockcellarmagazine.com/john-fogerty-a-fortunate-son-speaks-the-interview/"
+          },
+          {
+            "title": "Den of Geek: John Lingan on Creedence’s musical formation",
+            "url": "https://www.denofgeek.com/culture/why-creedence-clearwater-revival-remains-the-definitive-band-of-its-era/"
+          }
+        ]
+      },
+      "linkSha256": "a57d3544587746529a62f60b0ef4a3771cb447a9bf80503b78e322c6841da559",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Rock Cellar: John Fogerty — A Fortunate Son Speaks",
+          "url": "https://rockcellarmagazine.com/john-fogerty-a-fortunate-son-speaks-the-interview/",
+          "opened": true,
+          "support": "Rock Cellar Ken Sharp interview, lines 72–74: early Fogerty songwriting inspired by Richard."
+        },
+        {
+          "title": "Den of Geek: John Lingan on Creedence’s musical formation",
+          "url": "https://www.denofgeek.com/culture/why-creedence-clearwater-revival-remains-the-definitive-band-of-its-era/",
+          "opened": true,
+          "support": "Den of Geek John Lingan interview, line 21: biographer identifies Richard as formative vocal influence."
+        }
+      ]
+    },
+    {
+      "artist": "big-mama-thornton",
+      "link": {
+        "to": "card:big-mama-thornton",
+        "kind": "scene",
+        "claim": "After touring with the Hot Harlem Revue, Big Mama Thornton established herself in Houston and began recording for Peacock.",
+        "claimRu": "После гастролей с Hot Harlem Revue Биг Мама Торнтон обосновалась в Хьюстоне и начала записываться на Peacock.",
+        "sources": [
+          {
+            "title": "Yale University Library: Big Mama Thornton — Early Years",
+            "url": "https://onlineexhibits.library.yale.edu/s/ohamstruggles/page/bmt1"
+          },
+          {
+            "title": "Smithsonian Folkways: Big Mama Thornton",
+            "url": "https://folkways.si.edu/artists/big-mama-thornton"
+          }
+        ]
+      },
+      "linkSha256": "a9cd22a715a374aa8fbaeb1db288eace431b42a5c9e4bfa378c2df651d9c7478",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Yale University Library: Big Mama Thornton — Early Years",
+          "url": "https://onlineexhibits.library.yale.edu/s/ohamstruggles/page/bmt1",
+          "opened": true,
+          "support": "Yale oral-history exhibition, lines 31–35: Revue touring, Houston performances and Peacock contract."
+        },
+        {
+          "title": "Smithsonian Folkways: Big Mama Thornton",
+          "url": "https://folkways.si.edu/artists/big-mama-thornton",
+          "opened": true,
+          "support": "Smithsonian Folkways, line 450: touring apprenticeship followed by Houston and Peacock recordings."
+        }
+      ]
+    },
+    {
+      "artist": "nirvana",
+      "link": {
+        "to": "root:lead-belly",
+        "kind": "cover",
+        "claim": "Nirvana closed MTV Unplugged with “Where Did You Sleep Last Night”, drawing on Lead Belly’s version of the traditional song.",
+        "claimRu": "Nirvana завершили MTV Unplugged песней «Where Did You Sleep Last Night», опираясь на версию традиционной песни в исполнении Ледбелли.",
+        "what": "“Where Did You Sleep Last Night”: Nirvana’s MTV Unplugged performance draws on Lead Belly’s version of the traditional song.",
+        "whatRu": "«Where Did You Sleep Last Night»: исполнение Nirvana на MTV Unplugged опирается на версию традиционной песни в исполнении Ледбелли.",
+        "sources": [
+          {
+            "title": "David Browne: In the Room at Nirvana’s MTV Unplugged in New York (Rolling Stone)",
+            "url": "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/"
+          },
+          {
+            "title": "Mike Powell: Nirvana — MTV Unplugged in New York (Pitchfork)",
+            "url": "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/"
+          }
+        ]
+      },
+      "linkSha256": "5deffe177f2866b8f3c935e398eb48096d7c0fd57a0a6e2b8212f226b8cda492",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "new",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "David Browne: In the Room at Nirvana’s MTV Unplugged in New York (Rolling Stone)",
+          "url": "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/",
+          "opened": true,
+          "support": "Rolling Stone David Browne eyewitness account, lines 55–59: Lead Belly-derived finale, no encore."
+        },
+        {
+          "title": "Mike Powell: Nirvana — MTV Unplugged in New York (Pitchfork)",
+          "url": "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/",
+          "opened": true,
+          "support": "Pitchfork Mike Powell, lines 89 and 124: Lead Belly cover at end of Unplugged."
+        }
+      ]
+    },
+    {
+      "artist": "the-beatles",
+      "link": {
+        "to": "card:rhythm-and-blues",
+        "claim": "The Beatles recorded “Twist and Shout” after the Isley Brothers made it an R&B hit.",
+        "claimRu": "The Beatles записали «Twist and Shout» вслед за The Isley Brothers, которые сделали эту песню хитом ритм-н-блюза.",
+        "sources": [
+          {
+            "title": "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music, 1997)",
+            "url": "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
+          },
+          {
+            "title": "Far Out: Twist and Shout — the one-take Beatles song that nearly killed John Lennon",
+            "url": "https://faroutmagazine.co.uk/one-take-beatles-hit-nearly-killed-john-lennon/"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Twist and Shout”: the Beatles’ recording follows the Isley Brothers’ version.",
+        "whatRu": "«Twist and Shout»: запись The Beatles следует за версией The Isley Brothers."
+      },
+      "linkSha256": "4cd2bded1153f1c9c4ca8cab734de0cce9faefd6234e634573da32c78ce6d7df",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music, 1997)",
+          "url": "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf",
+          "opened": true,
+          "support": "Gower Price, American Music p225: Beatles rearranged Isley version through live performance."
+        },
+        {
+          "title": "Far Out: Twist and Shout — the one-take Beatles song that nearly killed John Lennon",
+          "url": "https://faroutmagazine.co.uk/one-take-beatles-hit-nearly-killed-john-lennon/",
+          "opened": true,
+          "support": "Far Out, line 28: recording explicitly described as adaptation after Isley version."
+        }
+      ]
+    },
+    {
+      "artist": "the-rolling-stones",
+      "link": {
+        "to": "card:blues",
+        "claim": "The Rolling Stones released the blues song “Little Red Rooster” as a single.",
+        "claimRu": "The Rolling Stones выпустили блюзовую песню «Little Red Rooster» отдельным синглом.",
+        "sources": [
+          {
+            "title": "The Current (MPR): Today in Music History — the Stones record a blues standard",
+            "url": "https://www.thecurrent.org/feature/2019/08/28/today-in-music-history-the-stones-record-a-blues-standard"
+          },
+          {
+            "title": "uDiscover Music: Little Red Rooster, the first blues record to top the UK singles chart",
+            "url": "https://www.udiscovermusic.com/stories/the-first-blues-record-to-top-the-uk-singles-chart"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Little Red Rooster”: the Rolling Stones’ own recording of the blues song.",
+        "whatRu": "«Little Red Rooster»: собственная запись блюзовой песни группой The Rolling Stones."
+      },
+      "linkSha256": "2db076d103c53db6f1a28c976fcc526cbf36d8c4fac7cdcadf486c6e866a150e",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "The Current (MPR): Today in Music History — the Stones record a blues standard",
+          "url": "https://www.thecurrent.org/feature/2019/08/28/today-in-music-history-the-stones-record-a-blues-standard",
+          "opened": true,
+          "support": "MPR/The Current, line 107: Stones version of Dixon song."
+        },
+        {
+          "title": "uDiscover Music: Little Red Rooster, the first blues record to top the UK singles chart",
+          "url": "https://www.udiscovermusic.com/stories/the-first-blues-record-to-top-the-uk-singles-chart",
+          "opened": true,
+          "support": "uDiscover (trailing slash opened), lines 119–136: single and relation to Wolf recording."
+        }
+      ]
+    },
+    {
+      "artist": "black-sabbath",
+      "link": {
+        "to": "card:blues",
+        "claim": "Before adopting the name Black Sabbath, the band played blues under the name Earth.",
+        "claimRu": "Прежде чем стать Black Sabbath, группа играла блюз под названием Earth.",
+        "sources": [
+          {
+            "title": "Rolling Stone: Heavy Metal, Year One — The Inside Story of Black Sabbath’s Groundbreaking Debut",
+            "url": "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/"
+          },
+          {
+            "title": "Guitar World: Original Members of Black Sabbath Look Back on 30-Plus Years of Demonic Riffing",
+            "url": "https://www.guitarworld.com/gw-archive/archive-original-members-black-sabbath-look-back-30-plus-years-demonic-riffing-2001"
+          }
+        ],
+        "kind": "scene"
+      },
+      "linkSha256": "a299eaa33b140bcbdf3768240bca13c1f0207bbf4fd87b227fb3c42e90d8658b",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Rolling Stone: Heavy Metal, Year One — The Inside Story of Black Sabbath’s Groundbreaking Debut",
+          "url": "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/",
+          "opened": true,
+          "support": "Rolling Stone, lines 69–92: Earth’s electric-blues repertoire."
+        },
+        {
+          "title": "Guitar World: Original Members of Black Sabbath Look Back on 30-Plus Years of Demonic Riffing",
+          "url": "https://www.guitarworld.com/gw-archive/archive-original-members-black-sabbath-look-back-30-plus-years-demonic-riffing-2001",
+          "opened": true,
+          "support": "Guitar World, lines 172–178: pre-Sabbath Earth blues band."
+        }
+      ]
+    },
+    {
+      "artist": "eric-clapton",
+      "link": {
+        "to": "card:blues",
+        "claim": "Eric Clapton devoted Me and Mr. Johnson (2004) to covers of blues musician Robert Johnson’s songs.",
+        "claimRu": "Эрик Клэптон посвятил альбом Me and Mr. Johnson (2004) кавер-версиям песен блюзмена Роберта Джонсона.",
+        "sources": [
+          {
+            "title": "Eric Clapton: Official biography",
+            "url": "https://ericclapton.com/pages/about"
+          },
+          {
+            "title": "MusicRadar: Eric Clapton on Robert Johnson and Me and Mr Johnson",
+            "url": "https://www.musicradar.com/news/eric-clapton-on-robert-johnson-blues"
+          }
+        ],
+        "kind": "cover",
+        "what": "Me and Mr. Johnson (2004): an album of new performances of Robert Johnson’s songs.",
+        "whatRu": "«Me and Mr. Johnson» (2004): альбом новых исполнений песен Роберта Джонсона."
+      },
+      "linkSha256": "f95f7b5dd1e60205dc4f525a9130d2efa0d2cd2e43567e9b6a941c7f18d199fe",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Eric Clapton: Official biography",
+          "url": "https://ericclapton.com/pages/about",
+          "opened": true,
+          "support": "Official Clapton biography, line 86: Johnson covers collected as March 2004 album."
+        },
+        {
+          "title": "MusicRadar: Eric Clapton on Robert Johnson and Me and Mr Johnson",
+          "url": "https://www.musicradar.com/news/eric-clapton-on-robert-johnson-blues",
+          "opened": true,
+          "support": "MusicRadar independent interview, line 73: sessions produced an entire LP of Johnson songs."
+        }
+      ]
+    },
+    {
+      "artist": "the-white-stripes",
+      "link": {
+        "to": "card:blues",
+        "claim": "The White Stripes covered Son House's 'Death Letter'.",
+        "claimRu": "The White Stripes исполняли «Death Letter» Сона Хауса.",
+        "sources": [
+          {
+            "title": "Rolling Stone: The White Stripes Share 2000 Performance of Death Letter",
+            "url": "https://au.rollingstone.com/music/music-news/white-stripes-death-letter-2000-12901/"
+          },
+          {
+            "title": "The Guardian: The White Stripes bring the blues back to rock",
+            "url": "https://www.theguardian.com/music/2011/jun/12/white-stripes-blues-rock"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Death Letter”: the White Stripes’ own performance of Son House’s song.",
+        "whatRu": "«Death Letter»: собственное исполнение песни Сона Хауса группой The White Stripes."
+      },
+      "linkSha256": "c0c861dc3601bd9c198a0b8821f09eddce91494f37948a12c00a31c04fb51c78",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Rolling Stone: The White Stripes Share 2000 Performance of Death Letter",
+          "url": "https://au.rollingstone.com/music/music-news/white-stripes-death-letter-2000-12901/",
+          "opened": true,
+          "support": "Rolling Stone, lines 30–31: filmed performance of House cover."
+        },
+        {
+          "title": "The Guardian: The White Stripes bring the blues back to rock",
+          "url": "https://www.theguardian.com/music/2011/jun/12/white-stripes-blues-rock",
+          "opened": true,
+          "support": "Guardian: Death Letter performance identified as House’s song."
+        }
+      ]
+    },
+    {
+      "artist": "metallica",
+      "link": {
+        "to": "root:black-sabbath",
+        "claim": "Metallica recorded Black Sabbath’s “Sabbra Cadabra”, inserting a passage from “A National Acrobat”.",
+        "claimRu": "Metallica записали «Sabbra Cadabra» группы Black Sabbath, включив в неё фрагмент «A National Acrobat».",
+        "sources": [
+          {
+            "title": "Distorted Sound: Heavy Music History — Garage Inc.",
+            "url": "https://distortedsoundmag.com/heavy-music-history-garage-inc-metallica/"
+          },
+          {
+            "title": "Metal Hammer: The story of Metallica’s Garage Inc.",
+            "url": "https://www.loudersound.com/bands-artists/metallica-load-cover-songs-story-album"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Sabbra Cadabra”: Metallica’s recording also includes a passage from Black Sabbath’s “A National Acrobat”.",
+        "whatRu": "«Sabbra Cadabra»: в запись Metallica также включён фрагмент «A National Acrobat» группы Black Sabbath."
+      },
+      "linkSha256": "a94e18c99485ac98548534044d25ef5693ca4b34d0ce1b354e7ac80e9803f342",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Distorted Sound: Heavy Music History — Garage Inc.",
+          "url": "https://distortedsoundmag.com/heavy-music-history-garage-inc-metallica/",
+          "opened": true,
+          "support": "Distorted Sound, line 60: Sabbra Cadabra with National Acrobat snippet."
+        },
+        {
+          "title": "Metal Hammer: The story of Metallica’s Garage Inc.",
+          "url": "https://www.loudersound.com/bands-artists/metallica-load-cover-songs-story-album",
+          "opened": true,
+          "support": "Metal Hammer/Louder, line 234: National Acrobat passage interpolated into cover’s middle."
+        }
+      ]
+    },
+    {
+      "artist": "iron-maiden",
+      "link": {
+        "to": "root:led-zeppelin",
+        "claim": "Iron Maiden recorded a cover of Led Zeppelin’s “Communication Breakdown”.",
+        "claimRu": "Iron Maiden записали свою версию песни Led Zeppelin «Communication Breakdown».",
+        "sources": [
+          {
+            "title": "Metal Injection: Iron Maiden’s cover of Led Zeppelin’s Communication Breakdown",
+            "url": "https://metalinjection.net/editorials/back-in-the-day/iron-zeppelin-iron-maidens-kick-ass-cover-of-led-zeppelins-communication-breakdown"
+          },
+          {
+            "title": "Far Out: The 10 greatest covers of Led Zeppelin songs",
+            "url": "https://faroutmagazine.co.uk/led-zeppelin-greatest-covers-jeff-buckley-iron-maiden/"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Communication Breakdown”: Iron Maiden’s own performance of Led Zeppelin’s song.",
+        "whatRu": "«Communication Breakdown»: собственное исполнение песни Led Zeppelin группой Iron Maiden."
+      },
+      "linkSha256": "2286b1c1f1c45d4aab4be576ebc2d21d70d3a9e96180f1359a4e3aa96afc6168",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Metal Injection: Iron Maiden’s cover of Led Zeppelin’s Communication Breakdown",
+          "url": "https://metalinjection.net/editorials/back-in-the-day/iron-zeppelin-iron-maidens-kick-ass-cover-of-led-zeppelins-communication-breakdown",
+          "opened": true,
+          "support": "Metal Injection, lines 103–105: 1990 recording as single B-side."
+        },
+        {
+          "title": "Far Out: The 10 greatest covers of Led Zeppelin songs",
+          "url": "https://faroutmagazine.co.uk/led-zeppelin-greatest-covers-jeff-buckley-iron-maiden/",
+          "opened": true,
+          "support": "Far Out, lines 35–39: identifies Maiden performance of Zeppelin song."
+        }
+      ]
+    },
+    {
+      "artist": "deep-purple",
+      "link": {
+        "to": "card:rock-n-roll",
+        "claim": "Deep Purple performed Little Richard’s “Lucille” in their 1972 concerts.",
+        "claimRu": "Deep Purple исполняли «Lucille» Литл Ричарда на концертах 1972 года.",
+        "sources": [
+          {
+            "title": "MOJO: Deep Purple Made in Japan reviewed",
+            "url": "https://www.mojo4music.com/articles/new-music/deep-purple-made-in-japan-reviewed-revered-72-live-album-remixed-and-expanded/"
+          },
+          {
+            "title": "metal.de: Deep Purple — In Concert ’72 reissue review",
+            "url": "https://www.metal.de/reviews/deep-purple-in-concert-72-re-release-58099/"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Lucille”: Deep Purple’s live performances in 1972 of Little Richard’s song.",
+        "whatRu": "«Lucille»: концертные исполнения песни Литл Ричарда группой Deep Purple в 1972 году."
+      },
+      "linkSha256": "d8ad249a4a5ad3458448d51eeb300c697711c6317316ed1179bda186ee506b08",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "MOJO: Deep Purple Made in Japan reviewed",
+          "url": "https://www.mojo4music.com/articles/new-music/deep-purple-made-in-japan-reviewed-revered-72-live-album-remixed-and-expanded/",
+          "opened": true,
+          "support": "MOJO, line 67 and tracklist: Richard song in 1972 Japanese concerts."
+        },
+        {
+          "title": "metal.de: Deep Purple — In Concert ’72 reissue review",
+          "url": "https://www.metal.de/reviews/deep-purple-in-concert-72-re-release-58099/",
+          "opened": true,
+          "support": "metal.de review: Little Richard cover in In Concert 72 tracklist."
+        }
+      ]
+    },
+    {
+      "artist": "led-zeppelin",
+      "link": {
+        "to": "card:blues",
+        "claim": "Led Zeppelin reworked “When the Levee Breaks”, originally recorded by Kansas Joe McCoy and Memphis Minnie.",
+        "claimRu": "Led Zeppelin переработали «When the Levee Breaks» — песню, впервые записанную Канзасом Джо Маккоем и Мемфис Минни.",
+        "sources": [
+          {
+            "title": "Charles Shaar Murray: Led Zeppelin, Memphis Minnie, and the levee that broke (Classic Rock)",
+            "url": "https://www.loudersound.com/features/led-zeppelin-memphis-minnie-when-the-levee-breaks"
+          },
+          {
+            "title": "Trevor de Clercq: Measuring a Measure (Music Theory Online 22.3)",
+            "url": "https://mtosmt.org/issues/mto.16.22.3/mto.16.22.3.declercq.pdf"
+          }
+        ],
+        "kind": "cover",
+        "what": "“When the Levee Breaks”: Led Zeppelin re-recorded and rearranged the song recorded by Kansas Joe McCoy and Memphis Minnie.",
+        "whatRu": "«When the Levee Breaks»: Led Zeppelin заново записали и переаранжировали песню Канзаса Джо Маккоя и Мемфис Минни."
+      },
+      "linkSha256": "e1c4375d34a7e6bdf3881ac742d96dff2b8a8e7e5da6c8af8a0efeace84e461f",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Charles Shaar Murray: Led Zeppelin, Memphis Minnie, and the levee that broke (Classic Rock)",
+          "url": "https://www.loudersound.com/features/led-zeppelin-memphis-minnie-when-the-levee-breaks",
+          "opened": true,
+          "support": "Classic Rock/Louder, lines 185–186: original McCoy/Minnie recording and Zeppelin remake."
+        },
+        {
+          "title": "Trevor de Clercq: Measuring a Measure (Music Theory Online 22.3)",
+          "url": "https://mtosmt.org/issues/mto.16.22.3/mto.16.22.3.declercq.pdf",
+          "opened": true,
+          "support": "de Clercq, Music Theory Online paragraph 4.2: explicitly compares original and Zeppelin recordings."
+        }
+      ]
+    },
+    {
+      "artist": "elvis-presley",
+      "link": {
+        "to": "card:big-mama-thornton",
+        "claim": "Elvis Presley recorded “Hound Dog”, the song first recorded by Big Mama Thornton.",
+        "claimRu": "Элвис Пресли записал «Hound Dog» — песню, которую первой записала Биг Мама Торнтон.",
+        "sources": [
+          {
+            "title": "The Guardian: Why no one sang the blues like Big Mama Thornton",
+            "url": "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis"
+          },
+          {
+            "title": "Michael Sporke: Hound Dog — Big Mama Thornton (Library of Congress)",
+            "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Hound Dog”: Presley’s own recording of the song first recorded by Thornton.",
+        "whatRu": "«Hound Dog»: собственная запись Пресли песни, которую первой записала Торнтон."
+      },
+      "linkSha256": "175ec106d1cdc31d801b440c8a65fefddece4bc9faecac768614c23406ee402e",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "The Guardian: Why no one sang the blues like Big Mama Thornton",
+          "url": "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis",
+          "opened": true,
+          "support": "Guardian: Thornton original and Presley 1956 version."
+        },
+        {
+          "title": "Michael Sporke: Hound Dog — Big Mama Thornton (Library of Congress)",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf",
+          "opened": true,
+          "support": "LoC Sporke essay: 1952 Thornton recording and subsequent Presley recording."
+        }
+      ]
+    },
+    {
+      "artist": "bob-dylan",
+      "link": {
+        "to": "card:blues",
+        "claim": "Bob Dylan recorded Blind Lemon Jefferson’s “See That My Grave Is Kept Clean” for his debut album.",
+        "claimRu": "Боб Дилан записал для дебютного альбома песню Блайнд Лемона Джефферсона «See That My Grave Is Kept Clean».",
+        "sources": [
+          {
+            "title": "Bob Dylan: The Basement Tapes Complete — official liner notes",
+            "url": "https://www.bobdylan.com/albums/bootleg-series-vol-11-basement-tapes-complete"
+          },
+          {
+            "title": "Oxford University Press: Bob Dylan — A first listen",
+            "url": "https://blog.oup.com/2013/03/bob-dylan-first-listen/"
+          }
+        ],
+        "kind": "cover",
+        "what": "“See That My Grave Is Kept Clean”: Dylan’s debut-album performance of Blind Lemon Jefferson’s song.",
+        "whatRu": "«See That My Grave Is Kept Clean»: исполнение песни Блайнд Лемона Джефферсона на дебютном альбоме Дилана."
+      },
+      "linkSha256": "5c16946353d85eeec63696d6aa015bff8fa3534bbaa487946b26fa7a9e88da6f",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Bob Dylan: The Basement Tapes Complete — official liner notes",
+          "url": "https://www.bobdylan.com/albums/bootleg-series-vol-11-basement-tapes-complete",
+          "opened": true,
+          "support": "Dylan official liner notes, line 621: debut-album performance of Jefferson-associated song."
+        },
+        {
+          "title": "Oxford University Press: Bob Dylan — A first listen",
+          "url": "https://blog.oup.com/2013/03/bob-dylan-first-listen/",
+          "opened": true,
+          "support": "OUP first-album review, line 110: identifies Jefferson song."
+        }
+      ]
+    },
+    {
+      "artist": "oasis",
+      "link": {
+        "to": "root:the-beatles",
+        "claim": "Oasis included their cover of the Beatles’ “I Am the Walrus” on The Masterplan.",
+        "claimRu": "Oasis включили свою версию песни The Beatles «I Am the Walrus» в сборник The Masterplan.",
+        "sources": [
+          {
+            "title": "Apple Music: The Masterplan — editorial album notes",
+            "url": "https://music.apple.com/us/album/the-masterplan/1517453693"
+          },
+          {
+            "title": "Pitchfork: Oasis — The Masterplan",
+            "url": "https://pitchfork.com/reviews/albums/5930-the-masterplan/"
+          }
+        ],
+        "kind": "cover",
+        "what": "“I Am the Walrus”: the Oasis cover included on The Masterplan.",
+        "whatRu": "«I Am the Walrus»: версия Oasis, включённая в «The Masterplan»."
+      },
+      "linkSha256": "f57054ea5a6289893360e2a9a4c8d97d3c68075f2cb6f0640c1aa8fcb25b6ac6",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Apple Music: The Masterplan — editorial album notes",
+          "url": "https://music.apple.com/us/album/the-masterplan/1517453693",
+          "opened": true,
+          "support": "Apple Music editorial note, line 16: Beatles cover on Masterplan."
+        },
+        {
+          "title": "Pitchfork: Oasis — The Masterplan",
+          "url": "https://pitchfork.com/reviews/albums/5930-the-masterplan/",
+          "opened": true,
+          "support": "Pitchfork, line 71: extended live Walrus cover in compilation."
+        }
+      ]
+    },
+    {
+      "artist": "johnny-cash",
+      "link": {
+        "to": "card:work-songs",
+        "claim": "Johnny Cash recorded “Rock Island Line”, a song John Lomax first recorded in 1934 from a convict work group in an Arkansas prison.",
+        "claimRu": "Джонни Кэш записал «Rock Island Line» — песню, которую Джон Ломакс впервые записал в 1934 году от рабочей бригады заключённых в арканзасской тюрьме.",
+        "sources": [
+          {
+            "title": "Johnny Cash: Rock Island Line — official recording catalogue",
+            "url": "https://www.johnnycash.com/track/rock-island-line/"
+          },
+          {
+            "title": "Library of Congress: From Mule-een to New Orleans — What Was Lead Belly Saying?",
+            "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
+          },
+          {
+            "title": "CALS Encyclopedia of Arkansas: The Rock Island Line (song)",
+            "url": "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Rock Island Line”: Cash’s performance of the song first documented by Lomax in an Arkansas prison in 1934.",
+        "whatRu": "«Rock Island Line»: исполнение Кэшем песни, впервые записанной Ломаксом в арканзасской тюрьме в 1934 году."
+      },
+      "linkSha256": "4e99dec9da679027f0fc728e29f9322ebcb454b82ce791d0a98911620b382f87",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Johnny Cash: Rock Island Line — official recording catalogue",
+          "url": "https://www.johnnycash.com/track/rock-island-line/",
+          "opened": true,
+          "support": "Official Cash catalogue: recorded track with tollgate introduction."
+        },
+        {
+          "title": "Library of Congress: From Mule-een to New Orleans — What Was Lead Belly Saying?",
+          "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/",
+          "opened": true,
+          "support": "LoC Winick, lines 578 and 584: prison source and Cash rendition; Arkansas Encyclopedia independently confirms prison collection and Cash cover."
+        },
+        {
+          "title": "CALS Encyclopedia of Arkansas: The Rock Island Line (song)",
+          "url": "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/",
+          "opened": true,
+          "support": "LoC Winick, lines 578 and 584: prison source and Cash rendition; Arkansas Encyclopedia independently confirms prison collection and Cash cover."
+        }
+      ]
+    },
+    {
+      "artist": "van-morrison",
+      "link": {
+        "to": "card:blues",
+        "claim": "Van Morrison, with Them, recorded Big Joe Williams’s blues standard “Baby Please Don’t Go”.",
+        "claimRu": "Ван Моррисон в составе Them записал блюзовый стандарт Биг Джо Уильямса «Baby Please Don’t Go».",
+        "sources": [
+          {
+            "title": "Mississippi Blues Trail: Big Joe Williams",
+            "url": "https://msbluestrail.org/blues-trail-markers/big-joe-williams"
+          },
+          {
+            "title": "uDiscover Music: Baby, Please Don’t Go — Exploring Songs of the Blues",
+            "url": "https://www.udiscovermusic.com/stories/roots-blues-baby-please-dont-go"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Baby Please Don’t Go”: Morrison’s recording with Them of the blues standard associated with Big Joe Williams.",
+        "whatRu": "«Baby Please Don’t Go»: запись блюзового стандарта Биг Джо Уильямса, сделанная Моррисоном с Them."
+      },
+      "linkSha256": "af92c06555b907e26f1604bf78908478f3154119382c40ab165f777c116b41c2",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Mississippi Blues Trail: Big Joe Williams",
+          "url": "https://msbluestrail.org/blues-trail-markers/big-joe-williams",
+          "opened": true,
+          "support": "Mississippi Blues Trail, line 39: Williams song covered by Morrison with Them."
+        },
+        {
+          "title": "uDiscover Music: Baby, Please Don’t Go — Exploring Songs of the Blues",
+          "url": "https://www.udiscovermusic.com/stories/roots-blues-baby-please-dont-go",
+          "opened": true,
+          "support": "uDiscover article downloaded via curl after browser timeout; opening paragraphs identify Morrison/Them rendition and Williams original."
+        }
+      ]
+    },
+    {
+      "artist": "creedence-clearwater-revival",
+      "link": {
+        "to": "card:rhythm-and-blues",
+        "claim": "Creedence Clearwater Revival recorded Screamin’ Jay Hawkins’s “I Put a Spell on You”.",
+        "claimRu": "Creedence Clearwater Revival записали «I Put a Spell on You» Скримин Джея Хокинса.",
+        "sources": [
+          {
+            "title": "Concord: Creedence Clearwater Revival, 40th Anniversary Edition",
+            "url": "https://concord.com/concord-albums/creedence-clearwater-revival-40th-anniv-edition/"
+          },
+          {
+            "title": "Americana UK: The Top Ten Creedence Clearwater Revival Cover Songs",
+            "url": "https://americana-uk.com/essentials-the-top-ten-creedence-clearwater-revival-cover-songs"
+          }
+        ],
+        "kind": "cover",
+        "what": "“I Put a Spell on You”: Creedence Clearwater Revival’s own recording of Screamin’ Jay Hawkins’s song.",
+        "whatRu": "«I Put a Spell on You»: собственная запись песни Скримин Джея Хокинса группой Creedence Clearwater Revival."
+      },
+      "linkSha256": "d0b796cedd0c083427248724b46733549ad56676074c23f2e06e3a6f4e98df59",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "Concord: Creedence Clearwater Revival, 40th Anniversary Edition",
+          "url": "https://concord.com/concord-albums/creedence-clearwater-revival-40th-anniv-edition/",
+          "opened": true,
+          "support": "Concord label page, line 12: Hawkins cover explicitly identified."
+        },
+        {
+          "title": "Americana UK: The Top Ten Creedence Clearwater Revival Cover Songs",
+          "url": "https://americana-uk.com/essentials-the-top-ten-creedence-clearwater-revival-cover-songs",
+          "opened": true,
+          "support": "Americana UK, lines 71–73: rendition described; unrelated year errors in article are not adopted."
+        }
+      ]
+    },
+    {
+      "artist": "nirvana",
+      "link": {
+        "to": "card:blues",
+        "claim": "Nirvana closed MTV Unplugged with “Where Did You Sleep Last Night”, drawing on Lead Belly’s version of the traditional song.",
+        "claimRu": "Nirvana завершили MTV Unplugged песней «Where Did You Sleep Last Night», опираясь на версию традиционной песни в исполнении Ледбелли.",
+        "sources": [
+          {
+            "title": "David Browne: In the Room at Nirvana’s MTV Unplugged in New York (Rolling Stone)",
+            "url": "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/"
+          },
+          {
+            "title": "Mike Powell: Nirvana — MTV Unplugged in New York (Pitchfork)",
+            "url": "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/"
+          }
+        ],
+        "kind": "cover",
+        "what": "“Where Did You Sleep Last Night”: Nirvana’s MTV Unplugged performance, drawing on Lead Belly’s version.",
+        "whatRu": "«Where Did You Sleep Last Night»: исполнение Nirvana на MTV Unplugged, опирающееся на версию Ледбелли."
+      },
+      "linkSha256": "564a42974fd06c73398dc2eb4464ff4d5d67a0f72c891c891e8be853e9542399",
+      "verdict": "confirmed",
+      "reviewer": "pop",
+      "reviewScope": "legacy-kind-and-borrowing-detail",
+      "checkedOn": "2026-11-12",
+      "evidence": [
+        {
+          "title": "David Browne: In the Room at Nirvana’s MTV Unplugged in New York (Rolling Stone)",
+          "url": "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/",
+          "opened": true,
+          "support": "Rolling Stone David Browne eyewitness account, lines 55–59: Lead Belly-derived finale, no encore."
+        },
+        {
+          "title": "Mike Powell: Nirvana — MTV Unplugged in New York (Pitchfork)",
+          "url": "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/",
+          "opened": true,
+          "support": "Pitchfork Mike Powell, lines 89 and 124: Lead Belly cover at end of Unplugged."
+        }
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "artist": "arthur-crudup",
+      "story": "Arthur Crudup developed his musical skills through gospel singing. That apprenticeship preceded his blues recording career.",
+      "storyRu": "Артур Крадап развивал своё музыкальное мастерство, исполняя госпел. Эта школа предшествовала его карьере блюзового исполнителя на пластинках.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "big-mama-thornton",
+      "story": "Big Mama Thornton’s apprenticeship included touring with the Hot Harlem Revue. She then established herself in Houston and began recording for Peacock.",
+      "storyRu": "Биг Мама Торнтон прошла школу гастролей с Hot Harlem Revue. Затем она обосновалась в Хьюстоне и начала записываться на Peacock.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "black-sabbath",
+      "story": "Before Black Sabbath, the band played blues as Earth. Tony Iommi’s early guitar playing also grew through his admiration for Eric Clapton’s blues.",
+      "storyRu": "До Black Sabbath группа играла блюз под названием Earth. Ранняя гитарная манера Тони Айомми складывалась и под влиянием блюза Эрика Клэптона.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "bob-dylan",
+      "story": "Robert Johnson was a songwriting model for Bob Dylan. Dylan’s debut album also included Blind Lemon Jefferson’s “See That My Grave Is Kept Clean”.",
+      "storyRu": "Роберт Джонсон служил Бобу Дилану образцом в сочинении песен. На дебютном альбоме Дилана прозвучала и «See That My Grave Is Kept Clean» Блайнд Лемона Джефферсона.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "charley-patton",
+      "story": "At Dockery, Charley Patton studied local guitarist Henry Sloan. He developed his own blues through that musical example.",
+      "storyRu": "На плантации Докери Чарли Паттон изучал игру местного гитариста Генри Слоуна. На этом примере он развивал свой блюз.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "chuck-berry",
+      "story": "Chuck Berry’s sound grew from blues and R&B. He combined them with country music to develop his rock and roll.",
+      "storyRu": "Звучание Чака Берри выросло из блюза и ритм-н-блюза. Соединив их с кантри, он создал свой рок-н-ролл.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "creedence-clearwater-revival",
+      "story": "Little Richard helped shape Creedence Clearwater Revival’s John Fogerty as a musician. The band also recorded Screamin’ Jay Hawkins’s “I Put a Spell on You”.",
+      "storyRu": "Литл Ричард повлиял на становление Джона Фогерти из Creedence Clearwater Revival как музыканта. Группа также записала «I Put a Spell on You» Скримин Джея Хокинса.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "deep-purple",
+      "story": "Ian Gillan brought his early admiration for Little Richard into Deep Purple. The band’s 1972 concerts also included Richard’s “Lucille”.",
+      "storyRu": "Иэн Гиллан принёс в Deep Purple своё раннее увлечение Литл Ричардом. На концертах 1972 года группа исполняла и его «Lucille».",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "elvis-presley",
+      "story": "Elvis Presley’s debut single featured Arthur Crudup’s “That’s All Right”. He also recorded “Hound Dog”, a song first recorded by Big Mama Thornton.",
+      "storyRu": "На дебютном сингле Элвиса Пресли прозвучала «That’s All Right» Артура Крадапа. Он также записал «Hound Dog» — песню, которую первой исполнила на пластинке Биг Мама Торнтон.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "eric-clapton",
+      "story": "Robert Johnson’s recordings helped form Eric Clapton’s understanding of the blues. He later devoted Me and Mr. Johnson to new performances of Johnson’s songs.",
+      "storyRu": "Записи Роберта Джонсона помогли Эрику Клэптону найти свой путь в блюзе. Позднее он посвятил альбом «Me and Mr. Johnson» новым исполнениям песен Джонсона.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "howlin-wolf",
+      "story": "Charley Patton taught Howlin’ Wolf songs and stagecraft. Wolf later carried his Delta blues into an amplified band.",
+      "storyRu": "Чарли Паттон учил Хаулина Вулфа песням и сценическим приёмам. Позднее Вулф перенёс свой дельта-блюз в звучание ансамбля с усиленными инструментами.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "iron-maiden",
+      "story": "Deep Purple helped shape Steve Harris as a musician. Iron Maiden also recorded Led Zeppelin’s “Communication Breakdown”.",
+      "storyRu": "Deep Purple повлияли на становление Стива Харриса как музыканта. Iron Maiden также записали «Communication Breakdown» Led Zeppelin.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "johnny-cash",
+      "story": "Johnny Cash recorded “Rock Island Line” after Lonnie Donegan’s hit rendition. The song reaches back to a convict work group recorded by John Lomax in an Arkansas prison in 1934.",
+      "storyRu": "Джонни Кэш записал «Rock Island Line» вслед за ставшей хитом версией Лонни Донегана. Песня восходит к рабочей бригаде заключённых, которую Джон Ломакс записал в арканзасской тюрьме в 1934 году.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "lead-belly",
+      "story": "Lead Belly heard “Rock Island Line” from singers in Arkansas prisons. He brought the song into his own repertoire.",
+      "storyRu": "Ледбелли услышал «Rock Island Line» от певцов в арканзасских тюрьмах. Он включил песню в собственный репертуар.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "led-zeppelin",
+      "story": "Robert Plant names Howlin’ Wolf among his early musical roots. Led Zeppelin also transformed “When the Levee Breaks”, first recorded by Kansas Joe McCoy and Memphis Minnie.",
+      "storyRu": "Роберт Плант называет Хаулина Вулфа одним из своих ранних музыкальных ориентиров. Led Zeppelin также преобразили «When the Levee Breaks» — песню, впервые записанную Канзасом Джо Маккоем и Мемфис Минни.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "little-richard",
+      "story": "Gospel singing lies behind Little Richard’s vocal style. His voice carried that musical inheritance.",
+      "storyRu": "За вокальной манерой Литл Ричарда стоит госпел. Его голос продолжал эту музыкальную традицию.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "lonnie-donegan",
+      "story": "Lead Belly’s repertoire was central to Lonnie Donegan’s musical formation. Donegan learned “Rock Island Line” from his recording and made his own version.",
+      "storyRu": "Репертуар Ледбелли занимал центральное место в музыкальном становлении Лонни Донегана. Донеган выучил «Rock Island Line» по его записи и создал собственную версию.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "metallica",
+      "story": "Black Sabbath helped shape James Hetfield as a musician. Metallica also recorded “Sabbra Cadabra”, weaving in a passage from “A National Acrobat”.",
+      "storyRu": "Black Sabbath повлияли на становление Джеймса Хэтфилда как музыканта. Metallica также записали «Sabbra Cadabra», вплетя в неё фрагмент «A National Acrobat».",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "muddy-waters",
+      "story": "Muddy Waters learned from Son House’s Delta blues. He carried that tradition into the electric-band setting of Chicago.",
+      "storyRu": "Мадди Уотерс учился на дельта-блюзе Сона Хауса. Он перенёс эту традицию в звучание чикагского ансамбля с электрическими инструментами.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "nirvana",
+      "story": "Nirvana’s MTV Unplugged finale drew on Lead Belly’s version of a traditional song. That closing performance was “Where Did You Sleep Last Night”.",
+      "storyRu": "В финале MTV Unplugged Nirvana обратились к версии традиционной песни в исполнении Ледбелли. Этой заключительной песней была «Where Did You Sleep Last Night».",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "oasis",
+      "story": "Noel Gallagher’s songwriting looked to the Beatles. Oasis also included their “I Am the Walrus” cover on The Masterplan.",
+      "storyRu": "В сочинении песен Ноэл Галлахер равнялся на The Beatles. Oasis также включили свою версию «I Am the Walrus» в сборник «The Masterplan».",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "robert-johnson",
+      "story": "Robert Johnson developed his music among Mississippi Delta blues musicians. Son House was one of the models he followed.",
+      "storyRu": "Музыка Роберта Джонсона складывалась в блюзовой среде дельты Миссисипи. Одним из его образцов был Сон Хаус.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "son-house",
+      "story": "Son House developed as a guitarist in the Mississippi Delta. Its blues community was the setting in which his playing took shape.",
+      "storyRu": "Сон Хаус становился гитаристом в дельте Миссисипи. Его манера складывалась в местной блюзовой среде.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "the-beatles",
+      "story": "The Beatles learned to play for an audience with songs by Little Richard and Chuck Berry. Their recording of “Twist and Shout” also followed the Isley Brothers’ R&B hit.",
+      "storyRu": "The Beatles учились играть перед публикой на песнях Литл Ричарда и Чака Берри. Записав «Twist and Shout», они также обратились к песне, которую The Isley Brothers сделали хитом ритм-н-блюза.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "the-rolling-stones",
+      "story": "Muddy Waters was one of the blues models around whom the young Rolling Stones shaped their sound. Their single “Little Red Rooster” carried a blues song into their own repertoire.",
+      "storyRu": "Молодые The Rolling Stones вырабатывали своё звучание, равняясь на Мадди Уотерса и его блюз. Выпустив сингл «Little Red Rooster», они включили блюзовую песню в собственный репертуар.",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "the-white-stripes",
+      "story": "Son House’s stark expression became a guiding model for Jack White. The White Stripes also took up his repertoire, recording “Death Letter”.",
+      "storyRu": "Суровая выразительность Сона Хауса стала ориентиром для Джека Уайта. The White Stripes обратились и к его репертуару, записав «Death Letter».",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    },
+    {
+      "artist": "van-morrison",
+      "story": "Lead Belly remained an inspiration for Van Morrison. With Them, Morrison also recorded the Big Joe Williams blues standard “Baby Please Don’t Go”.",
+      "storyRu": "Ледбелли оставался для Вана Моррисона источником вдохновения. В составе Them Моррисон также записал блюзовый стандарт Биг Джо Уильямса «Baby Please Don’t Go».",
+      "verdict": "confirmed",
+      "note": "Both versions use only this artist’s own links; covers do not become unsupported formative influences."
+    }
+  ],
+  "resolvedIssues": [
+    "Replaced duplicated Harris interview source with independent Dave Ling interview.",
+    "Replaced fan-hosted Q transcript for Oasis with original MusicRadar interview.",
+    "Muddy electric-band statement now backed by explicit electrification sources.",
+    "Presley new edge narrowed to debut single to exclude earlier private demos."
+  ],
+  "notes": [
+    "Legacy claims retained; full-link hashes include type, borrowing detail, bilingual text and sources.",
+    "Van Morrison CMHOF PDF read via local text after web error; uDiscover Baby Please Dont Go read using curl after timeout."
+  ]
+}

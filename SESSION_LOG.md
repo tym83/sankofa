@@ -98,3 +98,47 @@
 - Committed the reviewed catalog in four signed-off batches: 7e2a199 (rock), d98c283 (electronic/alternative), 23014f1 (pop/country), 9d1dbcd (Russian/blues/soul).
 - Final documentation/audit commit records conventions, usable local CLI examples, all validation counts and this session journal. All ROOTS.md deliverables are complete; no open questions.
 - Each commit uses an English feat(content) subject, sign-off and exactly one final Assisted-by trailer. No push or publication performed.
+
+### 2026-11-12 — Roots deeper started
+- Goal: execute ROOTS-DEEP.md in the current feat/roots-deep worktree, preserve existing links, document intermediate artists and typed borrowings, and deliver an exact new-edge ledger.
+- Scope: ROOTS-DEEP.md supersedes the historical kuberoot worktree/task directions. No infrastructure, push, or publication.
+- Initial state: clean worktree; 50 artist files with one link each. The roots README explicitly requires two independent agents to check every link against two opened sources, so research and independent cross-review will use agents.
+- Next: research documented chains in disjoint batches; verify Paradise Circus against recording credits; cross-review, lint, graph-audit and commit logical content batches.
+
+### 2026-11-12 — Roots deeper resumed
+- Read ROOTS-DEEP.md, roots format and Russian translation/glossary rules. Existing session journal was already modified; preserve it.
+- Resolve the brief's removal conflict by its final rule: preserve every existing link and add stronger formative links alongside it.
+- README requires independent two-agent source checks; use disjoint research ownership and independent cross-review. Work stays in this worktree; no infrastructure changes.
+- Next: extend all 50 artists, verify borrowed recordings, and audit exact new links against the baseline.
+
+### 2026-11-12 — Jazz and art-rock chain drafted
+- Added seven intermediate files and fourteen sourced edges: Television to the Velvet Underground, Coltrane and Ayler; Velvet Underground to Reed; Reed to doo-wop and Coleman; jazz musicians to documented apprenticeships and museum traditions.
+- Each new edge has two opened sources; research notes are in roots-deep-jazz-research.json. Independent review requested before acceptance.
+- Added interpolation as a distinct borrowing kind, requiring a nonblank description. Targeted roots tests pass with the existing temporary Go cache; the default laptop cache is outside writable roots.
+- Paradise Circus investigation: community lists identify Simone's See-Line Woman, but the official Luther booklet identifies performers without a sample credit. Absence of a credit is not disproof. Continue seeking independent authoritative confirmation; do not invent a replacement sample.
+
+### 2026-11-12 — Rock lineage and independent jazz review
+- Updated sixteen existing rock artists and added eleven intermediate artists, with thirty-two new links and bilingual stories; all original claims retained. New Black intermediate files include direct museum-card links.
+- Recorded opened evidence in roots-deep-rock-research.json. Independent pop review found duplicate underlying Maiden interview, an unverified Oasis transcript, and insufficiently precise Muddy Waters electrification sources; replaced those sources and narrowed Maiden wording.
+- Independently opened both sources for all fourteen jazz/art-rock links. Recorded confirmed full-link hashes and evidence in roots-deep-jazz-review.json; narrowed Television/Coltrane and replaced Television/Velvet Underground source to support chronology.
+- Reviewed interpolation validation change; GOCACHE=/tmp/sankofa-roots-rock-gocache go test ./pkg/roots passed.
+
+### 2026-11-12 — Deeper catalog and independent review
+- All four research batches are drafted: 44 intermediate artists and 110 proposed new links, while retaining all 50 original links.
+- Primary independently opened and checked both sources for all 33 modern-batch edges, including downloaded sampling studies and MusicTech text. Reviewed translations, stories, and borrowing descriptions; recorded whole-link hashes in roots-deep-modern-review.json.
+- Full go test ./... passes with GOCACHE=/tmp/sankofa-roots-go-cache. Interpolation and collaboration are distinct kinds; borrowed descriptions reject blank or whitespace-only English text.
+- Cross-review is resolving source independence and over-broad claims before final ledger generation. No push or publication.
+
+### 2026-11-12 — Deeper catalog final validation
+- Final collection: 94 artists, 160 links, including 44 new artists and 110 new links. All 50 original targets, English/Russian claims and source lists are preserved against c82dc083797c141e16b5c403e43a09d77ee5cf4f.
+- Independent second review passed for every new link; 223 whole-link hash assertions and all 94 bilingual story reviews match the final content. Fixed duplicated underlying interview sources and narrowed unsupported chronology during cross-review.
+- Content lint: 102 cards OK. Full go test ./... passes. git diff --check passes.
+- Export: 94 artists and 237 valid paths, ending at 13 museum cards, no cycles or missing references. Every original artist has an intermediate-artist path; longest paths range from two to six edges where documented.
+- CLI: all 188 English-name/Cyrillic-alias lookups select the expected artist; listing contains 94 entries.
+- Exact additions are in roots-deep-new.yaml; detailed validation and current file hashes are in roots-deep-validation.json. Paradise Circus remains unconfirmed, explicitly excluded and documented in roots-deep-unresolved.yaml; no alternative sample invented.
+- Next: create signed-off logical commits with exactly one final Assisted-by trailer, then verify clean status. Do not push.
+
+### 2026-11-12 — Deeper catalog committed
+- Created signed-off logical commits: ee7b6bd (borrowing kinds and validation), 1e97c34 (jazz/art rock), 4d0118a (rock/blues), 9843915 (pop/soul/hip-hop), 9240715 (electronic/alternative/reggae).
+- Final documentation/audit commit records the exact new-edge ledger, unresolved Paradise Circus research, validation results and this append-only journal.
+- All deliverables are implemented and checked. The unconfirmed sample lead remains excluded under the evidence rule. No owner decision is required; no push or publication performed.

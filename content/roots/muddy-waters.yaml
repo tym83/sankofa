@@ -1,0 +1,29 @@
+id: "muddy-waters"
+name: "Muddy Waters"
+nameRu: "Мадди Уотерс"
+aliases: ["мадди уотерс"]
+years: [1913, 1983]
+place: {"name": "Issaquena County, Mississippi", "lat": 32.755, "lon": -91.002}
+genre: "Blues"
+genreRu: "блюз"
+links:
+  - to: "root:son-house"
+    kind: "influence"
+    claim: "Muddy Waters learned from Son House’s Delta blues before developing his Chicago sound."
+    claimRu: "Прежде чем создать своё чикагское звучание, Мадди Уотерс учился на дельта-блюзе Сона Хауса."
+    sources:
+      - title: "Mississippi Blues Trail: Muddy Waters Birthplace"
+        url: "https://msbluestrail.org/blues-trail-markers/muddy-waters-birthplace"
+      - title: "National Park Service: Muddy Waters"
+        url: "https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm"
+  - to: "card:blues"
+    kind: "scene"
+    claim: "Muddy Waters carried the Delta blues into the electric-band setting of Chicago."
+    claimRu: "Мадди Уотерс перенёс дельта-блюз в звучание чикагского ансамбля с электрическими инструментами."
+    sources:
+      - title: "Rock & Roll Hall of Fame: Muddy Waters"
+        url: "https://www.rockhall.com/inductees/muddy-waters"
+      - title: "National Park Service: Muddy Waters"
+        url: "https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm"
+story: "Muddy Waters learned from Son House’s Delta blues. He carried that tradition into the electric-band setting of Chicago."
+storyRu: "Мадди Уотерс учился на дельта-блюзе Сона Хауса. Он перенёс эту традицию в звучание чикагского ансамбля с электрическими инструментами."

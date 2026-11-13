@@ -1,63 +1,101 @@
 # Roots
 
-One file per artist or band: `<id>.yaml`. Each link is one documented step of
-influence, to another artist here (`root:<id>`) or to a museum card
-(`card:<id>`), and carries at least two independent authoritative sources.
-Every link is checked by two agents, each against two sources; a link that is
-not confirmed by both is dropped.
+One file per artist or band: `<id>.yaml`. Each link is one documented step
+to another artist (`root:<id>`) or a museum card (`card:<id>`), with at least
+two independent authoritative sources. Both a researcher and a separate
+reviewer open and check the sources. Two websites repeating the same
+interview do not count as two independent sources.
 
-The current collection contains 50 artists and 50 documented links. Each link
-records one example; a path does not claim to describe an artist’s entire
-musical ancestry. Covers establish a recorded connection, not necessarily a
-formative influence.
+The collection contains 90 artists and 148 links. The deeper edition adds
+40 intermediate artists and 98 links, preserving all 50 original links,
+their claims, translations and sources. Every original artist now has a
+documented path through another artist to a museum tradition. Paths are
+selected connections, not complete ancestry or a claim of exclusive influence.
+In particular, a cover, sample or collaboration does not by itself prove
+formative influence. Earlier cover links remain alongside stronger formative
+links where the evidence supports them.
 
 For people, `years` contains birth and, where applicable, death years. For
 bands, the single year is formation, avoiding misleading uninterrupted
 activity ranges. `place` is birthplace for people and formation city for bands.
-Cyrillic aliases support Russian search.
+Use Cyrillic aliases for Russian search and follow
+[`TRANSLATION-RU.md`](../TRANSLATION-RU.md) and
+[`GLOSSARY-RU.md`](../GLOSSARY-RU.md).
 
-Research notes are in `../ledger/roots-{rock,pop,modern,extra}.json`; matching
-`-review.json` files record independent second-agent checks against both
-sources. SHA-256 hashes bind each review to the English and Russian claim.
-A changed claim needs renewed review. The second independent check of every
-link, with its verdict and two sources, is in
-[`roots-check.yaml`](../ledger/roots-check.yaml). Validation counts are recorded in
-[`roots-validation.json`](../ledger/roots-validation.json).
+Each artist has `story` and `storyRu`: two or three sentences drawn only from
+that file's own links. Do not introduce additional facts from a source or
+silently infer influences from a downstream path. Intermediate Black artists
+also have their own direct link to an appropriate museum card. A path reaching
+a card can be followed further through that card's separate `roots` graph.
 
-Example (also stored in `oasis.yaml`):
+Every catalog link has a `kind`:
 
-```yaml
-id: "oasis"
-name: "Oasis"
-nameRu: "Oasis"
-aliases: ["оазис", "Лиам Галлахер", "Ноэл Галлахер"]
-years: [1991]
-place: {"name": "Manchester", "lat": 53.4808, "lon": -2.2426}
-genre: "Britpop"
-genreRu: "брит-поп"
-links:
-  - to: "root:the-beatles"
-    claim: "Oasis included their cover of the Beatles’ “I Am the Walrus” on The Masterplan."
-    claimRu: "Oasis включили свою версию песни The Beatles «I Am the Walrus» в сборник The Masterplan."
-    sources:
-      - title: "Apple Music: The Masterplan — editorial album notes"
-        url: "https://music.apple.com/us/album/the-masterplan/1517453693"
-      - title: "Pitchfork: Oasis — The Masterplan"
-        url: "https://pitchfork.com/reviews/albums/5930-the-masterplan/"
-```
+| Kind | What the evidence establishes |
+| --- | --- |
+| `influence` | A documented influence on the artist's music |
+| `cover` | A new performance of another artist's song |
+| `sample` | Reuse of an existing recording |
+| `interpolation` | A newly played or sung part of an existing composition |
+| `member` | Playing or singing in the linked artist's band |
+| `producer` | Production or mixing work shaping the recording |
+| `scene` | A documented musical community, practice or tradition |
+| `teacher` | Direct musical instruction |
+| `collaboration` | Joint performance or recording, without implying mentorship |
 
-Validate and try the collection:
+For covers, samples and interpolations, both `what` and `whatRu` identify
+the song, recording where applicable, and borrowed part. For example,
+Coldplay's `Talk` interpolates the synthesizer riff of Kraftwerk's
+`Computer Love` on guitar; it does not reuse that recording. Keep that
+distinction in both languages. The loader still accepts older optional
+metadata, but validates recognized kinds and a nonblank English borrowing
+description when a borrowing kind is set.
+
+## Evidence and independent review
+
+[`roots-deep-new.yaml`](../ledger/roots-deep-new.yaml) is the exact inventory
+of added edges, generated against baseline commit
+`c82dc083797c141e16b5c403e43a09d77ee5cf4f`. It includes the requested artist,
+target, kind, claim and sources, plus translations and borrowing descriptions.
+
+The four `roots-deep-{rock,pop,modern,jazz}-research.json` ledgers document
+first checks. Matching `-review.json` ledgers record independent checks of
+both sources. Their whole-link SHA-256 values bind the accepted kind,
+descriptions, English/Russian claims and sources. Canonical encoding is UTF-8
+JSON with sorted keys, unescaped Unicode and no separator whitespace. A
+changed link needs renewed review. The validation report records current
+artist-file hashes as well.
+
+Earlier `roots-{rock,pop,modern,extra}.json`, matching review files and
+[`roots-check.yaml`](../ledger/roots-check.yaml) remain historical evidence
+for the original claims. Their old whole-file hashes apply to the baseline,
+not to the expanded files. Original claims and sources are compared with
+that baseline; new annotations and stories receive a separate review.
+
+[`roots-deep-unresolved.yaml`](../ledger/roots-deep-unresolved.yaml) records
+the unresolved `Paradise Circus` / Nina Simone lead. It is not an accepted
+edge: community attributions and silence in a credits booklet cannot
+establish or disprove the sample. Do not invent a replacement attribution.
+
+[`roots-deep-check.yaml`](../ledger/roots-deep-check.yaml) is the second
+independent check of every edge in the inventory: a verdict (confirmed,
+corrected, refuted, unverified, trivia) with two sources the second checker
+opened. Corrected links were fixed in place; unverified links and trivia (a
+single cover that shows no formation) were removed, together with the four
+intermediate artists they left unreachable. The inventory and the review
+hashes above describe the edition before this check.
+
+## Validation
 
 ```sh
 go run ./cmd/sankofa content lint content/cards
-go run ./cmd/sankofa roots "Metallica" --content content/cards
+go test ./...
+go run ./cmd/sankofa roots "Television" --content content/cards
 go run ./cmd/sankofa roots "Мумий Тролль" --lang ru --content content/cards
 go run ./cmd/sankofa content export content/cards -o /tmp/sankofa-content.json
 ```
 
-Kinds: `influence` (named as an influence), `cover` (recorded their song —
-say which in `what`), `sample` (used their recording — say which and what of
-it in `what`, e.g. "the handclaps and beat of 'X'"), `member` (played in the
-band), `producer`, `scene` (grew out of the same scene), `teacher`. Chains go
-deep: intermediate artists are their own files with their own roots, and a
-chain that reaches a genre card continues through that card's `roots`.
+`--content content/cards` selects local content instead of a cluster.
+[`roots-deep-validation.json`](../ledger/roots-deep-validation.json) records
+the final graph, baseline preservation, review-hash, export and bilingual
+CLI checks. The earlier `roots-validation.json` describes only the original
+50-artist edition.

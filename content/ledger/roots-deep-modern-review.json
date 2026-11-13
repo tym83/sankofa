@@ -1,0 +1,974 @@
+{
+  "checkedOn": "2026-11-12",
+  "scope": "Independent second review of all modern new edges, translations, stories and borrowing descriptions. Legacy claims retain the baseline review; Coldplay interpolation checked against both original sources again.",
+  "hashEncoding": "SHA-256 of UTF-8 json.dumps(link, ensure_ascii=False, sort_keys=True, separators=(comma,colon)); covers the whole link.",
+  "entries": [
+    {
+      "artist": "massive-attack",
+      "to": "root:billy-cobham",
+      "kind": "sample",
+      "claim": "Massive Attack sampled Billy Cobham's 'Stratus' in 'Safe from Harm'.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/",
+        "https://www.uni-hildesheim.de/ojs/index.php/MMD/de/article/download/498/541"
+      ],
+      "evidence": "Cobham explicitly discusses permission for the sample in the interview; Grossmann identifies backing phrases from Stratus (Spectrum, 1973), p. 97. PDF downloaded and text read independently.",
+      "linkSha256": "9ccae708009a7955c1f1c9cd73537079e0df5dde71820bb1eefb6122dbfbefa7"
+    },
+    {
+      "artist": "kraftwerk",
+      "to": "root:james-brown",
+      "kind": "influence",
+      "claim": "James Brown's funk was an influence on Kraftwerk.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/",
+        "https://enciklopedija.hr/clanak/kraftwerk"
+      ],
+      "evidence": "Bartos names Brown and funk in the interview; Croatian Encyclopedia separately identifies Brown/funk as an influence.",
+      "linkSha256": "915f1011d471692006ca619cace00e927cbe8791b397e0f023cfbe17069c4b2f"
+    },
+    {
+      "artist": "radiohead",
+      "to": "root:charles-mingus",
+      "kind": "influence",
+      "claim": "Radiohead drew on Charles Mingus's jazz for 'Pyramid Song'.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.loudersound.com/features/radioheads-proggiest-moments",
+        "https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388"
+      ],
+      "evidence": "Prog identifies Mingus as a source for Pyramid Song; Colin Greenwood confirms the connection in the Irish Times interview.",
+      "linkSha256": "951f64f421db92d3c440f61772d70e8b5e422bec35b53a7bdf9f68cba223dcae"
+    },
+    {
+      "artist": "david-bowie",
+      "to": "root:nina-simone",
+      "kind": "cover",
+      "claim": "Nina Simone's version of 'Wild Is the Wind' inspired David Bowie to record it for Station to Station.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.nporadio2.nl/nieuws/top2000/93682543-a548-417c-b69e-9b220e4b507b/david-bowies-wild-is-the-wind-is-een-eerbetoon-aan-nina-simone",
+        "https://www.prnewswire.com/news-releases/nina-simones-historic-philips-years-celebrated-with-vinyl-remasters-of-seven-classic-albums-including-nina-simone-in-concert-wild-is-the-wind-high-priestess-of-soul-300337404.html"
+      ],
+      "evidence": "NPO describes Bowie following Simone; Verve/UMe notes that Simone inspired the Station to Station recording. This is a cover, not a sample.",
+      "linkSha256": "fcba5b4ca1c995940bee524323cf7bde9368bf8781406c58c4a0e1021258a86e"
+    },
+    {
+      "artist": "talking-heads",
+      "to": "root:fela-kuti",
+      "kind": "influence",
+      "claim": "Talking Heads drew on Fela Kuti's Afrobeat when making Remain in Light.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf",
+        "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/"
+      ],
+      "evidence": "Library of Congress essay describes the Fela-inspired jams; Pitchfork independently identifies Afrodisiac as the model.",
+      "linkSha256": "3a4dc6aa79f51d57db96ad5f5c8c020d9992f56e6479fe1157a538c2bca22767"
+    },
+    {
+      "artist": "peter-gabriel",
+      "to": "root:otis-redding",
+      "kind": "influence",
+      "claim": "Peter Gabriel made 'Sledgehammer' as a tribute to the soul music of Otis Redding.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://petergabriel.com/release/sledgehammer/",
+        "https://www.muzines.co.uk/articles/peter-gabriel-behind-the-mask/1494"
+      ],
+      "evidence": "Gabriel calls Sledgehammer a homage to formative soul music and names Redding; the 1987 Sound On Sound interview supplies independent first-person testimony.",
+      "linkSha256": "408f1573e4a57f6bf99b51868039c561f7f1710dd6077ba2f9798a0290a0ee36"
+    },
+    {
+      "artist": "the-clash",
+      "to": "root:junior-murvin",
+      "kind": "cover",
+      "claim": "The Clash recorded a cover of Junior Murvin’s reggae song “Police and Thieves”.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.theclash.com/music/the-clash",
+        "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
+      ],
+      "evidence": "Official album notes and Pitchfork independently identify the Murvin cover on the debut album.",
+      "linkSha256": "b6e1be3694be7827e962209d866787b51c4bccf4be225179e9234ea04e386353"
+    },
+    {
+      "artist": "the-prodigy",
+      "to": "root:ultramagnetic-mcs",
+      "kind": "sample",
+      "claim": "The Prodigy's 'Smack My Bitch Up' samples 'Give the Drummer Some' by Ultramagnetic MCs.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/",
+        "https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf"
+      ],
+      "evidence": "MusicTech identifies Kool Keith’s isolated vocal hook; Morey independently identifies Give the Drummer Some as the sampled recording. Both fetched documents read locally.",
+      "linkSha256": "b0be7f7134f6ec8e40e8647dbd9d2a491c6dc8f4e24e3a941f005f0a5cb51152"
+    },
+    {
+      "artist": "paul-simon",
+      "to": "root:jimmy-cliff",
+      "kind": "scene",
+      "claim": "Paul Simon recorded 'Mother and Child Reunion' in Jamaica with musicians who had backed Jimmy Cliff.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/",
+        "https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion"
+      ],
+      "evidence": "Jamaica Observer identifies Jimmy Cliff’s backing musicians; NPO independently describes that Jamaican recording session.",
+      "linkSha256": "0b48d1b698f6c05e1f2c0f870b06fc16da76b0002e5a267fbf778c7870db4fc1"
+    },
+    {
+      "artist": "james-brown",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "James Brown carried gospel vocal intensity into his rhythm-and-blues and funk.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://library.rockhall.com/james_brown",
+        "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+      ],
+      "evidence": "Rock Hall describes gospel vocal fervor; Inayatullah independently discusses Brown carrying gospel singing into funk.",
+      "linkSha256": "f7b1e00139babc6c0ff81ad12595c7805950323af7ebdd9d37a9af06723b0392"
+    },
+    {
+      "artist": "fela-kuti",
+      "to": "card:afrobeat",
+      "kind": "influence",
+      "claim": "Fela Kuti developed Afrobeat by combining West African highlife, jazz and American soul and funk.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://rockhall.com/inductees/fela-kuti/",
+        "https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/"
+      ],
+      "evidence": "Rock Hall and Trinity Laban independently describe the highlife/jazz/American soul-funk fusion.",
+      "linkSha256": "d8eedf0ba3bc4fa975c7bb73eb884891cbefdaf9d8a72f85af35810b88345e19"
+    },
+    {
+      "artist": "fela-kuti",
+      "to": "root:james-brown",
+      "kind": "influence",
+      "claim": "James Brown’s funk helped shape Fela Kuti’s music.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://rockhall.com/inductees/fela-kuti/",
+        "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+      ],
+      "evidence": "Rock Hall names Brown; Inayatullah independently traces the Brown connection.",
+      "linkSha256": "4d3440d2266ab7eabb4cf0db4b0fbce967a306d4968bbcb7f256d23f699c685c"
+    },
+    {
+      "artist": "charles-mingus",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "The church music Charles Mingus heard as a child was one of his earliest musical influences.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.charlesmingus.com/mingusbio",
+        "https://www.bluenote.com/artist/charles-mingus/"
+      ],
+      "evidence": "Mingus estate and Blue Note both identify childhood church music as an early influence.",
+      "linkSha256": "430f3e7338b78233fe0b46df94f6da3cf16b79a07dc38a9136c6bfbdcccfb826"
+    },
+    {
+      "artist": "charles-mingus",
+      "to": "card:jazz",
+      "kind": "influence",
+      "claim": "Charles Mingus brought gospel into his jazz compositions.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.bluenote.com/artist/charles-mingus/",
+        "https://wicn.org/wicn-artist-of-the-month-april-2022-charles-mingus/"
+      ],
+      "evidence": "Blue Note identifies gospel as a compositional ingredient; Doug Hall at WICN independently discusses Better Git It in Your Soul and childhood gospel.",
+      "linkSha256": "ebdb967940708e1b8d54920a7623c34d5b33449ea2e7f27cb16aa7299911324b"
+    },
+    {
+      "artist": "billy-cobham",
+      "to": "root:miles-davis",
+      "kind": "member",
+      "claim": "Billy Cobham played drums with Miles Davis before his work in the Mahavishnu Orchestra.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.bluenote.com/artist/billy-cobham/",
+        "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
+      ],
+      "evidence": "Blue Note places Davis before Mahavishnu; Cobham independently discusses his Davis period and the fusion band. Do not repeat Blue Note’s erroneous Bitches Brew credit.",
+      "linkSha256": "7fd859a01eeb0f33fcd8b5478a92e200ea9101faaeb48ebc4caf570cc1cb90cf"
+    },
+    {
+      "artist": "billy-cobham",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Billy Cobham’s work with the Mahavishnu Orchestra placed him in the early jazz-fusion movement.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.bluenote.com/artist/billy-cobham/",
+        "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
+      ],
+      "evidence": "Blue Note and the independently conducted Cobham interview both identify Mahavishnu as early jazz fusion.",
+      "linkSha256": "f01693b881e34ed7aa1b5aa1b9b083aa4d5b5cac2df3b7235c466d0f00068c44"
+    },
+    {
+      "artist": "otis-redding",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "Otis Redding’s musical upbringing was rooted in singing in church.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.georgiaencyclopedia.org/articles/arts-culture/otis-redding-1941-1967",
+        "https://academic.oup.com/american-national-biography/reference/63042/reference-article-abstract/570547002"
+      ],
+      "evidence": "Georgia Encyclopedia and American National Biography both establish church singing in his upbringing.",
+      "linkSha256": "e65021e30845339eec285db2cd410bcb33ed6c66ddce75b1eae8b18d549cb9a4"
+    },
+    {
+      "artist": "edwin-birdsong",
+      "to": "card:funk",
+      "kind": "scene",
+      "claim": "Edwin Birdsong developed jazz-funk records in collaboration with Roy Ayers.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://ra.co/news/43130",
+        "https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/"
+      ],
+      "evidence": "Resident Advisor describes Birdsong’s Roy Ayers collaboration; Wax Poetics independently describes their jazz-funk records.",
+      "linkSha256": "5725366f53bf844afa00587ccc931c563789646ea809881f5608c620583e7680"
+    },
+    {
+      "artist": "daft-punk",
+      "to": "root:edwin-birdsong",
+      "kind": "sample",
+      "claim": "Daft Punk built “Harder, Better, Faster, Stronger” around a sample of Edwin Birdsong’s “Cola Bottle Baby”.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://ra.co/news/43130",
+        "https://radiomilwaukee.org/2013-05-23/sample-better-faster-stronger"
+      ],
+      "evidence": "Resident Advisor and Radio Milwaukee both identify the 1979 Cola Bottle Baby recording as the sampled basis. Instrumental groove describes the borrowed accompaniment, not a vocal sample.",
+      "linkSha256": "99e4742d987134a44b1d525e9acd03d886ae54eca90977ff40389542dfccdec8"
+    },
+    {
+      "artist": "ultramagnetic-mcs",
+      "to": "card:hip-hop",
+      "kind": "scene",
+      "claim": "Ultramagnetic MCs grew out of Bronx DJ culture, with Ced Gee moving from DJing into rap and sample-based production.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/",
+        "https://www.cedgee.com/about/"
+      ],
+      "evidence": "SPIN’s independent interview describes Bronx DJ beginnings and funk-sample production; Ced Gee’s official biography supplies his DJ-to-rapper progression.",
+      "linkSha256": "477ff3f82c085720510e1e28b17a21e263e166e3e5a10ce5e96cf76e97fb7205"
+    },
+    {
+      "artist": "dr-dre",
+      "to": "card:funk",
+      "kind": "influence",
+      "claim": "Dr. Dre built the G-funk sound of The Chronic around Parliament-Funkadelic’s grooves.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf",
+        "https://pitchfork.com/reviews/albums/dr-dre-the-chronic/"
+      ],
+      "evidence": "Rashad Grove’s Library of Congress essay and Sheldon Pearce’s Pitchfork review independently describe Parliament-Funkadelic grooves reshaped through samples and live instrumentation.",
+      "linkSha256": "862199d0476395b790d8f449b6b5310ed47e2f8cc3d5cccfc971a31d66fc97c2"
+    },
+    {
+      "artist": "arctic-monkeys",
+      "to": "root:dr-dre",
+      "kind": "influence",
+      "claim": "Arctic Monkeys drew on Dr. Dre’s hip-hop rhythms when making AM.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.radiox.co.uk/artists/arctic-monkeys/why-arctic-monkeys-am-most-important-album/",
+        "https://happymag.tv/engineering-the-sound-arctic-monkeys-am/"
+      ],
+      "evidence": "Radio X quotes Turner’s NME description of a Dre beat; Enmore quotes a separate Uncut interview about Dre-like grooves.",
+      "linkSha256": "54e5638e15a56c04a3bf2c5bb8627b82f6e1b2099456c533cc6acaae0f0f9254"
+    },
+    {
+      "artist": "king-tubby",
+      "to": "card:reggae",
+      "kind": "scene",
+      "claim": "King Tubby developed dub by remixing Jamaican rhythm tracks, dropping parts in and out and adding echo.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.reggaeville.com/artist-details/king-tubby/about/",
+        "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+      ],
+      "evidence": "Reggaeville describes dropping instrumental parts and adding echoes; Williams examines the faders, four-track remixing and tape-delay system.",
+      "linkSha256": "17ee724df9ec3508a0bdb841b3dbdca5a0c69bd7d35d9795022b020960570ff7"
+    },
+    {
+      "artist": "lee-scratch-perry",
+      "to": "card:reggae",
+      "kind": "scene",
+      "claim": "Lee “Scratch” Perry helped develop dub through experiments with reggae rhythm tracks and studio effects.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://ra.co/dj/leescratchperry/biography",
+        "https://uncarved.org/dub/scratch.html"
+      ],
+      "evidence": "Resident Advisor describes Perry’s experimental dub production; Danny Kelly’s archived NME interview records Perry describing rhythm-track and effects experiments.",
+      "linkSha256": "c14378b975e88a7a4e231712751791e5b04b95f0f227b557961fdf3068b0758f"
+    },
+    {
+      "artist": "lee-scratch-perry",
+      "to": "root:king-tubby",
+      "kind": "producer",
+      "claim": "King Tubby mixed Lee “Scratch” Perry’s Blackboard Jungle Dub.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://thequietus.com/interviews/strange-world-of/king-tubby-best-music/",
+        "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+      ],
+      "evidence": "David Katz and Sean Williams both identify Tubby’s mixing contribution. Katz notes disputed division of labor; claim does not assign exclusive authorship or a disputed release year.",
+      "linkSha256": "82f0fba45984872d33553f9b2cfc2fe69c43ab498ea7312cb3a93d3e6ff0e9ac"
+    },
+    {
+      "artist": "the-clash",
+      "to": "root:lee-scratch-perry",
+      "kind": "producer",
+      "claim": "Lee “Scratch” Perry produced the Clash’s “Complete Control”.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.theclash.com/music/complete-control",
+        "https://uncarved.org/dub/scratch.html"
+      ],
+      "evidence": "Official single notes credit Perry; Danny Kelly’s NME interview independently identifies the co-production. Producer kind does not imply sole production.",
+      "linkSha256": "34dfeddee45aacef2622ab65327f71a12d03b0f03a24f8b16bf383d98c456b54"
+    },
+    {
+      "artist": "junior-murvin",
+      "to": "root:lee-scratch-perry",
+      "kind": "producer",
+      "claim": "Lee “Scratch” Perry produced Junior Murvin’s breakthrough “Police and Thieves”.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/",
+        "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+      ],
+      "evidence": "Pitchfork identifies Perry’s production of the breakthrough; Murvin independently recalls working with and learning from Perry.",
+      "linkSha256": "2e8007b5e0dddd0205d1f8816b610188115cbea09a828e62864b02a1c93b9bbf"
+    },
+    {
+      "artist": "junior-murvin",
+      "to": "card:reggae",
+      "kind": "scene",
+      "claim": "Junior Murvin’s “Police and Thieves” emerged from Jamaica’s reggae recording scene.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/",
+        "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+      ],
+      "evidence": "Pitchfork situates the record in Jamaican reggae; Murvin’s independent interview describes the reggae recording context.",
+      "linkSha256": "468f049598f7ddcda3f81d05fd2148ff42a1c731e2a2b4ada9a86398cad1f43e"
+    },
+    {
+      "artist": "bob-marley",
+      "to": "root:lee-scratch-perry",
+      "kind": "producer",
+      "claim": "Lee “Scratch” Perry helped the Wailers develop their sound by pairing them with bassist Aston Barrett and drummer Carlton Barrett.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.bobmarley.com/history/",
+        "https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf"
+      ],
+      "evidence": "Marley estate and Cambridge Companion profile both describe Perry adding the Barrett rhythm section and shaping the group’s sound.",
+      "linkSha256": "ee66ae1717a91ccd866766d4f1c6295b932563c91e3381ff11d5086f9cd1cad9"
+    },
+    {
+      "artist": "bob-marley",
+      "to": "card:reggae",
+      "kind": "scene",
+      "claim": "The Wailers’ work with Lee “Scratch” Perry helped define roots reggae.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.bobmarley.com/history/",
+        "https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf"
+      ],
+      "evidence": "Marley estate calls the Perry sessions a paradigm for roots reggae; Cambridge independently identifies their formative reggae sound.",
+      "linkSha256": "7591a0583ecec6322dbd1f1c441de7593db13428c0e5d82bfc1cf17d349dd563"
+    },
+    {
+      "artist": "the-police",
+      "to": "root:bob-marley",
+      "kind": "influence",
+      "claim": "The Police drew on Bob Marley’s reggae when developing their bass-led grooves.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.academia.edu/5120856/_Reggatta_de_Blanc_Analyzing_Style_in_the_Music_of_the_Police",
+        "https://fretbuzz.co/andy-summers-provides-a-candid-viewfinder-glimpse-at-his-life-as-a-guitarist/"
+      ],
+      "evidence": "Spicer documents Marley’s effect on Police bass patterns through Sting and Summers testimony; Summers’ separate FretBuzz interview places reggae/Marley in their environment and explains the bass approach. This does not classify the Police as a reggae band.",
+      "linkSha256": "378caa5afb7c23e5099ee103fa9c95f089ae3f1c63b89f5c1f1851473fd024d6"
+    },
+    {
+      "artist": "aquarium",
+      "to": "root:bob-marley",
+      "kind": "influence",
+      "claim": "Bob Marley was an influence on Aquarium’s Boris Grebenshchikov.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://aquarium.lipetsk.ru/MESTA/mp3/aquarium.ru-albums/siniy.htm",
+        "https://rima.media/document/033gEbdguRvTiTqcBNXyat-2019-05-10-sobesednik-636459-boris-grebenshchikov-vsia-zhizn-v-poiskakh-svezhikh-smyslov"
+      ],
+      "evidence": "Archived official Blue Album notes place Marley listening in Aquarium’s reggae period; Bakanov’s independent Sobesednik profile names Marley among Grebenshchikov’s strongest influences.",
+      "linkSha256": "0d8b0a87466f278663402e8c4dd28636bfdc33294d48dc349a89d3fd843d68b4"
+    },
+    {
+      "artist": "jimmy-cliff",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "Jimmy Cliff began singing in church before his recording career.",
+      "verdict": "confirmed",
+      "reviewer": "primary",
+      "researcher": "modern",
+      "sourcesOpened": [
+        "https://www.rollingstone.co.uk/music/news/jimmy-cliff-the-harder-they-come-reggae-giant-dead-at-81-56553/",
+        "https://www.northcountrypublicradio.org/news/npr/nx-s1-4526570/reggae-pioneer-jimmy-cliff-dies-at-81"
+      ],
+      "evidence": "Kreps in Rolling Stone and NPR’s independent report (including Cliff’s own archival testimony) both identify childhood gospel church singing.",
+      "linkSha256": "190447144dd5852dc8a78d35fcba62db862be4369aa24ccdf090a13e7a939bea"
+    }
+  ],
+  "annotationReviews": [
+    {
+      "artist": "aquarium",
+      "verdict": "confirmed",
+      "story": "Bob Marley was among the influences on Boris Grebenshchikov. Aquarium’s “Vavilon” was originally conceived as reggae.",
+      "storyRu": "Боб Марли был одним из тех, кто повлиял на Бориса Гребенщикова. «Вавилон» группы «Аквариум» изначально задумывался как регги.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:reggae",
+          "linkSha256": "847ad8a5463590b2b1f89bb3e3b748defa71348d6ed1fe9ed041ffb0e0eaf60a"
+        },
+        {
+          "to": "root:bob-marley",
+          "linkSha256": "0d8b0a87466f278663402e8c4dd28636bfdc33294d48dc349a89d3fd843d68b4"
+        }
+      ]
+    },
+    {
+      "artist": "arctic-monkeys",
+      "verdict": "confirmed",
+      "story": "For AM, Arctic Monkeys turned to Dr. Dre’s hip-hop rhythms. Their recorded repertoire also includes Barbara Lewis’s “Baby I’m Yours”, performed with the 747s.",
+      "storyRu": "Работая над «AM», Arctic Monkeys обратились к хип-хоп-ритмам Доктора Дре. Среди их записей есть и «Baby I’m Yours» Барбары Льюис, исполненная вместе с 747s.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:rhythm-and-blues",
+          "linkSha256": "818d3aa8e90ae8f94cf4a0e35cde8c083b9f698b23344ff4e89f3c5af12cc863"
+        },
+        {
+          "to": "root:dr-dre",
+          "linkSha256": "54e5638e15a56c04a3bf2c5bb8627b82f6e1b2099456c533cc6acaae0f0f9254"
+        }
+      ]
+    },
+    {
+      "artist": "billy-cobham",
+      "verdict": "confirmed",
+      "story": "Billy Cobham played with Miles Davis before joining the Mahavishnu Orchestra. His work with that band put him at the heart of early jazz fusion.",
+      "storyRu": "Билли Кобэм играл с Майлзом Дэвисом, прежде чем войти в Mahavishnu Orchestra. Работа в этой группе связала его с ранним джаз-фьюжном.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "root:miles-davis",
+          "linkSha256": "7fd859a01eeb0f33fcd8b5478a92e200ea9101faaeb48ebc4caf570cc1cb90cf"
+        },
+        {
+          "to": "card:jazz",
+          "linkSha256": "f01693b881e34ed7aa1b5aa1b9b083aa4d5b5cac2df3b7235c466d0f00068c44"
+        }
+      ]
+    },
+    {
+      "artist": "bob-marley",
+      "verdict": "confirmed",
+      "story": "Lee “Scratch” Perry paired the Wailers with Aston and Carlton Barrett on bass and drums. Their work together helped define roots reggae.",
+      "storyRu": "Ли «Скрэтч» Перри объединил The Wailers с Астоном и Карлтоном Барреттами на басу и барабанах. Совместная работа помогла определить звучание рутс-регги.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "root:lee-scratch-perry",
+          "linkSha256": "ee66ae1717a91ccd866766d4f1c6295b932563c91e3381ff11d5086f9cd1cad9"
+        },
+        {
+          "to": "card:reggae",
+          "linkSha256": "7591a0583ecec6322dbd1f1c441de7593db13428c0e5d82bfc1cf17d349dd563"
+        }
+      ]
+    },
+    {
+      "artist": "charles-mingus",
+      "verdict": "confirmed",
+      "story": "Charles Mingus’s early musical world included the singing he heard in church. Gospel remained part of the jazz he composed.",
+      "storyRu": "В раннем музыкальном мире Чарльза Мингуса звучало церковное пение. Госпел остался частью джаза, который он сочинял.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "linkSha256": "430f3e7338b78233fe0b46df94f6da3cf16b79a07dc38a9136c6bfbdcccfb826"
+        },
+        {
+          "to": "card:jazz",
+          "linkSha256": "ebdb967940708e1b8d54920a7623c34d5b33449ea2e7f27cb16aa7299911324b"
+        }
+      ]
+    },
+    {
+      "artist": "coldplay",
+      "verdict": "confirmed",
+      "story": "The riff in Coldplay’s “Talk” came from Kraftwerk’s “Computer Love”. A synthesizer melody became a guitar part in the new recording.",
+      "storyRu": "Рифф в «Talk» группы Coldplay пришёл из «Computer Love» Kraftwerk. Синтезаторная мелодия стала гитарной партией в новой записи.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "root:kraftwerk",
+          "linkSha256": "08a830699366344f966c234a884c52347f898fe7d668b8626466e104ba1d620a"
+        }
+      ]
+    },
+    {
+      "artist": "daft-punk",
+      "verdict": "confirmed",
+      "story": "Daft Punk named Chicago house musicians as teachers. In “Harder, Better, Faster, Stronger”, Edwin Birdsong’s “Cola Bottle Baby” supplied a sampled foundation.",
+      "storyRu": "Daft Punk назвали музыкантов чикаго-хауса своими учителями. Основой «Harder, Better, Faster, Stronger» стал сэмпл из «Cola Bottle Baby» Эдвина Бёрдсонга.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:chicago-house",
+          "linkSha256": "3d1b6a9cc4a8ee0113924a4756ab43bd363e43469fcfc7e9d4de56bb24a5829c"
+        },
+        {
+          "to": "root:edwin-birdsong",
+          "linkSha256": "99e4742d987134a44b1d525e9acd03d886ae54eca90977ff40389542dfccdec8"
+        }
+      ]
+    },
+    {
+      "artist": "david-bowie",
+      "verdict": "confirmed",
+      "story": "Nina Simone’s interpretation of “Wild Is the Wind” inspired David Bowie. He made his own recording of the song for Station to Station.",
+      "storyRu": "Интерпретация «Wild Is the Wind» Нины Симон вдохновила Дэвида Боуи. Он записал собственную версию для «Station to Station».",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:jazz",
+          "linkSha256": "c4b3d49c2777837e500cb2e7f429c155f4793a46040caeccc2f59d046362bead"
+        },
+        {
+          "to": "root:nina-simone",
+          "linkSha256": "fcba5b4ca1c995940bee524323cf7bde9368bf8781406c58c4a0e1021258a86e"
+        }
+      ]
+    },
+    {
+      "artist": "dr-dre",
+      "verdict": "confirmed",
+      "story": "Parliament-Funkadelic’s grooves were a model for The Chronic. Dr. Dre reshaped that funk into G-funk.",
+      "storyRu": "Грувы Parliament-Funkadelic послужили образцом для «The Chronic». Доктор Дре переработал этот фанк в джи-фанк.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:funk",
+          "linkSha256": "862199d0476395b790d8f449b6b5310ed47e2f8cc3d5cccfc971a31d66fc97c2"
+        }
+      ]
+    },
+    {
+      "artist": "edwin-birdsong",
+      "verdict": "confirmed",
+      "story": "Edwin Birdsong’s jazz-funk took shape in collaboration with Roy Ayers. Together they made records that joined jazz to funk.",
+      "storyRu": "Джаз-фанк Эдвина Бёрдсонга складывался в сотрудничестве с Роем Эйерсом. Вместе они создавали записи на стыке джаза и фанка.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:funk",
+          "linkSha256": "5725366f53bf844afa00587ccc931c563789646ea809881f5608c620583e7680"
+        }
+      ]
+    },
+    {
+      "artist": "fela-kuti",
+      "verdict": "confirmed",
+      "story": "Fela Kuti joined West African highlife to jazz, soul and funk in Afrobeat. James Brown was one of the musicians who shaped that fusion.",
+      "storyRu": "В афробите Фела Кути соединил западноафриканский хайлайф с джазом, соулом и фанком. Одним из музыкантов, повлиявших на этот сплав, был Джеймс Браун.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:afrobeat",
+          "linkSha256": "d8eedf0ba3bc4fa975c7bb73eb884891cbefdaf9d8a72f85af35810b88345e19"
+        },
+        {
+          "to": "root:james-brown",
+          "linkSha256": "4d3440d2266ab7eabb4cf0db4b0fbce967a306d4968bbcb7f256d23f699c685c"
+        }
+      ]
+    },
+    {
+      "artist": "james-brown",
+      "verdict": "confirmed",
+      "story": "Gospel supplied the vocal intensity that James Brown carried into rhythm and blues. That gospel voice also powered his funk.",
+      "storyRu": "Госпел дал Джеймсу Брауну вокальный накал, который он перенёс в ритм-н-блюз. Тот же голос, воспитанный госпелом, зазвучал и в его фанке.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "linkSha256": "f7b1e00139babc6c0ff81ad12595c7805950323af7ebdd9d37a9af06723b0392"
+        }
+      ]
+    },
+    {
+      "artist": "jimmy-cliff",
+      "verdict": "confirmed",
+      "story": "Jimmy Cliff’s singing began in church. That gospel experience preceded his recording career.",
+      "storyRu": "Джимми Клифф начал петь в церкви. Этот опыт госпел-пения предшествовал его карьере звукозаписи.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "linkSha256": "190447144dd5852dc8a78d35fcba62db862be4369aa24ccdf090a13e7a939bea"
+        }
+      ]
+    },
+    {
+      "artist": "junior-murvin",
+      "verdict": "confirmed",
+      "story": "Junior Murvin’s “Police and Thieves” came out of Jamaica’s reggae studios. Lee “Scratch” Perry produced the song that brought him wider recognition.",
+      "storyRu": "«Police and Thieves» Джуниора Мёрвина выросла из ямайской студийной сцены регги. Продюсером песни, принёсшей ему известность, стал Ли «Скрэтч» Перри.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "root:lee-scratch-perry",
+          "linkSha256": "2e8007b5e0dddd0205d1f8816b610188115cbea09a828e62864b02a1c93b9bbf"
+        },
+        {
+          "to": "card:reggae",
+          "linkSha256": "468f049598f7ddcda3f81d05fd2148ff42a1c731e2a2b4ada9a86398cad1f43e"
+        }
+      ]
+    },
+    {
+      "artist": "king-tubby",
+      "verdict": "confirmed",
+      "story": "King Tubby made existing Jamaican rhythm tracks into material for new music. By removing and returning parts and adding echo, he helped develop dub.",
+      "storyRu": "Кинг Табби превращал готовые ямайские ритм-треки в материал для новой музыки. Убирая и возвращая партии и добавляя эхо, он развивал даб.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:reggae",
+          "linkSha256": "17ee724df9ec3508a0bdb841b3dbdca5a0c69bd7d35d9795022b020960570ff7"
+        }
+      ]
+    },
+    {
+      "artist": "kraftwerk",
+      "verdict": "confirmed",
+      "story": "James Brown’s funk was one of Kraftwerk’s influences. Their electronic music has a documented connection to his rhythms.",
+      "storyRu": "Фанк Джеймса Брауна был одним из источников влияния на Kraftwerk. Их электронная музыка связана с его ритмами.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:funk",
+          "linkSha256": "097448cc5627b2b25e561e732089e346335725ca98e0c5cf2934d54d66ad5f2d"
+        },
+        {
+          "to": "root:james-brown",
+          "linkSha256": "915f1011d471692006ca619cace00e927cbe8791b397e0f023cfbe17069c4b2f"
+        }
+      ]
+    },
+    {
+      "artist": "lee-scratch-perry",
+      "verdict": "confirmed",
+      "story": "Lee “Scratch” Perry developed dub by experimenting with reggae rhythm tracks and studio effects. King Tubby’s mixing was part of Blackboard Jungle Dub.",
+      "storyRu": "Ли «Скрэтч» Перри развивал даб через эксперименты с ритм-треками регги и студийными эффектами. В «Blackboard Jungle Dub» свою роль сыграло сведение Кинга Табби.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:reggae",
+          "linkSha256": "c14378b975e88a7a4e231712751791e5b04b95f0f227b557961fdf3068b0758f"
+        },
+        {
+          "to": "root:king-tubby",
+          "linkSha256": "82f0fba45984872d33553f9b2cfc2fe69c43ab498ea7312cb3a93d3e6ff0e9ac"
+        }
+      ]
+    },
+    {
+      "artist": "mashina-vremeni",
+      "verdict": "confirmed",
+      "story": "The Beatles were among Andrey Makarevich’s early songwriting influences. This connects Mashina Vremeni to the music he learned from as he began writing songs.",
+      "storyRu": "The Beatles были среди ранних ориентиров Андрея Макаревича в сочинении песен. Эта связь ведёт от «Машины времени» к музыке, на которой он учился писать.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "root:the-beatles",
+          "linkSha256": "bb7e85a89f53e00d57be7147beadd3912e9a56c7bfb0b1c09d631e365748f992"
+        }
+      ]
+    },
+    {
+      "artist": "massive-attack",
+      "verdict": "confirmed",
+      "story": "Massive Attack made a new backing from Billy Cobham’s “Stratus”. Its sampled instrumental phrases became part of “Safe from Harm”.",
+      "storyRu": "Massive Attack собрали новое сопровождение из «Stratus» Билли Кобэма. Сэмплы его инструментальных фраз стали частью «Safe from Harm».",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:jazz",
+          "linkSha256": "d66b712fbd760a71d6892c48d31ab25067d18b26226d0ea38e329cf10aa8e263"
+        },
+        {
+          "to": "root:billy-cobham",
+          "linkSha256": "9ccae708009a7955c1f1c9cd73537079e0df5dde71820bb1eefb6122dbfbefa7"
+        }
+      ]
+    },
+    {
+      "artist": "mumiy-troll",
+      "verdict": "confirmed",
+      "story": "Mumiy Troll’s documented connection here runs through Aquarium’s “Prekrasny diletant”. The band recorded it for the 2012 Re:Aquarium tribute.",
+      "storyRu": "Документированная связь «Мумий Тролля» здесь проходит через «Прекрасного дилетанта» группы «Аквариум». Группа записала песню для трибьюта «Re:Аквариум» 2012 года.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "root:aquarium",
+          "linkSha256": "dcf7e015417a548bce1dd1c282cd90f96b475e9fec3d06b36f4d04dcbad34a0e"
+        }
+      ]
+    },
+    {
+      "artist": "otis-redding",
+      "verdict": "confirmed",
+      "story": "Otis Redding’s voice grew out of church singing. That upbringing was one of the foundations of his music.",
+      "storyRu": "Голос Отиса Реддинга вырос из церковного пения. Это воспитание стало одной из основ его музыки.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:gospel",
+          "linkSha256": "e65021e30845339eec285db2cd410bcb33ed6c66ddce75b1eae8b18d549cb9a4"
+        }
+      ]
+    },
+    {
+      "artist": "paul-simon",
+      "verdict": "confirmed",
+      "story": "Paul Simon went to Jamaica to record “Mother and Child Reunion”. Musicians who had backed Jimmy Cliff played on the recording.",
+      "storyRu": "Пол Саймон записал «Mother and Child Reunion» на Ямайке. В записи участвовали музыканты, которые аккомпанировали Джимми Клиффу.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:reggae",
+          "linkSha256": "d26fdb898c0cd70a2e3959136d42033c037d4faa35ddcc17f7f9dc6a4765cb3c"
+        },
+        {
+          "to": "root:jimmy-cliff",
+          "linkSha256": "0b48d1b698f6c05e1f2c0f870b06fc16da76b0002e5a267fbf778c7870db4fc1"
+        }
+      ]
+    },
+    {
+      "artist": "peter-gabriel",
+      "verdict": "confirmed",
+      "story": "Otis Redding’s soul music was Peter Gabriel’s reference for “Sledgehammer”. Gabriel made the song as a tribute to him.",
+      "storyRu": "Соул Отиса Реддинга стал для Питера Гэбриела ориентиром в «Sledgehammer». Гэбриел создал песню как дань Реддингу.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:rhythm-and-blues",
+          "linkSha256": "e796c8f1eaabbdf7add9416a09f9112c0e5f65cf9afacabf70ab23f4cd693f9e"
+        },
+        {
+          "to": "root:otis-redding",
+          "linkSha256": "408f1573e4a57f6bf99b51868039c561f7f1710dd6077ba2f9798a0290a0ee36"
+        }
+      ]
+    },
+    {
+      "artist": "radiohead",
+      "verdict": "confirmed",
+      "story": "Radiohead drew on Charles Mingus when making “Pyramid Song”. His jazz was a reference for the band’s own music.",
+      "storyRu": "Создавая «Pyramid Song», Radiohead опирались на Чарльза Мингуса. Его джаз стал ориентиром для собственной музыки группы.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:jazz",
+          "linkSha256": "35b74c4be6b44461ccc3cf3dc9e85dcdd6d57dc14b7a5e4813997718f3adc16e"
+        },
+        {
+          "to": "root:charles-mingus",
+          "linkSha256": "951f64f421db92d3c440f61772d70e8b5e422bec35b53a7bdf9f68cba223dcae"
+        }
+      ]
+    },
+    {
+      "artist": "talking-heads",
+      "verdict": "confirmed",
+      "story": "Talking Heads turned to Fela Kuti’s Afrobeat while making Remain in Light. It became a source for their own music on that album.",
+      "storyRu": "Работая над «Remain in Light», Talking Heads обратились к афробиту Фелы Кути. Он стал одним из источников музыки этого альбома.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:afrobeat",
+          "linkSha256": "e13a1edff83c115016f92af45682591fc72e3ff936506e3a56ee74a64c298214"
+        },
+        {
+          "to": "root:fela-kuti",
+          "linkSha256": "3a4dc6aa79f51d57db96ad5f5c8c020d9992f56e6479fe1157a538c2bca22767"
+        }
+      ]
+    },
+    {
+      "artist": "the-clash",
+      "verdict": "confirmed",
+      "story": "The Clash brought Junior Murvin’s “Police and Thieves” into their repertoire. They also worked with reggae producer Lee “Scratch” Perry on “Complete Control”.",
+      "storyRu": "The Clash включили в свой репертуар «Police and Thieves» Джуниора Мёрвина. Над «Complete Control» они работали с регги-продюсером Ли «Скрэтчем» Перри.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:reggae",
+          "linkSha256": "cec66f7db21f2b552090b862373453390163dbdb01001c6a2aac60b6897222f2"
+        },
+        {
+          "to": "root:junior-murvin",
+          "linkSha256": "b6e1be3694be7827e962209d866787b51c4bccf4be225179e9234ea04e386353"
+        },
+        {
+          "to": "root:lee-scratch-perry",
+          "linkSha256": "34dfeddee45aacef2622ab65327f71a12d03b0f03a24f8b16bf383d98c456b54"
+        }
+      ]
+    },
+    {
+      "artist": "the-libertines",
+      "verdict": "confirmed",
+      "story": "The Libertines’ debut, Up the Bracket, was recorded with Mick Jones. The producer connected their first album to a musician from the Clash.",
+      "storyRu": "Дебютный альбом The Libertines «Up the Bracket» записан вместе с Миком Джонсом. Продюсером первой пластинки стал музыкант The Clash.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "root:the-clash",
+          "linkSha256": "5f8c6ca2f7ce2dc6a798faf16723dc9cbe62e979d774d0d6d940dc10e74f58e8"
+        }
+      ]
+    },
+    {
+      "artist": "the-police",
+      "verdict": "confirmed",
+      "story": "The Police drew on Bob Marley’s reggae for their bass-led grooves. Andy Summers says reggae bass lines also let Sting play and sing at the same time.",
+      "storyRu": "The Police опирались на регги Боба Марли в грувах с ведущей ролью баса. По словам Энди Саммерса, басовые партии регги также позволяли Стингу одновременно играть и петь.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:reggae",
+          "linkSha256": "0dd95092aeb06907d8a6613b9f7746f90d10eb65a09569f9bc6b76eedad09399"
+        },
+        {
+          "to": "root:bob-marley",
+          "linkSha256": "378caa5afb7c23e5099ee103fa9c95f089ae3f1c63b89f5c1f1851473fd024d6"
+        }
+      ]
+    },
+    {
+      "artist": "the-prodigy",
+      "verdict": "confirmed",
+      "story": "The Prodigy took a vocal phrase from Ultramagnetic MCs’ “Give the Drummer Some”. Looping Kool Keith’s voice made it the hook of “Smack My Bitch Up”.",
+      "storyRu": "The Prodigy взяли вокальную фразу из «Give the Drummer Some» группы Ultramagnetic MCs. Зацикленный голос Кула Кита стал главной вокальной фразой «Smack My Bitch Up».",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:hip-hop",
+          "linkSha256": "e87fdafb4507fc9f58988465bf509b4c486cbaa96ce70d36c0339fd03f828e1e"
+        },
+        {
+          "to": "root:ultramagnetic-mcs",
+          "linkSha256": "b0be7f7134f6ec8e40e8647dbd9d2a491c6dc8f4e24e3a941f005f0a5cb51152"
+        }
+      ]
+    },
+    {
+      "artist": "ultramagnetic-mcs",
+      "verdict": "confirmed",
+      "story": "The Bronx DJ scene was the starting point for Ultramagnetic MCs. Ced Gee carried that experience into rapping and production built from samples.",
+      "storyRu": "Отправной точкой для Ultramagnetic MCs стала диджейская сцена Бронкса. Сед Джи перенёс этот опыт в рэп и продюсирование на основе сэмплов.",
+      "assessment": "Stories use own links only. Reviewed kinds, borrowing descriptions and Russian text; baseline source reviews remain historical evidence for unchanged claims. Coldplay interpolation was rechecked against both original sources.",
+      "links": [
+        {
+          "to": "card:hip-hop",
+          "linkSha256": "477ff3f82c085720510e1e28b17a21e263e166e3e5a10ce5e96cf76e97fb7205"
+        }
+      ]
+    }
+  ]
+}

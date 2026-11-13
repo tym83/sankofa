@@ -6,8 +6,11 @@ years: [1997]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
 genre: "Indie rock"
 genreRu: "инди-рок"
+story: "The Libertines’ debut, Up the Bracket, was recorded with Mick Jones. The producer connected their first album to a musician from the Clash."
+storyRu: "Дебютный альбом The Libertines «Up the Bracket» записан вместе с Миком Джонсом. Продюсером первой пластинки стал музыкант The Clash."
 links:
   - to: "root:the-clash"
+    kind: "producer"
     claim: "The Libertines recorded their debut album, Up the Bracket, with the Clash’s Mick Jones."
     claimRu: "The Libertines записали дебютный альбом Up the Bracket вместе с Миком Джонсом из The Clash."
     sources:

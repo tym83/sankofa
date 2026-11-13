@@ -1,15 +1,35 @@
-id: "dolly-parton"
-name: "Dolly Parton"
-nameRu: "Долли Партон"
-aliases: ["долли партон"]
-years: [1946]
-place: {"name": "Sevier County, Tennessee", "lat": 35.8036, "lon": -83.5284}
-genre: "Country"
-genreRu: "кантри"
+---
+id: dolly-parton
+name: Dolly Parton
+nameRu: Долли Партон
+aliases:
+- долли партон
+years:
+- 1946
+place:
+  name: Sevier County, Tennessee
+  lat: 35.8036
+  lon: -83.5284
+genre: Country
+genreRu: кантри
 links:
-  - to: "root:the-beatles"
-    claim: "Dolly Parton recorded the Beatles’ “Let It Be” with Paul McCartney and Ringo Starr for Rockstar."
-    claimRu: "Долли Партон записала «Let It Be» группы Beatles вместе с Полом Маккартни и Ринго Старром для альбома Rockstar."
-    sources:
-      - {"title": "Dolly Parton: Let It Be release announcement", "url": "https://www.dollyparton.com/news/dolly-parton-releases-her-powerful-rendition-of-rock-classic-let-it-be"}
-      - {"title": "Reuters / The Fiji Times: Surviving Beatles join Dolly Parton on Let It Be", "url": "https://www.fijitimes.com.fj/surviving-beatles-join-dolly-parton-on-let-it-be-cover/"}
+- to: root:the-beatles
+  claim: Dolly Parton recorded the Beatles’ “Let It Be” with Paul McCartney and Ringo
+    Starr for Rockstar.
+  claimRu: Долли Партон записала «Let It Be» группы Beatles вместе с Полом Маккартни
+    и Ринго Старром для альбома Rockstar.
+  sources:
+  - title: 'Dolly Parton: Let It Be release announcement'
+    url: https://www.dollyparton.com/news/dolly-parton-releases-her-powerful-rendition-of-rock-classic-let-it-be
+  - title: 'Reuters / The Fiji Times: Surviving Beatles join Dolly Parton on Let It
+      Be'
+    url: https://www.fijitimes.com.fj/surviving-beatles-join-dolly-parton-on-let-it-be-cover/
+  kind: cover
+  what: The Beatles’ “Let It Be”, newly recorded for Rockstar with Paul McCartney
+    and Ringo Starr.
+  whatRu: Песня The Beatles «Let It Be», заново записанная для «Rockstar» с Полом
+    Маккартни и Ринго Старром.
+story: Dolly Parton reached into the Beatles’ repertoire for Rockstar. She recorded
+  “Let It Be” with Paul McCartney and Ringo Starr.
+storyRu: Для «Rockstar» Долли Партон обратилась к репертуару The Beatles. Она записала
+  «Let It Be» вместе с Полом Маккартни и Ринго Старром.

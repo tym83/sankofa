@@ -1,0 +1,772 @@
+{
+  "researcher": "modern",
+  "date": "2026-11-12",
+  "new_links": [
+    {
+      "artist": "massive-attack",
+      "to": "root:billy-cobham",
+      "kind": "sample",
+      "claim": "Massive Attack sampled Billy Cobham's 'Stratus' in 'Safe from Harm'.",
+      "claimRu": "В «Safe from Harm» Massive Attack использовали сэмпл из «Stratus» Билли Кобэма.",
+      "sources": [
+        {
+          "title": "Hit Channel: Interview — Billy Cobham",
+          "url": "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
+        },
+        {
+          "title": "Rolf Großmann: Xtended Sampling 1995–2026, in Un_Making Beats, p. 97",
+          "url": "https://www.uni-hildesheim.de/ojs/index.php/MMD/de/article/download/498/541"
+        }
+      ],
+      "what": "Instrumental backing phrases from Billy Cobham's 1973 recording 'Stratus', looped in 'Safe from Harm'.",
+      "whatRu": "Фрагменты инструментального сопровождения из записи «Stratus» Билли Кобэма 1973 года, зацикленные в «Safe from Harm».",
+      "evidence": [
+        "Both retained sources were reopened; the named performer is now an explicit intermediate node."
+      ],
+      "opened": true,
+      "claim_sha256": "f21e56d58ace9e684c281786eb5b0c5274b342ebaea2e9fc80ebf9ede8c31822"
+    },
+    {
+      "artist": "kraftwerk",
+      "to": "root:james-brown",
+      "kind": "influence",
+      "claim": "James Brown's funk was an influence on Kraftwerk.",
+      "claimRu": "На Kraftwerk повлиял фанк Джеймса Брауна.",
+      "sources": [
+        {
+          "title": "The Quietus: Karl Bartos Interviewed — Kraftwerk and the Birth of the Modern",
+          "url": "https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/"
+        },
+        {
+          "title": "Croatian Encyclopedia: Kraftwerk",
+          "url": "https://enciklopedija.hr/clanak/kraftwerk"
+        }
+      ],
+      "evidence": [
+        "Both retained sources were reopened; the named performer is now an explicit intermediate node."
+      ],
+      "opened": true,
+      "claim_sha256": "52960709866793dbf772395e68a38cd827a75d475a26a57d62980957b69fe59c"
+    },
+    {
+      "artist": "radiohead",
+      "to": "root:charles-mingus",
+      "kind": "influence",
+      "claim": "Radiohead drew on Charles Mingus's jazz for 'Pyramid Song'.",
+      "claimRu": "Создавая «Pyramid Song», Radiohead опирались на джаз Чарльза Мингуса.",
+      "sources": [
+        {
+          "title": "Prog: Radiohead’s proggiest moments",
+          "url": "https://www.loudersound.com/features/radioheads-proggiest-moments"
+        },
+        {
+          "title": "The Irish Times: Taking music to strange places",
+          "url": "https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388"
+        }
+      ],
+      "evidence": [
+        "Both retained sources were reopened; the named performer is now an explicit intermediate node."
+      ],
+      "opened": true,
+      "claim_sha256": "48d8c0eef47489e6ea2b0b3ea1809e039378ae6bb2ce7cafc19c6eb1afac635b"
+    },
+    {
+      "artist": "david-bowie",
+      "to": "root:nina-simone",
+      "kind": "cover",
+      "claim": "Nina Simone's version of 'Wild Is the Wind' inspired David Bowie to record it for Station to Station.",
+      "claimRu": "Версия «Wild Is the Wind» Нины Симон вдохновила Дэвида Боуи записать эту песню для альбома Station to Station.",
+      "sources": [
+        {
+          "title": "NPO Radio 2: David Bowies Wild Is The Wind is een eerbetoon aan Nina Simone",
+          "url": "https://www.nporadio2.nl/nieuws/top2000/93682543-a548-417c-b69e-9b220e4b507b/david-bowies-wild-is-the-wind-is-een-eerbetoon-aan-nina-simone"
+        },
+        {
+          "title": "Verve / UMe: Nina Simone’s Historic Philips Years Celebrated with Vinyl Remasters",
+          "url": "https://www.prnewswire.com/news-releases/nina-simones-historic-philips-years-celebrated-with-vinyl-remasters-of-seven-classic-albums-including-nina-simone-in-concert-wild-is-the-wind-high-priestess-of-soul-300337404.html"
+        }
+      ],
+      "what": "'Wild Is the Wind', recorded for Station to Station after Nina Simone's interpretation.",
+      "whatRu": "«Wild Is the Wind», записанная для «Station to Station» под впечатлением от интерпретации Нины Симон.",
+      "evidence": [
+        "Both retained sources were reopened; the named performer is now an explicit intermediate node."
+      ],
+      "opened": true,
+      "claim_sha256": "0e1c0af937185858fd5705c1dc134f44d43400694286fadb6fe494886f871224"
+    },
+    {
+      "artist": "talking-heads",
+      "to": "root:fela-kuti",
+      "kind": "influence",
+      "claim": "Talking Heads drew on Fela Kuti's Afrobeat when making Remain in Light.",
+      "claimRu": "Работая над Remain in Light, Talking Heads опирались на афробит Фелы Кути.",
+      "sources": [
+        {
+          "title": "Library of Congress: Remain in Light — Talking Heads",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
+        },
+        {
+          "title": "Pitchfork: Talking Heads — Remain in Light",
+          "url": "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/"
+        }
+      ],
+      "evidence": [
+        "Both retained sources were reopened; the named performer is now an explicit intermediate node."
+      ],
+      "opened": true,
+      "claim_sha256": "2ccb007a967321eb5c05fb3848b50f5045d0ec5b29312edf5a0bedede1435782"
+    },
+    {
+      "artist": "peter-gabriel",
+      "to": "root:otis-redding",
+      "kind": "influence",
+      "claim": "Peter Gabriel made 'Sledgehammer' as a tribute to the soul music of Otis Redding.",
+      "claimRu": "Питер Гэбриел создал «Sledgehammer» как дань соулу Отиса Реддинга.",
+      "sources": [
+        {
+          "title": "Peter Gabriel: Sledgehammer",
+          "url": "https://petergabriel.com/release/sledgehammer/"
+        },
+        {
+          "title": "Sound On Sound: Peter Gabriel — Behind The Mask (January 1987)",
+          "url": "https://www.muzines.co.uk/articles/peter-gabriel-behind-the-mask/1494"
+        }
+      ],
+      "evidence": [
+        "Both retained sources were reopened; the named performer is now an explicit intermediate node."
+      ],
+      "opened": true,
+      "claim_sha256": "3e3835866518645178f2d7070a19e8baea9a55beb96677665ed00dd2748b388c"
+    },
+    {
+      "artist": "the-clash",
+      "to": "root:junior-murvin",
+      "kind": "cover",
+      "claim": "The Clash recorded a cover of Junior Murvin’s reggae song “Police and Thieves”.",
+      "claimRu": "The Clash записали свою версию регги-песни Джуниора Мёрвина «Police and Thieves».",
+      "sources": [
+        {
+          "title": "The Clash: The Clash — official album notes",
+          "url": "https://www.theclash.com/music/the-clash"
+        },
+        {
+          "title": "Pitchfork: R.I.P. Reggae Singer Junior Murvin",
+          "url": "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
+        }
+      ],
+      "what": "Junior Murvin's 'Police and Thieves', covered on the Clash's debut album.",
+      "whatRu": "«Police and Thieves» Джуниора Мёрвина в версии с дебютного альбома The Clash.",
+      "evidence": [
+        "Both retained sources were reopened; the named performer is now an explicit intermediate node."
+      ],
+      "opened": true,
+      "claim_sha256": "89ea1bc83030338dc587bfac3cf6dd7eb66b71a776cc5daff879f28857aac9a7"
+    },
+    {
+      "artist": "the-prodigy",
+      "to": "root:ultramagnetic-mcs",
+      "kind": "sample",
+      "claim": "The Prodigy's 'Smack My Bitch Up' samples 'Give the Drummer Some' by Ultramagnetic MCs.",
+      "claimRu": "В «Smack My Bitch Up» The Prodigy звучит сэмпл из «Give the Drummer Some» группы Ultramagnetic MCs.",
+      "sources": [
+        {
+          "title": "MusicTech: Landmark Productions — The Prodigy, The Fat of the Land",
+          "url": "https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/"
+        },
+        {
+          "title": "Justin Morey: Copyright Management and its Effect on the Sampling Practice of UK Dance Music Producers",
+          "url": "https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf"
+        }
+      ],
+      "what": "Kool Keith's vocal phrase from Ultramagnetic MCs' 'Give the Drummer Some', looped as the hook of 'Smack My Bitch Up'.",
+      "whatRu": "Вокальная фраза Кула Кита из «Give the Drummer Some» группы Ultramagnetic MCs, зацикленная как главная вокальная фраза «Smack My Bitch Up».",
+      "evidence": [
+        "Both retained sources were reopened; the named performer is now an explicit intermediate node."
+      ],
+      "opened": true,
+      "claim_sha256": "22d71fbcdd44c3a0b797b4d54c3aec525d1095a08786a56fb38dfa61c61ea191"
+    },
+    {
+      "artist": "paul-simon",
+      "to": "root:jimmy-cliff",
+      "kind": "scene",
+      "claim": "Paul Simon recorded 'Mother and Child Reunion' in Jamaica with musicians who had backed Jimmy Cliff.",
+      "claimRu": "Пол Саймон записал «Mother and Child Reunion» на Ямайке с музыкантами, которые аккомпанировали Джимми Клиффу.",
+      "sources": [
+        {
+          "title": "Jamaica Observer: Simon’s reggae classics get new life",
+          "url": "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/"
+        },
+        {
+          "title": "NPO Radio 2: Mother & Child Reunion — Paul Simon",
+          "url": "https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion"
+        }
+      ],
+      "evidence": [
+        "Both retained sources were reopened; the named performer is now an explicit intermediate node."
+      ],
+      "opened": true,
+      "claim_sha256": "bb93709e934ee220aa5e7f40f0e8401006b0e7f47936461a38bf4e955a035d29"
+    },
+    {
+      "artist": "james-brown",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "James Brown carried gospel vocal intensity into his rhythm-and-blues and funk.",
+      "claimRu": "Джеймс Браун перенёс накал госпел-вокала в свой ритм-н-блюз и фанк.",
+      "sources": [
+        {
+          "title": "Rock and Roll Hall of Fame: James Brown",
+          "url": "https://library.rockhall.com/james_brown"
+        },
+        {
+          "title": "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)",
+          "url": "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+        }
+      ],
+      "evidence": [
+        "Rock Hall describes the transformation of gospel fervor into R&B.",
+        "Inayatullah explicitly describes gospel-driven vocals in Brown’s development of funk."
+      ],
+      "opened": true,
+      "claim_sha256": "75aba978f8997d39cb079a595bd7b78d12b28a3fbc06b627f3f4d85fa11a98f3"
+    },
+    {
+      "artist": "fela-kuti",
+      "to": "card:afrobeat",
+      "kind": "influence",
+      "claim": "Fela Kuti developed Afrobeat by combining West African highlife, jazz and American soul and funk.",
+      "claimRu": "Фела Кути создал афробит, соединив западноафриканский хайлайф, джаз и американские соул и фанк.",
+      "sources": [
+        {
+          "title": "Rock and Roll Hall of Fame: Fela Kuti",
+          "url": "https://rockhall.com/inductees/fela-kuti/"
+        },
+        {
+          "title": "Trinity Laban: Fela Kuti",
+          "url": "https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/"
+        }
+      ],
+      "evidence": [
+        "Rock Hall describes highlife, jazz, soul and Brown/Sly funk.",
+        "His music college describes his fusion of jazz, highlife, Yoruba rhythms and funk."
+      ],
+      "opened": true,
+      "claim_sha256": "b26b943acbeeabf1df73ede5e54355318360732b3157d9e2a1d04cc6913a4e24"
+    },
+    {
+      "artist": "fela-kuti",
+      "to": "root:james-brown",
+      "kind": "influence",
+      "claim": "James Brown’s funk helped shape Fela Kuti’s music.",
+      "claimRu": "Фанк Джеймса Брауна помог сформироваться музыке Фелы Кути.",
+      "sources": [
+        {
+          "title": "Rock and Roll Hall of Fame: Fela Kuti",
+          "url": "https://rockhall.com/inductees/fela-kuti/"
+        },
+        {
+          "title": "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)",
+          "url": "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+        }
+      ],
+      "evidence": [
+        "Rock Hall names James Brown as an influence.",
+        "Inayatullah identifies Brown’s funk and cites Michael Veal’s scholarship."
+      ],
+      "opened": true,
+      "claim_sha256": "e3fbe2f5ac9eb9ee5d634c36488fa53a7d969d3784598726dd35c8399af48d45"
+    },
+    {
+      "artist": "charles-mingus",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "The church music Charles Mingus heard as a child was one of his earliest musical influences.",
+      "claimRu": "Церковная музыка, которую Чарльз Мингус слышал в детстве, стала одним из его первых музыкальных влияний.",
+      "sources": [
+        {
+          "title": "Charles Mingus estate: Biography",
+          "url": "https://www.charlesmingus.com/mingusbio"
+        },
+        {
+          "title": "Blue Note Records: Charles Mingus biography",
+          "url": "https://www.bluenote.com/artist/charles-mingus/"
+        }
+      ],
+      "evidence": [
+        "Estate biography names choir and group singing among earliest influences.",
+        "Blue Note describes church as first music heard and gospel among ingredients of his music."
+      ],
+      "opened": true,
+      "claim_sha256": "bb941722bbb634507d12cd5aaf531bbfc42f3e3366d65f7306eb0488529a7ee2"
+    },
+    {
+      "artist": "charles-mingus",
+      "to": "card:jazz",
+      "kind": "influence",
+      "claim": "Charles Mingus brought gospel into his jazz compositions.",
+      "claimRu": "Чарльз Мингус вплетал госпел в свои джазовые сочинения.",
+      "sources": [
+        {
+          "title": "Blue Note Records: Charles Mingus biography",
+          "url": "https://www.bluenote.com/artist/charles-mingus/"
+        },
+        {
+          "title": "WICN: Charles Mingus, Artist of the Month, April 2022",
+          "url": "https://wicn.org/wicn-artist-of-the-month-april-2022-charles-mingus/"
+        }
+      ],
+      "evidence": [
+        "Blue Note describes gospel as an ingredient of his jazz.",
+        "WICN describes Better Git It in Your Soul as inspired by childhood gospel singing and preaching."
+      ],
+      "opened": true,
+      "claim_sha256": "436a3e481cf4ef10b01bd89d99e39ff690a9c09465f7bf498460674d0c8c6ab9"
+    },
+    {
+      "artist": "billy-cobham",
+      "to": "root:miles-davis",
+      "kind": "member",
+      "claim": "Billy Cobham played drums with Miles Davis before his work in the Mahavishnu Orchestra.",
+      "claimRu": "Билли Кобэм играл на барабанах с Майлзом Дэвисом до работы в Mahavishnu Orchestra.",
+      "sources": [
+        {
+          "title": "Blue Note Records: Billy Cobham biography",
+          "url": "https://www.bluenote.com/artist/billy-cobham/"
+        },
+        {
+          "title": "Hit Channel: Interview — Billy Cobham",
+          "url": "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
+        }
+      ],
+      "evidence": [
+        "Blue Note traces Davis then Mahavishnu.",
+        "Cobham interview discusses recording with Davis and then the Mahavishnu period. Avoid inaccurate Bitches Brew credit in Blue Note."
+      ],
+      "opened": true,
+      "claim_sha256": "3f984c286c215d64ceaa472b1aa577a0110334bcaeb5193b60510fdce942d051"
+    },
+    {
+      "artist": "billy-cobham",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Billy Cobham’s work with the Mahavishnu Orchestra placed him in the early jazz-fusion movement.",
+      "claimRu": "Работа Билли Кобэма в Mahavishnu Orchestra связала его с ранним движением джаз-фьюжна.",
+      "sources": [
+        {
+          "title": "Blue Note Records: Billy Cobham biography",
+          "url": "https://www.bluenote.com/artist/billy-cobham/"
+        },
+        {
+          "title": "Hit Channel: Interview — Billy Cobham",
+          "url": "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
+        }
+      ],
+      "evidence": [
+        "Both sources describe Mahavishnu as jazz fusion and Cobham as a member."
+      ],
+      "opened": true,
+      "claim_sha256": "6710bb534b1edce6205d0239af2abdef1323cf645216a5cf608c78eecd0c043d"
+    },
+    {
+      "artist": "otis-redding",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "Otis Redding’s musical upbringing was rooted in singing in church.",
+      "claimRu": "Музыкальное воспитание Отиса Реддинга началось с церковного пения.",
+      "sources": [
+        {
+          "title": "New Georgia Encyclopedia: Otis Redding",
+          "url": "https://www.georgiaencyclopedia.org/articles/arts-culture/otis-redding-1941-1967"
+        },
+        {
+          "title": "Thaddeus Russell: Otis Redding (American National Biography)",
+          "url": "https://academic.oup.com/american-national-biography/reference/63042/reference-article-abstract/570547002"
+        }
+      ],
+      "evidence": [
+        "NGE identifies Baptist upbringing as formative.",
+        "ANB identifies childhood church gospel choir."
+      ],
+      "opened": true,
+      "claim_sha256": "98a3b4f2189883d158ed4c70825dc481d0f72b55911f308d63ce78ab9608fa53"
+    },
+    {
+      "artist": "edwin-birdsong",
+      "to": "card:funk",
+      "kind": "scene",
+      "claim": "Edwin Birdsong developed jazz-funk records in collaboration with Roy Ayers.",
+      "claimRu": "Эдвин Бёрдсонг создавал джаз-фанковые записи вместе с Роем Эйерсом.",
+      "sources": [
+        {
+          "title": "Resident Advisor: Edwin Birdsong obituary",
+          "url": "https://ra.co/news/43130"
+        },
+        {
+          "title": "Wax Poetics: Edwin Birdsong — Cosmic Reverb",
+          "url": "https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/"
+        }
+      ],
+      "evidence": [
+        "RA identifies funk/jazz musician and coproduction of three Roy Ayers albums.",
+        "Wax Poetics describes their shared development of danceable jazz-funk."
+      ],
+      "opened": true,
+      "claim_sha256": "7fbcdeabc914c5aabf935298591d99154f896f203b9dfb7a23bdc84902e70c1c"
+    },
+    {
+      "artist": "daft-punk",
+      "to": "root:edwin-birdsong",
+      "kind": "sample",
+      "claim": "Daft Punk built “Harder, Better, Faster, Stronger” around a sample of Edwin Birdsong’s “Cola Bottle Baby”.",
+      "claimRu": "Daft Punk построили «Harder, Better, Faster, Stronger» вокруг сэмпла из «Cola Bottle Baby» Эдвина Бёрдсонга.",
+      "sources": [
+        {
+          "title": "Resident Advisor: Edwin Birdsong obituary",
+          "url": "https://ra.co/news/43130"
+        },
+        {
+          "title": "Radio Milwaukee: Sample, Better, Faster, Stronger",
+          "url": "https://radiomilwaukee.org/2013-05-23/sample-better-faster-stronger"
+        }
+      ],
+      "what": "The instrumental groove of Edwin Birdsong's 1979 'Cola Bottle Baby', used as the backing of 'Harder, Better, Faster, Stronger'.",
+      "whatRu": "Инструментальный грув из записи «Cola Bottle Baby» Эдвина Бёрдсонга 1979 года, положенный в основу «Harder, Better, Faster, Stronger».",
+      "evidence": [
+        "RA calls the 1979 recording the basis of the 2001 track.",
+        "Radio Milwaukee independently identifies the sample source."
+      ],
+      "opened": true,
+      "claim_sha256": "ddb7e6d6f34d8a5489e2a2884b7bdabceb39ce4bede021325b607872ea9c378e"
+    },
+    {
+      "artist": "ultramagnetic-mcs",
+      "to": "card:hip-hop",
+      "kind": "scene",
+      "claim": "Ultramagnetic MCs grew out of Bronx DJ culture, with Ced Gee moving from DJing into rap and sample-based production.",
+      "claimRu": "Ultramagnetic MCs выросли из диджейской культуры Бронкса: Сед Джи перешёл от диджеинга к рэпу и продюсированию на основе сэмплов.",
+      "sources": [
+        {
+          "title": "SPIN: When Hip Hop Went Ultra — Ced Gee and Kool Keith interview",
+          "url": "https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/"
+        },
+        {
+          "title": "Ced Gee: Official biography",
+          "url": "https://www.cedgee.com/about/"
+        }
+      ],
+      "evidence": [
+        "SPIN interview recounts Bronx DJ formative experiences and sampling.",
+        "Ced Gee biography traces DJing, encouragement to rap and SP1200 production."
+      ],
+      "opened": true,
+      "claim_sha256": "3b0bd12a02d2c7a46db1f67c06918ed701d3cc751a624cc14f63e7cb090a82b3"
+    },
+    {
+      "artist": "dr-dre",
+      "to": "card:funk",
+      "kind": "influence",
+      "claim": "Dr. Dre built the G-funk sound of The Chronic around Parliament-Funkadelic’s grooves.",
+      "claimRu": "Доктор Дре построил джи-фанковое звучание «The Chronic» на грувах Parliament-Funkadelic.",
+      "sources": [
+        {
+          "title": "Library of Congress: Rashad Grove — The Chronic",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf"
+        },
+        {
+          "title": "Pitchfork: Sheldon Pearce — The Chronic",
+          "url": "https://pitchfork.com/reviews/albums/dr-dre-the-chronic/"
+        }
+      ],
+      "evidence": [
+        "LOC calls Parliament-Funkadelic grooves the guiding model.",
+        "Pitchfork describes P-Funk reinterpretation as G-Funk."
+      ],
+      "opened": true,
+      "claim_sha256": "18d778733585a0be26c0a42e29ca96329bb51a13244069eeb226c09c1ac373ac"
+    },
+    {
+      "artist": "arctic-monkeys",
+      "to": "root:dr-dre",
+      "kind": "influence",
+      "claim": "Arctic Monkeys drew on Dr. Dre’s hip-hop rhythms when making AM.",
+      "claimRu": "Работая над «AM», Arctic Monkeys опирались на хип-хоп-ритмы Доктора Дре.",
+      "sources": [
+        {
+          "title": "Radio X: Why Arctic Monkeys’ AM is still their most important album",
+          "url": "https://www.radiox.co.uk/artists/arctic-monkeys/why-arctic-monkeys-am-most-important-album/"
+        },
+        {
+          "title": "Enmore Audio: Engineering the Sound — Arctic Monkeys’ AM",
+          "url": "https://happymag.tv/engineering-the-sound-arctic-monkeys-am/"
+        }
+      ],
+      "evidence": [
+        "Radio X cites Turner’s NME explanation of Dre-style beats.",
+        "Enmore cites a separate Uncut interview and describes bass/drum-first composition."
+      ],
+      "opened": true,
+      "claim_sha256": "ba98d436ee971eaf245634311c449c9e0f42bafc36c36576ac577010ffa2ac61"
+    },
+    {
+      "artist": "king-tubby",
+      "to": "card:reggae",
+      "kind": "scene",
+      "claim": "King Tubby developed dub by remixing Jamaican rhythm tracks, dropping parts in and out and adding echo.",
+      "claimRu": "Кинг Табби развивал даб, заново сводя ямайские ритм-треки: убирал и возвращал отдельные партии и добавлял эхо.",
+      "sources": [
+        {
+          "title": "Reggaeville: King Tubby biography",
+          "url": "https://www.reggaeville.com/artist-details/king-tubby/about/"
+        },
+        {
+          "title": "Sean Williams: Tubby’s Dub Style (2012)",
+          "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+        }
+      ],
+      "evidence": [
+        "Reggaeville describes stripping vocals/instruments and adding echoes.",
+        "Williams analyzes the same mixing methods within Jamaican dub’s development."
+      ],
+      "opened": true,
+      "claim_sha256": "afe38789349ac80e538f7e6ce282a6db1b9fcdadb3843c727191e06a2ff667bf"
+    },
+    {
+      "artist": "lee-scratch-perry",
+      "to": "card:reggae",
+      "kind": "scene",
+      "claim": "Lee “Scratch” Perry helped develop dub through experiments with reggae rhythm tracks and studio effects.",
+      "claimRu": "Ли «Скрэтч» Перри развивал даб, экспериментируя с ритм-треками регги и студийными эффектами.",
+      "sources": [
+        {
+          "title": "Resident Advisor: Lee “Scratch” Perry biography",
+          "url": "https://ra.co/dj/leescratchperry/biography"
+        },
+        {
+          "title": "Danny Kelly: Lee Perry interview (NME, archived by Uncarved)",
+          "url": "https://uncarved.org/dub/scratch.html"
+        }
+      ],
+      "evidence": [
+        "RA identifies dub production as central to Perry’s work.",
+        "Kelly interview has Perry describe manipulating drum and bass tracks."
+      ],
+      "opened": true,
+      "claim_sha256": "0cce8d1cde21f7329d59217e52cfb02ebfd81ab32e32e7bff7c8aeea1f73e439"
+    },
+    {
+      "artist": "lee-scratch-perry",
+      "to": "root:king-tubby",
+      "kind": "producer",
+      "claim": "King Tubby mixed Lee “Scratch” Perry’s Blackboard Jungle Dub.",
+      "claimRu": "Кинг Табби сводил «Blackboard Jungle Dub» Ли «Скрэтч» Перри.",
+      "sources": [
+        {
+          "title": "David Katz: The Strange World Of King Tubby (The Quietus)",
+          "url": "https://thequietus.com/interviews/strange-world-of/king-tubby-best-music/"
+        },
+        {
+          "title": "Sean Williams: Tubby’s Dub Style (2012)",
+          "url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+        }
+      ],
+      "evidence": [
+        "Katz credits Tubby as engineer and Perry as effects director; precise division contested.",
+        "Williams identifies the album as heavily featuring Tubby’s mixing. No disputed year asserted."
+      ],
+      "opened": true,
+      "claim_sha256": "9bfa8bb743e4313b7f0999961839a7bb979559e71827055519db9f86fa9f8e97"
+    },
+    {
+      "artist": "the-clash",
+      "to": "root:lee-scratch-perry",
+      "kind": "producer",
+      "claim": "Lee “Scratch” Perry produced the Clash’s “Complete Control”.",
+      "claimRu": "Ли «Скрэтч» Перри продюсировал «Complete Control» группы The Clash.",
+      "sources": [
+        {
+          "title": "The Clash: Complete Control — official single notes",
+          "url": "https://www.theclash.com/music/complete-control"
+        },
+        {
+          "title": "Danny Kelly: Lee Perry interview (NME, archived by Uncarved)",
+          "url": "https://uncarved.org/dub/scratch.html"
+        }
+      ],
+      "evidence": [
+        "Official notes credit Perry.",
+        "Danny Kelly’s NME interview independently names him as co-producer; no exclusive production claim."
+      ],
+      "opened": true,
+      "claim_sha256": "8c3fb5b70da3f4b2b844848cf6f20b746e4406bde39d39c0084bcb76cbe951be"
+    },
+    {
+      "artist": "junior-murvin",
+      "to": "root:lee-scratch-perry",
+      "kind": "producer",
+      "claim": "Lee “Scratch” Perry produced Junior Murvin’s breakthrough “Police and Thieves”.",
+      "claimRu": "Ли «Скрэтч» Перри продюсировал «Police and Thieves» — песню, принёсшую Джуниору Мёрвину известность.",
+      "sources": [
+        {
+          "title": "Pitchfork: R.I.P. Reggae Singer Junior Murvin",
+          "url": "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
+        },
+        {
+          "title": "Rebelbase: Junior Murvin interview, October 2004",
+          "url": "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+        }
+      ],
+      "evidence": [
+        "Pitchfork names Perry and international breakthrough.",
+        "Murvin describes creating song with Perry and the producer teaching him."
+      ],
+      "opened": true,
+      "claim_sha256": "0775de7f86e9134cae68855e31f813f11685af9a7c3c73ba5fe9277688783790"
+    },
+    {
+      "artist": "junior-murvin",
+      "to": "card:reggae",
+      "kind": "scene",
+      "claim": "Junior Murvin’s “Police and Thieves” emerged from Jamaica’s reggae recording scene.",
+      "claimRu": "«Police and Thieves» Джуниора Мёрвина выросла из ямайской сцены звукозаписи регги.",
+      "sources": [
+        {
+          "title": "Pitchfork: R.I.P. Reggae Singer Junior Murvin",
+          "url": "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
+        },
+        {
+          "title": "Rebelbase: Junior Murvin interview, October 2004",
+          "url": "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+        }
+      ],
+      "evidence": [
+        "Pitchfork places the hit within local Jamaican reggae scene.",
+        "Murvin’s interview describes reggae production with Perry."
+      ],
+      "opened": true,
+      "claim_sha256": "8b6f52a62a2f59f8c2d774eaaab0b528efb2434587888d0d0f7d0a8871a05215"
+    },
+    {
+      "artist": "bob-marley",
+      "to": "root:lee-scratch-perry",
+      "kind": "producer",
+      "claim": "Lee “Scratch” Perry helped the Wailers develop their sound by pairing them with bassist Aston Barrett and drummer Carlton Barrett.",
+      "claimRu": "Ли «Скрэтч» Перри помог The Wailers выработать своё звучание, объединив их с басистом Астоном Барреттом и барабанщиком Карлтоном Барреттом.",
+      "sources": [
+        {
+          "title": "Bob Marley estate: History",
+          "url": "https://www.bobmarley.com/history/"
+        },
+        {
+          "title": "The Cambridge Companion to Pop and Rock: Bob Marley profile",
+          "url": "https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf"
+        }
+      ],
+      "evidence": [
+        "Estate history explicitly credits pairing and sonic identity.",
+        "Cambridge profile pp. 193–195 says Perry added Barrett rhythm section and encouraged own sound."
+      ],
+      "opened": true,
+      "claim_sha256": "a0aa1b6ac0c3125150e63b070bdfb322ef2f1a57d90f505fc1f5a1b5806b8307"
+    },
+    {
+      "artist": "bob-marley",
+      "to": "card:reggae",
+      "kind": "scene",
+      "claim": "The Wailers’ work with Lee “Scratch” Perry helped define roots reggae.",
+      "claimRu": "Работа The Wailers с Ли «Скрэтчем» Перри помогла определить звучание рутс-регги.",
+      "sources": [
+        {
+          "title": "Bob Marley estate: History",
+          "url": "https://www.bobmarley.com/history/"
+        },
+        {
+          "title": "The Cambridge Companion to Pop and Rock: Bob Marley profile",
+          "url": "https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf"
+        }
+      ],
+      "evidence": [
+        "Estate calls resulting sound an enduring roots reggae paradigm.",
+        "Cambridge says these records helped define reggae."
+      ],
+      "opened": true,
+      "claim_sha256": "aea3c23995fef9e64505d87896b0503d5f56e6af5e3a569745c1c72080438e50"
+    },
+    {
+      "artist": "the-police",
+      "to": "root:bob-marley",
+      "kind": "influence",
+      "claim": "The Police drew on Bob Marley’s reggae when developing their bass-led grooves.",
+      "claimRu": "Вырабатывая грувы с ведущей ролью баса, The Police опирались на регги Боба Марли.",
+      "sources": [
+        {
+          "title": "Mark Spicer: Reggatta de Blanc — Analyzing Style in the Music of the Police",
+          "url": "https://www.academia.edu/5120856/_Reggatta_de_Blanc_Analyzing_Style_in_the_Music_of_the_Police"
+        },
+        {
+          "title": "Jon Wiederhorn: Andy Summers interview (FretBuzz)",
+          "url": "https://fretbuzz.co/andy-summers-provides-a-candid-viewfinder-glimpse-at-his-life-as-a-guitarist/"
+        }
+      ],
+      "evidence": [
+        "Spicer cites Summers on Marley and movement away from eighth-note bass patterns.",
+        "Summers describes Marley’s surrounding popularity and reggae bass convenience; explicitly rejects reducing Police to a reggae band."
+      ],
+      "opened": true,
+      "claim_sha256": "0424b2b2b07fa4fc82039260c828cefd267eb1818ad28bb6fe972d4e29585c4c"
+    },
+    {
+      "artist": "aquarium",
+      "to": "root:bob-marley",
+      "kind": "influence",
+      "claim": "Bob Marley was an influence on Aquarium’s Boris Grebenshchikov.",
+      "claimRu": "Боб Марли повлиял на Бориса Гребенщикова из «Аквариума».",
+      "sources": [
+        {
+          "title": "Aquarium: Blue Album liner-note history, preserved from official album pages",
+          "url": "https://aquarium.lipetsk.ru/MESTA/mp3/aquarium.ru-albums/siniy.htm"
+        },
+        {
+          "title": "Konstantin Bakanov: Boris Grebenshchikov, Sobesednik (RIMA archive)",
+          "url": "https://rima.media/document/033gEbdguRvTiTqcBNXyat-2019-05-10-sobesednik-636459-boris-grebenshchikov-vsia-zhizn-v-poiskakh-svezhikh-smyslov"
+        }
+      ],
+      "evidence": [
+        "Album history quotes Grebenshchikov on listening to Marley during their reggae turn.",
+        "Independent profile explicitly names Marley among major influences."
+      ],
+      "opened": true,
+      "claim_sha256": "e184212a9d58df31e08d1de14813681b96d8971e4146a285b389875590285996"
+    },
+    {
+      "artist": "jimmy-cliff",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "Jimmy Cliff began singing in church before his recording career.",
+      "claimRu": "Джимми Клифф начал петь в церкви задолго до карьеры звукозаписи.",
+      "sources": [
+        {
+          "title": "Rolling Stone: Jimmy Cliff obituary",
+          "url": "https://www.rollingstone.co.uk/music/news/jimmy-cliff-the-harder-they-come-reggae-giant-dead-at-81-56553/"
+        },
+        {
+          "title": "NPR via NCPR: Reggae pioneer Jimmy Cliff dies at 81",
+          "url": "https://www.northcountrypublicradio.org/news/npr/nx-s1-4526570/reggae-pioneer-jimmy-cliff-dies-at-81"
+        }
+      ],
+      "evidence": [
+        "Rolling Stone identifies childhood gospel performances.",
+        "NPR describes church singing and includes Cliff explaining his gospel church."
+      ],
+      "opened": true,
+      "claim_sha256": "0b7223d5fc6c3e015b9dbbe2f5d6c48c084c1f7fab8ce800acf6eb45d13cbe4e"
+    }
+  ],
+  "notes": [
+    "All new edges require independent review. Existing claims and sources preserved.",
+    "MusicTech and both sampling PDFs were opened through curl and read locally after web-tool fetch failures.",
+    "Paradise Circus attribution remains unresolved; neither Glories nor Nina Simone asserted.",
+    "Some new edges expand a retained direct-to-card claim into an explicit artist node without removing the original.",
+    "Junior Murvin birth year follows age 67 in 2013 obituary; other biographies vary."
+  ]
+}

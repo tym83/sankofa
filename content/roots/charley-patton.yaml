@@ -1,0 +1,20 @@
+id: "charley-patton"
+name: "Charley Patton"
+nameRu: "Чарли Паттон"
+aliases: ["чарли паттон"]
+years: [1891, 1934]
+place: {"name": "Edwards, Mississippi", "lat": 32.3307, "lon": -90.6057}
+genre: "Delta blues"
+genreRu: "дельта-блюз"
+links:
+  - to: "card:blues"
+    kind: "influence"
+    claim: "At Dockery, Charley Patton developed his blues by studying the playing of local guitarist Henry Sloan."
+    claimRu: "На плантации Докери Чарли Паттон развивал свой блюз, изучая игру местного гитариста Генри Слоуна."
+    sources:
+      - title: "Mississippi Encyclopedia: Charley Patton"
+        url: "https://mississippiencyclopedia.org/entries/charley-patton/"
+      - title: "National Park Service: Charley Patton"
+        url: "https://home.nps.gov/locations/lowermsdeltaregion/charley-patton.htm"
+story: "At Dockery, Charley Patton studied local guitarist Henry Sloan. He developed his own blues through that musical example."
+storyRu: "На плантации Докери Чарли Паттон изучал игру местного гитариста Генри Слоуна. На этом примере он развивал свой блюз."

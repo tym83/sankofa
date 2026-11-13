@@ -1,0 +1,1187 @@
+# Exact added edges against c82dc083797c141e16b5c403e43a09d77ee5cf4f.
+baseline: c82dc083797c141e16b5c403e43a09d77ee5cf4f
+checkedOn: '2026-11-12'
+links:
+- artist: abba
+  to: root:george-mccrae
+  claim: For “Dancing Queen”, ABBA took rhythmic inspiration from soul singer George McCrae’s “Rock Your
+    Baby”.
+  claimRu: Работая над «Dancing Queen», ABBA вдохновлялись ритмом «Rock Your Baby» соул-певца Джорджа
+    Маккрея.
+  sources:
+  - title: 'Library of Congress: Carl Magnus Palm on Arrival'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf
+  - title: 'Rolling Stone: ABBA — Dancing Queen'
+    url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/
+  kind: influence
+- artist: adele
+  to: root:etta-james
+  kind: influence
+  claim: Discovering Etta James at fourteen changed how Adele thought about singing.
+  claimRu: Услышав Этту Джеймс в четырнадцать лет, Адель стала иначе относиться к пению.
+  sources:
+  - title: 'Vogue: Adele — Feeling Groovy'
+    url: https://www.vogue.com/article/adele-feeling-groovy
+  - title: 'Hot Press: Adele — a 2008 interview'
+    url: https://www.hotpress.com/music/happy-35th-birthday-adele-revisiting-a-classic-2008-interview-22966556
+- artist: albert-ayler
+  to: card:spirituals
+  kind: influence
+  claim: Albert Ayler’s improvisations drew on melodies shaped by spirituals.
+  claimRu: В импровизациях Альберта Эйлера звучали мелодии, восходившие к спиричуэлс.
+  sources:
+  - title: 'Kevin Whitehead: Albert Ayler — Testifying the Breaking Point, Fresh Air/KERA'
+    url: https://www.keranews.org/2001-05-07/albert-ayler-testifying-the-breaking-point
+  - title: 'Richard Brody: The Jubilant Glory of Albert Ayler’s Revelations — The New Yorker'
+    url: https://www.newyorker.com/culture/the-front-row/the-jubilant-glory-of-albert-aylers-revelations
+- artist: amy-winehouse
+  to: root:dinah-washington
+  kind: influence
+  claim: Dinah Washington was one of the jazz singers who shaped Amy Winehouse’s musical style.
+  claimRu: Дайна Вашингтон была одной из джазовых певиц, сформировавших музыкальный стиль Эми Уайнхаус.
+  sources:
+  - title: 'GRAMMY Museum: Beyond Black — The Style of Amy Winehouse'
+    url: https://grammymuseum.org/wp-content/uploads/2020/02/Amy-Winehouse-Exhibit-Press-Release_FINAL-d88d68fdbf.pdf
+  - title: 'Design Museum: Amy — Beyond the Stage'
+    url: https://designmuseum.org/asset/download?id=98f1cd4d-370a-4875-9221-a69f4fe4dc27
+- artist: amy-winehouse
+  to: root:marvin-gaye
+  kind: interpolation
+  claim: “Tears Dry on Their Own” reworks the accompaniment of Marvin Gaye and Tammi Terrell’s “Ain’t
+    No Mountain High Enough”.
+  claimRu: В «Tears Dry on Their Own» заново сыгран аккомпанемент «Ain’t No Mountain High Enough» Марвина
+    Гэя и Тамми Террелл.
+  sources:
+  - title: 'Classic Motown: Marvin Gaye & Tammi Terrell — United'
+    url: https://classic.motown.com/story/marvin-gaye-tammi-terrell-united/
+  - title: 'MusicRadar: The making of Tears Dry on Their Own'
+    url: https://www.musicradar.com/artists/amy-winehouse-tears-dry-on-their-own-song-story
+  what: The accompaniment of the 1967 Marvin Gaye/Tammi Terrell version of “Ain’t No Mountain High Enough”,
+    including its descending bass line, re-performed for “Tears Dry on Their Own”.
+  whatRu: Аккомпанемент версии «Ain’t No Mountain High Enough» Марвина Гэя и Тамми Террелл 1967 года,
+    включая нисходящую басовую линию, заново сыгран для «Tears Dry on Their Own».
+- artist: aquarium
+  to: root:bob-marley
+  kind: influence
+  claim: Bob Marley was an influence on Aquarium’s Boris Grebenshchikov.
+  claimRu: Боб Марли повлиял на Бориса Гребенщикова из «Аквариума».
+  sources:
+  - title: 'Aquarium: Blue Album liner-note history, preserved from official album pages'
+    url: https://aquarium.lipetsk.ru/MESTA/mp3/aquarium.ru-albums/siniy.htm
+  - title: 'Konstantin Bakanov: Boris Grebenshchikov, Sobesednik (RIMA archive)'
+    url: https://rima.media/document/033gEbdguRvTiTqcBNXyat-2019-05-10-sobesednik-636459-boris-grebenshchikov-vsia-zhizn-v-poiskakh-svezhikh-smyslov
+- artist: arctic-monkeys
+  to: root:dr-dre
+  kind: influence
+  claim: Arctic Monkeys drew on Dr. Dre’s hip-hop rhythms when making AM.
+  claimRu: Работая над «AM», Arctic Monkeys опирались на хип-хоп-ритмы Доктора Дре.
+  sources:
+  - title: 'Radio X: Why Arctic Monkeys’ AM is still their most important album'
+    url: https://www.radiox.co.uk/artists/arctic-monkeys/why-arctic-monkeys-am-most-important-album/
+  - title: 'Enmore Audio: Engineering the Sound — Arctic Monkeys’ AM'
+    url: https://happymag.tv/engineering-the-sound-arctic-monkeys-am/
+- artist: aretha-franklin
+  to: card:gospel
+  kind: scene
+  claim: Aretha Franklin began her singing career in her father’s church and on his gospel tours.
+  claimRu: Арета Франклин начала певческую карьеру в церкви своего отца и в его госпел-гастролях.
+  sources:
+  - title: 'Detroit Historical Society: Aretha Franklin'
+    url: https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/franklin-aretha
+  - title: 'TIME: Aretha Franklin’s passing is the end of an era'
+    url: https://time.com/5367138/aretha-franklin-appreciation/
+- artist: arthur-crudup
+  to: card:gospel
+  kind: influence
+  claim: Arthur Crudup developed his musical skills through gospel singing before his blues recording
+    career.
+  claimRu: До начала карьеры блюзового исполнителя на пластинках Артур Крадап развивал своё музыкальное
+    мастерство, исполняя госпел.
+  sources:
+  - title: 'Mississippi Blues Trail: Arthur Big Boy Crudup'
+    url: https://visitmississippi.org/things-to-do/blues-trail/mississippi-blues-trail-arthur-big-boy-crudup/
+  - title: 'Virginia General Assembly: Arthur William Crudup commemoration (2023)'
+    url: https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf=
+- artist: bessie-smith
+  to: card:blues
+  kind: scene
+  claim: Bessie Smith developed her blues performance on the Black vaudeville circuit.
+  claimRu: Бесси Смит оттачивала своё блюзовое искусство в гастрольных водевильных труппах чернокожих
+    артистов.
+  sources:
+  - title: 'Smithsonian NMAAHC: Bessie Smith'
+    url: https://nmaahc.si.edu/lgbtq/bessie-smith
+  - title: 'National Park Service: Bessie Smith'
+    url: https://home.nps.gov/locations/lowermsdeltaregion/bessie-smith.htm
+- artist: big-mama-thornton
+  to: card:big-mama-thornton
+  kind: scene
+  claim: After touring with the Hot Harlem Revue, Big Mama Thornton established herself in Houston and
+    began recording for Peacock.
+  claimRu: После гастролей с Hot Harlem Revue Биг Мама Торнтон обосновалась в Хьюстоне и начала записываться
+    на Peacock.
+  sources:
+  - title: 'Yale University Library: Big Mama Thornton — Early Years'
+    url: https://onlineexhibits.library.yale.edu/s/ohamstruggles/page/bmt1
+  - title: 'Smithsonian Folkways: Big Mama Thornton'
+    url: https://folkways.si.edu/artists/big-mama-thornton
+- artist: billy-cobham
+  to: root:miles-davis
+  kind: member
+  claim: Billy Cobham played drums with Miles Davis before his work in the Mahavishnu Orchestra.
+  claimRu: Билли Кобэм играл на барабанах с Майлзом Дэвисом до работы в Mahavishnu Orchestra.
+  sources:
+  - title: 'Blue Note Records: Billy Cobham biography'
+    url: https://www.bluenote.com/artist/billy-cobham/
+  - title: 'Hit Channel: Interview — Billy Cobham'
+    url: https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/
+- artist: billy-cobham
+  to: card:jazz
+  kind: scene
+  claim: Billy Cobham’s work with the Mahavishnu Orchestra placed him in the early jazz-fusion movement.
+  claimRu: Работа Билли Кобэма в Mahavishnu Orchestra связала его с ранним движением джаз-фьюжна.
+  sources:
+  - title: 'Blue Note Records: Billy Cobham biography'
+    url: https://www.bluenote.com/artist/billy-cobham/
+  - title: 'Hit Channel: Interview — Billy Cobham'
+    url: https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/
+- artist: black-sabbath
+  to: root:eric-clapton
+  kind: influence
+  claim: Tony Iommi developed his early guitar playing under the influence of Eric Clapton’s blues.
+  claimRu: Ранняя гитарная манера Тони Айомми складывалась под влиянием блюза Эрика Клэптона.
+  sources:
+  - title: 'Tony Iommi: official biography'
+    url: https://www.iommi.com/biography/
+  - title: 'Guitar World: Tony Iommi on Jimmy Page, Brian May and Jethro Tull'
+    url: https://www.guitarworld.com/artists/guitarists/tony-iommi-on-jimmy-page-brian-may-and-jethro-tull
+- artist: bob-dylan
+  to: root:robert-johnson
+  kind: influence
+  claim: Bob Dylan studied Robert Johnson as a songwriting model.
+  claimRu: Боб Дилан учился писать песни у Роберта Джонсона.
+  sources:
+  - title: 'Keith Negus: Bob Dylan’s phonographic imagination (Popular Music)'
+    url: https://research.gold.ac.uk/4704/1/BobDylanPhonographicImag.pdf
+  - title: 'Los Angeles Times: Bob Dylan on learning songwriting (2004 interview)'
+    url: https://www.latimes.com/entertainment/music/la-et-ms-archives-bob-dylan-20161013-snap-story.html
+- artist: bob-marley
+  to: root:lee-scratch-perry
+  kind: producer
+  claim: Lee “Scratch” Perry helped the Wailers develop their sound by pairing them with bassist Aston
+    Barrett and drummer Carlton Barrett.
+  claimRu: Ли «Скрэтч» Перри помог The Wailers выработать своё звучание, объединив их с басистом Астоном
+    Барреттом и барабанщиком Карлтоном Барреттом.
+  sources:
+  - title: 'Bob Marley estate: History'
+    url: https://www.bobmarley.com/history/
+  - title: 'The Cambridge Companion to Pop and Rock: Bob Marley profile'
+    url: https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf
+- artist: bob-marley
+  to: card:reggae
+  kind: scene
+  claim: The Wailers’ work with Lee “Scratch” Perry helped define roots reggae.
+  claimRu: Работа The Wailers с Ли «Скрэтчем» Перри помогла определить звучание рутс-регги.
+  sources:
+  - title: 'Bob Marley estate: History'
+    url: https://www.bobmarley.com/history/
+  - title: 'The Cambridge Companion to Pop and Rock: Bob Marley profile'
+    url: https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf
+- artist: charles-mingus
+  to: card:gospel
+  kind: influence
+  claim: The church music Charles Mingus heard as a child was one of his earliest musical influences.
+  claimRu: Церковная музыка, которую Чарльз Мингус слышал в детстве, стала одним из его первых музыкальных
+    влияний.
+  sources:
+  - title: 'Charles Mingus estate: Biography'
+    url: https://www.charlesmingus.com/mingusbio
+  - title: 'Blue Note Records: Charles Mingus biography'
+    url: https://www.bluenote.com/artist/charles-mingus/
+- artist: charles-mingus
+  to: card:jazz
+  kind: influence
+  claim: Charles Mingus brought gospel into his jazz compositions.
+  claimRu: Чарльз Мингус вплетал госпел в свои джазовые сочинения.
+  sources:
+  - title: 'Blue Note Records: Charles Mingus biography'
+    url: https://www.bluenote.com/artist/charles-mingus/
+  - title: 'WICN: Charles Mingus, Artist of the Month, April 2022'
+    url: https://wicn.org/wicn-artist-of-the-month-april-2022-charles-mingus/
+- artist: charley-patton
+  to: card:blues
+  kind: influence
+  claim: At Dockery, Charley Patton developed his blues by studying the playing of local guitarist Henry
+    Sloan.
+  claimRu: На плантации Докери Чарли Паттон развивал свой блюз, изучая игру местного гитариста Генри Слоуна.
+  sources:
+  - title: 'Mississippi Encyclopedia: Charley Patton'
+    url: https://mississippiencyclopedia.org/entries/charley-patton/
+  - title: 'National Park Service: Charley Patton'
+    url: https://home.nps.gov/locations/lowermsdeltaregion/charley-patton.htm
+- artist: charlie-parker
+  to: card:jazz
+  kind: scene
+  claim: Charlie Parker’s musical apprenticeship took place in Kansas City’s jazz bands and clubs.
+  claimRu: Чарли Паркер учился музыке, играя в джазовых ансамблях и клубах Канзас-Сити.
+  sources:
+  - title: 'Ed Komara: Ko Ko — Library of Congress'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf
+  - title: 'C.J. Janovy: Kansas City’s Charlie Parker History Tour — KCUR'
+    url: https://www.kcur.org/arts-life/2016-08-29/kansas-citys-charlie-parker-history-tour-requires-a-guide-and-imagination
+- artist: christina-aguilera
+  to: root:etta-james
+  kind: influence
+  claim: Christina Aguilera grew up listening to Etta James and tried to emulate her singing.
+  claimRu: Кристина Агилера с детства слушала Этту Джеймс и стремилась петь как она.
+  sources:
+  - title: 'Biography Today: Christina Aguilera — Major Influences, via ERIC'
+    url: https://files.eric.ed.gov/fulltext/ED452104.pdf
+  - title: 'ABC News: Etta James funeral tribute'
+    url: https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute
+- artist: chuck-berry
+  to: card:rhythm-and-blues
+  kind: influence
+  claim: Chuck Berry developed his rock-and-roll sound by combining blues and R&B with country music.
+  claimRu: Чак Берри создал свой рок-н-ролльный звук, соединив блюз и ритм-н-блюз с кантри.
+  sources:
+  - title: 'Rock & Roll Hall of Fame: Chuck Berry'
+    url: https://rockhall.com/inductees/chuck-berry/
+  - title: 'Chuck Berry: official biography'
+    url: https://www.chuckberry.com/biography
+- artist: creedence-clearwater-revival
+  to: root:little-richard
+  kind: influence
+  claim: Little Richard was a formative influence on Creedence Clearwater Revival’s John Fogerty.
+  claimRu: Литл Ричард повлиял на музыкальное становление Джона Фогерти из Creedence Clearwater Revival.
+  sources:
+  - title: 'Rock Cellar: John Fogerty — A Fortunate Son Speaks'
+    url: https://rockcellarmagazine.com/john-fogerty-a-fortunate-son-speaks-the-interview/
+  - title: 'Den of Geek: John Lingan on Creedence’s musical formation'
+    url: https://www.denofgeek.com/culture/why-creedence-clearwater-revival-remains-the-definitive-band-of-its-era/
+- artist: daft-punk
+  to: root:edwin-birdsong
+  kind: sample
+  claim: Daft Punk built “Harder, Better, Faster, Stronger” around a sample of Edwin Birdsong’s “Cola
+    Bottle Baby”.
+  claimRu: Daft Punk построили «Harder, Better, Faster, Stronger» вокруг сэмпла из «Cola Bottle Baby»
+    Эдвина Бёрдсонга.
+  what: The instrumental groove of Edwin Birdsong's 1979 'Cola Bottle Baby', used as the backing of 'Harder,
+    Better, Faster, Stronger'.
+  whatRu: Инструментальный грув из записи «Cola Bottle Baby» Эдвина Бёрдсонга 1979 года, положенный в
+    основу «Harder, Better, Faster, Stronger».
+  sources:
+  - title: 'Resident Advisor: Edwin Birdsong obituary'
+    url: https://ra.co/news/43130
+  - title: 'Radio Milwaukee: Sample, Better, Faster, Stronger'
+    url: https://radiomilwaukee.org/2013-05-23/sample-better-faster-stronger
+- artist: david-bowie
+  to: root:nina-simone
+  kind: cover
+  claim: Nina Simone's version of 'Wild Is the Wind' inspired David Bowie to record it for Station to
+    Station.
+  claimRu: Версия «Wild Is the Wind» Нины Симон вдохновила Дэвида Боуи записать эту песню для альбома
+    Station to Station.
+  what: '''Wild Is the Wind'', recorded for Station to Station after Nina Simone''s interpretation.'
+  whatRu: «Wild Is the Wind», записанная для «Station to Station» под впечатлением от интерпретации Нины
+    Симон.
+  sources:
+  - title: 'NPO Radio 2: David Bowies Wild Is The Wind is een eerbetoon aan Nina Simone'
+    url: https://www.nporadio2.nl/nieuws/top2000/93682543-a548-417c-b69e-9b220e4b507b/david-bowies-wild-is-the-wind-is-een-eerbetoon-aan-nina-simone
+  - title: 'Verve / UMe: Nina Simone’s Historic Philips Years Celebrated with Vinyl Remasters'
+    url: https://www.prnewswire.com/news-releases/nina-simones-historic-philips-years-celebrated-with-vinyl-remasters-of-seven-classic-albums-including-nina-simone-in-concert-wild-is-the-wind-high-priestess-of-soul-300337404.html
+- artist: deep-purple
+  to: root:little-richard
+  kind: influence
+  claim: Little Richard was among the early musical influences Ian Gillan brought into Deep Purple.
+  claimRu: Литл Ричард был одним из ранних музыкальных ориентиров Иэна Гиллана, повлиявших на его работу
+    в Deep Purple.
+  sources:
+  - title: 'Classic Rock: The making of Deep Purple In Rock'
+    url: https://www.loudersound.com/features/deep-purple-the-making-of-in-rock
+  - title: 'ABC Radio National: Ian Gillan interview (2006)'
+    url: https://www.abc.net.au/listen/programs/musicshow/ian-gillan/3338452
+- artist: dinah-washington
+  to: card:gospel
+  kind: scene
+  claim: Dinah Washington’s musical upbringing began with singing and playing piano in church.
+  claimRu: Музыкальное воспитание Дайны Вашингтон началось с пения и игры на фортепиано в церкви.
+  sources:
+  - title: 'Alabama Music Hall of Fame: Dinah Washington'
+    url: https://www.alamhof.org/dinah-washington-1
+  - title: 'Encyclopedia of Alabama: Dinah Washington'
+    url: https://encyclopediaofalabama.org/article/dinah-washington/
+- artist: dr-dre
+  to: card:funk
+  kind: influence
+  claim: Dr. Dre built the G-funk sound of The Chronic around Parliament-Funkadelic’s grooves.
+  claimRu: Доктор Дре построил джи-фанковое звучание «The Chronic» на грувах Parliament-Funkadelic.
+  sources:
+  - title: 'Library of Congress: Rashad Grove — The Chronic'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf
+  - title: 'Pitchfork: Sheldon Pearce — The Chronic'
+    url: https://pitchfork.com/reviews/albums/dr-dre-the-chronic/
+- artist: earth-wind-and-fire
+  to: card:jazz
+  kind: influence
+  claim: Maurice White built Earth, Wind & Fire’s sound from his background as a jazz musician.
+  claimRu: Морис Уайт создавал звучание Earth, Wind & Fire, опираясь на свой опыт джазового музыканта.
+  sources:
+  - title: 'Earth, Wind & Fire: official biography'
+    url: https://www.earthwindandfire.com/history/biography/
+  - title: 'Rock & Roll Hall of Fame: Earth, Wind & Fire induction essay, 2000'
+    url: https://www.rockhall.com/wp-content/uploads/2024/03/Earth__Wind_and_Fire_2000.pdf
+- artist: edwin-birdsong
+  to: card:funk
+  kind: scene
+  claim: Edwin Birdsong developed jazz-funk records in collaboration with Roy Ayers.
+  claimRu: Эдвин Бёрдсонг создавал джаз-фанковые записи вместе с Роем Эйерсом.
+  sources:
+  - title: 'Resident Advisor: Edwin Birdsong obituary'
+    url: https://ra.co/news/43130
+  - title: 'Wax Poetics: Edwin Birdsong — Cosmic Reverb'
+    url: https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/
+- artist: elvis-presley
+  to: root:arthur-crudup
+  kind: cover
+  claim: Elvis Presley released his debut single with Arthur Crudup’s “That’s All Right”.
+  claimRu: Для своего дебютного сингла Элвис Пресли записал песню Артура Крадапа «That’s All Right».
+  what: '“That’s All Right”: Presley’s 1954 debut single re-records Crudup’s blues song.'
+  whatRu: '«That’s All Right»: на дебютном сингле 1954 года Пресли заново исполнил блюзовую песню Крадапа.'
+  sources:
+  - title: 'Associated Press: Arthur Crudup and Elvis’s first hit (Chicago Sun-Times)'
+    url: https://chicago.suntimes.com/music/2024/07/05/bluesman-arthur-crudup-wrote-thats-all-right-elvis-first-hit-song-but-he-barely-got-paid-for-it
+  - title: 'Virginia General Assembly: Arthur William Crudup commemoration (2023)'
+    url: https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf=
+- artist: eminem
+  to: root:rakim
+  kind: influence
+  claim: Rakim’s rhyme patterns helped shape Eminem’s approach to rap.
+  claimRu: Рифмовка Ракима помогла сформировать подход Эминема к рэпу.
+  sources:
+  - title: 'NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public'
+    url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
+  - title: Apple Music interview with Eminem, transcribed by GRUNGECAKE
+    url: https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon
+- artist: eminem
+  to: root:labi-siffre
+  claim: Eminem’s “My Name Is” uses the riff from Labi Siffre’s funk recording “I Got The…”.
+  claimRu: В «My Name Is» Эминема использован рифф из фанковой записи Лаби Сиффре «I Got The…».
+  sources:
+  - title: 'MusicRadar: Chas and Dave played on a classic Eminem track'
+    url: https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it
+  - title: 'Pitchfork: Labi Siffre — Crying Laughing Loving Lying'
+    url: https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/
+  kind: sample
+  what: The instrumental riff from Labi Siffre’s 1975 recording “I Got The…” in “My Name Is”.
+  whatRu: Инструментальный рифф из записи Лаби Сиффре «I Got The…» 1975 года в «My Name Is».
+- artist: eric-clapton
+  to: root:robert-johnson
+  kind: influence
+  claim: Robert Johnson’s recordings became a formative blues influence on the young Eric Clapton.
+  claimRu: Записи Роберта Джонсона стали одним из главных блюзовых ориентиров юного Эрика Клэптона.
+  sources:
+  - title: 'Guitar World: Eric Clapton — The King and I'
+    url: https://www.guitarworld.com/artists/eric-clapton-king-and-i
+  - title: 'Pennyblackmusic: Eric Clapton interview'
+    url: https://pennyblackmusic.co.uk/Home/Details?Id=22486
+- artist: etta-james
+  to: card:gospel
+  kind: scene
+  claim: Etta James began singing in a church gospel choir at five.
+  claimRu: Этта Джеймс начала петь в церковном госпел-хоре в пять лет.
+  sources:
+  - title: 'California Museum: Etta James'
+    url: https://californiamuseum.org/inductee/etta-james/
+  - title: 'Biography: Etta James'
+    url: https://www.biography.com/musicians/etta-james
+- artist: fela-kuti
+  to: card:afrobeat
+  kind: influence
+  claim: Fela Kuti developed Afrobeat by combining West African highlife, jazz and American soul and funk.
+  claimRu: Фела Кути создал афробит, соединив западноафриканский хайлайф, джаз и американские соул и фанк.
+  sources:
+  - title: 'Rock and Roll Hall of Fame: Fela Kuti'
+    url: https://rockhall.com/inductees/fela-kuti/
+  - title: 'Trinity Laban: Fela Kuti'
+    url: https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/
+- artist: fela-kuti
+  to: root:james-brown
+  kind: influence
+  claim: James Brown’s funk helped shape Fela Kuti’s music.
+  claimRu: Фанк Джеймса Брауна помог сформироваться музыке Фелы Кути.
+  sources:
+  - title: 'Rock and Roll Hall of Fame: Fela Kuti'
+    url: https://rockhall.com/inductees/fela-kuti/
+  - title: 'Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)'
+    url: https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en
+- artist: george-mccrae
+  to: card:gospel
+  kind: scene
+  claim: George McCrae began developing his singing voice in a choir as a child.
+  claimRu: Джордж Маккрей начал развивать свой певческий голос в хоре ещё ребёнком.
+  sources:
+  - title: 'Beat Instrumental: The Miami McRae sound, February 1975, p. 17'
+    url: https://worldradiohistory.com/UK/Beat-Instrumental/Beat-Instrumental-1975-02-S-OCR.pdf
+  - title: 'Maxazine: George McCrae — It’s all about love'
+    url: https://maxazine.com/2020/07/17/george-mccrae-its-all-about-love/
+- artist: george-michael
+  to: root:stevie-wonder
+  kind: influence
+  claim: Stevie Wonder was one of George Michael’s major musical influences.
+  claimRu: Стиви Уандер был одним из главных музыкальных ориентиров Джорджа Майкла.
+  sources:
+  - title: 'Rock & Roll Hall of Fame: George Michael — Influences'
+    url: https://rockhall.com/inductees/george-michael/
+  - title: 'The Guardian: Elton John remembers George Michael'
+    url: https://www.theguardian.com/global/2017/oct/15/the-george-michael-we-knew-by-elton-john-mariah-carey-james-corden-tatjana-patitz
+- artist: george-michael
+  to: root:james-brown
+  kind: sample
+  claim: George Michael built the beat of “Freedom! ’90” on the drum break from James Brown’s “Funky Drummer”.
+  claimRu: Джордж Майкл построил бит «Freedom! ’90» на барабанном брейке из «Funky Drummer» Джеймса Брауна.
+  sources:
+  - title: 'Rolling Stone: George Michael — Freedom! ’90'
+    url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/george-michael-freedom-90-3-30441/
+  - title: 'MusicRadar: When sampling ruled the world'
+    url: https://www.musicradar.com/drums/it-was-deemed-that-an-artist-could-sample-an-unrecognisable-portion-of-a-work-without-the-need-to-declare-the-sample-or-indeed-pay-the-original-artist-when-sampling-ruled-the-world-and-drummers-didnt-get-paid
+  what: Clyde Stubblefield’s drum break from James Brown’s “Funky Drummer” recording, looped in “Freedom!
+    ’90”.
+  whatRu: Барабанный брейк Клайда Стабблфилда из записи Джеймса Брауна «Funky Drummer», зацикленный в
+    «Freedom! ’90».
+- artist: howlin-wolf
+  to: root:charley-patton
+  kind: teacher
+  claim: Charley Patton taught Howlin’ Wolf songs and performance technique.
+  claimRu: Чарли Паттон учил Хаулина Вулфа песням и сценическим приёмам.
+  sources:
+  - title: 'Mississippi Encyclopedia: Howlin’ Wolf'
+    url: https://mississippiencyclopedia.org/entries/howlin-wolf/
+  - title: 'Mississippi Blues Trail: Howlin’ Wolf'
+    url: https://msbluestrail.org/blues-trail-markers/howlin-wolf
+- artist: howlin-wolf
+  to: card:blues
+  kind: scene
+  claim: Howlin’ Wolf adapted the Delta blues of his upbringing to an amplified band.
+  claimRu: Хаулин Вулф перенёс дельта-блюз, на котором вырос, в звучание ансамбля с усиленными инструментами.
+  sources:
+  - title: 'Mississippi Encyclopedia: Howlin’ Wolf'
+    url: https://mississippiencyclopedia.org/entries/howlin-wolf/
+  - title: 'Mississippi Blues Trail: Howlin’ Wolf'
+    url: https://msbluestrail.org/blues-trail-markers/howlin-wolf
+- artist: iron-maiden
+  to: root:deep-purple
+  kind: influence
+  claim: Deep Purple were a formative influence on Iron Maiden’s Steve Harris.
+  claimRu: Deep Purple повлияли на музыкальное становление Стива Харриса из Iron Maiden.
+  sources:
+  - title: 'Reverb: Tony Bacon’s 1992 Steve Harris interview'
+    url: https://reverb.com/news/interview-iron-maidens-steve-harris
+  - title: 'Dave Ling: Steve Harris — Burning Ambition, Classic Rock'
+    url: https://www.loudersound.com/features/steve-harris-burning-ambition
+- artist: james-brown
+  to: card:gospel
+  kind: influence
+  claim: James Brown carried gospel vocal intensity into his rhythm-and-blues and funk.
+  claimRu: Джеймс Браун перенёс накал госпел-вокала в свой ритм-н-блюз и фанк.
+  sources:
+  - title: 'Rock and Roll Hall of Fame: James Brown'
+    url: https://library.rockhall.com/james_brown
+  - title: 'Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)'
+    url: https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en
+- artist: janis-joplin
+  to: root:bessie-smith
+  kind: influence
+  claim: Bessie Smith’s blues singing helped shape Janis Joplin’s vocal style.
+  claimRu: Блюзовое пение Бесси Смит помогло сформировать вокальную манеру Дженис Джоплин.
+  sources:
+  - title: 'Open University: Janis Joplin’s singing style'
+    url: https://www.open.edu/openlearn/history-the-arts/janis-joplin-and-the-sexual-revolution/content-section-5
+  - title: 'NPR Fresh Air: Holly George-Warren on Janis Joplin, via NHPR'
+    url: https://www.nhpr.org/2019-10-21/new-janis-joplin-biography-reveals-the-hard-work-behind-the-heart
+- artist: jimmy-cliff
+  to: card:gospel
+  kind: influence
+  claim: Jimmy Cliff began singing in church before his recording career.
+  claimRu: Джимми Клифф начал петь в церкви задолго до карьеры звукозаписи.
+  sources:
+  - title: 'Rolling Stone: Jimmy Cliff obituary'
+    url: https://www.rollingstone.co.uk/music/news/jimmy-cliff-the-harder-they-come-reggae-giant-dead-at-81-56553/
+  - title: 'NPR via NCPR: Reggae pioneer Jimmy Cliff dies at 81'
+    url: https://www.northcountrypublicradio.org/news/npr/nx-s1-4526570/reggae-pioneer-jimmy-cliff-dies-at-81
+- artist: joe-cocker
+  to: root:ray-charles
+  kind: influence
+  claim: Ray Charles was Joe Cocker’s principal vocal influence from his teenage years.
+  claimRu: Рэй Чарльз был главным вокальным ориентиром Джо Кокера ещё с подростковых лет.
+  sources:
+  - title: 'Contemporary Musicians: Joe Cocker'
+    url: https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker
+  - title: 'Melody Maker: Joe captures that King of Soul sound, October 19, 1968, p. 8'
+    url: https://worldradiohistory.com/UK/Melody-Maker/60s/68/Melody-Maker-1968-1019.pdf
+- artist: john-coltrane
+  to: card:jazz
+  kind: scene
+  claim: John Coltrane’s early jazz apprenticeship included playing in Dizzy Gillespie’s band.
+  claimRu: В начале своего пути в джазе Джон Колтрейн набирался опыта в ансамбле Диззи Гиллеспи.
+  sources:
+  - &id001
+    title: 'John Coltrane: official biography'
+    url: https://www.johncoltrane.com/biography
+  - &id002
+    title: 'Blue Note Records: John Coltrane — biography'
+    url: https://www.bluenote.com/artist/john-coltrane/
+- artist: john-coltrane
+  to: root:miles-davis
+  kind: member
+  claim: John Coltrane joined Miles Davis’s band in 1955, a formative step before leading his own groups.
+  claimRu: В 1955 году Джон Колтрейн вошёл в ансамбль Майлза Дэвиса — важный этап становления, прежде
+    чем он возглавил собственные группы.
+  sources:
+  - *id001
+  - *id002
+- artist: johnny-cash
+  to: root:lonnie-donegan
+  kind: cover
+  claim: Johnny Cash’s “Rock Island Line” followed Lonnie Donegan’s hit rendition.
+  claimRu: Джонни Кэш записал «Rock Island Line» вслед за ставшей хитом версией Лонни Донегана.
+  what: '“Rock Island Line”: Cash’s own performance of the traditional song, following Donegan’s hit version.'
+  whatRu: '«Rock Island Line»: собственное исполнение традиционной песни Кэшем вслед за ставшей хитом
+    версией Донегана.'
+  sources:
+  - title: 'Library of Congress: From Mule-een to New Orleans'
+    url: https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/
+  - title: 'Minnesota Public Radio: The Story of Rock Island Line'
+    url: https://archive.mpr.org/stories/2002/10/11/the-story-of-rock-island-line
+- artist: joss-stone
+  to: root:aretha-franklin
+  kind: influence
+  claim: Joss Stone traces her singing to childhood listening to Aretha Franklin.
+  claimRu: Джосс Стоун связывает свою манеру пения с тем, как в детстве слушала Арету Франклин.
+  sources:
+  - title: 'The Guardian: Purely belter — Joss Stone interview'
+    url: https://www.theguardian.com/music/2003/nov/14/popandrock1
+  - title: 'Mike Ragogna: Joss Stone interview (2011), archived by Stone’d Records'
+    url: https://www.stoned-records.com/news/joss-stone/chatting-with-joss-stone
+- artist: junior-murvin
+  to: root:lee-scratch-perry
+  kind: producer
+  claim: Lee “Scratch” Perry produced Junior Murvin’s breakthrough “Police and Thieves”.
+  claimRu: Ли «Скрэтч» Перри продюсировал «Police and Thieves» — песню, принёсшую Джуниору Мёрвину известность.
+  sources:
+  - title: 'Pitchfork: R.I.P. Reggae Singer Junior Murvin'
+    url: https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/
+  - title: 'Rebelbase: Junior Murvin interview, October 2004'
+    url: https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004
+- artist: junior-murvin
+  to: card:reggae
+  kind: scene
+  claim: Junior Murvin’s “Police and Thieves” emerged from Jamaica’s reggae recording scene.
+  claimRu: «Police and Thieves» Джуниора Мёрвина выросла из ямайской сцены звукозаписи регги.
+  sources:
+  - title: 'Pitchfork: R.I.P. Reggae Singer Junior Murvin'
+    url: https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/
+  - title: 'Rebelbase: Junior Murvin interview, October 2004'
+    url: https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004
+- artist: king-tubby
+  to: card:reggae
+  kind: scene
+  claim: King Tubby developed dub by remixing Jamaican rhythm tracks, dropping parts in and out and adding
+    echo.
+  claimRu: 'Кинг Табби развивал даб, заново сводя ямайские ритм-треки: убирал и возвращал отдельные партии
+    и добавлял эхо.'
+  sources:
+  - title: 'Reggaeville: King Tubby biography'
+    url: https://www.reggaeville.com/artist-details/king-tubby/about/
+  - title: 'Sean Williams: Tubby’s Dub Style (2012)'
+    url: https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf
+- artist: kraftwerk
+  to: root:james-brown
+  kind: influence
+  claim: James Brown's funk was an influence on Kraftwerk.
+  claimRu: На Kraftwerk повлиял фанк Джеймса Брауна.
+  sources:
+  - title: 'The Quietus: Karl Bartos Interviewed — Kraftwerk and the Birth of the Modern'
+    url: https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/
+  - title: 'Croatian Encyclopedia: Kraftwerk'
+    url: https://enciklopedija.hr/clanak/kraftwerk
+- artist: labi-siffre
+  to: card:jazz
+  kind: scene
+  claim: Labi Siffre worked as a jazz musician before his solo recording career.
+  claimRu: До сольной карьеры Лаби Сиффре работал джазовым музыкантом.
+  sources:
+  - title: 'NME: Siffre — enemy of the trendy cults, January 15, 1972'
+    url: https://www.worldradiohistory.com/UK/New-Musical-Express/1972/NME%201972-01-15.pdf
+  - title: 'Pitchfork: Labi Siffre — Crying Laughing Loving Lying'
+    url: https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/
+- artist: lead-belly
+  to: card:work-songs
+  kind: influence
+  claim: Lead Belly learned “Rock Island Line” from singers in Arkansas prisons and brought it into his
+    own repertoire.
+  claimRu: Ледбелли перенял «Rock Island Line» у певцов в арканзасских тюрьмах и включил её в свой репертуар.
+  sources:
+  - title: 'Library of Congress: From Mule-een to New Orleans'
+    url: https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/
+  - title: 'Encyclopedia of Arkansas: The Rock Island Line'
+    url: https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/
+- artist: led-zeppelin
+  to: root:howlin-wolf
+  kind: influence
+  claim: Robert Plant identifies Howlin’ Wolf as one of his early musical roots.
+  claimRu: Роберт Плант называет Хаулина Вулфа одним из своих ранних музыкальных ориентиров.
+  sources:
+  - title: 'Interview: Robert Plant (1977 interview, republished 2013)'
+    url: https://www.interviewmagazine.com/music/new-again-robert-plant
+  - title: 'Blabbermouth: Robert Plant on his musical roots (2015)'
+    url: https://blabbermouth.net/news/robert-plant-wants-deadhead-like-solo-following
+- artist: lee-scratch-perry
+  to: card:reggae
+  kind: scene
+  claim: Lee “Scratch” Perry helped develop dub through experiments with reggae rhythm tracks and studio
+    effects.
+  claimRu: Ли «Скрэтч» Перри развивал даб, экспериментируя с ритм-треками регги и студийными эффектами.
+  sources:
+  - title: 'Resident Advisor: Lee “Scratch” Perry biography'
+    url: https://ra.co/dj/leescratchperry/biography
+  - title: 'Danny Kelly: Lee Perry interview (NME, archived by Uncarved)'
+    url: https://uncarved.org/dub/scratch.html
+- artist: lee-scratch-perry
+  to: root:king-tubby
+  kind: producer
+  claim: King Tubby mixed Lee “Scratch” Perry’s Blackboard Jungle Dub.
+  claimRu: Кинг Табби сводил «Blackboard Jungle Dub» Ли «Скрэтч» Перри.
+  sources:
+  - title: 'David Katz: The Strange World Of King Tubby (The Quietus)'
+    url: https://thequietus.com/interviews/strange-world-of/king-tubby-best-music/
+  - title: 'Sean Williams: Tubby’s Dub Style (2012)'
+    url: https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf
+- artist: little-richard
+  to: card:gospel
+  kind: influence
+  claim: Little Richard’s vocal style drew on gospel singing.
+  claimRu: Вокальная манера Литл Ричарда выросла из госпела.
+  sources:
+  - title: 'New Georgia Encyclopedia: Little Richard Penniman'
+    url: https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/
+  - title: 'NPR: Little Richard, the King and Queen of Rock and Roll (WYPR)'
+    url: https://www.wypr.org/2020-05-09/little-richard-the-king-and-queen-of-rock-and-roll-dead-at-87
+- artist: lonnie-donegan
+  to: root:lead-belly
+  kind: influence
+  claim: Lead Belly’s repertoire was central to Lonnie Donegan’s musical formation.
+  claimRu: Репертуар Ледбелли занимал центральное место в музыкальном становлении Лонни Донегана.
+  sources:
+  - title: 'Library of Congress: Lead Belly — Introduction'
+    url: https://guides.loc.gov/leadbelly-folklife
+  - title: 'Document Records: Lonnie Donegan interview, page 2'
+    url: https://www.document-records.com/pdf/Lonnie%20Donegan%20Transcript%20Page%202%20PDF.pdf
+- artist: lonnie-donegan
+  to: root:lead-belly
+  kind: cover
+  claim: Lonnie Donegan learned “Rock Island Line” from Lead Belly’s recording.
+  claimRu: Лонни Донеган выучил «Rock Island Line» по записи Ледбелли.
+  what: '“Rock Island Line”: Donegan re-recorded the song from Lead Belly’s repertoire.'
+  whatRu: '«Rock Island Line»: Донеган заново записал песню из репертуара Ледбелли.'
+  sources:
+  - title: 'Library of Congress: Lead Belly — Introduction'
+    url: https://guides.loc.gov/leadbelly-folklife
+  - title: 'Document Records: Lonnie Donegan interview, page 2'
+    url: https://www.document-records.com/pdf/Lonnie%20Donegan%20Transcript%20Page%202%20PDF.pdf
+- artist: lou-reed
+  to: card:rhythm-and-blues
+  kind: influence
+  claim: Lou Reed began recording as a teenager in the doo-wop tradition.
+  claimRu: Лу Рид начал записываться ещё подростком, обратившись к традиции ду-вопа.
+  sources:
+  - title: 'New York Public Library: Lou Reed Papers — Early Lou Reed'
+    url: https://libguides.nypl.org/loureed
+  - title: 'Mark Paytress: Lou Reed interviewed — MOJO'
+    url: https://www.mojo4music.com/articles/stories/lou-reed-interviewed/
+- artist: lou-reed
+  to: root:ornette-coleman
+  kind: influence
+  claim: Ornette Coleman’s free jazz shaped Lou Reed’s approach to guitar in the Velvet Underground.
+  claimRu: Фри-джаз Орнетта Коулмана повлиял на подход Лу Рида к игре на гитаре в The Velvet Underground.
+  sources:
+  - title: 'Aidan Levy: The Velvet Underground & Nico — Library of Congress'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+  - title: 'Guitar World: Lou Reed — 1998 interview'
+    url: https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview
+- artist: madonna
+  to: root:sly-and-the-family-stone
+  claim: Madonna and Stephen Bray drew on Sly and the Family Stone’s funk for “Express Yourself”.
+  claimRu: Создавая «Express Yourself», Мадонна и Стивен Брей опирались на фанк Sly and the Family Stone.
+  sources:
+  - title: 'Vice: Like a Prayer was Madonna’s first masterpiece'
+    url: https://www.vice.com/en/article/like-a-prayer-was-madonnas-first-masterpiece/
+  - title: 'Attitude: Ten reasons Like a Prayer remains an all-time classic'
+    url: https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/
+  kind: influence
+- artist: marvin-gaye
+  to: card:gospel
+  kind: scene
+  claim: Marvin Gaye developed his singing as a child in his father’s church.
+  claimRu: Марвин Гэй развивал свой певческий дар ещё ребёнком в церкви отца.
+  sources:
+  - title: 'Marvin Gaye: official biography'
+    url: https://www.marvingaye.net/about/
+  - title: 'Record Mirror: This stubborn man called Marvin Gaye, January 4, 1964'
+    url: https://www.worldradiohistory.com/UK/Record-Mirror/60s/64/Record-Mirror-1964-01-04-S-OCR.pdf
+- artist: massive-attack
+  to: root:billy-cobham
+  kind: sample
+  claim: Massive Attack sampled Billy Cobham's 'Stratus' in 'Safe from Harm'.
+  claimRu: В «Safe from Harm» Massive Attack использовали сэмпл из «Stratus» Билли Кобэма.
+  what: Instrumental backing phrases from Billy Cobham's 1973 recording 'Stratus', looped in 'Safe from
+    Harm'.
+  whatRu: Фрагменты инструментального сопровождения из записи «Stratus» Билли Кобэма 1973 года, зацикленные
+    в «Safe from Harm».
+  sources:
+  - title: 'Hit Channel: Interview — Billy Cobham'
+    url: https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/
+  - title: 'Rolf Großmann: Xtended Sampling 1995–2026, in Un_Making Beats, p. 97'
+    url: https://www.uni-hildesheim.de/ojs/index.php/MMD/de/article/download/498/541
+- artist: metallica
+  to: root:black-sabbath
+  kind: influence
+  claim: Black Sabbath were a formative musical influence on Metallica’s James Hetfield.
+  claimRu: Black Sabbath сыграли важную роль в музыкальном становлении Джеймса Хэтфилда из Metallica.
+  sources:
+  - title: 'Blabbermouth: full Metallica speech inducting Black Sabbath'
+    url: https://blabbermouth.net/news/full-text-of-metallica-s-black-sabbath-induction-speech-available
+  - title: 'Metal Hammer: James Hetfield on Tony Iommi’s influence'
+    url: https://www.loudersound.com/news/metallica-james-hetfield-why-black-sabbath-tony-iommi-riff-lord-2026
+- artist: miles-davis
+  to: root:charlie-parker
+  kind: influence
+  claim: Playing alongside Charlie Parker helped shape the young Miles Davis’s musical voice.
+  claimRu: Игра рядом с Чарли Паркером помогла молодому Майлзу Дэвису выработать собственный музыкальный
+    голос.
+  sources:
+  - &id003
+    title: 'Blue Note Records: Miles Davis — biography'
+    url: https://www.bluenote.com/artist/miles-davis/
+  - title: 'American Jazz Museum: Bird, Diz, and Miles — The Making of Miles Davis'
+    url: https://americanjazzmuseum.org/exhibits-events/bird-diz-and-miles-the-making-of-miles-davis/
+- artist: miles-davis
+  to: card:jazz
+  kind: scene
+  claim: Miles Davis entered New York’s bebop scene in the mid-1940s.
+  claimRu: В середине 1940-х годов Майлз Дэвис вошёл в нью-йоркскую сцену бибопа.
+  sources:
+  - title: 'National Endowment for the Arts: Miles Davis'
+    url: https://www.arts.gov/honors/jazz/miles-davis
+  - *id003
+- artist: muddy-waters
+  to: root:son-house
+  kind: influence
+  claim: Muddy Waters learned from Son House’s Delta blues before developing his Chicago sound.
+  claimRu: Прежде чем создать своё чикагское звучание, Мадди Уотерс учился на дельта-блюзе Сона Хауса.
+  sources:
+  - title: 'Mississippi Blues Trail: Muddy Waters Birthplace'
+    url: https://msbluestrail.org/blues-trail-markers/muddy-waters-birthplace
+  - title: 'National Park Service: Muddy Waters'
+    url: https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm
+- artist: muddy-waters
+  to: card:blues
+  kind: scene
+  claim: Muddy Waters carried the Delta blues into the electric-band setting of Chicago.
+  claimRu: Мадди Уотерс перенёс дельта-блюз в звучание чикагского ансамбля с электрическими инструментами.
+  sources:
+  - title: 'Mississippi Encyclopedia: Blues'
+    url: https://mississippiencyclopedia.org/entries/blues/
+  - title: 'Marty Ostrow: Muddy Waters — Rock & Roll Hall of Fame induction essay (1987)'
+    url: https://www.rockhall.com/wp-content/uploads/2024/03/Muddy_Waters_1987.pdf
+- artist: nina-simone
+  to: card:jazz
+  kind: scene
+  claim: Nina Simone developed her early nightclub repertoire by combining jazz, blues and classical piano.
+  claimRu: В начале клубной карьеры Нина Симон строила свой репертуар на сочетании джаза, блюза и классического
+    фортепиано.
+  sources:
+  - title: 'Nina Simone: official biography'
+    url: https://www.ninasimone.com/biography/
+  - title: 'North Carolina Music Hall of Fame: Nina Simone'
+    url: https://northcarolinamusichalloffame.org/inductee-item/nina-simone/
+- artist: nirvana
+  to: root:lead-belly
+  kind: cover
+  claim: Nirvana closed MTV Unplugged with “Where Did You Sleep Last Night”, drawing on Lead Belly’s version
+    of the traditional song.
+  claimRu: Nirvana завершили MTV Unplugged песней «Where Did You Sleep Last Night», опираясь на версию
+    традиционной песни в исполнении Ледбелли.
+  what: '“Where Did You Sleep Last Night”: Nirvana’s MTV Unplugged performance draws on Lead Belly’s version
+    of the traditional song.'
+  whatRu: '«Where Did You Sleep Last Night»: исполнение Nirvana на MTV Unplugged опирается на версию традиционной
+    песни в исполнении Ледбелли.'
+  sources:
+  - title: 'David Browne: In the Room at Nirvana’s MTV Unplugged in New York (Rolling Stone)'
+    url: https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/
+  - title: 'Mike Powell: Nirvana — MTV Unplugged in New York (Pitchfork)'
+    url: https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/
+- artist: oasis
+  to: root:the-beatles
+  kind: influence
+  claim: Noel Gallagher modelled his songwriting on the Beatles.
+  claimRu: Ноэл Галлахер учился писать песни на примере The Beatles.
+  sources:
+  - title: 'Los Angeles Times: Oh, Brothers (1997 Noel Gallagher interview)'
+    url: https://www.latimes.com/archives/la-xpm-1997-aug-17-ca-23103-story.html
+  - title: 'Joe Bosso: Noel Gallagher — classic MusicRadar interview'
+    url: https://www.musicradar.com/news/noel-gallagher-high-flying-birds-guitar-interview
+- artist: ornette-coleman
+  to: card:rhythm-and-blues
+  kind: scene
+  claim: Ornette Coleman gained his earliest performing experience in rhythm-and-blues bands.
+  claimRu: Первый сценический опыт Орнетт Коулман получил в ритм-н-блюзовых ансамблях.
+  sources:
+  - &id004
+    title: 'National Endowment for the Arts: Ornette Coleman'
+    url: https://www.arts.gov/honors/jazz/ornette-coleman
+  - &id005
+    title: 'Dave Oliphant: Ornette Coleman — Texas State Historical Association'
+    url: https://www.tshaonline.org/handbook/entries/coleman-ornette
+- artist: ornette-coleman
+  to: card:jazz
+  kind: influence
+  claim: Ornette Coleman developed a jazz approach that freed improvisation from fixed chord progressions.
+  claimRu: Орнетт Коулман выработал подход к джазу, освобождавший импровизацию от заданной последовательности
+    аккордов.
+  sources:
+  - *id004
+  - *id005
+- artist: otis-redding
+  to: card:gospel
+  kind: influence
+  claim: Otis Redding’s musical upbringing was rooted in singing in church.
+  claimRu: Музыкальное воспитание Отиса Реддинга началось с церковного пения.
+  sources:
+  - title: 'New Georgia Encyclopedia: Otis Redding'
+    url: https://www.georgiaencyclopedia.org/articles/arts-culture/otis-redding-1941-1967
+  - title: 'Thaddeus Russell: Otis Redding (American National Biography)'
+    url: https://academic.oup.com/american-national-biography/reference/63042/reference-article-abstract/570547002
+- artist: paul-simon
+  to: root:jimmy-cliff
+  kind: scene
+  claim: Paul Simon recorded 'Mother and Child Reunion' in Jamaica with musicians who had backed Jimmy
+    Cliff.
+  claimRu: Пол Саймон записал «Mother and Child Reunion» на Ямайке с музыкантами, которые аккомпанировали
+    Джимми Клиффу.
+  sources:
+  - title: 'Jamaica Observer: Simon’s reggae classics get new life'
+    url: https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/
+  - title: 'NPO Radio 2: Mother & Child Reunion — Paul Simon'
+    url: https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion
+- artist: peter-gabriel
+  to: root:otis-redding
+  kind: influence
+  claim: Peter Gabriel made 'Sledgehammer' as a tribute to the soul music of Otis Redding.
+  claimRu: Питер Гэбриел создал «Sledgehammer» как дань соулу Отиса Реддинга.
+  sources:
+  - title: 'Peter Gabriel: Sledgehammer'
+    url: https://petergabriel.com/release/sledgehammer/
+  - title: 'Sound On Sound: Peter Gabriel — Behind The Mask (January 1987)'
+    url: https://www.muzines.co.uk/articles/peter-gabriel-behind-the-mask/1494
+- artist: radiohead
+  to: root:charles-mingus
+  kind: influence
+  claim: Radiohead drew on Charles Mingus's jazz for 'Pyramid Song'.
+  claimRu: Создавая «Pyramid Song», Radiohead опирались на джаз Чарльза Мингуса.
+  sources:
+  - title: 'Prog: Radiohead’s proggiest moments'
+    url: https://www.loudersound.com/features/radioheads-proggiest-moments
+  - title: 'The Irish Times: Taking music to strange places'
+    url: https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388
+- artist: rakim
+  to: root:john-coltrane
+  kind: influence
+  claim: Rakim modelled the rhythms of his rhymes on John Coltrane’s saxophone playing.
+  claimRu: Раким строил ритм своих рифм по образцу саксофонной игры Джона Колтрейна.
+  sources:
+  - title: 'NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public'
+    url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
+  - title: 'Westword: Q&A with Rakim'
+    url: https://www.westword.com/music/qanda-with-rakim-5676480/
+- artist: rakim
+  to: card:hip-hop
+  kind: scene
+  claim: Rakim expanded hip-hop’s rhyme patterns with intricate internal rhymes.
+  claimRu: Раким усложнил рифмовку в хип-хопе, развивая замысловатые внутренние рифмы.
+  sources:
+  - title: 'NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public'
+    url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
+  - title: 'GRUNGECAKE: Eminem’s Apple Music interview on Rakim'
+    url: https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon
+- artist: ray-charles
+  to: card:gospel
+  kind: influence
+  claim: Ray Charles fused gospel expression with rhythm and blues on “I Got a Woman”.
+  claimRu: В «I Got a Woman» Рэй Чарльз соединил выразительность госпела с ритм-н-блюзом.
+  sources:
+  - title: 'Blue Note Records: Ray Charles biography'
+    url: https://www.bluenote.com/artist/ray-charles/
+  - title: 'Rhino: Single Stories — I Got a Woman'
+    url: https://www.rhino.com/article/single-stories-ray-charles-i-got-a-woman
+- artist: red-hot-chili-peppers
+  to: root:stevie-wonder
+  claim: Red Hot Chili Peppers recorded a cover of Stevie Wonder's 'Higher Ground'.
+  claimRu: Red Hot Chili Peppers записали кавер на «Higher Ground» Стиви Уандера.
+  sources:
+  - title: 'Rolling Stone: Red Hot Chili Peppers on 25 Years of Mother’s Milk'
+    url: https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/
+  - title: 'Guitar World: Flea’s bittersweet hip-hop recording experience'
+    url: https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move
+  kind: cover
+  what: Stevie Wonder’s “Higher Ground”, newly performed on Mother’s Milk.
+  whatRu: Песня Стиви Уандера «Higher Ground» в новом исполнении на «Mother’s Milk».
+- artist: red-hot-chili-peppers
+  to: root:james-brown
+  kind: influence
+  claim: James Brown’s funk was one of Red Hot Chili Peppers’ musical influences.
+  claimRu: Фанк Джеймса Брауна был одним из музыкальных ориентиров Red Hot Chili Peppers.
+  sources:
+  - title: 'Rock & Roll Hall of Fame: Red Hot Chili Peppers — Influences'
+    url: https://rockhall.com/inductees/red-hot-chili-peppers/
+  - title: 'Rolling Stone: Chad Smith on Mother’s Milk'
+    url: https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/
+- artist: robert-johnson
+  to: root:son-house
+  kind: influence
+  claim: Son House was one of the Delta musicians Robert Johnson took as models while developing his blues.
+  claimRu: Сон Хаус был одним из музыкантов дельты Миссисипи, на которых равнялся Роберт Джонсон, создавая
+    свой блюз.
+  sources:
+  - title: 'Library of Congress: The Complete Recordings — Robert Johnson'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf
+  - title: 'Mississippi Encyclopedia: Robert Johnson'
+    url: https://mississippiencyclopedia.org/entries/robert-johnson/
+- artist: robert-johnson
+  to: card:blues
+  kind: scene
+  claim: Robert Johnson developed his music among the blues musicians of the Mississippi Delta.
+  claimRu: Музыка Роберта Джонсона складывалась в среде блюзовых исполнителей дельты Миссисипи.
+  sources:
+  - title: 'Library of Congress: The Complete Recordings — Robert Johnson'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf
+  - title: 'Mississippi Encyclopedia: Robert Johnson'
+    url: https://mississippiencyclopedia.org/entries/robert-johnson/
+- artist: sly-and-the-family-stone
+  to: card:gospel
+  kind: scene
+  claim: Before the Family Stone, Sly and his siblings sang and recorded gospel as the Stewart Four.
+  claimRu: До Family Stone Слай и его братья и сёстры пели и записывали госпел под именем Stewart Four.
+  sources:
+  - title: 'Sly and the Family Stone: official biography'
+    url: https://slyandthefamilystone.com/bio/
+  - title: 'Wax Poetics: Cynthia Robinson and the Family Stone'
+    url: https://magazine.waxpoetics.com/article/cynthia-robinson-family-affair/
+- artist: son-house
+  to: card:blues
+  kind: scene
+  claim: Son House developed his guitar playing within the Mississippi Delta’s blues community.
+  claimRu: Сон Хаус выработал свою гитарную манеру в блюзовой среде дельты Миссисипи.
+  sources:
+  - title: 'National Park Service: Son House'
+    url: https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm
+  - title: 'Mississippi Encyclopedia: Blues'
+    url: https://mississippiencyclopedia.org/entries/blues/
+- artist: stevie-wonder
+  to: root:ray-charles
+  kind: influence
+  claim: Ray Charles’s rhythm and blues was an early influence on Stevie Wonder.
+  claimRu: Ритм-н-блюз Рэя Чарльза повлиял на Стиви Уандера ещё в детстве.
+  sources:
+  - title: 'WERS: The Vault of Soul — Stevie Wonder'
+    url: https://wers.org/the-vault-of-soul-stevie-wonder/
+  - title: 'University Musical Society: From Cass Corridor to the World, Winter 2013'
+    url: https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf
+- artist: stevie-wonder
+  to: card:gospel
+  kind: scene
+  claim: Stevie Wonder’s childhood church choir singing helped form his musical background.
+  claimRu: Пение в церковном хоре в детстве стало частью музыкального воспитания Стиви Уандера.
+  sources:
+  - title: 'University Musical Society: From Cass Corridor to the World, Winter 2013'
+    url: https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf
+  - title: 'WERS: The Vault of Soul — Stevie Wonder'
+    url: https://wers.org/the-vault-of-soul-stevie-wonder/
+- artist: talking-heads
+  to: root:fela-kuti
+  kind: influence
+  claim: Talking Heads drew on Fela Kuti's Afrobeat when making Remain in Light.
+  claimRu: Работая над Remain in Light, Talking Heads опирались на афробит Фелы Кути.
+  sources:
+  - title: 'Library of Congress: Remain in Light — Talking Heads'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf
+  - title: 'Pitchfork: Talking Heads — Remain in Light'
+    url: https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/
+- artist: taylor-swift
+  to: root:earth-wind-and-fire
+  claim: Taylor Swift recorded a cover of Earth, Wind & Fire’s “September”.
+  claimRu: Тейлор Свифт записала кавер на «September» группы Earth, Wind & Fire.
+  sources:
+  - title: 'NPR / WBGO: Taylor Swift Covers Earth, Wind & Fire’s September'
+    url: https://www.wbgo.org/2018-04-13/you-know-what-fine-taylor-swift-covers-earth-wind-fires-september
+  - title: 'Library of Congress: Rickey Vincent on September'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf
+  kind: cover
+  what: Earth, Wind & Fire’s “September”, newly performed by Swift.
+  whatRu: Песня Earth, Wind & Fire «September» в новом исполнении Свифт.
+- artist: television
+  to: root:the-velvet-underground
+  kind: influence
+  claim: The Velvet Underground were an early influence on Television guitarist Tom Verlaine.
+  claimRu: The Velvet Underground повлияли на Тома Верлена, гитариста Television, ещё в начале его пути.
+  sources:
+  - title: 'Guitar World: A lesson in Tom Verlaine’s guitar style'
+    url: https://www.guitarworld.com/lessons/tom-verlaine-television-style
+  - title: 'Will Hermes: Love Goes to Buildings on Fire — publisher excerpt'
+    url: https://us.macmillan.com/books/9780374533540/lovegoestobuildingsonfire/
+- artist: television
+  to: root:john-coltrane
+  kind: influence
+  claim: John Coltrane was a formative influence on Tom Verlaine as a teenage saxophonist.
+  claimRu: Джон Колтрейн повлиял на музыкальное становление Тома Верлена, ещё подростком игравшего на
+    саксофоне.
+  sources:
+  - title: 'Guitar World: The songs that made Tom Verlaine take the guitar seriously — recalling his 1981
+      interview'
+    url: https://www.guitarworld.com/artists/guitarists/the-songs-that-made-tom-verlaine-take-the-guitar-seriously
+  - title: 'Will Hermes: Love Goes to Buildings on Fire — publisher excerpt'
+    url: https://us.macmillan.com/books/9780374533540/lovegoestobuildingsonfire/
+- artist: television
+  to: root:albert-ayler
+  kind: influence
+  claim: As a teenage saxophonist, Television’s Tom Verlaine immersed himself in Albert Ayler’s music.
+  claimRu: Ещё подростком играя на саксофоне, будущий лидер Television Том Верлен увлёкся музыкой Альберта
+    Эйлера.
+  sources:
+  - title: 'Patti Smith: He Was Tom Verlaine — The New Yorker'
+    url: https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine
+  - title: 'Will Hermes: Love Goes to Buildings on Fire — publisher excerpt'
+    url: https://us.macmillan.com/books/9780374533540/lovegoestobuildingsonfire/
+- artist: the-beatles
+  to: root:little-richard
+  kind: influence
+  claim: Little Richard’s songs were part of the repertoire through which the Beatles developed as a live
+    band.
+  claimRu: Песни Литл Ричарда входили в репертуар, на котором The Beatles учились играть перед публикой.
+  sources:
+  - title: 'The Beatles Story: The Beatles and Black Music'
+    url: https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en
+  - title: 'Polar Music Prize: Paul McCartney'
+    url: https://www.polarmusicprize.org/laureates/paul-mccartney/
+- artist: the-beatles
+  to: root:chuck-berry
+  kind: influence
+  claim: Chuck Berry’s songs were a foundation of the Beatles’ early performing repertoire.
+  claimRu: Песни Чака Берри составляли одну из основ раннего концертного репертуара The Beatles.
+  sources:
+  - title: 'The Beatles Story: The Beatles and Black Music'
+    url: https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en
+  - title: 'Polar Music Prize: Paul McCartney'
+    url: https://www.polarmusicprize.org/laureates/paul-mccartney/
+- artist: the-clash
+  to: root:junior-murvin
+  kind: cover
+  claim: The Clash recorded a cover of Junior Murvin’s reggae song “Police and Thieves”.
+  claimRu: The Clash записали свою версию регги-песни Джуниора Мёрвина «Police and Thieves».
+  what: Junior Murvin's 'Police and Thieves', covered on the Clash's debut album.
+  whatRu: «Police and Thieves» Джуниора Мёрвина в версии с дебютного альбома The Clash.
+  sources:
+  - title: 'The Clash: The Clash — official album notes'
+    url: https://www.theclash.com/music/the-clash
+  - title: 'Pitchfork: R.I.P. Reggae Singer Junior Murvin'
+    url: https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/
+- artist: the-clash
+  to: root:lee-scratch-perry
+  kind: producer
+  claim: Lee “Scratch” Perry produced the Clash’s “Complete Control”.
+  claimRu: Ли «Скрэтч» Перри продюсировал «Complete Control» группы The Clash.
+  sources:
+  - title: 'The Clash: Complete Control — official single notes'
+    url: https://www.theclash.com/music/complete-control
+  - title: 'Danny Kelly: Lee Perry interview (NME, archived by Uncarved)'
+    url: https://uncarved.org/dub/scratch.html
+- artist: the-police
+  to: root:bob-marley
+  kind: influence
+  claim: The Police drew on Bob Marley’s reggae when developing their bass-led grooves.
+  claimRu: Вырабатывая грувы с ведущей ролью баса, The Police опирались на регги Боба Марли.
+  sources:
+  - title: 'Mark Spicer: Reggatta de Blanc — Analyzing Style in the Music of the Police'
+    url: https://www.academia.edu/5120856/_Reggatta_de_Blanc_Analyzing_Style_in_the_Music_of_the_Police
+  - title: 'Jon Wiederhorn: Andy Summers interview (FretBuzz)'
+    url: https://fretbuzz.co/andy-summers-provides-a-candid-viewfinder-glimpse-at-his-life-as-a-guitarist/
+- artist: the-prodigy
+  to: root:ultramagnetic-mcs
+  kind: sample
+  claim: The Prodigy's 'Smack My Bitch Up' samples 'Give the Drummer Some' by Ultramagnetic MCs.
+  claimRu: В «Smack My Bitch Up» The Prodigy звучит сэмпл из «Give the Drummer Some» группы Ultramagnetic
+    MCs.
+  what: Kool Keith's vocal phrase from Ultramagnetic MCs' 'Give the Drummer Some', looped as the hook
+    of 'Smack My Bitch Up'.
+  whatRu: Вокальная фраза Кула Кита из «Give the Drummer Some» группы Ultramagnetic MCs, зацикленная как
+    главная вокальная фраза «Smack My Bitch Up».
+  sources:
+  - title: 'MusicTech: Landmark Productions — The Prodigy, The Fat of the Land'
+    url: https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/
+  - title: 'Justin Morey: Copyright Management and its Effect on the Sampling Practice of UK Dance Music
+      Producers'
+    url: https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf
+- artist: the-rolling-stones
+  to: root:muddy-waters
+  kind: influence
+  claim: Muddy Waters was one of the blues models around whom the young Rolling Stones formed their musical
+    identity.
+  claimRu: Мадди Уотерс был одним из блюзовых музыкантов, на которых равнялись молодые The Rolling Stones,
+    вырабатывая своё звучание.
+  sources:
+  - title: 'Chicago Sun-Times: Mick Jagger and Keith Richards on Chicago blues'
+    url: https://chicago.suntimes.com/2017/4/13/18381179/mick-jagger-keith-richards-chat-chicago-blues-exhibitionism
+  - title: 'uDiscover Music: Blues That Influenced the Rolling Stones'
+    url: https://www.udiscovermusic.com/stories/songs-that-influenced-the-rolling-stones/
+- artist: the-velvet-underground
+  to: root:lou-reed
+  kind: member
+  claim: Singer, guitarist and songwriter Lou Reed was a founding member of the Velvet Underground.
+  claimRu: Певец, гитарист и автор песен Лу Рид был одним из основателей The Velvet Underground.
+  sources:
+  - title: 'Aidan Levy: The Velvet Underground & Nico — Library of Congress'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+  - title: 'Guitar World: Lou Reed — 1998 interview'
+    url: https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview
+- artist: the-white-stripes
+  to: root:son-house
+  kind: influence
+  claim: Son House’s stark singing and playing became a guiding model for the White Stripes’ Jack White.
+  claimRu: Суровое, скупое пение и игра Сона Хауса стали ориентиром для Джека Уайта из The White Stripes.
+  sources:
+  - title: 'The New Yorker: Jack White’s Infinite Imagination'
+    url: https://www.newyorker.com/magazine/2017/03/13/jack-whites-infinite-imagination
+  - title: 'Classic Rock: How Jack White brought Son House to a new generation'
+    url: https://www.loudersound.com/features/jack-white-son-house
+- artist: ultramagnetic-mcs
+  to: card:hip-hop
+  kind: scene
+  claim: Ultramagnetic MCs grew out of Bronx DJ culture, with Ced Gee moving from DJing into rap and sample-based
+    production.
+  claimRu: 'Ultramagnetic MCs выросли из диджейской культуры Бронкса: Сед Джи перешёл от диджеинга к рэпу
+    и продюсированию на основе сэмплов.'
+  sources:
+  - title: 'SPIN: When Hip Hop Went Ultra — Ced Gee and Kool Keith interview'
+    url: https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/
+  - title: 'Ced Gee: Official biography'
+    url: https://www.cedgee.com/about/
+- artist: van-morrison
+  to: root:lead-belly
+  kind: influence
+  claim: Lead Belly was an enduring musical inspiration for Van Morrison.
+  claimRu: Ледбелли оставался для Вана Моррисона источником музыкального вдохновения.
+  sources:
+  - title: 'The Guardian: Van Morrison on Lead Belly (2015 interview)'
+    url: https://www.theguardian.com/music/2015/jun/04/van-morrison-people-who-say-others-difficult-are-difficult-themselves-lead-belly-lonnie-donegan
+  - title: 'Country Music Hall of Fame: Lead Belly — Musical Bridge Builder'
+    url: https://cmhof.imgix.net/content/uploads/2019/05/WM-3-6-Lead-Belly-Bio.pdf

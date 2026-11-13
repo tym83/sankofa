@@ -1,0 +1,20 @@
+id: "dr-dre"
+name: "Dr. Dre"
+nameRu: "Доктор Дре"
+aliases: ["доктор дре", "доктор дрэ", "андре янг"]
+years: [1965]
+place: {"name": "Compton, California", "lat": 33.8958, "lon": -118.2201}
+genre: "Hip-hop and G-funk"
+genreRu: "хип-хоп и джи-фанк"
+story: "Parliament-Funkadelic’s grooves were a model for The Chronic. Dr. Dre reshaped that funk into G-funk."
+storyRu: "Грувы Parliament-Funkadelic послужили образцом для «The Chronic». Доктор Дре переработал этот фанк в джи-фанк."
+links:
+  - to: "card:funk"
+    kind: "influence"
+    claim: "Dr. Dre built the G-funk sound of The Chronic around Parliament-Funkadelic’s grooves."
+    claimRu: "Доктор Дре построил джи-фанковое звучание «The Chronic» на грувах Parliament-Funkadelic."
+    sources:
+      - title: "Library of Congress: Rashad Grove — The Chronic"
+        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf"
+      - title: "Pitchfork: Sheldon Pearce — The Chronic"
+        url: "https://pitchfork.com/reviews/albums/dr-dre-the-chronic/"

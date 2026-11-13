@@ -1,0 +1,38 @@
+---
+id: stevie-wonder
+name: Stevie Wonder
+nameRu: Стиви Уандер
+aliases:
+- стиви уандер
+years:
+- 1950
+place:
+  name: Saginaw, Michigan
+  lat: 43.4195
+  lon: -83.9508
+genre: Soul and funk
+genreRu: соул и фанк
+links:
+- to: root:ray-charles
+  kind: influence
+  claim: Ray Charles’s rhythm and blues was an early influence on Stevie Wonder.
+  claimRu: Ритм-н-блюз Рэя Чарльза повлиял на Стиви Уандера ещё в детстве.
+  sources:
+  - title: 'WERS: The Vault of Soul — Stevie Wonder'
+    url: https://wers.org/the-vault-of-soul-stevie-wonder/
+  - title: 'University Musical Society: From Cass Corridor to the World, Winter 2013'
+    url: https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf
+- to: card:gospel
+  kind: scene
+  claim: Stevie Wonder’s childhood church choir singing helped form his musical background.
+  claimRu: Пение в церковном хоре в детстве стало частью музыкального воспитания Стиви
+    Уандера.
+  sources:
+  - title: 'University Musical Society: From Cass Corridor to the World, Winter 2013'
+    url: https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf
+  - title: 'WERS: The Vault of Soul — Stevie Wonder'
+    url: https://wers.org/the-vault-of-soul-stevie-wonder/
+story: Stevie Wonder’s musical background included singing in a church choir as a
+  child. Ray Charles’s rhythm and blues was another early influence.
+storyRu: В детстве Стиви Уандер пел в церковном хоре. Другим ранним влиянием стал
+  ритм-н-блюз Рэя Чарльза.

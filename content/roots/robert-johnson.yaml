@@ -1,0 +1,29 @@
+id: "robert-johnson"
+name: "Robert Johnson"
+nameRu: "Роберт Джонсон"
+aliases: ["роберт джонсон"]
+years: [1911, 1938]
+place: {"name": "Hazlehurst, Mississippi", "lat": 31.8604, "lon": -90.3959}
+genre: "Delta blues"
+genreRu: "дельта-блюз"
+links:
+  - to: "root:son-house"
+    kind: "influence"
+    claim: "Son House was one of the Delta musicians Robert Johnson took as models while developing his blues."
+    claimRu: "Сон Хаус был одним из музыкантов дельты Миссисипи, на которых равнялся Роберт Джонсон, создавая свой блюз."
+    sources:
+      - title: "Library of Congress: The Complete Recordings — Robert Johnson"
+        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf"
+      - title: "Mississippi Encyclopedia: Robert Johnson"
+        url: "https://mississippiencyclopedia.org/entries/robert-johnson/"
+  - to: "card:blues"
+    kind: "scene"
+    claim: "Robert Johnson developed his music among the blues musicians of the Mississippi Delta."
+    claimRu: "Музыка Роберта Джонсона складывалась в среде блюзовых исполнителей дельты Миссисипи."
+    sources:
+      - title: "Library of Congress: The Complete Recordings — Robert Johnson"
+        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf"
+      - title: "Mississippi Encyclopedia: Robert Johnson"
+        url: "https://mississippiencyclopedia.org/entries/robert-johnson/"
+story: "Robert Johnson developed his music among Mississippi Delta blues musicians. Son House was one of the models he followed."
+storyRu: "Музыка Роберта Джонсона складывалась в блюзовой среде дельты Миссисипи. Одним из его образцов был Сон Хаус."

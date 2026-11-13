@@ -1,4 +1,4 @@
-id: the-white-stripes
+id: "the-white-stripes"
 name: "The White Stripes"
 aliases: ["уайт страйпс", "вайт страйпс", "джек уайт"]
 years: [1997]
@@ -6,7 +6,7 @@ place: {"name": "Detroit", "lat": 42.3314, "lon": -83.0458}
 genre: "Garage rock and blues rock"
 genreRu: "гаражный рок и блюз-рок"
 links:
-  - to: card:blues
+  - to: "card:blues"
     claim: "The White Stripes covered Son House's 'Death Letter'."
     claimRu: "The White Stripes исполняли «Death Letter» Сона Хауса."
     sources:
@@ -14,3 +14,17 @@ links:
         url: "https://au.rollingstone.com/music/music-news/white-stripes-death-letter-2000-12901/"
       - title: "The Guardian: The White Stripes bring the blues back to rock"
         url: "https://www.theguardian.com/music/2011/jun/12/white-stripes-blues-rock"
+    kind: "cover"
+    what: "“Death Letter”: the White Stripes’ own performance of Son House’s song."
+    whatRu: "«Death Letter»: собственное исполнение песни Сона Хауса группой The White Stripes."
+  - to: "root:son-house"
+    kind: "influence"
+    claim: "Son House’s stark singing and playing became a guiding model for the White Stripes’ Jack White."
+    claimRu: "Суровое, скупое пение и игра Сона Хауса стали ориентиром для Джека Уайта из The White Stripes."
+    sources:
+      - title: "The New Yorker: Jack White’s Infinite Imagination"
+        url: "https://www.newyorker.com/magazine/2017/03/13/jack-whites-infinite-imagination"
+      - title: "Classic Rock: How Jack White brought Son House to a new generation"
+        url: "https://www.loudersound.com/features/jack-white-son-house"
+story: "Son House’s stark expression became a guiding model for Jack White. The White Stripes also took up his repertoire, recording “Death Letter”."
+storyRu: "Суровая выразительность Сона Хауса стала ориентиром для Джека Уайта. The White Stripes обратились и к его репертуару, записав «Death Letter»."

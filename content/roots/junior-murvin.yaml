@@ -1,0 +1,29 @@
+id: "junior-murvin"
+name: "Junior Murvin"
+nameRu: "Джуниор Мёрвин"
+aliases: ["джуниор мёрвин", "джуниор мервин"]
+years: [1946, 2013]
+place: {"name": "Saint James, Jamaica", "lat": 18.382, "lon": -77.872}
+genre: "Reggae"
+genreRu: "регги"
+story: "Junior Murvin’s “Police and Thieves” came out of Jamaica’s reggae studios. Lee “Scratch” Perry produced the song that brought him wider recognition."
+storyRu: "«Police and Thieves» Джуниора Мёрвина выросла из ямайской студийной сцены регги. Продюсером песни, принёсшей ему известность, стал Ли «Скрэтч» Перри."
+links:
+  - to: "root:lee-scratch-perry"
+    kind: "producer"
+    claim: "Lee “Scratch” Perry produced Junior Murvin’s breakthrough “Police and Thieves”."
+    claimRu: "Ли «Скрэтч» Перри продюсировал «Police and Thieves» — песню, принёсшую Джуниору Мёрвину известность."
+    sources:
+      - title: "Pitchfork: R.I.P. Reggae Singer Junior Murvin"
+        url: "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
+      - title: "Rebelbase: Junior Murvin interview, October 2004"
+        url: "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+  - to: "card:reggae"
+    kind: "scene"
+    claim: "Junior Murvin’s “Police and Thieves” emerged from Jamaica’s reggae recording scene."
+    claimRu: "«Police and Thieves» Джуниора Мёрвина выросла из ямайской сцены звукозаписи регги."
+    sources:
+      - title: "Pitchfork: R.I.P. Reggae Singer Junior Murvin"
+        url: "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
+      - title: "Rebelbase: Junior Murvin interview, October 2004"
+        url: "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"

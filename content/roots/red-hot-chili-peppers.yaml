@@ -1,16 +1,40 @@
+---
 id: red-hot-chili-peppers
-name: "Red Hot Chili Peppers"
-aliases: ["ред хот чили пепперс", "рэд хот чили пепперс", "RHCP"]
-years: [1983]
-place: {"name": "Los Angeles", "lat": 34.0522, "lon": -118.2437}
-genre: "Funk rock"
-genreRu: "фанк-рок"
+name: Red Hot Chili Peppers
+aliases:
+- ред хот чили пепперс
+- рэд хот чили пепперс
+- RHCP
+years:
+- 1983
+place:
+  name: Los Angeles
+  lat: 34.0522
+  lon: -118.2437
+genre: Funk rock
+genreRu: фанк-рок
 links:
-  - to: card:funk
-    claim: "Red Hot Chili Peppers recorded a cover of Stevie Wonder's 'Higher Ground'."
-    claimRu: "Red Hot Chili Peppers записали кавер на «Higher Ground» Стиви Уандера."
-    sources:
-      - title: "Rolling Stone: Red Hot Chili Peppers on 25 Years of Mother’s Milk"
-        url: "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/"
-      - title: "Guitar World: Flea’s bittersweet hip-hop recording experience"
-        url: "https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move"
+- to: card:funk
+  claim: Red Hot Chili Peppers recorded a cover of Stevie Wonder's 'Higher Ground'.
+  claimRu: Red Hot Chili Peppers записали кавер на «Higher Ground» Стиви Уандера.
+  sources:
+  - title: 'Rolling Stone: Red Hot Chili Peppers on 25 Years of Mother’s Milk'
+    url: https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/
+  - title: 'Guitar World: Flea’s bittersweet hip-hop recording experience'
+    url: https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move
+  kind: cover
+  what: Stevie Wonder’s “Higher Ground”, newly performed on Mother’s Milk.
+  whatRu: Песня Стиви Уандера «Higher Ground» в новом исполнении на «Mother’s Milk».
+- to: root:james-brown
+  kind: influence
+  claim: James Brown’s funk was one of Red Hot Chili Peppers’ musical influences.
+  claimRu: Фанк Джеймса Брауна был одним из музыкальных ориентиров Red Hot Chili Peppers.
+  sources:
+  - title: 'Rock & Roll Hall of Fame: Red Hot Chili Peppers — Influences'
+    url: https://rockhall.com/inductees/red-hot-chili-peppers/
+  - title: 'Rolling Stone: Chad Smith on Mother’s Milk'
+    url: https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/
+story: James Brown’s funk was one of Red Hot Chili Peppers’ musical influences. Their
+  recorded repertoire also includes Stevie Wonder’s “Higher Ground”.
+storyRu: Фанк Джеймса Брауна был одним из музыкальных ориентиров Red Hot Chili Peppers.
+  В их записанный репертуар вошла и «Higher Ground» Стиви Уандера.
