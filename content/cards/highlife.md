@@ -24,15 +24,13 @@ sources:
   - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg"}
   - {title: "MyJoyOnline: Legend of the week, E. T. Mensah (Tempos grew out of a 1947 group)", url: "https://www.myjoyonline.com/legend-of-the-week-e-t-mensah/"}
   - {title: "The Native: Native Roots, Highlife (Benson introduced to highlife by Mensah 1954; brass arrangements inspired a young Fela)", url: "https://thenativemag.com/native-roots-highlife/"}
+  - {title: "John Collins (University of Ghana) via MyJoyOnline: Highlife music dates as far back as the 19th century (regimental bands at Cape Coast and Elmina, adaha brass bands)", url: "https://www.myjoyonline.com/highlife-music-dates-as-far-back-as-19th-century-prof-collins/"}
+  - {title: "Songlines: Fela Kuti, a beginner's guide (Koola Lobitos, a mix of highlife and jazz)", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
 media:
   - {"type": "image", "file": "highlife.jpg", "caption": "Invitation to E. T. Mensah's performance with Louis Armstrong, May 1956", "credit": "E. T. Mensah's Paramount / David Hagen, Georgetown University Library; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg"}
 ---
-Highlife was named by people who could not get in. By the 1920s orchestras
-played for the elite in Accra's clubs, and the onlookers outside called it
-the "high life". In the Gold Coast, brass bands, sailors' palm-wine guitar
-and ballroom orchestras met; "Yaa Amponsah" by Jacob Sam and his Kumasi
-Trio is often heard as the music's prototype. After the war E. T. Mensah
-took it out of the ballroom with a small swing-style band, the Tempos.
-Their tours lit up Nigeria, Bobby Benson's brass sound followed in Lagos,
-and Victor Olaiya became a star. Compare [[jazz]], [[afrobeat]] and the
-palm wine of [[tutuola]].
+Highlife is the dance music of Ghana's coast. It comes in two forms: dance-band highlife, played by orchestras of horns, saxophones and trumpets, and guitar-band highlife, small groups built around guitars and songs that tell stories. It grew up in the port towns of the Gold Coast, Cape Coast and Accra among them, where local brass bands schooled on colonial military music, sailors' palm-wine guitar and local rhythms met the ballroom.
+
+Highlife was named by people who could not get in. By the 1920s orchestras played for the elite in Accra's clubs, and the onlookers outside called it the "high life". "Yaa Amponsah" by Jacob Sam and his Kumasi Trio is often heard as the music's prototype. After the war E. T. Mensah took it out of the ballroom with a small swing-style band, the Tempos. Their tours lit up Nigeria, Bobby Benson's brass sound followed in Lagos, and Victor Olaiya became a star.
+
+It fed what came next: Fela Kuti began in highlife before he built [[afrobeat]], and in Ghana rappers later laid hip-hop over highlife melodies as hiplife. Compare [[jazz]] and the palm wine of [[tutuola]].

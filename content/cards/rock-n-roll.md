@@ -26,7 +26,28 @@ sources:
   - {title: "Rock & Roll Hall of Fame: Fats Domino", url: "https://www.rockhall.com/inductees/fats-domino"}
   - {title: "uDiscover Music: Little Richard", url: "https://www.udiscovermusic.com/artists/little-richard"}
   - {title: "American Songwriter: Pat Boone covered Little Richard (Boone on covers of Black R&B hits)", url: "https://americansongwriter.com/remember-when-pat-boone-covered-this-early-little-richard-hit-in-1956/"}
+  - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll"}
+  - {title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rhythm and Blues (rock and roll originally a euphemism for sex, synonymous with R&B)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+  - {title: "64 Parishes (Louisiana Endowment for the Humanities): Fats Domino (1956 quote)", url: "https://64parishes.org/entry/fats-domino"}
 media:
   - {type: "image", file: "rock-n-roll.jpg", caption: "Chuck Berry, publicity photograph, 1957", credit: "Universal Attractions (management)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Chuck_Berry_1957.jpg"}
 ---
-The record often called the first rock and roll single was credited to the singer, not the band. In March 1951 Ike Turner's Kings of Rhythm cut "Rocket 88", a song about an Oldsmobile, at Sam Phillips's studio in Memphis, and it was issued under singer Jackie Brenston's name. Whether it really was the first is debated. That same year in Cleveland the DJ Alan Freed began playing rhythm and blues and calling it rock and roll. Fats Domino came up from New Orleans, and labels aimed separate versions at white buyers. Under it all lay the [[blues]], [[gospel]], [[rhythm-and-blues]], [[rosetta-tharpe]]'s guitar and [[big-mama-thornton]]'s "Hound Dog".
+Rock and roll was rhythm and blues under a new name. In the early 1950s young
+white listeners found the records of Black musicians, and the music was sold
+to Black and white teenagers alike; the phrase itself was old blues slang for
+sex. "What they call rock 'n' roll is rhythm and blues," said Fats Domino. It
+ran on an aggressive beat and loud electric guitar, with saxophone solos and
+pounding piano.
+
+The record often called the first rock and roll single was credited to the
+singer, not the band. In March 1951 Ike Turner's Kings of Rhythm cut "Rocket
+88", a song about an Oldsmobile, at Sam Phillips's studio in Memphis: Turner's
+piano, two tenor saxophones, drums and a guitar that buzzed, the story goes,
+because its amplifier had fallen off the car on the way. It was issued under
+singer Jackie Brenston's name. Whether it really was the first is debated.
+That same year in Cleveland the DJ Alan Freed began playing rhythm and blues
+and calling it rock and roll. Fats Domino came up from New Orleans, and labels
+aimed separate versions at white buyers.
+
+Under it all lay the [[blues]], [[gospel]], [[rhythm-and-blues]],
+[[rosetta-tharpe]]'s guitar and [[big-mama-thornton]]'s "Hound Dog".

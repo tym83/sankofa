@@ -26,7 +26,10 @@ sources:
   - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Buddy_Bolden_001.png"}
   - {title: "American Heritage, John McDonough: The Diamond Jubilee of Jazz (1992)", url: "https://www.americanheritage.com/diamond-jubilee-jazz"}
   - {title: "Encyclopedia.com: Louis Armstrong", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-armstrong"}
+  - {title: "Carnegie Hall Timeline of African American Music: New Orleans-style jazz", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}
 media:
   - {type: "image", file: "jazz.jpg", caption: "Buddy Bolden, New Orleans, about 1905", credit: "Unknown photographer; from the collection of trombonist Willie Cornish", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Buddy_Bolden_001.png"}
 ---
+Jazz is dance music made up on the spot. It emerged in New Orleans around 1900, mainly among Black and Creole musicians, out of ragtime, the blues, spirituals and the city's brass-band marches, played with a ragged, swinging rhythm. A typical band had a front line of cornet, clarinet and trombone over a rhythm section, and its players, many of whom did not read music, worked numbers out by ear. Instead of one soloist they improvised together, each horn weaving its own line around the tune. Bands played for dances, picnics, parades and brass-band funerals.
+
 The first jazz record, "Livery Stable Blues" (Victor, 1917), was cut by the white Original Dixieland Jass Band from New Orleans, who claimed they had invented jazz rather than credit their Black teachers. The music's roots ran deeper: on Sunday afternoons enslaved Africans gathered in New Orleans' Congo Square to drum, sing and dance, and the [[blues]] and [[spirituals]] fed what came after. Of the cornetist Buddy Bolden, pictured here, no recording is known to survive. Louis Armstrong came north to Chicago in 1922, when King Oliver sent for him, and from 1925 his Hot Five and Hot Seven turned jazz into a soloist's art. Compare [[crazy-blues]] and [[chicago-defender]].

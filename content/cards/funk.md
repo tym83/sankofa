@@ -5,7 +5,7 @@ title: Funk
 wow: "A short drum break from 1970 has been sampled on hundreds of records, hip-hop above all, while the drummer who played it got very little for it."
 years: [1965, 1980]
 places:
-  - {name: "Washington, D.C. (NMAAHC)", lat: 38.8910, lon: -77.0326}
+  - {name: "King Records studios, Evanston, Cincinnati (approximate)", lat: 39.1494, lon: -84.4780}
 zoom: 3
 era: v6
 books: [heirs]
@@ -21,15 +21,31 @@ sources:
   - {title: "Library of Congress: Ben Greenman, Mothership Connection", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MothershipConnection.pdf"}
   - {title: "Exclaim!: Parliament-Funkadelic donate their Mothership to the Smithsonian", url: "https://exclaim.ca/music/article/parliament-funkadelic_donate_their_mothership_to_smithsonian"}
   - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:P-Funk_mothership_at_NMAAHC.jpg"}
+  - {title: "Carnegie Hall, Timeline of African American Music: Funk", url: "https://timeline.carnegiehall.org/genres/funk"}
+  - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture, via Encyclopedia.com", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
+  - {title: "PBS Sound Field: How James Brown invented funk", url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"}
+  - {title: "The Current (Minnesota Public Radio): Pride and pain, the story of the Funky Drummer (2020)", url: "https://www.thecurrent.org/feature/2020/02/11/pride-and-pain-the-story-of-the-funky-drummer"}
+  - {title: "CityBeat Cincinnati: The Once and Future King (King Records, Evanston)", url: "https://www.citybeat.com/news/the-once-and-future-king-12226061/"}
 media:
   - {type: "image", file: "funk.jpg", caption: "The P-Funk Mothership (1990s replica) at the opening of the National Museum of African American History and Culture, Washington, September 2016", credit: "Fuzheado, Wikimedia Commons", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:P-Funk_mothership_at_NMAAHC.jpg"}
 ---
-A few bars of drumming became one of the most reused sounds in music.
-Clyde Stubblefield's short solo on James Brown's "Funky Drummer" (1970) has
-been sampled on hundreds of songs, hip-hop above all, including Public
-Enemy's "Fight the Power" (1989). He received very little in royalties for
-it. Funk was groove first, and then it went to space: in 1976 George
-Clinton's Parliament-Funkadelic landed a Mothership on stage, with Black
-"afronauts" and Afrofuturism in the spirit of [[sun-ra]]. A replica now
-stands in the Smithsonian. Funk fed [[hip-hop]] and [[afrobeat]]; compare
-the breakbeat of the [[amen-break]].
+Funk is dance music built on a groove: a short, syncopated pattern that bass
+and drums repeat over and over, while guitar, horns and keyboards play as
+rhythm instruments too, each adding its own pattern. Where rhythm and blues
+leaned on the backbeat, two and four, James Brown put the weight on the first
+beat of the bar, "the one". Credit for its birth goes above all to Brown and
+his band; "Papa's Got a Brand New Bag" (1965) is counted among the first funk
+records, and Sly Stone blurred it with rock and soul.
+
+A few bars of drumming became one of the most reused sounds in music. Clyde
+Stubblefield's short solo on James Brown's "Funky Drummer" (1970), recorded
+in 1969 at the King studios in Cincinnati, has been sampled on hundreds of
+songs, hip-hop above all, including Public Enemy's "Fight the Power" (1989).
+He received very little in royalties for it. Funk was groove first, and then
+it went to space: in 1976 George Clinton's Parliament-Funkadelic landed a
+Mothership on stage, with Black "afronauts" and Afrofuturism in the spirit of
+[[sun-ra]]. A replica now stands in the Smithsonian.
+
+Its roots run through [[gospel]], [[rhythm-and-blues]] and [[jazz]]. Funk fed
+[[hip-hop]], whose producers built new songs on its samples, and
+[[afrobeat]]; compare the breakbeat of the [[amen-break]].

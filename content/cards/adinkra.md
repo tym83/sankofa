@@ -7,7 +7,6 @@ years: [1817]
 places:
   - {name: Kumasi, lat: 6.6885, lon: -1.6244}
   - {name: Ntonso, lat: 6.8667, lon: -1.6000}
-  - {name: "African Burial Ground, New York", lat: 40.7145, lon: -74.0044}
 zoom: 3
 era: v0
 books: [archives, heirs]
@@ -30,4 +29,6 @@ sources:
 media:
   - {type: "image", file: "adinkra.jpg", caption: "Stamped adinkra cloth acquired by Thomas Edward Bowdich in Kumasi, 1817, now in the British Museum", credit: "Photograph of a two-dimensional work over 100 years old, via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Adinkra_cloth.JPG"}
 ---
+Adinkra are signs of the Akan people of Ghana, each standing for a proverb, a belief or an idea, and printed by hand on cloth. The printer carves the sign in relief on a piece of calabash and makes a dark ink from the bark of the badie tree. A comb dipped in the ink rules a grid across the cloth, and the stamps fill its sections. Adinkra was first a mourning cloth, worn by Asante elites at funerals; over time it spread to every rank and to festive occasions too.
+
 A bird looking back over its shoulder carries a whole philosophy. Sankofa, an Akan sign stamped on adinkra cloth, literally means "go back and get it": heritage as a tool to build the future. The cloth is old and alive at once. In 1817 Thomas Bowdich, on a mission to the Asante capital, acquired a stamped adinkra cloth that is now in the British Museum, and Ntonso, near Kumasi, still stamps it today. Across the Atlantic, a heart of tacks on a colonial-era coffin lid at New York's African Burial Ground was hailed as Sankofa, a reading now contested. This museum takes its name from the sign. Compare [[kente]], [[nsibidi]] and [[benin-bronzes]].

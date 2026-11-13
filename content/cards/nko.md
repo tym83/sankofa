@@ -23,16 +23,12 @@ sources:
   - {title: "Endangered Alphabets Project: N'Ko", url: "https://www.endangeredalphabets.net/?p=330"}
   - {title: "Unicode Consortium: Unicode 5.0.0", url: "https://www.unicode.org/versions/Unicode5.0.0/"}
   - {title: "Alan Wood's Unicode Resources: N'Ko", url: "https://alanwood.net/unicode/n'ko.html"}
+  - {title: "W3C, N'Ko Script Resources (right-to-left alphabet; 19 consonant and 7 vowel letters; tone marks)", url: "https://www.w3.org/TR/nkoo-lreq/"}
 media:
   - {type: "image", file: "nko.jpg", caption: "Tomb of Solomana Kanté, inventor of the N'Ko alphabet (photographed 2017)", credit: "LamineNoracisse, via Wikimedia Commons", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Grave_of_Kant%C3%A9_Soulemane,_inventeur_de_l%27alphabet_N%27Ko.jpg"}
 ---
-An alphabet answered an insult. Around 1949 Souleymane Kanté, a man from
-Kankan in Guinea living in Bingerville in Côte d'Ivoire, read, the story
-goes, that Africans had no writing of their own. Accounts of what he read
-differ; his answer does not. He invented N'Ko, a script for the Manding
-languages, and its users still mark 14 April 1949 as Alphabet Day. A
-grassroots literacy movement carried it through textbooks and a translation
-of the Qur'an. In 2006 N'Ko was encoded in Unicode 5.0, giving it a
-standard digital form. Africa had written before, from [[nsibidi]] to the
-[[vai-script]] and [[bamum]]; a later script born the same way is
-[[adlam]]. On writing your own language, see [[ngugi]].
+N'Ko is an alphabet for the Manding languages of West Africa. It runs from right to left, like Arabic, with seven vowel letters and nineteen consonants, one sign for one sound. Manding is a tonal language, where pitch and vowel length change meaning, and N'Ko was built to show both: small marks over the vowels carry the tone. It is no museum piece. Its users run their own schools and print newspapers, a dictionary and books in it; the inventor himself wrote on subjects from history to medicine, copying many books by hand.
+
+An alphabet answered an insult. Around 1949 Souleymane Kanté, a man from Kankan in Guinea living in Bingerville in Côte d'Ivoire, read, the story goes, that Africans had no writing of their own. Accounts of what he read differ; his answer does not. He invented N'Ko, and its users still mark 14 April 1949 as Alphabet Day. A grassroots literacy movement, with no government behind it, carried it across West Africa through textbooks and a translation of the Qur'an. In 2006 N'Ko was encoded in Unicode 5.0, giving it a standard digital form.
+
+Africa had written before, from [[nsibidi]] to the [[vai-script]] and [[bamum]]; a later script born the same way is [[adlam]]. On writing your own language, see [[ngugi]].
