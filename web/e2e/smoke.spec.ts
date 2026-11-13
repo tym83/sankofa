@@ -413,7 +413,7 @@ test('the music map counts its roots, finds an artist and lights its way down', 
   await serveFixtureRoots(page);
   await page.goto('/#view=roots-map');
   await expect(page.locator('.rmap.open')).toBeVisible();
-  await expect(page.locator('.rm-head h2')).toHaveText(/Of \d+ artists, \d+ lead back to/);
+  await expect(page.locator('.rm-head h2')).toHaveText(/(Of \d+ artists, \d+|All \d+ artists) lead back to/);
   await expect(page.locator('.rm-node.card').first()).toBeAttached();
   await page.locator('.rm-input').fill('telev');
   await page.locator('.rm-input').press('Enter');
@@ -425,7 +425,7 @@ test('the music map counts its roots, finds an artist and lights its way down', 
 
   await page.goto('about:blank');
   await page.goto('/#view=roots-map&lang=ru');
-  await expect(page.locator('.rm-head h2')).toHaveText(/^Из \d+ исполнител/);
+  await expect(page.locator('.rm-head h2')).toHaveText(/^(Из|Все) \d+ исполнител/);
 });
 
 test('breaking a node is told at once and the stopped node never checks in', async ({ page }) => {

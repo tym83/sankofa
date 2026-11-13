@@ -112,15 +112,25 @@ export class RootsMap {
     this.draw(W, H, years);
     // Headline: computed from the data.
     const hl = headline(g);
+    const rc = hl.root ? this.app.set.get(hl.root.id.slice(5)) : undefined;
+    const rootInline = rc?.inline || (hl.root ? (lang() === 'ru' ? `«${hl.root.label}»` : hl.root.label.charAt(0).toLowerCase() + hl.root.label.slice(1)) : '');
     this.head.querySelector('h2')!.textContent = hl.root
       ? pick({
-          en: `Of ${count(hl.total, 'artist', 'en')}, ${hl.count} lead back to ${hl.root.label.charAt(0).toLowerCase() + hl.root.label.slice(1)}`,
-          ru: `Из ${count(hl.total, 'artistOf', 'ru')} ${hl.count} ${pluralLead(hl.count)} к одному корню: «${hl.root.label}»`,
+          en:
+            hl.count === hl.total
+              ? `All ${hl.total} artists lead back to ${rootInline}`
+              : `Of ${count(hl.total, 'artist', 'en')}, ${hl.count} lead back to ${rootInline}`,
+          ru:
+            hl.count === hl.total
+              ? `Все ${count(hl.total, 'artist', 'ru')} ${pluralLead(hl.total)} к одному корню: ${rootInline}`
+              : `Из ${count(hl.total, 'artistOf', 'ru')} ${hl.count} ${pluralLead(hl.count)} к одному корню: ${rootInline}`,
         })
       : pick({ en: 'Every chain on one map', ru: 'Все цепочки на одной карте' });
     if (!this.phone) {
       this.zoomer
         .scaleExtent([0.4, 6])
+        // The wheel scrolls the page; zoom needs ctrl (or a pinch, which browsers send as ctrl+wheel).
+        .filter((ev: Event) => (ev.type === 'wheel' ? (ev as WheelEvent).ctrlKey : !(ev as MouseEvent).button))
         .on('zoom', (ev) => {
           this.t = ev.transform;
           this.gAll.setAttribute('transform', this.t.toString());
@@ -134,7 +144,7 @@ export class RootsMap {
       const ys = g.nodes.map((n) => n.y!);
       const pad = 110;
       const [x0, x1] = [Math.min(...xs) - pad, Math.max(...xs) + pad];
-      const [y0, y1] = [Math.min(...ys) - 40, Math.max(...ys) + 40];
+      const [y0, y1] = [Math.min(...ys) - 70, Math.max(...ys) + 40];
       const k = Math.min(1.4, vw / (x1 - x0), vh / (y1 - y0));
       select(this.svg).call(this.zoomer.transform, zoomIdentity.translate((vw - (x1 - x0) * k) / 2 - x0 * k, (vh - (y1 - y0) * k) / 2 - y0 * k).scale(k));
     }

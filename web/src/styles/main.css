@@ -6793,3 +6793,14 @@ html:lang(ru) .r-edge-head {
     color: #f0b49a;
   }
 }
+/* lit edges keep the colour of their kind, only brighter and thicker */
+.rmap.lit .rm-edge.on {
+  stroke: var(--kc, #f0b84a) !important;
+  stroke-opacity: 1;
+  stroke-width: 3.2;
+  filter: drop-shadow(0 0 3px var(--kc, #f0b84a));
+}
+.rmap.lit .rm-node.on .lbl {
+  display: block !important;
+  fill: #fff3d6;
+}
