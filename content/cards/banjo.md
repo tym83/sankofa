@@ -5,7 +5,7 @@ title: The banjo
 wow: "The banjo is an African instrument, rebuilt by enslaved people from West African gourd lutes."
 years: [1680, 2010]
 places:
-  - {name: "Caribbean (regional origin)", lat: 15.0000, lon: -75.0000}
+  - {name: "Caribbean", lat: 15.0000, lon: -75.0000}
   - {name: "Senegambia (Jola region)", lat: 13.0000, lon: -16.2000}
   - {name: "South Carolina Lowcountry", lat: 32.7765, lon: -79.9311}
 zoom: 3
