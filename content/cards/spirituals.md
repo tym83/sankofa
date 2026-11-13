@@ -5,7 +5,7 @@ title: Spirituals
 wow: "The students who carried spirituals from Nashville to Queen Victoria had not dreamed of singing them in public: the songs belonged to slavery."
 years: [1780, 1878]
 places:
-  - {name: "St. Helena Island, South Carolina Sea Islands", lat: 32.3833, lon: -80.5650}
+  - {name: "American South (regional origin; St. Helena Island marker)", lat: 32.3833, lon: -80.5650}
   - {name: "Fisk University, Nashville", lat: 36.1689, lon: -86.8053}
   - {name: London, lat: 51.5072, lon: -0.1276}
 zoom: 3
@@ -33,11 +33,15 @@ sources:
   - {title: "Andrew Ward, They Brought the Jubilee, American Heritage 51:4 (2000)", url: "https://www.americanheritage.com/they-brought-jubilee"}
   - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard"}
   - {title: "Associated Press (Luis Andres Henao) via WCIV: Gullah Geechee elders work to preserve sacred songs (2025)", url: "https://abcnews4.com/news/local/gullah-geechee-elders-work-to-preserve-sacred-songs-passed-down-by-enslaved-ancestors-wciv-abc-news-4-charleston-sc-south-carolina-st-helena-island-sea-islands"}
+  - {title: "Library of Congress, African American Spirituals: Introduction", url: "https://guides.loc.gov/spirituals-folklife"}
+  - {title: "Tufts University Libraries, Slave Songs of the United States, Douglass exhibition", url: "https://omeka.library.tufts.edu/exhibits/show/douglass-olafsson/musical-inspirations/slave-songs-of-the-united-stat"}
+  - {title: "A. Kori Hill, Composer Feature: Ella Sheppard, Cincinnati Public Radio (2024)", url: "https://www.classicsforkids.com/composer-feature-ella-sheppard/"}
+  - {title: "Carnegie Hall Timeline: Spiritual as Art Song (already on burleigh-dvorak)", url: "https://timeline.carnegiehall.org/genres/spiritual-as-art-song"}
 media:
   - {type: "image", file: "spirituals.jpg", caption: "The Fisk Jubilee Singers in London, about 1876", credit: "Unknown photographer", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Fisk_Jubilee_Singers_London.jpg"}
 ---
-Spirituals are the religious folk songs that enslaved African Americans made in the South, most likely from the late eighteenth century on, out of Bible stories, hymns and African ways of singing. No two singers sang quite the same thing: a leader started each verse, often improvising, and the others "based" him with the refrain, clapping, or shuffled round in a ring in the worship called the shout. They sang of Israel led out of Egypt into Canaan, and words could mean two things at once. Frederick Douglass, singing of Canaan while planning an escape, wrote that "the north was our Canaan". Later claims of songs as escape maps are another matter, see [[underground-railroad-myths]].
+Spirituals are the religious folk songs that enslaved African Americans made in the South, most likely from the late eighteenth century on, out of Bible stories, hymns and African ways of singing. A leader could improvise a verse while the others answered with a refrain. Singers clapped or shuffled round in a ring in the worship called the shout. They sang of Israel led out of Egypt into Canaan, and words could mean two things at once. Frederick Douglass, singing of Canaan while planning an escape, wrote that "the north was our Canaan". Later claims of songs as escape maps are another matter, see [[underground-railroad-myths]].
 
 On 6 October 1871 nine students left Fisk University in Nashville, a failing freedmen's school, carrying the whole treasury for travel. At first they hardly sang spirituals: "We did not dream of ever using them in public," Ella Sheppard recalled, for they "were associated with slavery and the dark past". Audiences asked for them, Sheppard arranged them in four-part harmony, and the tour raised tens of thousands of dollars (figures vary). The songs took them to Queen Victoria.
 
-The call and answer came from the [[work-songs]] of the fields. Spirituals reached the concert hall with [[burleigh-dvorak|Harry T. Burleigh]] and fed the [[blues]] and [[gospel]].
+The call and answer came from the [[work-songs]] of the fields. [[burleigh-dvorak|Harry T. Burleigh]] contributed to the concert tradition of spirituals. Spirituals also fed the [[blues]] and [[gospel]].

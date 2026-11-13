@@ -29,6 +29,9 @@ sources:
   - {title: "NPR: Remembering Juan Atkins,2 November 2026", url: "https://www.nprillinois.org/2026-11-02/remembering-juan-atkins-known-as-the-originator-of-techno"}
   - {title: "Carnegie Hall, Timeline of African American Music: Detroit Techno (synthesizers, drum machines, sequencers; Parliament-Funkadelic and Kraftwerk; deindustrialization; science fiction)", url: "https://timeline.carnegiehall.org/genres/detroit-techno"}
   - {title: "Michigan Public: Juan Atkins obituary (synthesizers, drum machines, computers and sequencers; popular in Europe) (2026)", url: "https://www.michiganpublic.org/news/2026-11-02/juan-atkins-obituary-detroit-techno"}
+  - {title: "Detroit Historical Society, Flashback 2002: Detroit Electronic Music Festival", url: "https://www.detroithistorical.org/learn/online-research/blog/flashback-2002-detroit-electronic-music-festival"}
+  - {title: "Frank Hoffmann, Survey of American Popular Music: The Postpunk Movement, Sam Houston State University", url: "https://profiles.shsu.edu/lis_fwh/book/punk_newwave_postpunk/Postpunk-Intro.htm"}
+  - {title: "Robert Havey, Remixing Detroit History, University of Michigan Bentley Historical Library (2016)", url: "https://bentley.umich.edu/about/collections-magazine/fall-2016/remixing-detroit-history/"}
 media:
   - {type: "image", file: "detroit-techno.jpg", caption: "Juan Atkins, January 2010", credit: "Angie Linder, via Wikimedia Commons", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Juan_Atkins.jpg"}
   - {type: "image", file: "detroit-techno-2.jpg", caption: "Tresor club, Berlin, in the former Heizkraftwerk Mitte where it moved in 2007; photographed September 2008", credit: "Boca Dorada, via Wikimedia Commons", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Tresor_Berlin_2008_Facade.jpg"}
@@ -37,4 +40,4 @@ Techno is dance music made almost entirely by machines: drum machines, synthesiz
 
 Techno's story runs from a small-town Michigan high school to a Berlin club. Juan Atkins, Derrick May and Kevin Saunderson met at high school in Belleville, outside Detroit, and became the Belleville Three. Atkins worked with Richard Davis as Cybotron, whose "Clear" is usually dated 1982, and ran his own label, Metroplex. He said he took the word techno from Alvin Toffler's The Third Wave.
 
-Europe took to it faster than America. In 1991, in a Berlin reinventing itself after the Wall, Underground Resistance's "X-101" was the first release on the new Tresor label, and techno is still often taken for a German music. Atkins died in 2026. Cousins: [[planet-rock]], [[chicago-house]], [[funk]], [[sun-ra]].
+Europe took to it faster than America. In 1991, in a Berlin reinventing itself after the Wall, Underground Resistance's "X-101" was the first release on the new Tresor label, and techno is still often taken for European music. Atkins died in 2026. Cousins: [[planet-rock]], [[chicago-house]], [[funk]], [[sun-ra]].

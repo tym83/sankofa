@@ -5,7 +5,7 @@ title: Rhythm and blues
 wow: "Billboard once filed Black popular records under \"Race\"; a young writer editing its charts gave the music a new name: rhythm and blues."
 years: [1949, 1960]
 places:
-  - {name: "New York City", lat: 40.7128, lon: -74.0060}
+  - {name: "Urban United States (regional origin; New York City marker)", lat: 40.7128, lon: -74.0060}
   - {name: "Los Angeles", lat: 34.0522, lon: -118.2437}
 zoom: 3
 era: v6
@@ -30,11 +30,13 @@ sources:
   - {title: "PBS Sound Field: How James Brown invented funk (backbeat on two and four)", url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"}
   - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll (doo-wop roots in gospel)", url: "https://timeline.carnegiehall.org/genres/rock-n-roll"}
   - {title: "GRAMMY.com: R&B pioneer Johnny Otis dies (Barrelhouse, 1948)", url: "https://www.grammy.com/news/rb-pioneer-johnny-otis-dies/"}
+  - {title: "Mark Puryear, Tell It Like It Is, Smithsonian Folklife Festival (2011), pp. 53–63", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf"}
+  - {title: "Case Western Reserve University, Encyclopedia of Cleveland History: Rock & Roll", url: "https://case.edu/ech/articles/r/rock-roll"}
 media:
   - {"type": "image", "file": "rhythm-and-blues.jpg", "caption": "Ruth Brown performing, 10 September 2005", "credit": "caviera (-cp on Flickr); resized for display", "license": "CC BY 2.0", "url": "https://commons.wikimedia.org/wiki/File:Ruth_Brown.jpg"}
 ---
 Rhythm and blues was the dance music of Black America in the 1940s and early
-1950s, made in the big cities after the Second World War. Swing orchestras
+1950s, flourishing in the big cities after the Second World War. Swing orchestras
 shrank to small jump bands, and their jump blues kept the twelve-bar blues, a
 rolling boogie-woogie bass and a shuffle beat, with a saxophone out front and
 the drums hitting hard on the backbeat, two and four. The saxophonist and
@@ -49,4 +51,4 @@ labels too. Atlantic Records, founded in 1947, became known as "The House
 that Ruth Built" thanks to the singer Ruth Brown.
 
 Out of R&B, the [[blues]] and [[gospel]] came [[rock-n-roll]] and [[funk]],
-and by the mid-1960s a new name, soul; compare [[rosetta-tharpe]].
+and by the mid-1960s it had helped give rise to soul; compare [[rosetta-tharpe]].

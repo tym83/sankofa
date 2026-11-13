@@ -5,7 +5,7 @@ title: Funk
 wow: "A short drum break from 1970 has been sampled on hundreds of records, hip-hop above all, while the drummer who played it got very little for it."
 years: [1965, 1980]
 places:
-  - {name: "King Records studios, Evanston, Cincinnati (approximate)", lat: 39.1494, lon: -84.4780}
+  - {name: "United States (regional origin; Cincinnati marker)", lat: 39.1446, lon: -84.4766}
 zoom: 3
 era: v6
 books: [heirs]
@@ -26,6 +26,11 @@ sources:
   - {title: "PBS Sound Field: How James Brown invented funk", url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"}
   - {title: "The Current (Minnesota Public Radio): Pride and pain, the story of the Funky Drummer (2020)", url: "https://www.thecurrent.org/feature/2020/02/11/pride-and-pain-the-story-of-the-funky-drummer"}
   - {title: "CityBeat Cincinnati: The Once and Future King (King Records, Evanston)", url: "https://www.citybeat.com/news/the-once-and-future-king-12226061/"}
+  - {title: "Alexander Stewart, Make It Funky: Fela Kuti, James Brown and the Invention of Afrobeat, American Studies 52:4 (2013)", url: "https://journals.ku.edu/amsj/article/download/4463/4304/"}
+  - {title: "Mellonee V. Burnim and Portia K. Maultsby, eds., African American Music: An Introduction, 2nd ed. (2015), chapters on African roots and funk", url: "https://microsite-oh-prod.s3.amazonaws.com/media/editor/405/vdoc.pub_african-american-music-an-introduction.pdf"}
+  - {title: "Associated Press, Sly Stone obituary, ABC News (10 June 2025), accessible syndication", url: "https://www.abc.net.au/news/2025-06-10/sly-stone-frontman-of-sly-and-the-family-stone-dies-aged-82/105397220"}
+  - {title: "Aubrey Foard, Behind the Beat: Funky Drummer by James Brown, Roland", url: "https://articles.roland.com/behind-the-beat-funky-drummer-by-james-brown/"}
+  - {title: "Carnegie Hall Timeline: Rap & Hip-Hop (sampled materials, especially funk)", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"}
 media:
   - {type: "image", file: "funk.jpg", caption: "The P-Funk Mothership (1990s replica) at the opening of the National Museum of African American History and Culture, Washington, September 2016", credit: "Fuzheado, Wikimedia Commons", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:P-Funk_mothership_at_NMAAHC.jpg"}
 ---

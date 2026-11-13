@@ -31,6 +31,8 @@ sources:
   - {title: "Cheryl Keyes, Rap, Encyclopedia of African-American Culture and History, via Encyclopedia.com", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-popular-and-jazz/rap-music"}
   - {title: "Library of Congress Labs, Citizen DJ: About (hip-hop began in the Bronx in the early 70s)", url: "https://citizen-dj.labs.loc.gov/about/"}
   - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture, via Encyclopedia.com (hip-hop's funk samples)", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
+  - {title: "Lindsay Rapport, Hip Hop Culture and its Foundational Elements, University of California Riverside", url: "https://gluckprogram.ucr.edu/sites/default/files/2018-08/D41_HipHopCulture.pdf"}
+  - {title: "Aubrey Foard, Behind the Beat: Funky Drummer by James Brown, Roland", url: "https://articles.roland.com/behind-the-beat-funky-drummer-by-james-brown/"}
 media:
   - {type: "image", file: "hip-hop.jpg", caption: "DJ Kool Herc at the turntables at an event on the West Indian roots of hip-hop, Hunts Point, the Bronx, 28 February 2009", credit: "Bigtimepeace, via Wikimedia Commons", license: "Public domain (released by the photographer)", url: "https://commons.wikimedia.org/wiki/File:Herc_on_the_Wheels_of_Steel.JPG"}
 ---
@@ -40,7 +42,7 @@ breaking and graffiti. Its music began with two people. The DJ cut between
 records to stretch the instrumental break; the MC rhymed over the beat in
 rhythm and street speech. It was made for parties in homes, community centres,
 parks and on the block, and for young people the city had neglected it was an
-outlet and a voice. Later, drum machines and samples, funk above all, became
+outlet and a voice. Later, drum machines and samples, including funk, became
 its instruments.
 
 Hip-hop began with two copies of the same record. Clive Campbell, born in

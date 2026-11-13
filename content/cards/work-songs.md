@@ -5,7 +5,7 @@ title: Work songs and field hollers
 wow: "In the 1790s a doctor in Sierra Leone heard rowers singing as leader and chorus; in 1947 Alan Lomax taped work songs at Mississippi's Parchman Farm."
 years: [1790, 1948]
 places:
-  - {name: "Sierra Leone coast", lat: 8.4840, lon: -13.2299}
+  - {name: "West and Central Africa (regional roots; Sierra Leone marker)", lat: 8.4840, lon: -13.2299}
   - {name: "Parchman Farm, Mississippi", lat: 33.9168, lon: -90.5137}
 zoom: 3
 era: v3
@@ -24,6 +24,9 @@ sources:
   - {title: "Maryland Public Television / Thinkport: Work songs", url: "https://thinkport.org/mptclassroom/waters-edge/music-making/work-songs.html"}
   - {title: "Frederick Douglass, Narrative of the Life of Frederick Douglass (1845), ch. II, Documenting the American South, UNC", url: "https://docsouth.unc.edu/neh/douglass/douglass.html"}
   - {title: "Frederick Douglass, Narrative of the Life of Frederick Douglass (1845), Project Gutenberg", url: "https://www.gutenberg.org/ebooks/23"}
+  - {title: "Virginia Traditions: Virginia Work Songs, Smithsonian Folkways liner notes (research by Bruce Hutton and others)", url: "https://folkways-media.si.edu/docs/folkways/artwork/BRI00007.pdf"}
+  - {title: "Lindsey Stewart, The Politics of Black Joy, Northwestern University Press (2021), introduction, pp. 17–18", url: "https://dhjhkxawhe8q4.cloudfront.net/northwestern-uni-press-wp/wp-content/uploads/2021/08/23193723/Intro-from-Stewart_int.pdf"}
+  - {title: "Mellonee V. Burnim and Portia K. Maultsby, eds., African American Music: An Introduction, 2nd ed. (2015), chapters on African roots and funk", url: "https://microsite-oh-prod.s3.amazonaws.com/media/editor/405/vdoc.pub_african-american-music-an-introduction.pdf"}
 media:
   - {"type": "image", "file": "work-songs.jpg", "caption": "Lead Belly at the National Press Club, Washington, D.C., between 1938 and 1948", "credit": "William P. Gottlieb; Library of Congress, Music Division; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Leadbelly,_National_Press_Club,_Washington,_D.C.,_between_1938_and_1948_(William_P._Gottlieb_13561).jpg"}
 ---

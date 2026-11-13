@@ -27,6 +27,7 @@ sources:
   - {title: "American Heritage, John McDonough: The Diamond Jubilee of Jazz (1992)", url: "https://www.americanheritage.com/diamond-jubilee-jazz"}
   - {title: "Encyclopedia.com: Louis Armstrong", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-armstrong"}
   - {title: "Carnegie Hall Timeline of African American Music: New Orleans-style jazz", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}
+  - {title: "Bruce Boyd Raeburn, Traditional New Orleans Jazz, 64 Parishes / Louisiana Endowment for the Humanities", url: "https://64parishes.org/entry/traditional-new-orleans-jazz"}
 media:
   - {type: "image", file: "jazz.jpg", caption: "Buddy Bolden, New Orleans, about 1905", credit: "Unknown photographer; from the collection of trombonist Willie Cornish", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Buddy_Bolden_001.png"}
 ---

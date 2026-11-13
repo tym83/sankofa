@@ -27,6 +27,9 @@ sources:
   - {title: "UNESCO Intangible Cultural Heritage: Reggae music of Jamaica", url: "https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398"}
   - {title: "Library of Congress, National Recording Registry: Michael Garnice on The Harder They Come (1972)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf"}
   - {title: "Carnegie Hall, Timeline of African American Music: Musical Exchange Across the Black Atlantic", url: "https://timeline.carnegiehall.org/stories/musical-exchange-across-the-black-atlantic"}
+  - {title: "Cambridge International, IGCSE Music teachers guide (2021), Caribbean Music, pp. 21–24", url: "https://www.cambridgeinternational.org/Images/599248-2021-teachers-guide-to-set-works-and-the-world-focus.pdf"}
+  - {title: "Jake Homiak, Black History in Roots Reggae Music, Smithsonian essay republished by Jamaica Information Service", url: "https://jis.gov.jm/jamaica/black-history-in-roots-reggae-music/"}
+  - {title: "Mellonee V. Burnim and Portia K. Maultsby, eds., African American Music: An Introduction, 2nd ed. (2015), chapters on African roots and funk", url: "https://microsite-oh-prod.s3.amazonaws.com/media/editor/405/vdoc.pub_african-american-music-an-introduction.pdf"}
 media:
   - {"type": "image", "file": "reggae.jpg", "caption": "Toots Hibbert performing with Toots and the Maytals in Orlando, Florida, 29 April 2010", "credit": "Karl Simpson; resized for display", "license": "CC BY-SA 2.0", "url": "https://commons.wikimedia.org/wiki/File:Toots-Hibbert.jpg"}
 ---
@@ -48,5 +51,5 @@ the deejay who toasted over them followed, especially in the 1950s. In 2018
 UNESCO inscribed reggae music of Jamaica on its list of intangible
 heritage.
 
-That deejay, talking in rhythm over a record, carried on in New York rap.
+That deejay, talking in rhythm over a record, was one influence on New York rap.
 Compare [[rhythm-and-blues]], [[hip-hop]] and [[afrobeat]].

@@ -98,3 +98,25 @@
 - Committed the reviewed catalog in four signed-off batches: 7e2a199 (rock), d98c283 (electronic/alternative), 23014f1 (pop/country), 9d1dbcd (Russian/blues/soul).
 - Final documentation/audit commit records conventions, usable local CLI examples, all validation counts and this session journal. All ROOTS.md deliverables are complete; no open questions.
 - Each commit uses an English feat(content) subject, sign-off and exactly one final Assisted-by trailer. No push or publication performed.
+
+### 2026-11-12 — Independent explainer check started
+- Goal: execute EXPLAIN-CHECK.md in this worktree; independently assess all 155 new claims in 25 cards and changed places/coordinates, record two independent authoritative sources per retained claim, apply corrections/removals, lint and commit without pushing.
+- Initial state: clean feat/explain worktree at 9eced12. The direct explainer brief supersedes the older distribution worktree/task instructions.
+- Next: open the writer's references and independently find corroborating evidence, recording limitations rather than treating citations as proof.
+
+### 2026-11-12 — Claim research and source reconciliation
+- Opened the writer’s references and independently researched all 155 claims. Drafted a one-to-one review ledger, checking scholarly text, museum collections, archival records, technical script documentation and primary interviews.
+- Identified overbroad genre definitions, unsupported exclusivity/birthplace claims, a misleading banjo origin marker, and confusion between Bamum revisions and total versions. Some compound claims require narrowing; two details currently lack the required independent corroboration.
+- Access failures are not counted as evidence. Used accessible institutional archives and explicitly identified syndicated reports as a single source. Research cache is outside the repository and contains no credentials.
+- Next: finish geographic/source reconciliation, apply each verdict to the English cards, validate the ledger and run the required content lint.
+
+### 2026-11-12 — Explainer corrections and geographic audit completed
+- Added content/ledger/explainers-check.yaml: 155 original claims preserved verbatim across 25 cards, each with a verdict, two distinct references and a note. Totals: 107 confirmed, 46 corrected, 0 refuted, 2 unverified. Applied the narrower wording and removed both unverified details; added the consulted references to the English cards.
+- Recorded 13 geographic reviews with before/after locations and coordinate checks. Corrected the King Records and Ntonso points; distinguished regional origins from collection, recording and dissemination sites. The banjo now starts with its Caribbean development, with Senegambian ancestry separate.
+- Validation: machine-checked exact one-to-one coverage against explainers-new.yaml, source URL uniqueness, independently located references, valid coordinate ranges and absence of Russian edits. git diff --check passed.
+- Required check: go run ./cmd/sankofa content lint content/cards reports exactly 10 expected Russian-translation discrepancies in 102 cards and no English-card errors. An initial 221-word banjo paragraph was shortened and the check rerun successfully under that expected-error criterion. Exit status remains 1 because of the translation discrepancies.
+- Work is ready for the requested signed-off fix(content) commit. No push or publication; no open decisions remain for this brief.
+
+### 2026-11-12 — Explainer check completed
+- Created the requested local fix(content) commit and verified one Signed-off-by trailer plus exactly one final Assisted-by: LLM trailer. All deliverables and validation results above are complete; nothing was pushed or published.
+- Journal correction: the actual branch name is feat/explainers, not the abbreviated feat/explain recorded in the initial entry. This completion entry is included in the same logical audit commit.
