@@ -1,0 +1,36 @@
+id: john-coltrane
+name: John Coltrane
+nameRu: Джон Колтрейн
+aliases:
+- джон колтрейн
+- колтрейн
+years:
+- 1926
+- 1967
+place:
+  name: Hamlet
+  lat: 34.8849
+  lon: -79.6942
+genre: Jazz
+genreRu: джаз
+story: John Coltrane developed as a sideman in jazz bands before leading his own groups. Joining Miles Davis’s band in 1955 brought that apprenticeship to a new stage.
+storyRu: Прежде чем возглавить собственные ансамбли, Джон Колтрейн набирался опыта в чужих джазовых группах. В 1955 году он вошёл в ансамбль Майлза Дэвиса — это стало новым этапом его становления.
+links:
+- to: card:jazz
+  kind: scene
+  claim: John Coltrane’s early jazz apprenticeship included playing in Dizzy Gillespie’s band.
+  claimRu: В начале своего пути в джазе Джон Колтрейн набирался опыта в ансамбле Диззи Гиллеспи.
+  sources:
+  - &id001
+    title: 'John Coltrane: official biography'
+    url: https://www.johncoltrane.com/biography
+  - &id002
+    title: 'Blue Note Records: John Coltrane — biography'
+    url: https://www.bluenote.com/artist/john-coltrane/
+- to: root:miles-davis
+  kind: member
+  claim: John Coltrane joined Miles Davis’s band in 1955, a formative step before leading his own groups.
+  claimRu: В 1955 году Джон Колтрейн вошёл в ансамбль Майлза Дэвиса — важный этап становления, прежде чем он возглавил собственные группы.
+  sources:
+  - *id001
+  - *id002

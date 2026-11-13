@@ -1,0 +1,272 @@
+{
+  "researcher": "primary",
+  "checkedAt": "2026-11-12",
+  "links": [
+    {
+      "artist": "television",
+      "to": "root:the-velvet-underground",
+      "kind": "influence",
+      "claim": "The Velvet Underground were an early influence on Television guitarist Tom Verlaine.",
+      "claimRu": "The Velvet Underground повлияли на Тома Верлена, гитариста Television, ещё в начале его пути.",
+      "sources": [
+        {
+          "title": "Guitar World: A lesson in Tom Verlaine’s guitar style",
+          "url": "https://www.guitarworld.com/lessons/tom-verlaine-television-style"
+        },
+        {
+          "title": "Will Hermes: Love Goes to Buildings on Fire — publisher excerpt",
+          "url": "https://us.macmillan.com/books/9780374533540/lovegoestobuildingsonfire/"
+        }
+      ],
+      "evidence": "Guitar World names early guitar influences; Hermes independently documents Verlaine and Hell’s shared love of the Velvet Underground before Television.",
+      "opened": true
+    },
+    {
+      "artist": "television",
+      "to": "root:john-coltrane",
+      "kind": "influence",
+      "claim": "John Coltrane was a formative influence on Tom Verlaine as a teenage saxophonist.",
+      "claimRu": "Джон Колтрейн повлиял на музыкальное становление Тома Верлена, ещё подростком игравшего на саксофоне.",
+      "sources": [
+        {
+          "title": "Guitar World: The songs that made Tom Verlaine take the guitar seriously — recalling his 1981 interview",
+          "url": "https://www.guitarworld.com/artists/guitarists/the-songs-that-made-tom-verlaine-take-the-guitar-seriously"
+        },
+        {
+          "title": "Will Hermes: Love Goes to Buildings on Fire — publisher excerpt",
+          "url": "https://us.macmillan.com/books/9780374533540/lovegoestobuildingsonfire/"
+        }
+      ],
+      "evidence": "Verlaine’s 1981 first-person recollection describes Coltrane inspiring saxophone study; Hermes independently documents adolescent saxophone playing and devotion to Coltrane. Wording narrowed to the influence supported by both.",
+      "opened": true
+    },
+    {
+      "artist": "television",
+      "to": "root:albert-ayler",
+      "kind": "influence",
+      "claim": "As a teenage saxophonist, Television’s Tom Verlaine immersed himself in Albert Ayler’s music.",
+      "claimRu": "Ещё подростком играя на саксофоне, будущий лидер Television Том Верлен увлёкся музыкой Альберта Эйлера.",
+      "sources": [
+        {
+          "title": "Patti Smith: He Was Tom Verlaine — The New Yorker",
+          "url": "https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine"
+        },
+        {
+          "title": "Will Hermes: Love Goes to Buildings on Fire — publisher excerpt",
+          "url": "https://us.macmillan.com/books/9780374533540/lovegoestobuildingsonfire/"
+        }
+      ],
+      "evidence": "Smith’s personal remembrance and Hermes’s book independently name Ayler as an adolescent influence.",
+      "opened": true
+    },
+    {
+      "artist": "the-velvet-underground",
+      "to": "root:lou-reed",
+      "kind": "member",
+      "claim": "Singer, guitarist and songwriter Lou Reed was a founding member of the Velvet Underground.",
+      "claimRu": "Певец, гитарист и автор песен Лу Рид был одним из основателей The Velvet Underground.",
+      "sources": [
+        {
+          "title": "Aidan Levy: The Velvet Underground & Nico — Library of Congress",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
+        },
+        {
+          "title": "Guitar World: Lou Reed — 1998 interview",
+          "url": "https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview"
+        }
+      ],
+      "evidence": "Levy identifies founding nucleus and roles; Guitar World’s interview and introduction independently establish Reed’s role.",
+      "opened": true
+    },
+    {
+      "artist": "lou-reed",
+      "to": "card:rhythm-and-blues",
+      "kind": "influence",
+      "claim": "Lou Reed began recording as a teenager in the doo-wop tradition.",
+      "claimRu": "Лу Рид начал записываться ещё подростком, обратившись к традиции ду-вопа.",
+      "sources": [
+        {
+          "title": "New York Public Library: Lou Reed Papers — Early Lou Reed",
+          "url": "https://libguides.nypl.org/loureed"
+        },
+        {
+          "title": "Mark Paytress: Lou Reed interviewed — MOJO",
+          "url": "https://www.mojo4music.com/articles/stories/lou-reed-interviewed/"
+        }
+      ],
+      "evidence": "Archive documents teenage Jades sessions and doo-wop collection; Paytress documents teenage doo-wop recording.",
+      "opened": true
+    },
+    {
+      "artist": "lou-reed",
+      "to": "root:ornette-coleman",
+      "kind": "influence",
+      "claim": "Ornette Coleman’s free jazz shaped Lou Reed’s approach to guitar in the Velvet Underground.",
+      "claimRu": "Фри-джаз Орнетта Коулмана повлиял на подход Лу Рида к игре на гитаре в The Velvet Underground.",
+      "sources": [
+        {
+          "title": "Aidan Levy: The Velvet Underground & Nico — Library of Congress",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
+        },
+        {
+          "title": "Guitar World: Lou Reed — 1998 interview",
+          "url": "https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview"
+        }
+      ],
+      "evidence": "Levy discusses European Son; Reed’s separate Guitar World interview explicitly identifies Coleman in answer about guitar influences.",
+      "opened": true
+    },
+    {
+      "artist": "ornette-coleman",
+      "to": "card:rhythm-and-blues",
+      "kind": "scene",
+      "claim": "Ornette Coleman gained his earliest performing experience in rhythm-and-blues bands.",
+      "claimRu": "Первый сценический опыт Орнетт Коулман получил в ритм-н-блюзовых ансамблях.",
+      "sources": [
+        {
+          "title": "National Endowment for the Arts: Ornette Coleman",
+          "url": "https://www.arts.gov/honors/jazz/ornette-coleman"
+        },
+        {
+          "title": "Dave Oliphant: Ornette Coleman — Texas State Historical Association",
+          "url": "https://www.tshaonline.org/handbook/entries/coleman-ornette"
+        }
+      ],
+      "evidence": "Both institutional biographies detail early R&B employment.",
+      "opened": true
+    },
+    {
+      "artist": "ornette-coleman",
+      "to": "card:jazz",
+      "kind": "influence",
+      "claim": "Ornette Coleman developed a jazz approach that freed improvisation from fixed chord progressions.",
+      "claimRu": "Орнетт Коулман выработал подход к джазу, освобождавший импровизацию от заданной последовательности аккордов.",
+      "sources": [
+        {
+          "title": "National Endowment for the Arts: Ornette Coleman",
+          "url": "https://www.arts.gov/honors/jazz/ornette-coleman"
+        },
+        {
+          "title": "Dave Oliphant: Ornette Coleman — Texas State Historical Association",
+          "url": "https://www.tshaonline.org/handbook/entries/coleman-ornette"
+        }
+      ],
+      "evidence": "NEA explains escape from traditional chord patterns; Oliphant explains harmolodics against traditional chord structure.",
+      "opened": true
+    },
+    {
+      "artist": "john-coltrane",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "John Coltrane’s early jazz apprenticeship included playing in Dizzy Gillespie’s band.",
+      "claimRu": "В начале своего пути в джазе Джон Колтрейн набирался опыта в ансамбле Диззи Гиллеспи.",
+      "sources": [
+        {
+          "title": "John Coltrane: official biography",
+          "url": "https://www.johncoltrane.com/biography"
+        },
+        {
+          "title": "Blue Note Records: John Coltrane — biography",
+          "url": "https://www.bluenote.com/artist/john-coltrane/"
+        }
+      ],
+      "evidence": "Both biographies identify Gillespie employment before Davis.",
+      "opened": true
+    },
+    {
+      "artist": "john-coltrane",
+      "to": "root:miles-davis",
+      "kind": "member",
+      "claim": "John Coltrane joined Miles Davis’s band in 1955, a formative step before leading his own groups.",
+      "claimRu": "В 1955 году Джон Колтрейн вошёл в ансамбль Майлза Дэвиса — важный этап становления, прежде чем он возглавил собственные группы.",
+      "sources": [
+        {
+          "title": "John Coltrane: official biography",
+          "url": "https://www.johncoltrane.com/biography"
+        },
+        {
+          "title": "Blue Note Records: John Coltrane — biography",
+          "url": "https://www.bluenote.com/artist/john-coltrane/"
+        }
+      ],
+      "evidence": "Official biography describes development under Davis; Blue Note calls Davis association the big break and dates hiring to 1955.",
+      "opened": true
+    },
+    {
+      "artist": "albert-ayler",
+      "to": "card:spirituals",
+      "kind": "influence",
+      "claim": "Albert Ayler’s improvisations drew on melodies shaped by spirituals.",
+      "claimRu": "В импровизациях Альберта Эйлера звучали мелодии, восходившие к спиричуэлс.",
+      "sources": [
+        {
+          "title": "Kevin Whitehead: Albert Ayler — Testifying the Breaking Point, Fresh Air/KERA",
+          "url": "https://www.keranews.org/2001-05-07/albert-ayler-testifying-the-breaking-point"
+        },
+        {
+          "title": "Richard Brody: The Jubilant Glory of Albert Ayler’s Revelations — The New Yorker",
+          "url": "https://www.newyorker.com/culture/the-front-row/the-jubilant-glory-of-albert-aylers-revelations"
+        }
+      ],
+      "evidence": "Whitehead relates sacred repertoire and improvisation; Brody explicitly identifies spirituals in the melodic material of his compositions.",
+      "opened": true
+    },
+    {
+      "artist": "miles-davis",
+      "to": "root:charlie-parker",
+      "kind": "influence",
+      "claim": "Playing alongside Charlie Parker helped shape the young Miles Davis’s musical voice.",
+      "claimRu": "Игра рядом с Чарли Паркером помогла молодому Майлзу Дэвису выработать собственный музыкальный голос.",
+      "sources": [
+        {
+          "title": "Blue Note Records: Miles Davis — biography",
+          "url": "https://www.bluenote.com/artist/miles-davis/"
+        },
+        {
+          "title": "American Jazz Museum: Bird, Diz, and Miles — The Making of Miles Davis",
+          "url": "https://americanjazzmuseum.org/exhibits-events/bird-diz-and-miles-the-making-of-miles-davis/"
+        }
+      ],
+      "evidence": "Blue Note describes Parker’s spell and apprenticeship; museum exhibition expressly addresses formative influence.",
+      "opened": true
+    },
+    {
+      "artist": "miles-davis",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Miles Davis entered New York’s bebop scene in the mid-1940s.",
+      "claimRu": "В середине 1940-х годов Майлз Дэвис вошёл в нью-йоркскую сцену бибопа.",
+      "sources": [
+        {
+          "title": "National Endowment for the Arts: Miles Davis",
+          "url": "https://www.arts.gov/honors/jazz/miles-davis"
+        },
+        {
+          "title": "Blue Note Records: Miles Davis — biography",
+          "url": "https://www.bluenote.com/artist/miles-davis/"
+        }
+      ],
+      "evidence": "NEA dates New York arrival and 52nd Street gigs; Blue Note identifies bebop and same early club career.",
+      "opened": true
+    },
+    {
+      "artist": "charlie-parker",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Charlie Parker’s musical apprenticeship took place in Kansas City’s jazz bands and clubs.",
+      "claimRu": "Чарли Паркер учился музыке, играя в джазовых ансамблях и клубах Канзас-Сити.",
+      "sources": [
+        {
+          "title": "Ed Komara: Ko Ko — Library of Congress",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf"
+        },
+        {
+          "title": "C.J. Janovy: Kansas City’s Charlie Parker History Tour — KCUR",
+          "url": "https://www.kcur.org/arts-life/2016-08-29/kansas-citys-charlie-parker-history-tour-requires-a-guide-and-imagination"
+        }
+      ],
+      "evidence": "Komara names Kansas City band apprenticeship; Spencer reports historically documented early club jobs.",
+      "opened": true
+    }
+  ]
+}

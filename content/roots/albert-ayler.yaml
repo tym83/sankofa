@@ -1,0 +1,27 @@
+id: albert-ayler
+name: Albert Ayler
+nameRu: Альберт Эйлер
+aliases:
+- альберт эйлер
+- альберт айлер
+years:
+- 1936
+- 1970
+place:
+  name: Cleveland
+  lat: 41.4993
+  lon: -81.6944
+genre: Free jazz
+genreRu: фри-джаз
+story: Albert Ayler carried the melodic language of spirituals into his improvisations. Even his free playing retained that connection to song.
+storyRu: Альберт Эйлер перенёс мелодический язык спиричуэлс в свои импровизации. Даже в свободной игре он сохранял эту связь с песней.
+links:
+- to: card:spirituals
+  kind: influence
+  claim: Albert Ayler’s improvisations drew on melodies shaped by spirituals.
+  claimRu: В импровизациях Альберта Эйлера звучали мелодии, восходившие к спиричуэлс.
+  sources:
+  - title: 'Kevin Whitehead: Albert Ayler — Testifying the Breaking Point, Fresh Air/KERA'
+    url: https://www.keranews.org/2001-05-07/albert-ayler-testifying-the-breaking-point
+  - title: 'Richard Brody: The Jubilant Glory of Albert Ayler’s Revelations — The New Yorker'
+    url: https://www.newyorker.com/culture/the-front-row/the-jubilant-glory-of-albert-aylers-revelations

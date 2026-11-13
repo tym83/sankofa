@@ -1,0 +1,350 @@
+{
+  "reviewer": "rock",
+  "checkedAt": "2026-11-12",
+  "independentOf": "primary",
+  "hashSerialization": "SHA256 of UTF-8 JSON for complete parsed link; sort_keys=True, ensure_ascii=False, separators=(comma,colon)",
+  "reviews": [
+    {
+      "artist": "television",
+      "to": "root:the-velvet-underground",
+      "kind": "influence",
+      "claim": "The Velvet Underground were an early influence on Television guitarist Tom Verlaine.",
+      "verdict": "confirmed",
+      "linkSha256": "957234ebe9ec6c01954cbd819f5f3804d1cd178e857ceed768617d203c596173",
+      "evidence": [
+        {
+          "title": "Guitar World: A lesson in Tom Verlaine’s guitar style",
+          "url": "https://www.guitarworld.com/lessons/tom-verlaine-television-style",
+          "opened": true,
+          "assessment": "Guitar World explicitly identifies the Velvet Underground among Verlaine’s early guitar influences."
+        },
+        {
+          "title": "Will Hermes: Love Goes to Buildings on Fire — publisher excerpt",
+          "url": "https://us.macmillan.com/books/9780374533540/lovegoestobuildingsonfire/",
+          "opened": true,
+          "assessment": "Hermes describes Verlaine and Hell’s shared love of the Velvet Underground before Television."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "television",
+      "to": "root:john-coltrane",
+      "kind": "influence",
+      "claim": "John Coltrane was a formative influence on Tom Verlaine as a teenage saxophonist.",
+      "verdict": "confirmed",
+      "linkSha256": "e2dc1bc6eb01770fc1936721f9d8aa90e1f7d7de838cbdcfb9dae1b4a7c4dff3",
+      "evidence": [
+        {
+          "title": "Guitar World: The songs that made Tom Verlaine take the guitar seriously — recalling his 1981 interview",
+          "url": "https://www.guitarworld.com/artists/guitarists/the-songs-that-made-tom-verlaine-take-the-guitar-seriously",
+          "opened": true,
+          "assessment": "Verlaine’s recalled 1981 interview dates his Coltrane discovery and saxophone decision to about seventh grade."
+        },
+        {
+          "title": "Will Hermes: Love Goes to Buildings on Fire — publisher excerpt",
+          "url": "https://us.macmillan.com/books/9780374533540/lovegoestobuildingsonfire/",
+          "opened": true,
+          "assessment": "Hermes independently documents teenage saxophone study and devotion to Coltrane. The claim was narrowed to formative influence, avoiding an independently unconfirmed exact decision."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "television",
+      "to": "root:albert-ayler",
+      "kind": "influence",
+      "claim": "As a teenage saxophonist, Television’s Tom Verlaine immersed himself in Albert Ayler’s music.",
+      "verdict": "confirmed",
+      "linkSha256": "d0cbee1605a078d7630f5fb8148117403441ab857fcf9b61ced962de2110d94f",
+      "evidence": [
+        {
+          "title": "Patti Smith: He Was Tom Verlaine — The New Yorker",
+          "url": "https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine",
+          "opened": true,
+          "assessment": "Patti Smith recalls high-school saxophone and enthusiasm for Ayler."
+        },
+        {
+          "title": "Will Hermes: Love Goes to Buildings on Fire — publisher excerpt",
+          "url": "https://us.macmillan.com/books/9780374533540/lovegoestobuildingsonfire/",
+          "opened": true,
+          "assessment": "Hermes independently identifies Ayler among the saxophonists Verlaine worshipped."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "the-velvet-underground",
+      "to": "root:lou-reed",
+      "kind": "member",
+      "claim": "Singer, guitarist and songwriter Lou Reed was a founding member of the Velvet Underground.",
+      "verdict": "confirmed",
+      "linkSha256": "9a493ebe5f59738a35e9c50f7b26e14f77f83a686446774e486b65a3c234e01d",
+      "evidence": [
+        {
+          "title": "Aidan Levy: The Velvet Underground & Nico — Library of Congress",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf",
+          "opened": true,
+          "assessment": "Levy traces the Reed/Cale founding nucleus and Reed’s vocal, guitar and songwriting contributions."
+        },
+        {
+          "title": "Guitar World: Lou Reed — 1998 interview",
+          "url": "https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview",
+          "opened": true,
+          "assessment": "Guitar World’s 1998 introduction expressly says Reed started the group in 1965 and details his songs and guitar; the interview confirms his role."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "lou-reed",
+      "to": "card:rhythm-and-blues",
+      "kind": "influence",
+      "claim": "Lou Reed began recording as a teenager in the doo-wop tradition.",
+      "verdict": "confirmed",
+      "linkSha256": "69bb55cf27fea7c932bb43aaabd9e40bb0d655bbc76ca93c48fab731b93f4595",
+      "evidence": [
+        {
+          "title": "New York Public Library: Lou Reed Papers — Early Lou Reed",
+          "url": "https://libguides.nypl.org/loureed",
+          "opened": true,
+          "assessment": "NYPL’s archive documents the Jades single at age sixteen and Reed’s doo-wop devotion."
+        },
+        {
+          "title": "Mark Paytress: Lou Reed interviewed — MOJO",
+          "url": "https://www.mojo4music.com/articles/stories/lou-reed-interviewed/",
+          "opened": true,
+          "assessment": "Paytress independently describes teenage Reed recording two doo-wop sides."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "lou-reed",
+      "to": "root:ornette-coleman",
+      "kind": "influence",
+      "claim": "Ornette Coleman’s free jazz shaped Lou Reed’s approach to guitar in the Velvet Underground.",
+      "verdict": "confirmed",
+      "linkSha256": "5def50469c7d9c2ee31a73cafaec129864a02cc65d5ba194dcd17892503d10bf",
+      "evidence": [
+        {
+          "title": "Aidan Levy: The Velvet Underground & Nico — Library of Congress",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf",
+          "opened": true,
+          "assessment": "Levy describes Coleman’s imprint on Reed’s guitar in European Son."
+        },
+        {
+          "title": "Guitar World: Lou Reed — 1998 interview",
+          "url": "https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview",
+          "opened": true,
+          "assessment": "In the 1998 interview Reed names Coleman when asked directly about Velvet Underground guitar influences. Distinct interview from Levy’s quoted sources."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "ornette-coleman",
+      "to": "card:rhythm-and-blues",
+      "kind": "scene",
+      "claim": "Ornette Coleman gained his earliest performing experience in rhythm-and-blues bands.",
+      "verdict": "confirmed",
+      "linkSha256": "a0436b5248d79e9365ea3f7d6258a0dc46f614fb8f6f2152f474ff8f62e9e612",
+      "evidence": [
+        {
+          "title": "National Endowment for the Arts: Ornette Coleman",
+          "url": "https://www.arts.gov/honors/jazz/ornette-coleman",
+          "opened": true,
+          "assessment": "NEA explicitly locates earliest performing experience mostly in local R&B bands."
+        },
+        {
+          "title": "Dave Oliphant: Ornette Coleman — Texas State Historical Association",
+          "url": "https://www.tshaonline.org/handbook/entries/coleman-ornette",
+          "opened": true,
+          "assessment": "Oliphant details early blues and R&B employment with Samuels, Crayton and in Amarillo."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "ornette-coleman",
+      "to": "card:jazz",
+      "kind": "influence",
+      "claim": "Ornette Coleman developed a jazz approach that freed improvisation from fixed chord progressions.",
+      "verdict": "confirmed",
+      "linkSha256": "a71acd9dd6a761bcb9b2a542cfde462f953ac31fccc82697d849010967f389c5",
+      "evidence": [
+        {
+          "title": "National Endowment for the Arts: Ornette Coleman",
+          "url": "https://www.arts.gov/honors/jazz/ornette-coleman",
+          "opened": true,
+          "assessment": "NEA describes seeking an approach free of traditional chord patterns."
+        },
+        {
+          "title": "Dave Oliphant: Ornette Coleman — Texas State Historical Association",
+          "url": "https://www.tshaonline.org/handbook/entries/coleman-ornette",
+          "opened": true,
+          "assessment": "Oliphant explains harmolodics emphasizing melody/harmony over conventional chord structures."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "john-coltrane",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "John Coltrane’s early jazz apprenticeship included playing in Dizzy Gillespie’s band.",
+      "verdict": "confirmed",
+      "linkSha256": "fc8dfec902e4914eea5fc6207a89c35be50b750d3ed06b6cebdd60fb1d913297",
+      "evidence": [
+        {
+          "title": "John Coltrane: official biography",
+          "url": "https://www.johncoltrane.com/biography",
+          "opened": true,
+          "assessment": "Official biography places Gillespie’s ensemble within Coltrane’s early apprenticeship."
+        },
+        {
+          "title": "Blue Note Records: John Coltrane — biography",
+          "url": "https://www.bluenote.com/artist/john-coltrane/",
+          "opened": true,
+          "assessment": "Blue Note independently dates Gillespie employment to 1949–51."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "john-coltrane",
+      "to": "root:miles-davis",
+      "kind": "member",
+      "claim": "John Coltrane joined Miles Davis’s band in 1955, a formative step before leading his own groups.",
+      "verdict": "confirmed",
+      "linkSha256": "32f1a82bfd4a89ecbfbe188da1151d332319959abf39cfcb1819660de393e6aa",
+      "evidence": [
+        {
+          "title": "John Coltrane: official biography",
+          "url": "https://www.johncoltrane.com/biography",
+          "opened": true,
+          "assessment": "Official biography dates the Davis audition to 1955 and describes the subsequent musical development."
+        },
+        {
+          "title": "Blue Note Records: John Coltrane — biography",
+          "url": "https://www.bluenote.com/artist/john-coltrane/",
+          "opened": true,
+          "assessment": "Blue Note independently calls Davis the breakthrough and dates hiring to 1955."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "albert-ayler",
+      "to": "card:spirituals",
+      "kind": "influence",
+      "claim": "Albert Ayler’s improvisations drew on melodies shaped by spirituals.",
+      "verdict": "confirmed",
+      "linkSha256": "e0daf578f17268bbc46bb71c4c43f6af1606af9d427674df09721a0f9a8576f9",
+      "evidence": [
+        {
+          "title": "Kevin Whitehead: Albert Ayler — Testifying the Breaking Point, Fresh Air/KERA",
+          "url": "https://www.keranews.org/2001-05-07/albert-ayler-testifying-the-breaking-point",
+          "opened": true,
+          "assessment": "Whitehead documents church saxophone duets, the spirituals album Goin’ Home and sacred roots of tunes and improvisation."
+        },
+        {
+          "title": "Richard Brody: The Jubilant Glory of Albert Ayler’s Revelations — The New Yorker",
+          "url": "https://www.newyorker.com/culture/the-front-row/the-jubilant-glory-of-albert-aylers-revelations",
+          "opened": true,
+          "assessment": "Brody explicitly describes spirituals among the melodic forms from which Ayler’s improvisations launched. Claim remains limited to melodic lineage."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "miles-davis",
+      "to": "root:charlie-parker",
+      "kind": "influence",
+      "claim": "Playing alongside Charlie Parker helped shape the young Miles Davis’s musical voice.",
+      "verdict": "confirmed",
+      "linkSha256": "f05d752762fcfc527a71e7fd488faf2b25784c26b25608fda1471b1e0b7d495b",
+      "evidence": [
+        {
+          "title": "Blue Note Records: Miles Davis — biography",
+          "url": "https://www.bluenote.com/artist/miles-davis/",
+          "opened": true,
+          "assessment": "Blue Note describes young Davis falling under Parker’s musical spell and playing with him after the move to New York."
+        },
+        {
+          "title": "American Jazz Museum: Bird, Diz, and Miles — The Making of Miles Davis",
+          "url": "https://americanjazzmuseum.org/exhibits-events/bird-diz-and-miles-the-making-of-miles-davis/",
+          "opened": true,
+          "assessment": "The museum exhibition explicitly examines Parker’s role shaping Davis’s voice during formative years."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "miles-davis",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Miles Davis entered New York’s bebop scene in the mid-1940s.",
+      "verdict": "confirmed",
+      "linkSha256": "7c924dfed5f6913b319f34505e8a6ac81e10f4af2a1ccf4e01fc357efc5d4883",
+      "evidence": [
+        {
+          "title": "National Endowment for the Arts: Miles Davis",
+          "url": "https://www.arts.gov/honors/jazz/miles-davis",
+          "opened": true,
+          "assessment": "NEA dates New York arrival to 1944 and Parker/52nd Street work to 1945."
+        },
+        {
+          "title": "Blue Note Records: Miles Davis — biography",
+          "url": "https://www.bluenote.com/artist/miles-davis/",
+          "opened": true,
+          "assessment": "Blue Note independently describes his migration toward bebop and early New York club work."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    },
+    {
+      "artist": "charlie-parker",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Charlie Parker’s musical apprenticeship took place in Kansas City’s jazz bands and clubs.",
+      "verdict": "confirmed",
+      "linkSha256": "859ed957064333762715c33b83c6dafdcdc79a51d5efadb1533cd6461f66bc26",
+      "evidence": [
+        {
+          "title": "Ed Komara: Ko Ko — Library of Congress",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf",
+          "opened": true,
+          "assessment": "Komara identifies apprenticeship in Kansas City bands."
+        },
+        {
+          "title": "C.J. Janovy: Kansas City’s Charlie Parker History Tour — KCUR",
+          "url": "https://www.kcur.org/arts-life/2016-08-29/kansas-citys-charlie-parker-history-tour-requires-a-guide-and-imagination",
+          "opened": true,
+          "assessment": "Janovy interviews historian Chuck Haddix about early local club jobs and Buster Smith’s onstage instruction."
+        }
+      ],
+      "translation": "English and Russian convey the same concrete relation; Russian reads naturally.",
+      "story": "Two sentences, grounded in the artist’s own links."
+    }
+  ],
+  "corrections": [
+    "Television→Velvet Underground: replaced Le Monde obituary with Hermes publisher excerpt to independently substantiate early chronology.",
+    "Television→Coltrane: narrowed decision-to-start-sax claim to formative teenage influence supported independently by both sources."
+  ],
+  "metadata": "Names, Cyrillic aliases, life years and locations checked against the opened institutional biographies, archive and essays. Ornette sources differ on birth day but both support 1930; no day encoded. Coordinates match the named cities. No unsupported biographical detail added to stories.",
+  "codeReview": "pkg/roots interpolation and collaboration kind acceptance is consistent with the format; interpolation now requires a nonblank what, matching cover/sample. TestBorrowingKinds exercises accepted kinds and rejection of missing/whitespace-only descriptions."
+}

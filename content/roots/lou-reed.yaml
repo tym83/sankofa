@@ -1,0 +1,36 @@
+id: lou-reed
+name: Lou Reed
+nameRu: Лу Рид
+aliases:
+- лу рид
+- льюис аллан рид
+years:
+- 1942
+- 2013
+place:
+  name: Brooklyn
+  lat: 40.6782
+  lon: -73.9442
+genre: Art rock
+genreRu: арт-рок
+story: Lou Reed began recording doo-wop as a teenager. Later, Ornette Coleman’s free jazz helped shape his approach to the guitar.
+storyRu: Лу Рид начал записывать ду-воп ещё подростком. Позднее фри-джаз Орнетта Коулмана повлиял на его подход к гитаре.
+links:
+- to: card:rhythm-and-blues
+  kind: influence
+  claim: Lou Reed began recording as a teenager in the doo-wop tradition.
+  claimRu: Лу Рид начал записываться ещё подростком, обратившись к традиции ду-вопа.
+  sources:
+  - title: 'New York Public Library: Lou Reed Papers — Early Lou Reed'
+    url: https://libguides.nypl.org/loureed
+  - title: 'Mark Paytress: Lou Reed interviewed — MOJO'
+    url: https://www.mojo4music.com/articles/stories/lou-reed-interviewed/
+- to: root:ornette-coleman
+  kind: influence
+  claim: Ornette Coleman’s free jazz shaped Lou Reed’s approach to guitar in the Velvet Underground.
+  claimRu: Фри-джаз Орнетта Коулмана повлиял на подход Лу Рида к игре на гитаре в The Velvet Underground.
+  sources:
+  - title: 'Aidan Levy: The Velvet Underground & Nico — Library of Congress'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+  - title: 'Guitar World: Lou Reed — 1998 interview'
+    url: https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview
