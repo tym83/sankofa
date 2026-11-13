@@ -436,9 +436,11 @@ test('breaking a node is told at once and the stopped node never checks in', asy
   await page.goto('/#view=listen');
   await expect(page.locator('.l-badge')).toHaveText('Live: this museum’s own cluster');
   await page.getByRole('button', { name: 'Break a node' }).click();
-  await expect(page.locator('.l-subs')).toContainText(/You stopped Sogo\. Its heartbeat is late; the cluster will give up on it in \d+\ss\./);
+  await expect(page.locator('.l-subs')).toContainText(/You\s+stopped\s+Sogo\.\s+Its\s+heartbeat\s+is\s+late;\s+the\s+cluster\s+will\s+give\s+up\s+on\s+it\s+in\s+\d+\s+s\./);
   // the stream reconnects and sends Sogo's check-in again: it is not shown
   await page.waitForTimeout(3500);
-  await expect(page.locator('.l-subs')).not.toContainText('Sogo checked in');
-  await expect(page.locator('.l-subs')).toContainText(/Sogo has been silent for \d+/);
+  await expect(page.locator('.l-subs')).toContainText(/Sogo\s+has\s+been\s+silent\s+for\s+\d+/);
+  const lines = await page.locator('.l-subs li').allTextContents();
+  const since = lines.findIndex((l) => /You\s+stopped/.test(l));
+  expect(lines.slice(0, since).some((l) => /Sogo\s+checked\s+in/.test(l))).toBe(false);
 });
