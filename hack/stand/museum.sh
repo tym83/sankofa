@@ -18,4 +18,13 @@ img=$(hack/stand/push.sh museum dist/museum.tar 2>/dev/null | tail -1)
 sed -e "s#MUSEUM_IMAGE#$img#" -e "s#MUSEUM_HOST#${MUSEUM_HOST:-museum.sankofa.workshop.aenix.io}#g" deploy/museum.yaml > dist/museum.yaml
 km apply -f dist/museum.yaml >/dev/null
 km -n sankofa-museum rollout status deploy/museum --timeout=180s
-echo "$img"
+echo "$img" >&2
+# Prove the public museum now serves this very build.
+want=$(ls web/dist/assets/index-*.js | xargs -n1 basename)
+for _ in $(seq 1 20); do
+  got=$(curl -sk "https://${MUSEUM_HOST:-museum.sankofa.workshop.aenix.io}/" | grep -o 'assets/index-[^"]*\.js' | head -1 | xargs -n1 basename 2>/dev/null || true)
+  [[ $got == "$want" ]] && { echo "served build $got"; exit 0; }
+  sleep 3
+done
+echo "the museum still serves $got, not $want" >&2
+exit 1
