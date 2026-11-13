@@ -111,3 +111,17 @@ describe('one room state', () => {
     expect(mend({ brokenAt: t0 }, t0 + 2000).mendedAt).toBeUndefined();
   });
 });
+
+describe('one clock for a stopped node', () => {
+  it('counts whole seconds so late + left is always the grace, and down comes exactly at the end', () => {
+    const base = demoVoices(0);
+    for (const ms of [0, 999, 1000, 5500, 11000, 11999]) {
+      const v = simulate(base, { brokenAt: 0 }, ms).find((x) => x.broken)!;
+      expect(v.alive).toBe(true);
+      expect((v.lateSeconds ?? 0) + (v.downIn ?? 0)).toBe(GRACE);
+    }
+    const down = simulate(base, { brokenAt: 0 }, GRACE * 1000).find((x) => x.broken)!;
+    expect(down.alive).toBe(false);
+    expect(down.downIn).toBe(0);
+  });
+});

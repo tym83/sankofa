@@ -218,8 +218,10 @@ export function simulate(base: Voice[], sim: Sim, now: number): SimVoice[] {
   if (sim.brokenAt !== undefined && out[tg.broken]) {
     const v = out[tg.broken];
     const s = Math.max(0, (now - sim.brokenAt) / 1000);
+    // One whole-second clock for every word about this node: late + left = GRACE.
+    const e = Math.floor(s);
     const total = v.ready + v.notReady;
-    Object.assign(v, { broken: true, lateSeconds: Math.floor(s), downIn: Math.max(0, Math.ceil(GRACE - s)), late: 0.3 + s / GRACE, alive: s < GRACE, ready: 0, notReady: total });
+    Object.assign(v, { broken: true, lateSeconds: e, downIn: Math.max(0, GRACE - e), late: 0.3 + s / GRACE, alive: e < GRACE, ready: 0, notReady: total });
     // Shortly after the node is declared down its pods start again on the
     // surviving nodes (in a real cluster: after the eviction timeout).
     if (s >= GRACE + MOVE_AFTER) {

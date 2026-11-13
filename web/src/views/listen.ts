@@ -472,9 +472,12 @@ export class Listen {
       this.current = this.cycle % 2 === 0 ? exchange(voices, this.cycle / 2) : null;
       const ex = this.current;
       if (ex) {
-        const v = voices.find((x) => x.node === ex.node);
         const at = t - this.ens!.ctx.currentTime;
-        window.setTimeout(() => this.say({ kind: 'call', drum: this.drumOf(ex.node), ready: v?.ready ?? 0, silent: v?.notReady ?? 0 }), Math.max(0, at * 1000));
+        // Counted when the line is shown, from the state the drum label shows.
+        window.setTimeout(() => {
+          const v = this.source.voices.find((x) => x.node === ex.node);
+          this.say({ kind: 'call', drum: this.drumOf(ex.node), ready: v?.ready ?? 0, silent: v?.notReady ?? 0 });
+        }, Math.max(0, at * 1000));
       }
     }
     const ex = this.current;
@@ -545,6 +548,12 @@ export class Listen {
     const small = this.svg.clientWidth > 0 && this.svg.clientWidth < 520;
     const seen = new Set<string>();
     const n = Math.max(1, voices.length);
+    // Crop the picture to what is drawn, so the call row sits right under it.
+    const ys = voices.map((_, k) => 300 + Math.sin(nodeAngle(k, n)) * 222);
+    const top = Math.min(300 - 180, ...ys.map((y) => y - 52));
+    const bottom = Math.max(300 + 180, ...ys.map((y) => y + 84));
+    const vb = `-24 ${top.toFixed(0)} 648 ${(bottom - top).toFixed(0)}`;
+    if (this.svg.getAttribute('viewBox') !== vb) this.svg.setAttribute('viewBox', vb);
     voices.forEach((v, k) => {
       seen.add(v.node);
       let g = this.nodeEls.get(v.node);
@@ -772,7 +781,8 @@ export class Listen {
     this.callRow.replaceChildren(
       h('span.cl', {}, t('Call')),
       h('span.to', {}, `→ ${drumName(Math.max(0, this.source.voices.findIndex((v) => v.node === node)))}`),
-      ...ex.slots.map((ok) => h(`i.slot${ok ? '.ok' : '.gap'}`)),
+      // The dots count from the state the drum label shows right now.
+      ...(exchange(this.source.voices.filter((v) => v.node === node), 0)?.slots ?? ex.slots).map((ok) => h(`i.slot${ok ? '.ok' : '.gap'}`)),
     );
   }
 
@@ -815,6 +825,11 @@ export class Listen {
       const k = this.source.voices.findIndex((x) => x.broken);
       const v = this.source.voices[k];
       if (v?.broken && v.alive) ll.textContent = subtitle({ kind: 'late', drum: ll.dataset.drum!, late: v.lateSeconds ?? 0, s: v.downIn ?? 0 }, lang());
+      // The moment the drum reads "declared down", the countdown line stops counting.
+      else if (v?.broken) {
+        ll.remove();
+        this.liveLate = undefined;
+      }
     }
   }
 }
