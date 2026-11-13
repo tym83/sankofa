@@ -49,3 +49,60 @@ export function mediaSrc(app: Pick<App, 'media'>, file: string, want: number[] =
   const srcset = [...have.map((w) => `media/w${w}/${file} ${w}w`), `${orig} ${origW}w`].join(', ');
   return { src: `media/w${pickW}/${file}`, srcset };
 }
+
+/**
+ * A picture that is never an empty frame: a small copy shows first, softly
+ * blurred, and the full one replaces it once loaded. `ready` resolves when
+ * something is on screen. With `near`, loading starts only when the element
+ * comes within a few screens.
+ */
+export function progressive(
+  app: Pick<App, 'media'>,
+  file: string,
+  opts: { want?: number; sizes?: string; alt?: string; cls?: string; near?: boolean } = {},
+): { img: HTMLImageElement; ready: Promise<void> } {
+  const img = document.createElement('img');
+  img.alt = opts.alt ?? '';
+  img.decoding = 'async';
+  if (opts.cls) img.className = opts.cls;
+  const small = variants[file]?.[0];
+  const full = mediaSrc(app, file, [opts.want ?? 960]);
+  let resolve!: () => void;
+  const ready = new Promise<void>((r) => (resolve = r));
+  const start = () => {
+    if (small && full.srcset) {
+      img.classList.add('lq');
+      img.src = `media/w${small}/${file}`;
+      img.decode().then(resolve, resolve);
+      const hi = new Image();
+      hi.decoding = 'async';
+      if (opts.sizes) hi.sizes = opts.sizes;
+      hi.srcset = full.srcset;
+      hi.src = full.src;
+      hi.decode().then(
+        () => {
+          if (opts.sizes) img.sizes = opts.sizes;
+          img.srcset = full.srcset!;
+          img.src = full.src;
+          img.classList.remove('lq');
+        },
+        () => img.classList.remove('lq'),
+      );
+    } else {
+      img.src = full.src;
+      img.decode().then(resolve, resolve);
+    }
+  };
+  if (opts.near && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(
+      (es) => {
+        if (!es.some((e) => e.isIntersecting)) return;
+        io.disconnect();
+        start();
+      },
+      { rootMargin: '250% 0px' },
+    );
+    queueMicrotask(() => io.observe(img));
+  } else start();
+  return { img, ready };
+}

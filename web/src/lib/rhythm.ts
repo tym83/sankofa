@@ -149,7 +149,14 @@ export interface SimVoice extends Voice {
   downIn?: number;
   broken?: boolean;
   failing?: number;
+  /** pods this node took over from a node declared down */
+  adopted?: number;
+  /** a node declared down whose pods have moved away */
+  evicted?: boolean;
 }
+
+/** Seconds after "declared down" when the pods are moved to surviving nodes. */
+export const MOVE_AFTER = 3;
 
 /** Which node the reader's actions touch: never the first (the control plane). */
 export function simTargets(n: number): { broken: number; failing: number } {
@@ -170,6 +177,17 @@ export function simulate(base: Voice[], sim: Sim, now: number): SimVoice[] {
     const s = Math.max(0, (now - sim.brokenAt) / 1000);
     const total = v.ready + v.notReady;
     Object.assign(v, { broken: true, lateSeconds: Math.floor(s), downIn: Math.max(0, Math.ceil(GRACE - s)), late: 0.3 + s / GRACE, alive: s < GRACE, ready: 0, notReady: total });
+    // Shortly after the node is declared down its pods start again on the
+    // surviving nodes (in a real cluster: after the eviction timeout).
+    if (s >= GRACE + MOVE_AFTER) {
+      const survivors = out.filter((x, i) => i !== tg.broken && x.alive);
+      survivors.forEach((x, i) => {
+        const n = Math.floor(total / survivors.length) + (i < total % survivors.length ? 1 : 0);
+        x.ready += n;
+        x.adopted = n;
+      });
+      if (survivors.length) Object.assign(v, { notReady: 0, evicted: true });
+    }
   }
   if (sim.failingAt !== undefined && out[tg.failing] && !out[tg.failing].broken) {
     const v = out[tg.failing];
@@ -179,4 +197,38 @@ export function simulate(base: Voice[], sim: Sim, now: number): SimVoice[] {
     v.failing = n;
   }
   return out;
+}
+
+export interface Pod {
+  /** stable across moves: "<home node>#<n>" */
+  id: string;
+  /** index of the node it is on now */
+  at: number;
+  ok: boolean;
+}
+
+/**
+ * Every pod as a dot, so a move can be drawn: pods keep their identity when
+ * they leave a node declared down for the surviving ones.
+ */
+export function podsOf(voices: SimVoice[]): Pod[] {
+  const out: Pod[] = [];
+  const movers: Pod[] = [];
+  voices.forEach((v, k) => {
+    const own = v.ready - (v.adopted ?? 0) + v.notReady;
+    const ownTotal = v.evicted ? 0 : own;
+    if (v.evicted) {
+      // its pods are listed with the nodes that adopted them
+      return;
+    }
+    for (let i = 0; i < ownTotal; i++) out.push({ id: `${v.node}#${i}`, at: k, ok: i < v.ready - (v.adopted ?? 0) });
+  });
+  const gone = voices.findIndex((v) => v.evicted);
+  if (gone >= 0) {
+    let n = 0;
+    voices.forEach((v, k) => {
+      for (let i = 0; i < (v.adopted ?? 0); i++) movers.push({ id: `${voices[gone].node}#${n++}`, at: k, ok: true });
+    });
+  }
+  return [...out, ...movers];
 }

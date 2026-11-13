@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { BELL, PARTS, demoLeases, demoVoices, drumName, exchange, parsePulse, playing, simulate, strokes } from '../src/lib/rhythm';
+import { BELL, GRACE, MOVE_AFTER, PARTS, demoLeases, demoVoices, drumName, exchange, parsePulse, playing, podsOf, simulate, strokes } from '../src/lib/rhythm';
 
 describe('rhythm', () => {
   it('the bell plays seven strokes in twelve pulses', () => {
@@ -63,6 +63,18 @@ describe('interventions and names', () => {
     expect(later[1].alive).toBe(false);
     expect(later[1].downIn).toBe(0);
     expect(simulate(base, {}, t0)[1]).toEqual(base[1]);
+  });
+
+  it('after the node is declared down its pods move to the surviving nodes, keeping who they are', () => {
+    const t0 = 1_000_000;
+    const before = podsOf(simulate(base, {}, t0));
+    const moved = simulate(base, { brokenAt: t0 }, t0 + (GRACE + MOVE_AFTER + 1) * 1000);
+    expect(moved[1].evicted).toBe(true);
+    expect(moved[0].adopted! + moved[2].adopted!).toBe(base[1].ready + base[1].notReady);
+    const after = podsOf(moved);
+    expect(after).toHaveLength(before.length);
+    expect(new Set(after.map((p) => p.id))).toEqual(new Set(before.map((p) => p.id)));
+    expect(after.filter((p) => p.id.startsWith(`${base[1].node}#`)).every((p) => p.at !== 1 && p.ok)).toBe(true);
   });
 
   it('fails two pods on another node', () => {

@@ -5,7 +5,7 @@ import type { App } from '../app';
 import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, pick, t } from '../lib/i18n';
-import { BELL, PARTS, PULSES, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, simulate, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
+import { BELL, PARTS, PULSES, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, simulate, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
 const PULSE = 0.2; // seconds per pulse: one 12/8 cycle is 2.4 s
 const AHEAD = 0.15;
@@ -210,6 +210,8 @@ export class Listen {
   private button: HTMLButtonElement;
   private svg: SVGSVGElement;
   private gNodes: SVGGElement;
+  private gPods = document.createElementNS(NS, 'g');
+  private moveNote: HTMLElement;
   private hand: SVGLineElement;
   private bellDots: SVGCircleElement[] = [];
   private callRow: HTMLElement;
@@ -221,7 +223,7 @@ export class Listen {
     this.status = h('p.l-status', { 'aria-live': 'polite' });
     this.button = h('button.btn.primary.l-start', { onclick: () => this.toggle() }, t('Start listening')) as HTMLButtonElement;
     this.svg = document.createElementNS(NS, 'svg');
-    this.svg.setAttribute('viewBox', '0 0 600 600');
+    this.svg.setAttribute('viewBox', '-24 -24 648 648');
     this.svg.setAttribute('class', 'l-ring');
     this.svg.setAttribute('role', 'img');
     this.svg.setAttribute('aria-label', t('The bell timeline in the centre and one drum per node around it'));
@@ -255,6 +257,8 @@ export class Listen {
     );
     const talk = app.set.get('talking-drums') ? `[[talking-drums|${t('talking drums')}]]` : t('talking drums');
     const spirit = app.set.get('spirituals') ? `[[spirituals|${t('the spirituals')}]]` : t('the spirituals');
+    const ctl = h('div.l-ctl', {}, h('div.l-controls', {}, this.button, this.badge), this.demoRow, this.status);
+    const ctlSlot = h('div.l-ctl-slot');
     const text = h(
       'div.l-text',
       {},
@@ -268,9 +272,7 @@ export class Listen {
           ru: 'Каждая машина в кластере музея играет на барабане, а колокол держит для всех общий ритм. Пока машина здорова, её барабан идёт вровень с колоколом; когда её сердцебиение запаздывает, барабан сбивается; когда машина останавливается, в ансамбле слышна дыра. Через такт кластер зовёт, и программы, работающие на машине, откликаются. Программа, которая не может ответить, оставляет тишину — и её слышно.',
         }),
       ),
-      h('div.l-controls', {}, this.button, this.badge),
-      this.demoRow,
-      this.status,
+      ctlSlot,
       h(
         'p.l-lede',
         {},
@@ -291,7 +293,19 @@ export class Listen {
         h('li', {}, h('i.k-gap'), pick({ en: 'Empty: a program was called and stayed silent', ru: 'Пунктир: программу позвали, а она промолчала' })),
       ),
     );
-    const stage = h('div.l-stage', {}, this.svg, this.callRow);
+    this.moveNote = h(
+      'p.l-move',
+      { hidden: true },
+      pick({
+        en: 'Its pods have started again on the nodes still playing. In a real cluster Kubernetes waits for a timeout first: by default five minutes after a node stops answering.',
+        ru: 'Его поды снова запустились на узлах, которые продолжают играть. В настоящем кластере Kubernetes сначала ждёт тайм-аут: по умолчанию пять минут после того, как узел перестал отвечать.',
+      }),
+    );
+    const stage = h('div.l-stage', {}, this.svg, this.callRow, this.moveNote);
+    // On phones the controls sit under the drums, so pressing them shows what happens.
+    const place = () => (window.innerWidth <= 900 ? stage.append(ctl) : ctlSlot.append(ctl));
+    place();
+    window.matchMedia('(max-width: 900px)').addEventListener('change', place);
     const bar = h('header.d-bar', {}, h('span.d-title', {}, t('The listening room')), h('button.icon-btn', { 'aria-label': t('Leave the listening room'), onclick: () => this.onClose?.() }, svgIcon('close')));
     this.el = h('section.listen', { 'aria-label': t('The listening room'), tabindex: '-1' }, bar, h('div.l-wrap', {}, text, stage));
     this.el.addEventListener('keydown', (e) => {
@@ -432,6 +446,8 @@ export class Listen {
     svg.append(label);
     this.gNodes.setAttribute('class', 'l-nodes');
     svg.append(this.gNodes);
+    this.gPods.setAttribute('class', 'l-pods');
+    svg.append(this.gPods);
     this.setHand(0);
   }
 
@@ -472,9 +488,11 @@ export class Listen {
       g.querySelector('text.st')!.textContent = v.broken
         ? v.alive
           ? pick({ en: `heartbeat ${v.lateSeconds} s late · down in ${v.downIn} s`, ru: `сердцебиение опаздывает на ${v.lateSeconds} с · выбывает через ${v.downIn} с` })
-          : pick({ en: 'declared down · pods silent', ru: 'объявлен выбывшим · поды молчат' })
+          : v.evicted
+            ? pick({ en: 'down · its pods moved away', ru: 'выбыл · его поды переехали' })
+            : pick({ en: 'declared down · pods silent', ru: 'объявлен выбывшим · поды молчат' })
         : v.alive
-          ? t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
+          ? (v.adopted ? pick({ en: `took over ${v.adopted} · `, ru: `принял ${v.adopted} · ` }) : '') + t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
           : t('silent');
       g.classList.toggle('broken', !!v.broken);
       // The lateness arc: how far into its lease the node is.
@@ -484,12 +502,50 @@ export class Listen {
       const path = `M0,${-r} A${r},${r} 0 ${ang > Math.PI ? 1 : 0} 1 ${(Math.sin(ang) * r).toFixed(1)},${(-Math.cos(ang) * r).toFixed(1)}`;
       g.querySelector('path.late')!.setAttribute('d', path);
     });
+    this.renderPods(voices);
     for (const [node, g] of this.nodeEls) {
       if (!seen.has(node)) {
         g.remove();
         this.nodeEls.delete(node);
       }
     }
+  }
+
+  private podEls = new Map<string, SVGCircleElement>();
+
+  /** Every pod as a dot beside its node: grey when silent; dots travel when pods move. */
+  private renderPods(voices: SimVoice[]): void {
+    const pods = podsOf(voices);
+    const n = Math.max(1, voices.length);
+    const slot = new Map<number, number>();
+    const seen = new Set<string>();
+    for (const p of pods) {
+      seen.add(p.id);
+      let c = this.podEls.get(p.id);
+      if (!c) {
+        c = document.createElementNS(NS, 'circle');
+        c.setAttribute('r', '5');
+        this.gPods.append(c);
+        this.podEls.set(p.id, c);
+      }
+      const j = slot.get(p.at) ?? 0;
+      slot.set(p.at, j + 1);
+      const a = (p.at / n) * Math.PI * 2 - Math.PI / 2 + Math.PI / n;
+      // a little arc of dots on the outer side of the node
+      const spread = (j - 4) * 0.075;
+      const x = 300 + Math.cos(a + spread * 1.6) * 166;
+      const y = 300 + Math.sin(a + spread * 1.6) * 166;
+      c.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+      c.setAttribute('class', `l-pod${p.ok ? '' : ' off'}`);
+    }
+    for (const [id, c] of this.podEls) {
+      if (!seen.has(id)) {
+        c.remove();
+        this.podEls.delete(id);
+      }
+    }
+    const moved = voices.some((v) => v.evicted);
+    this.moveNote.hidden = !moved;
   }
 
   private flash(node: string): void {

@@ -4729,3 +4729,132 @@ html:lang(ru) .opener p.lede {
     color: rgba(242, 233, 216, 0.45);
   }
 }
+img.lq {
+  filter: blur(10px) saturate(0.9);
+  transition: filter 0.6s;
+}
+img {
+  transition: filter 0.6s;
+}
+
+/* Plates: a frame of known size, the picture visible from the start and
+   unveiled the rest of the way as the reader scrolls. */
+.sig-mat {
+  width: 100%;
+  height: calc(100svh - var(--nav-h) - 80px);
+  display: grid;
+  place-items: center;
+  background: #1b1822;
+  clip-path: inset(0 0 calc((1 - var(--p)) * 38%) 0 round 2px);
+  transform: scale(calc(0.94 + var(--p) * 0.06));
+}
+.sig-mat img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  background: #efe7d6;
+  padding: clamp(10px, 1.4vw, 20px);
+}
+@media (max-width: 760px) {
+  .sig-mat {
+    height: 52svh;
+  }
+}
+
+/* ---------- listening room: pods, one viewport, phones ---------- */
+.l-pod {
+  fill: #f2e9d8;
+  transition: transform 1.4s var(--ease), fill 0.4s;
+}
+.l-pod.off {
+  fill: rgba(150, 150, 160, 0.45);
+}
+.l-move {
+  max-width: 46ch;
+  margin: 6px auto 0;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: #f0d47a;
+}
+@media (min-width: 901px) {
+  .listen .l-wrap {
+    min-height: 100svh;
+    padding-bottom: 20px;
+  }
+  .listen .l-stage {
+    position: sticky;
+    top: calc(var(--nav-h) + 8px);
+    max-height: calc(100svh - var(--nav-h) - 24px);
+    align-self: start;
+    margin-top: 8px;
+  }
+  .listen .l-ring {
+    max-height: calc(100svh - var(--nav-h) - 130px);
+  }
+}
+@media (max-width: 900px) {
+  .listen .l-stage {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: linear-gradient(#0b0b16 85%, rgba(11, 11, 22, 0));
+    padding: calc(var(--nav-h) - 8px) 0 8px;
+    margin: 0 -12px;
+  }
+  .listen .l-ring {
+    width: auto;
+    height: 42svh;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .listen .l-call {
+    justify-content: center;
+    min-height: 26px;
+  }
+  .listen .l-move {
+    font-size: 12px;
+    padding: 0 12px;
+  }
+  .listen .l-wrap {
+    padding-top: 0;
+  }
+  .listen .d-bar {
+    z-index: 5;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .l-pod {
+    transition: none;
+  }
+}
+@media (max-width: 900px) {
+  .listen .l-stage {
+    background: #0b0b16;
+    box-shadow: 0 18px 24px -12px #0b0b16;
+  }
+  .listen .l-ring {
+    height: 36svh;
+  }
+  .l-ctl {
+    padding: 4px 12px 0;
+  }
+  .l-ctl .l-controls {
+    justify-content: center;
+  }
+  .l-ctl .l-start {
+    padding: 0.6em 1.3em;
+    font-size: 15px;
+  }
+  .l-ctl .l-demo {
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .l-ctl .l-status {
+    text-align: center;
+    margin: 8px 0 0;
+  }
+}

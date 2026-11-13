@@ -6,7 +6,7 @@ import type { Card } from '../lib/types';
 import { formatYears } from '../lib/cards';
 import { h, reducedMotion } from '../lib/dom';
 import { lang, pick, t } from '../lib/i18n';
-import { mediaSrc } from '../lib/media';
+import { progressive } from '../lib/media';
 
 type Kind = 'counter' | 'plate' | 'insert' | 'quote';
 
@@ -84,7 +84,7 @@ function counter(n: number, c: Card, link: HTMLElement, era: string): HTMLElemen
 /** A plate on a paper mat, drawn in from the top as the reader scrolls. */
 function plate(app: App, c: Card, link: HTMLElement, era: string): HTMLElement {
   const m = c.media!.find((x) => x.type === 'image')!;
-  const image = h('img', { ...mediaSrc(app, m.file, [960, 1600]), sizes: '(max-width: 720px) 92vw, 70vw', alt: m.caption ?? c.title, loading: 'lazy', decoding: 'async' });
+  const image = progressive(app, m.file, { want: 1600, sizes: '(max-width: 720px) 92vw, 60vw', alt: m.caption ?? c.title, near: true }).img;
   const mat = h('div.sig-mat', {}, image);
   const sticky = h(
     'div.sig-sticky',
@@ -111,7 +111,7 @@ function plate(app: App, c: Card, link: HTMLElement, era: string): HTMLElement {
 /** An object you insert: the cartridge slides into its slot as you scroll. */
 function insert(app: App, c: Card, link: HTMLElement, era: string): HTMLElement {
   const m = c.media!.find((x) => x.type === 'image')!;
-  const cart = h('div.sig-cart', {}, h('img', { ...mediaSrc(app, m.file, [960]), alt: m.caption ?? c.title, loading: 'lazy', decoding: 'async' }));
+  const cart = h('div.sig-cart', {}, progressive(app, m.file, { want: 960, sizes: '420px', alt: m.caption ?? c.title, near: true }).img);
   const slot = h('div.sig-slot', { 'aria-hidden': 'true' }, h('span', {}, pick({ en: 'POWER', ru: 'ПИТАНИЕ' })));
   const done = h('div.sig-done', { 'aria-hidden': 'true' }, pick({ en: '▶ READY', ru: '▶ ГОТОВО' }));
   const el = h(

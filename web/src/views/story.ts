@@ -9,7 +9,7 @@ import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { eraColor, isNonPlace } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
-import { mediaSrc } from '../lib/media';
+import { mediaSrc, progressive } from '../lib/media';
 import { chapterCoda, signature, SIGNATURE_CARD } from './signature';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
 import { Timeline } from './timeline';
@@ -200,7 +200,7 @@ function chapter(app: App, ch: Chapter): HTMLElement {
       `div.step${i === 0 ? '.first' : ''}`,
       { 'data-step': String(i), lang: ch.textLang && ch.textLang !== lang() ? ch.textLang : undefined },
       // On phones the picture sits above the text instead of under it.
-      img ? h('figure.step-fig', {}, h('img', { ...mediaSrc(app, img.file, [960]), sizes: '92vw', alt: img.caption ?? stepImage[i]!.title, loading: 'lazy', decoding: 'async' }), h('figcaption.credit', {}, img.caption ? img.caption + ' · ' : '', img.credit, ' · ', img.license)) : null,
+      img ? h('figure.step-fig', {}, progressive(app, img.file, { want: 960, sizes: '92vw', alt: img.caption ?? stepImage[i]!.title, near: true }).img, h('figcaption.credit', {}, img.caption ? img.caption + ' · ' : '', img.credit, ' · ', img.license)) : null,
       h('div.where', {}, where),
       h('p', {}, richText(app, s)),
     );
@@ -275,21 +275,28 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
   const chapterCards = [...new Set(ch.cards.map((id) => app.set.forEdition(id, app.edition)).filter(Boolean) as Card[])];
   const phone = () => window.innerWidth < 720;
 
+  const ready = new Map<string, Promise<void>>();
   const figure = (c: Card): HTMLElement | null => {
     const m = c.media?.find((x) => x.type === 'image');
     if (!m) return null;
     if (!figures.has(c.id)) {
-      const f = h(
-        'figure',
-        {},
-        h('img', { ...mediaSrc(app, m.file, [960]), sizes: '58vw', alt: m.caption ?? c.title, decoding: 'async' }),
-        h('figcaption.credit', {}, h('b', {}, m.caption ?? c.title), m.credit, ' · ', m.license),
-      );
+      const p = progressive(app, m.file, { want: 960, sizes: '58vw', alt: m.caption ?? c.title });
+      const f = h('figure', {}, p.img, h('figcaption.credit', {}, h('b', {}, m.caption ?? c.title), m.credit, ' · ', m.license));
+      ready.set(c.id, p.ready);
       figures.set(c.id, f);
       imgHost.append(f);
     }
     return figures.get(c.id)!;
   };
+  // Pictures of this chapter start loading two screens ahead.
+  new IntersectionObserver(
+    (es, io) => {
+      if (!es.some((e) => e.isIntersecting) || phone()) return;
+      io.disconnect();
+      stepImage.forEach((c) => c && figure(c));
+    },
+    { rootMargin: '200% 0px' },
+  ).observe(el);
 
   const ensureMap = () => {
     if (map) return map;
@@ -310,19 +317,18 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
     if (withImage && !phone()) {
       // Cross-fade only once the picture is decoded: never a black void.
       const f = figure(withImage)!;
-      const img = f.querySelector('img')!;
       const show = () => {
         if (current !== i) return;
         figures.forEach((x) => x.classList.toggle('on', x === f));
         graphic.classList.add('show-img');
       };
-      img.decode().then(show, show);
+      void ready.get(withImage.id)!.then(show);
     } else {
       graphic.classList.remove('show-img');
     }
     // Get the next picture ready while the reader is still on this step.
     const next = stepImage.slice(i + 1).find(Boolean);
-    if (next && !phone()) void figure(next)?.querySelector('img')?.decode().catch(() => undefined);
+    if (next && !phone()) figure(next);
     const m = ensureMap();
     m.ready.then(() => {
       const lit = new Set(sc.map((c) => c.id));
