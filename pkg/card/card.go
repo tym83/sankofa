@@ -64,6 +64,22 @@ const (
 // MaxBodyWords keeps cards short: enough to inspire, not an encyclopedia entry.
 const MaxBodyWords = 130
 
+// MaxExplainerWords is the room for cards that must first explain what
+// something is — a genre, an instrument, a script, a language — before the
+// story that makes it memorable.
+const MaxExplainerWords = 220
+
+// Explainer kinds open with what the thing is, then tell the story.
+var Explainer = map[string]bool{KindGenre: true, KindInstrument: true, KindScript: true, KindLanguage: true}
+
+// MaxWords is the body limit for a card's kind.
+func MaxWords(kind string) int {
+	if Explainer[kind] {
+		return MaxExplainerWords
+	}
+	return MaxBodyWords
+}
+
 // Place is a point on the atlas.
 type Place struct {
 	Name string  `json:"name"`
@@ -382,8 +398,8 @@ func (s *Set) Validate() []error {
 				bad(c, "source without title")
 			}
 		}
-		if n := len(strings.Fields(c.PlainBody())); n == 0 || n > MaxBodyWords {
-			bad(c, "body has %d words, want 1..%d", n, MaxBodyWords)
+		if n := len(strings.Fields(c.PlainBody())); n == 0 || n > MaxWords(c.Kind) {
+			bad(c, "body has %d words, want 1..%d", n, MaxWords(c.Kind))
 		}
 		for _, l := range c.Links() {
 			if _, ok := s.ByID[l.Target]; !ok {
@@ -400,8 +416,8 @@ func (s *Set) Validate() []error {
 			if strings.TrimSpace(t.Title) == "" || strings.TrimSpace(t.Wow) == "" || strings.TrimSpace(t.Body) == "" {
 				bad(c, "%s translation needs title, wow and body", lang)
 			}
-			if n := len(strings.Fields(tc.PlainBody())); n > MaxBodyWords*13/10 {
-				bad(c, "%s translation has %d words, want at most %d", lang, n, MaxBodyWords*13/10)
+			if n := len(strings.Fields(tc.PlainBody())); n > MaxWords(c.Kind)*13/10 {
+				bad(c, "%s translation has %d words, want at most %d", lang, n, MaxWords(c.Kind)*13/10)
 			}
 			want := map[string]int{}
 			for _, l := range c.Links() {

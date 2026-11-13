@@ -84,3 +84,11 @@ that every link of the original survives and that list lengths match.
 
 Chapters: `content/chapters/<id>.ru.md` with `title`, `kicker` and the body.
 Quests: `content/quests/<name>.ru.yaml` with `title`, `prompt`, `choices`, `reveal`.
+
+## Explainer cards
+
+Genres, instruments, scripts and languages (`kind: genre | instrument | script | language`)
+must first explain what the thing is — how it sounds or works, where and when it
+arose, what it was for, its main forms and names — and only then tell the story
+that makes it memorable, and finally where it came from and what grew out of it.
+Up to 220 words.
