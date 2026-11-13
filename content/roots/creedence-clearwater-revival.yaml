@@ -1,0 +1,17 @@
+id: "creedence-clearwater-revival"
+name: "Creedence Clearwater Revival"
+nameRu: "Creedence Clearwater Revival"
+aliases: ["криденс", "криденс клируотер ривайвл", "CCR"]
+years: [1967]
+place: {"name": "El Cerrito, California", "lat": 37.9161, "lon": -122.3108}
+genre: "Roots rock / blues rock"
+genreRu: "рутс-рок / блюз-рок"
+links:
+  - to: "card:rhythm-and-blues"
+    claim: "Creedence Clearwater Revival recorded Screamin’ Jay Hawkins’s “I Put a Spell on You”."
+    claimRu: "Creedence Clearwater Revival записали «I Put a Spell on You» Скримин Джей Хокинса."
+    sources:
+      - title: "Concord: Creedence Clearwater Revival, 40th Anniversary Edition"
+        url: "https://concord.com/concord-albums/creedence-clearwater-revival-40th-anniv-edition/"
+      - title: "El País: El salvaje más truculento"
+        url: "https://elpais.com/cultura/2025-05-26/el-salvaje-mas-truculento.html"

@@ -1,0 +1,17 @@
+id: "joss-stone"
+name: "Joss Stone"
+nameRu: "Джосс Стоун"
+aliases: ["джосс стоун", "джос стоун"]
+years: [1987]
+place: {"name": "Dover, Kent", "lat": 51.1279, "lon": 1.3134}
+genre: "Soul / R&B"
+genreRu: "соул / ритм-энд-блюз"
+links:
+  - to: "root:the-white-stripes"
+    claim: "On The Soul Sessions, Joss Stone remade the White Stripes’ “Fell in Love with a Girl” as “Fell in Love with a Boy”."
+    claimRu: "На альбоме The Soul Sessions Джосс Стоун переосмыслила «Fell in Love with a Girl» группы The White Stripes, переименовав её в «Fell in Love with a Boy»."
+    sources:
+      - title: "musicOMH: Joss Stone — The Soul Sessions"
+        url: "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions"
+      - title: "Apple Music: The Soul Sessions editorial album note"
+        url: "https://music.apple.com/us/album/the-soul-sessions/712408255"

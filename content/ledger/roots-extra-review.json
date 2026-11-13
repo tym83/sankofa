@@ -1,0 +1,228 @@
+{
+  "batch": "extra",
+  "checkedAt": "2026-11-12",
+  "reviewer": "rock_roots",
+  "method": "Independent second-agent review. Both source bodies read; retained English claims and Russian translations checked. Hashes bind review to exact claim text.",
+  "links": [
+    {
+      "artist": "aquarium",
+      "to": "card:reggae",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "12fee4456b26da203914f769a1b22919224a33684c606d809efb72ee86d34827",
+      "translationSha256": "e5b0c5abfeda906cb3bb027af71b185511f36a3015aa50a445bbd2b37483dd9a",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.kommersant.ru/doc/4493505",
+          "opened": true,
+          "locator": "Aquarium subsection, final paragraph."
+        },
+        {
+          "url": "https://www.colta.ru/articles/music_modern/26051-levsha-patsan-intervyu-albom-akvarium-in-dub-li-skretch-perri-pesni-bg",
+          "opened": true,
+          "locator": "Answer about Caribbean music reaching the USSR; later genre discussion."
+        }
+      ]
+    },
+    {
+      "artist": "mumiy-troll",
+      "to": "root:aquarium",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "c337913b682cc3115ddc7883bfafdc00a65c1b72d76222f3e96901396aaa89b6",
+      "translationSha256": "c636a81fb5ae93b6e457bffe88cba0ccfc6cc9a2c2380829743317f67fcfacab",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.newlookmedia.ru/?p=24869",
+          "opened": true,
+          "locator": "Main article body; independently retrieved with urllib.request."
+        },
+        {
+          "url": "https://daily.afisha.ru/archive/volna/archive/week_playlist_041212/",
+          "opened": true,
+          "locator": "Tribute subsection, first paragraph."
+        }
+      ]
+    },
+    {
+      "artist": "mashina-vremeni",
+      "to": "root:the-beatles",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "63ee0ea8659b2dc50ec48dc3903b348c1c8faa0c45fc0cc3cfd684048689947e",
+      "translationSha256": "5f4d996a886dac57b462a4b95ce7b564c818e15f22a639ab11c7f685231c88bb",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.colta.ru/articles/music_modern/21682-andrey-makarevich-rebyata-eto-pro-vas-pro-vseh",
+          "opened": true,
+          "locator": "First songwriting question and answer."
+        },
+        {
+          "url": "https://www.svoboda.org/a/24197864.html",
+          "opened": true,
+          "locator": "Final listener question about Beatles-derived chords and Makarevich’s reply."
+        }
+      ]
+    },
+    {
+      "artist": "janis-joplin",
+      "to": "card:big-mama-thornton",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "87ccbb632347373671aa058bb2c0a0ffcb22cc06758937dcd4a200952b44a199",
+      "translationSha256": "4c1cbeac92f0bb4c664338b5c50f09375fffe7a5e0728d094b63312c577f3100",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://folkways-media.si.edu/docs/folkways/artwork/ARH00305.pdf",
+          "opened": true,
+          "locator": "PDF page 3."
+        },
+        {
+          "url": "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis",
+          "opened": true,
+          "locator": "Confirmed."
+        }
+      ]
+    },
+    {
+      "artist": "eric-clapton",
+      "to": "card:blues",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "583773a2791290cd62efb2a58c746d4fc2eb9e989edad9e197e6cd4a0ace63d3",
+      "translationSha256": "965cef0f7704ecde2ab0711e8a835ae546216f0a21d46dea54cd32b82a846258",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://ericclapton.com/pages/about",
+          "opened": true,
+          "locator": "Paragraph following Reptile."
+        },
+        {
+          "url": "https://www.allaboutjazz.com/me-and-mr-johnson-eric-clapton-reprise-review-by-doug-collette/",
+          "opened": true,
+          "locator": "Opening review paragraphs and track list."
+        }
+      ]
+    },
+    {
+      "artist": "joss-stone",
+      "to": "root:the-white-stripes",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "963c56e23814de244e03b2bf5d300f2b1966d5421035b8a4a52d04a9f678f0ef",
+      "translationSha256": "77fd5e52f999923e2abe11dea03f6d620fb94f6ed2c3604f7990b0cf4a10b0c5",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions",
+          "opened": true,
+          "locator": "Fourth review paragraph."
+        },
+        {
+          "url": "https://music.apple.com/us/album/the-soul-sessions/712408255",
+          "opened": true,
+          "locator": "Editorial paragraph and linked music-video title."
+        }
+      ]
+    },
+    {
+      "artist": "creedence-clearwater-revival",
+      "to": "card:rhythm-and-blues",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "e8f05014f40d9c9c0b073295ea521af4bd70a31874099477bddd9fbdb02512ff",
+      "translationSha256": "43d47ec4ac94a8d9a9f465f46eb9d7fff461d14c4d941dcb684fb15ab451dfb8",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://concord.com/concord-albums/creedence-clearwater-revival-40th-anniv-edition/",
+          "opened": true,
+          "locator": "Opening album description."
+        },
+        {
+          "url": "https://elpais.com/cultura/2025-05-26/el-salvaje-mas-truculento.html",
+          "opened": true,
+          "locator": "Paragraph listing interpretations."
+        }
+      ]
+    },
+    {
+      "artist": "deep-purple",
+      "to": "card:rock-n-roll",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "1e1361b3cc24ece79f5e2861ba87aa5b76496df195e438f5ced8a57998c86ff2",
+      "translationSha256": "514291dbbbbbcccea82294b98720af8eb78e5ce27f0a72f887c0b73310f9a7e9",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.mojo4music.com/articles/new-music/deep-purple-made-in-japan-reviewed-revered-72-live-album-remixed-and-expanded/",
+          "opened": true,
+          "locator": "Review description and expanded Osaka track list."
+        },
+        {
+          "url": "https://www.metal.de/reviews/deep-purple-in-concert-72-re-release-58099/",
+          "opened": true,
+          "locator": "Concert date paragraph and cover description."
+        }
+      ]
+    },
+    {
+      "artist": "van-morrison",
+      "to": "card:blues",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "73463166a0d803d218ebf63f28ac1313666c77178b3f124deb9c164986e2d6bd",
+      "translationSha256": "7fd113568ef2d8cb638a448c3bcc37ff9628d53128510354c0c2c330f69d18ff",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://msbluestrail.org/blues-trail-markers/big-joe-williams",
+          "opened": true,
+          "locator": "Main historical-marker text."
+        },
+        {
+          "url": "https://s3-eu-west-1.amazonaws.com/vanmorrisoncom/downloads/Mystic-of-the-East_The-Van-Morrison-Trail-Interactive-Map.pdf",
+          "opened": true,
+          "locator": "PDF page 4, printed page 7."
+        }
+      ]
+    },
+    {
+      "artist": "joe-cocker",
+      "to": "card:rhythm-and-blues",
+      "reviewer": "rock_roots",
+      "status": "confirmed",
+      "claimSha256": "b259a840772f5528f8be3c12440f520bde2a07e2fe7106d6388e4af33eb009df",
+      "translationSha256": "433fd3d79b3b324b3781c5be52f6465cb92ce60ec813bb75df3d6eeea1660673",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.bpr.org/2014-12-23/singer-joe-cocker-dies-of-lung-cancer-at-70",
+          "opened": true,
+          "locator": "Archival interview passage in NPR transcript."
+        },
+        {
+          "url": "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker",
+          "opened": true,
+          "locator": "Second biography, paragraphs preceding For the Record."
+        }
+      ]
+    }
+  ]
+}

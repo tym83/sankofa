@@ -1,0 +1,17 @@
+id: "joe-cocker"
+name: "Joe Cocker"
+nameRu: "Джо Кокер"
+aliases: ["джо кокер", "джо коккер"]
+years: [1944, 2014]
+place: {"name": "Sheffield", "lat": 53.3811, "lon": -1.4701}
+genre: "Soul / blues rock"
+genreRu: "соул / блюз-рок"
+links:
+  - to: "card:rhythm-and-blues"
+    claim: "Joe Cocker reinterpreted Ray Charles’s hit “Unchain My Heart”."
+    claimRu: "Джо Кокер записал свою версию хита Рэя Чарльза «Unchain My Heart»."
+    sources:
+      - title: "NPR Morning Edition: Singer Joe Cocker dies at 70 (BPR transcript)"
+        url: "https://www.bpr.org/2014-12-23/singer-joe-cocker-dies-of-lung-cancer-at-70"
+      - title: "Contemporary Musicians: Joe Cocker (Encyclopedia.com)"
+        url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker"

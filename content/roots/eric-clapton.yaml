@@ -1,0 +1,17 @@
+id: "eric-clapton"
+name: "Eric Clapton"
+nameRu: "Эрик Клэптон"
+aliases: ["эрик клэптон", "эрик клептон"]
+years: [1945]
+place: {"name": "Ripley, Surrey", "lat": 51.3007, "lon": -0.491}
+genre: "Blues rock"
+genreRu: "блюз-рок"
+links:
+  - to: "card:blues"
+    claim: "Eric Clapton devoted Me and Mr. Johnson (2004) to covers of blues musician Robert Johnson’s songs."
+    claimRu: "Эрик Клэптон посвятил альбом Me and Mr. Johnson (2004) кавер-версиям песен блюзмена Роберта Джонсона."
+    sources:
+      - title: "Eric Clapton: Official biography"
+        url: "https://ericclapton.com/pages/about"
+      - title: "All About Jazz: Me and Mr. Johnson review"
+        url: "https://www.allaboutjazz.com/me-and-mr-johnson-eric-clapton-reprise-review-by-doug-collette/"

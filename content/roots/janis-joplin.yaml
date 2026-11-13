@@ -1,0 +1,17 @@
+id: "janis-joplin"
+name: "Janis Joplin"
+nameRu: "Дженис Джоплин"
+aliases: ["дженис джоплин", "джэнис джоплин"]
+years: [1943, 1970]
+place: {"name": "Port Arthur, Texas", "lat": 29.8849, "lon": -93.94}
+genre: "Blues rock / soul"
+genreRu: "блюз-рок / соул"
+links:
+  - to: "card:big-mama-thornton"
+    claim: "Joplin recorded Thornton’s “Ball and Chain”."
+    claimRu: "Джоплин записала «Ball and Chain» Торнтон."
+    sources:
+      - title: "Smithsonian Folkways: Big Mama Thornton, Ball N’ Chain liner notes"
+        url: "https://folkways-media.si.edu/docs/folkways/artwork/ARH00305.pdf"
+      - title: "The Guardian: Big Mama Thornton profile"
+        url: "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis"

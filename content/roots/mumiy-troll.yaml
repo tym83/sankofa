@@ -1,0 +1,17 @@
+id: "mumiy-troll"
+name: "Mumiy Troll"
+nameRu: "Мумий Тролль"
+aliases: ["мумий тролль", "илья лагутенко"]
+years: [1983]
+place: {"name": "Vladivostok", "lat": 43.1155, "lon": 131.8855}
+genre: "Rock / pop"
+genreRu: "рок / поп"
+links:
+  - to: "root:aquarium"
+    claim: "Mumiy Troll recorded Aquarium’s “Prekrasny diletant” for the 2012 Re:Aquarium tribute."
+    claimRu: "«Мумий Тролль» записал «Прекрасного дилетанта» группы «Аквариум» для трибьюта «Re:Аквариум» 2012 года."
+    sources:
+      - title: "Muzykalnaya Pravda: Lagutenko’s Prekrasny diletant"
+        url: "https://www.newlookmedia.ru/?p=24869"
+      - title: "Afisha Volna: Nick Cave, The Killers, R.E.M., Mumiy Troll and others"
+        url: "https://daily.afisha.ru/archive/volna/archive/week_playlist_041212/"
