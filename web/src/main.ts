@@ -21,7 +21,8 @@ import { Roots } from './views/roots';
 import { RootsMap } from './views/rootsMap';
 
 async function load<T>(url: string): Promise<T> {
-  const r = await fetch(url);
+  // The cover paints first; the data comes at a lower priority.
+  const r = await fetch(url, { priority: 'low' } as RequestInit);
   if (!r.ok) throw new Error(`${url}: ${r.status}`);
   return r.json() as Promise<T>;
 }
