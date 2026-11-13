@@ -150,7 +150,7 @@ export class Timeline {
       g.append('text')
         .attr('x', x(e.from) + 6)
         .attr('y', y + 11.5)
-        .text(`${e.id.toUpperCase()}  ${x(e.to) - x(e.from) > 120 ? e.label : ''}`);
+        .text(`${e.id}  ${x(e.to) - x(e.from) > 120 ? e.label : ''}`);
     }
 
     // Century and decade ticks.

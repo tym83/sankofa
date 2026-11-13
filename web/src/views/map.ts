@@ -470,6 +470,22 @@ export class GeoMap {
     lab.raise();
     lab.select('tspan.main').attr('x', 0).text((d) => d.label!.text);
     lab.select('tspan.sub').attr('x', 0).text((d) => d.label!.sub ?? '');
+    // Movement titles never stack on one another: each moves down until free.
+    const placed: DOMRect[] = [];
+    lab.each((_, i, n) => {
+      const el = n[i] as SVGTextElement;
+      const tr = el.getAttribute('transform') ?? '';
+      const m = tr.match(/translate\(([-\d.]+),([-\d.]+)\)/);
+      if (!m) return;
+      let y = Number(m[2]);
+      for (let k = 0; k < 6; k++) {
+        const r = el.getBoundingClientRect();
+        if (!placed.some((p) => r.left < p.right && r.right > p.left && r.top < p.bottom + 4 && r.bottom > p.top - 4)) break;
+        y += 40;
+        el.setAttribute('transform', `translate(${m[1]},${y})`);
+      }
+      placed.push(el.getBoundingClientRect());
+    });
     lab.each((d, i, n) => {
       if (this.labelWidths.has(d.id)) return;
       const bb = (n[i] as SVGTextElement).getBBox?.();

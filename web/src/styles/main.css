@@ -6804,3 +6804,12 @@ html:lang(ru) .r-edge-head {
   display: block !important;
   fill: #fff3d6;
 }
+/* place names as written, not shouted */
+.r-plate small {
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  font-size: 12.5px !important;
+}
+.tl .era text {
+  text-transform: none;
+}

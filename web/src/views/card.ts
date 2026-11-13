@@ -137,7 +137,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     h(
       'div.meta',
       {},
-      h('span.era-tag', {}, `${(c.era ?? '').toUpperCase()} ${era ? '· ' + era.label : ''}`),
+      h('span.era-tag', {}, `${c.era ?? ''} ${era ? '· ' + era.label : ''}`),
       h('span', {}, KIND_LABEL[c.kind] ?? c.kind),
       h('span', {}, formatYears(c.years)),
       h('span', {}, c.places.map((p) => p.name).join(' → ')),
@@ -221,7 +221,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       )
     : null;
 
-  return h('article.card', { 'data-label': `${(c.era ?? '').toUpperCase()} · ${KIND_LABEL[c.kind] ?? c.kind}`, 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
+  return h('article.card', { 'data-label': `${c.era ?? ''} · ${KIND_LABEL[c.kind] ?? c.kind}`, 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
 }
 
 export function renderBook(app: App, path: string[], actions: { share(): void; replay(): void; clear(): void }): HTMLElement {
