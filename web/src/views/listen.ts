@@ -698,10 +698,10 @@ export class Listen {
       const j = slot.get(p.at) ?? 0;
       slot.set(p.at, j + 1);
       const a = nodeAngle(p.at, n);
-      // a little arc of dots on the outer side of the node
+      // a little arc of dots inside the node, clear of its name
       const spread = (j - 4) * 0.075;
-      const x = 300 + Math.cos(a + spread * 1.6) * 166;
-      const y = 300 + Math.sin(a + spread * 1.6) * 166;
+      const x = 300 + Math.cos(a + spread * 1.6) * 150;
+      const y = 300 + Math.sin(a + spread * 1.6) * 150;
       c.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
       c.setAttribute('class', `l-pod${p.ok ? '' : ' off'}`);
     }
