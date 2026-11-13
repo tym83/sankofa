@@ -1,0 +1,28 @@
+# Every few minutes a guest drummer joins the museum cluster for a short
+# while, so the listening room has something to hear even when the cluster
+# is healthy: a new voice enters, plays, and leaves.
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: guest-drummer
+  namespace: sankofa-museum
+spec:
+  schedule: "H/4 * * * *"  # Polyrhythm: Griot picks a free beat
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 60
+      template:
+        metadata:
+          labels: {app.kubernetes.io/name: guest-drummer}
+        spec:
+          restartPolicy: Never
+          securityContext: {runAsNonRoot: true, runAsUser: 65532, seccompProfile: {type: RuntimeDefault}}
+          containers:
+            - name: drum
+              image: docker.io/library/busybox:1.37
+              command: ["sleep", "60"]
+              resources: {requests: {cpu: 5m, memory: 8Mi}, limits: {memory: 16Mi}}
+              securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
