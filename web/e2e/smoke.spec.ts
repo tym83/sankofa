@@ -462,3 +462,25 @@ test('the music map fits the viewport; descent level 1 shows eras; Renaissance o
   await page.goto('/');
   await expect(page.locator('#ch-v5 .hero.portrait img')).toHaveAttribute('src', /hurston/);
 });
+
+test('the room state stays consistent: late node not counted, pods return gradually after a mend', async ({ page }) => {
+  await page.clock.install();
+  await page.goto('/#view=listen');
+  await page.clock.runFor(5000);
+  await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/);
+  await page.getByRole('button', { name: 'Break a node' }).click();
+  await page.clock.runFor(1000);
+  await expect(page.locator('.l-status')).toContainText(/2 of 3 nodes playing.*Sogo late/);
+  const label = await page.locator('.l-node.broken .st').textContent();
+  const sub = await page.locator('.l-subs').textContent();
+  expect(label!.match(/down in (\d+)/)?.[1]).toBeTruthy();
+  expect(sub).toMatch(/in\s+\d+\s+s/);
+  await page.clock.runFor(17000);
+  await expect(page.locator('.l-node.broken .st')).toContainText(/moved/);
+  await page.getByRole('button', { name: 'Mend the node' }).click();
+  await page.clock.runFor(500);
+  await expect(page.locator('.l-subs')).toContainText(/does not move pods back/);
+  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back · 0 ready/);
+  await page.clock.runFor(7000);
+  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back · [12] ready/);
+});

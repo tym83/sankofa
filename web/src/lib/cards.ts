@@ -139,7 +139,12 @@ export function localizeCard(c: Card, lang: string): Card {
   if (tr.dispute) out.dispute = tr.dispute;
   if (tr.further && c.further && tr.further.length === c.further.length) out.further = tr.further;
   if (tr.places && tr.places.length === c.places.length) out.places = c.places.map((p, i) => ({ ...p, name: tr.places![i], en: p.name }));
-  if (tr.captions && c.media && tr.captions.length === c.media.length) out.media = c.media.map((m, i) => ({ ...m, caption: tr.captions![i] || m.caption }));
+  if (c.media?.length) {
+    const same = (xs?: string[]) => (xs && xs.length === c.media!.length ? xs : undefined);
+    const [caps, credits, licenses] = [same(tr.captions), same(tr.credits), same(tr.licenses)];
+    if (caps || credits || licenses)
+      out.media = c.media.map((m, i) => ({ ...m, caption: caps?.[i] || m.caption, credit: credits?.[i] || m.credit, license: licenses?.[i] || m.license }));
+  }
   return out;
 }
 
@@ -152,7 +157,7 @@ export function localizeChapter(ch: Chapter, lang: string): Chapter {
     ...ch,
     title: tr.title || ch.title,
     kicker: tr.kicker || ch.kicker,
-    hero: ch.hero && tr.heroCaption ? { ...ch.hero, caption: tr.heroCaption } : ch.hero,
+    hero: ch.hero ? { ...ch.hero, caption: tr.heroCaption || ch.hero.caption, credit: tr.heroCredit || ch.hero.credit, license: tr.heroLicense || ch.hero.license } : ch.hero,
     steps,
     textLang: steps === ch.steps ? 'en' : lang,
   };

@@ -35,7 +35,7 @@ export function parseChapter(src: string, file = 'chapter'): Chapter {
   };
 }
 
-/** Parse a chapter translation (<id>.<lang>.md): title, kicker, heroCaption, body. */
+/** Parse a chapter translation (<id>.<lang>.md): title, kicker, hero caption, credit and licence, body. */
 export function parseChapterTranslation(src: string, file = 'translation'): ChapterTranslation {
   const { fm, body } = split(src, file);
   const out: ChapterTranslation = {};
@@ -43,6 +43,8 @@ export function parseChapterTranslation(src: string, file = 'translation'): Chap
   if (fm.kicker) out.kicker = String(fm.kicker);
   const cap = fm.heroCaption ?? (fm.hero && typeof fm.hero === 'object' ? fm.hero.caption : undefined);
   if (cap) out.heroCaption = String(cap);
+  if (fm.heroCredit) out.heroCredit = String(fm.heroCredit);
+  if (fm.heroLicense) out.heroLicense = String(fm.heroLicense);
   const steps = paragraphs(body);
   if (steps.length) out.steps = steps;
   return out;

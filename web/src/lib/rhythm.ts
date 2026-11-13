@@ -102,18 +102,15 @@ export function exchange(voices: Voice[], cycle: number): Exchange | null {
   return { node: v.node, slots: mixed };
 }
 
-/**
- * A recorded demo, used when /pulse is not reachable: three nodes over one
- * minute. One drifts late, drops out and comes back; one has pods failing
- * readiness for a while.
- */
+/** A recorded demo, used when /pulse is not reachable: three healthy nodes. */
 export function demoVoices(t: number): Voice[] {
-  const s = ((t % 60) + 60) % 60;
-  const b = s < 18 ? { alive: true, late: 0.1 + s * 0.035 } : s < 30 ? { alive: false, late: 1.4 } : { alive: true, late: 0.12 };
+  // A healthy cluster, steady on purpose: what changes is what the reader does
+  // (break a node, fail pods) and the guest drummer who sits in.
+  const wobble = ((t % 10) + 10) % 10 / 100;
   return [
-    { node: 'control-plane', alive: true, late: 0.08, ready: 4, notReady: 0 },
-    { node: 'worker-1', alive: b.alive, late: b.late, ready: b.alive ? 3 : 0, notReady: b.alive ? 0 : 3 },
-    { node: 'worker-2', alive: true, late: 0.15, ready: s > 35 && s < 50 ? 2 : 5, notReady: s > 35 && s < 50 ? 3 : 0 },
+    { node: 'control-plane', alive: true, late: 0.08 + wobble, ready: 4, notReady: 0 },
+    { node: 'worker-1', alive: true, late: 0.12 + wobble, ready: 3, notReady: 0 },
+    { node: 'worker-2', alive: true, late: 0.15 + wobble, ready: 5, notReady: 0 },
   ];
 }
 
@@ -144,6 +141,20 @@ export interface Sim {
   brokenAt?: number;
   /** ms timestamp when the reader failed two pods */
   failingAt?: number;
+  /** ms timestamp when a node whose pods had moved away was mended */
+  mendedAt?: number;
+}
+
+/** Seconds per pod coming back to a mended node, as new pods are scheduled. */
+export const REBALANCE_EVERY = 3;
+
+/** Mend: before the move the pods were never gone; after it they stay put. */
+export function mend(sim: Sim, now: number): Sim {
+  const s = sim.brokenAt !== undefined ? (now - sim.brokenAt) / 1000 : 0;
+  const next = { ...sim };
+  delete next.brokenAt;
+  if (s >= GRACE + MOVE_AFTER) next.mendedAt = now;
+  return next;
 }
 
 export interface SimVoice extends Voice {
@@ -157,6 +168,34 @@ export interface SimVoice extends Voice {
   adopted?: number;
   /** a node declared down whose pods have moved away */
   evicted?: boolean;
+  /** a mended node still waiting for its pods to come back */
+  rebalancing?: boolean;
+  returned?: number;
+}
+
+export interface RoomState {
+  at: number;
+  voices: SimVoice[];
+  playing: number;
+  total: number;
+  ready: number;
+  silent: number;
+  late: string[];
+}
+
+/** The one state the listening room draws from: counts, labels, subtitles and calls. */
+export function roomState(base: Voice[], sim: Sim, now: number): RoomState {
+  const voices = simulate(base, sim, now);
+  const late = voices.filter((v) => v.broken && v.alive).map((v) => v.node);
+  return {
+    at: now,
+    voices,
+    playing: voices.filter((v) => v.alive && !v.broken).length,
+    total: voices.length,
+    ready: voices.reduce((s, v) => s + (v.alive && !v.broken ? v.ready : 0), 0),
+    silent: voices.reduce((s, v) => s + (v.evicted ? 0 : v.notReady), 0),
+    late,
+  };
 }
 
 /** Seconds after "declared down" when the pods are moved to surviving nodes. */
@@ -192,6 +231,21 @@ export function simulate(base: Voice[], sim: Sim, now: number): SimVoice[] {
       });
       if (survivors.length) Object.assign(v, { notReady: 0, evicted: true });
     }
+  }
+  // After a mend, Kubernetes does not move pods back: they return to the
+  // node only as new pods are scheduled, one at a time.
+  if (sim.mendedAt !== undefined && sim.brokenAt === undefined && out[tg.broken]) {
+    const v = out[tg.broken];
+    const total = v.ready + v.notReady;
+    const back = Math.min(total, Math.floor((now - sim.mendedAt) / 1000 / REBALANCE_EVERY));
+    const away = total - back;
+    const survivors = out.filter((x, i) => i !== tg.broken && x.alive);
+    survivors.forEach((x, i) => {
+      const n = Math.floor(away / survivors.length) + (i < away % survivors.length ? 1 : 0);
+      x.ready += n;
+      x.adopted = n;
+    });
+    Object.assign(v, { ready: back, notReady: 0, rebalancing: away > 0, returned: back });
   }
   if (sim.failingAt !== undefined && out[tg.failing] && !out[tg.failing].broken) {
     const v = out[tg.failing];

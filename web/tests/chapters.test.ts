@@ -95,4 +95,13 @@ heroCaption: Корабль «Брукс»
     expect(ru.further).toEqual(['Op. 47']);
     expect(localizeCard({ ...c, translations: undefined }, 'ru').title).toBe('George Bridgetower');
   });
+
+  it('localizes media captions, credits and licences', () => {
+    const c: Card = {
+      id: 'dave', kind: 'object', title: 'Dave', wow: 'w', years: [1858], zoom: 4, books: ['voices'], sources: [], body: 'b', places: [],
+      media: [{ type: 'image', file: 'd.jpg', caption: 'Jar', credit: 'Dave; The Met', license: 'Public domain' }],
+      translations: { ru: { title: 'Дейв', wow: 'в', body: 'тело', captions: ['Кувшин'], credits: ['Дейв; Метрополитен-музей'], licenses: ['общественное достояние'] } },
+    };
+    expect(localizeCard(c, 'ru').media![0]).toEqual({ type: 'image', file: 'd.jpg', caption: 'Кувшин', credit: 'Дейв; Метрополитен-музей', license: 'общественное достояние' });
+  });
 });

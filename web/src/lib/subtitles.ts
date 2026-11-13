@@ -11,6 +11,7 @@ export type Sub =
   | { kind: 'stopped'; drum: string; s: number }
   | { kind: 'late'; drum: string; late: number; s: number }
   | { kind: 'mended'; drum: string }
+  | { kind: 'rebalance'; drum: string }
   | { kind: 'failed'; drum: string; n: number };
 
 export function subtitle(s: Sub, l: Lang): string {
@@ -38,6 +39,10 @@ export function subtitle(s: Sub, l: Lang): string {
       return ru ? `${s.drum} молчит уже ${s.late} с — кластер ждёт ещё ${s.s} с` : `${s.drum} has been silent for ${s.late} s; the cluster waits ${s.s} s more`;
     case 'mended':
       return ru ? `${s.drum} снова играет` : `${s.drum} plays again`;
+    case 'rebalance':
+      return ru
+        ? `Kubernetes не возвращает поды сам: на ${s.drum} они попадут по мере перезапуска`
+        : `Kubernetes does not move pods back by itself: they reach ${s.drum} as they restart`;
     case 'failed':
       return ru ? `Вы уронили ${count(s.n, 'program', 'ru')} на барабане ${s.drum}: на зов они не ответят` : `You failed ${count(s.n, 'program', 'en')} on ${s.drum}: they will not answer the call`;
     case 'moved':

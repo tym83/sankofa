@@ -6,7 +6,7 @@ import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { subtitle, type Sub } from '../lib/subtitles';
-import { BELL, GRACE, simTargets, GUEST_EVERY, GUEST_PART, PARTS, PULSES, guestPitch, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, simulate, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
+import { BELL, GRACE, mend, roomState, simTargets, type RoomState, GUEST_EVERY, GUEST_PART, PARTS, PULSES, guestPitch, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
 const PULSE = 0.2; // seconds per pulse: one 12/8 cycle is 2.4 s
 const AHEAD = 0.15;
@@ -30,9 +30,13 @@ class Source {
   mode: Mode = 'connecting';
   base: Voice[] = [];
   sim: Sim = {};
-  /** The voices as played: the cluster (or the demo) with the reader's interventions. */
+  /** The one state everything on the page is drawn from, updated in one place. */
+  state: RoomState = roomState([], {}, 0);
   get voices(): SimVoice[] {
-    return simulate(this.base, this.sim, performance.now());
+    return this.state.voices;
+  }
+  update(now = performance.now()): void {
+    this.state = roomState(this.base, this.sim, now);
   }
   private es?: EventSource;
   private started = 0;
@@ -75,6 +79,7 @@ class Source {
       }
       if (e.type === 'voices' && e.voices) {
         this.base = e.voices;
+        this.update();
         this.onChange?.();
       } else if (e.type === 'lease' && e.node) this.onLease?.(e.node);
       else if (e.type === 'pod' && e.phase && e.name) this.pod(e.phase, e.name, e.node ?? '');
@@ -88,6 +93,7 @@ class Source {
       if (this.mode === 'live' && performance.now() - this.lastData > 15000) {
         this.mode = 'stale';
         this.base = this.base.map((v) => ({ ...v, alive: false }));
+        this.update();
         this.onChange?.();
       }
     }, 3000);
@@ -101,6 +107,7 @@ class Source {
     const tick = () => {
       const t = (performance.now() - t0) / 1000;
       this.base = demoVoices(t);
+      this.update();
       for (const l of demoLeases(this.lastDemo, t)) this.onLease?.(l.node);
       // In the demo a guest drummer sits in for 30 s of every minute.
       const m = ((t % 60) + 60) % 60;
@@ -277,8 +284,11 @@ export class Listen {
           'aria-pressed': 'false',
           onclick: () => {
             const active = this.source.sim[key] !== undefined;
-            if (active) delete this.source.sim[key];
-            else this.source.sim[key] = performance.now();
+            const now = performance.now();
+            if (active && key === 'brokenAt') this.source.sim = mend(this.source.sim, now);
+            else if (active) delete this.source.sim[key];
+            else this.source.sim = { ...this.source.sim, [key]: now, ...(key === 'brokenAt' ? { mendedAt: undefined } : {}) };
+            this.source.update(now);
             this.narrateSim(key, !active);
             b.setAttribute('aria-pressed', String(!active));
             b.textContent = pick(!active ? { en: off[0], ru: off[1] } : { en: on[0], ru: on[1] });
@@ -558,7 +568,9 @@ export class Listen {
             ? pick({ en: 'down · its pods moved away', ru: 'выбыл · его поды переехали' })
             : pick({ en: 'declared down · pods silent', ru: 'объявлен выбывшим · поды молчат' })
         : v.alive
-          ? (v.adopted ? pick({ en: `took over ${v.adopted} · `, ru: `принял ${v.adopted} · ` }) : '') + t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
+          ? v.rebalancing
+            ? pick({ en: `back · ${v.ready} ready, more as pods restart`, ru: `вернулся · готовы: ${v.ready}, остальные по мере перезапуска` })
+            : (v.adopted ? pick({ en: `took over ${v.adopted} · `, ru: `принял ${v.adopted} · ` }) : '') + t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
           : t('silent');
       g.classList.toggle('broken', !!v.broken);
       // The lateness arc: how far into its lease the node is.
@@ -600,8 +612,12 @@ export class Listen {
     clearInterval(this.lateTimer);
     if (key === 'brokenAt') {
       const drum = drumName(tg.broken);
-      if (!on) return this.say({ kind: 'mended', drum });
-      this.say({ kind: 'stopped', drum, s: GRACE });
+      if (!on) {
+        this.say({ kind: 'mended', drum });
+        if (this.source.sim.mendedAt !== undefined) this.say({ kind: 'rebalance', drum });
+        return;
+      }
+      this.say({ kind: 'stopped', drum, s: this.source.voices[tg.broken]?.downIn ?? GRACE });
       this.lateTimer = window.setInterval(() => {
         const v = this.source.voices[tg.broken];
         if (!v?.broken || !v.alive) return clearInterval(this.lateTimer);
@@ -745,7 +761,12 @@ export class Listen {
   private tickSim(): void {
     clearInterval(this.simTimer);
     this.render();
-    if (this.source.sim.brokenAt !== undefined || this.source.sim.failingAt !== undefined) this.simTimer = window.setInterval(() => this.render(), 250);
+    const sim = this.source.sim;
+    if (sim.brokenAt !== undefined || sim.failingAt !== undefined || sim.mendedAt !== undefined)
+      this.simTimer = window.setInterval(() => {
+        this.source.update();
+        this.render();
+      }, 250);
   }
 
   private render(): void {
@@ -754,12 +775,12 @@ export class Listen {
     this.badge.textContent = live ? pick({ en: 'Live: this museum’s own cluster', ru: 'Вживую: собственный кластер музея' }) : t( m === 'demo' ? 'Recorded demo · not a live cluster' : m === 'stale' ? 'Live stream quiet' : 'Connecting…');
     this.badge.className = `l-badge ${m}`;
     this.demoRow.hidden = m === 'connecting';
-    const v = this.source.voices;
-    const alive = v.filter((x) => x.alive).length;
-    const ready = v.reduce((s, x) => s + (x.alive ? x.ready : 0), 0);
-    const silent = v.reduce((s, x) => s + x.notReady, 0);
-    this.status.textContent = v.length
-      ? t('{alive} of {total} playing · {ready} answering', { alive, total: count(v.length, 'nodeOf'), ready: count(ready, 'pod') }) + (silent ? ' · ' + t('{n} silent pods', { n: silent }) : '')
+    const st = this.source.state;
+    const late = st.late.map((n) => this.drumOf(n));
+    this.status.textContent = st.total
+      ? t('{alive} of {total} playing · {ready} answering', { alive: st.playing, total: count(st.total, 'nodeOf'), ready: count(st.ready, 'pod') }) +
+        (late.length ? ' · ' + pick({ en: `${late.join(', ')} late`, ru: `опаздывает: ${late.join(', ')}` }) : '') +
+        (st.silent ? ' · ' + t('{n} silent pods', { n: st.silent }) : '')
       : m === 'connecting'
         ? t('Listening for the cluster…')
         : t('No nodes yet.');

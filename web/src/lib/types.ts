@@ -59,6 +59,8 @@ export interface CardTranslation {
   further?: string[];
   dispute?: string;
   captions?: string[];
+  credits?: string[];
+  licenses?: string[];
   body: string;
 }
 
@@ -66,6 +68,8 @@ export interface ChapterTranslation {
   title?: string;
   kicker?: string;
   heroCaption?: string;
+  heroCredit?: string;
+  heroLicense?: string;
   steps?: string[];
 }
 

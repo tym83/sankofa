@@ -478,7 +478,7 @@ function heroParallax(): void {
  * picture, the proverb, and the way on: the dictionary in the terminal.
  */
 function coda(app: App): HTMLElement {
-  const art = app.raw('adinkra')?.media?.find((m) => m.type === 'image');
+  const art = (app.set.get('adinkra') ?? app.raw('adinkra'))?.media?.find((m) => m.type === 'image');
   const cmd = 'sankofa dict';
   return h(
     'section.coda',

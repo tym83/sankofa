@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { BELL, GRACE, MOVE_AFTER, PARTS, demoLeases, demoVoices, drumName, exchange, parsePulse, playing, podsOf, simulate, strokes } from '../src/lib/rhythm';
+import { BELL, GRACE, MOVE_AFTER, REBALANCE_EVERY, mend, roomState, PARTS, demoLeases, demoVoices, drumName, exchange, parsePulse, playing, podsOf, simulate, strokes } from '../src/lib/rhythm';
 
 describe('rhythm', () => {
   it('the bell plays seven strokes in twelve pulses', () => {
@@ -40,11 +40,8 @@ describe('rhythm', () => {
     expect(parsePulse('not json')).toBeNull();
   });
 
-  it('the demo drops a node out and brings it back', () => {
-    expect(demoVoices(5)[1].alive).toBe(true);
-    expect(demoVoices(20)[1].alive).toBe(false);
-    expect(demoVoices(40)[1].alive).toBe(true);
-    expect(demoVoices(40)[2].notReady).toBeGreaterThan(0);
+  it('the demo is a steady healthy cluster; changes come from the reader', () => {
+    for (const t of [5, 20, 40]) expect(demoVoices(t).every((v) => v.alive && v.notReady === 0)).toBe(true);
     expect(demoLeases(0, 30).length).toBeGreaterThan(3);
   });
 });
@@ -85,5 +82,32 @@ describe('interventions and names', () => {
   it('names nodes after drums', () => {
     expect(drumName(0)).toBe('Atsimevu');
     expect(drumName(6)).toBe('Atsimevu 2');
+  });
+});
+
+describe('one room state', () => {
+  const base = demoVoices(40);
+  const t0 = 1_000_000;
+  it('counts a late node as not playing and says it is late', () => {
+    const st = roomState(base, { brokenAt: t0 }, t0 + 3000);
+    expect(st.playing).toBe(base.length - 1);
+    expect(st.late).toEqual([base[1].node]);
+  });
+  it('after a mend the pods stay put and come back one at a time', () => {
+    const moved = t0 + (GRACE + MOVE_AFTER + 1) * 1000;
+    const sim = mend({ brokenAt: t0 }, moved);
+    expect(sim.mendedAt).toBe(moved);
+    const total = base[1].ready + base[1].notReady;
+    const now = roomState(base, sim, moved);
+    expect(now.voices[1].ready).toBe(0);
+    expect(now.voices[1].rebalancing).toBe(true);
+    const later = roomState(base, sim, moved + REBALANCE_EVERY * 1000 * 2 + 10);
+    expect(later.voices[1].ready).toBe(2);
+    const done = roomState(base, sim, moved + REBALANCE_EVERY * 1000 * (total + 1));
+    expect(done.voices[1].ready).toBe(total);
+    expect(done.voices[1].rebalancing).toBe(false);
+  });
+  it('a mend before the move simply resumes the node', () => {
+    expect(mend({ brokenAt: t0 }, t0 + 2000).mendedAt).toBeUndefined();
   });
 });

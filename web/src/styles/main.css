@@ -6474,3 +6474,8 @@ a.r-artist:hover {
     grid-template-columns: 76px minmax(0, 1fr);
   }
 }
+/* an answer that is coming is a soft dot, not an empty ring */
+.l-call .slot.ok {
+  background: rgba(242, 233, 216, 0.28);
+  border-color: rgba(242, 233, 216, 0.5);
+}
