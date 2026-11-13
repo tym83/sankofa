@@ -39,3 +39,28 @@ func TestPaths(t *testing.T) {
 		t.Fatal("one source must fail")
 	}
 }
+
+func TestBorrowingKinds(t *testing.T) {
+	for _, kind := range []string{"cover", "sample", "interpolation"} {
+		t.Run(kind, func(t *testing.T) {
+			fsys := fstest.MapFS{
+				"artist.yaml": {Data: []byte("id: artist\nname: Artist\nyears: [2000]\nplace: {name: City}\ngenre: pop\nlinks:\n  - to: card:jazz\n    kind: " + kind + "\n    what: A replayed melody\n    whatRu: Заново сыгранная мелодия\n    claim: A documented borrowing" + two + "\n")},
+			}
+			s, err := LoadFS(fsys)
+			if err != nil {
+				t.Fatal(err)
+			}
+			cards := &card.Set{ByID: map[string]*card.Card{"jazz": {ID: "jazz"}}}
+			if errs := s.Validate(cards); len(errs) != 0 {
+				t.Fatal(errs)
+			}
+			for _, missing := range []string{"", "   "} {
+				s.ByID["artist"].Links[0].What = missing
+				errs := s.Validate(cards)
+				if len(errs) != 1 || !strings.Contains(errs[0].Error(), "must say what was taken") {
+					t.Fatalf("borrowing without an identified source part must fail: %v", errs)
+				}
+			}
+		})
+	}
+}
