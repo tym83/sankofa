@@ -105,9 +105,13 @@ const MECHANISMS: Mechanism[] = [
   },
 ];
 
-function term(cmd: string, multiline = false): HTMLElement {
-  const el = h(`div.term.on${multiline ? '.multi' : ''}`, {}, h(multiline ? 'pre' : 'code', {}, cmd));
-  el.append(h('button', { onclick: async () => toast((await copyText(cmd)) ? t('Command copied') : t('Copy failed')) }, t('Copy')));
+function term(cmd: string, multiline = false, table = false): HTMLElement {
+  const el = h(`div.term.on${multiline ? '.multi' : ''}${table ? '.table' : ''}`, {}, h(multiline ? 'pre' : 'code', {}, cmd));
+  el.append(
+    multiline
+      ? h('button.copy', { 'aria-label': t('Copy'), title: t('Copy'), onclick: async () => toast((await copyText(cmd)) ? t('Copied') : t('Copy failed')) }, svgIcon('copy'))
+      : h('button', { onclick: async () => toast((await copyText(cmd)) ? t('Command copied') : t('Copy failed')) }, t('Copy')),
+  );
   return el;
 }
 
@@ -172,7 +176,7 @@ export class Engine {
           }),
         ),
         h('div.e-count', { 'aria-hidden': 'true' }, h('b', {}, String(raw.length)), h('span', {}, pick({ en: 'Card objects', ru: 'объектов Card' }))),
-        term(`$ kubectl get cards\n${cardTable(raw)}\n…`, true),
+        term(`$ kubectl get cards\n${cardTable(raw)}\n…`, true, true),
         this.yamlHost,
       ),
       h(

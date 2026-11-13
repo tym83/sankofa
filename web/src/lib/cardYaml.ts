@@ -7,6 +7,21 @@ function q(s: string): string {
   return /^[\w][\w .,'’()/-]*$/u.test(s) && !/^(true|false|yes|no|null|~|\d)/i.test(s) && !s.includes(': ') ? s : JSON.stringify(s);
 }
 
+/** A long scalar as a folded block (`>-`), wrapped at word boundaries. */
+function folded(key: string, text: string, indent: string, width = 72): string {
+  if (indent.length + key.length + text.length + 2 <= width) return `${indent}${key}: ${q(text)}`;
+  const lines: string[] = [];
+  let line = '';
+  for (const w of text.split(/\s+/)) {
+    if (line && indent.length + 2 + line.length + 1 + w.length > width) {
+      lines.push(line);
+      line = w;
+    } else line = line ? `${line} ${w}` : w;
+  }
+  if (line) lines.push(line);
+  return `${indent}${key}: >-\n${lines.map((l) => `${indent}  ${l}`).join('\n')}`;
+}
+
 function block(text: string, indent: string): string {
   return text
     .split('\n')
@@ -23,7 +38,7 @@ export function cardYaml(c: Card): string {
     'spec:',
     `  kind: ${c.kind}`,
     `  title: ${q(c.title)}`,
-    `  wow: ${q(c.wow)}`,
+    folded('wow', c.wow, '  '),
     `  years: [${c.years.join(', ')}]`,
     '  places:',
     ...c.places.map((p) => `  - {name: ${q(p.en ?? p.name)}, lat: "${p.lat}", lon: "${p.lon}"}`),
