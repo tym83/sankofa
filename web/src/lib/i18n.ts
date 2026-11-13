@@ -59,6 +59,9 @@ const NOUNS: Record<string, { en: [string, string]; ru: [string, string, string]
   node: { en: ['node', 'nodes'], ru: ['узел', 'узла', 'узлов'] },
   pod: { en: ['pod', 'pods'], ru: ['под', 'пода', 'подов'] },
   program: { en: ['program', 'programs'], ru: ['программа', 'программы', 'программ'] },
+  artist: { en: ['artist', 'artists'], ru: ['исполнитель', 'исполнителя', 'исполнителей'] },
+  // after «из»: из 1 исполнителя, из 120 исполнителей
+  artistOf: { en: ['artist', 'artists'], ru: ['исполнителя', 'исполнителей', 'исполнителей'] },
   // after «из»: из 1 узла, из 3 узлов, из 21 узла
   nodeOf: { en: ['node', 'nodes'], ru: ['узла', 'узлов', 'узлов'] },
 };

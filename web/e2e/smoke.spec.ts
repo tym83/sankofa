@@ -407,3 +407,22 @@ test('roots unwind past the card, name the kind of each link and what was borrow
   await page.goto('/#view=roots');
   await expect(page.locator('.r-long').first()).toBeVisible();
 });
+
+test('the music map counts its roots, finds an artist and lights its way down', async ({ page }) => {
+  await serveFixtureRoots(page);
+  await page.goto('/#view=roots-map');
+  await expect(page.locator('.rmap.open')).toBeVisible();
+  await expect(page.locator('.rm-head h2')).toHaveText(/Of \d+ artists, \d+ lead back to/);
+  await expect(page.locator('.rm-node.card').first()).toBeAttached();
+  await page.locator('.rm-input').fill('telev');
+  await page.locator('.rm-input').press('Enter');
+  await expect(page.locator('.rmap.lit')).toBeAttached();
+  await expect(page.locator('.rm-info b')).toHaveText('Television');
+  await expect(page.locator('.rm-info p')).toContainText('[placeholder]');
+  // its way down reaches a museum card
+  expect(await page.locator('.rm-node.card.on').count()).toBeGreaterThan(0);
+
+  await page.goto('about:blank');
+  await page.goto('/#view=roots-map&lang=ru');
+  await expect(page.locator('.rm-head h2')).toHaveText(/^Из \d+ исполнител/);
+});

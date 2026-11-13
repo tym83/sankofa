@@ -43,7 +43,7 @@ export class Roots {
     this.stage = h('div.r-stage', { 'aria-live': 'polite' });
     this.input.addEventListener('input', () => this.search());
     this.input.addEventListener('keydown', (e) => this.key(e));
-    const bar = h('header.d-bar', {}, h('span.d-title', {}, t('Roots')), h('button.icon-btn', { 'aria-label': t('Close'), onclick: () => this.onClose?.() }, svgIcon('close')));
+    const bar = h('header.d-bar', {}, h('span.d-title', {}, t('Roots')), h('a.btn.r-maplink', { href: '#view=roots-map', 'data-roots-map': '' }, pick({ en: 'The music map', ru: 'Карта музыки' })), h('button.icon-btn', { 'aria-label': t('Close'), onclick: () => this.onClose?.() }, svgIcon('close')));
     const head = h(
       'header.r-head',
       {},

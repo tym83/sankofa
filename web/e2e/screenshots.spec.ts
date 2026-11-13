@@ -209,3 +209,22 @@ test('roots', async ({ page }, info) => {
     await shot(page, name, p);
   }
 });
+
+test('the music map', async ({ page }, info) => {
+  const p = info.project.name;
+  for (const [url, name, find] of [
+    ['/#view=roots-map', '100-music-map', ''],
+    ['/#view=roots-map', '101-music-map-lit', 'metal'],
+    ['/#view=roots-map&lang=ru', '102-ru-music-map', ''],
+  ]) {
+    await page.goto('about:blank');
+    await page.goto(url);
+    await settle(page, 3000);
+    if (find) {
+      await page.locator('.rm-input').fill(find);
+      await page.locator('.rm-input').press('Enter');
+      await settle(page, 1800);
+    }
+    await shot(page, name, p);
+  }
+});

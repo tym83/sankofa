@@ -18,6 +18,7 @@ import { Descent } from './views/descent';
 import { Listen } from './views/listen';
 import { Engine } from './views/engine';
 import { Roots } from './views/roots';
+import { RootsMap } from './views/rootsMap';
 
 async function load<T>(url: string): Promise<T> {
   const r = await fetch(url);
@@ -100,7 +101,7 @@ async function start(): Promise<void> {
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
-      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
+      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
       writeRoute(route, opts.push ?? true);
     },
     closeCard() {
@@ -176,7 +177,15 @@ async function start(): Promise<void> {
     route = { point: {}, ch: chapterNow ?? undefined };
     writeRoute(route, false);
   };
+  const rootsMap = new RootsMap(app, cardsFile.roots ?? []);
+  rootsMap.onClose = () => {
+    rootsMap.close();
+    route = { point: {}, view: 'roots' };
+    writeRoute(route, false);
+    roots.open();
+  };
   const closeOverlays = (keep?: string) => {
+    if (keep !== 'roots-map' && rootsMap.isOpen) rootsMap.close();
     if (keep !== 'roots' && roots.isOpen) roots.close();
     if (keep !== 'atlas' && atlas.isOpen) atlas.close();
     if (keep !== 'descent' && descent.isOpen) descent.close();
@@ -241,6 +250,24 @@ async function start(): Promise<void> {
 
   // Inline card links anywhere open the card in place.
   document.addEventListener('click', (e) => {
+    const rm = (e.target as Element).closest<HTMLElement>('[data-roots-map]');
+    if (rm) {
+      e.preventDefault();
+      closeOverlays('roots-map');
+      route = { point: {}, view: 'roots-map' };
+      writeRoute(route, true);
+      rootsMap.open();
+      return;
+    }
+    const ra = (e.target as Element).closest<HTMLElement>('[data-artist-roots]');
+    if (ra) {
+      e.preventDefault();
+      closeOverlays('roots');
+      route = { point: {}, view: 'roots', artist: ra.dataset.artistRoots };
+      writeRoute(route, true);
+      roots.open(ra.dataset.artistRoots);
+      return;
+    }
     const ro = (e.target as Element).closest<HTMLElement>('[data-roots]');
     if (ro) {
       e.preventDefault();
@@ -297,6 +324,7 @@ async function start(): Promise<void> {
     if (screen === 'listen') listen.open();
     else if (screen === 'engine') engine.open();
     else if (screen === 'roots') roots.open(route.artist);
+    else if (screen === 'roots-map') rootsMap.open();
     else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);
     else if (screen === 'atlas') atlas.open(route.point);
     else if (route.ch && (initial || route.ch !== chapterNow)) scrollToChapter(route.ch, initial);
