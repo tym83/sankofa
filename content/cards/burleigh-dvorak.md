@@ -23,7 +23,7 @@ sources:
   - {title: "Radio Prague International: Burleigh sang spirituals for Dvořák and his family", url: "https://english.radio.cz/node/8711161"}
   - {title: "antonin-dvorak.cz: Symphony No. 9, premiere 16 December 1893, New York", url: "https://www.antonin-dvorak.cz/en/symphony9"}
   - {title: "Carnegie Hall Timeline: Spiritual as Art Song", url: "https://timeline.carnegiehall.org/genres/spiritual-as-art-song"}
-  - {title: "Skidmore Saratoga Memory Project: Burleigh timeline (first Deep River arrangement 1916)", url: "https://ssmp.skidmore.edu/exhibits/show/burleigh_in_saratoga/burleigh_bio/timeline"}
+  - {title: "Skidmore Saratoga Memory Project: Burleigh timeline", url: "https://ssmp.skidmore.edu/exhibits/show/burleigh_in_saratoga/burleigh_bio/timeline"}
 media:
   - {type: "image", file: "burleigh-dvorak.jpg", caption: "Harry T. Burleigh, New York, March 1917", credit: "Mishkin Studio, New York", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Harry_T_Burleigh,_March_1917_(PORTRAITS_293).jpg"}
 ---

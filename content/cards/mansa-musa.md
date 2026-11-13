@@ -16,8 +16,8 @@ further:
 sources:
   - {title: "Boston University: al-Umari on Musa in Cairo", url: "https://www.bu.edu/africa/outreach/teachingresources/history/ancient-to-medieval-history/k_o_mali/"}
   - {title: "British Library: African kings on medieval maps", url: "https://www.bl.uk/stories/blogs/posts/african-kings-on-medieval-and-renaissance-maps"}
-  - {title: "Wikimedia Commons: Catalan Atlas BNF Sheet 6, Mansa Musa (with caption transcription)", url: "https://commons.wikimedia.org/wiki/File:Catalan_Atlas_BNF_Sheet_6_Mansa_Musa_(cropped).jpg"}
-  - {title: "Northwestern University, Caravans of Gold: Abraham Cresques (?), Catalan Atlas", url: "https://caravans.library.northwestern.edu/works/26/"}
+  - {title: "Wikimedia Commons: Catalan Atlas BNF Sheet 6, Mansa Musa", url: "https://commons.wikimedia.org/wiki/File:Catalan_Atlas_BNF_Sheet_6_Mansa_Musa_(cropped).jpg"}
+  - {title: "Northwestern University, Caravans of Gold: Abraham Cresques, Catalan Atlas", url: "https://caravans.library.northwestern.edu/works/26/"}
   - {title: "Metropolitan Museum: Visualizing a Sahelian Past", url: "https://www.metmuseum.org/perspectives/visualizing-a-sahelian-past"}
 media:
   - {type: "image", file: "mansa-musa.jpg", caption: "Mansa Musa enthroned with a gold nugget or coin, detail of sheet 6 of the Catalan Atlas, about 1375", credit: "Attributed to Abraham Cresques; Bibliothèque nationale de France (Gallica btv1b55002481n), via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Catalan_Atlas_BNF_Sheet_6_Mansa_Musa_(cropped).jpg"}

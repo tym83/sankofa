@@ -19,11 +19,11 @@ sources:
   - {title: "Cambridge Companion to Pushkin: David Bethea and Sergei Davydov, Pushkin’s life", url: "https://www.cambridge.org/core/books/abs/cambridge-companion-to-pushkin/pushkins-life/8C354547C2A3A9AD511AA2E48DFF0D3D"}
   - {title: "Northwestern University Press: Under the Sky of My Africa, introduction", url: "https://api.pageplace.de/preview/DT0400.9780810162051_A49429564/preview-9780810162051_A49429564.pdf"}
   - {title: "Saint Petersburg Encyclopedia: D. Y. Guzevich, Gannibal", url: "https://encspb.ru/object/2804035654?dv=2853952566&lc=en"}
-  - {title: "Brockhaus and Efron (Wikisource): kidnapped at about eight, taken to Constantinople", url: "https://ru.wikisource.org/wiki/ЭСБЕ/Ганнибал,_Абрам_Петрович"}
-  - {title: "Russian Biographical Dictionary (Wikisource): sent as a small boy as hostage to the Sultan's seraglio", url: "https://ru.wikisource.org/wiki/РБС/ВТ/Ганнибал,_Абрам_Петрович"}
+  - {title: "Brockhaus and Efron: kidnapped at about eight, taken to Constantinople", url: "https://ru.wikisource.org/wiki/ЭСБЕ/Ганнибал,_Абрам_Петрович"}
+  - {title: "Russian Biographical Dictionary: sent as a small boy as hostage to the Sultan's seraglio", url: "https://ru.wikisource.org/wiki/РБС/ВТ/Ганнибал,_Абрам_Петрович"}
   - {title: "Georg Leets: Abram Petrovich Gannibal (1984), documentary biography", url: "https://imwerden.de/pdf/leets_abram_petrovich_gannibal_1984__ocr.pdf"}
   - {title: "Ibrahima Gaye, 'African Pushkin', Philology. Theory & Practice 2024", url: "https://www.gramota.net/articles/phil20240134.pdf"}
-  - {title: "Pushkin, Arap Petra Velikogo (Wikisource; dated 1827, Mikhailovskoye)", url: "https://ru.wikisource.org/wiki/%D0%90%D1%80%D0%B0%D0%BF_%D0%9F%D0%B5%D1%82%D1%80%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3%D0%BE_(%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD)"}
+  - {title: "Pushkin, Arap Petra Velikogo", url: "https://ru.wikisource.org/wiki/%D0%90%D1%80%D0%B0%D0%BF_%D0%9F%D0%B5%D1%82%D1%80%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3%D0%BE_(%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD)"}
 media:
   - {"type": "image", "file": "gannibal.jpg", "caption": "Outbuilding at Suyda, Gatchinsky district, Leningrad region, 2 October 2021", "credit": "Vaija; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Outbuildin_Suyda,_Gatchinsky_district,_Leningrad_region.jpg"}
 ---

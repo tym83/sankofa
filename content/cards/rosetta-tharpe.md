@@ -23,7 +23,7 @@ sources:
   - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/"}
   - {title: "Clio: Sister Rosetta Tharpe historical marker", url: "https://theclio.com/entry/121351"}
   - {title: "NPR: Etched In Stone At Last (1945)", url: "https://text.npr.org/102167126"}
-  - {title: "Wikipedia: Wilbraham Road railway station (Granada, 7 May 1964; cites BBC News 7 May 2014, which could not be fetched)", url: "https://en.wikipedia.org/wiki/Wilbraham_Road_railway_station"}
+  - {title: "Wikipedia: Wilbraham Road railway station", url: "https://en.wikipedia.org/wiki/Wilbraham_Road_railway_station"}
   - {title: "Central Arkansas Library System, Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/"}
 media:
   - {type: "image", file: "rosetta-tharpe.jpg", caption: "Sister Rosetta Tharpe with her guitar, publicity photograph, 1938", credit: "James J. Kriegsmann", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Sister_Rosetta_Tharpe_(1938_publicity_photo_with_guitar).jpg"}

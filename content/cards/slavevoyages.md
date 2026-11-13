@@ -16,8 +16,8 @@ further:
 sources:
   - {title: "SlaveVoyages: History of the project", url: "https://legacy.slavevoyages.org/blog/history-project"}
   - {title: "Emory Report: Slave trade database goes online (24 November 2008)", url: "https://news.emory.edu/emory-report-archive/erarchive/2008/November/Nov24/SlaveTradeDatabase.htm"}
-  - {title: "Associated Press via Lawrence Journal-World: Database catalogs slaves' trans-Atlantic treks (Errin Haines, 6 December 2008)", url: "https://www2.ljworld.com/news/2008/dec/06/database-catalogs-slaves-trans-atlantic-treks/"}
-  - {title: "Royal Museums Greenwich library: The trans-Atlantic slave trade, a database on CD-ROM (CUP, 1999)", url: "https://rmg.co.uk/collections/library/rmgl-116526"}
+  - {title: "Associated Press via Lawrence Journal-World: Database catalogs slaves' trans-Atlantic treks", url: "https://www2.ljworld.com/news/2008/dec/06/database-catalogs-slaves-trans-atlantic-treks/"}
+  - {title: "Royal Museums Greenwich library: The trans-Atlantic slave trade, a database on CD-ROM", url: "https://rmg.co.uk/collections/library/rmgl-116526"}
   - {title: "Harvard Gazette: Slave trade database moving to Harvard", url: "https://news.harvard.edu/gazette/story/2025/04/slave-trade-database-moving-to-harvard/"}
   - {title: "Nicholas Radburn, USC Dornsife (2017)", url: "https://dornsife.usc.edu/news/stories/a-digital-archive-of-slave-voyages-details-the-largest-forced-migration-in-history/"}
   - {title: "Literary Hub: about 12.5 million captives embarked", url: "https://lithub.com/how-empirical-databases-have-changed-our-understanding-of-early-american-slavery/"}

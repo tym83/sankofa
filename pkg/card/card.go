@@ -497,6 +497,12 @@ func (s *Set) Validate() []error {
 	for p, cs := range pairs {
 		if len(cs) != 2 || cs[0].Edition == cs[1].Edition {
 			errs = append(errs, fmt.Errorf("pair %q must have exactly one m and one f card", p))
+			continue
+		}
+		// The two voices replace each other in the same story, so they must
+		// belong to the same chapter.
+		if cs[0].Era != cs[1].Era {
+			errs = append(errs, fmt.Errorf("pair %q spans chapters %s and %s", p, cs[0].Era, cs[1].Era))
 		}
 	}
 	return errs

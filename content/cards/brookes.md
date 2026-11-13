@@ -16,7 +16,7 @@ further:
   - "Cheryl Finley, Committed to Memory: The Art of the Slave Ship Icon (Princeton University Press, 2018)"
 dispute: "The date of the first Plymouth image differs: Royal Museums Greenwich dates it to late 1788, Princeton's rare books curators to March 1789."
 sources:
-  - {title: "Royal Museums Greenwich: The slave ship 'Brooks' (ZBA2721)", url: "https://www.rmg.co.uk/collections/objects/rmgc-object-254938"}
+  - {title: "Royal Museums Greenwich: The slave ship 'Brooks'", url: "https://www.rmg.co.uk/collections/objects/rmgc-object-254938"}
   - {title: "Understanding Slavery Initiative: Description of a slave ship, c.1788", url: "https://understandingslavery.com/?p=547"}
   - {title: "Royal Museums Greenwich: Plan and Sections of a Slave Ship", url: "https://www.rmg.co.uk/collections/objects/rmgc-object-254967"}
   - {title: "Princeton Rare Books: Description of a Slave Ship", url: "https://rarebooks.blogs.princeton.edu/2008/05/219-years-ago-description-of-a/"}

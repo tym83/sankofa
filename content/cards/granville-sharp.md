@@ -17,10 +17,10 @@ sources:
   - {title: "Brycchan Carey: Granville Sharp", url: "https://brycchancarey.com/abolition/sharp.htm"}
   - {title: "National Portrait Gallery: Granville Sharp", url: "https://www.npg.org.uk/collections/search/person/mp04061/granville-sharp"}
   - {title: "Clapham Society: Granville Sharp", url: "https://claphamsociety.com/article/24-granville-sharp/"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Granville_Sharp_(4671963).jpg"}
-  - {title: "London Museum: Granville Sharp (object 752028)", url: "https://londonmuseum.org.uk/collections/v/object-752028/granville-sharp/"}
-  - {title: "London Museum: The Zong massacre trial (Sharp asked the prime minister for a murder trial)", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/"}
-  - {title: "Understanding Slavery Initiative: The Zong (19 March 1783; campaign to bring the guilty to justice)", url: "https://understandingslavery.com/casestudy/the-zong/"}
+  - {title: "Wikimedia Commons: Portrait of Granville Sharp (4671963)", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Granville_Sharp_(4671963).jpg"}
+  - {title: "London Museum: Granville Sharp", url: "https://londonmuseum.org.uk/collections/v/object-752028/granville-sharp/"}
+  - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/"}
+  - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/"}
 media:
   - {type: "image", file: "granville-sharp.jpg", caption: "Granville Sharp, portrait lithograph, about 1810", credit: "After Francis Legatt Chantrey; National Library of Wales", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Granville_Sharp_(4671963).jpg"}
 ---

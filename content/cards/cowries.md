@@ -14,9 +14,9 @@ books: [archives]
 further:
   - "Jan Hogendorn and Marion Johnson, The Shell Money of the Slave Trade (Cambridge University Press, 1986)"
 sources:
-  - {title: "Citéco (women, coconut-leaf mats, Bengal)", url: "https://citeco.fr/en/cowries-"}
-  - {title: "Conchological Society: Shell money (coconut palm fronds in lagoons)", url: "http://www.conchsoc.org/interests/shell-money.php"}
-  - {title: "Fauvelle, Shell Money (palm branches; Bengal the centre of the trade)", url: "https://www.cambridge.org/core/elements/shell-money/59F5D361C6CA7C596A8C168C84A960D0"}
+  - {title: "Citéco", url: "https://citeco.fr/en/cowries-"}
+  - {title: "Conchological Society: Shell money", url: "http://www.conchsoc.org/interests/shell-money.php"}
+  - {title: "Fauvelle, Shell Money", url: "https://www.cambridge.org/core/elements/shell-money/59F5D361C6CA7C596A8C168C84A960D0"}
   - {title: "NMAAHC: Cowrie Shells and Trade Power", url: "https://nmaahc.si.edu/cowrie-shells-and-trade-power"}
   - {title: "Bank of England Museum: Slavery and the Bank, p. 47", url: "https://www.bankofengland.co.uk/-/media/boe/files/museum/slavery-and-the-bank-large-print-guide"}
   - {title: "Justine Wintjes, The Conversation via Daily Maverick (2021): relatively new commodity for Europeans in the 1550s", url: "https://www.dailymaverick.co.za/article/2021-09-28-small-seashells-tell-a-big-story-of-slavery-and-transoceanic-trade-500-years-ago/"}

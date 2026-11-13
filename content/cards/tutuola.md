@@ -17,7 +17,7 @@ further:
   - "Bernth Lindfors (ed.), Critical Perspectives on Amos Tutuola (1975)"
 dispute: "The book's reception is contested: the claim that many Nigerian readers called its English broken and its stories borrowed, splitting opinion along continental lines, rests largely on one critic, Eustace Palmer."
 sources:
-  - {title: "Gale Contextual Encyclopedia of World Literature (Encyclopedia.com): Tutuola, Amos", url: "https://www.encyclopedia.com/arts/encyclopedias-almanacs-transcripts-and-maps/tutuola-amos"}
+  - {title: "Gale Contextual Encyclopedia of World Literature: Tutuola, Amos", url: "https://www.encyclopedia.com/arts/encyclopedias-almanacs-transcripts-and-maps/tutuola-amos"}
   - {title: "Grove Atlantic author note", url: "https://groveatlantic.com/book/the-palm-wine-drinkard-and-my-life-in-the-bush-of-ghosts/"}
   - {title: "Harry Ransom Center: Amos Tutuola collection, biographical sketch", url: "https://norman.hrc.utexas.edu/fasearch/pdf/00131.pdf"}
   - {title: "Eustace Palmer: Twenty-five Years of Amos Tutuola", url: "https://journals.lib.unb.ca/index.php/IFR/article/download/13280/14363/17988"}

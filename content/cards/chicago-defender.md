@@ -17,8 +17,8 @@ dispute: "Accounts of the Defender's first print shop differ: a landlord's or la
 sources:
   - {title: "PBS: The Chicago Defender", url: "https://www.pbs.org/blackpress/news_bios/defender.html?source=post_page---------------------------"}
   - {title: "Driehaus Museum: Pullman porters and the Great Migration", url: "https://driehausmuseum.org/blog/view/pullman-porters"}
-  - {title: "PBS, The Black Press: Soldiers Without Swords, The Chicago Defender (kitchen in his landlord's apartment)", url: "https://www.pbs.org/blackpress/news_bios/defender.html"}
-  - {title: "Joshua Botkin, Encyclopedia of African-American Culture and History via Encyclopedia.com (landlady's dining room)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chicago-defender"}
+  - {title: "PBS, The Black Press: Soldiers Without Swords, The Chicago Defender", url: "https://www.pbs.org/blackpress/news_bios/defender.html"}
+  - {title: "Joshua Botkin, Encyclopedia of African-American Culture and History via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chicago-defender"}
   - {title: "TIME (2015): Marcia Chatelain on the Defender and the Great Migration", url: "https://time.com/3857576/girls-great-migration/"}
   - {title: "Washington Informer: The Great Migration was a triumph of the Black press", url: "https://www.washingtoninformer.com/the-great-migration-was-a-triumph-of-the-black-press/"}
 media:

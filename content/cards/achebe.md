@@ -23,7 +23,7 @@ sources:
   - {title: "Paul Brians, WSU: Things Fall Apart study guide", url: "https://brians.wsu.edu/2016/10/19/chinua-achebe-things-fall-apart-study-guide/"}
   - {title: "LUCAS, University of Leeds: James Currey, Ngugi, Leeds and the establishment of African literature", url: "https://lucas.leeds.ac.uk/article/ngugi-leeds-and-the-establishment-of-african-literature-james-currey/"}
   - {title: "The Massachusetts Review, Volume 57, Issue 1", url: "https://massreview.org/volume-57-issue-1/"}
-  - {title: "Caryl Phillips, Was Joseph Conrad Really a Racist? (PDF)", url: "https://gcp-web.sjsu.edu/people/cynthia.rostankowski/courses/HUM2BS14/s0/Caryl-Phillips-and-Chinua-Achebe---Was-Joseph-Conrad-Really-a-Racist.pdf"}
+  - {title: "Caryl Phillips, Was Joseph Conrad Really a Racist?", url: "https://gcp-web.sjsu.edu/people/cynthia.rostankowski/courses/HUM2BS14/s0/Caryl-Phillips-and-Chinua-Achebe---Was-Joseph-Conrad-Really-a-Racist.pdf"}
 media:
   - {type: "image", file: "achebe.jpg", caption: "Chinua Achebe speaking at Asbury Hall, Buffalo, New York, 25 September 2008", credit: "Stuart C. Shapiro, via Wikimedia Commons", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Chinua_Achebe_-_Buffalo_25Sep2008_crop.jpg"}
 ---

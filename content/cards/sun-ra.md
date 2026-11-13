@@ -17,13 +17,13 @@ further:
   - "Space Is the Place (film, dir. John Coney)"
   - "Mark Dery, \"Black to the Future\", in Flame Wars (Duke University Press, 1994)"
 sources:
-  - {title: "NPR Jazz Profiles: Sun Ra, Cosmic Swing (school records: Herman Poole Blount, 22 May 1914, Birmingham; 'That's an imaginary person')", url: "https://text.npr.org/15774733"}
-  - {title: "Encyclopedia of Alabama: Herman Blount (Sun Ra)", url: "https://encyclopediaofalabama.org/article/herman-blount-sun-ra/"}
+  - {title: "NPR Jazz Profiles: Sun Ra, Cosmic Swing", url: "https://text.npr.org/15774733"}
+  - {title: "Encyclopedia of Alabama: Herman Blount", url: "https://encyclopediaofalabama.org/article/herman-blount-sun-ra/"}
   - {title: "PBS American Masters: Sun Ra biography and career timeline", url: "https://www.pbs.org/wnet/americanmasters/sun-ra-biography-and-career-timeline/37462"}
   - {title: "National Endowment for the Arts: Sun Ra", url: "https://www.arts.gov/honors/jazz/sun-ra"}
-  - {title: "Wikipedia: Sun Ra (Ra and Abraham formed El Saturn in the mid-1950s)", url: "https://en.wikipedia.org/wiki/Sun_Ra"}
-  - {title: "Los Angeles Review of Books (Dery coined it in 1993, 'Black to the Future')", url: "https://lareviewofbooks.org/article/afrofuturism-africanfuturism-and-the-language-of-black-speculative-literature"}
-  - {title: "Vanderbilt University course page (Dery, Flame Wars, 1994; Sun Ra as Afrofuturist)", url: "https://www.vanderbilt.edu/AnS/english/English295/carroll/afrofut.html"}
+  - {title: "Wikipedia: Sun Ra", url: "https://en.wikipedia.org/wiki/Sun_Ra"}
+  - {title: "Los Angeles Review of Books", url: "https://lareviewofbooks.org/article/afrofuturism-africanfuturism-and-the-language-of-black-speculative-literature"}
+  - {title: "Vanderbilt University course page", url: "https://www.vanderbilt.edu/AnS/english/English295/carroll/afrofut.html"}
 media:
   - {type: "image", file: "sun-ra.jpg", caption: "Sun Ra at the New England Conservatory, Boston, 27 February 1992", credit: "Pandelis Karayorgis, via Wikimedia Commons", license: "CC BY-SA 2.5", url: "https://commons.wikimedia.org/wiki/File:SunRa_in_1992.jpg"}
 ---

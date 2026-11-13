@@ -23,7 +23,7 @@ sources:
   - {title: "The Huntington: Moya Bailey", url: "https://www.huntington.org/author/moya-bailey"}
   - {title: "Northwestern: Misogynoir enters Merriam-Webster", url: "https://news.northwestern.edu/stories/2023/05/professor-coins-new-word-misogynoir"}
   - {title: "Northeastern: We started the movement, Misogynoir", url: "https://cssh.northeastern.edu/we-started-the-movement-misogynoir/"}
-  - {title: "Moya Bailey, Dilemma (WireTap via AlterNet, 2004)", url: "https://www.alternet.org/2004/05/dilemma"}
+  - {title: "Moya Bailey, Dilemma", url: "https://www.alternet.org/2004/05/dilemma"}
   - {title: "Black Feminist Future: Tip Drill / Take Back the Music protests", url: "https://fractals.blackfeministfuture.org/?p=115"}
   - {title: "The Hilltop / HU News Service: Spelman says no to Nelly (2004)", url: "https://hunewsservice.com/?p=1355"}
   - {title: "NBC News: Apple responds after Dr. Dre's apology to women he's hurt (22 August 2015)", url: "https://www.nbcnews.com/pop-culture/celebrity/apple-responds-after-dr-dres-apology-women-hes-hurt-n414156"}

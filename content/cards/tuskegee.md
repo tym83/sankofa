@@ -19,9 +19,9 @@ sources:
   - {title: "CDC: Untreated Syphilis Study timeline", url: "https://www.cdc.gov/tuskegee/about/timeline.html"}
   - {title: "Raymond Gavins, Cambridge Guide to African American History: Tuskegee Experiment", url: "https://www.cambridge.org/core/books/abs/cambridge-guide-to-african-american-history/tuskegee-experiment/F9C740A8E63FC7956C6598B539C00436"}
   - {title: "ASU Embryo Project Encyclopedia: The Tuskegee Syphilis Study (1932–1972)", url: "https://embryo.asu.edu/pages/tuskegee-syphilis-study-1932-1972"}
-  - {title: "CDC: The USPHS Syphilis Study at Tuskegee Timeline (archived official PDF)", url: "https://stacks.cdc.gov/view/cdc/126007/cdc_126007_DS1.pdf"}
-  - {title: "AP (Hawaii News Now): Buxtun obituary", url: "https://www.hawaiinewsnow.com/2024/07/15/tuskegee-syphilis-study-whistleblower-peter-buxtun-has-died-age-86/"}
-  - {title: "AP (NBC Washington), 50th anniversary story", url: "https://www.nbcwashington.com/news/national-international/50-years-ago-the-tuskegee-syphilis-study-was-exposed-how-a-reporter-broke-the-story/3115420/"}
+  - {title: "CDC: The USPHS Syphilis Study at Tuskegee Timeline", url: "https://stacks.cdc.gov/view/cdc/126007/cdc_126007_DS1.pdf"}
+  - {title: "AP: Buxtun obituary", url: "https://www.hawaiinewsnow.com/2024/07/15/tuskegee-syphilis-study-whistleblower-peter-buxtun-has-died-age-86/"}
+  - {title: "AP, 50th anniversary story", url: "https://www.nbcwashington.com/news/national-international/50-years-ago-the-tuskegee-syphilis-study-was-exposed-how-a-reporter-broke-the-story/3115420/"}
 media:
   - {type: "image", file: "tuskegee.jpg", caption: "Photograph of participants in the Tuskegee study, as catalogued in the Public Health Service records at the National Archives", credit: "Department of Health, Education, and Welfare, Public Health Service, Venereal Disease Branch; National Archives at Atlanta (NAID 956099)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Photograph_of_Participants_in_the_Tuskegee_Syphilis_Study_-_DPLA_-_f85597b70122d44e8b65ef280492bcdd.gif"}
 ---

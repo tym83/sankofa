@@ -17,10 +17,10 @@ dispute: "Mestre Bimba's academy is often called the first formal capoeira schoo
 sources:
   - {title: "IPHAN: Roda de capoeira", url: "https://bcr.iphan.gov.br/bens-culturais/roda-de-capoeira/"}
   - {title: "Smithsonian Folklife Festival: Capoeira", url: "https://festival.si.edu/blog/capoeira-from-occult-martial-art-to-international-dance"}
-  - {title: "T. J. Desch-Obi, Capoeira, Encyclopedia of African-American Culture and History, via Encyclopedia.com (berimbau)", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/capoeira"}
-  - {title: "Câmara dos Deputados: Decreto 847 de 11 de outubro de 1890, art. 402 (primary text)", url: "https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-847-11-outubro-1890-503086-publicacaooriginal-1-pe.html"}
+  - {title: "T. J. Desch-Obi, Capoeira, Encyclopedia of African-American Culture and History, via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/capoeira"}
+  - {title: "Câmara dos Deputados: Decreto 847 de 11 de outubro de 1890, art. 402", url: "https://www2.camara.leg.br/legin/fed/decret/1824-1899/decreto-847-11-outubro-1890-503086-publicacaooriginal-1-pe.html"}
   - {title: "UNESCO: Traditional Sports and Games", url: "https://www.unesco.org/en/sport-and-anti-doping/traditional-sports-and-games"}
-  - {title: "ReVista (Harvard DRCLAS): UNESCO intangible cultural heritage designation", url: "https://revista.drclas.harvard.edu/axe-capoeira/"}
+  - {title: "ReVista: UNESCO intangible cultural heritage designation", url: "https://revista.drclas.harvard.edu/axe-capoeira/"}
 media:
   - {type: "image", file: "capoeira.jpg", caption: "Jogar capoëra ou danse de la guerre, Rio de Janeiro, lithograph published 1835", credit: "Johann Moritz Rugendas, Voyage pittoresque dans le Brésil", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Jogar_capo%C3%ABra_ou_danse_de_la_guerre.jpg"}
 ---

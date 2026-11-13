@@ -17,7 +17,7 @@ dispute: "Why the dedication changed. The usual story is that the two men fell o
 sources:
   - {title: "Beethoven-Haus: autograph Sonata op. 47", url: "https://www.beethoven.de/en/media/view/5834388323434496/scan/1"}
   - {title: "Jeff Bowersox: Beethoven and Bridgetower", url: "https://blackcentraleurope.com/sources/1750-1850/beethoven-performs-with-his-friend-george-bridgetower-the-great-mulatto-composer-and-lunatic-1803/"}
-  - {title: "IMSLP: Op. 47 first editions (Simrock, Bonn and Birchall, London, 1805)", url: "https://imslp.org/wiki/Violin_Sonata_No.9,_Op.47_(Beethoven,_Ludwig_van)"}
+  - {title: "IMSLP: Op. 47 first editions", url: "https://imslp.org/wiki/Violin_Sonata_No.9,_Op.47_(Beethoven,_Ludwig_van)"}
 media:
   - {type: "image", file: "bridgetower.jpg", caption: "George Bridgetower, drawing by Henry Edridge, about 1790-1800", credit: "Henry Edridge; British Museum, 1876,0708.2379", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_George_Augustus_Polgreen_Bridgetower,_violinist.jpg"}
 ---

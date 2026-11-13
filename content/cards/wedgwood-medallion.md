@@ -15,7 +15,7 @@ further:
 sources:
   - {title: "Victoria and Albert Museum: Wedgwood anti-slavery medallion", url: "https://www.vam.ac.uk/articles/the-wedgwood-anti-slavery-medallion"}
   - {title: "Walters Art Museum: Anti-Slavery Cameo", url: "https://art.thewalters.org/object/48.2597/"}
-  - {title: "Thomas Clarkson, History of the Abolition (1808), vol. I, Project Gutenberg (design approved 16 October 1787)", url: "https://www.gutenberg.org/ebooks/12428"}
+  - {title: "Thomas Clarkson, History of the Abolition (1808), vol. I, Project Gutenberg", url: "https://www.gutenberg.org/ebooks/12428"}
   - {title: "Historic Deerfield: Wedgwood's anti-slavery medallion", url: "https://www.historic-deerfield.org/2020-9-21-wedgwoods-anti-slavery-medallion/"}
   - {title: "Clarkson (1808), vol. II, Project Gutenberg", url: "https://www.gutenberg.org/ebooks/12507"}
 media:

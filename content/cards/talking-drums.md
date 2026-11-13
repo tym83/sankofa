@@ -16,11 +16,11 @@ sources:
   - {title: "Frontiers in Communication: Yoruba dùndún and bàtá speech surrogacy", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2021.652542/full"}
   - {title: "Smithsonian Folkways: William Bascom, Drums of the Yoruba of Nigeria", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW04441.pdf"}
   - {title: "Frontiers in Communication: speech surrogacy systems of the Yoruba dùndún and bàtá drums (2021)", url: "https://www.frontiersin.org/articles/10.3389/fcomm.2021.652542"}
-  - {title: "Wikimedia Commons: Yoruba Talking Drum Performer in Nigeria (description)", url: "https://commons.wikimedia.org/wiki/File:Yoruba_Talking_Drum_Performer_in_Nigeria.jpg"}
+  - {title: "Wikimedia Commons: Yoruba Talking Drum Performer in Nigeria", url: "https://commons.wikimedia.org/wiki/File:Yoruba_Talking_Drum_Performer_in_Nigeria.jpg"}
   - {title: "Samuel Kayode Akinbo: The Language of Gángan, A Yorùbá Talking Drum", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2021.650382/full"}
   - {title: "Freeman Dyson, How We Know, New York Review of Books (2011)", url: "https://www.nybooks.com/articles/2011/03/10/how-we-know/"}
-  - {title: "Time: Education, Boomlay (Carrington at Yalemba, drum-language expert)", url: "https://time.com/archive/6609281/education-boomlay/"}
-  - {title: "Wikipedia: John F. Carrington (cites Dyson's review)", url: "https://en.wikipedia.org/wiki/John_F._Carrington"}
+  - {title: "Time: Education, Boomlay", url: "https://time.com/archive/6609281/education-boomlay/"}
+  - {title: "Wikipedia: John F. Carrington", url: "https://en.wikipedia.org/wiki/John_F._Carrington"}
   - {title: "Penguin Random House: The Information, opening excerpt", url: "https://penguinrandomhousesecondaryeducation.com/book/?isbn=9781400096237"}
   - {title: "Horniman Museum, Dundun talking drum, collection MT40-1995", url: "https://www.horniman.ac.uk/object/MT40-1995/"}
   - {title: "Atinuke Adenike Idamoyibo, The media, the reconstruction of drumming, and the tradition of the dundun and bata ensemble, Tydskrif vir Letterkunde 51:1 (2014)", url: "https://scielo.org.za/scielo.php?pid=S0041-476X2014000100010&script=sci_arttext"}

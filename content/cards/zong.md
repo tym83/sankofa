@@ -16,11 +16,11 @@ further:
   - "James Walvin, The Zong: A Massacre, the Law and the End of Slavery (2011)"
 dispute: "The number killed is reported differently: some accounts count 132 thrown overboard, others 122 thrown plus 10 who jumped."
 sources:
-  - {title: "Understanding Slavery Initiative: The Zong (442 captives; Liverpool Gregson syndicate; sailed past Jamaica)", url: "https://understandingslavery.com/casestudy/the-zong/"}
-  - {title: "London Museum: The Zong massacre trial (about 470)", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/"}
-  - {title: "HISTORY.com (442)", url: "https://history.com/this-day-in-history/zong-slave-ship-trial"}
+  - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/"}
+  - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/"}
+  - {title: "HISTORY.com", url: "https://history.com/this-day-in-history/zong-slave-ship-trial"}
   - {title: "Insurance Museum: John Lane, The Zong Massacre", url: "https://insurance.museum/history-article-the-zong-massacre-1781-an-insurers-perspective"}
-  - {title: "Insurance Museum (132 total; 122 thrown, 10 jumped, 29 Nov–early Dec)", url: "https://insurance.museum/?p=17318"}
+  - {title: "Insurance Museum", url: "https://insurance.museum/?p=17318"}
   - {title: "McGill Faculty of Law: Zong! 'composed entirely from the words of ... Gregson v. Gilbert'", url: "https://mcgill.ca/law/node/8889"}
   - {title: "M. NourbeSe Philip: Set Speaks, author’s account of Zong!", url: "https://www.setspeaks.com/backstory/"}
 media:

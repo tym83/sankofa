@@ -15,12 +15,12 @@ further:
   - "Lady Mary Hodgson, The Siege of Kumassi (1901), on the Internet Archive"
 dispute: "What Governor Hodgson asked for is contested: later accounts say he demanded to sit on the Golden Stool, while his wife's 1901 memoir says he asked for it to be handed over. Yaa Asantewaa's birth year (about 1840) is traditional."
 sources:
-  - {title: "Lady Hodgson, The Siege of Kumassi (1901), Internet Archive full text (arranged for 29 March; later 'the durbar held on the 28th March')", url: "https://archive.org/stream/siegeofkumassi00hodg/siegeofkumassi00hodg_djvu.txt"}
+  - {title: "Lady Hodgson, The Siege of Kumassi (1901), Internet Archive full text", url: "https://archive.org/stream/siegeofkumassi00hodg/siegeofkumassi00hodg_djvu.txt"}
   - {title: "Africa Defense Forum: Nana Yaa Asantewaa and the War of the Golden Stool (2022)", url: "https://adf-magazine.com/2022/08/nana-yaa-asantewaa-and-the-war-of-the-golden-stool/"}
   - {title: "BBC via MyJoyOnline: Celebrating the Ghanaian king banished by the British (2024)", url: "https://www.myjoyonline.com/celebrating-the-ghanaian-king-banished-by-the-british/"}
   - {title: "A. A. Boahen, Encyclopaedia Africana: Yaa Asantewaa", url: "https://encyclopaediaafricana.com/asantewaa-yaa/"}
   - {title: "Deutsche Welle / Gerda Henkel Foundation: Yaa Asantewaa", url: "https://amp.dw.com/en/yaa-asantewaa-the-asante-warrior-queen/a-42968725"}
-  - {title: "Seychelles Nation ('is said to have been born in 1840')", url: "https://nation.sc/article.html?id=251467"}
+  - {title: "Seychelles Nation", url: "https://nation.sc/article.html?id=251467"}
 media:
   - {type: "image", file: "yaa-asantewaa.jpg", caption: "The British garrison and civilians besieged in the Kumasi fort, 1900", credit: "From C. H. Armitage and A. F. Montanaro, The Ashanti Campaign of 1900 (London, 1901)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:FortKumasi_1900_Besatzung_B004b-2.jpg"}
 ---

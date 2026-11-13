@@ -19,19 +19,19 @@ sources:
   - {title: "The Henry Ford: From a DJ’s Closet", url: "https://www.thehenryford.org/collections/explore/articles/from-a-djs-closet"}
   - {title: "Longreads: Jeff Chang on DJ Kool Herc", url: "https://longreads.com/2015/08/04/on-dj-kool-herc-and-a-seminal-moment-in-hip-hop-history/"}
   - {title: "GRAMMY.com: DJ Kool Herc and Cindy Campbell interview (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots"}
-  - {title: "Encyclopedia.com (Contemporary Musicians, Gale): Kool Herc", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/kool-herc"}
-  - {title: "Rolling Stone (via Yahoo News): Kool Herc and the History (and Mystery) of Hip-Hop's First Day", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Herc_on_the_Wheels_of_Steel.JPG"}
+  - {title: "Encyclopedia.com: Kool Herc", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/kool-herc"}
+  - {title: "Rolling Stone: Kool Herc and the History of Hip-Hop's First Day", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html"}
+  - {title: "Wikimedia Commons: Herc on the Wheels of Steel", url: "https://commons.wikimedia.org/wiki/File:Herc_on_the_Wheels_of_Steel.JPG"}
   - {title: "WNYC: The South Bronx, where hip-hop was born", url: "https://www.wnyc.org/story/89709-south-bronx-hip-hop-year-zero/"}
   - {title: "The Henry Ford: The Early History of Hip-Hop in Three Flyers", url: "https://www.thehenryford.org/collections/explore/articles/the-early-history-of-hip-hop-in-three-flyers"}
   - {title: "Library of Congress, National Recording Registry: Rapper's Delight essay", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RappersDelight.pdf"}
-  - {title: "The Spokesman-Review (Washington Post, Kim Bellware): The unlikely origins of Rapper's Delight (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f"}
+  - {title: "The Spokesman-Review: The unlikely origins of Rapper's Delight (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f"}
   - {title: "Carnegie Hall, Timeline of African American Music: Rap & Hip-Hop", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"}
   - {title: "PBS Independent Lens: How the burning of the Bronx led to the birth of hip-hop", url: "https://www.pbs.org/independentlens/blog/how-the-burning-of-the-bronx-led-to-the-birth-of-hip-hop/"}
-  - {title: "Smithsonian American Art Museum blog: A short discussion of hip-hop and art (four elements)", url: "https://americanart.si.edu/blog/short-discussion-hip-hop-art-and-their-entanglement"}
+  - {title: "Smithsonian American Art Museum blog: A short discussion of hip-hop and art", url: "https://americanart.si.edu/blog/short-discussion-hip-hop-art-and-their-entanglement"}
   - {title: "Cheryl Keyes, Rap, Encyclopedia of African-American Culture and History, via Encyclopedia.com", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-popular-and-jazz/rap-music"}
-  - {title: "Library of Congress Labs, Citizen DJ: About (hip-hop began in the Bronx in the early 70s)", url: "https://citizen-dj.labs.loc.gov/about/"}
-  - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture, via Encyclopedia.com (hip-hop's funk samples)", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
+  - {title: "Library of Congress Labs, Citizen DJ: About", url: "https://citizen-dj.labs.loc.gov/about/"}
+  - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture, via Encyclopedia.com", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
   - {title: "Lindsay Rapport, Hip Hop Culture and its Foundational Elements, University of California Riverside", url: "https://gluckprogram.ucr.edu/sites/default/files/2018-08/D41_HipHopCulture.pdf"}
   - {title: "Aubrey Foard, Behind the Beat: Funky Drummer by James Brown, Roland", url: "https://articles.roland.com/behind-the-beat-funky-drummer-by-james-brown/"}
 media:

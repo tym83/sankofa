@@ -19,7 +19,7 @@ sources:
   - {title: "Colonial Beach Historical Society and Museum: African American history", url: "https://www.cbhistoryandmuseum.org/african-american-history"}
   - {title: "Indiana University Libraries: African Americans in Soviet Russia", url: "https://guides.libraries.indiana.edu/c.php?g=792963&p=5681557"}
   - {title: "RFE/RL: Russian Blacks and Obama visit,2009", url: "https://www.rferl.org/amp/For_Russian_Blacks_Obama_Visit_Stirs_Special_Interest/1770531.html"}
-  - {title: "Radio Svoboda (in Russian)", url: "https://www.svoboda.org/a/27667216.html"}
+  - {title: "Radio Svoboda", url: "https://www.svoboda.org/a/27667216.html"}
   - {title: "Lily Golden, Autobiography: Institute of Africa, daughter Yelena a journalist, Moscow television, Soul to Soul", url: "https://africana.ru/Golden/info/autobiography.htm"}
   - {title: "Wilson Center KennanX (2020): Khanga, journalist, talk show host, author of Soul to Soul", url: "https://www.wilsoncenter.org/audio/kennanx-episode-7-yelena-khanga-family-growing-ussr-and-black-lives-matter"}
 media:

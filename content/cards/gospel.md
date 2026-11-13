@@ -17,13 +17,13 @@ further:
 sources:
   - {title: "PBS, This Far by Faith: Thomas Dorsey", url: "https://www.pbs.org/thisfarbyfaith/people/thomas_dorsey.html"}
   - {title: "New Georgia Encyclopedia: Ian Hill, Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Mahalia_Jackson_LCCN2004663076.jpg"}
+  - {title: "Wikimedia Commons: Portrait of Mahalia Jackson LCCN2004663076", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Mahalia_Jackson_LCCN2004663076.jpg"}
   - {title: "New Georgia Encyclopedia", url: "https://www.georgiaencyclopedia.org/articles/people/georgia-tom-dorsey-1899-1993"}
-  - {title: "64 Parishes: Mahalia Jackson (moved to Chicago at sixteen; worked with Dorsey early 1940s)", url: "https://64parishes.org/entry/mahalia-jackson"}
-  - {title: "Rock & Roll Hall of Fame: Mahalia Jackson (born New Orleans)", url: "https://www.rockhall.com/inductees/mahalia-jackson"}
-  - {title: "Carnegie Hall Timeline of African American Music (Portia Maultsby): Traditional gospel", url: "https://timeline.carnegiehall.org/genres/traditional-gospel"}
+  - {title: "64 Parishes: Mahalia Jackson", url: "https://64parishes.org/entry/mahalia-jackson"}
+  - {title: "Rock & Roll Hall of Fame: Mahalia Jackson", url: "https://www.rockhall.com/inductees/mahalia-jackson"}
+  - {title: "Carnegie Hall Timeline of African American Music: Traditional gospel", url: "https://timeline.carnegiehall.org/genres/traditional-gospel"}
   - {title: "Christianity Today: The father of gospel music, Thomas Dorsey (2018)", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/"}
-  - {title: "NPR (Anne Ford, via WUNC): How the Hammond organ sound laid the tracks for gospel's hit train (2016)", url: "https://www.wunc.org/2016-01-03/how-the-hammond-organ-sound-laid-the-tracks-for-gospels-hit-train"}
+  - {title: "NPR: How the Hammond organ sound laid the tracks for gospel's hit train (2016)", url: "https://www.wunc.org/2016-01-03/how-the-hammond-organ-sound-laid-the-tracks-for-gospels-hit-train"}
   - {title: "Jim DeRogatis, 50 Chicago artists who changed popular music: Gospel, WBEZ (2017)", url: "https://www.wbez.org/jim-derogatis/2017/04/03/50-chicago-artists-who-changed-popular-music-gospel"}
   - {title: "Library of Congress, African American Spirituals: Introduction", url: "https://guides.loc.gov/spirituals-folklife"}
   - {title: "Ben Sandmel, Black Gospel, Music Rising at Tulane University", url: "https://musicrising.tulane.edu/discover/themes/black-gospel/"}

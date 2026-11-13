@@ -18,7 +18,7 @@ sources:
   - {title: "BBC Music Magazine: Paul Riley on Joseph Bologne", url: "https://www.classical-music.com/features/composers/bologne-joseph"}
   - {title: "Warwick Lister: The First Performance of Haydn’s Paris Symphonies, Eighteenth-Century Music", url: "https://www.cambridge.org/core/journals/eighteenth-century-music/article/abs/the-first-performance-of-haydns-paris-symphonies/9A97AFA6AFAB74C1511D9121DEFF8035"}
   - {title: "Philharmonie de Paris: Haydn Symphony No. 84 programme notes", url: "https://pad.philharmoniedeparis.fr/download.ashx?id=CMTN000339500_01&typedoc=CMTN"}
-  - {title: "NPR: Excerpt from Tom Reiss, The Black Count (Légion Noire)", url: "https://text.npr.org/160967962"}
+  - {title: "NPR: Excerpt from Tom Reiss, The Black Count", url: "https://text.npr.org/160967962"}
 media:
   - {"type": "image", "file": "saint-georges.jpg", "caption": "Monsieur de St. George, mezzotint by William Ward after Mather Brown, published 4 April 1788", "credit": "William Ward after Mather Brown; Metropolitan Museum of Art, Harris Brisbane Dick Fund, 1953; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Monsieur_de_St._George_MET_DP819235.jpg"}
 ---

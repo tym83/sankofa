@@ -19,11 +19,11 @@ sources:
   - {title: "Coleman Donaldson: Islam, Ajami and educational reform in Kantè’s N’ko", url: "https://www.cambridge.org/core/journals/african-studies-review/article/role-of-islam-ajami-writings-and-educational-reform-in-sulemaana-kantes-nko/E6394B2D11A96EE6872CA621456E2D22"}
   - {title: "Unicode Standard 17: African scripts", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
   - {title: "Alan Wood: N’Ko Unicode support", url: "https://www.alanwood.net/unicode/n%27ko.html"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Grave_of_Kant%C3%A9_Soulemane,_inventeur_de_l%27alphabet_N%27Ko.jpg"}
+  - {title: "Wikimedia Commons: Grave of Kanté Soulemane, inventeur de l'alphabet N'Ko", url: "https://commons.wikimedia.org/wiki/File:Grave_of_Kant%C3%A9_Soulemane,_inventeur_de_l%27alphabet_N%27Ko.jpg"}
   - {title: "Endangered Alphabets Project: N'Ko", url: "https://www.endangeredalphabets.net/?p=330"}
   - {title: "Unicode Consortium: Unicode 5.0.0", url: "https://www.unicode.org/versions/Unicode5.0.0/"}
   - {title: "Alan Wood's Unicode Resources: N'Ko", url: "https://alanwood.net/unicode/n'ko.html"}
-  - {title: "W3C, N'Ko Script Resources (right-to-left alphabet; 19 consonant and 7 vowel letters; tone marks)", url: "https://www.w3.org/TR/nkoo-lreq/"}
+  - {title: "W3C, N'Ko Script Resources", url: "https://www.w3.org/TR/nkoo-lreq/"}
   - {title: "Harvard University, ELIAS: Nko Alphabet, lesson 1", url: "https://elias.unix.fas.harvard.edu/index.php/node/182"}
   - {title: "Andrij Rovenchak, Phoneme distribution, syllabic structure, and tonal patterns in Nko texts, Mandenkan 47 (2011), pp. 77–96", url: "https://llacan.cnrs.fr/PDF/Mandenkan47/47Rovenchak.pdf"}
   - {title: "Valentin Vydrin, Une bibliographie préliminaire des publications maninka en écriture N’ko, Mandenkan 48 (2012), pp. 59–121", url: "https://llacan.cnrs.fr/PDF/Mandenkan48/48Vydrin.pdf"}

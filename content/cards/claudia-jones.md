@@ -15,8 +15,8 @@ further:
   - "English Heritage blue plaque, 6 Meadow Road, Vauxhall, London"
   - "Her grave in Highgate Cemetery, London"
 sources:
-  - {title: "English Heritage: Claudia Jones blue plaque (born 21 February 1915, Belmont, Port of Spain; family emigrated 1924)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/claudia-jones/"}
-  - {title: "Vauxhall History: Claudia Jones (born in Trinidad, raised in Harlem)", url: "https://vauxhallhistory.org/claudia-jones/"}
+  - {title: "English Heritage: Claudia Jones blue plaque", url: "https://www.english-heritage.org.uk/visit/blue-plaques/claudia-jones/"}
+  - {title: "Vauxhall History: Claudia Jones", url: "https://vauxhallhistory.org/claudia-jones/"}
 media:
   - {"type": "image", "file": "claudia-jones.jpg", "caption": "Plaque commemorating Claudia Jones and her Caribbean carnivals, London, 27 September 2014", "credit": "Spudgun67; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Corner_of_Tavistock_Rd_and_Portobello_Rd,_London,_United_Kingdom.JPG"}
 ---

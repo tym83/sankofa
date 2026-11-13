@@ -10,8 +10,6 @@ places:
 zoom: 4
 era: v2
 books: [heirs, archives]
-edition: f
-pair: warriors
 further:
   - "Land Patent to Nanny, 1740, Patent Vol. 22, Folio 15B, Jamaica Archives, Spanish Town"
   - "Bump Grave, Moore Town, Portland"

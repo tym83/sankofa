@@ -20,14 +20,14 @@ sources:
   - {title: "DNAinfo: Frankie Knuckles and Chicago", url: "https://www.dnainfo.com/chicago/20140401/downtown/frankie-knuckles-dead-godfather-of-house-music-dies-at-59-reports-say"}
   - {title: "Illinois Senate Resolution 1192,2014", url: "https://www.ilga.gov/documents/legislation/98/SR/PDF/09800SR1192.pdf"}
   - {title: "Splice: The Warehouse", url: "https://splice.com/blog/the-warehouse"}
-  - {title: "City of Chicago DPD: Warehouse landmark (206 S. Jefferson St., club 1977-1982)", url: "https://www.chicago.gov/city/en/depts/dcd/provdrs/hist/news/2023/june/landmark-status-approved-for--the-warehouse--building--known-as-.html"}
+  - {title: "City of Chicago DPD: Warehouse landmark", url: "https://www.chicago.gov/city/en/depts/dcd/provdrs/hist/news/2023/june/landmark-status-approved-for--the-warehouse--building--known-as-.html"}
   - {title: "Windy City Times (2004): Knuckles arrived in Chicago in 1977", url: "https://windycitytimes.com/?p=101809"}
   - {title: "MusicRadar (2012): Knuckles interview, 'I saw a sign that said We play house music'", url: "https://www.musicradar.com/news/tech/interview-frankie-knuckles-talks-the-birth-of-house-music-531865"}
   - {title: "Aeon: The night when straight white males tried to kill disco", url: "https://aeon.co/ideas/the-night-when-straight-white-males-tried-to-kill-disco"}
   - {title: "Chicagoist (2016): Disco Demolition", url: "https://www.chicagoist.com/2016/07/12/disco_demolition.php"}
-  - {title: "Carnegie Hall, Timeline of African American Music: House (four-on-the-floor, 120–135 bpm, TR-808/909, disco roots)", url: "https://timeline.carnegiehall.org/genres/house"}
+  - {title: "Carnegie Hall, Timeline of African American Music: House", url: "https://timeline.carnegiehall.org/genres/house"}
   - {title: "GRAMMY.com: A house music timeline (4/4 four-on-the-floor, 115–130 bpm, TR-808/909, Black and queer producers, \"disco's revenge\", London)", url: "https://www.grammy.com/news/house-music-timeline-important-artists-songs-moments"}
-  - {title: "NPR (via KPCW): From the Warehouse to the World, Chicago and the birth of house music (2023)", url: "https://www.kpcw.org/npr-top-stories/npr-top-stories/2023-03-01/from-the-warehouse-to-the-world-chicago-and-the-birth-of-house-music"}
+  - {title: "NPR: From the Warehouse to the World, Chicago and the birth of house music (2023)", url: "https://www.kpcw.org/npr-top-stories/npr-top-stories/2023-03-01/from-the-warehouse-to-the-world-chicago-and-the-birth-of-house-music"}
   - {title: "WBEZ, Jim DeRogatis: 50 Chicago artists who changed popular music, house music (2017)", url: "https://wbez.org/jim-derogatis/2017/04/24/50-chicago-artists-who-changed-popular-music-house-music"}
   - {title: "Roland, Synth–DJ: Creating Beats for Dance Styles with the DJ-808", url: "https://rolandcorp.com.au/blog/synth-dj"}
   - {title: "WTTW Chicago Stories, House Music", url: "https://www.wttw.com/chicago-stories/house-music"}

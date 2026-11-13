@@ -23,7 +23,7 @@ sources:
   - {title: "National Park Service, Appomattox Court House: Joel Sweeney and the 5 String Banjo", url: "https://www.nps.gov/apco/sweeney.htm"}
   - {title: "NPR, Greg Allen: The Banjo's Roots Reconsidered (2011)", url: "https://www.npr.org/transcripts/139880625"}
   - {title: "UCLA Ethnomusicology Review: Historical Narratives of the Akonting and Banjo (2014)", url: "https://ethnomusicologyreview.ucla.edu/node/763"}
-  - {title: "e-WV, The West Virginia Encyclopedia (West Virginia Humanities Council): Banjo", url: "https://wvencyclopedia.org/entries/314"}
+  - {title: "e-WV, The West Virginia Encyclopedia: Banjo", url: "https://wvencyclopedia.org/entries/314"}
   - {title: "Encyclopedia Virginia: Joel Walker Sweeney", url: "https://encyclopediavirginia.org/entries/joel-walker-sweeney-ca-1810-october-1860/"}
   - {title: "Bob Carlin, A Short History of the Banjo, Tony Trischka: Territory, Smithsonian Folkways SFW40169 (2008), pp. 6–9", url: "https://folkways-media.si.edu/docs/folkways/artwork/SFW40169.pdf"}
   - {title: "Daniel Jatta and Scott Linford, Ears of the People, Smithsonian Folkways SFW40600 (2023), liner notes", url: "https://folkways-media.si.edu/docs/folkways/artwork/SFW40600.pdf"}

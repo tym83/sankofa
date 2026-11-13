@@ -17,15 +17,15 @@ further:
 sources:
   - {title: "Carnegie Hall: Portia Maultsby, Work songs and field calls", url: "https://timeline.carnegiehall.org/genres/work-songs-field-street-calls-satirical-protest-songs"}
   - {title: "Smithsonian Folkways / Blue Ridge Institute: Virginia Traditions, Western Piedmont Blues", url: "https://folkways-media.si.edu/docs/folkways/artwork/BRI00003.pdf"}
-  - {title: "Association for Cultural Equity: Prison Songs (wood-cutting and tie-tamping songs)", url: "https://www.culturalequity.org/rounder-records/prison"}
-  - {title: "Thomas Winterbottom, An Account of the Native Africans in the Neighbourhood of Sierra Leone (1803), vol. 1, Internet Archive full text (primary)", url: "https://archive.org/details/accountofnativea01wint"}
+  - {title: "Association for Cultural Equity: Prison Songs", url: "https://www.culturalequity.org/rounder-records/prison"}
+  - {title: "Thomas Winterbottom, An Account of the Native Africans in the Neighbourhood of Sierra Leone (1803), vol. 1, Internet Archive full text", url: "https://archive.org/details/accountofnativea01wint"}
   - {title: "Thomas Winterbottom: An Account of the Native Africans, volume 1, full text", url: "https://archive.org/stream/accountofnativea01wint/accountofnativea01wint_djvu.txt"}
   - {title: "University of Mississippi eGrove: Hollers, Parchman", url: "https://egrove.olemiss.edu/lomax/153"}
   - {title: "Bunk History / Scalawag: The Blues Behind Bars", url: "https://bunkhistory.org/resources/how-southern-prisons-shaped-american-music"}
   - {title: "Maryland Public Television / Thinkport: Work songs", url: "https://thinkport.org/mptclassroom/waters-edge/music-making/work-songs.html"}
   - {title: "Frederick Douglass, Narrative of the Life of Frederick Douglass (1845), ch. II, Documenting the American South, UNC", url: "https://docsouth.unc.edu/neh/douglass/douglass.html"}
   - {title: "Frederick Douglass, Narrative of the Life of Frederick Douglass (1845), Project Gutenberg", url: "https://www.gutenberg.org/ebooks/23"}
-  - {title: "Virginia Traditions: Virginia Work Songs, Smithsonian Folkways liner notes (research by Bruce Hutton and others)", url: "https://folkways-media.si.edu/docs/folkways/artwork/BRI00007.pdf"}
+  - {title: "Virginia Traditions: Virginia Work Songs, Smithsonian Folkways liner notes", url: "https://folkways-media.si.edu/docs/folkways/artwork/BRI00007.pdf"}
   - {title: "Lindsey Stewart, The Politics of Black Joy, Northwestern University Press (2021), introduction, pp. 17–18", url: "https://dhjhkxawhe8q4.cloudfront.net/northwestern-uni-press-wp/wp-content/uploads/2021/08/23193723/Intro-from-Stewart_int.pdf"}
   - {title: "Mellonee V. Burnim and Portia K. Maultsby, eds., African American Music: An Introduction, 2nd ed. (2015), chapters on African roots and funk", url: "https://microsite-oh-prod.s3.amazonaws.com/media/editor/405/vdoc.pub_african-american-music-an-introduction.pdf"}
 media:

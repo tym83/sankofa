@@ -19,10 +19,10 @@ sources:
   - {title: "Smithsonian Magazine: Jamaica, Music and Performing Arts", url: "https://www.smithsonianmag.com/travel/jamaica-music-and-performing-arts-17745080/"}
   - {title: "GRAMMY: DJ Kool Herc and Cindy Campbell interview", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots/"}
   - {title: "GRAMMY.com (2023): sound systems led to ska, rocksteady, reggae", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots"}
-  - {title: "Mixmag: How Jamaican soundsystem culture changed dance music forever (Marcus Barnes, 2025)", url: "https://mixmag.net/feature/how-jamaican-soundsystem-culture-changed-dance-music-forever"}
+  - {title: "Mixmag: How Jamaican soundsystem culture changed dance music forever", url: "https://mixmag.net/feature/how-jamaican-soundsystem-culture-changed-dance-music-forever"}
   - {title: "Jamaica Gleaner: Toots says reggay, fifty years before UNESCO", url: "https://jamaica-gleaner.com/article/entertainment/20181209/story-song-toots-says-reggay-50-years-unesco-endorses-reggae"}
   - {title: "The Gleaner: Story of the Song (9 December 2018)", url: "http://past.jamaica-gleaner.com/article/entertainment/20181209/story-song-toots-says-reggay-50-years-unesco-endorses-reggae"}
-  - {title: "Associated Press via Boston.com: Toots Hibbert, beloved reggae star, dead at 77 (Hillel Italie, 12 September 2020)", url: "https://www.boston.com/culture/obituaries/2020/09/12/toots-hibbert-beloved-reggae-star-dead-at-77/"}
+  - {title: "Associated Press via Boston.com: Toots Hibbert, beloved reggae star, dead at 77", url: "https://www.boston.com/culture/obituaries/2020/09/12/toots-hibbert-beloved-reggae-star-dead-at-77/"}
   - {title: "UNESCO Multimedia Archives: Reggae Music of Jamaica", url: "https://www.unesco.org/archives/multimedia/document-4760"}
   - {title: "Jamaica Information Service: Reggae", url: "https://jis.gov.jm/jamaica/reggae/"}
   - {title: "UNESCO Intangible Cultural Heritage: Reggae music of Jamaica", url: "https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398"}

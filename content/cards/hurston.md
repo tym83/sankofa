@@ -18,13 +18,13 @@ further:
 sources:
   - {title: "PBS American Masters: Zora Neale Hurston career timeline", url: "https://www.pbs.org/wnet/americanmasters/zora-neale-hurston-career-timeline/94"}
   - {title: "Zora Neale Hurston estate: About Zora Neale Hurston", url: "https://www.zoranealehurston.com/about/"}
-  - {title: "Encyclopedia.com (Harlem Renaissance): Hurston, Zora Neale", url: "https://www.encyclopedia.com/history/culture-magazines/hurston-zora-neale"}
+  - {title: "Encyclopedia.com: Hurston, Zora Neale", url: "https://www.encyclopedia.com/history/culture-magazines/hurston-zora-neale"}
   - {title: "National Park Service: Hurston and Cudjo’s Own Story", url: "https://www.nps.gov/articles/000/zora-neale-hurston-and-cudjo-s-own-story.htm"}
   - {title: "Library of Congress: Her Eyes Were Watching Everything", url: "https://blogs.loc.gov/families/2025/01/her-eyes-were-watching-everything-zora-neale-hurston-at-the-library-of-congress/"}
   - {title: "NPR: Barracoon gets published", url: "https://www.npr.org/2018/05/05/608723606/zora-neale-hurstons-barracoon-gets-published-more-than-60-years-later"}
-  - {title: "NPR Fresh Air (via WUSF), Maureen Corrigan: Barracoon review (2018)", url: "https://www.wusf.org/2018-05-08/barracoon-offers-a-vivid-first-hand-account-of-slavery-in-america"}
+  - {title: "NPR Fresh Air, Maureen Corrigan: Barracoon review (2018)", url: "https://www.wusf.org/2018-05-08/barracoon-offers-a-vivid-first-hand-account-of-slavery-in-america"}
   - {title: "Zora Neale Hurston estate: A work by Zora Neale Hurston will finally be published", url: "https://www.zoranealehurston.com/news/a-work-by-zora-neale-hurston-will-finally-be-published/"}
-  - {title: "The Common Reader (Washington University in St. Louis): A Genius of the South", url: "https://commonreader.wustl.edu/a-genius-of-the-south/"}
+  - {title: "The Common Reader: A Genius of the South", url: "https://commonreader.wustl.edu/a-genius-of-the-south/"}
 media:
   - {"type": "image", "file": "hurston.jpg", "caption": "Zora Neale Hurston, 3 April 1938", "credit": "Carl Van Vechten; Library of Congress, Van Vechten collection; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Zora_Neale_Hurston_(1938).jpg"}
 ---

@@ -24,9 +24,9 @@ sources:
   - {title: "Ballad of America: Blues Queens and Race Records", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/"}
   - {title: "NY 1920s: 15 February 1923", url: "https://www.ny1920.com/feb-15-1923"}
   - {title: "Jeff Todd Titon, The Blues, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/blues"}
-  - {title: "Carnegie Hall Timeline of African American Music (Portia Maultsby): Rural/Folk Blues", url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"}
-  - {title: "Ballad of America (Matthew Sabatella): Blues, about the genre", url: "https://balladofamerica.org/blues/"}
-  - {title: "Library of Congress, Songs of America: Blues (full article via JSON)", url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/popular-songs-of-the-day/blues/?fo=json"}
+  - {title: "Carnegie Hall Timeline of African American Music: Rural/Folk Blues", url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"}
+  - {title: "Ballad of America: Blues, about the genre", url: "https://balladofamerica.org/blues/"}
+  - {title: "Library of Congress, Songs of America: Blues", url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/popular-songs-of-the-day/blues/?fo=json"}
   - {title: "Columbia University, Center for Jazz Studies: Blues glossary", url: "https://ccnmtl.columbia.edu/projects/jazzglossary/b/blues.html"}
 media:
   - {type: "image", file: "blues.jpg", caption: "W. C. Handy, 17 July 1941", credit: "Carl Van Vechten, Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:W._C._Handy_(1941_Van_Vechten_portrait).jpg"}

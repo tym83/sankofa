@@ -19,17 +19,17 @@ further:
   - "Underground Resistance, \"X-101\" (Tresor, 1991)"
 dispute: "Atkins said the word techno came from Alvin Toffler's The Third Wave; some reference works say only that it was probably inspired by the book. The 1982 date of Cybotron's \"Clear\" is also questioned in one review."
 sources:
-  - {title: "Encyclopedia.com: Atkins, Juan (met as students in Belleville)", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/atkins-juan"}
+  - {title: "Encyclopedia.com: Atkins, Juan", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/atkins-juan"}
   - {title: "Afropop Worldwide (2011): Juan Atkins interview", url: "https://old.afropop.org/articles/juan-atkins-interview"}
   - {title: "Kresge Arts in Detroit: Juan Atkins", url: "https://kresgeartsindetroit.org/artist/juan-atkins/"}
   - {title: "Red Bull Music Academy: Juan Atkins interview", url: "https://daily.redbullmusicacademy.com/2017/05/interview-juan-atkins"}
   - {title: "SPIN (2026)", url: "https://www.spinmagazine.com/2026/11/juan-atkins-obituary/"}
   - {title: "MusicTech (2026): Toffler's book inspired this vision", url: "https://musictech.com/features/juan-atkins-dies-techno-legacy/"}
-  - {title: "Red Bull Music Academy lecture: Stoiber, Banks, Hegemann (X-101 first Tresor release, September 1991; after the Wall)", url: "https://www.redbullmusicacademy.com/lectures/mad-mike-banks-tresor-berlin-detroit-lecture"}
-  - {title: "Tresor Berlin: About (club opened March 1991, Tresor Records launched 1991, Underground Resistance shaped early years)", url: "https://tresorberlin.com/about/"}
+  - {title: "Red Bull Music Academy lecture: Stoiber, Banks, Hegemann", url: "https://www.redbullmusicacademy.com/lectures/mad-mike-banks-tresor-berlin-detroit-lecture"}
+  - {title: "Tresor Berlin: About", url: "https://tresorberlin.com/about/"}
   - {title: "NPR: Remembering Juan Atkins,2 November 2026", url: "https://www.nprillinois.org/2026-11-02/remembering-juan-atkins-known-as-the-originator-of-techno"}
-  - {title: "Carnegie Hall, Timeline of African American Music: Detroit Techno (synthesizers, drum machines, sequencers; Parliament-Funkadelic and Kraftwerk; deindustrialization; science fiction)", url: "https://timeline.carnegiehall.org/genres/detroit-techno"}
-  - {title: "Michigan Public: Juan Atkins obituary (synthesizers, drum machines, computers and sequencers; popular in Europe) (2026)", url: "https://www.michiganpublic.org/news/2026-11-02/juan-atkins-obituary-detroit-techno"}
+  - {title: "Carnegie Hall, Timeline of African American Music: Detroit Techno", url: "https://timeline.carnegiehall.org/genres/detroit-techno"}
+  - {title: "Michigan Public: Juan Atkins obituary (2026)", url: "https://www.michiganpublic.org/news/2026-11-02/juan-atkins-obituary-detroit-techno"}
   - {title: "Detroit Historical Society, Flashback 2002: Detroit Electronic Music Festival", url: "https://www.detroithistorical.org/learn/online-research/blog/flashback-2002-detroit-electronic-music-festival"}
   - {title: "Frank Hoffmann, Survey of American Popular Music: The Postpunk Movement, Sam Houston State University", url: "https://profiles.shsu.edu/lis_fwh/book/punk_newwave_postpunk/Postpunk-Intro.htm"}
   - {title: "Robert Havey, Remixing Detroit History, University of Michigan Bentley Historical Library (2016)", url: "https://bentley.umich.edu/about/collections-magazine/fall-2016/remixing-detroit-history/"}

@@ -17,7 +17,7 @@ sources:
   - {title: "Library of Congress: Born in Slavery, about this collection", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/about-this-collection/?fo=json"}
   - {title: "MDAH Mississippi History Now: WPA Slave Narratives", url: "https://mshistory.mdah.ms.gov/issue/wpa-slave-narratives"}
   - {title: "Library of Congress: The New Deal at 75", url: "https://www.loc.gov/loc/lcib/0804/newdeal.html"}
-  - {title: "JSTOR Daily: Hearing Aunt Harriet (interviewed about 2,300 people)", url: "https://daily.jstor.org/hearing-aunt-harriet-slave-narratives"}
+  - {title: "JSTOR Daily: Hearing Aunt Harriet", url: "https://daily.jstor.org/hearing-aunt-harriet-slave-narratives"}
   - {title: "LoC, Norman R. Yetman: Limitations of the Slave Narrative Collection", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/articles-and-essays/introduction-to-the-wpa-slave-narratives/limitations-of-the-slave-narrative-collection/?fo=json"}
   - {title: "LoC: A Note on the Language of the Narratives", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/articles-and-essays/note-on-the-language-of-the-narratives/?fo=json"}
 media:

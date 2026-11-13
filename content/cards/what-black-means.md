@@ -18,7 +18,7 @@ sources:
   - {title: "Encyclopedia Virginia: Brendan Wolfe, Racial Integrity Laws", url: "https://encyclopediavirginia.org/entries/racial-integrity-laws-1924-1930/"}
   - {title: "Library of Virginia: Racial Integrity pamphlet", url: "https://lva.omeka.net/exhibits/show/law_and_justice/item/62"}
   - {title: "IBGE, Características étnico-raciais da população (2013)", url: "https://biblioteca.ibge.gov.br/visualizacao/livros/liv63405.pdf"}
-  - {title: "Teixeira, Ensaio 2018 (more than 130 terms in PNAD 1976)", url: "https://www.redalyc.org/journal/3995/399562975006/399562975006.pdf"}
+  - {title: "Teixeira, Ensaio 2018", url: "https://www.redalyc.org/journal/3995/399562975006/399562975006.pdf"}
   - {title: "Rafael Guerreiro Osorio: A desigualdade racial de renda no Brasil, University of Brasília doctoral thesis (2009)", url: "https://repositorio.unb.br/bitstream/10482/4274/1/2009_RafaelGuerreiroOsorio.pdf"}
   - {title: "IBGE: Census enumerator manual, part 2, colour or race question", url: "https://censo2022.ibge.gov.br/media/com_mediaibge/arquivos/bfd69167fb62613effc2bae005e4666d.pdf"}
   - {title: "Federal University of Juiz de Fora: education and racial classification dissertation", url: "https://www2.ufjf.br/ppge/files/2010/04/disserta%C3%A7%C3%A3o-Julimar.pdf"}

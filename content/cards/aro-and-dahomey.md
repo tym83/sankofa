@@ -21,7 +21,7 @@ sources:
   - {title: "Dov Ronen: On the African Role in the Trans-Atlantic Slave Trade in Dahomey", url: "https://www.persee.fr/doc/cea_0008-0055_1971_num_11_41_2810?pageId=T1_7"}
   - {title: "G. Ugo Nwokeji: The Slave Trade and Culture in the Bight of Biafra, introduction", url: "https://assets.cambridge.org/97805218/83474/excerpt/9780521883474_excerpt.pdf"}
   - {title: "J. N. Oriji: Slave trade, warfare and Aro expansion, scholarly abstract in AfricaBib", url: "https://africabib.org/rec.php?RID=189555858"}
-  - {title: "Library of Congress Country Studies, Nigeria (countrystudies.us)", url: "https://countrystudies.us/nigeria/7.htm"}
+  - {title: "Library of Congress Country Studies, Nigeria", url: "https://countrystudies.us/nigeria/7.htm"}
   - {title: "PBS: Noble Desire, A Time for Healing", url: "https://www.pbs.org/video/noble-desire-a-time-for-healing-fexkfb"}
   - {title: "NBC News: Genetic quest leads to African apology", url: "https://www.nbcnews.com/sciencemain/genetic-quest-leads-african-apology-role-slave-trade-8c11467842"}
 media:

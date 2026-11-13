@@ -18,7 +18,7 @@ sources:
   - {title: "Languages and Numbers: ADLaM, the story of an artificial script", url: "https://www.languagesandnumbers.com/articles/en/ADLaM/"}
   - {title: "Microsoft Windows Experience Blog (2019)", url: "https://blogs.windows.com/windowsexperience/2019/07/29/adlam-find-out-how-a-new-alphabet-is-helping-an-ancient-people-write-its-own-future/"}
   - {title: "Unicode Consortium: Unicode 9.0.0 (21 June 2016)", url: "https://www.unicode.org/versions/Unicode9.0.0/"}
-  - {title: "The Unicode Standard 17.0, chapter 19: Adlam (casing, right-to-left, taught at schools in Guinea and Nigeria)", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
+  - {title: "The Unicode Standard 17.0, chapter 19: Adlam", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
   - {title: "Microsoft Unlocked, ADLaM: Can an alphabet save a culture? Interviews with Ibrahima and Abdoulaye Barry", url: "https://unlocked.microsoft.com/adlam-can-an-alphabet-save-a-culture/"}
   - {title: "Richard Ishida, Adlam orthography notes (2026), structure, case and cursive forms", url: "https://r12a.github.io/scripts/adlm/fuf.html"}
   - {title: "Monotype, The story of Adlam: interview with type designer Kamal Mansour", url: "https://www.monotype.com/resources/expertise/story-adlam"}

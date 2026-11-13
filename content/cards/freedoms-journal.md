@@ -16,12 +16,12 @@ further:
 sources:
   - {title: "Buffalo State University Archives: Freedom’s Journal", url: "https://library.buffalostate.edu/archives/mfc/freedoms_journal"}
   - {title: "Columbia University: Freedom’s Journal lesson", url: "https://maap.columbia.edu/content/lessons/black_community/TC_FreedomJournal.pdf"}
-  - {title: "Encyclopedia.com (Gale Library of Daily Life: Slavery in America, Kerry L. Pimblott): Freedom's Journal", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/freedoms-journal"}
-  - {title: "Wikisource: Freedom's Journal, 16 March 1827 (masthead)", url: "https://en.wikisource.org/wiki/Freedom%27s_Journal/1827/03/16"}
+  - {title: "Encyclopedia.com: Freedom's Journal", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/freedoms-journal"}
+  - {title: "Wikisource: Freedom's Journal, 16 March 1827", url: "https://en.wikisource.org/wiki/Freedom%27s_Journal/1827/03/16"}
   - {title: "Cornell University Library: Beginnings", url: "https://exhibits.library.cornell.edu/blackprint/feature/beginnings"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Freedom%27s_Journal,_Vol._1_No._3,_front_page.png"}
+  - {title: "Wikimedia Commons: Freedom's Journal, Vol. 1 No. 3, front page", url: "https://commons.wikimedia.org/wiki/File:Freedom%27s_Journal,_Vol._1_No._3,_front_page.png"}
   - {title: "Wikisource transcription: To Our Patrons, 16 March 1827", url: "https://en.wikisource.org/wiki/Freedom%27s_Journal/1827/03/16/To_Our_Patrons"}
-  - {title: "Encyclopedia.com: Russwurm (colonization cost him readership)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/john-brown-russwurm"}
+  - {title: "Encyclopedia.com: Russwurm", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/john-brown-russwurm"}
   - {title: "Wisconsin Historical Society: Freedom’s Journal digitized issue register", url: "https://legacy.wisconsinhistory.org/Records/Article/CS4415"}
 media:
   - {type: "image", file: "freedoms-journal.jpg", caption: "Front page of Freedom's Journal, vol. 1, no. 3, New York, 30 March 1827", credit: "Scan reproduced in The Afro-American Press; via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Freedom%27s_Journal,_Vol._1_No._3,_front_page.png"}

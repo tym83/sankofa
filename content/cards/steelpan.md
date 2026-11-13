@@ -20,10 +20,10 @@ sources:
   - {title: "Trinidad and Tobago Ministry of Foreign Affairs: National instrument", url: "https://foreign.gov.tt/about/trinidad-tobago/national-symbols/national-instrument/"}
   - {title: "Nationaal Museum van Wereldculturen: Tenor steelpan collection record", url: "https://commons.wikimedia.org/wiki/File:Collectie_Nationaal_Museum_van_Wereldculturen_TM-2586-1_Steel_drum_Trinidad.jpg"}
   - {title: "National Trust of Trinidad and Tobago: Panyards of Trinidad", url: "https://nationaltrust.tt/panyards-of-trinidad/"}
-  - {title: "Pan Podium: 70th anniversary of steelpan in the UK (debut 26 July 1951, Festival of Britain)", url: "https://www.panpodium.com/home/2021/7/25/70th-anniversary-of-steelpan-in-the-uk"}
-  - {title: "Global Voices (bill passed 4 July 2024)", url: "https://globalvoices.org/2024/08/11/world-steelpan-day-acknowledges-trinidad-tobagos-national-instrument-while-a-new-film-on-panyards-shows-its-power-and-potential/"}
+  - {title: "Pan Podium: 70th anniversary of steelpan in the UK", url: "https://www.panpodium.com/home/2021/7/25/70th-anniversary-of-steelpan-in-the-uk"}
+  - {title: "Global Voices", url: "https://globalvoices.org/2024/08/11/world-steelpan-day-acknowledges-trinidad-tobagos-national-instrument-while-a-new-film-on-panyards-shows-its-power-and-potential/"}
   - {title: "Caribbean Life: Trinidad finally names steelpan as national instrument (9 July 2024)", url: "https://www.caribbeanlife.com/trinidad-finally-names-steelpan-as-national-instrument/"}
-  - {title: "Red Bull Music Academy Daily: The birth of Notting Hill Carnival (Henderson led the first street procession; played Jones's indoor carnivals)", url: "https://daily.redbullmusicacademy.com/2013/08/birth-of-notting-hill-carnival"}
+  - {title: "Red Bull Music Academy Daily: The birth of Notting Hill Carnival", url: "https://daily.redbullmusicacademy.com/2013/08/birth-of-notting-hill-carnival"}
   - {title: "Pete Seeger and Kim Loy Wong, Kim Loy Wong and His Wiltwyck Steel Band, Folkways FW03834 (1959), liner notes", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW03834.pdf"}
   - {title: "Pan Trinbago, Panorama 2024 Single Pan Competition begins in Tobago, competition announcement", url: "https://www.pantrinbago.co.tt/Media/NewsArticles/TabId/182/ArtMID/723/ArticleID/5229/Default.aspx"}
   - {title: "Pan Trinbago, National Panorama Competition 2024: schedule and official results", url: "https://www.pantrinbago.co.tt/Panorama/Panorama2024.aspx"}

@@ -18,8 +18,8 @@ sources:
   - {title: "North Carolina DNCR: Harriet Jacobs", url: "https://www.dncr.nc.gov/blog/2023/12/04/harriet-jacobs-c-1813-1897-72"}
   - {title: "New York Public Library: Harper and Jacobs", url: "https://libguides.nypl.org/african-american-women-writers-of-the-19th-Century/Harper-Jacobs"}
   - {title: "PBS Africans in America: Harriet Jacobs", url: "https://www.pbs.org/wgbh/aia/part4/4p2923.html"}
-  - {title: "Documenting the American South: summary of Incidents in the Life of a Slave Girl (Armistead Lemon)", url: "https://docsouth.unc.edu/fpn/jacobs/summary.html"}
-  - {title: "Encyclopedia.com (Feminism in Literature, Gale): Jacobs, Harriet, introduction", url: "https://encyclopedia.com/social-sciences/encyclopedias-almanacs-transcripts-and-maps/jacobs-harriet-introduction"}
+  - {title: "Documenting the American South: summary of Incidents in the Life of a Slave Girl", url: "https://docsouth.unc.edu/fpn/jacobs/summary.html"}
+  - {title: "Encyclopedia.com: Jacobs, Harriet, introduction", url: "https://encyclopedia.com/social-sciences/encyclopedias-almanacs-transcripts-and-maps/jacobs-harriet-introduction"}
   - {title: "Harriet Jacobs: The Loophole of Retreat, CUNY edition", url: "https://cuny.manifoldapp.org/read/incidents-in-the-life-of-a-slave-girl/section/5bf2bd68-db4d-4856-a497-fd7baba44c0f"}
   - {title: "PBS: Harriet Jacobs’s autobiography", url: "https://www.pbs.org/wgbh/aia/part4/4h2924.html"}
 media:

@@ -20,13 +20,13 @@ further:
 sources:
   - {title: "Uchenna Ikonne, Music in Africa: Highlife in West Africa", url: "https://musicinafrica.net/node/15054"}
   - {title: "Graphic Showbiz: 100 Years of Highlife", url: "https://www.graphic.com.gh/entertainment/showbiz-news/100-years-of-highlife.html"}
-  - {title: "Music in Africa: Highlife in West Africa (adaha brass bands, palm-wine music)", url: "https://www.musicinafrica.net/node/15054"}
-  - {title: "Afrisson: 1928, Jacob Sam (palm wine music as ancestor of highlife)", url: "https://www.afrisson.com/1928-jacob-sam-kumasi-trio-10854/"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg"}
-  - {title: "MyJoyOnline: Legend of the week, E. T. Mensah (Tempos grew out of a 1947 group)", url: "https://www.myjoyonline.com/legend-of-the-week-e-t-mensah/"}
-  - {title: "The Native: Native Roots, Highlife (Benson introduced to highlife by Mensah 1954; brass arrangements inspired a young Fela)", url: "https://thenativemag.com/native-roots-highlife/"}
-  - {title: "John Collins (University of Ghana) via MyJoyOnline: Highlife music dates as far back as the 19th century (regimental bands at Cape Coast and Elmina, adaha brass bands)", url: "https://www.myjoyonline.com/highlife-music-dates-as-far-back-as-19th-century-prof-collins/"}
-  - {title: "Songlines: Fela Kuti, a beginner's guide (Koola Lobitos, a mix of highlife and jazz)", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
+  - {title: "Music in Africa: Highlife in West Africa", url: "https://www.musicinafrica.net/node/15054"}
+  - {title: "Afrisson: 1928, Jacob Sam", url: "https://www.afrisson.com/1928-jacob-sam-kumasi-trio-10854/"}
+  - {title: "Wikimedia Commons: Armstrong-Mensahinvitation", url: "https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg"}
+  - {title: "MyJoyOnline: Legend of the week, E. T. Mensah", url: "https://www.myjoyonline.com/legend-of-the-week-e-t-mensah/"}
+  - {title: "The Native: Native Roots, Highlife", url: "https://thenativemag.com/native-roots-highlife/"}
+  - {title: "John Collins via MyJoyOnline: Highlife music dates as far back as the 19th century", url: "https://www.myjoyonline.com/highlife-music-dates-as-far-back-as-19th-century-prof-collins/"}
+  - {title: "Songlines: Fela Kuti, a beginner's guide", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
   - {title: "Music in Ghana, Virtual Museum of Ghanaian Music, Daniel Langlois Foundation", url: "https://fondation-langlois.org/html/e/page.php?NumPage=2262"}
   - {title: "Alexander Stewart, Make It Funky: Fela Kuti, James Brown and the Invention of Afrobeat, American Studies 52:4 (2013)", url: "https://journals.ku.edu/amsj/article/download/4463/4304/"}
   - {title: "Jesse Weaver Shipley, Living the Hiplife, Duke University Press (2013), book description", url: "https://www.dukeupress.edu/living-the-hiplife"}

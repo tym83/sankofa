@@ -17,8 +17,8 @@ dispute: "That body percussion (patting juba, hambone) and later tap and steppin
 sources:
   - {title: "South Carolina Encyclopedia: Mark M. Smith, Stono Rebellion", url: "https://www.scencyclopedia.org/sce/entries/stono-rebellion/"}
   - {title: "Smithsonian NMAAHC: Becoming Black, resistance", url: "https://www.searchablemuseum.com/becoming-black-resistance/"}
-  - {title: "National Humanities Center: The Stono Rebellion (1739 account)", url: "http://nationalhumanitiescenter.org/pds/becomingamer/peoples/text4/stonorebellion.pdf"}
-  - {title: "PBS Africans in America: The Stono Rebellion (about one hundred by nightfall)", url: "https://www.pbs.org/wgbh/aia/part1/1p284.html"}
+  - {title: "National Humanities Center: The Stono Rebellion", url: "http://nationalhumanitiescenter.org/pds/becomingamer/peoples/text4/stonorebellion.pdf"}
+  - {title: "PBS Africans in America: The Stono Rebellion", url: "https://www.pbs.org/wgbh/aia/part1/1p284.html"}
   - {title: "Charleston County Public Library: Nic Butler, A Banjer on the Bay", url: "https://www.ccpl.org/charleston-time-machine/banjer-bay-charleston-1766"}
   - {title: "Step Afrika!: Drumfolk", url: "https://www.stepafrika.org/drumfolk/"}
   - {title: "Google Arts & Culture: Tap Dance Is Timeless", url: "https://artsandculture.google.com/story/dAWh62nmpiwMJA"}

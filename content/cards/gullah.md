@@ -20,9 +20,9 @@ sources:
   - {title: "Folkstreams: Dr. Lorenzo Turner and the Gullah Language", url: "https://www.folkstreams.net/contexts/dr-lorenzo-turner-and-the-gullah-language"}
   - {title: "Indiana University Libraries: Dow Turner Collections", url: "https://libraries.indiana.edu/dow-turner"}
   - {title: "Smithsonian Magazine: How the Memory of a Song Reunited Two Women", url: "https://www.smithsonianmag.com/history/how-the-memory-of-a-song-reunited-two-women-separated-by-the-trans-atlantic-slave-trade-180983864/"}
-  - {title: "Kenyon College: American Language, African Roots (words with no English precursors)", url: "https://digital.kenyon.edu/gullah_language.html"}
+  - {title: "Kenyon College: American Language, African Roots", url: "https://digital.kenyon.edu/gullah_language.html"}
   - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/cn-langua"}
-  - {title: "California Newsreel: The Language You Cry In (five-line song, did not know meaning, Mende)", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN"}
+  - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN"}
   - {title: "University of Chicago Magazine: Lorenzo Dow Turner, PhD'26 (2011)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml"}
   - {title: "Georgia Sea Island Singers, The Complete Friends of Old Time Music Concert, Smithsonian Folkways SFW40258, Note about the Gullah language", url: "https://folkways-media.si.edu/docs/folkways/artwork/SFW40258.pdf"}
 media:

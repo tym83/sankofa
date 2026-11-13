@@ -20,16 +20,16 @@ dispute: "\"Rocket 88\" as the first rock and roll record is debated: the Rock a
 sources:
   - {title: "Library of Congress: Steve Propes on Rocket 88", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Rocket-88_Propes.pdf"}
   - {title: "Saturday Evening Post: The Very First Rock and Roll Song", url: "https://www.saturdayeveningpost.com/2021/03/the-very-first-rock-and-roll-song/"}
-  - {title: "Blues Foundation Hall of Fame: Rocket 88 (recorded 5 March 1951, Memphis Recording Service)", url: "https://www.blues.org/award-search/rocket-88-is-one-of-many-blues-a"}
+  - {title: "Blues Foundation Hall of Fame: Rocket 88", url: "https://www.blues.org/award-search/rocket-88-is-one-of-many-blues-a"}
   - {title: "Encyclopedia of Cleveland History: Freed, Alan", url: "https://case.edu/ech/articles/f/freed-alan"}
   - {title: "RTBF: Alan Freed et le tout premier concert de l'histoire du rock", url: "https://www.rtbf.be/article/alan-freed-et-le-tout-premier-concert-de-l-histoire-du-rock-raconte-par-bj-scott-11166531"}
   - {title: "uDiscover Music: Fats Domino", url: "https://www.udiscovermusic.com/artists/fats-domino"}
   - {title: "Rock & Roll Hall of Fame: Fats Domino", url: "https://www.rockhall.com/inductees/fats-domino"}
   - {title: "uDiscover Music: Little Richard", url: "https://www.udiscovermusic.com/artists/little-richard"}
-  - {title: "American Songwriter: Pat Boone covered Little Richard (Boone on covers of Black R&B hits)", url: "https://americansongwriter.com/remember-when-pat-boone-covered-this-early-little-richard-hit-in-1956/"}
+  - {title: "American Songwriter: Pat Boone covered Little Richard", url: "https://americansongwriter.com/remember-when-pat-boone-covered-this-early-little-richard-hit-in-1956/"}
   - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll"}
-  - {title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rhythm and Blues (rock and roll originally a euphemism for sex, synonymous with R&B)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
-  - {title: "64 Parishes (Louisiana Endowment for the Humanities): Fats Domino (1956 quote)", url: "https://64parishes.org/entry/fats-domino"}
+  - {title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rhythm and Blues", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+  - {title: "64 Parishes: Fats Domino", url: "https://64parishes.org/entry/fats-domino"}
   - {title: "Case Western Reserve University, Encyclopedia of Cleveland History: Rock & Roll", url: "https://case.edu/ech/articles/r/rock-roll"}
   - {title: "American Masters, Fats Domino and the Birth of Rock n Roll, documentary transcript, PBS", url: "https://pbswisconsin.org/watch/american-masters/american-masters-fats-domino-and-birth-rock-n-roll/"}
   - {title: "Prof. Freeze, MUSC-21600 The Art of Rock Music: Rocket 88 listening guide, College of Wooster", url: "https://theartofrockmusic.voices.wooster.edu/wp-content/uploads/sites/180/2015/01/Rocket-88-Jackie-Brenston-1951.pdf"}

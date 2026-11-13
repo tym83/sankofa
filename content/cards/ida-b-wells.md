@@ -19,11 +19,11 @@ dispute: "How the Free Speech ended is contested: Wells wrote that creditors sol
 sources:
   - {title: "National Women’s History Museum: Ida B. Wells-Barnett", url: "https://www.womenshistory.org/education-resources/biographies/ida-b-wells-barnett"}
   - {title: "National Constitution Center: Ida B. Wells", url: "https://constitutioncenter.org/blog/constitutional-voices-ida-b-wells"}
-  - {title: "Encyclopedia.com (West's Encyclopedia of American Law): Wells-Barnett, Ida Bell", url: "https://www.encyclopedia.com/law/encyclopedias-almanacs-transcripts-and-maps/wells-barnett-ida-bell"}
+  - {title: "Encyclopedia.com: Wells-Barnett, Ida Bell", url: "https://www.encyclopedia.com/law/encyclopedias-almanacs-transcripts-and-maps/wells-barnett-ida-bell"}
   - {title: "Library of Congress: Ida B. Wells and investigative journalism", url: "https://blogs.loc.gov/headlinesandheroes/2020/02/ida-b-wells-and-the-activism-of-investigative-journalism/"}
   - {title: "Project Gutenberg: Ida B. Wells, Southern Horrors (1892)", url: "https://www.gutenberg.org/cache/epub/14975/pg14975.txt"}
   - {title: "Project Gutenberg: The Red Record", url: "https://www.gutenberg.org/cache/epub/14977/pg14977.txt"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_crop.jpg"}
+  - {title: "Wikimedia Commons: Mary Garrity - Ida B. Wells-Barnett - Google Art Project crop", url: "https://commons.wikimedia.org/wiki/File:Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_crop.jpg"}
 media:
   - {type: "image", file: "ida-b-wells.jpg", caption: "Ida B. Wells, about 1893", credit: "Mary Garrity; National Portrait Gallery, Smithsonian Institution", license: "Public domain (PD-US-expired)", url: "https://commons.wikimedia.org/wiki/File:Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_crop.jpg"}
 ---

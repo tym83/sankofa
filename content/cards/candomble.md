@@ -14,10 +14,10 @@ further:
   - "Terreiro da Casa Branca (Ilê Axé Iyá Nassô Oká), Avenida Vasco da Gama, Salvador"
 dispute: "Casa Branca's founding date is uncertain: most accounts give around 1830, some say 1820."
 sources:
-  - {title: "Brasil de Fato: Terreiro da Casa Branca celebra 40 anos de tombamento (por volta de 1830, atrás da Igreja da Barroquinha)", url: "https://www.brasildefato.com.br/2024/06/07/terreiro-da-casa-branca-celebra-40-anos-de-tombamento/"}
+  - {title: "Brasil de Fato: Terreiro da Casa Branca celebra 40 anos de tombamento", url: "https://www.brasildefato.com.br/2024/06/07/terreiro-da-casa-branca-celebra-40-anos-de-tombamento/"}
   - {title: "Fundação Bienal, Terra: Ilê Axé Iyá Nassô Oká (1830)", url: "https://terra.bienal.org.br/Ile-Axe-Iya-Nasso-Oka-Terreiro-da-Casa-Branca"}
   - {title: "Correio (2024): Barroquinha in 1820", url: "https://www.correio24horas.com.br/minha-bahia/casa-mae-do-brasil-evento-celebra-os-40-anos-de-reconhecimento-do-terreiro-da-casa-branca-0524"}
-  - {title: "Odete Dourado, Risco (USP) 2011: origin near Igreja da Barroquinha", url: "https://journals.usp.br/risco/article/download/45501/49110/54308"}
+  - {title: "Odete Dourado, Risco 2011: origin near Igreja da Barroquinha", url: "https://journals.usp.br/risco/article/download/45501/49110/54308"}
   - {title: "Ordep Serra, Afro-Ásia 33 (2005): mãe Menininha do Gantois", url: "https://periodicos.ufba.br/index.php/afroasia/article/view/21104"}
   - {title: "A Tarde: Casa Branca and heritage policy", url: "https://atarde.com.br/colunistas/atardememoria/tombamento-da-casa-branca-ha-40-anos-inovou-politica-de-patrimonio-1271738"}
   - {title: "UC San Diego Community Centers Library: The City of Women (1947)", url: "https://cclib.ucsd.edu/Library/details.aspx?ID=1049"}

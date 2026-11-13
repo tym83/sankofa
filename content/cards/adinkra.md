@@ -18,11 +18,11 @@ sources:
   - {title: "UBC Museum of Anthropology: Sankofa", url: "https://moa.ubc.ca/2021/11/sankofa-african-routes-canadian-roots/"}
   - {title: "Smithsonian NMAAHC: Adinkra learning resource", url: "https://nmaahc.si.edu/sites/default/files/downloads/resources/kwanzaa_coloring_pages.pdf"}
   - {title: "Seattle Art Museum: Sankofa bird", url: "https://art.seattleartmuseum.org/objects/7775/figurative-weight-abrammuo-sankofa-bird"}
-  - {title: "P. Owusu (Institute of African Studies Teaching Museum, University of Ghana), Adinkra Symbols as Multivocal Pedagogical Tool, Contemporary Journal of African Studies", url: "https://www.ajol.info/index.php/contjas/article/view/187100"}
-  - {title: "Carol Ventura: Adinkra in Ntonso-Ashanti, Ghana (2008-09 fieldwork)", url: "https://www.carolventura.com/Adinkra.htm"}
-  - {title: "GWU Textile Museum collection stories: adinkra (Ntonso photo)", url: "https://collectionstories.museum.gwu.edu/?p=445"}
+  - {title: "P. Owusu, Adinkra Symbols as Multivocal Pedagogical Tool, Contemporary Journal of African Studies", url: "https://www.ajol.info/index.php/contjas/article/view/187100"}
+  - {title: "Carol Ventura: Adinkra in Ntonso-Ashanti, Ghana", url: "https://www.carolventura.com/Adinkra.htm"}
+  - {title: "GWU Textile Museum collection stories: adinkra", url: "https://collectionstories.museum.gwu.edu/?p=445"}
   - {title: "British Art Studies 28: Anagnost", url: "https://britishartstudies.ac.uk/issues/28/adinkra-from-kumase-to-the-british-museum/"}
-  - {title: "Doran H. Ross, Adinkra (encyclopedia.com)", url: "https://www.encyclopedia.com/fashion/encyclopedias-almanacs-transcripts-and-maps/adinkra"}
+  - {title: "Doran H. Ross, Adinkra", url: "https://www.encyclopedia.com/fashion/encyclopedias-almanacs-transcripts-and-maps/adinkra"}
   - {title: "Wikimedia Commons: File:Adinkra_cloth.JPG", url: "https://commons.wikimedia.org/wiki/File:Adinkra_cloth.JPG"}
   - {title: "History News Network: heart-shaped coffin design reconsidered", url: "https://www.historynewsnetwork.org/article/122687"}
   - {title: "NPS African Burial Ground brochure (2019): 'perhaps a Sankofa'", url: "https://www.npshistory.com/publications/afbg/brochures/2019.pdf"}

@@ -15,7 +15,7 @@ further:
   - "Angela Y. Davis, Blues Legacies and Black Feminism (1998)"
 dispute: "Sales are uncertain. NPR (2006) cites 10,000 copies in the first week and 75,000 within a month; other accounts give different periods, and the frequently repeated figure of a million copies in the first year has no reliable source."
 sources:
-  - {title: "Library of Congress essay (Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf"}
+  - {title: "Library of Congress essay", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf"}
   - {title: "Ballad of America", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/"}
   - {title: "NPR (2006)", url: "https://www.npr.org/2006/11/11/6473116/mamie-smith-and-the-birth-of-the-blues-market"}
   - {title: "David Jansen: Perry Bradford Story, Smithsonian Folkways liner notes", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW02863.pdf"}

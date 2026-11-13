@@ -16,7 +16,7 @@ further:
   - "Susan Buck-Morss, Hegel, Haiti, and Universal History (2009)"
 dispute: "Susan Buck-Morss (2000) argued that Hegel's master-slave dialectic drew on news of Saint-Domingue. Reviewers such as Anders Stephanson note that Hegel mentioned Haiti only once, in 1830, so the link remains a hypothesis."
 sources:
-  - {title: "Colonial Williamsburg: Haiti (Saint-Domingue)", url: "https://slaveryandremembrance.org/articles/article/?id=A0111"}
+  - {title: "Colonial Williamsburg: Haiti", url: "https://slaveryandremembrance.org/articles/article/?id=A0111"}
   - {title: "BnF: Gusti-Klara Gaillard-Pourchet, Haiti’s independence debt", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922"}
   - {title: "Stewart R. King, IESS via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution"}
   - {title: "New York Times: Historical data on Haiti’s debt", url: "https://github.com/nytimes/haiti-debt"}

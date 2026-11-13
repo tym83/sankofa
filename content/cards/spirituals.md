@@ -23,7 +23,7 @@ sources:
   - {title: "Carnegie Hall Timeline: Folk Spiritual", url: "https://timeline.carnegiehall.org/genres/folk-spiritual"}
   - {title: "Library of Congress, Songs of America: Spirituals", url: "https://www.loc.gov/item/ihas.200197495/?fo=json"}
   - {title: "Fisk University: History", url: "https://www.fisk.edu/about/history/"}
-  - {title: "PBS American Experience: Jubilee Singers ('last $40 of the school's treasury', nine singers, October 6, 1871)", url: "https://www.pbs.org/wgbh/americanexperience/films/singers/"}
+  - {title: "PBS American Experience: Jubilee Singers", url: "https://www.pbs.org/wgbh/americanexperience/films/singers/"}
   - {title: "Africans in Yorkshire Project: $20,000 after six months", url: "https://africansinyorkshireproject.com/fisk-jubilee-singers-part-one.html"}
   - {title: "Allen, Ware and Garrison, Slave Songs of the United States (1867), introduction, Documenting the American South, UNC", url: "https://docsouth.unc.edu/church/allen/allen.html"}
   - {title: "Documenting the American South, UNC: Slave Songs of the United States, summary", url: "https://docsouth.unc.edu/church/allen/summary.html"}
@@ -33,11 +33,11 @@ sources:
   - {title: "Digital History, University of Houston: Spirituals", url: "https://www.digitalhistory.uh.edu/active_learning/explorations/spirituals/spirituals_menu.cfm"}
   - {title: "Andrew Ward, They Brought the Jubilee, American Heritage 51:4 (2000)", url: "https://www.americanheritage.com/they-brought-jubilee"}
   - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard"}
-  - {title: "Associated Press (Luis Andres Henao) via WCIV: Gullah Geechee elders work to preserve sacred songs (2025)", url: "https://abcnews4.com/news/local/gullah-geechee-elders-work-to-preserve-sacred-songs-passed-down-by-enslaved-ancestors-wciv-abc-news-4-charleston-sc-south-carolina-st-helena-island-sea-islands"}
+  - {title: "Associated Press via WCIV: Gullah Geechee elders work to preserve sacred songs (2025)", url: "https://abcnews4.com/news/local/gullah-geechee-elders-work-to-preserve-sacred-songs-passed-down-by-enslaved-ancestors-wciv-abc-news-4-charleston-sc-south-carolina-st-helena-island-sea-islands"}
   - {title: "Library of Congress, African American Spirituals: Introduction", url: "https://guides.loc.gov/spirituals-folklife"}
   - {title: "Tufts University Libraries, Slave Songs of the United States, Douglass exhibition", url: "https://omeka.library.tufts.edu/exhibits/show/douglass-olafsson/musical-inspirations/slave-songs-of-the-united-stat"}
   - {title: "A. Kori Hill, Composer Feature: Ella Sheppard, Cincinnati Public Radio (2024)", url: "https://www.classicsforkids.com/composer-feature-ella-sheppard/"}
-  - {title: "Carnegie Hall Timeline: Spiritual as Art Song (already on burleigh-dvorak)", url: "https://timeline.carnegiehall.org/genres/spiritual-as-art-song"}
+  - {title: "Carnegie Hall Timeline: Spiritual as Art Song", url: "https://timeline.carnegiehall.org/genres/spiritual-as-art-song"}
 media:
   - {type: "image", file: "spirituals.jpg", caption: "The Fisk Jubilee Singers in London, about 1876", credit: "Unknown photographer", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Fisk_Jubilee_Singers_London.jpg"}
 ---

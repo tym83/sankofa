@@ -19,8 +19,8 @@ sources:
   - {title: "University of Hamburg: Risks and Rewards", url: "https://www.csmc.uni-hamburg.de/about/blog/2023-08-29-timbuktu.html"}
   - {title: "Library of Congress: Ancient Manuscripts from the Desert Libraries of Timbuktu", url: "https://www.loc.gov/exhibits/mali/mali-exhibit.html"}
   - {title: "CSMC Hamburg: The Timbuktu manuscripts", url: "https://www.csmc.uni-hamburg.de/timbuktu/manuscripts.html"}
-  - {title: "Military Periscope: Tuareg rebels take Timbuktu (2 April 2012, 'seized Sunday')", url: "https://www.militaryperiscope.com/news/tuareg-rebels-take-timbuktu"}
-  - {title: "The World (PRI), quoting UNESCO's David Stehl: 4,203 burned or stolen", url: "https://theworld.org/stories/2013/07/03/islamists-have-destroyed-one-tenth-timbuktus-ancient-manuscripts-un-finds"}
+  - {title: "Military Periscope: Tuareg rebels take Timbuktu", url: "https://www.militaryperiscope.com/news/tuareg-rebels-take-timbuktu"}
+  - {title: "The World, quoting UNESCO's David Stehl: 4,203 burned or stolen", url: "https://theworld.org/stories/2013/07/03/islamists-have-destroyed-one-tenth-timbuktus-ancient-manuscripts-un-finds"}
 media:
   - {type: "image", file: "timbuktu-manuscripts.jpg", caption: "Kashf al-Ghummah, a manuscript, from the Mamma Haidara Commemorative Library, Timbuktu", credit: "Library of Congress exhibition Ancient Manuscripts from the Desert Libraries of Timbuktu, via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Loc_timbuktu_manuscripts_amm0001rs.jpg"}
 ---

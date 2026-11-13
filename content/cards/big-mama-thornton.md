@@ -10,8 +10,6 @@ places:
 zoom: 4
 era: v6
 books: [heirs]
-edition: f
-pair: uncredited
 genres: [blues, rock-n-roll]
 tags: [uncredited]
 further:

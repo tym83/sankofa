@@ -22,7 +22,7 @@ sources:
   - {title: "Internet Encyclopedia of Ukraine: Aldridge, Ira Frederick", url: "http://www.encyclopediaofukraine.com/pages%5CA%5CL%5CAldridgeIraFrederick.htm"}
   - {title: "Taras Shevchenko Encyclopedia: Portrait of I. Aldridge (1858)", url: "https://t-shevchenko.name/en/Painting/Moscow-StPetersburg1858-1859/PortraitOfIAldridge.html"}
   - {title: "Kyiv Post, Bohdan Nahaylo: Shevchenko and Aldridge, Unbound Prometheans who Bonded", url: "https://www.kyivpost.com/post/14050"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Ira_Aldridge,_by_Taras_Shevchenko_(1858).jpg"}
+  - {title: "Wikimedia Commons: Portrait of Ira Aldridge, by Taras Shevchenko (1858)", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Ira_Aldridge,_by_Taras_Shevchenko_(1858).jpg"}
   - {title: "Congressional Record, 17 March 2011", url: "https://www.govinfo.gov/content/pkg/CREC-2011-03-17/html/CREC-2011-03-17-pt1-PgE525-2.htm"}
 media:
   - {type: "image", file: "ira-aldridge.jpg", caption: "Ira Aldridge, drawn by Taras Shevchenko in St Petersburg, 25 December 1858", credit: "Taras Shevchenko; Taras Shevchenko National Museum, Kyiv", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Ira_Aldridge,_by_Taras_Shevchenko_(1858).jpg"}

@@ -10,16 +10,14 @@ places:
 zoom: 4
 era: v3
 books: [voices]
-edition: f
-pair: first-poets
 further:
   - "Phillis Wheatley, Poems on Various Subjects, Religious and Moral (London: A. Bell, 1773)"
   - "Massachusetts Historical Society: Phillis Wheatley, From Our Cabinet"
 sources:
   - {title: "Project Gutenberg: Poems on Various Subjects, Religious and Moral", url: "https://www.gutenberg.org/cache/epub/409/pg409.txt"}
   - {title: "Revolutionary Spaces: Wheatley's attestation", url: "https://revolutionaryspaces.org/explore/exhibits/imagining-the-age-of-phillis/how-phillis-wheatley-might-have-obtained-the-approval-of-eighteen-prominent-white-men-of-boston-to-publish-her-book-of-poetry/"}
-  - {title: "Massachusetts Historical Society: Title page and frontispiece of Poems on Various Subjects (published London, 1 September 1773)", url: "https://www.masshist.org/objects/cabinet/september2001/september2001.html"}
-  - {title: "National Women's History Museum: Phillis Wheatley (kidnapped 1761, Poems published in London)", url: "https://www.womenshistory.org/education-resources/biographies/phillis-wheatley"}
+  - {title: "Massachusetts Historical Society: Title page and frontispiece of Poems on Various Subjects", url: "https://www.masshist.org/objects/cabinet/september2001/september2001.html"}
+  - {title: "National Women's History Museum: Phillis Wheatley", url: "https://www.womenshistory.org/education-resources/biographies/phillis-wheatley"}
   - {title: "Mount Vernon Digital Encyclopedia: Phillis Wheatley", url: "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/phillis-wheatley"}
   - {title: "Phillis Wheatley: Poems on Various Subjects, full text", url: "https://www.gutenberg.org/cache/epub/409/pg409.html"}
   - {title: "National Archives, Founders Online: Washington to Wheatley, 28 February 1776", url: "https://founders.archives.gov/documents/Washington/03-03-02-0281"}

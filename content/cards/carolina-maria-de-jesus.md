@@ -17,7 +17,7 @@ further:
 dispute: "How much the journalist Audálio Dantas shaped the published diary is debated: he cut passages and smoothed her prose; Levine notes it is not known to what degree he changed her writing."
 sources:
   - {title: "Revista Pesquisa FAPESP: A multifaceted author", url: "https://revistapesquisa.fapesp.br/en/a-multifaceted-author/"}
-  - {title: "Encyclopedia.com (Women in World History): Jesús, Carolina Maria de", url: "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/jesus-carolina-maria-de-c-1913-1977"}
+  - {title: "Encyclopedia.com: Jesús, Carolina Maria de", url: "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/jesus-carolina-maria-de-c-1913-1977"}
   - {title: "Robert M. Levine, LARR 29:1 (1994)", url: "https://www.cambridge.org/core/journals/latin-american-research-review/article/cautionary-tale-of-carolina-maria-de-jesus/5321F967C3A31A99C06BFB2CB1E5E537"}
   - {title: "Cristina Gomes Baltazar: Carolina Maria de Jesus, hunger poverty and literature", url: "https://revistas.pucsp.br/index.php/ls/article/download/62439/42551/198339"}
   - {title: "Google Doodles (2019): in 1958 Dantas arranged excerpts in a newspaper", url: "https://doodles.google/doodle/carolina-maria-de-jesus-105th-birthday/"}

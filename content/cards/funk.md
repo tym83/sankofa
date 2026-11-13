@@ -21,17 +21,17 @@ sources:
   - {title: "Andscape: Forty years later, George Clinton’s Mothership is still landing", url: "https://andscape.com/features/forty-years-later-george-clintons-mothership-is-still-landing/"}
   - {title: "Library of Congress: Ben Greenman, Mothership Connection", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MothershipConnection.pdf"}
   - {title: "Exclaim!: Parliament-Funkadelic donate their Mothership to the Smithsonian", url: "https://exclaim.ca/music/article/parliament-funkadelic_donate_their_mothership_to_smithsonian"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:P-Funk_mothership_at_NMAAHC.jpg"}
+  - {title: "Wikimedia Commons: P-Funk mothership at NMAAHC", url: "https://commons.wikimedia.org/wiki/File:P-Funk_mothership_at_NMAAHC.jpg"}
   - {title: "Carnegie Hall, Timeline of African American Music: Funk", url: "https://timeline.carnegiehall.org/genres/funk"}
   - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture, via Encyclopedia.com", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
   - {title: "PBS Sound Field: How James Brown invented funk", url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"}
-  - {title: "The Current (Minnesota Public Radio): Pride and pain, the story of the Funky Drummer (2020)", url: "https://www.thecurrent.org/feature/2020/02/11/pride-and-pain-the-story-of-the-funky-drummer"}
-  - {title: "CityBeat Cincinnati: The Once and Future King (King Records, Evanston)", url: "https://www.citybeat.com/news/the-once-and-future-king-12226061/"}
+  - {title: "The Current: Pride and pain, the story of the Funky Drummer (2020)", url: "https://www.thecurrent.org/feature/2020/02/11/pride-and-pain-the-story-of-the-funky-drummer"}
+  - {title: "CityBeat Cincinnati: The Once and Future King", url: "https://www.citybeat.com/news/the-once-and-future-king-12226061/"}
   - {title: "Alexander Stewart, Make It Funky: Fela Kuti, James Brown and the Invention of Afrobeat, American Studies 52:4 (2013)", url: "https://journals.ku.edu/amsj/article/download/4463/4304/"}
   - {title: "Mellonee V. Burnim and Portia K. Maultsby, eds., African American Music: An Introduction, 2nd ed. (2015), chapters on African roots and funk", url: "https://microsite-oh-prod.s3.amazonaws.com/media/editor/405/vdoc.pub_african-american-music-an-introduction.pdf"}
   - {title: "Associated Press, Sly Stone obituary, ABC News (10 June 2025), accessible syndication", url: "https://www.abc.net.au/news/2025-06-10/sly-stone-frontman-of-sly-and-the-family-stone-dies-aged-82/105397220"}
   - {title: "Aubrey Foard, Behind the Beat: Funky Drummer by James Brown, Roland", url: "https://articles.roland.com/behind-the-beat-funky-drummer-by-james-brown/"}
-  - {title: "Carnegie Hall Timeline: Rap & Hip-Hop (sampled materials, especially funk)", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"}
+  - {title: "Carnegie Hall Timeline: Rap & Hip-Hop", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"}
 media:
   - {type: "image", file: "funk.jpg", caption: "The P-Funk Mothership (1990s replica) at the opening of the National Museum of African American History and Culture, Washington, September 2016", credit: "Fuzheado, Wikimedia Commons", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:P-Funk_mothership_at_NMAAHC.jpg"}
 ---

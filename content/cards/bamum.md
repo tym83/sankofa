@@ -17,9 +17,9 @@ sources:
   - {title: "Unicode Standard: Bamum", url: "https://www.unicode.org/versions/latest/core-spec/chapter-19/"}
   - {title: "Tim Brookes: A tragic tale, a hopeful future", url: "https://www.endangeredalphabets.com/2015/11/18/a-tragic-tale-a-hopeful-future/"}
   - {title: "The Unicode Standard 18.0, core spec chapter 19: Bamum", url: "http://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-19/"}
-  - {title: "Wikipedia: Bamum script (used as pointer; lead and phase sections)", url: "https://en.wikipedia.org/wiki/Bamum_script"}
+  - {title: "Wikipedia: Bamum script", url: "https://en.wikipedia.org/wiki/Bamum_script"}
   - {title: "Kenneth J. Orosz, Njoya's Alphabet: The Sultan of Bamum and French Colonial Reactions to the A ka u ku Script, Cahiers d'études africaines 217 (2015)", url: "https://journals.openedition.org/etudesafricaines/18002"}
-  - {title: "The Unicode Standard 17.0/18.0, chapter 19: Bamum (syllabary developed 1896-1910; 80 syllable characters)", url: "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-19/"}
+  - {title: "The Unicode Standard 17.0/18.0, chapter 19: Bamum", url: "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-19/"}
   - {title: "Piers Kelly, The Invention, Transmission and Evolution of Writing: Insights from the New Scripts of West Africa (2018), pp. 189–209, author-deposited chapter", url: "https://osf.io/download/ns5ta/"}
   - {title: "British Library, Endangered Archives Programme EAP051: Bamum script and archives project", url: "https://eap.bl.uk/project/EAP051"}
   - {title: "British Library, EAP051/1/2/1008: Report on pupils registered in King Njoya’s schools, 17 August 1917", url: "https://searcharchives.bl.uk/catalog/040-002762330"}

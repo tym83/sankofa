@@ -16,10 +16,10 @@ further:
   - "Art Institute of Chicago, Benin: Kings and Rituals, video of lost-wax casting in Benin City (2003, 2006)"
 sources:
   - {title: "AFRREV IJAH (2017) abstract on the Igun Eronmwon casters", url: "https://www.ajol.info/index.php/ijah/article/view/152306"}
-  - {title: "Wikipedia: Igun Street (pointer only)", url: "https://en.wikipedia.org/wiki/Igun_Street"}
+  - {title: "Wikipedia: Igun Street", url: "https://en.wikipedia.org/wiki/Igun_Street"}
   - {title: "Pitt Rivers Museum: The Kingdom of Benin", url: "https://prm.ox.ac.uk/kingdom-benin"}
   - {title: "Art Institute of Chicago: Brass Casters, Lost Wax Casting, Benin City", url: "https://archive.artic.edu/benin/659"}
-  - {title: "Wikimedia Commons: Plaque, Two Portuguese Merchants, Met 1991.17.18 (Met record data)", url: "https://commons.wikimedia.org/wiki/File:Plaque-_Two_Portuguese_Merchants_MET_DT6560.jpg"}
+  - {title: "Wikimedia Commons: Plaque, Two Portuguese Merchants, Met 1991.17.18", url: "https://commons.wikimedia.org/wiki/File:Plaque-_Two_Portuguese_Merchants_MET_DT6560.jpg"}
   - {title: "The Art Newspaper (2022)", url: "https://www.theartnewspaper.com/2022/12/22/germany-kicks-off-major-benin-bronze-restitution-with-return-of-20-artefacts-to-nigeria"}
   - {title: "Metropolitan Museum of Art: Plaque with Two Portuguese Merchants", url: "https://www.metmuseum.org/art/collection/search/316490"}
   - {title: "Art Institute of Chicago: Double Plaque of a Portuguese Man", url: "https://archive.artic.edu/benin/artwork/195413"}

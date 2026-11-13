@@ -30,9 +30,9 @@ sources:
   - {title: "Al Jazeera: The Lioness of Lisabi (2020)", url: "https://www.aljazeera.com/features/2020/10/1/the-lioness-of-lisabi-who-ended-unfair-taxes-for-nigerian-women"}
   - {title: "Fela Kuti official site: story, 1978", url: "https://felakuti.com/story/1978"}
   - {title: "Graphic Online: how Fela Kuti married 27 women the same day", url: "https://www.graphic.com.gh/entertainment/showbiz-news/the-untold-story-of-how-fela-kuti-married-27-women-same-day-2.html"}
-  - {title: "Songlines: Fela Kuti, a beginner's guide (long numbers, horns, call-and-response, Pidgin English, Koola Lobitos highlife and jazz, trance-like groove)", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
+  - {title: "Songlines: Fela Kuti, a beginner's guide", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
   - {title: "Red Bull Music Academy Daily: I Go Shout Plenty, a guide to the work of Fela Kuti (2012)", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti"}
-  - {title: "Fela Kuti official site: story, 1959-1971 (Highlife Rakers, Koola Lobitos, Nigeria 70, Africa 70)", url: "https://felakuti.com/story/1969"}
+  - {title: "Fela Kuti official site: story, 1959-1971", url: "https://felakuti.com/story/1969"}
   - {title: "National Theatre, FELA! KS3 scheme of work, music section", url: "https://national-theatre-assets.s3.amazonaws.com/uploads/2022/10/fela-ks3-scheme-of-work.pdf"}
   - {title: "Alexander Stewart, Make It Funky: Fela Kuti, James Brown and the Invention of Afrobeat, American Studies 52:4 (2013)", url: "https://journals.ku.edu/amsj/article/download/4463/4304/"}
 media:

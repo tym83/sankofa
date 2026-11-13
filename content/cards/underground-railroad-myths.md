@@ -18,10 +18,10 @@ dispute: "The quilt code rests on one family's oral account in Hidden in Plain V
 sources:
   - {title: "National Geographic: Did Quilts Hold Codes to the Underground Railroad?", url: "https://www.nationalgeographic.com/culture/article/did-quilts-hold-codes-to-the-underground-railroad"}
   - {title: "International Quilt Museum: Underground Railroad Quilts?", url: "https://worldquilts.quiltstudy.org/americanstory/node/123"}
-  - {title: "Open Library record (Doubleday, first published 1999)", url: "https://openlibrary.org/search.json?q=hidden+in+plain+view+tobin+dobard&fields=title,author_name,publisher,first_publish_year,publish_date"}
+  - {title: "Open Library record", url: "https://openlibrary.org/search.json?q=hidden+in+plain+view+tobin+dobard&fields=title,author_name,publisher,first_publish_year,publish_date"}
   - {title: "Joel Bresler, Follow the Drinking Gourd: A Cultural History", url: "http://www.followthedrinkinggourd.org/"}
   - {title: "Internet Archive: Follow de Drinkin' Gou'd, Publications of the Texas Folk-Lore Society VII, Austin 1928", url: "https://archive.org/details/followdedrinking0000unse"}
-  - {title: "Encyclopedia of Greater Philadelphia: Underground Railroad (485 fugitives 1852–57; 1872 book)", url: "https://philadelphiaencyclopedia.org/essays/underground-railroad/"}
+  - {title: "Encyclopedia of Greater Philadelphia: Underground Railroad", url: "https://philadelphiaencyclopedia.org/essays/underground-railroad/"}
   - {title: "Wikimedia Commons / Internet Archive: Still, The Underground Rail Road, Philadelphia: Porter & Coates, 1872", url: "https://commons.wikimedia.org/wiki/File:The_underground_rail_road._A_record_of_facts,_authentic_narratives,_letters,_%26c.,_narrating_the_hardships,_hairbreadth_escapes_and_death_struggles_of_the_slaves_in_their_efforts_for_freedom_(1872)_(14574304928).jpg"}
   - {title: "Project Gutenberg: Still, The Underground Railroad", url: "https://www.gutenberg.org/ebooks/15263"}
 media:

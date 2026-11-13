@@ -9,8 +9,6 @@ places:
 zoom: 4
 era: v5
 books: [voices, heirs]
-edition: m
-pair: first-poets
 further:
   - "Elizabeth R. Wright, The Epic of Juan Latino: Dilemmas of Race and Religion in Renaissance Spain (University of Toronto Press, 2016)"
   - "Cervantes, Don Quixote, Part I (1605): the prefatory poem by Urganda la desconocida"
@@ -19,8 +17,8 @@ sources:
   - {title: "Cambridge University Library: Juan Latino", url: "https://languagecollections-blog.lib.cam.ac.uk/2020/07/10/juan-latino-16th-century-afro-spaniard-freed-slave-poet-and-latin-professor"}
   - {title: "University of Granada: ¿Quién fue Juan Latino?", url: "https://patrimonio.ugr.es/bien-inmaterial/quien-fue-juan-latino/"}
   - {title: "Elizabeth R. Wright: Juan Latino, On the Birth of Untroubled Times", url: "https://scholarsbank.uoregon.edu/items/eda927a7-4566-4364-89be-d7630eecb7bc/full"}
-  - {title: "Eduardo Soler Fiérrez, Juan Latino: biografía (Cultura y Pensamiento de los Pueblos Negros)", url: "http://culturaypensamientodelospueblosnegros.com/juan-latino-biografia-esclavo-catedratico-granada/"}
-  - {title: "Cervantes, Don Quijote (Project Gutenberg #2000)", url: "https://www.gutenberg.org/cache/epub/2000/pg2000.txt"}
+  - {title: "Eduardo Soler Fiérrez, Juan Latino: biografía", url: "http://culturaypensamientodelospueblosnegros.com/juan-latino-biografia-esclavo-catedratico-granada/"}
+  - {title: "Cervantes, Don Quijote", url: "https://www.gutenberg.org/cache/epub/2000/pg2000.txt"}
   - {title: "Wikipedia (es): Juan Latino", url: "https://es.wikipedia.org/wiki/Juan_Latino"}
 media:
   - {"type": "image", "file": "juan-latino.jpg", "caption": "Title page of Juan Latino’s Latin poems, printed by Hugo de Mena, Granada, 1573", "credit": "Juan Latino; Boston Public Library, digitized with support from the Associates of the Boston Public Library; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Ad_Catholicvm,_pariter_et_invictissimvm_Phillippvm_Dei_gratia_Hispaniarum_regem_-_de_foelicissima_serenissimi_Ferdinandi_principis_natiuitate_(IA_adcatholicvmpari00lati).pdf"}

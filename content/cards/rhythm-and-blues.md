@@ -19,18 +19,18 @@ further:
 sources:
   - {title: "Rock and Roll Hall of Fame: Jerry Wexler", url: "https://www.rockhall.com/inductees/jerry-wexler"}
   - {title: "Irish Independent: Jerry Wexler obituary", url: "https://www.independent.ie/news/jerry-wexler/26471657.html"}
-  - {title: "NPR (text): Forebears, Ruth Brown, The Fabulous Miss Rhythm (2017)", url: "https://text.npr.org/559070707"}
-  - {title: "Contemporary Authors (Gale), via Encyclopedia.com: Wexler, Jerry 1917-2008", url: "https://www.encyclopedia.com/arts/educational-magazines/wexler-jerry-1917-2008-gerald-wexler"}
+  - {title: "NPR: Forebears, Ruth Brown, The Fabulous Miss Rhythm (2017)", url: "https://text.npr.org/559070707"}
+  - {title: "Contemporary Authors, via Encyclopedia.com: Wexler, Jerry 1917-2008", url: "https://www.encyclopedia.com/arts/educational-magazines/wexler-jerry-1917-2008-gerald-wexler"}
   - {title: "Washington Post: Jerry Wexler, influential producer", url: "https://www.washingtonpost.com/archive/local/2008/08/16/jerry-wexler-91-influential-producer-helped-shape-r-b/c156f009-d3e2-4e4d-8a6d-eb644869da01/"}
   - {title: "Rock & Roll Hall of Fame: Ahmet Ertegun", url: "https://www.rockhall.com/inductees/ahmet-ertegun"}
-  - {title: "NPR Forebears: Ruth Brown (2017) (via WEAA syndication page)", url: "https://www.weaa.org/2017-10-23/forebears-ruth-brown-the-fabulous-miss-rhythm"}
+  - {title: "NPR Forebears: Ruth Brown (2017)", url: "https://www.weaa.org/2017-10-23/forebears-ruth-brown-the-fabulous-miss-rhythm"}
   - {title: "New-York Historical / NYU: Atlantic Recording Company records, historical note", url: "https://findingaids.library.nyu.edu/nyhs/timeinc_ms3009_rg51/"}
   - {title: "Rock & Roll Hall of Fame: Ruth Brown", url: "https://www.rockhall.com/inductees/ruth-brown"}
-  - {title: "Carnegie Hall, Timeline of African American Music (Portia K. Maultsby): Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues"}
-  - {title: "Encyclopedia of African-American Culture and History (Eisenstadt, Gill, Tomassini), via Encyclopedia.com: Rhythm and Blues", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
-  - {title: "PBS Sound Field: How James Brown invented funk (backbeat on two and four)", url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"}
-  - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll (doo-wop roots in gospel)", url: "https://timeline.carnegiehall.org/genres/rock-n-roll"}
-  - {title: "GRAMMY.com: R&B pioneer Johnny Otis dies (Barrelhouse, 1948)", url: "https://www.grammy.com/news/rb-pioneer-johnny-otis-dies/"}
+  - {title: "Carnegie Hall, Timeline of African American Music: Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues"}
+  - {title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rhythm and Blues", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+  - {title: "PBS Sound Field: How James Brown invented funk", url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"}
+  - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll"}
+  - {title: "GRAMMY.com: R&B pioneer Johnny Otis dies", url: "https://www.grammy.com/news/rb-pioneer-johnny-otis-dies/"}
   - {title: "Mark Puryear, Tell It Like It Is, Smithsonian Folklife Festival (2011), pp. 53–63", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf"}
   - {title: "Case Western Reserve University, Encyclopedia of Cleveland History: Rock & Roll", url: "https://case.edu/ech/articles/r/rock-roll"}
 media:

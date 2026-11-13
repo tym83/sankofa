@@ -16,7 +16,7 @@ further:
   - "Martin Bernal, Black Athena, and the debate around it"
 dispute: "Historians and classicists reject James's thesis that Greek philosophy was stolen from an Egyptian 'mystery system'; Lefkowitz (1996) and reviewers such as Lawrence Tritle and Thomas Palaima show that its chronology and sources fail. Martin Bernal's Black Athena made a broader, separate case for African influence on Greece; it is also contested."
 sources:
-  - {title: "Thomas G. Palaima, review of Not Out of Africa, National Review, 25 March 1996 (UT Austin PDF)", url: "https://sites.utexas.edu/scripts/files/2020/06/1996-TGP-revNotOutOfAfrica.pdf"}
+  - {title: "Thomas G. Palaima, review of Not Out of Africa, National Review, 25 March 1996", url: "https://sites.utexas.edu/scripts/files/2020/06/1996-TGP-revNotOutOfAfrica.pdf"}
   - {title: "Bryn Mawr Classical Review 1996.05.07: Lawrence Tritle on Lefkowitz", url: "https://bmcr.brynmawr.edu/1996/1996.05.07"}
   - {title: "UCL Digital Egypt: Alexandria library", url: "https://www.ucl.ac.uk/museums-static/digitalegypt/writing/library/alexandria.html"}
   - {title: "Christopher Shields, Stanford Encyclopedia of Philosophy: Aristotle", url: "https://plato.stanford.edu/entries/aristotle/"}

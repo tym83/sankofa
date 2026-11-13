@@ -18,7 +18,7 @@ dispute: "His death year is given as 1863 by the Library of Congress and as 1864
 sources:
   - {title: "Library of Congress: Omar Ibn Said story map", url: "https://blogs.loc.gov/loc/2019/07/new-omar-bin-said-story-map/"}
   - {title: "Colonial Williamsburg: Omar ibn Said, Slavery and Remembrance", url: "https://slaveryandremembrance.org/people/person/?id=PP027"}
-  - {title: "Lowcountry Digital History Initiative: Omar ibn Said (1770-1864)", url: "https://ldhi.library.cofc.edu/exhibits/show/african-muslims-in-the-south/five-african-muslims/omar-ibn-said--1770-1864"}
+  - {title: "Lowcountry Digital History Initiative: Omar ibn Said", url: "https://ldhi.library.cofc.edu/exhibits/show/african-muslims-in-the-south/five-african-muslims/omar-ibn-said--1770-1864"}
   - {title: "Documenting the American South: summary by Patrick E. Horn", url: "https://docsouth.unc.edu/nc/omarsaid/summary.html"}
   - {title: "Hunwick, Journal of Arabic and Islamic Studies: captured 1806/7, sold in South Carolina", url: "https://journals.uio.no/JAIS/article/view/4572"}
   - {title: "National Humanities Center: Omar ibn Said autobiography with contextual documents", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf"}

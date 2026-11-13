@@ -25,7 +25,7 @@ sources:
   - {title: "Chicago History Museum: The Legacy of Emmett Till", url: "https://www.chicagohistory.org/the-legacy-of-emmett-till-a-black-teenager-from-chicago/"}
   - {title: "Mississippi Center for Investigative Reporting: Did Tim Tyson lie, too? (2021)", url: "https://www.mississippicir.org/perspective/carolyn-bryant-lied-about-emmett-till-did-author-tim-tyson-lie-too"}
   - {title: "David T. Beito and Linda Royster Beito, History News Network: Why It's Unlikely the Emmett Till Murder Mystery Will Ever Be Solved (2004)", url: "https://www.hnn.us/article/4853"}
-  - {title: "Public Law 117-107 (approved 29 March 2022, amends 18 USC 249 'to specify lynching as a hate crime act')", url: "https://www.congress.gov/117/plaws/publ107/PLAW-117publ107.htm"}
+  - {title: "Public Law 117-107", url: "https://www.congress.gov/117/plaws/publ107/PLAW-117publ107.htm"}
 media:
   - {"type": "image", "file": "emmett-till.jpg", "caption": "Emmett Till's last home, 6427 S. St. Lawrence Avenue, Chicago, 3 September 2016", "credit": "Charles Orlowek; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Emmett_Till%27s_Chicago_home_6427_S._St._Lawrence_Avenue.jpg"}
 ---

@@ -18,17 +18,17 @@ further:
 sources:
   - {title: "Hood Museum: Ukara, Ritual Cloth of the Ekpe Society,2015", url: "https://hoodmuseum.dartmouth.edu/sites/hoodmuseum.prod/files/hoodmuseum/publications/ukara-brochure-2015.pdf"}
   - {title: "Princeton Art Museum: Victor Ekpuk, Language and Lineage", url: "https://artmuseum.princeton.edu/art/stories-perspectives/conversation-victor-ekpuk-language-and-lineage"}
-  - {title: "UBC Press / University Press of Mississippi: Ivor L. Miller, Voice of the Leopard (publisher's description)", url: "https://ubcpress.ca/voice-of-the-leopard"}
-  - {title: "Dayrell, JRAI 41 (1911): nsibidi signs of the Egbo (Ekpe) society", url: "https://zenodo.org/records/1449623/files/article.pdf"}
+  - {title: "UBC Press / University Press of Mississippi: Ivor L. Miller, Voice of the Leopard", url: "https://ubcpress.ca/voice-of-the-leopard"}
+  - {title: "Dayrell, JRAI 41 (1911): nsibidi signs of the Egbo society", url: "https://zenodo.org/records/1449623/files/article.pdf"}
   - {title: "Appalachian State Turchin Center: Exploration of Ukara", url: "https://tcva.appstate.edu/exhibition/negotiation-of-the-secret-society-cloth-an-exploration-of-ukara/"}
-  - {title: "Colgate University, Picker Art Gallery: Ukara (Ekpe indigo resist-dyed cloth)", url: "https://emuseum.colgate.edu/objects/20619/ukara"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Nsibidi_talk.jpg"}
+  - {title: "Colgate University, Picker Art Gallery: Ukara", url: "https://emuseum.colgate.edu/objects/20619/ukara"}
+  - {title: "Wikimedia Commons: Nsibidi talk", url: "https://commons.wikimedia.org/wiki/File:Nsibidi_talk.jpg"}
   - {title: "Royal Anthropological Institute archives MS 23", url: "https://therai.org.uk/archives-and-manuscripts/manuscript-contents/0023-dayrell-elphinstone-ms-23/"}
-  - {title: "University Press of Mississippi: Voice of the Leopard (same blurb)", url: "https://www.upress.state.ms.us/Books/V/Voice-of-the-Leopard"}
-  - {title: "OnCuba Magazine: Chivo que rompe tambó, verdad y mito del abakuá (Rafael Grillo, 2012)", url: "https://oncubanews.com/informe/chivo-que-rompe-tambo-verdad-y-mito-del-abakua"}
+  - {title: "University Press of Mississippi: Voice of the Leopard", url: "https://www.upress.state.ms.us/Books/V/Voice-of-the-Leopard"}
+  - {title: "OnCuba Magazine: Chivo que rompe tambó, verdad y mito del abakuá", url: "https://oncubanews.com/informe/chivo-que-rompe-tambo-verdad-y-mito-del-abakua"}
   - {title: "Ivor L. Miller, Abakuá, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/abakua"}
-  - {title: "Hood Museum of Art: Ukara, Ritual Cloth of the Ekpe Secret Society (exhibition page)", url: "https://hoodmuseum.dartmouth.edu/news/2015/03/ukara-ritual-cloth-ekpe-secret-society"}
-  - {title: "Birmingham Museum of Art, Textile (ukara), Igbo, accession 1986.2", url: "https://www.artsbma.org/collection/textile-ukara/"}
+  - {title: "Hood Museum of Art: Ukara, Ritual Cloth of the Ekpe Secret Society", url: "https://hoodmuseum.dartmouth.edu/news/2015/03/ukara-ritual-cloth-ekpe-secret-society"}
+  - {title: "Birmingham Museum of Art, Textile, Igbo, accession 1986.2", url: "https://www.artsbma.org/collection/textile-ukara/"}
   - {title: "Kathy Curnow, The Bright Continent: African Art History, Art and Initiation, figure 306 and discussion", url: "https://pressbooks.ulib.csuohio.edu/bright-continent/chapter/chapter-3-6-art-and-initiation/"}
   - {title: "Isabela de Aranzadi, La Sociedad Abakuá y su influencia en el culto a los ancestros en Bioko, Batey 6 (2014)", url: "https://dialnet.unirioja.es/descarga/articulo/5149868.pdf"}
 media:

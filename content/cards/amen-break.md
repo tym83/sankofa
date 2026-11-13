@@ -9,8 +9,6 @@ places:
 zoom: 5
 era: v7
 books: [heirs]
-edition: m
-pair: uncredited
 genres: [funk, hip-hop]
 tags: [uncredited]
 further:

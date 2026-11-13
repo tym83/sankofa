@@ -18,8 +18,8 @@ dispute: "11 August 1973 as hip-hop's birthday is a convention, and accounts of 
 sources:
   - {title: "GRAMMY: Cindy Campbell and Kool Herc interview", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots"}
   - {title: "Kristen Gallerneaux, Henry Ford: From a DJ’s Closet", url: "https://www.thehenryford.org/collections/explore/articles/from-a-djs-closet"}
-  - {title: "HISTORY: Hip-hop is born at a party in the Bronx (date, rec room, 1520 Sedgwick)", url: "https://www.history.com/this-day-in-history/hip-hop-is-born-at-a-birthday-party-in-the-bronx"}
-  - {title: "PBS History Detectives: Birthplace of hip hop (back-to-school party hosted by Herc's sister)", url: "https://www.pbs.org/opb/historydetectives/investigation/birthplace-of-hip-hop/"}
+  - {title: "HISTORY: Hip-hop is born at a party in the Bronx", url: "https://www.history.com/this-day-in-history/hip-hop-is-born-at-a-birthday-party-in-the-bronx"}
+  - {title: "PBS History Detectives: Birthplace of hip hop", url: "https://www.pbs.org/opb/historydetectives/investigation/birthplace-of-hip-hop/"}
 media:
   - {type: "image", file: "cindy-campbell.jpg", caption: "1520 Sedgwick Avenue, the Bronx, the apartment building whose recreation room hosted the party of 11 August 1973; photographed July 2009", credit: "Bigtimepeace, via Wikimedia Commons", license: "Public domain (released by the photographer)", url: "https://commons.wikimedia.org/wiki/File:1520_Sedwick_Ave.,_Bronx,_New_York2.JPG"}
 ---

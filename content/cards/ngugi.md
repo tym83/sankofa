@@ -20,7 +20,7 @@ sources:
   - {title: "SOAS Library: Ngũgĩ manuscripts in the Heinemann collection", url: "https://blogs.soas.ac.uk/archives/2014/10/14/black-history-month-2014-ngugi-wa-thiongo-manuscripts-from-the-heinemann-african-writers-series-collection-at-soas-library/"}
   - {title: "Daily Maverick / Reuters: Ngugi wa Thiong'o dies at 87 (2025)", url: "https://www.dailymaverick.co.za/article/2025-05-29-ngugi-wa-thiongo-kenyan-author-who-reckoned-with-colonial-legacy-dies-at-87.md"}
   - {title: "James Currey: Publishing Ngũgĩ, University of Leeds", url: "https://lucas.leeds.ac.uk/article/publishing-ngugi-james-currey/"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Ng%C5%A9g%C4%A9_wa_Thiong%27o_2019_(48139052733).jpg"}
+  - {title: "Wikimedia Commons: Ngũgĩ wa Thiong'o 2019 (48139052733)", url: "https://commons.wikimedia.org/wiki/File:Ng%C5%A9g%C4%A9_wa_Thiong%27o_2019_(48139052733).jpg"}
   - {title: "Christian Science Monitor: review of Decolonising the Mind (1986)", url: "https://www.csmonitor.com/1986/0905/bdeco-f.html"}
 media:
   - {type: "image", file: "ngugi.jpg", caption: "Ngũgĩ wa Thiong'o reads from his work in Gikuyu and English, Coolidge Auditorium, Library of Congress, 9 May 2019", credit: "Shawn Miller, Library of Congress", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Ng%C5%A9g%C4%A9_wa_Thiong%27o_2019_(48139052733).jpg"}

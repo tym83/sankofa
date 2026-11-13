@@ -18,13 +18,13 @@ further:
 sources:
   - {title: "64 Parishes: Congo Square, Freddi Williams Evans", url: "https://64parishes.org/entry/congo-square"}
   - {title: "NPS: Jazz Origins in New Orleans", url: "https://www.nps.gov/jazz/learn/historyculture/history_early.htm"}
-  - {title: "New Orleans Historical (Midlo Center, UNO): Congo Square, Mythology and Music", url: "https://neworleanshistorical.org/items/show/745"}
+  - {title: "New Orleans Historical: Congo Square, Mythology and Music", url: "https://neworleanshistorical.org/items/show/745"}
   - {title: "National Park Service, New Orleans Jazz NHP: Charles 'Buddy' Bolden", url: "https://www.nps.gov/jazz/learn/historyculture/bolden.htm"}
-  - {title: "Salmagundi (Skidmore College): Before the Earth Cooled", url: "https://salmagundi.skidmore.edu/articles/238-before-the-earth-cooled"}
+  - {title: "Salmagundi: Before the Earth Cooled", url: "https://salmagundi.skidmore.edu/articles/238-before-the-earth-cooled"}
   - {title: "Library of Congress: The Painful Birth of Blues and Jazz", url: "https://blogs.loc.gov/folklife/2017/02/birth-of-blues-and-jazz/"}
   - {title: "National Park Service: A New Orleans Jazz History", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm"}
   - {title: "Louis Armstrong House Museum: Biography", url: "https://www.louisarmstronghouse.org/biography/"}
-  - {title: "Media source page", url: "https://commons.wikimedia.org/wiki/File:Buddy_Bolden_001.png"}
+  - {title: "Wikimedia Commons: Buddy Bolden 001", url: "https://commons.wikimedia.org/wiki/File:Buddy_Bolden_001.png"}
   - {title: "American Heritage, John McDonough: The Diamond Jubilee of Jazz (1992)", url: "https://www.americanheritage.com/diamond-jubilee-jazz"}
   - {title: "Encyclopedia.com: Louis Armstrong", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-armstrong"}
   - {title: "Carnegie Hall Timeline of African American Music: New Orleans-style jazz", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}

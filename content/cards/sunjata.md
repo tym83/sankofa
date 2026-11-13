@@ -19,7 +19,7 @@ sources:
   - {title: "ORIAS, UC Berkeley: Sundiata", url: "https://orias.berkeley.edu/sundiata"}
   - {title: "Vincent Zanetti, Cahiers d'ethnomusicologie 6 (1993)", url: "https://journals.openedition.org/ethnomusicologie/1512"}
   - {title: "UNESCO World Report: Investing in Cultural Diversity and Intercultural Dialogue (2009)", url: "https://www.unesco.at/fileadmin/Redaktion/Publikationen/Publikations-Dokumente/2009_UNESCO-World-Report_on_Cultural_Diversity_Full_Report.pdf"}
-  - {title: "UNESCO ICH: Cultural space of Sosso-Bala (balafon transmits the Sunjata epic; teaching from age seven)", url: "https://ich.unesco.org/en/RL/cultural-space-of-sosso-bala-00009"}
+  - {title: "UNESCO ICH: Cultural space of Sosso-Bala", url: "https://ich.unesco.org/en/RL/cultural-space-of-sosso-bala-00009"}
 media:
   - {type: "image", file: "sunjata.jpg", caption: "El Hadji Sékou Kouyaté, guardian of the Sosso-Bala, at a ceremony, 2017", credit: "Ursula Branscheid, via Wikimedia Commons", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Ur-Balafon_mit_Balafon-W%C3%A4chter_2017.jpg"}
 ---
