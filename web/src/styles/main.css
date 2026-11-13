@@ -4066,14 +4066,14 @@ details.k8s .term {
   .cover {
     display: block;
     min-height: 0;
-    padding-top: calc(48svh + 12px);
+    padding-top: calc(42svh + 8px);
   }
   .cover-art {
     bottom: auto;
-    height: 48svh;
+    height: 42svh;
   }
   .cover::before {
-    background: linear-gradient(180deg, rgba(10, 9, 16, 0) 0, rgba(10, 9, 16, 0) calc(48svh - 70px), #0c0d18 48svh);
+    background: linear-gradient(180deg, rgba(10, 9, 16, 0) 0, rgba(10, 9, 16, 0) calc(42svh - 70px), #0c0d18 42svh);
   }
   .cover-inner {
     padding-bottom: 48px;
@@ -4089,7 +4089,7 @@ details.k8s .term {
 }
 @media (max-width: 720px) {
   .cover-credit {
-    top: calc(48svh - 30px);
+    top: calc(42svh - 30px);
     left: 16px;
     right: 16px;
   }
@@ -6812,4 +6812,40 @@ html:lang(ru) .r-edge-head {
 }
 .tl .era text {
   text-transform: none;
+}
+
+/* Phones: the title, the deck and all three ways in share the first screen;
+   the Mansa Musa fact follows the buttons. */
+@media (max-width: 720px) {
+  .cover-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .cover h1 {
+    font-size: clamp(52px, 16vw, 76px);
+  }
+  .cover .deck {
+    margin-top: 12px;
+    font-size: clamp(17px, 4.9vw, 20px);
+    line-height: 1.3;
+  }
+  .cover-actions {
+    margin-top: 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .cover-actions .btn {
+    justify-content: center;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+  }
+  .cover-actions .cue {
+    align-self: flex-start;
+    margin-top: 6px;
+  }
+  .cover-wow {
+    order: 1;
+    margin-top: 28px;
+  }
 }
