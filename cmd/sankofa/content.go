@@ -195,6 +195,9 @@ func lintChapters(dir string, s *card.Set) []error {
 			}
 		}
 		body := &card.Card{Body: parts[1]}
+		for _, e := range card.ProseErrors(parts[1]) {
+			bad("%s", e)
+		}
 		for _, l := range body.Links() {
 			if s.ByID[l.Target] == nil {
 				bad("link to unknown card %q", l.Target)

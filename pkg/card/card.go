@@ -420,6 +420,14 @@ func (s *Set) Validate() []error {
 				bad(c, "link to unknown card %q", l.Target)
 			}
 		}
+		for _, e := range ProseErrors(c.Body) {
+			bad(c, "%s", e)
+		}
+		for lang, t := range c.Translations {
+			for _, e := range ProseErrors(t.Body) {
+				bad(c, "%s translation: %s", lang, e)
+			}
+		}
 		for _, g := range c.Genres {
 			if t, ok := s.ByID[g]; !ok || t.Kind != KindGenre {
 				bad(c, "genre %q is not a genre card", g)
@@ -585,4 +593,39 @@ func sentenceStart(before string) bool {
 		return true
 	}
 	return false
+}
+
+var (
+	doubledArticle = regexp.MustCompile(`(?i)\bthe\s+(\[\[[a-z0-9-]+\|)?the\b`)
+	escapedQuote   = regexp.MustCompile(`\\"`)
+	markdownStar   = regexp.MustCompile(`(^|\s)\*[^*\s][^*]*\*`)
+)
+
+// ProseErrors finds mechanical slips in rendered prose: doubled articles,
+// escaped quotes, stray Markdown and a word repeated across a link boundary
+// ("jars that speak … jars", "print]] print").
+func ProseErrors(body string) []string {
+	var out []string
+	if m := doubledArticle.FindString(body); m != "" {
+		out = append(out, fmt.Sprintf("doubled article %q", m))
+	}
+	if escapedQuote.MatchString(body) {
+		out = append(out, `escaped quote \" in text`)
+	}
+	if m := markdownStar.FindString(body); m != "" {
+		out = append(out, fmt.Sprintf("stray Markdown %q", strings.TrimSpace(m)))
+	}
+	// A link's last word repeated right after the link: "[[x|Brookes print]] print".
+	for _, l := range (&Card{Body: body}).Links() {
+		words := strings.Fields(l.Text)
+		if len(words) == 0 {
+			continue
+		}
+		last := strings.ToLower(strings.Trim(words[len(words)-1], ".,;:!?»«\"'"))
+		rest := strings.Fields(body[l.End:])
+		if len(rest) > 0 && strings.ToLower(strings.Trim(rest[0], ".,;:!?»«\"'")) == last && len(last) > 2 {
+			out = append(out, fmt.Sprintf("word %q repeated after link [[%s]]", last, l.Target))
+		}
+	}
+	return out
 }
