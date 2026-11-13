@@ -35,5 +35,5 @@ tales. Faber published The Palm-Wine Drinkard in London in 1952, and Thomas
 was wildly enthusiastic. Reportedly many Nigerian readers were not: they
 called the English broken and the stories borrowed, though how far reception
 split this way is contested. The argument over whose English an African
-writer should use ran on through [[achebe]] and [[ngugi]]; compare the
-Yoruba voices of [[talking-drums]].
+writer should use ran on through [[achebe|Chinua Achebe]] and [[ngugi|Ngũgĩ wa Thiong'o]]; compare the
+Yoruba voices of [[talking-drums|Talking drums]].

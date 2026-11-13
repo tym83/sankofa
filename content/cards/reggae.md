@@ -53,4 +53,4 @@ UNESCO inscribed reggae music of Jamaica on its list of intangible
 heritage.
 
 That deejay, talking in rhythm over a record, was one influence on New York rap.
-Compare [[rhythm-and-blues]], [[hip-hop]] and [[afrobeat]].
+Compare [[rhythm-and-blues|rhythm and blues]], [[hip-hop|hip-hop]] and [[afrobeat|Afrobeat]].

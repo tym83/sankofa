@@ -27,12 +27,12 @@ media:
   - {type: "image", file: "freedoms-journal.jpg", caption: "Front page of Freedom's Journal, vol. 1, no. 3, New York, 30 March 1827", credit: "Scan reproduced in The Afro-American Press; via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Freedom%27s_Journal,_Vol._1_No._3,_front_page.png"}
 ---
 "We wish to plead our own cause. Too long have others spoken for us." So
-began *Freedom's Journal*, launched in New York on 16 March 1827 by two
+began Freedom's Journal, launched in New York on 16 March 1827 by two
 free Black men, Samuel Cornish and John Russwurm: the first African
 American owned and operated newspaper in the United States. The weekly
 carried news, biographies, births and deaths, and attacks on slavery and
 discrimination. Then it split over Africa. When Russwurm declared for
 colonization in 1829, readers abandoned the paper; the last issue is dated
-28 March 1829. By the end of the year Russwurm was in [[liberia]], where he
-later governed Maryland-in-Liberia. Heirs: [[ida-b-wells]],
-[[chicago-defender]].
+28 March 1829. By the end of the year Russwurm was in [[liberia|Liberia]], where he
+later governed Maryland-in-Liberia. Heirs: [[ida-b-wells|Ida B. Wells]],
+[[chicago-defender|the Chicago Defender]].

@@ -29,5 +29,5 @@ She went on to take the kingdom of Matamba, allied with the Dutch when they
 seized Luanda in the 1640s, and fought the Portuguese until her death in
 1663. She was also a slave trader who sold war captives to the Portuguese.
 Historians still argue over her reputation, but in Angola she is a national
-heroine. Compare [[yaa-asantewaa]] and [[nanny-of-the-maroons]]; the trade
-itself is in [[aro-and-dahomey]].
+heroine. Compare [[yaa-asantewaa|Yaa Asantewaa]] and [[nanny-of-the-maroons|Nanny of the Maroons]]; the trade
+itself is in [[aro-and-dahomey|Dahomey, the Aro and the African side of the trade]].

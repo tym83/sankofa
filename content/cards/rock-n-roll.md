@@ -52,5 +52,5 @@ That same year in Cleveland the DJ Alan Freed began playing rhythm and blues
 and calling it rock and roll. Fats Domino came up from New Orleans, and labels
 aimed separate versions at white buyers.
 
-Under it all lay the [[blues]], [[gospel]], [[rhythm-and-blues]],
-[[rosetta-tharpe]]'s guitar and [[big-mama-thornton]]'s "Hound Dog".
+Under it all lay the [[blues|blues]], [[gospel|gospel]], [[rhythm-and-blues|rhythm and blues]],
+[[rosetta-tharpe|Sister Rosetta Tharpe]]'s guitar and [[big-mama-thornton|Willie Mae "Big Mama" Thornton]]'s "Hound Dog".

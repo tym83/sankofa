@@ -20,4 +20,4 @@ sources:
 media:
   - {"type": "image", "file": "nardal-sisters.jpg", "caption": "Allée Paulette-Nardal street plaque, Clamart, 15 August 2023", "credit": "Chabe01; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Plaque_All%C3%A9e_Paulette_Nardal_-_Clamart_(FR92)_-_2023-08-15_-_1.jpg"}
 ---
-Before Aimé Césaire coined the word Négritude, the idea already had a salon. Paulette Nardal and her sisters, from Martinique, hosted it in Clamart, just outside Paris. In 1931 Paulette and the Haitian Léo Sajous launched La Revue du monde noir, bilingual in French and English. It lasted six issues in about six months: a short run, and a beginning. Compare [[hurston]] and [[claudia-jones]].
+Before Aimé Césaire coined the word Négritude, the idea already had a salon. Paulette Nardal and her sisters, from Martinique, hosted it in Clamart, just outside Paris. In 1931 Paulette and the Haitian Léo Sajous launched La Revue du monde noir, bilingual in French and English. It lasted six issues in about six months: a short run, and a beginning. Compare [[hurston|Zora Neale Hurston]] and [[claudia-jones|Claudia Jones]].

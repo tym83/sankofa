@@ -25,7 +25,7 @@ media:
 Frederick Douglass was a boy of about sixteen when he fought back, and
 Edward Covey never laid a hand on him again. Covey was a farmer near
 St. Michael's, Maryland, known as a "negro-breaker". Douglass was sent to him in 1834 (his own
-*Narrative* gives 1833). The fight changed everything inside him. It was, he wrote, "the turning-point in my career as a slave".
+Narrative gives 1833). The fight changed everything inside him. It was, he wrote, "the turning-point in my career as a slave".
 The body was still owned; the will was not. In 1838 he escaped north, and
-his pen went on to fight the whole system. Compare [[jacobs-garret]],
-[[robert-smalls]] and [[sojourner-truth]].
+his pen went on to fight the whole system. Compare [[jacobs-garret|Harriet Jacobs in the garret]],
+[[robert-smalls|Robert Smalls]] and [[sojourner-truth|Sojourner Truth and \"Ain't I a Woman?\"]].

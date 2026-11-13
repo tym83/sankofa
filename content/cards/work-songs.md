@@ -35,4 +35,4 @@ Work songs were made to fit the job. Enslaved African Americans, drawing on West
 
 The form is older than America. In the 1790s a doctor working in Sierra Leone described rowers singing as a soloist and a chorus: one rower sang a couplet, and all joined in the refrain. After slavery the songs followed group labour into the road gang and the prison. In 1947 and 1948 Alan Lomax taped wood-cutting songs and hollers at Parchman Farm, Mississippi: music made to survive the hardest labour.
 
-Call and answer runs on through the [[spirituals]], the [[blues]] and [[gospel]]; compare the [[talking-drums]].
+Call and answer runs on through the [[spirituals|spirituals]], the [[blues|blues]] and [[gospel|gospel]]; compare the [[talking-drums|Talking drums]].

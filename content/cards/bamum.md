@@ -30,4 +30,4 @@ The Bamum script is a syllabary, a set of signs each standing for a syllable, ma
 
 A king designed a script for his own people: Ibrahim Njoya of Bamum. Early versions used hundreds of signs for things and actions, roughly 500 by one count, as a memory aid. Through six revisions, he simplified the pictorial signs step by step into a working system of writing. What happened next is contested. According to the Endangered Alphabets Project, the French administration that took over after the First World War destroyed his libraries and press and banned the teaching; other historians find no evidence of a ban.
 
-Compare [[vai-script]], [[nsibidi]], [[nko]] and [[adlam]].
+Compare [[vai-script|the Vai script]], [[nsibidi|Nsibidi]], [[nko|N'Ko]] and [[adlam|Adlam]].

@@ -30,5 +30,5 @@ cotton project in Uzbekistan. He had studied at Tuskegee, though accounts
 differ on whether he graduated. He came with Bertha Bialek, and the story
 did not end with him: their granddaughter, Yelena Khanga, became a
 journalist and a television host in Moscow, and wrote the family's story.
-Compare [[gannibal]], an African in Russia two centuries earlier, and
-[[what-black-means]].
+Compare [[gannibal|Abram Petrovich Gannibal]], an African in Russia two centuries earlier, and
+[[what-black-means|What "Black" means]].

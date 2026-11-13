@@ -30,4 +30,4 @@ Adlam is an alphabet for Fulani, a language spoken by some 40 million people acr
 
 In 1989 in Nzérékoré, Guinea, Ibrahima Barry, aged 14, and his brother Abdoulaye, aged 10, set out to give the Fulani language a script of its own. They built one. Its name comes from its first four letters, A, D, L, M, and is also an acronym for a phrase meaning "the alphabet that protects my people from vanishing". A children's invention became a global standard when Unicode encoded it in version 9.0 in 2016.
 
-Adlam is the youngest in a line of African scripts made from within: compare [[nko]], [[vai-script]], [[bamum]] and [[nsibidi]].
+Adlam is the youngest in a line of African scripts made from within: compare [[nko|N'Ko]], [[vai-script|the Vai script]], [[bamum|the Bamum script]] and [[nsibidi|Nsibidi]].

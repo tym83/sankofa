@@ -28,10 +28,10 @@ media:
 ---
 More than 130 Africans were thrown into the sea, and the owners then claimed
 them on insurance as lost cargo. In late 1781 the Liverpool-owned slave ship
-*Zong* overshot Jamaica, and the crew threw captives overboard; accounts of
-the exact number differ. In 1783 a jury found for the owners. [[equiano]]
-carried the news to [[granville-sharp]], who demanded a murder trial and
+Zong overshot Jamaica, and the crew threw captives overboard; accounts of
+the exact number differ. In 1783 a jury found for the owners. [[equiano|Olaudah Equiano]]
+carried the news to [[granville-sharp|Granville Sharp]], who demanded a murder trial and
 never got one. In May Lord Mansfield's court granted the insurers a new
 trial; there is no evidence it was ever held. In 2008 M. NourbeSe Philip
-built a poem, *Zong!*, only from the words of the case report, Gregson v.
-Gilbert. Compare the [[brookes]] print.
+built a poem, Zong!, only from the words of the case report, Gregson v.
+Gilbert. Compare the [[brookes|Brookes]] print.

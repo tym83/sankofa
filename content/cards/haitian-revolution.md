@@ -35,5 +35,5 @@ Haiti. In 1825 France demanded an indemnity of 150 million francs, later
 cut to 90 million, to compensate the former planters; in 2022 the New York
 Times traced the payments over decades. A contested thesis by Susan
 Buck-Morss holds that Hegel built his master and slave out of Haitian news.
-Compare the maroons of [[palmares]] and [[nanny-of-the-maroons|Jamaica]],
-and [[general-dumas]].
+Compare the maroons of [[palmares|Quilombo dos Palmares]] and [[nanny-of-the-maroons|Jamaica]],
+and [[general-dumas|General Thomas-Alexandre Dumas]].

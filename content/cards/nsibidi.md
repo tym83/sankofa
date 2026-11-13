@@ -38,4 +38,4 @@ Nsibidi is a system of signs, not an alphabet: its marks do not spell out sounds
 
 Secret signs crossed the Atlantic. Enslaved Cross River Africans carried Ekpe to Cuba and, from the 1830s, rebuilt its lodges, first in Regla across the bay from Havana, then in Havana and Matanzas, as the Abakuá society. In 1911 Elphinstone Dayrell printed a set of nsibidi signs in a London journal.
 
-Other African scripts: [[adinkra]], [[vai-script]], [[nko]]; another sign system carried in sound is the [[talking-drums]].
+Other African scripts: [[adinkra|Adinkra and Sankofa]], [[vai-script|the Vai script]], [[nko|N'Ko]]; another sign system carried in sound is the [[talking-drums|Talking drums]].

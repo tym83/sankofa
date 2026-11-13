@@ -35,4 +35,4 @@ his Black Legion. Within a year he was a general, later leading the Army of
 the Alps. Sailing home from Egypt in 1799, his leaking ship put in at
 Taranto, where he was held prisoner for two years. He came back broken and
 died in 1806. His son became the novelist Alexandre Dumas. Compare
-[[haitian-revolution]] and [[gannibal]].
+[[haitian-revolution|the Haitian Revolution]] and [[gannibal|Abram Petrovich Gannibal]].

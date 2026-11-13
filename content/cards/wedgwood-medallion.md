@@ -28,5 +28,5 @@ its seal. The potter Josiah Wedgwood, a leading abolitionist, had it made in
 jasperware that same year, probably modelled by William Hackwood, and gave
 the cameos away. In 1788 he sent a batch to Benjamin Franklin in
 Philadelphia. People set them into snuffbox lids and jewellery, turning a
-political argument into something to wear. Its twin is the [[brookes]]
-print; see also [[equiano]] and [[granville-sharp]].
+political argument into something to wear. Its twin is the [[brookes|Brookes]]
+print; see also [[equiano|Olaudah Equiano]] and [[granville-sharp|Granville Sharp]].

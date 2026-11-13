@@ -51,9 +51,9 @@ Kingston, Jamaica, and known as DJ Kool Herc, brought Jamaica's sound-system
 culture to the Bronx, his father's big speakers powering the parties. His
 trick was the merry-go-round: two copies of one funk or soul record on two
 turntables, switching between them so the drum break ran as long as he liked.
-The party usually dated as the start is [[cindy-campbell]]'s, in August 1973.
+The party usually dated as the start is [[cindy-campbell|Cindy Campbell]]'s, in August 1973.
 Grandmaster Flash and Afrika Bambaataa built on it. The record that took rap
 to a mass market, "Rapper's Delight" (1979), rode Chic's "Good Times" bass
 line and ended in shared writing credits.
 
-Roots: [[reggae]], [[funk]]; heir: the [[amen-break]].
+Roots: [[reggae|Reggae]], [[funk|funk]]; heir: the [[amen-break|\"Amen, Brother\" and the Amen break]].

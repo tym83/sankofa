@@ -39,4 +39,4 @@ photographer David Jackson take pictures; Jet ran them in September. An
 all-white jury acquitted both men in about an hour. In January 1956, safe from
 retrial, they sold their confession to Look. Carolyn Bryant's
 reported recantation is contested. In 2022 a law in his name made lynching a
-federal hate crime. Compare [[ida-b-wells]], [[chicago-defender]].
+federal hate crime. Compare [[ida-b-wells|Ida B. Wells]], [[chicago-defender|the Chicago Defender]].

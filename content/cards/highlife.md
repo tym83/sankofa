@@ -37,4 +37,4 @@ Highlife is the dance music of Ghana's coast. Its forms include dance-band highl
 
 Highlife was named by people who could not get in. By the 1920s orchestras played for the elite in Accra's clubs, and the onlookers outside called it the "high life". "Yaa Amponsah" by Jacob Sam and his Kumasi Trio is often heard as the music's prototype. After the war E. T. Mensah took it out of the ballroom with a small swing-style band, the Tempos. Their tours lit up Nigeria, Bobby Benson's brass sound followed in Lagos, and Victor Olaiya became a star.
 
-It fed what came next: Fela Kuti began in highlife before he built [[afrobeat]], and in Ghana rappers later laid hip-hop over highlife melodies as hiplife. Compare [[jazz]] and the palm wine of [[tutuola]].
+It fed what came next: Fela Kuti began in highlife before he built [[afrobeat|Afrobeat]], and in Ghana rappers later laid hip-hop over highlife melodies as hiplife. Compare [[jazz|jazz]] and the palm wine of [[tutuola|Amos Tutuola, The Palm-Wine Drinkard]].

@@ -35,4 +35,4 @@ The blues is a way of turning trouble into song. It grew up among African Americ
 
 Around 1903 the bandleader W. C. Handy was waiting for a train at Tutwiler, Mississippi, when a man pressed a knife to his guitar strings and sang "Goin' where the Southern cross' the Dog". Handy called it the weirdest music he had ever heard. He then built a career publishing such tunes and became known as the "Father of the Blues". On record, women carried it: [[crazy-blues|Mamie Smith's "Crazy Blues"]] of 1920 opened a major market for Black female blues singers, and Bessie Smith made her Columbia debut in 1923.
 
-Its roots run through [[work-songs]] and [[spirituals]]; follow it into [[jazz]], [[gospel]] and [[rock-n-roll]].
+Its roots run through [[work-songs|work songs and field hollers]] and [[spirituals|spirituals]]; follow it into [[jazz|jazz]], [[gospel|gospel]] and [[rock-n-roll|rock and roll]].

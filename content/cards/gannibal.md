@@ -35,5 +35,5 @@ as an engineer, fell into disgrace after Peter's death and rose again under
 Elizabeth to general-in-chief. He died in 1781. Where he was born is
 disputed: Ethiopia in the old account, the Logone sultanate near Lake Chad
 in Dieudonné Gnammankou's. In 1827 Pushkin began a novel about him.
-Compare [[ira-aldridge]] and [[oliver-golden]], and ask
-[[what-black-means]] in Russia.
+Compare [[ira-aldridge|Ira Aldridge]] and [[oliver-golden|Oliver Golden]], and ask
+[[what-black-means|What "Black" means]] in Russia.

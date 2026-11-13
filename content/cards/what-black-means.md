@@ -35,5 +35,5 @@ person with "no trace whatsoever of any blood other than Caucasian", with a
 small allowance for descendants of Pocahontas. And growing up in Nigeria,
 Chimamanda Ngozi Adichie thought of herself as Igbo; identity there, she
 says, was ethnic and religious, and she became Black in America. One word,
-three worlds. Compare [[paper-bag-test]], [[gannibal]] and
-[[carolina-maria-de-jesus]].
+three worlds. Compare [[paper-bag-test|the paper bag test]], [[gannibal|Abram Petrovich Gannibal]] and
+[[carolina-maria-de-jesus|Carolina Maria de Jesus]].

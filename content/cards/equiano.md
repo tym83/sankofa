@@ -35,4 +35,4 @@ Passage, and the day in 1766 when he bought his own freedom for £40. Then
 the twist: Vincent Carretta found a 1759 baptism record and a 1773 Navy
 muster roll that both give his birthplace as Carolina. Whether the African
 chapters are memory or gathered testimony is still contested. Compare
-[[granville-sharp]], [[zong]] and [[phillis-wheatley]].
+[[granville-sharp|Granville Sharp]], [[zong|the Zong massacre]] and [[phillis-wheatley|Phillis Wheatley]].

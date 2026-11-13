@@ -28,4 +28,4 @@ Washington whether the test was real or an urban myth. The bag remains
 contested; the preference it names is measurable. In North Carolina, a 2011
 Villanova study of more than 12,000 imprisoned Black women found that those
 perceived as light-skinned got sentences about 12% shorter. Compare
-[[what-black-means]] and [[partus-1662]].
+[[what-black-means|What "Black" means]] and [[partus-1662|Partus sequitur ventrem: Virginia, 1662]].

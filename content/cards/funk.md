@@ -50,8 +50,8 @@ songs, hip-hop above all, including Public Enemy's "Fight the Power" (1989).
 He received very little in royalties for it. Funk was groove first, and then
 it went to space: in 1976 George Clinton's Parliament-Funkadelic landed a
 Mothership on stage, with Black "afronauts" and Afrofuturism in the spirit of
-[[sun-ra]]. A replica now stands in the Smithsonian.
+[[sun-ra|Sun Ra]]. A replica now stands in the Smithsonian.
 
-Its roots run through [[gospel]], [[rhythm-and-blues]] and [[jazz]]. Funk fed
-[[hip-hop]], whose producers built new songs on its samples, and
-[[afrobeat]]; compare the breakbeat of the [[amen-break]].
+Its roots run through [[gospel|gospel]], [[rhythm-and-blues|rhythm and blues]] and [[jazz|jazz]]. Funk fed
+[[hip-hop|hip-hop]], whose producers built new songs on its samples, and
+[[afrobeat|Afrobeat]]; compare the breakbeat of the [[amen-break|\"Amen, Brother\" and the Amen break]].

@@ -27,8 +27,8 @@ media:
 A government clerk became one of slavery's most stubborn opponents. Granville Sharp worked in the Ordnance Office at the Tower of
 London. In 1765 he took in Jonathan Strong, a young man beaten and thrown
 into the street by his master, and later stopped Strong's shipment to
-Jamaica. In 1783 [[equiano]] brought him news of the [[zong]] killings, and
+Jamaica. In 1783 [[equiano|Olaudah Equiano]] brought him news of the [[zong|Zong massacre]] killings, and
 Sharp pressed for murder charges. In 1787 he helped found the Society for
 Effecting the Abolition of the Slave Trade, and he championed the Province
 of Freedom, a settlement for Black Londoners in Sierra Leone. Compare the
-campaign object of the [[wedgwood-medallion]] and the [[brookes]] print.
+campaign object of the [[wedgwood-medallion|Am I Not a Man and a Brother?]] and the [[brookes|Brookes]] print.

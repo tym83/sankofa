@@ -31,6 +31,6 @@ wife and co-anchor, broadcast news and commentary in Creole. On 28 November
 April 2000 Dominique was shot dead outside the station. Threats closed it
 by 2003 (2002 in one account). Its tapes, reaching back to 1957 by one
 count, are open online at Duke. For the country it reported on, start with
-the [[haitian-revolution]]; for another Caribbean voice in exile,
-[[claudia-jones]]; for a paper that spoke for its own people, the
-[[chicago-defender]].
+the [[haitian-revolution|Haitian Revolution]]; for another Caribbean voice in exile,
+[[claudia-jones|Claudia Jones]]; for a paper that spoke for its own people, the
+[[chicago-defender|the Chicago Defender]].

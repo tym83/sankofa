@@ -40,4 +40,4 @@ it supported the research and testing behind the polio vaccine, while her
 family was left out. Rebecca Skloot's 2010 book brought the story to a much
 wider public. In 2013 the NIH gave the family a say over access to the HeLa
 genome, and in 2023 they settled a lawsuit against Thermo Fisher Scientific
-on confidential terms. Her pair is [[tuskegee]].
+on confidential terms. Her pair is [[tuskegee|the Untreated Syphilis Study at Tuskegee]].

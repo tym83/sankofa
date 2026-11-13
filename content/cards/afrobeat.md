@@ -42,4 +42,4 @@ Afrobeat is long, hypnotic dance music from Lagos. A big band builds a trance-li
 
 In 1969 the Lagos bandleader Fela Ransome-Kuti spent months in Los Angeles, where the activist Sandra Izsadore introduced him to Malcolm X and other Black Power and revolutionary thinkers. The music he built at home ran on the drums of Tony Allen; Fela said that without Allen there would be no afrobeat. Its politics had a price. After the album Zombie attacked the military, about a thousand soldiers stormed his Kalakuta Republic commune in 1977 and threw his mother, the activist Funmilayo Ransome-Kuti, from a window. She died in 1978, the year he married 27 women in one day.
 
-Not to be confused with today's Afrobeats. Its roots are [[highlife]], [[funk]] and [[jazz]].
+Not to be confused with today's Afrobeats. Its roots are [[highlife|highlife]], [[funk|funk]] and [[jazz|jazz]].

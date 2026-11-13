@@ -33,5 +33,5 @@ it. In 1966 Peter Buxtun, a Public Health Service employee in San Francisco,
 wrote to the CDC objecting, and was rebuffed for years. In 1972 he gave
 documents to the Associated Press; Jean Heller's story ran on 25 July, and
 the study ended that year. In 1997 President Clinton apologised. The last
-participant died in 2004. Its pair is [[henrietta-lacks]]; compare
-[[partus-1662]] and [[ida-b-wells]].
+participant died in 2004. Its pair is [[henrietta-lacks|Henrietta Lacks]]; compare
+[[partus-1662|Partus sequitur ventrem: Virginia, 1662]] and [[ida-b-wells|Ida B. Wells]].

@@ -33,5 +33,5 @@ up in Pasadena, raised by a mother who worked as a maid. Kindred (1979)
 brought slavery into science fiction through time travel. In 1995 she
 became the first science fiction writer to receive a MacArthur Fellowship.
 Long before the list caught up with her, she wrote affirmations to herself
-predicting that her books would be bestsellers. Read her beside [[sun-ra]]
-and [[hurston]], and Kindred beside [[jacobs-garret]].
+predicting that her books would be bestsellers. Read her beside [[sun-ra|Sun Ra]]
+and [[hurston|Zora Neale Hurston]], and Kindred beside [[jacobs-garret|Harriet Jacobs in the garret]].

@@ -51,5 +51,5 @@ blues", and in 1949 the magazine renamed the chart. The music had its
 labels too. Atlantic Records, founded in 1947, became known as "The House
 that Ruth Built" thanks to the singer Ruth Brown.
 
-Out of R&B, the [[blues]] and [[gospel]] came [[rock-n-roll]] and [[funk]],
-and by the mid-1960s it had helped give rise to soul; compare [[rosetta-tharpe]].
+Out of R&B, the [[blues|blues]] and [[gospel|gospel]] came [[rock-n-roll|rock and roll]] and [[funk|funk]],
+and by the mid-1960s it had helped give rise to soul; compare [[rosetta-tharpe|Sister Rosetta Tharpe]].

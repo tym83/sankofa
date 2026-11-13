@@ -30,4 +30,4 @@ Brattle Street in Boston. In 1829 he published his *Appeal ... to the
 Coloured Citizens of the World*, urging the enslaved to resist. According to
 Henry Highland Garnet, Georgians put a price on Walker's head; the sums
 reported differ. He died in Boston in 1830. Compare the free press of
-[[freedoms-journal]], the [[haitian-revolution]] and [[douglass-covey]].
+[[freedoms-journal|Freedom's Journal]], the [[haitian-revolution|Haitian Revolution]] and [[douglass-covey|Frederick Douglass fights Edward Covey]].

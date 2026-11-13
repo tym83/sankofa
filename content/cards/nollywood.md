@@ -31,5 +31,5 @@ original story on them, written with Okechukwu Ogunjiofor. Living in
 Bondage (1992) was shot in Igbo for 150,000 naira and, by different counts,
 sold 100,000 copies in weeks or over a million. Nnebue had already made
 Yoruba-language films; the Igbo one is the one remembered. Both the tapes
-story and the sales figures are contested. Compare [[achebe]] and
-[[tutuola]] in print, and the Lagos of [[afrobeat]].
+story and the sales figures are contested. Compare [[achebe|Chinua Achebe]] and
+[[tutuola|Amos Tutuola, The Palm-Wine Drinkard]] in print, and the Lagos of [[afrobeat|Afrobeat]].

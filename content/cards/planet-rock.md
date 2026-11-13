@@ -35,5 +35,5 @@ of "Numbers" went in too; they rebuilt both on a Roland TR-808. Kraftwerk
 were angry, and Tommy Boy paid them for every copy. From 2016 several men
 accused Bambaataa of abusing them as boys; he denied it and was never
 criminally charged, and the accusations remain contested. In 2025 he lost a
-civil suit by default. He died in 2026. See [[hip-hop]], [[funk]],
-[[detroit-techno]] and [[chicago-house]].
+civil suit by default. He died in 2026. See [[hip-hop|hip-hop]], [[funk|funk]],
+[[detroit-techno|Detroit techno]] and [[chicago-house|Chicago house]].
