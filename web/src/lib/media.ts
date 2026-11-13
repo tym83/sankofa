@@ -7,10 +7,13 @@ interface Manifest {
   files?: Record<string, number[]>;
   /** file → width of the original */
   sizes?: Record<string, number>;
+  /** files that also come as WebP next to every copy */
+  webp?: string[];
 }
 
 let variants: Record<string, number[]> = {};
 let sizes: Record<string, number> = {};
+let webp = new Set<string>();
 
 export async function loadMediaManifest(): Promise<void> {
   try {
@@ -19,15 +22,22 @@ export async function loadMediaManifest(): Promise<void> {
     const m = (await r.json()) as Manifest;
     variants = m.files ?? {};
     sizes = m.sizes ?? {};
+    webp = new Set(m.webp ?? []);
   } catch {
     /* no variants: the originals are used */
   }
 }
 
 /** For tests. */
-export function setVariants(v: Record<string, number[]>, s: Record<string, number> = {}): void {
+export function setVariants(v: Record<string, number[]>, s: Record<string, number> = {}, w: string[] = []): void {
   variants = v;
   sizes = s;
+  webp = new Set(w);
+}
+
+/** The served name of a copy: WebP when the build made one. */
+function served(path: string, file: string): string {
+  return webp.has(file) ? path.replace(/\.(jpe?g|png)$/i, '.webp') : path;
 }
 
 /** Width of the original, when the build measured it. */
@@ -42,12 +52,12 @@ export function naturalWidth(file: string): number | undefined {
  */
 export function mediaSrc(app: Pick<App, 'media'>, file: string, want: number[] = [960]): { src: string; srcset?: string } {
   const have = variants[file] ?? [];
-  const orig = app.media(file);
+  const orig = served(app.media(file), file);
   if (!have.length) return { src: orig };
   const pickW = have.find((w) => w >= want[0]) ?? have[have.length - 1];
   const origW = sizes[file] ?? have[have.length - 1] * 2;
-  const srcset = [...have.map((w) => `media/w${w}/${file} ${w}w`), `${orig} ${origW}w`].join(', ');
-  return { src: `media/w${pickW}/${file}`, srcset };
+  const srcset = [...have.map((w) => `${served(`media/w${w}/${file}`, file)} ${w}w`), `${orig} ${origW}w`].join(', ');
+  return { src: served(`media/w${pickW}/${file}`, file), srcset };
 }
 
 /**
@@ -72,7 +82,7 @@ export function progressive(
   const start = () => {
     if (small && full.srcset) {
       img.classList.add('lq');
-      img.src = `media/w${small}/${file}`;
+      img.src = served(`media/w${small}/${file}`, file);
       img.decode().then(resolve, resolve);
       const hi = new Image();
       hi.decoding = 'async';

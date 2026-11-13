@@ -17,6 +17,14 @@ describe('media variants', () => {
   });
 });
 
+describe('webp', () => {
+  it('serves WebP copies when the build made them', () => {
+    setVariants({ 'a.jpg': [480] }, { 'a.jpg': 900 }, ['a.jpg']);
+    expect(mediaSrc(app, 'a.jpg', [480])).toEqual({ src: 'media/w480/a.webp', srcset: 'media/w480/a.webp 480w, media/a.webp 900w' });
+    setVariants({});
+  });
+});
+
 describe('signature numbers', () => {
   it('reads the number a card already states', () => {
     expect(firstBigNumber('lists the names of almost 100,000 Africans')).toBe(100000);

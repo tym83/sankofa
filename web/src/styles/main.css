@@ -6244,3 +6244,36 @@ a.r-artist:hover {
   border-bottom: 1px solid rgba(242, 233, 216, 0.08);
   z-index: 6;
 }
+
+/* Mats hug the picture: sized by its own aspect ratio, never a large empty card. */
+.graphic .img figure img {
+  flex: 0 1 auto;
+  min-height: 0;
+  align-self: center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100% - 60px);
+}
+.sig-mat {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  justify-self: center;
+  align-self: center;
+  background: #efe7d6;
+  padding: clamp(10px, 1.4vw, 20px);
+  line-height: 0;
+}
+.sig-mat img {
+  max-height: calc(100svh - var(--nav-h) - 120px);
+  max-width: min(100%, 58vw);
+  padding: 0;
+  background: none;
+}
+@media (max-width: 760px) {
+  .sig-mat img {
+    max-width: 100%;
+    max-height: 52svh;
+  }
+}

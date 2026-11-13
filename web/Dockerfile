@@ -12,7 +12,7 @@ RUN go build -o /out/sankofa ./cmd/sankofa
 
 FROM node:24-alpine AS web
 # libvips makes the smaller image copies (scripts/build-media.ts).
-RUN apk add --no-cache vips-tools
+RUN apk add --no-cache vips-tools libwebp-tools
 WORKDIR /src
 COPY web/package.json web/package-lock.json web/
 RUN cd web && npm ci --no-audit --no-fund
