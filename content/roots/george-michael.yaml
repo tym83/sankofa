@@ -1,15 +1,59 @@
-id: "george-michael"
-name: "George Michael"
-nameRu: "Джордж Майкл"
-aliases: ["джордж майкл", "уэм", "wham"]
-years: [1963, 2016]
-place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
-genre: "Pop and soul"
-genreRu: "поп и соул"
+---
+id: george-michael
+name: George Michael
+nameRu: Джордж Майкл
+aliases:
+- джордж майкл
+- уэм
+- wham
+years:
+- 1963
+- 2016
+place:
+  name: London
+  lat: 51.5074
+  lon: -0.1278
+genre: Pop and soul
+genreRu: поп и соул
 links:
-  - to: "card:rhythm-and-blues"
-    claim: "George Michael recorded “I Knew You Were Waiting (For Me)” as a duet with Aretha Franklin."
-    claimRu: "Джордж Майкл записал «I Knew You Were Waiting (For Me)» дуэтом с Аретой Франклин."
-    sources:
-      - {"title": "Recording Academy: George Michael", "url": "https://www.grammy.com/artists/george-michael/12041"}
-      - {"title": "MusicRadar: Mick Hucknall on George Michael’s Aretha Franklin duet", "url": "https://www.musicradar.com/artists/i-was-so-jealous-of-george-michael-mick-hucknall-says-he-was-simply-green-with-envy-when-he-learned-that-the-former-wham-star-was-recording-a-duet-with-aretha-franklin"}
+- to: card:rhythm-and-blues
+  claim: George Michael recorded “I Knew You Were Waiting (For Me)” as a duet with
+    Aretha Franklin.
+  claimRu: Джордж Майкл записал «I Knew You Were Waiting (For Me)» дуэтом с Аретой
+    Франклин.
+  sources:
+  - title: 'Recording Academy: George Michael'
+    url: https://www.grammy.com/artists/george-michael/12041
+  - title: 'MusicRadar: Mick Hucknall on George Michael’s Aretha Franklin duet'
+    url: https://www.musicradar.com/artists/i-was-so-jealous-of-george-michael-mick-hucknall-says-he-was-simply-green-with-envy-when-he-learned-that-the-former-wham-star-was-recording-a-duet-with-aretha-franklin
+  kind: collaboration
+- to: root:stevie-wonder
+  kind: influence
+  claim: Stevie Wonder was one of George Michael’s major musical influences.
+  claimRu: Стиви Уандер был одним из главных музыкальных ориентиров Джорджа Майкла.
+  sources:
+  - title: 'Rock & Roll Hall of Fame: George Michael — Influences'
+    url: https://rockhall.com/inductees/george-michael/
+  - title: 'The Guardian: Elton John remembers George Michael'
+    url: https://www.theguardian.com/global/2017/oct/15/the-george-michael-we-knew-by-elton-john-mariah-carey-james-corden-tatjana-patitz
+- to: root:james-brown
+  kind: sample
+  claim: George Michael built the beat of “Freedom! ’90” on the drum break from James
+    Brown’s “Funky Drummer”.
+  claimRu: Джордж Майкл построил бит «Freedom! ’90» на барабанном брейке из «Funky
+    Drummer» Джеймса Брауна.
+  sources:
+  - title: 'Rolling Stone: George Michael — Freedom! ’90'
+    url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/george-michael-freedom-90-3-30441/
+  - title: 'MusicRadar: When sampling ruled the world'
+    url: https://www.musicradar.com/drums/it-was-deemed-that-an-artist-could-sample-an-unrecognisable-portion-of-a-work-without-the-need-to-declare-the-sample-or-indeed-pay-the-original-artist-when-sampling-ruled-the-world-and-drummers-didnt-get-paid
+  what: Clyde Stubblefield’s drum break from James Brown’s “Funky Drummer” recording,
+    looped in “Freedom! ’90”.
+  whatRu: Барабанный брейк Клайда Стабблфилда из записи Джеймса Брауна «Funky Drummer»,
+    зацикленный в «Freedom! ’90».
+story: Stevie Wonder was one of George Michael’s major musical influences. Michael
+  sang “I Knew You Were Waiting (For Me)” with Aretha Franklin and built the beat
+  of “Freedom! ’90” from James Brown’s “Funky Drummer”.
+storyRu: Стиви Уандер был одним из главных музыкальных ориентиров Джорджа Майкла.
+  Майкл спел «I Knew You Were Waiting (For Me)» с Аретой Франклин, а бит «Freedom!
+  ’90» построил на «Funky Drummer» Джеймса Брауна.

@@ -1,0 +1,32 @@
+---
+id: sly-and-the-family-stone
+name: Sly and the Family Stone
+nameRu: Sly and the Family Stone
+aliases:
+- слай энд зе фэмили стоун
+- Слай Стоун
+- Sly Stone
+years:
+- 1967
+place:
+  name: San Francisco
+  lat: 37.7749
+  lon: -122.4194
+genre: Funk and psychedelic soul
+genreRu: фанк и психоделический соул
+links:
+- to: card:gospel
+  kind: scene
+  claim: Before the Family Stone, Sly and his siblings sang and recorded gospel as
+    the Stewart Four.
+  claimRu: До Family Stone Слай и его братья и сёстры пели и записывали госпел под
+    именем Stewart Four.
+  sources:
+  - title: 'Sly and the Family Stone: official biography'
+    url: https://slyandthefamilystone.com/bio/
+  - title: 'Wax Poetics: Cynthia Robinson and the Family Stone'
+    url: https://magazine.waxpoetics.com/article/cynthia-robinson-family-affair/
+story: Before the Family Stone, Sly sang gospel with his siblings. They recorded that
+  music as the Stewart Four.
+storyRu: До Family Stone Слай пел госпел с братьями и сёстрами. Они записывали эту
+  музыку под именем Stewart Four.

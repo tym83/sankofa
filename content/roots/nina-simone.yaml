@@ -1,0 +1,31 @@
+---
+id: nina-simone
+name: Nina Simone
+nameRu: Нина Симон
+aliases:
+- нина симон
+years:
+- 1933
+- 2003
+place:
+  name: Tryon, North Carolina
+  lat: 35.2082
+  lon: -82.2384
+genre: Jazz, blues and soul
+genreRu: джаз, блюз и соул
+links:
+- to: card:jazz
+  kind: scene
+  claim: Nina Simone developed her early nightclub repertoire by combining jazz, blues
+    and classical piano.
+  claimRu: В начале клубной карьеры Нина Симон строила свой репертуар на сочетании
+    джаза, блюза и классического фортепиано.
+  sources:
+  - title: 'Nina Simone: official biography'
+    url: https://www.ninasimone.com/biography/
+  - title: 'North Carolina Music Hall of Fame: Nina Simone'
+    url: https://northcarolinamusichalloffame.org/inductee-item/nina-simone/
+story: Nina Simone shaped her early repertoire in nightclubs. She combined jazz and
+  blues with classical piano.
+storyRu: Нина Симон формировала свой ранний репертуар в ночных клубах. Она соединяла
+  джаз и блюз с классическим фортепиано.

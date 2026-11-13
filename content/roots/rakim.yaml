@@ -1,0 +1,37 @@
+---
+id: rakim
+name: Rakim
+nameRu: Раким
+aliases:
+- раким
+years:
+- 1968
+place:
+  name: Wyandanch, New York
+  lat: 40.7539
+  lon: -73.3604
+genre: Hip-hop
+genreRu: хип-хоп
+links:
+- to: root:john-coltrane
+  kind: influence
+  claim: Rakim modelled the rhythms of his rhymes on John Coltrane’s saxophone playing.
+  claimRu: Раким строил ритм своих рифм по образцу саксофонной игры Джона Колтрейна.
+  sources:
+  - title: 'NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public'
+    url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
+  - title: 'Westword: Q&A with Rakim'
+    url: https://www.westword.com/music/qanda-with-rakim-5676480/
+- to: card:hip-hop
+  kind: scene
+  claim: Rakim expanded hip-hop’s rhyme patterns with intricate internal rhymes.
+  claimRu: Раким усложнил рифмовку в хип-хопе, развивая замысловатые внутренние рифмы.
+  sources:
+  - title: 'NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public'
+    url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
+  - title: 'GRUNGECAKE: Eminem’s Apple Music interview on Rakim'
+    url: https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon
+story: Rakim modelled the rhythms of his rhymes on John Coltrane’s saxophone playing.
+  His intricate internal rhymes expanded hip-hop’s rhyme patterns.
+storyRu: Раким строил ритм своих рифм по образцу саксофонной игры Джона Колтрейна.
+  Его сложные внутренние рифмы расширили возможности рифмовки в хип-хопе.

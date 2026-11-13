@@ -1,0 +1,28 @@
+---
+id: labi-siffre
+name: Labi Siffre
+nameRu: Лаби Сиффре
+aliases:
+- лаби сиффре
+years:
+- 1945
+place:
+  name: London
+  lat: 51.5074
+  lon: -0.1278
+genre: Soul and folk
+genreRu: соул и фолк
+links:
+- to: card:jazz
+  kind: scene
+  claim: Labi Siffre worked as a jazz musician before his solo recording career.
+  claimRu: До сольной карьеры Лаби Сиффре работал джазовым музыкантом.
+  sources:
+  - title: 'NME: Siffre — enemy of the trendy cults, January 15, 1972'
+    url: https://www.worldradiohistory.com/UK/New-Musical-Express/1972/NME%201972-01-15.pdf
+  - title: 'Pitchfork: Labi Siffre — Crying Laughing Loving Lying'
+    url: https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/
+story: Before his solo recording career, Labi Siffre worked as a jazz musician. Jazz
+  was part of his practical musical education.
+storyRu: До сольной карьеры Лаби Сиффре работал джазовым музыкантом. Джаз стал частью
+  его музыкальной школы на практике.

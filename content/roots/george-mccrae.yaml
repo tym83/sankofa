@@ -1,0 +1,28 @@
+---
+id: george-mccrae
+name: George McCrae
+nameRu: Джордж Маккрей
+aliases:
+- джордж маккрей
+years:
+- 1944
+place:
+  name: West Palm Beach, Florida
+  lat: 26.7153
+  lon: -80.0534
+genre: Soul and disco
+genreRu: соул и диско
+links:
+- to: card:gospel
+  kind: scene
+  claim: George McCrae began developing his singing voice in a choir as a child.
+  claimRu: Джордж Маккрей начал развивать свой певческий голос в хоре ещё ребёнком.
+  sources:
+  - title: 'Beat Instrumental: The Miami McRae sound, February 1975, p. 17'
+    url: https://worldradiohistory.com/UK/Beat-Instrumental/Beat-Instrumental-1975-02-S-OCR.pdf
+  - title: 'Maxazine: George McCrae — It’s all about love'
+    url: https://maxazine.com/2020/07/17/george-mccrae-its-all-about-love/
+story: George McCrae began developing his voice as a child. His early school of singing
+  was a choir.
+storyRu: Джордж Маккрей начал развивать свой голос ещё ребёнком. Его первой певческой
+  школой стал хор.

@@ -1,0 +1,28 @@
+---
+id: etta-james
+name: Etta James
+nameRu: Этта Джеймс
+aliases:
+- этта джеймс
+years:
+- 1938
+- 2012
+place:
+  name: Los Angeles
+  lat: 34.0522
+  lon: -118.2437
+genre: Soul and blues
+genreRu: соул и блюз
+links:
+- to: card:gospel
+  kind: scene
+  claim: Etta James began singing in a church gospel choir at five.
+  claimRu: Этта Джеймс начала петь в церковном госпел-хоре в пять лет.
+  sources:
+  - title: 'California Museum: Etta James'
+    url: https://californiamuseum.org/inductee/etta-james/
+  - title: 'Biography: Etta James'
+    url: https://www.biography.com/musicians/etta-james
+story: Etta James’s singing began in church. At five, she was already singing in a
+  gospel choir.
+storyRu: Певческий путь Этты Джеймс начался в церкви. В пять лет она уже пела в госпел-хоре.

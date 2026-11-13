@@ -1,0 +1,753 @@
+{
+  "researcher": "pop",
+  "method": "New claims checked against the opened sources named per edge; preserved legacy claims retain the prior independent reviews.",
+  "newLinks": [
+    {
+      "artist": "adele",
+      "to": "root:etta-james",
+      "kind": "influence",
+      "claim": "Discovering Etta James at fourteen changed how Adele thought about singing.",
+      "claimRu": "Услышав Этту Джеймс в четырнадцать лет, Адель стала иначе относиться к пению.",
+      "sources": [
+        {
+          "title": "Vogue: Adele — Feeling Groovy",
+          "url": "https://www.vogue.com/article/adele-feeling-groovy"
+        },
+        {
+          "title": "Hot Press: Adele — a 2008 interview",
+          "url": "https://www.hotpress.com/music/happy-35th-birthday-adele-revisiting-a-classic-2008-interview-22966556"
+        }
+      ],
+      "evidence": [
+        "Vogue: Adele describes buying Etta and Ella records at fourteen as life-changing.",
+        "Hot Press: she says hearing Etta and Ella made her think seriously about singing; avoid repeating her inaccurate claim that Etta co-wrote all her songs."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "christina-aguilera",
+      "to": "root:etta-james",
+      "kind": "influence",
+      "claim": "Christina Aguilera grew up listening to Etta James and tried to emulate her singing.",
+      "claimRu": "Кристина Агилера с детства слушала Этту Джеймс и стремилась петь как она.",
+      "sources": [
+        {
+          "title": "Biography Today: Christina Aguilera — Major Influences, via ERIC",
+          "url": "https://files.eric.ed.gov/fulltext/ED452104.pdf"
+        },
+        {
+          "title": "ABC News: Etta James funeral tribute",
+          "url": "https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute"
+        }
+      ],
+      "evidence": [
+        "Biography Today: her mother introduced Etta James in childhood; blues was her first musical love.",
+        "ABC quotes Aguilera saying she aspired to emulate James’s notes and passion all her life."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "amy-winehouse",
+      "to": "root:dinah-washington",
+      "kind": "influence",
+      "claim": "Dinah Washington was one of the jazz singers who shaped Amy Winehouse’s musical style.",
+      "claimRu": "Дайна Вашингтон была одной из джазовых певиц, сформировавших музыкальный стиль Эми Уайнхаус.",
+      "sources": [
+        {
+          "title": "GRAMMY Museum: Beyond Black — The Style of Amy Winehouse",
+          "url": "https://grammymuseum.org/wp-content/uploads/2020/02/Amy-Winehouse-Exhibit-Press-Release_FINAL-d88d68fdbf.pdf"
+        },
+        {
+          "title": "Design Museum: Amy — Beyond the Stage",
+          "url": "https://designmuseum.org/asset/download?id=98f1cd4d-370a-4875-9221-a69f4fe4dc27"
+        }
+      ],
+      "evidence": [
+        "GRAMMY Museum names Dinah among the musical influences reflected in Winehouse’s style.",
+        "Design Museum independently names Dinah among the influences underlying Winehouse’s cross-genre voice."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "joss-stone",
+      "to": "root:aretha-franklin",
+      "kind": "influence",
+      "claim": "Joss Stone traces her singing to childhood listening to Aretha Franklin.",
+      "claimRu": "Джосс Стоун связывает свою манеру пения с тем, как в детстве слушала Арету Франклин.",
+      "sources": [
+        {
+          "title": "The Guardian: Purely belter — Joss Stone interview",
+          "url": "https://www.theguardian.com/music/2003/nov/14/popandrock1"
+        },
+        {
+          "title": "Mike Ragogna: Joss Stone interview (2011), archived by Stone’d Records",
+          "url": "https://www.stoned-records.com/news/joss-stone/chatting-with-joss-stone"
+        }
+      ],
+      "evidence": [
+        "Stone identifies her childhood Aretha CD when asked where her voice came from.",
+        "Artist’s label archives Mike Ragogna’s independent 2011 interview: childhood Franklin record, major influence, and absorbed emotional approach (lines 44–49). Replaces WRH source now returning 403."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "joe-cocker",
+      "to": "root:ray-charles",
+      "kind": "influence",
+      "claim": "Ray Charles was Joe Cocker’s principal vocal influence from his teenage years.",
+      "claimRu": "Рэй Чарльз был главным вокальным ориентиром Джо Кокера ещё с подростковых лет.",
+      "sources": [
+        {
+          "title": "Contemporary Musicians: Joe Cocker",
+          "url": "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker"
+        },
+        {
+          "title": "Melody Maker: Joe captures that King of Soul sound, October 19, 1968, p. 8",
+          "url": "https://worldradiohistory.com/UK/Melody-Maker/60s/68/Melody-Maker-1968-1019.pdf"
+        }
+      ],
+      "evidence": [
+        "Gale biography describes teenage Charles influence and calls him Cocker’s primary vocal influence.",
+        "Contemporaneous Cocker interview calls Charles his biggest influence and describes playing in the Charles idiom."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "janis-joplin",
+      "to": "root:bessie-smith",
+      "kind": "influence",
+      "claim": "Bessie Smith’s blues singing helped shape Janis Joplin’s vocal style.",
+      "claimRu": "Блюзовое пение Бесси Смит помогло сформировать вокальную манеру Дженис Джоплин.",
+      "sources": [
+        {
+          "title": "Open University: Janis Joplin’s singing style",
+          "url": "https://www.open.edu/openlearn/history-the-arts/janis-joplin-and-the-sexual-revolution/content-section-5"
+        },
+        {
+          "title": "NPR Fresh Air: Holly George-Warren on Janis Joplin, via NHPR",
+          "url": "https://www.nhpr.org/2019-10-21/new-janis-joplin-biography-reveals-the-hard-work-behind-the-heart"
+        }
+      ],
+      "evidence": [
+        "Open University names Smith among the Black blues singers who heavily influenced Joplin’s style.",
+        "Biographer George-Warren describes Smith’s decisive influence and repertoire Joplin learned."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "george-michael",
+      "to": "root:stevie-wonder",
+      "kind": "influence",
+      "claim": "Stevie Wonder was one of George Michael’s major musical influences.",
+      "claimRu": "Стиви Уандер был одним из главных музыкальных ориентиров Джорджа Майкла.",
+      "sources": [
+        {
+          "title": "Rock & Roll Hall of Fame: George Michael — Influences",
+          "url": "https://rockhall.com/inductees/george-michael/"
+        },
+        {
+          "title": "The Guardian: Elton John remembers George Michael",
+          "url": "https://www.theguardian.com/global/2017/oct/15/the-george-michael-we-knew-by-elton-john-mariah-carey-james-corden-tatjana-patitz"
+        }
+      ],
+      "evidence": [
+        "Rock Hall explicitly lists Wonder among influences.",
+        "Elton John recalls Michael naming Wonder among his three major influences."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "eminem",
+      "to": "root:rakim",
+      "kind": "influence",
+      "claim": "Rakim’s rhyme patterns helped shape Eminem’s approach to rap.",
+      "claimRu": "Рифмовка Ракима помогла сформировать подход Эминема к рэпу.",
+      "sources": [
+        {
+          "title": "NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public",
+          "url": "https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full"
+        },
+        {
+          "title": "Apple Music interview with Eminem, transcribed by GRUNGECAKE",
+          "url": "https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon"
+        }
+      ],
+      "evidence": [
+        "NPR explicitly identifies Eminem among MCs inspired by Rakim’s rhymes and rhythms.",
+        "Eminem discusses Rakim’s internal and multisyllable rhyme innovations in his own account of hip-hop education."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "abba",
+      "to": "root:george-mccrae",
+      "claim": "For “Dancing Queen”, ABBA took rhythmic inspiration from soul singer George McCrae’s “Rock Your Baby”.",
+      "claimRu": "Работая над «Dancing Queen», ABBA вдохновлялись ритмом «Rock Your Baby» соул-певца Джорджа Маккрея.",
+      "sources": [
+        {
+          "title": "Library of Congress: Carl Magnus Palm on Arrival",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf"
+        },
+        {
+          "title": "Rolling Stone: ABBA — Dancing Queen",
+          "url": "https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/"
+        }
+      ],
+      "kind": "influence",
+      "evidence": [
+        "Both sources opened and checked for the existing claim; artist endpoint makes the documented named musician traversable."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "madonna",
+      "to": "root:sly-and-the-family-stone",
+      "claim": "Madonna and Stephen Bray drew on Sly and the Family Stone’s funk for “Express Yourself”.",
+      "claimRu": "Создавая «Express Yourself», Мадонна и Стивен Брей опирались на фанк Sly and the Family Stone.",
+      "sources": [
+        {
+          "title": "Vice: Like a Prayer was Madonna’s first masterpiece",
+          "url": "https://www.vice.com/en/article/like-a-prayer-was-madonnas-first-masterpiece/"
+        },
+        {
+          "title": "Attitude: Ten reasons Like a Prayer remains an all-time classic",
+          "url": "https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/"
+        }
+      ],
+      "kind": "influence",
+      "evidence": [
+        "Both sources opened and checked for the existing claim; artist endpoint makes the documented named musician traversable."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "taylor-swift",
+      "to": "root:earth-wind-and-fire",
+      "claim": "Taylor Swift recorded a cover of Earth, Wind & Fire’s “September”.",
+      "claimRu": "Тейлор Свифт записала кавер на «September» группы Earth, Wind & Fire.",
+      "sources": [
+        {
+          "title": "NPR / WBGO: Taylor Swift Covers Earth, Wind & Fire’s September",
+          "url": "https://www.wbgo.org/2018-04-13/you-know-what-fine-taylor-swift-covers-earth-wind-fires-september"
+        },
+        {
+          "title": "Library of Congress: Rickey Vincent on September",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf"
+        }
+      ],
+      "kind": "cover",
+      "what": "Earth, Wind & Fire’s “September”, newly performed by Swift.",
+      "whatRu": "Песня Earth, Wind & Fire «September» в новом исполнении Свифт.",
+      "evidence": [
+        "Both sources opened and checked for the existing claim; artist endpoint makes the documented named musician traversable."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "red-hot-chili-peppers",
+      "to": "root:stevie-wonder",
+      "claim": "Red Hot Chili Peppers recorded a cover of Stevie Wonder's 'Higher Ground'.",
+      "claimRu": "Red Hot Chili Peppers записали кавер на «Higher Ground» Стиви Уандера.",
+      "sources": [
+        {
+          "title": "Rolling Stone: Red Hot Chili Peppers on 25 Years of Mother’s Milk",
+          "url": "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/"
+        },
+        {
+          "title": "Guitar World: Flea’s bittersweet hip-hop recording experience",
+          "url": "https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move"
+        }
+      ],
+      "kind": "cover",
+      "what": "Stevie Wonder’s “Higher Ground”, newly performed on Mother’s Milk.",
+      "whatRu": "Песня Стиви Уандера «Higher Ground» в новом исполнении на «Mother’s Milk».",
+      "evidence": [
+        "Both sources opened and checked for the existing claim; artist endpoint makes the documented named musician traversable."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "eminem",
+      "to": "root:labi-siffre",
+      "claim": "Eminem’s “My Name Is” uses the riff from Labi Siffre’s funk recording “I Got The…”.",
+      "claimRu": "В «My Name Is» Эминема использован рифф из фанковой записи Лаби Сиффре «I Got The…».",
+      "sources": [
+        {
+          "title": "MusicRadar: Chas and Dave played on a classic Eminem track",
+          "url": "https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it"
+        },
+        {
+          "title": "Pitchfork: Labi Siffre — Crying Laughing Loving Lying",
+          "url": "https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/"
+        }
+      ],
+      "kind": "sample",
+      "what": "The instrumental riff from Labi Siffre’s 1975 recording “I Got The…” in “My Name Is”.",
+      "whatRu": "Инструментальный рифф из записи Лаби Сиффре «I Got The…» 1975 года в «My Name Is».",
+      "evidence": [
+        "Both sources opened and checked for the existing claim; artist endpoint makes the documented named musician traversable."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "george-michael",
+      "to": "root:james-brown",
+      "kind": "sample",
+      "claim": "George Michael built the beat of “Freedom! ’90” on the drum break from James Brown’s “Funky Drummer”.",
+      "claimRu": "Джордж Майкл построил бит «Freedom! ’90» на барабанном брейке из «Funky Drummer» Джеймса Брауна.",
+      "sources": [
+        {
+          "title": "Rolling Stone: George Michael — Freedom! ’90",
+          "url": "https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/george-michael-freedom-90-3-30441/"
+        },
+        {
+          "title": "MusicRadar: When sampling ruled the world",
+          "url": "https://www.musicradar.com/drums/it-was-deemed-that-an-artist-could-sample-an-unrecognisable-portion-of-a-work-without-the-need-to-declare-the-sample-or-indeed-pay-the-original-artist-when-sampling-ruled-the-world-and-drummers-didnt-get-paid"
+        }
+      ],
+      "what": "Clyde Stubblefield’s drum break from James Brown’s “Funky Drummer” recording, looped in “Freedom! ’90”.",
+      "whatRu": "Барабанный брейк Клайда Стабблфилда из записи Джеймса Брауна «Funky Drummer», зацикленный в «Freedom! ’90».",
+      "evidence": [
+        "Rolling Stone explicitly identifies Brown’s Funky Drummer recording as the sample.",
+        "MusicRadar describes the sampled drum break and names Freedom! ’90 among its uses."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "amy-winehouse",
+      "to": "root:marvin-gaye",
+      "kind": "interpolation",
+      "claim": "“Tears Dry on Their Own” reworks the accompaniment of Marvin Gaye and Tammi Terrell’s “Ain’t No Mountain High Enough”.",
+      "claimRu": "В «Tears Dry on Their Own» заново сыгран аккомпанемент «Ain’t No Mountain High Enough» Марвина Гэя и Тамми Террелл.",
+      "sources": [
+        {
+          "title": "Classic Motown: Marvin Gaye & Tammi Terrell — United",
+          "url": "https://classic.motown.com/story/marvin-gaye-tammi-terrell-united/"
+        },
+        {
+          "title": "MusicRadar: The making of Tears Dry on Their Own",
+          "url": "https://www.musicradar.com/artists/amy-winehouse-tears-dry-on-their-own-song-story"
+        }
+      ],
+      "what": "The accompaniment of the 1967 Marvin Gaye/Tammi Terrell version of “Ain’t No Mountain High Enough”, including its descending bass line, re-performed for “Tears Dry on Their Own”.",
+      "whatRu": "Аккомпанемент версии «Ain’t No Mountain High Enough» Марвина Гэя и Тамми Террелл 1967 года, включая нисходящую басовую линию, заново сыгран для «Tears Dry on Their Own».",
+      "evidence": [
+        "Motown calls the borrowing an interpolation and credits Ashford, Simpson and Winehouse.",
+        "MusicRadar describes Remi reworking the descending bass line and chorus; the original ballad became the upbeat album arrangement."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "etta-james",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Etta James began singing in a church gospel choir at five.",
+      "claimRu": "Этта Джеймс начала петь в церковном госпел-хоре в пять лет.",
+      "sources": [
+        {
+          "title": "California Museum: Etta James",
+          "url": "https://californiamuseum.org/inductee/etta-james/"
+        },
+        {
+          "title": "Biography: Etta James",
+          "url": "https://www.biography.com/musicians/etta-james"
+        }
+      ],
+      "evidence": [
+        "Both biographies describe gospel choir singing at age five; no unsupported teacher claim."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "aretha-franklin",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Aretha Franklin began her singing career in her father’s church and on his gospel tours.",
+      "claimRu": "Арета Франклин начала певческую карьеру в церкви своего отца и в его госпел-гастролях.",
+      "sources": [
+        {
+          "title": "Detroit Historical Society: Aretha Franklin",
+          "url": "https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/franklin-aretha"
+        },
+        {
+          "title": "TIME: Aretha Franklin’s passing is the end of an era",
+          "url": "https://time.com/5367138/aretha-franklin-appreciation/"
+        }
+      ],
+      "evidence": [
+        "Detroit history describes first church solo and five years on father’s gospel show.",
+        "TIME describes church then touring gospel circuit managed by her father."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "dinah-washington",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Dinah Washington’s musical upbringing began with singing and playing piano in church.",
+      "claimRu": "Музыкальное воспитание Дайны Вашингтон началось с пения и игры на фортепиано в церкви.",
+      "sources": [
+        {
+          "title": "Alabama Music Hall of Fame: Dinah Washington",
+          "url": "https://www.alamhof.org/dinah-washington-1"
+        },
+        {
+          "title": "Encyclopedia of Alabama: Dinah Washington",
+          "url": "https://encyclopediaofalabama.org/article/dinah-washington/"
+        }
+      ],
+      "evidence": [
+        "Hall biography describes church piano and choir directing.",
+        "State encyclopedia describes mother’s instruction, church choir and childhood gospel performances."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "bessie-smith",
+      "to": "card:blues",
+      "kind": "scene",
+      "claim": "Bessie Smith developed her blues performance on the Black vaudeville circuit.",
+      "claimRu": "Бесси Смит оттачивала своё блюзовое искусство в гастрольных водевильных труппах чернокожих артистов.",
+      "sources": [
+        {
+          "title": "Smithsonian NMAAHC: Bessie Smith",
+          "url": "https://nmaahc.si.edu/lgbtq/bessie-smith"
+        },
+        {
+          "title": "National Park Service: Bessie Smith",
+          "url": "https://home.nps.gov/locations/lowermsdeltaregion/bessie-smith.htm"
+        }
+      ],
+      "evidence": [
+        "NMAAHC says she refined her vocal style on Black vaudeville stages.",
+        "NPS traces her touring-company start and blues stage act; avoid categorical Ma Rainey vocal-teacher claim."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "ray-charles",
+      "to": "card:gospel",
+      "kind": "influence",
+      "claim": "Ray Charles fused gospel expression with rhythm and blues on “I Got a Woman”.",
+      "claimRu": "В «I Got a Woman» Рэй Чарльз соединил выразительность госпела с ритм-н-блюзом.",
+      "sources": [
+        {
+          "title": "Blue Note Records: Ray Charles biography",
+          "url": "https://www.bluenote.com/artist/ray-charles/"
+        },
+        {
+          "title": "Rhino: Single Stories — I Got a Woman",
+          "url": "https://www.rhino.com/article/single-stories-ray-charles-i-got-a-woman"
+        }
+      ],
+      "evidence": [
+        "Blue Note describes the pivotal gospel vocal delivery and R&B setting.",
+        "Rhino explains gospel/R&B synthesis, secular lyrics and the Southern Tones inspiration."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "stevie-wonder",
+      "to": "root:ray-charles",
+      "kind": "influence",
+      "claim": "Ray Charles’s rhythm and blues was an early influence on Stevie Wonder.",
+      "claimRu": "Ритм-н-блюз Рэя Чарльза повлиял на Стиви Уандера ещё в детстве.",
+      "sources": [
+        {
+          "title": "WERS: The Vault of Soul — Stevie Wonder",
+          "url": "https://wers.org/the-vault-of-soul-stevie-wonder/"
+        },
+        {
+          "title": "University Musical Society: From Cass Corridor to the World, Winter 2013",
+          "url": "https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf"
+        }
+      ],
+      "evidence": [
+        "WERS identifies Charles as an early influence.",
+        "UMS concert program describes childhood exposure to Charles’s R&B on radio."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "stevie-wonder",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Stevie Wonder’s childhood church choir singing helped form his musical background.",
+      "claimRu": "Пение в церковном хоре в детстве стало частью музыкального воспитания Стиви Уандера.",
+      "sources": [
+        {
+          "title": "University Musical Society: From Cass Corridor to the World, Winter 2013",
+          "url": "https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf"
+        },
+        {
+          "title": "WERS: The Vault of Soul — Stevie Wonder",
+          "url": "https://wers.org/the-vault-of-soul-stevie-wonder/"
+        }
+      ],
+      "evidence": [
+        "UMS says he joined a church choir and identifies gospel influence.",
+        "WERS biography states Wonder was a childhood church choir soloist; its analysis also ties his performances to gospel."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "labi-siffre",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Labi Siffre worked as a jazz musician before his solo recording career.",
+      "claimRu": "До сольной карьеры Лаби Сиффре работал джазовым музыкантом.",
+      "sources": [
+        {
+          "title": "NME: Siffre — enemy of the trendy cults, January 15, 1972",
+          "url": "https://www.worldradiohistory.com/UK/New-Musical-Express/1972/NME%201972-01-15.pdf"
+        },
+        {
+          "title": "Pitchfork: Labi Siffre — Crying Laughing Loving Lying",
+          "url": "https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/"
+        }
+      ],
+      "evidence": [
+        "Contemporaneous interview traces blues band, jazz and soul group before solo writing.",
+        "Pitchfork describes his jazz-club education preceding his albums."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "george-mccrae",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "George McCrae began developing his singing voice in a choir as a child.",
+      "claimRu": "Джордж Маккрей начал развивать свой певческий голос в хоре ещё ребёнком.",
+      "sources": [
+        {
+          "title": "Beat Instrumental: The Miami McRae sound, February 1975, p. 17",
+          "url": "https://worldradiohistory.com/UK/Beat-Instrumental/Beat-Instrumental-1975-02-S-OCR.pdf"
+        },
+        {
+          "title": "Maxazine: George McCrae — It’s all about love",
+          "url": "https://maxazine.com/2020/07/17/george-mccrae-its-all-about-love/"
+        }
+      ],
+      "evidence": [
+        "Beat Instrumental explicitly identifies a church gospel choir at six.",
+        "McCrae’s later interview independently says he learned in a choir as a child; it does not specify denomination or age."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "sly-and-the-family-stone",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Before the Family Stone, Sly and his siblings sang and recorded gospel as the Stewart Four.",
+      "claimRu": "До Family Stone Слай и его братья и сёстры пели и записывали госпел под именем Stewart Four.",
+      "sources": [
+        {
+          "title": "Sly and the Family Stone: official biography",
+          "url": "https://slyandthefamilystone.com/bio/"
+        },
+        {
+          "title": "Wax Poetics: Cynthia Robinson and the Family Stone",
+          "url": "https://magazine.waxpoetics.com/article/cynthia-robinson-family-affair/"
+        }
+      ],
+      "evidence": [
+        "Official biography describes childhood gospel single by Stewart Four.",
+        "Wax Poetics independently names the childhood gospel group and recording."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "earth-wind-and-fire",
+      "to": "card:jazz",
+      "kind": "influence",
+      "claim": "Maurice White built Earth, Wind & Fire’s sound from his background as a jazz musician.",
+      "claimRu": "Морис Уайт создавал звучание Earth, Wind & Fire, опираясь на свой опыт джазового музыканта.",
+      "sources": [
+        {
+          "title": "Earth, Wind & Fire: official biography",
+          "url": "https://www.earthwindandfire.com/history/biography/"
+        },
+        {
+          "title": "Rock & Roll Hall of Fame: Earth, Wind & Fire induction essay, 2000",
+          "url": "https://www.rockhall.com/wp-content/uploads/2024/03/Earth__Wind_and_Fire_2000.pdf"
+        }
+      ],
+      "evidence": [
+        "White explicitly describes the band as jazz musicians blending genres; biography traces Ramsey Lewis trio.",
+        "Rock Hall essay connects White’s Ramsey Lewis years with the vision for the new band."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "nina-simone",
+      "to": "card:jazz",
+      "kind": "scene",
+      "claim": "Nina Simone developed her early nightclub repertoire by combining jazz, blues and classical piano.",
+      "claimRu": "В начале клубной карьеры Нина Симон строила свой репертуар на сочетании джаза, блюза и классического фортепиано.",
+      "sources": [
+        {
+          "title": "Nina Simone: official biography",
+          "url": "https://www.ninasimone.com/biography/"
+        },
+        {
+          "title": "North Carolina Music Hall of Fame: Nina Simone",
+          "url": "https://northcarolinamusichalloffame.org/inductee-item/nina-simone/"
+        }
+      ],
+      "evidence": [
+        "Official biography describes nightclub synthesis and her autobiographical explanation of classical technique influenced by cocktail jazz.",
+        "State hall describes jazz, blues and classical set at Midtown Bar in 1954."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "marvin-gaye",
+      "to": "card:gospel",
+      "kind": "scene",
+      "claim": "Marvin Gaye developed his singing as a child in his father’s church.",
+      "claimRu": "Марвин Гэй развивал свой певческий дар ещё ребёнком в церкви отца.",
+      "sources": [
+        {
+          "title": "Marvin Gaye: official biography",
+          "url": "https://www.marvingaye.net/about/"
+        },
+        {
+          "title": "Record Mirror: This stubborn man called Marvin Gaye, January 4, 1964",
+          "url": "https://www.worldradiohistory.com/UK/Record-Mirror/60s/64/Record-Mirror-1964-01-04-S-OCR.pdf"
+        }
+      ],
+      "evidence": [
+        "Official biography lines 57–62: father’s church and gospel basis of his art, with Gaye’s own recollection. Replaces WRH source now returning 403.",
+        "Contemporaneous Record Mirror biography describes church choir and childhood solos."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "rakim",
+      "to": "root:john-coltrane",
+      "kind": "influence",
+      "claim": "Rakim modelled the rhythms of his rhymes on John Coltrane’s saxophone playing.",
+      "claimRu": "Раким строил ритм своих рифм по образцу саксофонной игры Джона Колтрейна.",
+      "sources": [
+        {
+          "title": "NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public",
+          "url": "https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full"
+        },
+        {
+          "title": "Westword: Q&A with Rakim",
+          "url": "https://www.westword.com/music/qanda-with-rakim-5676480/"
+        }
+      ],
+      "evidence": [
+        "Both independently quote Rakim describing Coltrane’s rhythms as models for his rhymes."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "red-hot-chili-peppers",
+      "to": "root:james-brown",
+      "kind": "influence",
+      "claim": "James Brown’s funk was one of Red Hot Chili Peppers’ musical influences.",
+      "claimRu": "Фанк Джеймса Брауна был одним из музыкальных ориентиров Red Hot Chili Peppers.",
+      "sources": [
+        {
+          "title": "Rock & Roll Hall of Fame: Red Hot Chili Peppers — Influences",
+          "url": "https://rockhall.com/inductees/red-hot-chili-peppers/"
+        },
+        {
+          "title": "Rolling Stone: Chad Smith on Mother’s Milk",
+          "url": "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/"
+        }
+      ],
+      "evidence": [
+        "Rock Hall names Brown among the band’s influences.",
+        "Chad Smith names Brown when discussing the funk grounding for Mother’s Milk."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    },
+    {
+      "artist": "rakim",
+      "to": "card:hip-hop",
+      "kind": "scene",
+      "claim": "Rakim expanded hip-hop’s rhyme patterns with intricate internal rhymes.",
+      "claimRu": "Раким усложнил рифмовку в хип-хопе, развивая замысловатые внутренние рифмы.",
+      "sources": [
+        {
+          "title": "NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public",
+          "url": "https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full"
+        },
+        {
+          "title": "GRUNGECAKE: Eminem’s Apple Music interview on Rakim",
+          "url": "https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon"
+        }
+      ],
+      "evidence": [
+        "NPR feature by Phil Harrell and Kiana Fitzgerald, lines 982–1004: Paid in Full introduced internal rhyme schemes and My Melody places a rhyme inside the bar.",
+        "Independent Apple Music interview transcribed by GRUNGECAKE, lines 342–344: Eminem identifies Rakim’s increasingly complicated inside rhyme schemes. No claim that Rakim invented internal rhyme."
+      ],
+      "sourcesOpened": true,
+      "researcher": "pop",
+      "reviewStatus": "pending"
+    }
+  ]
+}

@@ -1,17 +1,42 @@
-id: "janis-joplin"
-name: "Janis Joplin"
-nameRu: "Дженис Джоплин"
-aliases: ["дженис джоплин", "джэнис джоплин"]
-years: [1943, 1970]
-place: {"name": "Port Arthur, Texas", "lat": 29.8849, "lon": -93.94}
-genre: "Blues rock / soul"
-genreRu: "блюз-рок / соул"
+---
+id: janis-joplin
+name: Janis Joplin
+nameRu: Дженис Джоплин
+aliases:
+- дженис джоплин
+- джэнис джоплин
+years:
+- 1943
+- 1970
+place:
+  name: Port Arthur, Texas
+  lat: 29.8849
+  lon: -93.94
+genre: Blues rock / soul
+genreRu: блюз-рок / соул
 links:
-  - to: "card:big-mama-thornton"
-    claim: "Joplin recorded Thornton’s “Ball and Chain”."
-    claimRu: "Джоплин записала «Ball and Chain» Торнтон."
-    sources:
-      - title: "Smithsonian Folkways: Big Mama Thornton, Ball N’ Chain liner notes"
-        url: "https://folkways-media.si.edu/docs/folkways/artwork/ARH00305.pdf"
-      - title: "The Guardian: Big Mama Thornton profile"
-        url: "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis"
+- to: card:big-mama-thornton
+  claim: Joplin recorded Thornton’s “Ball and Chain”.
+  claimRu: Джоплин записала «Ball and Chain» Торнтон.
+  sources:
+  - title: 'Smithsonian Folkways: Big Mama Thornton, Ball N’ Chain liner notes'
+    url: https://folkways-media.si.edu/docs/folkways/artwork/ARH00305.pdf
+  - title: 'The Guardian: Big Mama Thornton profile'
+    url: https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis
+  kind: cover
+  what: Big Mama Thornton’s song “Ball and Chain”, performed by Joplin.
+  whatRu: Песня Биг Мамы Торнтон «Ball and Chain» в исполнении Джоплин.
+- to: root:bessie-smith
+  kind: influence
+  claim: Bessie Smith’s blues singing helped shape Janis Joplin’s vocal style.
+  claimRu: Блюзовое пение Бесси Смит помогло сформировать вокальную манеру Дженис
+    Джоплин.
+  sources:
+  - title: 'Open University: Janis Joplin’s singing style'
+    url: https://www.open.edu/openlearn/history-the-arts/janis-joplin-and-the-sexual-revolution/content-section-5
+  - title: 'NPR Fresh Air: Holly George-Warren on Janis Joplin, via NHPR'
+    url: https://www.nhpr.org/2019-10-21/new-janis-joplin-biography-reveals-the-hard-work-behind-the-heart
+story: Bessie Smith’s blues singing helped shape Janis Joplin’s voice. Joplin also
+  brought Big Mama Thornton’s “Ball and Chain” into her recorded repertoire.
+storyRu: Блюзовое пение Бесси Смит помогло сформировать голос Дженис Джоплин. В её
+  записанный репертуар вошла и «Ball and Chain» Биг Мамы Торнтон.

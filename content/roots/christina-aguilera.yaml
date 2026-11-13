@@ -1,15 +1,43 @@
-id: "christina-aguilera"
-name: "Christina Aguilera"
-nameRu: "Кристина Агилера"
-aliases: ["кристина агилера", "кристина агильера"]
-years: [1980]
-place: {"name": "New York City", "lat": 40.7128, "lon": -74.006}
-genre: "Pop and soul"
-genreRu: "поп и соул"
+---
+id: christina-aguilera
+name: Christina Aguilera
+nameRu: Кристина Агилера
+aliases:
+- кристина агилера
+- кристина агильера
+years:
+- 1980
+place:
+  name: New York City
+  lat: 40.7128
+  lon: -74.006
+genre: Pop and soul
+genreRu: поп и соул
 links:
-  - to: "card:rhythm-and-blues"
-    claim: "Christina Aguilera performed Etta James’s signature song “At Last” at James’s funeral."
-    claimRu: "Кристина Агилера исполнила «At Last», одну из главных песен Этты Джеймс, на её похоронах."
-    sources:
-      - {"title": "NME: Christina Aguilera performs At Last at Etta James’s funeral", "url": "https://www.nme.com/news/music/etta-james-1270497"}
-      - {"title": "ABC News: Christina Aguilera and Stevie Wonder pay tribute to Etta James", "url": "https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute"}
+- to: card:rhythm-and-blues
+  claim: Christina Aguilera performed Etta James’s signature song “At Last” at James’s
+    funeral.
+  claimRu: Кристина Агилера исполнила «At Last», одну из главных песен Этты Джеймс,
+    на её похоронах.
+  sources:
+  - title: 'NME: Christina Aguilera performs At Last at Etta James’s funeral'
+    url: https://www.nme.com/news/music/etta-james-1270497
+  - title: 'ABC News: Christina Aguilera and Stevie Wonder pay tribute to Etta James'
+    url: https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute
+  kind: cover
+  what: A live performance of “At Last”, associated with Etta James, at her funeral.
+  whatRu: Живое исполнение «At Last», одной из главных песен Этты Джеймс, на её похоронах.
+- to: root:etta-james
+  kind: influence
+  claim: Christina Aguilera grew up listening to Etta James and tried to emulate her
+    singing.
+  claimRu: Кристина Агилера с детства слушала Этту Джеймс и стремилась петь как она.
+  sources:
+  - title: 'Biography Today: Christina Aguilera — Major Influences, via ERIC'
+    url: https://files.eric.ed.gov/fulltext/ED452104.pdf
+  - title: 'ABC News: Etta James funeral tribute'
+    url: https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute
+story: Christina Aguilera grew up listening to Etta James and tried to emulate her
+  singing. At James’s funeral, she sang “At Last”.
+storyRu: Кристина Агилера с детства слушала Этту Джеймс и стремилась петь как она.
+  На похоронах Джеймс она исполнила «At Last».
