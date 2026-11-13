@@ -117,3 +117,16 @@ describe('new kinds', () => {
     expect(KIND_LABEL.collaboration).toMatchObject({ en: 'worked with', ru: 'работал вместе' });
   });
 });
+
+import { groupChildren, quotes } from '../src/lib/roots';
+describe('telling each fact once', () => {
+  it('uses each language’s quotation marks', () => {
+    expect(quotes('sampled "Stratus" in \'Safe from Harm\'', 'en')).toBe('sampled “Stratus” in “Safe from Harm”');
+    expect(quotes('записали “Stratus” и "Safe from Harm"', 'ru')).toBe('записали «Stratus» и «Safe from Harm»');
+  });
+  it('groups two links that tell the same borrowing', () => {
+    const l = { to: 'x', kind: 'sample' as const, what: 'the groove of Stratus', claim: 'c', sources: [] };
+    const n = { ref: 'ma', weight: 2, children: [{ ref: 'card:jazz', link: { ...l, to: 'card:jazz' }, children: [], weight: 1 }, { ref: 'cobham', link: { ...l, to: 'root:cobham' }, children: [], weight: 1 }] };
+    expect(groupChildren(n).map((g) => g.map((c) => c.ref))).toEqual([['card:jazz', 'cobham']]);
+  });
+});

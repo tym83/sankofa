@@ -1,7 +1,7 @@
 // Roots: type a band or an artist and watch the chain grow back, link by
 // sourced link, to a card of the museum.
 import type { App } from '../app';
-import { buildTree, chainLine, deepest, endCards, extendLineage, KIND_LABEL, toDag, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink } from '../lib/roots';
+import { buildTree, chainLine, deepest, endCards, extendLineage, groupChildren, KIND_LABEL, quotes, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
 import { copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
 import { formatYears } from '../lib/cards';
 import { count, lang, pick, t } from '../lib/i18n';
@@ -204,59 +204,34 @@ export class Roots {
     const ends = endCards(tree);
     let step = 0;
     const yearOf = (ref: string) => (ref.startsWith('card:') ? this.app.set.get(ref.slice(5))?.years[0] : this.byId.get(ref)?.years[0]);
-    // One vertex per artist or card: paths that meet are drawn meeting.
-    const dag = toDag(tree);
-    const nodeEls = new Map<string, HTMLElement>();
-    const rows: HTMLElement[] = [];
-    for (const ref of dag.order) {
-      const ins = dag.incoming.get(ref) ?? [];
-      const yr = yearOf(ref);
-      const fromYear = Math.max(...ins.map((e) => yearOf(e.from) ?? -Infinity));
-      const gap = yr !== undefined && isFinite(fromYear) && fromYear > yr ? fromYear - yr : 0;
-      const parts: HTMLElement[] = [];
-      const links = ins.filter((e) => e.link);
-      const lineage = ins.filter((e) => e.lineage);
-      links.forEach((e) => parts.push(this.linkEl(e.link!, step++, gap, yr, links.length > 1 || ins.length > 1 ? this.refName(e.from) : undefined)));
-      if (lineage.length) parts.push(this.lineageEl(step++, gap, yr, lineage.length > 1 || links.length ? lineage.map((e) => this.refName(e.from)) : undefined));
-      const el = ref.startsWith('card:') ? this.cardEl(ref.slice(5), step++, ins.some((e) => e.lineage)) : this.artistEl(ref, ref === tree.ref, step++);
-      el.dataset.ref = ref;
-      nodeEls.set(ref, el);
-      parts.push(el);
-      rows.push(h('div.r-row', { 'data-ref': ref, 'data-merge': ins.length > 1 ? String(ins.length) : undefined }, ...parts));
-    }
-    const rail = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    rail.setAttribute('class', 'r-rail');
-    rail.setAttribute('aria-hidden', 'true');
-    const column = h('div.r-col', {}, rail, ...rows);
-    // Draw the rail once laid out: every edge from its source to its target,
-    // edges that skip rows bowing out further, so converging paths are visible.
-    const drawRail = () => {
-      const box = column.getBoundingClientRect();
-      if (!box.height) return;
-      rail.setAttribute('width', '64');
-      rail.setAttribute('height', String(box.height));
-      rail.setAttribute('viewBox', `0 0 64 ${box.height}`);
-      let svg = '';
-      const y = (ref: string) => {
-        const r = nodeEls.get(ref)!.getBoundingClientRect();
-        return r.top - box.top + r.height / 2;
-      };
-      const pos = new Map(dag.order.map((r, i) => [r, i]));
-      for (const e of dag.edges) {
-        const y1 = y(e.from);
-        const y2 = y(e.to);
-        const skip = Math.max(0, pos.get(e.to)! - pos.get(e.from)! - 1);
-        const x = 52 - Math.min(44, skip * 14);
-        const cls = e.lineage ? 'lin' : e.link?.kind ? `k-${e.link.kind}` : '';
-        svg += skip
-          ? `<path class="${cls}" d="M58,${y1} C${x},${y1} ${x},${y1 + 30} ${x},${y1 + 40} L${x},${y2 - 40} C${x},${y2 - 30} ${x},${y2} 58,${y2}"/>`
-          : `<path class="${cls}" d="M58,${y1} L58,${y2}"/>`;
+    // A chain of chains: each step is told on the connector between exactly
+    // the two names it joins; where an artist has several roots, each is its
+    // own indented sub-chain; a node met before is a short pointer back.
+    const seen = new Set<string>();
+    const render = (n: TreeNode, isRoot: boolean): HTMLElement[] => {
+      const out: HTMLElement[] = [];
+      if (seen.has(n.ref)) {
+        out.push(h('p.r-again', {}, pick({ en: `${this.refName(n.ref)}: as above`, ru: `${this.refName(n.ref)} — см. выше` })));
+        return out;
       }
-      for (const r of dag.order) svg += `<circle cx="58" cy="${y(r)}" r="${(dag.incoming.get(r)?.length ?? 0) > 1 ? 7 : 4.5}"${(dag.incoming.get(r)?.length ?? 0) > 1 ? ' class="merge"' : ''}/>`;
-      rail.innerHTML = svg;
+      seen.add(n.ref);
+      const el = n.ref.startsWith('card:') ? this.cardEl(n.ref.slice(5), step++, !!n.lineage) : this.artistEl(n.ref, isRoot, step++);
+      out.push(el);
+      const groups = groupChildren(n);
+      const sub = groups.length > 1;
+      groups.forEach((g, gi) => {
+        const from = this.refName(n.ref);
+        const to = g.map((c) => this.inlineName(c.ref));
+        const yFrom = yearOf(n.ref);
+        const yTo = yearOf(g[0].ref);
+        const gap = yFrom !== undefined && yTo !== undefined && yFrom > yTo ? yFrom - yTo : 0;
+        const edge = g[0].lineage ? this.lineageEdge(from, to, step++, gap, yTo) : this.edgeEl(g[0].link!, from, to, step++, gap, yTo);
+        const body = [edge, ...g.flatMap((c) => render(c, false))];
+        out.push(sub ? h('div.r-sub', { style: `--b:${gi}` }, h('span.r-branch-no', {}, pick({ en: `root ${gi + 1} of ${groups.length}`, ru: `корень ${gi + 1} из ${groups.length}` })), ...body) : h('div.r-run', {}, ...body));
+      });
+      return out;
     };
-    requestAnimationFrame(() => requestAnimationFrame(drawRail));
-    new ResizeObserver(() => drawRail()).observe(column);
+    const column = h('div.r-col', {}, ...render(tree, true));
     const story = (lang() === 'ru' && a.storyRu) || a.story;
     const depth = deepest(tree);
     const first = a.paths[0];
@@ -301,6 +276,40 @@ export class Roots {
     else this.stage.querySelectorAll('.r-anim').forEach((x) => x.classList.add('in'));
   }
 
+  /** A name as it reads inside a sentence: "the blues", «блюз». */
+  private inlineName(ref: string): string {
+    if (ref.startsWith('card:')) {
+      const c = this.app.set.get(ref.slice(5));
+      return c?.inline || c?.title || ref.slice(5);
+    }
+    return this.refName(ref);
+  }
+
+  /** One step, told between the two names it joins. */
+  private edgeEl(l: RootLink, from: string, to: string[], i: number, gap: number, year?: number): HTMLElement {
+    const L = lang();
+    const kind = l.kind ? KIND_LABEL[l.kind] : undefined;
+    const what = quotes((L === 'ru' && l.whatRu) || l.what || '', L);
+    const claim = quotes((L === 'ru' && l.claimRu) || l.claim, L);
+    return h(
+      `div.r-edge.r-anim${l.kind ? `.k-${l.kind}` : ''}`,
+      { style: `--i:${i}` },
+      h('div.r-edge-head', {}, h('b', {}, from), h('span.r-arrow', { 'aria-hidden': 'true' }, '→'), h('b', {}, to.join(pick({ en: ' and ', ru: ' и ' }))), kind ? h('span.r-kind', {}, h('i', { 'aria-hidden': 'true' }, kind.glyph), pick(kind)) : null),
+      // One sentence per step: what was borrowed when it is named, else the claim.
+      h('p.r-say', { title: what ? claim : undefined }, what || claim),
+      h('div.r-edge-foot', {}, this.gapEl(gap, year), h('ul.r-src', {}, l.sources.map((s) => h('li', {}, h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title))))),
+    );
+  }
+
+  private lineageEdge(from: string, to: string[], i: number, gap: number, year?: number): HTMLElement {
+    return h(
+      'div.r-edge.r-lin.r-anim',
+      { style: `--i:${i}` },
+      h('div.r-edge-head', {}, h('b', {}, from), h('span.r-arrow', { 'aria-hidden': 'true' }, '→'), h('b', {}, to.join(pick({ en: ' and ', ru: ' и ' }))), h('span.r-kind', {}, h('i', { 'aria-hidden': 'true' }, '↓'), pick({ en: 'grew out of', ru: 'выросло из' }))),
+      h('div.r-edge-foot', {}, this.gapEl(gap, year)),
+    );
+  }
+
   private endYears(ref: string): string {
     const c = ref.startsWith('card:') ? this.app.set.get(ref.slice(5)) : undefined;
     return c ? `, ${c.places[0].name}, ${formatYears(c.years)}` : '';
@@ -325,50 +334,10 @@ export class Roots {
       : h('a.r-artist.r-anim', { href: `#view=roots&artist=${id}`, 'data-artist': id, style, title: pick({ en: 'Follow this artist’s own roots', ru: 'Проследить корни этого исполнителя' }) }, ...body);
   }
 
-  private linkEl(l: RootLink, i: number, gap = 0, year?: number, from?: string): HTMLElement {
-    const claim = (lang() === 'ru' && l.claimRu) || l.claim;
-    const what = (lang() === 'ru' && l.whatRu) || l.what;
-    const kind = l.kind ? KIND_LABEL[l.kind] : undefined;
-    return h(
-      `div.r-link.r-anim${l.kind ? `.k-${l.kind}` : ''}`,
-      { style: `--i:${i}` },
-      h('i.r-line', { 'aria-hidden': 'true' }, this.gapEl(gap, year)),
-      h(
-        'div.r-claim',
-        {},
-        from ? h('span.r-from', {}, pick({ en: `from ${from}`, ru: `от: ${from}` })) : null,
-        kind ? h('span.r-kind', {}, h('b', { 'aria-hidden': 'true' }, kind.glyph), pick(kind)) : null,
-        // A cover or a sample names what was taken: that is the surprise.
-        what ? h('p.r-what', {}, what) : null,
-        h('p', {}, claim),
-        h(
-          'ul.r-src',
-          {},
-          l.sources.map((s) => h('li', {}, h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title))),
-        ),
-      ),
-    );
-  }
-
   /** The time between two steps, written on the line: '← 13 years · 1968'. */
   private gapEl(gap: number, year?: number): HTMLElement | null {
     if (!year) return null;
     return h('span.r-gap', {}, gap ? pick({ en: `${gap} ${gap === 1 ? 'year' : 'years'} back · ${year}`, ru: `на ${count(gap, 'year', 'ru')} раньше · ${year}` }) : String(year));
-  }
-
-  /** The museum's own lineage: one genre grew out of an older one. */
-  private lineageEl(i: number, gap = 0, year?: number, from?: string[]): HTMLElement {
-    return h(
-      'div.r-link.r-lineage.r-anim',
-      { style: `--i:${i}` },
-      h('i.r-line', { 'aria-hidden': 'true' }, this.gapEl(gap, year)),
-      h(
-        'div.r-claim',
-        {},
-        h('span.r-kind', {}, h('b', { 'aria-hidden': 'true' }, '↓'), pick({ en: 'grew out of', ru: 'выросло из' })),
-        from ? h('p.r-merge', {}, pick({ en: `Where ${from.join(' and ')} meet`, ru: `Здесь сходятся: ${from.join(' и ')}` })) : null,
-      ),
-    );
   }
 
   private cardEl(id: string, i: number, deep = false): HTMLElement {

@@ -46,6 +46,8 @@ export interface Card {
   media?: Media[];
   dispute?: string;
   body: string;
+  /** the name as it reads inside a sentence: "the blues" */
+  inline?: string;
   backlinks?: string[];
   translations?: Record<string, CardTranslation>;
   /** Set on a localized copy: the language its text is actually in. */
@@ -59,6 +61,7 @@ export interface CardTranslation {
   further?: string[];
   dispute?: string;
   captions?: string[];
+  inline?: string;
   credits?: string[];
   licenses?: string[];
   body: string;

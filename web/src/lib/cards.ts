@@ -137,7 +137,7 @@ export function localizeCard(c0: Card, lang: string): Card {
   const c: Card = lang === 'en' || !c0.media ? c0 : { ...c0, media: c0.media.map((m) => ({ ...m, credit: localizeCredit(m.credit, lang as 'ru'), license: localizeCredit(m.license, lang as 'ru') })) };
   const tr = lang === 'en' ? undefined : c.translations?.[lang];
   if (!tr || !tr.title) return { ...c, textLang: 'en' };
-  const out: Card = { ...c, title: tr.title, wow: tr.wow || c.wow, body: tr.body || c.body, textLang: tr.body ? lang : 'en' };
+  const out: Card = { ...c, title: tr.title, wow: tr.wow || c.wow, body: tr.body || c.body, inline: tr.inline || (lang === 'en' ? c.inline : undefined), textLang: tr.body ? lang : 'en' };
   if (tr.dispute) out.dispute = tr.dispute;
   if (tr.further && c.further && tr.further.length === c.further.length) out.further = tr.further;
   if (tr.places && tr.places.length === c.places.length) out.places = c.places.map((p, i) => ({ ...p, name: tr.places![i], en: p.name }));

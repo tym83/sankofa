@@ -271,3 +271,22 @@ export function toDag(tree: TreeNode): Dag {
   for (const list of incoming.values()) list.sort((x, y) => order.indexOf(x.from) - order.indexOf(y.from));
   return { order, incoming, edges };
 }
+
+/** Quotation marks of the reader's language: “…” in English, «…» in Russian. */
+export function quotes(text: string, lang: string): string {
+  if (!text) return text;
+  if (lang === 'ru') return text.replace(/[“"]([^”"]+)[”"]/g, '«$1»').replace(/(^|[\s(])'([^']+)'(?=[\s.,;:!?)]|$)/g, '$1«$2»');
+  return text.replace(/«([^»]+)»/g, '“$1”').replace(/"([^"]+)"/g, '“$1”').replace(/(^|[\s(])'([^']+)'(?=[\s.,;:!?)]|$)/g, '$1“$2”');
+}
+
+/** Children of a node grouped by the same borrowing (kind and what), so one fact is told once. */
+export function groupChildren(n: TreeNode): TreeNode[][] {
+  const groups: TreeNode[][] = [];
+  for (const c of n.children) {
+    const key = c.link ? `${c.link.kind ?? ''}|${(c.link.what || c.link.claim).trim()}` : `lineage|${c.ref}`;
+    const g = groups.find((x) => x[0].link && `${x[0].link.kind ?? ''}|${(x[0].link.what || x[0].link.claim).trim()}` === key);
+    if (g && c.link) g.push(c);
+    else groups.push([c]);
+  }
+  return groups;
+}

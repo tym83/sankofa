@@ -345,7 +345,8 @@ test('roots: Cyrillic search finds an artist and the chain ends at a museum card
   await expect(end).toBeVisible();
   const cardId = await end.getAttribute('data-card');
   expect(a.paths.some((p: string[]) => p[p.length - 1] === `card:${cardId}` || p[p.length - 1].startsWith('card:'))).toBe(true);
-  await expect(page.locator('.r-claim').first()).toBeVisible();
+  await expect(page.locator('.r-edge .r-say').first()).toBeVisible();
+  await expect(page.locator('.r-edge-head').first()).toContainText('→');
   await expect(page.locator('.r-src a')).not.toHaveCount(0);
   await end.click();
   await expect(page.locator('.drawer.on article.card')).toBeVisible();
@@ -392,10 +393,10 @@ test('roots unwind past the card, name the kind of each link and what was borrow
   await serveFixtureRoots(page);
   await page.goto('/#view=roots&artist=the-prodigy');
   await expect(page.locator('.r-tree')).toBeVisible();
-  await expect(page.locator('.r-link.k-sample .r-kind')).toContainText('sampled');
-  await expect(page.locator('.r-link.k-sample .r-what')).toContainText('handclaps');
+  await expect(page.locator('.r-edge.k-sample .r-kind')).toContainText('sampled');
+  await expect(page.locator('.r-edge.k-sample .r-say')).toContainText('handclaps');
   // gospel grows from spirituals: the chain goes on past the first card
-  await expect(page.locator('.r-lineage').first()).toBeVisible();
+  await expect(page.locator('.r-edge.r-lin').first()).toBeVisible();
   await expect(page.locator('.r-card.r-deep').first()).toBeVisible();
 
   await page.goto('about:blank');
