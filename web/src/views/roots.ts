@@ -230,13 +230,9 @@ export class Roots {
       groups.forEach((g, gi) => {
         const from = this.refName(n.ref);
         const to = g.map((c) => this.refName(c.ref));
-        // A line into a museum card carries the card's years. No "N years back":
-        // the data does not say whether a year is a birth or a band's founding,
-        // and subtracting one from the other compares unlike things.
-        const target = g[0].ref.startsWith('card:') ? this.app.set.get(g[0].ref.slice(5)) : undefined;
-        // An artist's own years are on its plate right below.
-        const when = target ? formatYears(target.years) : undefined;
-        const edge = g[0].lineage ? this.lineageEdge(from, to, step++, when) : this.edgeEl(g[0].link!, from, to, step++, when);
+        // Links carry no date of their own in the data, so the line shows none:
+        // a card's span would date the genre, not the link.
+        const edge = g[0].lineage ? this.lineageEdge(from, to, step++) : this.edgeEl(g[0].link!, from, to, step++);
         const body = [edge, ...g.flatMap((c) => render(c, false))];
         out.push(sub ? h('div.r-sub', { style: `--b:${gi}` }, h('span.r-branch-no', {}, pick({ en: `root ${gi + 1} of ${groups.length}`, ru: `корень ${gi + 1} из ${groups.length}` })), ...body) : h('div.r-run', {}, ...body));
       });
@@ -290,7 +286,7 @@ export class Roots {
   /** A name as it reads inside a sentence: "the blues", «блюз». */
 
   /** One step, told between the two names it joins. */
-  private edgeEl(l: RootLink, from: string, to: string[], i: number, year?: string): HTMLElement {
+  private edgeEl(l: RootLink, from: string, to: string[], i: number): HTMLElement {
     const L = lang();
     const kind = l.kind ? KIND_LABEL[l.kind] : undefined;
     const what = quotes((L === 'ru' && l.whatRu) || l.what || '', L);
@@ -301,16 +297,15 @@ export class Roots {
       h('div.r-edge-head', {}, h('b', {}, from), h('span.r-arrow', { 'aria-hidden': 'true' }, '→'), h('b', {}, to.join(pick({ en: ' and ', ru: ' и ' }))), kind ? h('span.r-kind', {}, h('i', { 'aria-hidden': 'true' }, kind.glyph), pick(kind)) : null),
       // One sentence per step: what was borrowed when it is named, else the claim.
       h('p.r-say', { title: what ? claim : undefined }, what || claim),
-      h('div.r-edge-foot', {}, this.gapEl(year), h('ul.r-src', {}, l.sources.map((s) => h('li', {}, h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title))))),
+      h('div.r-edge-foot', {}, h('ul.r-src', {}, l.sources.map((s) => h('li', {}, h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title))))),
     );
   }
 
-  private lineageEdge(from: string, to: string[], i: number, year?: string): HTMLElement {
+  private lineageEdge(from: string, to: string[], i: number): HTMLElement {
     return h(
       'div.r-edge.r-lin.r-anim',
       { style: `--i:${i}` },
       h('div.r-edge-head', {}, h('b', {}, from), h('span.r-arrow', { 'aria-hidden': 'true' }, '→'), h('b', {}, to.join(pick({ en: ' and ', ru: ' и ' }))), h('span.r-kind', {}, h('i', { 'aria-hidden': 'true' }, '↓'), pick({ en: 'grew out of', ru: 'выросло из' }))),
-      h('div.r-edge-foot', {}, this.gapEl(year)),
     );
   }
 
@@ -329,7 +324,12 @@ export class Roots {
       'a.r-member.r-anim',
       { href: `#view=roots&artist=${id}`, 'data-artist': id, style: `--i:${i}`, title: pick({ en: 'Follow this artist’s own roots', ru: 'Проследить корни этого исполнителя' }) },
       h('b', {}, name),
-      pick({ en: `, of ${of}`, ru: ` из ${of}` }),
+      // The data has no person/band field. A group has a founding year only;
+      // a person with a birth and a death year is a person. Names stay in the
+      // nominative in Russian.
+      b && isGroup(b)
+        ? pick({ en: `, of ${of}`, ru: `, участник группы ${/[а-яё]/i.test(of) ? `«${of}»` : of}` })
+        : pick({ en: `, who led the band ${of} played in`, ru: ` — руководитель ансамбля, где играл ${of}` }),
       a ? h('small', {}, ` · ${formatYears(a.years)}`) : null,
     );
   }
@@ -353,10 +353,6 @@ export class Roots {
       : h('a.r-artist.r-anim', { href: `#view=roots&artist=${id}`, 'data-artist': id, style, title: pick({ en: 'Follow this artist’s own roots', ru: 'Проследить корни этого исполнителя' }) }, ...body);
   }
 
-  /** The years of the museum card a line leads into. */
-  private gapEl(year?: string): HTMLElement | null {
-    return year ? h('span.r-gap', {}, year) : null;
-  }
 
   private cardEl(id: string, i: number, deep = false): HTMLElement {
     const c = this.app.set.forEdition(id, this.app.edition) ?? this.app.set.get(id);
@@ -383,4 +379,9 @@ function searchIcon(): SVGSVGElement {
   svg.setAttribute('aria-hidden', 'true');
   svg.innerHTML = '<circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>';
   return svg;
+}
+
+/** A group, not a person: one year (founding) and a name that is not a person's. */
+export function isGroup(a: Pick<Artist, 'years' | 'name'>): boolean {
+  return a.years.length === 1 && (/^the\s/i.test(a.name) || !/^[A-Z][a-z]+\s[A-Z][a-z]+$/.test(a.name));
 }
