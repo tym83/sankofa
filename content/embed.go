@@ -7,11 +7,14 @@ import (
 	"io/fs"
 )
 
-//go:embed cards quests
+//go:embed cards quests roots
 var files embed.FS
 
 // Cards is the card collection.
 func Cards() fs.FS { return sub("cards") }
+
+// Roots are the artists whose roots the museum traces.
+func Roots() fs.FS { return sub("roots") }
 
 // Quests are the quest definitions.
 func Quests() fs.FS { return sub("quests") }

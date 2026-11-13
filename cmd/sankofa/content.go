@@ -12,6 +12,7 @@ import (
 
 	"github.com/tym83/sankofa/api/v1alpha1"
 	"github.com/tym83/sankofa/pkg/card"
+	"github.com/tym83/sankofa/pkg/roots"
 )
 
 func contentCmd() *cobra.Command {
@@ -28,6 +29,11 @@ func contentCmd() *cobra.Command {
 			errs := s.Validate()
 			errs = append(errs, lintQuests(filepath.Join(args[0], "..", "quests"), s)...)
 			errs = append(errs, lintChapters(filepath.Join(args[0], "..", "chapters"), s)...)
+			if rs, err := roots.LoadDir(filepath.Join(args[0], "..", "roots")); err != nil {
+				errs = append(errs, err)
+			} else {
+				errs = append(errs, rs.Validate(s)...)
+			}
 			for _, e := range errs {
 				fmt.Fprintln(cmd.ErrOrStderr(), e)
 			}
@@ -51,7 +57,11 @@ func contentCmd() *cobra.Command {
 			if errs := s.Validate(); len(errs) > 0 {
 				return fmt.Errorf("content does not lint: %v", errs[0])
 			}
-			data, err := json.MarshalIndent(Export(s), "", " ")
+			doc := Export(s)
+			if rs, err := roots.LoadDir(filepath.Join(args[0], "..", "roots")); err == nil {
+				doc["roots"] = ExportRoots(rs)
+			}
+			data, err := json.MarshalIndent(doc, "", " ")
 			if err != nil {
 				return err
 			}
@@ -248,4 +258,29 @@ func lintChapterTranslation(dir, name, original string, bad func(string, ...any)
 		}
 	}
 	return nil
+}
+
+// ExportedArtist is an artist with every resolved chain to the museum.
+type ExportedArtist struct {
+	*roots.Artist
+	Paths [][]string `json:"paths"` // each path: artist ids then the final card:<id>
+}
+
+// ExportRoots prepares roots for the museum.
+func ExportRoots(rs *roots.Set) []ExportedArtist {
+	out := []ExportedArtist{}
+	for _, id := range rs.Order {
+		ea := ExportedArtist{Artist: rs.ByID[id], Paths: [][]string{}}
+		ps, _ := rs.Paths(id, 8)
+		for _, p := range ps {
+			var ids []string
+			for _, st := range p {
+				ids = append(ids, st.From)
+			}
+			ids = append(ids, p[len(p)-1].Link.To)
+			ea.Paths = append(ea.Paths, ids)
+		}
+		out = append(out, ea)
+	}
+	return out
 }
