@@ -4458,7 +4458,6 @@ details.k8s .term {
   overflow: hidden;
 }
 .sig-cart {
-  --p: 0;
   position: relative;
   z-index: 1;
   width: min(80%, 420px);
@@ -4700,7 +4699,7 @@ html:lang(ru) .opener p.lede {
   height: 20%;
 }
 .sig-insert .sig-cart {
-  transform: translateY(calc((1 - var(--p, 0)) * -55% + var(--p, 0) * 40%)) rotate(calc((1 - var(--p, 0)) * -6deg));
+  transform: translateY(calc((1 - var(--p, 0)) * -55% + var(--p, 0) * 12%)) rotate(calc((1 - var(--p, 0)) * -6deg));
 }
 @media (max-width: 900px) {
   .l-node .nm {
@@ -4719,5 +4718,14 @@ html:lang(ru) .opener p.lede {
 @media (max-width: 720px) {
   .cover-credit {
     top: calc(var(--nav-h) + 6px);
+  }
+}
+
+@media (max-width: 720px) {
+  .cover-credit {
+    position: static;
+    margin: 0 16px 20px;
+    text-align: left;
+    color: rgba(242, 233, 216, 0.45);
   }
 }

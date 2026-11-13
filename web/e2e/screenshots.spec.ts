@@ -42,9 +42,9 @@ test('key views', async ({ page }, info) => {
       await shot(page, `11-${id}-step${s}`, p);
     }
     if (i === 0) {
-      await ch.locator('.interlude').scrollIntoViewIfNeeded();
-      await settle(page, 1400);
-      await shot(page, `12-${id}-interlude`, p);
+      await ch.locator('.sig').evaluate((el) => window.scrollBy(0, el.getBoundingClientRect().top + Math.max(0, el.getBoundingClientRect().height - innerHeight) * 0.7));
+      await settle(page, 1800);
+      await shot(page, `12-${id}-signature`, p);
       await ch.locator('.strip').evaluate((el) => el.scrollIntoView({ block: 'start' }));
       await settle(page, 1400);
       await shot(page, `13-${id}-strip`, p);
@@ -167,4 +167,27 @@ test('descent levels', async ({ page }, info) => {
     await settle(page, 2800);
     await shot(page, name, p);
   }
+});
+
+test('signatures and the broken node', async ({ page }, info) => {
+  const p = info.project.name;
+  await page.goto('/');
+  for (const [sel, name, frac] of [
+    ['#ch-v1 .sig-counter', '93-sig-counter', -1],
+    ['#ch-v5 .sig-plate', '94-sig-plate', 0.6],
+    ['#ch-v7 .sig-insert', '95-sig-insert', 1],
+  ] as [string, string, number][]) {
+    await page.locator(sel).evaluate((el, f) => {
+      const r = el.getBoundingClientRect();
+      window.scrollBy(0, f < 0 ? r.top - 60 : r.top + f * Math.max(0, r.height - innerHeight));
+    }, frac);
+    await settle(page, 4500);
+    await shot(page, name, p);
+  }
+  await page.goto('/#view=listen');
+  await page.reload();
+  await settle(page, 4500);
+  await page.getByRole('button', { name: 'Break a node' }).click();
+  await settle(page, 5000);
+  await shot(page, '96-listen-broken', p);
 });

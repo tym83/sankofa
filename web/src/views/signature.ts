@@ -112,7 +112,7 @@ function plate(app: App, c: Card, link: HTMLElement, era: string): HTMLElement {
 function insert(app: App, c: Card, link: HTMLElement, era: string): HTMLElement {
   const m = c.media!.find((x) => x.type === 'image')!;
   const cart = h('div.sig-cart', {}, h('img', { ...mediaSrc(app, m.file, [960]), alt: m.caption ?? c.title, loading: 'lazy', decoding: 'async' }));
-  const slot = h('div.sig-slot', { 'aria-hidden': 'true' }, h('span', {}, pick({ en: 'INSERT', ru: 'ВСТАВЬТЕ' })));
+  const slot = h('div.sig-slot', { 'aria-hidden': 'true' }, h('span', {}, pick({ en: 'POWER', ru: 'ПИТАНИЕ' })));
   const done = h('div.sig-done', { 'aria-hidden': 'true' }, pick({ en: '▶ READY', ru: '▶ ГОТОВО' }));
   const el = h(
     'section.sig.sig-insert',
