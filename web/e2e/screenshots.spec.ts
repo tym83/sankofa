@@ -180,11 +180,11 @@ test('signatures and the broken node', async ({ page }, info) => {
   const p = info.project.name;
   await page.goto('/');
   for (const [sel, name, frac] of [
-    ['#ch-v1 .sig-counter', '93-sig-counter', -1],
+    ['#ch-v1 .sig, #ch-v1 .interlude', '93-sig-v1', -1],
     ['#ch-v5 .sig-plate', '94-sig-plate', 0.6],
     ['#ch-v7 .sig-insert', '95-sig-insert', 1],
   ] as [string, string, number][]) {
-    await page.locator(sel).evaluate((el, f) => {
+    await page.locator(sel).first().evaluate((el, f) => {
       const r = el.getBoundingClientRect();
       window.scrollBy(0, f < 0 ? r.top - 60 : r.top + f * Math.max(0, r.height - innerHeight));
     }, frac);
