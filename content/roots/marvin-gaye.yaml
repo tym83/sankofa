@@ -1,0 +1,31 @@
+---
+id: marvin-gaye
+name: Marvin Gaye
+nameRu: Марвин Гэй
+aliases:
+- марвин гэй
+- марвин гей
+years:
+- 1939
+- 1984
+place:
+  name: Washington, D.C.
+  lat: 38.9072
+  lon: -77.0369
+placeRu: "Вашингтон, округ Колумбия"
+genre: Soul
+genreRu: соул
+links:
+- to: card:gospel
+  kind: scene
+  claim: Marvin Gaye developed his singing as a child in his father’s church.
+  claimRu: Марвин Гэй развивал свой певческий дар ещё ребёнком в церкви отца.
+  sources:
+  - title: 'Marvin Gaye: official biography'
+    url: https://www.marvingaye.net/about/
+  - title: 'Record Mirror: This stubborn man called Marvin Gaye, January 4, 1964'
+    url: https://www.worldradiohistory.com/UK/Record-Mirror/60s/64/Record-Mirror-1964-01-04-S-OCR.pdf
+story: Marvin Gaye’s singing began developing in childhood. His father’s church was
+  its early setting.
+storyRu: Певческий дар Марвина Гэя начал развиваться ещё в детстве. Первой его средой
+  стала церковь отца.

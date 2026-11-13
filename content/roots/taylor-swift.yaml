@@ -1,0 +1,32 @@
+---
+id: taylor-swift
+name: Taylor Swift
+nameRu: Тейлор Свифт
+aliases:
+- тейлор свифт
+- тэйлор свифт
+years:
+- 1989
+place:
+  name: Reading, Pennsylvania
+  lat: 40.3356
+  lon: -75.9269
+placeRu: "Рединг, Пенсильвания"
+genre: Country pop
+genreRu: кантри-поп
+links:
+- to: card:funk
+  claim: Taylor Swift recorded a cover of Earth, Wind & Fire’s “September”.
+  claimRu: Тейлор Свифт записала кавер на «September» группы Earth, Wind & Fire.
+  sources:
+  - title: 'NPR / WBGO: Taylor Swift Covers Earth, Wind & Fire’s September'
+    url: https://www.wbgo.org/2018-04-13/you-know-what-fine-taylor-swift-covers-earth-wind-fires-september
+  - title: 'Library of Congress: Rickey Vincent on September'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf
+  kind: cover
+  what: Earth, Wind & Fire’s “September”, newly performed by Swift.
+  whatRu: Песня Earth, Wind & Fire «September» в новом исполнении Свифт.
+story: Taylor Swift reached into funk with a cover. She recorded her own version of
+  Earth, Wind & Fire’s “September”.
+storyRu: К фанку Тейлор Свифт обратилась через кавер. Она записала свою версию
+  «September» группы Earth, Wind & Fire.

@@ -1,0 +1,32 @@
+id: "deep-purple"
+name: "Deep Purple"
+nameRu: "Deep Purple"
+aliases: ["дип пёрпл", "дип перпл"]
+years: [1968]
+place: {"name": "Hertford, England", "lat": 51.7958, "lon": -0.078}
+placeRu: "Хартфорд, Англия"
+genre: "Hard rock"
+genreRu: "хард-рок"
+links:
+  - to: "card:rock-n-roll"
+    claim: "Deep Purple performed Little Richard’s “Lucille” in their 1972 concerts."
+    claimRu: "Deep Purple исполняли «Lucille» Литл Ричарда на концертах 1972 года."
+    sources:
+      - title: "MOJO: Deep Purple Made in Japan reviewed"
+        url: "https://www.mojo4music.com/articles/new-music/deep-purple-made-in-japan-reviewed-revered-72-live-album-remixed-and-expanded/"
+      - title: "metal.de: Deep Purple — In Concert ’72 reissue review"
+        url: "https://www.metal.de/reviews/deep-purple-in-concert-72-re-release-58099/"
+    kind: "cover"
+    what: "“Lucille”: Deep Purple’s live performances in 1972 of Little Richard’s song."
+    whatRu: "«Lucille»: концертные исполнения песни Литл Ричарда группой Deep Purple в 1972 году."
+  - to: "root:little-richard"
+    kind: "influence"
+    claim: "Little Richard was among the early rock-and-roll singers who first drew Deep Purple’s Ian Gillan to music."
+    claimRu: "Литл Ричард был среди первых рок-н-ролльных певцов, которые привели Иэна Гиллана из Deep Purple в музыку."
+    sources:
+      - title: "Wikimetal: Interview with Ian Gillan (2011)"
+        url: "https://www.wikimetal.com.br/en/site/interview-with-ian-gillan"
+      - title: "ABC Radio National: Ian Gillan interview (2006)"
+        url: "https://www.abc.net.au/listen/programs/musicshow/ian-gillan/3338452"
+story: "Little Richard’s rock and roll was among the music that first drew Ian Gillan to singing. Deep Purple’s 1972 concerts also included Richard’s “Lucille”."
+storyRu: "Рок-н-ролл Литл Ричарда был среди той музыки, что впервые привела Иэна Гиллана к пению. На концертах 1972 года Deep Purple исполняли и его «Lucille»."

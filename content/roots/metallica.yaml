@@ -1,0 +1,32 @@
+id: "metallica"
+name: "Metallica"
+nameRu: "Metallica"
+aliases: ["металлика", "металика"]
+years: [1981]
+place: {"name": "Los Angeles", "lat": 34.0522, "lon": -118.2437}
+placeRu: "Лос-Анджелес"
+genre: "Thrash metal"
+genreRu: "трэш-метал"
+links:
+  - to: "root:black-sabbath"
+    claim: "Metallica recorded Black Sabbath’s “Sabbra Cadabra”, inserting a passage from “A National Acrobat”."
+    claimRu: "Metallica записали «Sabbra Cadabra» группы Black Sabbath, включив в неё фрагмент «A National Acrobat»."
+    sources:
+      - title: "Distorted Sound: Heavy Music History — Garage Inc."
+        url: "https://distortedsoundmag.com/heavy-music-history-garage-inc-metallica/"
+      - title: "Metal Hammer: The story of Metallica’s Garage Inc."
+        url: "https://www.loudersound.com/bands-artists/metallica-load-cover-songs-story-album"
+    kind: "cover"
+    what: "“Sabbra Cadabra”: Metallica’s recording also includes a passage from Black Sabbath’s “A National Acrobat”."
+    whatRu: "«Sabbra Cadabra»: в запись Metallica также включён фрагмент «A National Acrobat» группы Black Sabbath."
+  - to: "root:black-sabbath"
+    kind: "influence"
+    claim: "Black Sabbath were a formative musical influence on Metallica’s James Hetfield."
+    claimRu: "Black Sabbath сыграли важную роль в музыкальном становлении Джеймса Хэтфилда из Metallica."
+    sources:
+      - title: "Blabbermouth: full Metallica speech inducting Black Sabbath"
+        url: "https://blabbermouth.net/news/full-text-of-metallica-s-black-sabbath-induction-speech-available"
+      - title: "Metal Hammer: James Hetfield on Tony Iommi’s influence"
+        url: "https://www.loudersound.com/news/metallica-james-hetfield-why-black-sabbath-tony-iommi-riff-lord-2026"
+story: "Black Sabbath helped shape James Hetfield as a musician. Metallica also recorded “Sabbra Cadabra”, weaving in a passage from “A National Acrobat”."
+storyRu: "Black Sabbath повлияли на становление Джеймса Хэтфилда как музыканта. Metallica также записали «Sabbra Cadabra», вплетя в неё фрагмент «A National Acrobat»."

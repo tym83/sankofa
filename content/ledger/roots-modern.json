@@ -1,0 +1,323 @@
+{
+  "date": "2026-11-12",
+  "scope": "ROOTS.md research batch",
+  "entries": [
+    {
+      "artist": "radiohead",
+      "to": "card:jazz",
+      "claim": "Radiohead drew on Charles Mingus's jazz for 'Pyramid Song'.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "Prog: Radiohead’s proggiest moments",
+          "url": "https://www.loudersound.com/features/radioheads-proggiest-moments",
+          "evidence": "The Pyramid Song section identifies Mingus as its musical source.",
+          "opened_via": "web open and find"
+        },
+        {
+          "title": "The Irish Times: Taking music to strange places",
+          "url": "https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388",
+          "evidence": "In a Colin Greenwood interview, the song is described as based on Mingus.",
+          "opened_via": "web open and find"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "daft-punk",
+      "to": "card:chicago-house",
+      "claim": "On 'Teachers', Daft Punk named Chicago house musicians among their influences.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "DJ Mag: Homework at 25 — Teachers and Students",
+          "url": "https://djmag.com/longreads/daft-punk-s-homework-25-teachers-and-students",
+          "evidence": "Describes Teachers as homage to house originators, with sections on Chicago producers.",
+          "opened_via": "web open and find"
+        },
+        {
+          "title": "Rolling Stone: Paul Johnson, Celebrated Chicago House Producer, Dead at 50",
+          "url": "https://au.rollingstone.com/music/music-news/paul-johnson-dead-28588/",
+          "evidence": "Identifies Chicago producer Johnson as an influence acknowledged by name in Teachers.",
+          "opened_via": "web open and find"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "kraftwerk",
+      "to": "card:funk",
+      "claim": "James Brown's funk was an influence on Kraftwerk.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "Electronic Beats: A week in the life — 168 hrs Kraftwerk, NYC, part 1",
+          "url": "https://www.electronicbeats.net/a-week-in-the-life-168-hours-kraftwerk-nyc-part-1/",
+          "evidence": "Juan Atkins recalls Florian Schneider telling him about the James Brown influence.",
+          "opened_via": "web open and find"
+        },
+        {
+          "title": "Croatian Encyclopedia: Kraftwerk",
+          "url": "https://enciklopedija.hr/clanak/kraftwerk",
+          "evidence": "National encyclopedia names James Brown and funk among the group’s early influences.",
+          "opened_via": "web open"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "red-hot-chili-peppers",
+      "to": "card:funk",
+      "claim": "Red Hot Chili Peppers recorded a cover of Stevie Wonder's 'Higher Ground'.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "Rolling Stone: Red Hot Chili Peppers on 25 Years of Mother’s Milk",
+          "url": "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/",
+          "evidence": "Chad Smith describes the band recording the Stevie Wonder cover.",
+          "opened_via": "web open"
+        },
+        {
+          "title": "Guitar World: Flea’s bittersweet hip-hop recording experience",
+          "url": "https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move",
+          "evidence": "Opening paragraph independently identifies the 1989 Higher Ground release as a Wonder cover.",
+          "opened_via": "web open"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "the-white-stripes",
+      "to": "card:blues",
+      "claim": "The White Stripes covered Son House's 'Death Letter'.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "Rolling Stone: The White Stripes Share 2000 Performance of Death Letter",
+          "url": "https://au.rollingstone.com/music/music-news/white-stripes-death-letter-2000-12901/",
+          "evidence": "Identifies the recorded 2000 performance as a Son House cover.",
+          "opened_via": "web open and find"
+        },
+        {
+          "title": "The Guardian: The White Stripes bring the blues back to rock",
+          "url": "https://www.theguardian.com/music/2011/jun/12/white-stripes-blues-rock",
+          "evidence": "Performance corroboration.",
+          "opened_via": "web open and find"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "arctic-monkeys",
+      "to": "card:rhythm-and-blues",
+      "claim": "Arctic Monkeys recorded Barbara Lewis's 'Baby I'm Yours' with the 747s.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "NME: Arctic Monkeys covers revealed",
+          "url": "https://www.nme.com/news/music/arctic-monkeys-578-1365201",
+          "evidence": "Reports the Barbara Lewis cover and collaboration with the 747s.",
+          "opened_via": "direct HTTP fetch; web returned 403"
+        },
+        {
+          "title": "Complete Music Update: Arctic Monkeys collaborate with 747s on next single",
+          "url": "https://completemusicupdate.com/arctic-monkeys-collaborate-with-747s-on-next-single/",
+          "evidence": "Oisin Leech tells CMU how Turner invited the group to record the Lewis cover.",
+          "opened_via": "direct HTTP fetch; web cache miss"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "coldplay",
+      "to": "root:kraftwerk",
+      "claim": "Coldplay used the riff from Kraftwerk's 'Computer Love' in 'Talk'.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "NPO Radio 2: Coldplay leent de basis voor Talk van Kraftwerk",
+          "url": "https://www.nporadio2.nl/nieuws/top2000/e21e3ff0-4ff8-495f-9247-c533993bce04/coldplay-leent-de-basis-voor-talk-van-kraftwerk",
+          "evidence": "Explains that Coldplay transferred the Computer Love synthesizer riff to guitar.",
+          "opened_via": "web open"
+        },
+        {
+          "title": "LA Weekly / Arthur: A conversation with Ralf Hutter of Kraftwerk",
+          "url": "https://arthurmag.com/2009/11/16/a-conversation-with-ralf-hutter-of-kraftwerk-2005/",
+          "evidence": "Jay Babcock’s 2005 interview introduction identifies the borrowed Computer Love riff.",
+          "opened_via": "web open"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "david-bowie",
+      "to": "card:jazz",
+      "claim": "Nina Simone's version of 'Wild Is the Wind' inspired David Bowie to record it for Station to Station.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "NPO Radio 2: David Bowies Wild Is The Wind is een eerbetoon aan Nina Simone",
+          "url": "https://www.nporadio2.nl/nieuws/top2000/93682543-a548-417c-b69e-9b220e4b507b/david-bowies-wild-is-the-wind-is-een-eerbetoon-aan-nina-simone",
+          "evidence": "Describes Bowie’s recording as a response and tribute to Simone’s rendition.",
+          "opened_via": "web open"
+        },
+        {
+          "title": "Verve / UMe: Nina Simone’s Historic Philips Years Celebrated with Vinyl Remasters",
+          "url": "https://www.prnewswire.com/news-releases/nina-simones-historic-philips-years-celebrated-with-vinyl-remasters-of-seven-classic-albums-including-nina-simone-in-concert-wild-is-the-wind-high-priestess-of-soul-300337404.html",
+          "evidence": "Record-label release explicitly identifies Simone’s rendition as the inspiration for Bowie’s album recording.",
+          "opened_via": "web open and find"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "talking-heads",
+      "to": "card:afrobeat",
+      "claim": "Talking Heads drew on Fela Kuti's Afrobeat when making Remain in Light.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "Library of Congress: Remain in Light — Talking Heads",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf",
+          "evidence": "Kevin Buck describes the album’s instrumental sessions as based on Fela-pioneered Afrobeat rhythms.",
+          "opened_via": "web open, PDF page 1"
+        },
+        {
+          "title": "Pitchfork: Talking Heads — Remain in Light",
+          "url": "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/",
+          "evidence": "Dan Brooks identifies Fela’s Afrodisiac as Eno’s model for the album.",
+          "opened_via": "web open and find"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "paul-simon",
+      "to": "card:reggae",
+      "claim": "Paul Simon recorded 'Mother and Child Reunion' in Jamaica with musicians who had backed Jimmy Cliff.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "Jamaica Observer: Simon’s reggae classics get new life",
+          "url": "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/",
+          "evidence": "Reports the Jamaican recording with Cliff’s backing musicians, naming Jackson, Grennan and Hinds.",
+          "opened_via": "web open and find"
+        },
+        {
+          "title": "NPO Radio 2: Mother & Child Reunion — Paul Simon",
+          "url": "https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion",
+          "evidence": "Public broadcaster confirms the Jamaica session with Jimmy Cliff’s regular musicians.",
+          "opened_via": "web open"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "peter-gabriel",
+      "to": "card:rhythm-and-blues",
+      "claim": "Peter Gabriel made 'Sledgehammer' as a tribute to the soul music of Otis Redding.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "Peter Gabriel: Sledgehammer",
+          "url": "https://petergabriel.com/release/sledgehammer/",
+          "evidence": "Gabriel describes the song as homage and identifies Redding as his favourite singer.",
+          "opened_via": "web open"
+        },
+        {
+          "title": "Sound On Sound: Peter Gabriel — Behind The Mask (January 1987)",
+          "url": "https://www.muzines.co.uk/articles/peter-gabriel-behind-the-mask/1494",
+          "evidence": "Contemporary interview discusses the Redding tribute and participation of Redding’s trumpeter Wayne Jackson.",
+          "opened_via": "web open and find"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "massive-attack",
+      "to": "card:jazz",
+      "claim": "Massive Attack sampled Billy Cobham's 'Stratus' in 'Safe from Harm'.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "Hit Channel: Interview — Billy Cobham",
+          "url": "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/",
+          "evidence": "Cobham confirms licensing the Stratus sample in response to a question naming Safe from Harm.",
+          "opened_via": "web open"
+        },
+        {
+          "title": "Rolf Großmann: Xtended Sampling 1995–2026, in Un_Making Beats, p. 97",
+          "url": "https://www.uni-hildesheim.de/ojs/index.php/MMD/de/article/download/498/541",
+          "evidence": "Academic discussion identifies the sampled accompaniment from Cobham’s Stratus and its jazz-fusion context.",
+          "opened_via": "direct HTTP PDF download and pdftotext, printed page 97"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    },
+    {
+      "artist": "the-prodigy",
+      "to": "card:hip-hop",
+      "claim": "The Prodigy's 'Smack My Bitch Up' samples 'Give the Drummer Some' by Ultramagnetic MCs.",
+      "researcher": "modern_roots",
+      "research_status": "confirmed",
+      "sources": [
+        {
+          "title": "Mixmag: Uncontrollable energy — The Fat Of The Land at 25",
+          "url": "https://mixmag.net/feature/uncontrollable-energy-20-years-on-the-fat-of-the-land-is-still-a-life-changing-album",
+          "evidence": "Identifies the Ultramagnetic MCs sample in the single.",
+          "opened_via": "web open and find"
+        },
+        {
+          "title": "Justin Morey: Copyright Management and its Effect on the Sampling Practice of UK Dance Music Producers",
+          "url": "https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf",
+          "evidence": "Peer-reviewed article names both recordings as an example of British dance producers sampling American hip-hop.",
+          "opened_via": "direct HTTP PDF download and pdftotext"
+        }
+      ],
+      "review_status": "confirmed",
+      "review_record": "roots-modern-review.json"
+    }
+  ],
+  "rejected_sources": [
+    {
+      "url": "https://repository.upenn.edu/bitstreams/3bd04efa-9f5f-4369-a131-b4fc0339ef5f/download",
+      "reason": "Undergraduate paper includes a Stockhausen-study claim contradicted by Hütter’s 1991 interview; replaced with the national encyclopedia."
+    },
+    {
+      "url": "https://time.com/4176079/david-bowie-nina-simone/",
+      "reason": "Opened response did not contain the expected article; replaced with label documentation."
+    }
+  ],
+  "metadataChecks": [
+    {
+      "artist": "paul-simon",
+      "url": "https://www.grammy.com/artists/paul-simon/6579/",
+      "opened": true,
+      "evidence": "Recording Academy biography identifies Newark, New Jersey as birthplace."
+    }
+  ]
+}

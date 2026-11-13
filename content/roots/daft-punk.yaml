@@ -1,0 +1,31 @@
+id: "daft-punk"
+name: "Daft Punk"
+aliases: ["дафт панк"]
+years: [1993]
+place: {"name": "Paris", "lat": 48.8566, "lon": 2.3522}
+placeRu: "Париж"
+genre: "French house"
+genreRu: "французский хаус"
+story: "Daft Punk named Chicago house musicians as teachers. In “Harder, Better, Faster, Stronger”, Edwin Birdsong’s “Cola Bottle Baby” supplied a sampled foundation."
+storyRu: "Daft Punk назвали музыкантов чикаго-хауса своими учителями. Основой «Harder, Better, Faster, Stronger» стал сэмпл из «Cola Bottle Baby» Эдвина Бёрдсонга."
+links:
+  - to: "card:chicago-house"
+    kind: "influence"
+    claim: "On 'Teachers', Daft Punk named Chicago house musicians among their influences."
+    claimRu: "В «Teachers» Daft Punk назвали музыкантов чикаго-хауса среди тех, кто на них повлиял."
+    sources:
+      - title: "Complex: A Guide to Daft Punk"
+        url: "https://www.complex.com/music/a/david-drake/a-guide-to-daft-punk"
+      - title: "Rolling Stone: Paul Johnson, Celebrated Chicago House Producer, Dead at 50"
+        url: "https://au.rollingstone.com/music/music-news/paul-johnson-dead-28588/"
+  - to: "root:edwin-birdsong"
+    kind: "sample"
+    claim: "Daft Punk built “Harder, Better, Faster, Stronger” around a sample of Edwin Birdsong’s “Cola Bottle Baby”."
+    claimRu: "Daft Punk построили «Harder, Better, Faster, Stronger» вокруг сэмпла из «Cola Bottle Baby» Эдвина Бёрдсонга."
+    what: "The instrumental groove of Edwin Birdsong's 1979 'Cola Bottle Baby', used as the backing of 'Harder, Better, Faster, Stronger'."
+    whatRu: "Инструментальный грув из записи «Cola Bottle Baby» Эдвина Бёрдсонга 1979 года, положенный в основу «Harder, Better, Faster, Stronger»."
+    sources:
+      - title: "Resident Advisor: Edwin Birdsong obituary"
+        url: "https://ra.co/news/43130"
+      - title: "Radio Milwaukee: Sample, Better, Faster, Stronger"
+        url: "https://radiomilwaukee.org/2013-05-23/sample-better-faster-stronger"

@@ -1,0 +1,30 @@
+id: "black-sabbath"
+name: "Black Sabbath"
+nameRu: "Black Sabbath"
+aliases: ["блэк саббат", "блэк саббатт"]
+years: [1968]
+place: {"name": "Birmingham, England", "lat": 52.4862, "lon": -1.8904}
+placeRu: "Бирмингем, Англия"
+genre: "Heavy metal"
+genreRu: "хеви-метал"
+links:
+  - to: "card:blues"
+    claim: "Before adopting the name Black Sabbath, the band played blues under the name Earth."
+    claimRu: "Прежде чем стать Black Sabbath, группа играла блюз под названием Earth."
+    sources:
+      - title: "Rolling Stone: Heavy Metal, Year One — The Inside Story of Black Sabbath’s Groundbreaking Debut"
+        url: "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/"
+      - title: "Guitar World: Original Members of Black Sabbath Look Back on 30-Plus Years of Demonic Riffing"
+        url: "https://www.guitarworld.com/gw-archive/archive-original-members-black-sabbath-look-back-30-plus-years-demonic-riffing-2001"
+    kind: "scene"
+  - to: "root:eric-clapton"
+    kind: "influence"
+    claim: "Tony Iommi developed his early guitar playing under the influence of Eric Clapton’s blues."
+    claimRu: "Ранняя гитарная манера Тони Айомми складывалась под влиянием блюза Эрика Клэптона."
+    sources:
+      - title: "Tony Iommi: official biography"
+        url: "https://www.iommi.com/biography/"
+      - title: "Guitar World: Tony Iommi talks Dio, Van Halen, Judas Priest and more (2008)"
+        url: "https://www.guitarworld.com/magazine/tony-iommi-talks-dio-van-halen-judas-priest-and-more-outtake-2008-guitar-world-interview"
+story: "Before Black Sabbath, the band played blues as Earth. Tony Iommi’s early guitar playing also grew through his admiration for Eric Clapton’s blues."
+storyRu: "До Black Sabbath группа играла блюз под названием Earth. Ранняя гитарная манера Тони Айомми складывалась и под влиянием блюза Эрика Клэптона."

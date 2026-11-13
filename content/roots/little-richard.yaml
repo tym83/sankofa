@@ -1,0 +1,21 @@
+id: "little-richard"
+name: "Little Richard"
+nameRu: "Литл Ричард"
+aliases: ["литл ричард"]
+years: [1932, 2020]
+place: {"name": "Macon, Georgia", "lat": 32.8407, "lon": -83.6324}
+placeRu: "Мейкон, Джорджия"
+genre: "Rock and roll"
+genreRu: "рок-н-ролл"
+links:
+  - to: "card:gospel"
+    kind: "influence"
+    claim: "Little Richard’s vocal style drew on gospel singing."
+    claimRu: "Вокальная манера Литл Ричарда выросла из госпела."
+    sources:
+      - title: "New Georgia Encyclopedia: Little Richard Penniman"
+        url: "https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/"
+      - title: "NPR: Little Richard, the King and Queen of Rock and Roll (WYPR)"
+        url: "https://www.wypr.org/2020-05-09/little-richard-the-king-and-queen-of-rock-and-roll-dead-at-87"
+story: "Gospel singing lies behind Little Richard’s vocal style. His voice carried that musical inheritance."
+storyRu: "За вокальной манерой Литл Ричарда стоит госпел. Его голос продолжал эту музыкальную традицию."

@@ -1,0 +1,31 @@
+---
+id: aretha-franklin
+name: Aretha Franklin
+nameRu: Арета Франклин
+aliases:
+- арета франклин
+years:
+- 1942
+- 2018
+place:
+  name: Memphis, Tennessee
+  lat: 35.1495
+  lon: -90.049
+placeRu: "Мемфис, Теннесси"
+genre: Soul and gospel
+genreRu: соул и госпел
+links:
+- to: card:gospel
+  kind: scene
+  claim: Aretha Franklin began her singing career in her father’s church and on his
+    gospel tours.
+  claimRu: Арета Франклин начала певческую карьеру в церкви своего отца и в его госпел-гастролях.
+  sources:
+  - title: 'Detroit Historical Society: Aretha Franklin'
+    url: https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/franklin-aretha
+  - title: 'TIME: Aretha Franklin’s passing is the end of an era'
+    url: https://time.com/5367138/aretha-franklin-appreciation/
+story: Aretha Franklin’s singing career began in her father’s church. It continued
+  on his gospel tours.
+storyRu: Певческая карьера Ареты Франклин началась в церкви отца. Затем она продолжилась
+  в его госпел-гастролях.

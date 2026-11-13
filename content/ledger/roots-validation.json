@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-12",
+  "artists": 50,
+  "links": 50,
+  "independentlyReviewedLinks": 50,
+  "sourceReferences": 100,
+  "pathsWithValidMuseumEndpoints": 50,
+  "uniqueMuseumEndpoints": 11,
+  "maxPathLength": 2,
+  "reviewHashesChecked": 86,
+  "cliLookupsPassed": 100,
+  "cliListingEntries": 50,
+  "checks": [
+    "content lint: 102 cards OK; roots validated",
+    "go test ./pkg/roots ./content ./cmd/sankofa: pass",
+    "content export: 50 artists, references and paths valid",
+    "All review hashes match final files or claim and translation text",
+    "All research and review source URLs match YAML",
+    "English name and Cyrillic alias CLI lookup for every artist: pass",
+    "git diff --check: pass"
+  ]
+}

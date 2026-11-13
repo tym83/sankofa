@@ -1,0 +1,17 @@
+id: the-prodigy
+name: The Prodigy
+aliases: [продиджи]
+years: [1990]
+place: {name: Braintree, lat: 51.878, lon: 0.5529}
+genre: Big beat
+genreRu: биг-бит
+links:
+  - to: root:nina-simone-rec
+    kind: sample
+    what: "[placeholder] the handclaps and beat of a 1960s soul record"
+    whatRu: "[заглушка] хлопки и бит соул-записи 1960-х"
+    claim: "[placeholder] The band built a track on a soul recording's beat."
+    claimRu: "[заглушка] Группа построила трек на бите соул-записи."
+    sources:
+      - {title: "Placeholder source: Rolling Stone", url: "https://www.rollingstone.com/"}
+      - {title: "Placeholder source: The Guardian", url: "https://www.theguardian.com/music"}

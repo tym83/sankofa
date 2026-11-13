@@ -1,0 +1,32 @@
+id: "led-zeppelin"
+name: "Led Zeppelin"
+nameRu: "Led Zeppelin"
+aliases: ["лед зеппелин", "лед цеппелин"]
+years: [1968]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
+genre: "Hard rock"
+genreRu: "хард-рок"
+links:
+  - to: "card:blues"
+    claim: "Led Zeppelin reworked “When the Levee Breaks”, originally recorded by Kansas Joe McCoy and Memphis Minnie."
+    claimRu: "Led Zeppelin переработали «When the Levee Breaks» — песню, впервые записанную Канзасом Джо Маккоем и Мемфис Минни."
+    sources:
+      - title: "Charles Shaar Murray: Led Zeppelin, Memphis Minnie, and the levee that broke (Classic Rock)"
+        url: "https://www.loudersound.com/features/led-zeppelin-memphis-minnie-when-the-levee-breaks"
+      - title: "Trevor de Clercq: Measuring a Measure (Music Theory Online 22.3)"
+        url: "https://mtosmt.org/issues/mto.16.22.3/mto.16.22.3.declercq.pdf"
+    kind: "cover"
+    what: "“When the Levee Breaks”: Led Zeppelin re-recorded and rearranged the song recorded by Kansas Joe McCoy and Memphis Minnie."
+    whatRu: "«When the Levee Breaks»: Led Zeppelin заново записали и переаранжировали песню Канзаса Джо Маккоя и Мемфис Минни."
+  - to: "root:howlin-wolf"
+    kind: "influence"
+    claim: "Robert Plant identifies Howlin’ Wolf as one of his early musical roots."
+    claimRu: "Роберт Плант называет Хаулина Вулфа одним из своих ранних музыкальных ориентиров."
+    sources:
+      - title: "Interview: Robert Plant (1977 interview, republished 2013)"
+        url: "https://www.interviewmagazine.com/music/new-again-robert-plant"
+      - title: "Blabbermouth: Robert Plant on his musical roots (2015)"
+        url: "https://blabbermouth.net/news/robert-plant-wants-deadhead-like-solo-following"
+story: "Robert Plant names Howlin’ Wolf among his early musical roots. Led Zeppelin also transformed “When the Levee Breaks”, first recorded by Kansas Joe McCoy and Memphis Minnie."
+storyRu: "Роберт Плант называет Хаулина Вулфа одним из своих ранних музыкальных ориентиров. Led Zeppelin также преобразили «When the Levee Breaks» — песню, впервые записанную Канзасом Джо Маккоем и Мемфис Минни."

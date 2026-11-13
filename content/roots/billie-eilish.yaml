@@ -1,0 +1,32 @@
+---
+id: billie-eilish
+name: Billie Eilish
+nameRu: Билли Айлиш
+aliases:
+- билли айлиш
+- билли эйлиш
+years:
+- 2001
+place:
+  name: Los Angeles
+  lat: 34.0522
+  lon: -118.2437
+placeRu: "Лос-Анджелес"
+genre: Alternative pop
+genreRu: альтернативный поп
+links:
+- to: root:the-beatles
+  claim: Billie Eilish names the Beatles as a formative musical influence, having
+    grown up listening to them.
+  claimRu: 'Билли Айлиш называет The Beatles музыкой, которая её сформировала: она
+    выросла на их записях.'
+  sources:
+  - title: 'NME: Billie Eilish — Glastonbury cover interview'
+    url: https://www.nme.com/big-reads/billie-eilish-cover-interview-2022-glastonbury-festival-3253169
+  - title: 'MusicRadar: Billie Eilish names the Beatles song she wishes she had written'
+    url: https://www.musicradar.com/news/billie-eilish-lunch-finneas-guitar
+  kind: influence
+story: Billie Eilish grew up listening to the Beatles. She names their music as a
+  formative influence.
+storyRu: Билли Айлиш выросла на записях The Beatles. Она называет их музыку одной
+  из сил, сформировавших её.

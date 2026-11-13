@@ -1,0 +1,30 @@
+id: "fela-kuti"
+name: "Fela Kuti"
+nameRu: "Фела Кути"
+aliases: ["фела кути", "фела аникулапо кути"]
+years: [1938, 1997]
+place: {"name": "Abeokuta, Nigeria", "lat": 7.1475, "lon": 3.3619}
+placeRu: "Абеокута, Нигерия"
+genre: "Afrobeat"
+genreRu: "афробит"
+story: "Fela Kuti joined West African highlife to jazz, soul and funk in Afrobeat. James Brown was one of the musicians who shaped that fusion."
+storyRu: "В афробите Фела Кути соединил западноафриканский хайлайф с джазом, соулом и фанком. Одним из музыкантов, повлиявших на этот сплав, был Джеймс Браун."
+links:
+  - to: "card:afrobeat"
+    kind: "influence"
+    claim: "Fela Kuti developed Afrobeat by combining West African highlife, jazz and American soul and funk."
+    claimRu: "Фела Кути создал афробит, соединив западноафриканский хайлайф, джаз и американские соул и фанк."
+    sources:
+      - title: "Rock and Roll Hall of Fame: Fela Kuti"
+        url: "https://rockhall.com/inductees/fela-kuti/"
+      - title: "Trinity Laban: Fela Kuti"
+        url: "https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/"
+  - to: "root:james-brown"
+    kind: "influence"
+    claim: "James Brown’s funk helped shape Fela Kuti’s music."
+    claimRu: "Фанк Джеймса Брауна помог сформироваться музыке Фелы Кути."
+    sources:
+      - title: "Rock and Roll Hall of Fame: Fela Kuti"
+        url: "https://rockhall.com/inductees/fela-kuti/"
+      - title: "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)"
+        url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"

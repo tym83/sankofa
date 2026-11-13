@@ -1,0 +1,65 @@
+---
+id: amy-winehouse
+name: Amy Winehouse
+nameRu: Эми Уайнхаус
+aliases:
+- эми уайнхаус
+- эми вайнхаус
+years:
+- 1983
+- 2011
+place:
+  name: London
+  lat: 51.5074
+  lon: -0.1278
+placeRu: "Лондон"
+genre: Soul and jazz
+genreRu: соул и джаз
+links:
+- to: card:jazz
+  claim: Amy Winehouse recorded the jazz standard “Moody’s Mood for Love” on her debut
+    album Frank.
+  claimRu: Эми Уайнхаус записала джазовый стандарт «Moody’s Mood for Love» на своём
+    дебютном альбоме Frank.
+  sources:
+  - title: 'NME: The Amy Winehouse Band on why she was so special'
+    url: https://www.nme.com/features/music-interviews/amy-winehouse-band-dale-davis-3612156
+  - title: 'Beat: Frank is a testament to the brilliance of Amy Winehouse'
+    url: https://beat.com.au/16-years-on-frank-is-a-testament-to-the-brilliance-of-amy-winehouse/
+  kind: cover
+  what: "“Moody’s Mood for Love”, the jazz vocalese standard, on Frank."
+  whatRu: Джазовый вокальный стандарт «Moody’s Mood for Love» на альбоме «Frank».
+- to: root:dinah-washington
+  kind: influence
+  claim: Dinah Washington was one of the jazz singers who shaped Amy Winehouse’s musical
+    style.
+  claimRu: Дайна Вашингтон была одной из джазовых певиц, сформировавших музыкальный
+    стиль Эми Уайнхаус.
+  sources:
+  - title: 'GRAMMY Museum: Beyond Black — The Style of Amy Winehouse'
+    url: https://grammymuseum.org/wp-content/uploads/2020/02/Amy-Winehouse-Exhibit-Press-Release_FINAL-d88d68fdbf.pdf
+  - title: 'Design Museum: Amy — Beyond the Stage'
+    url: https://designmuseum.org/asset/download?id=98f1cd4d-370a-4875-9221-a69f4fe4dc27
+- to: root:marvin-gaye
+  kind: sample
+  claim: "“Tears Dry on Their Own” is built on a sample of Marvin Gaye and Tammi Terrell’s
+    “Ain’t No Mountain High Enough”."
+  claimRu: «Tears Dry on Their Own» построена на сэмпле из «Ain’t No Mountain High
+    Enough» Марвина Гэя и Тамми Террелл.
+  sources:
+  - title: 'Classic Motown: Marvin Gaye & Tammi Terrell — United'
+    url: https://classic.motown.com/story/marvin-gaye-tammi-terrell-united/
+  - title: 'NPR The Formula: Salaam Remi on sampling for Nas and Amy Winehouse'
+    url: https://www.npr.org/2020/05/02/849076752/salaam-remi-sampling-amy-winehouse-nas-apache-marvin-gaye-tammi-terrell
+  what: The backing of the 1967 Marvin Gaye/Tammi Terrell recording of “Ain’t No
+    Mountain High Enough”, sampled and looped by producer Salaam Remi under Winehouse’s
+    vocal in “Tears Dry on Their Own”.
+  whatRu: Аккомпанемент записи «Ain’t No Mountain High Enough» Марвина Гэя и Тамми
+    Террелл 1967 года, который продюсер Салаам Реми засэмплировал и зациклил под
+    голосом Уайнхаус в «Tears Dry on Their Own».
+story: Dinah Washington helped shape Amy Winehouse’s musical style, and Frank included
+  the jazz standard “Moody’s Mood for Love”. “Tears Dry on Their Own” is built
+  on a sample of Marvin Gaye and Tammi Terrell’s “Ain’t No Mountain High Enough”.
+storyRu: Дайна Вашингтон повлияла на музыкальный стиль Эми Уайнхаус, а в «Frank» вошёл
+  джазовый стандарт «Moody’s Mood for Love». А «Tears Dry on Their Own» построена
+  на сэмпле из «Ain’t No Mountain High Enough» Марвина Гэя и Тамми Террелл.

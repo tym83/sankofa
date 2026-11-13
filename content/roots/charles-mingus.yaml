@@ -1,0 +1,30 @@
+id: "charles-mingus"
+name: "Charles Mingus"
+nameRu: "Чарльз Мингус"
+aliases: ["чарльз мингус", "мингус"]
+years: [1922, 1979]
+place: {"name": "Nogales, Arizona", "lat": 31.3404, "lon": -110.9343}
+placeRu: "Ногалес, Аризона"
+genre: "Jazz"
+genreRu: "джаз"
+story: "Charles Mingus’s early musical world included the singing he heard in church. The gospel singing and preaching of his youth later fed compositions such as “Better Git It in Your Soul”."
+storyRu: "В раннем музыкальном мире Чарльза Мингуса звучало церковное пение. Позже госпел и проповеди его юности отозвались в таких сочинениях, как «Better Git It in Your Soul»."
+links:
+  - to: "card:gospel"
+    kind: "influence"
+    claim: "The church music Charles Mingus heard as a child was one of his earliest musical influences."
+    claimRu: "Церковная музыка, которую Чарльз Мингус слышал в детстве, стала одним из его первых музыкальных влияний."
+    sources:
+      - title: "Charles Mingus estate: Biography"
+        url: "https://www.charlesmingus.com/mingusbio"
+      - title: "Blue Note Records: Charles Mingus biography"
+        url: "https://www.bluenote.com/artist/charles-mingus/"
+  - to: "card:gospel"
+    kind: "influence"
+    claim: "Charles Mingus drew on the gospel singing and preaching of his youth in compositions such as “Better Git It in Your Soul”."
+    claimRu: "В таких сочинениях, как «Better Git It in Your Soul», Чарльз Мингус опирался на госпел и проповеди, которые слышал в юности."
+    sources:
+      - title: "Blue Note Records: Charles Mingus biography"
+        url: "https://www.bluenote.com/artist/charles-mingus/"
+      - title: "WICN: Charles Mingus, Artist of the Month, April 2022"
+        url: "https://wicn.org/wicn-artist-of-the-month-april-2022-charles-mingus/"

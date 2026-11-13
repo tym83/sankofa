@@ -1,0 +1,397 @@
+{
+  "scope": "Independent second review of 14 rock links",
+  "reviewer": "pop_roots",
+  "entries": [
+    {
+      "artist": "television",
+      "to": "card:jazz",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "8da6dc4ff9bdccd59f24c7d2fe2427f6b79461ab8fef542453bcebd507433ef1",
+      "sources": [
+        {
+          "url": "https://press.uchicago.edu/Misc/Chicago/287378.html",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Book excerpt: Coltrane prompted saxophone; Ayler followed."
+        },
+        {
+          "url": "https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Personal recollection independently confirms high-school saxophone and both musicians."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "metallica",
+      "to": "root:black-sabbath",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "abeb81aea49d95f869d110118bc17246bf0b7f208f43ed967206f240bf6fb262",
+      "sources": [
+        {
+          "url": "https://www.metallica.com/songs/sabbra-cadabra.html",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Official credits name Sabbath and the inserted Acrobat excerpt."
+        },
+        {
+          "url": "https://www.loudersound.com/bands-artists/metallica-load-cover-songs-story-album",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Track commentary independently confirms both the cover and interpolation."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "oasis",
+      "to": "root:the-beatles",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "3031bf823891699f8eb0addb18e39825df5e4fb9e9c228eb89c36039b2d629a9",
+      "sources": [
+        {
+          "url": "https://music.apple.com/us/album/the-masterplan/1517453693",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Editorial album notes identify the Beatles cover."
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/5930-the-masterplan/",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Independent review discusses the compilation’s live Walrus performance."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "the-beatles",
+      "to": "card:rhythm-and-blues",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "9041a2ed8f55e8dff5902768ff3a4e61a16788742e65c9087508f6582b7497c6",
+      "sources": [
+        {
+          "url": "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Academic analysis identifies the earlier Isley recording as model."
+        },
+        {
+          "url": "https://apnews.com/article/rudolph-isley-dies-efe795a819a03754d648bbd6bc75c13f",
+          "opened": true,
+          "method": "web.open and web.find: Twist",
+          "result": "confirmed",
+          "evidence": "Obituary connects the R&B hit to the Beatles debut."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "the-rolling-stones",
+      "to": "card:blues",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "c9802781568c79ebfa21dd9e63814fdb768d807637a5e6e42000c6722094c7b0",
+      "sources": [
+        {
+          "url": "https://assets.cambridge.org/97811070/30268/excerpt/9781107030268_excerpt.pdf",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Academic discography documents the blues single and source recording."
+        },
+        {
+          "url": "https://www.allmusic.com/song/little-red-rooster-mt0010866510",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Editorial song review confirms the single’s blues form."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "led-zeppelin",
+      "to": "card:blues",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "569ecbd6f8f07cf06d5f7a5448a956eff230d82a42ca074accb55a31bc2b00a2",
+      "sources": [
+        {
+          "url": "https://www.loudersound.com/features/led-zeppelin-memphis-minnie-when-the-levee-breaks",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Historical feature identifies McCoy and Minnie’s original and Zeppelin adaptation."
+        },
+        {
+          "url": "https://mtosmt.org/issues/mto.16.22.3/mto.16.22.3.declercq.pdf",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Music-theory article directly compares the two recordings."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "black-sabbath",
+      "to": "card:blues",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "3fe7b376bf980dbaa870d5c2e14157c1743229b8c6f71bf7fde30ffefc346f79",
+      "sources": [
+        {
+          "url": "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Oral history describes Earth’s electric-blues repertoire."
+        },
+        {
+          "url": "https://www.guitarworld.com/gw-archive/archive-original-members-black-sabbath-look-back-30-plus-years-demonic-riffing-2001",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Separate musician interview calls Earth a blues band."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "elvis-presley",
+      "to": "card:big-mama-thornton",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "c520fc4886f9660059c82cc2948d7c97169f03e4f12f46c940b2ea500ae1a31e",
+      "sources": [
+        {
+          "url": "https://folkways.si.edu/artists/big-mama-thornton",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Museum biography documents Thornton’s original and Elvis’s later version."
+        },
+        {
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Registry essay independently confirms recording sequence."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "bob-dylan",
+      "to": "card:blues",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "d685319d0075b5797988ae55676b73ddb19d2e788576343ce9ec04d7f733b9c2",
+      "sources": [
+        {
+          "url": "https://www.bobdylan.com/albums/bootleg-series-vol-11-basement-tapes-complete",
+          "opened": true,
+          "method": "web.open and web.find: Jefferson",
+          "result": "confirmed",
+          "evidence": "Official liner notes identify the debut recording and Jefferson association."
+        },
+        {
+          "url": "https://blog.oup.com/2013/03/bob-dylan-first-listen/",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Oxford music editor reviews the debut track and credits Jefferson."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "the-clash",
+      "to": "card:reggae",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "84dd324b7dd6a31640d2bebc9babc142612dd70791236d5b90c8edfd4ac5d7a7",
+      "sources": [
+        {
+          "url": "https://www.theclash.com/music/the-clash",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Official album notes identify the Murvin reggae cover."
+        },
+        {
+          "url": "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Independent obituary confirms Murvin’s song and Clash cover."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "the-police",
+      "to": "card:reggae",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "3f2914886c27e4f55ab0b020b85bd2be5c14468813c136d37bda7950c1a1bc65",
+      "sources": [
+        {
+          "url": "https://www.guitarplayer.com/players/you-certainly-dont-want-to-be-looking-for-commercial-success-andy-summers-reveals-the-evolving-strategies-that-keep-his-creative-life-busier-than-ever",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Summers explains reggae bass suited Sting’s playing and singing."
+        },
+        {
+          "url": "https://los40.com/los40/2022/05/20/los40classic/1652955281_806107.html",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Separate Spanish interview confirms the same practical musical relationship."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "nirvana",
+      "to": "card:blues",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "fa6631d75824480af5ff2afe2de3de0817165609dbce60702adb26d0e298d901",
+      "sources": [
+        {
+          "url": "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Eyewitness account describes the closing Lead Belly rendition."
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Independent album review identifies the source version and closing position."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "iron-maiden",
+      "to": "root:led-zeppelin",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "9ea11f0e7eb9115389d12108d8b2816b544bc0d2a2b6d12516c16e124b793988",
+      "sources": [
+        {
+          "url": "https://metalinjection.net/editorials/back-in-the-day/iron-zeppelin-iron-maidens-kick-ass-cover-of-led-zeppelins-communication-breakdown",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Editorial history identifies the Zeppelin cover."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=pQpVjjOgngE",
+          "opened": true,
+          "method": "Python urllib: full page shortDescription recording credits",
+          "result": "confirmed",
+          "evidence": "Official recording metadata names Iron Maiden and Zeppelin writers."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    },
+    {
+      "artist": "the-libertines",
+      "to": "root:the-clash",
+      "reviewer": "pop_roots",
+      "checkedOn": "2026-11-12",
+      "status": "confirmed",
+      "fileSha256": "9b8b978059ff28b24501a989891ab42a1fc81720f9444b137bd2d3dfe504c60f",
+      "sources": [
+        {
+          "url": "https://www.radiox.co.uk/artists/libertines/talk-up-the-bracket-gigs-mick-jones-glasto/",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Barât interview recalls making the album with Jones."
+        },
+        {
+          "url": "https://www.the-independent.com/arts-entertainment/music/features/the-libertines-up-the-bracket-pete-doherty-carl-barat-interview-b2200753.html",
+          "opened": true,
+          "method": "web.open",
+          "result": "confirmed",
+          "evidence": "Separate interview’s standfirst confirms recording the debut with Jones."
+        }
+      ],
+      "translation": "checked",
+      "destination": "checked",
+      "independence": "Distinct originating publications; no duplicate syndication pair."
+    }
+  ],
+  "resolvedFindings": [
+    {
+      "artist": "the-libertines",
+      "finding": "Second source explicitly documents recording with Jones, without identifying the production role.",
+      "resolution": "Author narrowed both language versions to recording the debut with Jones; final wording confirmed."
+    },
+    {
+      "artist": "bob-dylan",
+      "finding": "Harvard download unavailable on independent revisit (web failure and HTTP 429).",
+      "resolution": "Replaced with Oxford University Press music-editor article, independently opened by both researchers; final claim confirmed."
+    }
+  ],
+  "unresolvedFindings": []
+}

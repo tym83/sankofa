@@ -1,0 +1,9 @@
+metadata: {name: ali-1967}
+spec:
+  type: dilemma
+  title: The draft
+  prompt: "Houston, April 1967. You are the heavyweight champion of the world and you have been called up for the war in Vietnam. Refusing means losing your title and possibly going to prison. Step forward, or refuse?"
+  choices:
+    - Step forward
+    - Refuse
+  reveal: "Muhammad Ali refused. He was stripped of his title and did not box for three and a half years, at the peak of his career. In 1971 the Supreme Court overturned his conviction."

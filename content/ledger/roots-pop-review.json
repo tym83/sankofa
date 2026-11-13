@@ -1,0 +1,298 @@
+{
+  "batch": "pop",
+  "checkedAt": "2026-11-12",
+  "reviewer": "modern_roots",
+  "method": "Independent second-agent review. Both complete source bodies read and retained English claims, endpoint relevance, source independence and Russian translations checked. Three NME bodies fetched independently with urllib after web access failed. Hashes bind review to exact claim text.",
+  "corrections": [
+    "Taylor Swift claim narrowed to recorded cover; Spotify Singles qualifier removed because only one source states it.",
+    "Johnny Cash claim narrowed to recorded song; unsupported inference of direct Lead Belly influence avoided. Library of Congress independently documents Cash’s version and the song’s prison-work-group history."
+  ],
+  "links": [
+    {
+      "artist": "taylor-swift",
+      "to": "card:funk",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "26bac683f47911cdef844d760b621fcb88aa6b7d789b780f242e27d854f42ad9",
+      "translationSha256": "75ad3c29a7e8fdd3f1dc8cf7e80c6197623fc48659f9e06720b2037cde38f0b5",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.wbgo.org/2018-04-13/you-know-what-fine-taylor-swift-covers-earth-wind-fires-september",
+          "opened": true,
+          "locator": "Review introduction, Spotify Singles cover."
+        },
+        {
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf",
+          "opened": true,
+          "locator": "Essay pages 2–3, later interpretations."
+        }
+      ]
+    },
+    {
+      "artist": "madonna",
+      "to": "card:funk",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "ea950dc0673b9846e75b77c481f49e6cd49e288f5f1c1c30fa4277638137a5a6",
+      "translationSha256": "6abc1cc988faa13cf3f82de3c5b62e12c1179c7e6d5a9892dc3dc3a96893ea41",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.rhino.com/article/may-1989-madonna-releases-express-yourself",
+          "opened": true,
+          "locator": "Song history and tribute paragraph."
+        },
+        {
+          "url": "https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/",
+          "opened": true,
+          "locator": "Express Yourself subsection."
+        }
+      ]
+    },
+    {
+      "artist": "eminem",
+      "to": "card:funk",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "a43352c081ec382f4d8e36a9d55dccc66e6788c8af1fd7a28d2f65ec0ae3ea39",
+      "translationSha256": "c588b2cebdd32d7759318a31eb32e5177a3cb2cf7adf3a2d2dbff03a59cd330a",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it",
+          "opened": true,
+          "locator": "Sampling description and original session musicians."
+        },
+        {
+          "url": "https://www.btpm.org/the-bridge/sample-this/labi-siffre-and-eminem",
+          "opened": true,
+          "locator": "Programme description below player."
+        }
+      ]
+    },
+    {
+      "artist": "amy-winehouse",
+      "to": "card:jazz",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "1bba553fec25f10333201852ba9cf75bb2dc179848fed46700870a7e51747758",
+      "translationSha256": "ed937e943bc916b54b2b440a0d5a56dc6de281f7af7bca380100f60752bf15ce",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.nme.com/features/music-interviews/amy-winehouse-band-dale-davis-3612156",
+          "opened": true,
+          "locator": "Dale Davis answer about his favourite Winehouse song; full article fetched independently with urllib."
+        },
+        {
+          "url": "https://beat.com.au/16-years-on-frank-is-a-testament-to-the-brilliance-of-amy-winehouse/",
+          "opened": true,
+          "locator": "Paragraph discussing jazz-standard covers."
+        }
+      ]
+    },
+    {
+      "artist": "adele",
+      "to": "root:bob-dylan",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "47b9b7909000fea8b5a17d6f8ebf0c948578fea86b287378a05613b5fadfbc17",
+      "translationSha256": "32ee02f69f1955eba765078cfbf7a06f2840b426f2dd42fef52e54e1b03fe067",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://au.rollingstone.com/music/music-lists/every-adele-song-ranked-35015/make-you-feel-my-love-35062/",
+          "opened": true,
+          "locator": "Make You Feel My Love entry in ranked list."
+        },
+        {
+          "url": "https://www.srf.ch/kultur/musik/cover-me-special-adele-bringt-emotionen-in-dylans-song",
+          "opened": true,
+          "locator": "Introductory comparison of Dylan and Adele recordings."
+        }
+      ]
+    },
+    {
+      "artist": "ed-sheeran",
+      "to": "root:eminem",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "840d5bda1bb7be8da30fd05a0592cb98e6d56c7c202cc0c6b6433c27738c90df",
+      "translationSha256": "62dbd92a3afbf9af2d2bff49d00dd2e712e2abe6be625bf4a6f9c2c96d7603b7",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://abcnews.com/Entertainment/eminem-helped-ed-sheeran-overcome-stuttering/story?id=31661107",
+          "opened": true,
+          "locator": "2015 gala speech recollection of learning the album."
+        },
+        {
+          "url": "https://www.standard.co.uk/showbiz/ed-sheeran-eminem-cured-his-childhood-stutter-friendship-howard-stern-b1081401.html",
+          "opened": true,
+          "locator": "Separate 2023 Howard Stern interview recollection."
+        }
+      ]
+    },
+    {
+      "artist": "billie-eilish",
+      "to": "root:the-beatles",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "30b6c964523030e479f3ccf187720310128c7d475af02cce8c5768805a9216b6",
+      "translationSha256": "5bd0715151008efe39953611fd6a5093b736621f421c57db8b5af2bdf7f4917f",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.nme.com/big-reads/billie-eilish-cover-interview-2022-glastonbury-festival-3253169",
+          "opened": true,
+          "locator": "Beatles discussion in 2022 cover interview; full article fetched independently with urllib."
+        },
+        {
+          "url": "https://www.musicradar.com/news/billie-eilish-lunch-finneas-guitar",
+          "opened": true,
+          "locator": "Separate 2024 BBC interview discussion."
+        }
+      ]
+    },
+    {
+      "artist": "johnny-cash",
+      "to": "card:work-songs",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "fdb9a6af6f587a19dc3d278d49036300e82109651bce7f7c5f3ff9644c2812b9",
+      "translationSha256": "60f451380377a1f24cfd33f198e80d4525c37385fc7ff2e1e328a0e89b20929d",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.johnnycash.com/track/rock-island-line/",
+          "opened": true,
+          "locator": "Official song catalogue and recording release."
+        },
+        {
+          "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/",
+          "opened": true,
+          "locator": "Raising the Question section and Cash performance discussion. The work-group provenance establishes the endpoint context."
+        }
+      ]
+    },
+    {
+      "artist": "dolly-parton",
+      "to": "root:the-beatles",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "f8bf0f91afd2c55828ccdeb412b1dc59c0a96dec513a07de6b8c38c5705e7877",
+      "translationSha256": "40a93690183cbb9f0578bd8a4b98708d83972f2f50bddd311e321ff65ae36f21",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.dollyparton.com/news/dolly-parton-releases-her-powerful-rendition-of-rock-classic-let-it-be",
+          "opened": true,
+          "locator": "Release announcement opening paragraphs."
+        },
+        {
+          "url": "https://www.fijitimes.com.fj/surviving-beatles-join-dolly-parton-on-let-it-be-cover/",
+          "opened": true,
+          "locator": "Reuters report, recording and performer details."
+        }
+      ]
+    },
+    {
+      "artist": "abba",
+      "to": "card:rhythm-and-blues",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "95578556d7de94dca1a373f7726d74be349507b61133fcebf11d33899c1abd6b",
+      "translationSha256": "314d6b9e4390638cee5a819635997ca01064a4107a9d526aeccb58deab5218a6",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf",
+          "opened": true,
+          "locator": "Essay page 1, Dancing Queen rhythm discussion."
+        },
+        {
+          "url": "https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/",
+          "opened": true,
+          "locator": "Dancing Queen song entry."
+        }
+      ]
+    },
+    {
+      "artist": "bts",
+      "to": "root:eminem",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "447313eec4bda3826219a09cc5f97e87c9e0c8e2a44e492f56912246caeb9f10",
+      "translationSha256": "3b39ceb5ada5a62c65af80d5c05fe7578afcaff267209b71546025635c36acb5",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://english.elpais.com/culture/2023-03-15/rm-the-leader-of-k-pop-band-bts-we-work-so-hard-in-korea-because-70-years-ago-there-was-nothing.html",
+          "opened": true,
+          "locator": "Question about cited influences and answer about becoming a rapper."
+        },
+        {
+          "url": "https://rollingstone.co.kr/the-cover/the-cover-print-cover/18024",
+          "opened": true,
+          "locator": "English introduction beneath Korean text."
+        }
+      ]
+    },
+    {
+      "artist": "george-michael",
+      "to": "card:rhythm-and-blues",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "c2c325b6cfde39329bb7e7470e15d559599b6dcadf457b36a51b520482e76161",
+      "translationSha256": "8f653859965c276190263e028b41c9f7d80b45ba7a4d4366c91016c4dd093cd4",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.grammy.com/artists/george-michael/12041",
+          "opened": true,
+          "locator": "1988 R&B performance award entry."
+        },
+        {
+          "url": "https://www.musicradar.com/artists/i-was-so-jealous-of-george-michael-mick-hucknall-says-he-was-simply-green-with-envy-when-he-learned-that-the-former-wham-star-was-recording-a-duet-with-aretha-franklin",
+          "opened": true,
+          "locator": "Description of the Franklin collaboration."
+        }
+      ]
+    },
+    {
+      "artist": "christina-aguilera",
+      "to": "card:rhythm-and-blues",
+      "reviewer": "modern_roots",
+      "status": "confirmed",
+      "claimSha256": "177914195744f4c14871ea2aaeb11c7dd5c61b7d4b60d453a145fb32d6c701ae",
+      "translationSha256": "12a9f7644a2aa417153719a88224604dceb4ba381227da4d36614f646b1e424c",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.nme.com/news/music/etta-james-1270497",
+          "opened": true,
+          "locator": "Memorial report opening paragraphs; full article fetched independently with urllib."
+        },
+        {
+          "url": "https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute",
+          "opened": true,
+          "locator": "Memorial report performance description."
+        }
+      ]
+    }
+  ]
+}

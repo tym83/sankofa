@@ -1,0 +1,156 @@
+# Глоссарий русского перевода
+
+Обязателен для карточек, глав и квестов. Общие правила — в
+[TRANSLATION-RU.md](TRANSLATION-RU.md). Если форма здесь есть, она побеждает
+любую другую, даже удачную.
+
+## Рамка музея
+
+| English | Русский |
+|---|---|
+| Book of Voices / Archives / Heirs | Книга голосов / Книга архивов / Книга наследников |
+| voices, archives, heirs (значки ❝ ▤ ✶) | голоса, архивы, наследники |
+| male copy / female copy | мужской экземпляр / женский экземпляр |
+| copy (of the museum, of a chapter) | экземпляр |
+| card | карточка |
+| this distribution (Sankofa как дистрибутив Kubernetes) | этот дистрибутив |
+| Griot (оператор памяти Sankofa) | Гриот (с прописной, как имя оператора; гриоты-сказители — со строчной) |
+
+## Эпохи и понятия
+
+| English | Русский |
+|---|---|
+| Africa Before | Африка до работорговли |
+| Asante / Ashanti | Асанте (не Ашанти) |
+| MacArthur Fellowship | грант Макартура |
+| National Hero (Jamaica) | национальный герой (со строчной) |
+| Zong massacre | резня на «Зонге» |
+| Sankofa, "go back and get it" | Санкофа, «вернись и забери» |
+| Fulani (language) | язык фула |
+| Middle Passage | Средний путь (с прописной; путь через Атлантику) |
+| Underground Railroad | Подземная железная дорога |
+| enslaved people | порабощённые люди; «рабы» — там, где так в оригинале (slaves) |
+| maroons; Windward Maroons | мароны; наветренные мароны |
+| quilombo | киломбо |
+| race records | «расовые пластинки» |
+| Négritude | негритюд |
+| Harlem Renaissance | Гарлемский ренессанс |
+| Afrobeat (Фела Кути, 1970-е) | афробит |
+| Afrobeats (поп-музыка 2010-х) | афробитс — не путать с афробитом |
+| rhythm and blues | ритм-н-блюз |
+| rock and roll | рок-н-ролл |
+| Detroit techno / Chicago house | детройт-техно / чикаго-хаус |
+| Amen break | брейк Amen; песня — «Amen, Brother» |
+| steelpan | стилпэн |
+| spirituals / work songs / field hollers | спиричуэлс / рабочие песни / полевые кличи |
+| Gullah Geechee | гулла-гичи; гулла (язык, край) |
+
+## Произведения
+
+| Оригинал | Русское название |
+|---|---|
+| Things Fall Apart (Achebe) | «Всё рушится» — так в переводе 2020 года, и так название звучит в строке Йейтса из «Второго пришествия», откуда оно взято; «И пришло разрушение» (1964) не использовать |
+| The Second Coming (Yeats) | «Второе пришествие» |
+| Heart of Darkness | «Сердце тьмы» |
+| The Interesting Narrative of the Life of Olaudah Equiano, or Gustavus Vassa, the African | «Удивительное повествование о жизни Олауды Эквиано, или Густава Васы, африканца» (русского издания нет; короче — «Удивительное повествование») |
+| Narrative of the Life of Frederick Douglass, an American Slave | «Повествование о жизни Фредерика Дугласа, американского раба» (так в русском издании; короче — «Повествование») |
+| Incidents in the Life of a Slave Girl, Written by Herself | «Случаи из жизни девушки-рабыни, написанные ею самой». Русское издание 2022 года вышло под рекламным заглавием «Я родилась рабыней»; оно не переводит название Джейкобс и в текст не идёт |
+| The Bondwoman's Narrative (Hannah Crafts) | «Повествование невольницы» |
+| Barracoon (Hurston) | «Барракун» |
+| Their Eyes Were Watching God | «Их глаза видели Бога» |
+| Born in Slavery (WPA) | «Рождённые в рабстве» |
+| Walker's Appeal | «Воззвание» Дэвида Уокера |
+| Follow the Drinking Gourd | «Следуй за Ковшом» (Ковш — Большая Медведица) |
+| Hidden in Plain View | «Спрятано на виду» |
+| Am I Not a Man and a Brother? | «Разве я не человек и не брат?» |
+| Ain't I a Woman? | «Разве я не женщина?» |
+| The Palm-Wine Drinkard | «Путешествие в Город Мёртвых» (русское издание) |
+| Stolen Legacy | «Украденное наследие» |
+| Living in Bondage | «Жизнь в неволе» (Living in Bondage) |
+| Pelo Telefone | «По телефону» (Pelo Telefone) |
+| Freedom's Journal | «Журнал свободы» (Freedom's Journal) при первом упоминании, дальше «Журнал свободы» |
+| We wish to plead our own cause (Freedom's Journal) | «Мы хотим сами отстаивать своё дело» |
+| Free Speech (Ida B. Wells) | «Свобода слова» (Free Speech) |
+| Chicago Defender | «Чикаго дефендер» |
+| Radio Haïti-Inter | «Радио Гаити-Интер» |
+| songs, records, albums in English | латиницей в «ёлочках»: «Hound Dog», «Crazy Blues», «Planet Rock» |
+
+## Имена
+
+Устоявшиеся формы из TRANSLATION-RU.md плюс:
+
+| English | Русский |
+|---|---|
+| Zora Neale Hurston | Зора Нил Хёрстон (как в русском издании «Их глаза видели Бога») |
+| Combahee River (raid) | река Комбахи; рейд на реке Комбахи |
+| Harriet Tubman | Гарриет Табмен |
+| Edward Covey | Эдвард Кови |
+| Granville Sharp | Грэнвилл Шарп |
+| Gustavus Vassa | Густав Васа |
+| Ida B. Wells | Ида Б. Уэллс |
+| Emmett Till / Mamie Till | Эммет Тилл / Мейми Тилл |
+| Dave the Potter (David Drake) | Гончар Дейв (Дэвид Дрейк) |
+| Big Mama Thornton | Биг Мама Торнтон |
+| Sister Rosetta Tharpe | Сестра Розетта Тарп |
+| Mamie Smith | Мейми Смит |
+| W. E. B. Du Bois | У. Э. Б. Дюбуа |
+| Sojourner Truth | Соджорнер Трут |
+| Phillis Wheatley | Филлис Уитли |
+| Robert Smalls; the Planter | Роберт Смоллс; «Плантер» |
+| Chevalier de Saint-Georges | шевалье де Сен-Жорж |
+| Abram Gannibal | Абрам Ганнибал |
+| Kreutzer | Крейцер |
+| Toots Hibbert | Тутс Хибберт |
+| Kool Herc / Clive Campbell | Кул Херк / Клайв Кэмпбелл |
+
+### Мандинго (манде)
+
+Сундиата Кейта; эпос — «Сундиата» или «сказание о Сундиате»; Сумаоро Канте;
+Соголон; Манса Муса; Мали; гриот, гриоты; нко; Соломана Канте.
+
+### Акан
+
+Яа Асантева; Асанте; асантехене; Кумаси; адинкра; Санкофа; кенте.
+
+### Йоруба
+
+Без тоновых знаков: Фела Кути (Фела Аникулапо Кути), йоруба, Ойо, Абеокута.
+
+### Бразилия (португальский, бразильская норма)
+
+Безударные конечные -e → -и, -o → -у только в устоявшихся формах; иначе
+по написанию: Палмарис, Зумби, Ганга-Зумба, Салвадор, Каза-Бранка,
+кандомбле, капоэйра, самба, тётушка Сиата, Донга, Каролина Мария де Жезус,
+киломбо, фавела, Серра-да-Баррига.
+
+### Ямайка
+
+Тренч-Таун, Кингстон, Нэнни из маронов, Куао.
+
+### Ангола
+
+Нзинга, королева Ндонго и Матамбы.
+
+## Типографика
+
+- «Ёлочки», внутри „лапки“; тире — длинное, с пробелами; в диапазонах лет —
+  короткое без пробелов (1936–1938), в диапазонах с веком — длинное с
+  пробелами (XVI век — 1860-е).
+- Века римскими цифрами: XVIII век.
+- «ё» пишется всегда, где она есть: всё, ещё, её, чёрный, Хёрстон.
+- Числа как в оригинале; тысячи — через неразрывный пробел (100 000).
+- Названия произведений в ссылках склоняются по слову перед кавычками:
+  [[zong|резне на «Зонге»]], [[hannah-crafts|«Повествование невольницы»]]. „Лапки“ — только внутри «ёлочек».
+
+## Kubernetes в интерфейсе
+
+| English | Russian | Note |
+|---|---|---|
+| control plane | управляющий слой | the part of the cluster that runs it; in the listening room it is the bell |
+| node | узел | a machine of the cluster; in the listening room a drum |
+| pod | под | a running program; in plain text «программа» |
+| Lease (node heartbeat) | сигнал «я жив» | the kubelet renews it every few seconds |
+| ready / not ready | готов / молчит | in the listening room |
+| declared down | объявлен выбывшим | after the grace period |
+
+| ruler of Mali (Mansa Musa) | царь Мали | одинаково на обложке, в главе и в карточке |

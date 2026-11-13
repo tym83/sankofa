@@ -1,0 +1,32 @@
+id: "creedence-clearwater-revival"
+name: "Creedence Clearwater Revival"
+nameRu: "Creedence Clearwater Revival"
+aliases: ["криденс", "криденс клируотер ривайвл", "CCR"]
+years: [1967]
+place: {"name": "El Cerrito, California", "lat": 37.9161, "lon": -122.3108}
+placeRu: "Эль-Серрито, Калифорния"
+genre: "Roots rock / blues rock"
+genreRu: "рутс-рок / блюз-рок"
+links:
+  - to: "card:rhythm-and-blues"
+    claim: "Creedence Clearwater Revival recorded Screamin’ Jay Hawkins’s “I Put a Spell on You”."
+    claimRu: "Creedence Clearwater Revival записали «I Put a Spell on You» Скримин Джея Хокинса."
+    sources:
+      - title: "Concord: Creedence Clearwater Revival, 40th Anniversary Edition"
+        url: "https://concord.com/concord-albums/creedence-clearwater-revival-40th-anniv-edition/"
+      - title: "Americana UK: The Top Ten Creedence Clearwater Revival Cover Songs"
+        url: "https://americana-uk.com/essentials-the-top-ten-creedence-clearwater-revival-cover-songs"
+    kind: "cover"
+    what: "“I Put a Spell on You”: Creedence Clearwater Revival’s own recording of Screamin’ Jay Hawkins’s song."
+    whatRu: "«I Put a Spell on You»: собственная запись песни Скримин Джея Хокинса группой Creedence Clearwater Revival."
+  - to: "root:little-richard"
+    kind: "influence"
+    claim: "Little Richard was a formative influence on Creedence Clearwater Revival’s John Fogerty."
+    claimRu: "Литл Ричард повлиял на музыкальное становление Джона Фогерти из Creedence Clearwater Revival."
+    sources:
+      - title: "Rock Cellar: John Fogerty — A Fortunate Son Speaks"
+        url: "https://rockcellarmagazine.com/john-fogerty-a-fortunate-son-speaks-the-interview/"
+      - title: "Den of Geek: John Lingan on Creedence’s musical formation"
+        url: "https://www.denofgeek.com/culture/why-creedence-clearwater-revival-remains-the-definitive-band-of-its-era/"
+story: "Little Richard helped shape Creedence Clearwater Revival’s John Fogerty as a musician. The band also recorded Screamin’ Jay Hawkins’s “I Put a Spell on You”."
+storyRu: "Литл Ричард повлиял на становление Джона Фогерти из Creedence Clearwater Revival как музыканта. Группа также записала «I Put a Spell on You» Скримин Джея Хокинса."

@@ -1,0 +1,28 @@
+id: charlie-parker
+name: Charlie Parker
+nameRu: Чарли Паркер
+aliases:
+- чарли паркер
+- бёрд
+years:
+- 1920
+- 1955
+place:
+  name: Kansas City, Kansas
+  lat: 39.1142
+  lon: -94.6275
+placeRu: "Канзас-Сити, Канзас"
+genre: Bebop
+genreRu: бибоп
+story: Charlie Parker learned his craft in Kansas City’s jazz scene. Its bands and clubs were his apprenticeship.
+storyRu: Чарли Паркер учился своему ремеслу на джазовой сцене Канзас-Сити. Школой для него стали местные ансамбли и клубы.
+links:
+- to: card:jazz
+  kind: scene
+  claim: Charlie Parker’s musical apprenticeship took place in Kansas City’s jazz bands and clubs.
+  claimRu: Чарли Паркер учился музыке, играя в джазовых ансамблях и клубах Канзас-Сити.
+  sources:
+  - title: 'Ed Komara: Ko Ko — Library of Congress'
+    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf
+  - title: 'C.J. Janovy: Kansas City’s Charlie Parker History Tour — KCUR'
+    url: https://www.kcur.org/arts-life/2016-08-29/kansas-citys-charlie-parker-history-tour-requires-a-guide-and-imagination

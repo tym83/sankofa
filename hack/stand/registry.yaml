@@ -1,0 +1,29 @@
+# A registry on every node of the stand, on the node's localhost:5000.
+# containerd pulls from localhost over plain HTTP, so the stand needs no
+# external registry and no credentials. Images are pushed to each node with
+# hack/stand/push.sh.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sankofa-registry
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: registry
+  namespace: sankofa-registry
+spec:
+  selector: {matchLabels: {app: registry}}
+  template:
+    metadata: {labels: {app: registry}}
+    spec:
+      containers:
+        - name: registry
+          image: docker.io/library/registry:3
+          env: [{name: REGISTRY_STORAGE_DELETE_ENABLED, value: "true"}]
+          ports: [{containerPort: 5000, hostPort: 5000, hostIP: 127.0.0.1}]
+          resources: {requests: {cpu: 10m, memory: 32Mi}}
+          volumeMounts: [{name: data, mountPath: /var/lib/registry}]
+      volumes:
+        - name: data
+          emptyDir: {}

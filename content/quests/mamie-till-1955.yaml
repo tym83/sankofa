@@ -1,0 +1,10 @@
+metadata: {name: mamie-till-1955}
+spec:
+  type: dilemma
+  title: An open casket
+  prompt: "Chicago, September 1955. Your fourteen-year-old son was murdered in Mississippi, and his body came home disfigured. The funeral is in a few days. Closed casket, or open?"
+  choices:
+    - A closed casket, as everyone expects
+    - Open, so that everyone sees
+  reveal: "Mamie Till-Mobley chose an open casket: she wanted the world to see what had been done to her son. Tens of thousands came, and Jet magazine published the photographs. Many people later said that this was the moment they joined the civil rights movement."
+  cards: [emmett-till]

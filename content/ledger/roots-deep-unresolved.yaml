@@ -1,0 +1,32 @@
+checkedOn: '2026-11-12'
+entries:
+  - artist: massive-attack
+    track: Paradise Circus
+    proposedSourceArtist: Nina Simone
+    proposedSourceRecording: See-Line Woman
+    proposedBorrowing: Beat and handclaps
+    status: unresolved-not-added
+    finding: >-
+      Community sample lists attribute the percussion to Nina Simone's
+      See-Line Woman. The opened material did not provide two independent
+      authoritative confirmations. This investigation neither confirms nor
+      disproves that attribution and establishes no alternative sample.
+    sources:
+      - title: Silva Screen — Luther official digital booklet, track 8 credits
+        url: https://www.silvascreen.com/wp-content/uploads/SILCD1434-Luther-DigitalBooklet_V2.pdf
+        opened: true
+        evidence: >-
+          Credits list drums by Gerhardt Jerry Fuchs, piano and vibraphone by
+          Neil Davidge, and programming contributors. They do not identify a
+          sampled recording. Live-player credits and an absent sample credit
+          are not proof that no sample was used.
+      - title: The New Vinyl Villain — Massive Attack archive
+        url: https://thenewvinylvillain.com/category/massive-attack/
+        opened: true
+        evidence: >-
+          An informal commentary attributes the drum pattern to See-Line Woman.
+          Retained as a lead only, not authoritative confirmation.
+    followUp: >-
+      Seek a recording-session account, documented clearance or liner-note
+      attribution identifying the recording and the borrowed part, then
+      corroborate it independently before adding an edge.

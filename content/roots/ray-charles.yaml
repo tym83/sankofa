@@ -1,0 +1,30 @@
+---
+id: ray-charles
+name: Ray Charles
+nameRu: Рэй Чарльз
+aliases:
+- рэй чарльз
+years:
+- 1930
+- 2004
+place:
+  name: Albany, Georgia
+  lat: 31.5785
+  lon: -84.1557
+placeRu: "Олбани, Джорджия"
+genre: Soul and rhythm and blues
+genreRu: соул и ритм-н-блюз
+links:
+- to: card:gospel
+  kind: influence
+  claim: Ray Charles fused gospel expression with rhythm and blues on “I Got a Woman”.
+  claimRu: В «I Got a Woman» Рэй Чарльз соединил выразительность госпела с ритм-н-блюзом.
+  sources:
+  - title: 'Blue Note Records: Ray Charles biography'
+    url: https://www.bluenote.com/artist/ray-charles/
+  - title: 'Rhino: Single Stories — I Got a Woman'
+    url: https://www.rhino.com/article/single-stories-ray-charles-i-got-a-woman
+story: On “I Got a Woman”, Ray Charles brought gospel expression into rhythm and blues.
+  His singing joined those two traditions in one performance.
+storyRu: В «I Got a Woman» Рэй Чарльз перенёс выразительность госпела в ритм-н-блюз.
+  Его пение соединило эти две традиции в одной записи.

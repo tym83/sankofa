@@ -1,0 +1,125 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.23.0
+  name: quests.sankofa.kuberoot.dev
+spec:
+  group: sankofa.kuberoot.dev
+  names:
+    kind: Quest
+    listKind: QuestList
+    plural: quests
+    singular: quest
+  scope: Cluster
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .spec.type
+      name: Type
+      type: string
+    - jsonPath: .spec.title
+      name: Title
+      type: string
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: Quest is a game that helps to understand. Play it with `sankofa
+          quest`.
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: |-
+              QuestSpec describes a quest: a dilemma, a quiz, a dictionary walk or a
+              cluster task that needs knowledge to fix.
+            properties:
+              answer:
+                description: 'For quizzes: the index of the right choice. Dilemmas
+                  have no right answer.'
+                type: integer
+              cards:
+                description: Cards the quest opens.
+                items:
+                  type: string
+                type: array
+              check:
+                description: 'For cluster quests: the check that must pass, e.g. "package
+                  rock-n-roll Installed".'
+                type: string
+              choices:
+                description: Choices for dilemmas and quizzes.
+                items:
+                  type: string
+                type: array
+              from:
+                description: 'For walks: the start and the goal card, and the link
+                  budget.'
+                type: string
+              maxSteps:
+                type: integer
+              prompt:
+                description: The situation or the question.
+                type: string
+              reveal:
+                description: What really happened, shown after the reader answers.
+                type: string
+              title:
+                type: string
+              to:
+                type: string
+              translations:
+                additionalProperties:
+                  description: QuestText is a quest in another language.
+                  properties:
+                    choices:
+                      items:
+                        type: string
+                      type: array
+                    prompt:
+                      type: string
+                    reveal:
+                      type: string
+                    title:
+                      type: string
+                  required:
+                  - prompt
+                  - reveal
+                  - title
+                  type: object
+                description: Translations by language code.
+                type: object
+              type:
+                enum:
+                - dilemma
+                - quiz
+                - walk
+                - cluster
+                type: string
+            required:
+            - prompt
+            - reveal
+            - title
+            - type
+            type: object
+        required:
+        - spec
+        type: object
+    served: true
+    storage: true
+    subresources: {}

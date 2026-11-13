@@ -1,0 +1,21 @@
+id: "arthur-crudup"
+name: "Arthur Crudup"
+nameRu: "Артур Крадап"
+aliases: ["артур крадап"]
+years: [1905, 1974]
+place: {"name": "Forest, Mississippi", "lat": 32.3646, "lon": -89.4742}
+placeRu: "Форест, Миссисипи"
+genre: "Blues"
+genreRu: "блюз"
+links:
+  - to: "card:gospel"
+    kind: "influence"
+    claim: "Arthur Crudup developed his musical skills through gospel singing before his blues recording career."
+    claimRu: "До начала карьеры блюзового исполнителя на пластинках Артур Крадап развивал своё музыкальное мастерство, исполняя госпел."
+    sources:
+      - title: "Mississippi Blues Trail: Arthur Big Boy Crudup"
+        url: "https://visitmississippi.org/things-to-do/blues-trail/mississippi-blues-trail-arthur-big-boy-crudup/"
+      - title: "Virginia General Assembly: Arthur William Crudup commemoration (2023)"
+        url: "https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf="
+story: "Arthur Crudup developed his musical skills through gospel singing. That apprenticeship preceded his blues recording career."
+storyRu: "Артур Крадап развивал своё музыкальное мастерство, исполняя госпел. Эта школа предшествовала его карьере блюзового исполнителя на пластинках."

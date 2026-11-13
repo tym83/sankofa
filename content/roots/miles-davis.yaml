@@ -1,0 +1,37 @@
+id: miles-davis
+name: Miles Davis
+nameRu: Майлз Дэвис
+aliases:
+- майлз дэвис
+- майлс дейвис
+years:
+- 1926
+- 1991
+place:
+  name: "Alton, Illinois"
+  lat: 38.8906
+  lon: -90.1843
+placeRu: "Олтон, Иллинойс"
+genre: Jazz
+genreRu: джаз
+story: Miles Davis came of age in New York’s bebop scene. Playing alongside Charlie Parker helped shape his musical voice.
+storyRu: Майлз Дэвис складывался как музыкант на нью-йоркской сцене бибопа. Игра рядом с Чарли Паркером помогла ему выработать собственный музыкальный голос.
+links:
+- to: root:charlie-parker
+  kind: influence
+  claim: Playing alongside Charlie Parker helped shape the young Miles Davis’s musical voice.
+  claimRu: Игра рядом с Чарли Паркером помогла молодому Майлзу Дэвису выработать собственный музыкальный голос.
+  sources:
+  - &id001
+    title: 'Blue Note Records: Miles Davis — biography'
+    url: https://www.bluenote.com/artist/miles-davis/
+  - title: 'American Jazz Museum: Bird, Diz, and Miles — The Making of Miles Davis'
+    url: https://americanjazzmuseum.org/exhibits-events/bird-diz-and-miles-the-making-of-miles-davis/
+- to: card:jazz
+  kind: scene
+  claim: Miles Davis entered New York’s bebop scene in the mid-1940s.
+  claimRu: В середине 1940-х годов Майлз Дэвис вошёл в нью-йоркскую сцену бибопа.
+  sources:
+  - title: 'National Endowment for the Arts: Miles Davis'
+    url: https://www.arts.gov/honors/jazz/miles-davis
+  - *id001

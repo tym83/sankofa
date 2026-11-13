@@ -1,0 +1,13 @@
+metadata:
+  name: kreutzer
+spec:
+  type: quiz
+  title: Whose sonata?
+  prompt: Beethoven's Violin Sonata No. 9 is known as the "Kreutzer". For whom did he actually write it?
+  choices:
+    - Rodolphe Kreutzer
+    - George Bridgetower
+    - Joseph Bologne, Chevalier de Saint-Georges
+  answer: 1
+  reveal: He wrote it for George Bridgetower and premiered it with him in Vienna in 1803. After a quarrel, the dedication went to Kreutzer, who never played it.
+  cards: [bridgetower]

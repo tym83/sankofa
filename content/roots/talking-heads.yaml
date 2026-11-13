@@ -1,0 +1,29 @@
+id: "talking-heads"
+name: "Talking Heads"
+aliases: ["токинг хедс", "токинг хэдс", "дэвид бирн"]
+years: [1975]
+place: {"name": "New York", "lat": 40.7128, "lon": -74.006}
+placeRu: "Нью-Йорк"
+genre: "New wave and art rock"
+genreRu: "новая волна и арт-рок"
+story: "Talking Heads turned to Fela Kuti’s Afrobeat while making Remain in Light. It became a source for their own music on that album."
+storyRu: "Работая над «Remain in Light», Talking Heads обратились к афробиту Фелы Кути. Он стал одним из источников музыки этого альбома."
+links:
+  - to: "card:afrobeat"
+    kind: "influence"
+    claim: "Talking Heads drew on Fela Kuti's Afrobeat when making Remain in Light."
+    claimRu: "Работая над Remain in Light, Talking Heads опирались на афробит Фелы Кути."
+    sources:
+      - title: "Library of Congress: Remain in Light — Talking Heads"
+        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
+      - title: "Pitchfork: Talking Heads — Remain in Light"
+        url: "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/"
+  - to: "root:fela-kuti"
+    kind: "influence"
+    claim: "Talking Heads drew on Fela Kuti's Afrobeat when making Remain in Light."
+    claimRu: "Работая над Remain in Light, Talking Heads опирались на афробит Фелы Кути."
+    sources:
+      - title: "Library of Congress: Remain in Light — Talking Heads"
+        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
+      - title: "Pitchfork: Talking Heads — Remain in Light"
+        url: "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/"

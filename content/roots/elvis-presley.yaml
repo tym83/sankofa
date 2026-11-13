@@ -1,0 +1,34 @@
+id: "elvis-presley"
+name: "Elvis Presley"
+nameRu: "Элвис Пресли"
+aliases: ["элвис", "elvis"]
+years: [1935, 1977]
+place: {"name": "Tupelo, Mississippi", "lat": 34.2576, "lon": -88.7034}
+placeRu: "Тупело, Миссисипи"
+genre: "Rock and roll"
+genreRu: "рок-н-ролл"
+links:
+  - to: "card:big-mama-thornton"
+    claim: "Elvis Presley recorded “Hound Dog”, the song first recorded by Big Mama Thornton."
+    claimRu: "Элвис Пресли записал «Hound Dog» — песню, которую первой записала Биг Мама Торнтон."
+    sources:
+      - title: "The Guardian: Why no one sang the blues like Big Mama Thornton"
+        url: "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis"
+      - title: "Michael Sporke: Hound Dog — Big Mama Thornton (Library of Congress)"
+        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf"
+    kind: "cover"
+    what: "“Hound Dog”: Presley’s own recording of the song first recorded by Thornton."
+    whatRu: "«Hound Dog»: собственная запись Пресли песни, которую первой записала Торнтон."
+  - to: "root:arthur-crudup"
+    kind: "cover"
+    claim: "Elvis Presley released his debut single with Arthur Crudup’s “That’s All Right”."
+    claimRu: "Для своего дебютного сингла Элвис Пресли записал песню Артура Крадапа «That’s All Right»."
+    what: "“That’s All Right”: Presley’s 1954 debut single re-records Crudup’s blues song."
+    whatRu: "«That’s All Right»: на дебютном сингле 1954 года Пресли заново исполнил блюзовую песню Крадапа."
+    sources:
+      - title: "Associated Press: Arthur Crudup and Elvis’s first hit (Chicago Sun-Times)"
+        url: "https://chicago.suntimes.com/music/2024/07/05/bluesman-arthur-crudup-wrote-thats-all-right-elvis-first-hit-song-but-he-barely-got-paid-for-it"
+      - title: "Virginia General Assembly: Arthur William Crudup commemoration (2023)"
+        url: "https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf="
+story: "Elvis Presley’s debut single featured Arthur Crudup’s “That’s All Right”. He also recorded “Hound Dog”, a song first recorded by Big Mama Thornton."
+storyRu: "На дебютном сингле Элвиса Пресли прозвучала «That’s All Right» Артура Крадапа. Он также записал «Hound Dog» — песню, которую первой исполнила на пластинке Биг Мама Торнтон."

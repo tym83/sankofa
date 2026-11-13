@@ -1,0 +1,197 @@
+# Sankofa on kuberoot
+
+Sankofa derives its distribution profile from kuberoot **edge**. The wrapper
+`hack/kuberoot.sh` archives the pinned kuberoot revision into a temporary tree,
+adds `distros/sankofa`, then calls kuberoot's own `hack/hetzner.sh`. It never
+changes the reference checkout. The default source is `../kuberoot`; set
+`KUBEROOT_SRC` and `KUBEROOT_REF` to use another checkout/revision.
+
+The node image contains static `griot` and `sankofa` binaries. On the control
+plane, kinit supervises Griot after the API server starts. Griot creates
+`/var/lib/griot/memory.db`; after disk installation, `/var` is the persistent
+state partition. Live-media history is temporary: install before running
+workloads. The tested topology is **one control plane and two workers**.
+Multiple Griot endpoint publishers and replicated memory are not supported.
+
+The `sankofa-system/griot` Service has no selector. Griot registers the node IP
+as its HTTPS Endpoint, on port 8443, and reconciles serving CA bundles into
+the history APIService and admission configurations. The serving certificate
+matches the Service DNS name. CRDs, namespace, RBAC and webhooks are addons;
+card and quest content is embedded in Griot. No Sankofa container image or
+registry is involved. Media defaults to `kuberoot.distro=edge` for the base
+package subscription; the baked node-service profile remains Sankofa. Node startup uses the admin kubeconfig, as in the
+reference node-service integration; the addon ServiceAccount RBAC also remains
+available for the ordinary Deployment installation.
+
+## Build
+
+Prerequisites on the workstation: Bash, Python 3, Git, kubectl, the kuberoot
+checkout, and workshop credentials. Heavy builds and Go tests run in the
+owned builder, never on the workstation.
+
+```sh
+hack/kuberoot.sh builder
+kubectl --kubeconfig "$HOME/workshop.txt" --context admin@workshop \
+  -n tenant-sankofa wait pod/sankofa-builder --for=condition=Ready --timeout=180s
+hack/kuberoot.sh test
+export KUBEROOT_VERSION=0.1.0-sankofa.2
+hack/kuberoot.sh build amd64
+hack/kuberoot.sh media amd64
+```
+
+The builder's PVC is `sankofa-build`, Pod and Service are `sankofa-builder`,
+all in `tenant-sankofa`. Sources, caches and artifacts stay under `/work`.
+The file server exposes `/work/out`, not `/work/trust` or `/work/kube`.
+The builder has no registry container. Its CPU requests total 100m; builds
+use at most four compiler workers. Each stand VM has 1 vCPU and 4 GiB RAM.
+Check tenant quota before creating nodes; never raise quota or modify the
+museum to make room.
+
+Before bootstrap/testing, install Linux amd64 kubectl v1.37.2 into the builder
+at `/work/bin/kubectl`. Download it from
+`https://dl.k8s.io/release/v1.37.2/bin/linux/amd64/kubectl`, verify it against
+the adjacent `kubectl.sha256`, and make it executable. Install Hydrophone
+v0.8.0 at `/work/bin/hydrophone` from the official
+[release assets](https://github.com/kubernetes-sigs/hydrophone/releases/tag/v0.8.0):
+verify `hydrophone_Linux_x86_64.tar.gz` against
+`hydrophone_0.8.0_checksums.txt` before extracting its executable.
+Use `hack/kuberoot.sh sh` to enter the builder for these steps.
+
+## Boot and install
+
+```sh
+hack/kuberoot.sh node sankofa-1 amd64
+hack/kuberoot.sh node sankofa-2 amd64
+hack/kuberoot.sh node sankofa-3 amd64
+```
+
+These commands create only `sankofa-*` VMInstance/VMDisk resources in
+`tenant-sankofa`, importing media from our builder. Wait for each import and VM
+before creating the next if quota is tight. Inspect the owned VMInstance and
+VirtualMachineInstance status to obtain the three internal node addresses.
+All workshop kubectl calls must specify `--kubeconfig "$HOME/workshop.txt"
+--context admin@workshop -n tenant-sankofa` explicitly.
+
+Run `hack/kuberoot/bootstrap.py install IP1 IP2 IP3` **inside the builder**
+with `KUBECTL` pointing to its kubectl binary. It verifies the Sankofa distro
+and empty `vdb`, installs each node onto that disk, and leaves it running from
+media. On each owned VMInstance, set `spec.runStrategy: Halted` and wait for its
+VirtualMachineInstance to disappear. Then replace `spec.disks` with just
+`[{"name":"sankofa-N-system"}]` and set `runStrategy: Always`.
+This boots the installed system without its media disk. Read the new VMI
+addresses before joining; addresses can change across a stop/start. Do not
+repeat the initial `node` command on installed VMs, since it reattaches media.
+
+On this workshop, the VMInstance Helm controller can wait for Ready while
+applying Halted and delay the next start. After setting the desired system-only
+Always spec, run `python3 hack/kuberoot/start-installed.py` on the workstation.
+It checks the desired state and mirrors it only to our three stopped underlying
+VirtualMachines, without modifying disk contents or other tenants. It is a no-op if the
+installed-disk configuration is already applied.
+
+Run `hack/kuberoot/bootstrap.py join IP1 IP2 IP3` in the builder. It waits for
+healthy installed boot slots and joins nodes 2 and 3 as workers using the node
+API. The resulting private kubeconfig is `/work/kube/sankofa.conf`; never copy
+it into this repository or evidence archives. Inspect its current-context
+and use that value below. The workshop kubeconfig is never used for tests
+inside the nested distribution.
+
+## Feature and upstream tests
+
+In the builder, after copying the current source with `hack/kuberoot.sh test`:
+
+```sh
+export KUBECTL=/work/bin/kubectl
+export SANKOFA_CLI=/work/out/amd64/sankofa/sankofa
+export SANKOFA_KUBECONFIG=/work/kube/sankofa.conf
+export SANKOFA_CONTEXT=$($KUBECTL --kubeconfig "$SANKOFA_KUBECONFIG" config current-context)
+cd /work/src/sankofa
+mkdir -p /work/results
+E2E_RESULTS=/work/results/features-results.json python3 hack/e2e/features.py
+HYDROPHONE=/work/bin/hydrophone hack/e2e/conformance.sh
+```
+
+Use Hydrophone v0.8.0 from its official release, verifying the release
+checksum before extracting it. The conformance script pins the official
+Kubernetes v1.37.2 image by SHA-256 index digest, checks three Ready nodes and
+Sankofa API/webhooks, then runs the complete conformance selection with four workers
+(`CONFORMANCE_PARALLEL` overrides the worker count).
+It retains stdout, upstream JUnit/e2e logs, image identity, runner version,
+node and webhook state, and a strict summary under `/work/results`. It requires
+**462 passed, zero failed, zero skipped conformance cases**. There is no skip
+expression. A missing report or wrong test count fails the command.
+
+The feature suite creates uniquely named resources and cleans up only those:
+
+- Cluster cards and a server-only card read through `sankofa dict --plain`.
+- A recorded Deployment deleted and fetched with the same spec and a new UID.
+- History globally readable at the API layer, with inner SubjectAccessReview
+  allowing one namespace and denying/filtering the other.
+- Protected namespace deletion denied before a council, after the chief speaks
+  early, and after ordinary voices; allowed only after the chief speaks last.
+- Twelve `H 3 * * *` schedules converted to distinct valid minutes.
+- Credits absent in an unlabelled namespace and present in a labelled namespace.
+
+For node-service diagnostics, use the private node trust kubeconfig at
+`/work/trust/admin.kubeconfig`, context `kuberoot`, and
+`--server https://NODE_IP:50000`: inspect `osconfigs`, `nodeservices griot`,
+`bootentries`, and the node-service log subresource. Griot restart recreates
+its serving certificate and repairs trust without discarding disk memory.
+
+Upstream runner reference: <https://github.com/kubernetes-sigs/hydrophone>.
+The completed stand run is recorded below and in the retained evidence.
+
+## Signed updates and persistence
+
+For a change to the node binaries or profile, build with a new
+`KUBEROOT_VERSION`, then run `hack/kuberoot.sh bundle amd64`. The bundle, digest
+and signature are in `/work/out/amd64/bundles`. From the builder, run
+`python3 hack/kuberoot/upgrade.py VERSION BUNDLE_URL SHA256 IP1 IP2 IP3`.
+Use the builder Service address on port 8080 for BUNDLE_URL. Each node verifies
+the signature against its baked release key, stages the inactive slot, reboots,
+and must report the requested release as Good before the next node is updated.
+
+Before conformance, `hack/e2e/persistence.py` additionally verifies that a
+recorded deletion remains fetchable after a real control-plane reboot. Set
+`SANKOFA_NODE_IP` and `SANKOFA_NODE_KUBECONFIG=/work/trust/admin.kubeconfig`
+beside the feature-suite variables. This check intentionally reboots the
+control plane; run it while no other test is active.
+
+Griot's node-service profile sets `KUBE_FEATURE_WatchListClient=false` on this
+edge/kine base: the initial streaming-list bookmark did not complete on the
+stand. Ordinary LIST followed by WATCH preserves the resource-version boundary
+and allows the recorder to start. Upstream conformance selection is unchanged.
+
+## Recorded validation — 2026-11-12
+
+All three installed nodes ran `0.1.0-sankofa.2`, Kubernetes v1.37.2,
+kernel 6.18.62-kuberoot and containerd 2.4.2. The control plane is
+`kuberoot-a23175`; workers are `kuberoot-0c599e` and `kuberoot-2dc975`.
+
+| Check | Result |
+| --- | --- |
+| `go test ./...` in the builder | Passed |
+| Live feature suite | 6/6 passed |
+| Installed control-plane reboot and memory restore | Passed |
+| Upstream conformance, four workers | **462/462 passed, 0 failed, 0 selected skipped** |
+| Post-conformance state | 3 Ready nodes, history API Available, Griot Running |
+
+The complete conformance run took 2520.338 seconds of suite execution;
+Hydrophone exited 0. The other 2744 upstream specs were outside the standard
+Conformance focus. No selected conformance test was excluded. The official
+image was pinned to
+`registry.k8s.io/conformance@sha256:d503a15722ea23662c482b72ce01ee6e9efec1e8b9c2d3834aa0c51bb2d0832a`.
+
+Evidence is retained in the builder at `/work/results`, with the accepted
+run in `conformance-20261112-parallel/` (`junit_01.xml`, `e2e.log`,
+`hydrophone.log`, `summary.json`, image and environment records). Earlier
+failed feature attempts and the interrupted serial conformance attempt are
+kept separately; they are not acceptance results. The exported archive is
+`~/Downloads/sankofa-kuberoot-validation-2026-11-12.tar.gz`.
+
+Boot media and the signed release bundle remain on the builder PVC under
+`/work/out/amd64`. Bundle SHA-256:
+`f00f7bec372293b6ed39263e802b27450916656d8bb27952ad37e314fc399340`.
+The evidence includes binary/media checksums. Private kubeconfigs and signing
+keys remain outside the evidence and file server. The public museum and
+tenant quota were not modified.

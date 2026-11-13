@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sankofa — Go back and fetch it" />
+    <meta property="og:description" content="Seven centuries of Black culture, from the libraries of Timbuktu to the starships of Sun Ra: a museum that ships as a Kubernetes distribution." />
+    <meta property="og:image" content="https://museum.sankofa.workshop.aenix.io/social-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Sankofa — Go back and fetch it</title>
+    <meta name="description" content="Seven centuries of Black culture, from the courts of Mali to Afrofuturism: a museum that ships as a Kubernetes distribution." />
+    <meta name="theme-color" content="#0c0d18" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0d18'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='20' text-anchor='middle' fill='%23e3ab3d'%3ES%3C/text%3E%3C/svg%3E" />
+    <script>
+      try {
+        if (localStorage.getItem('sankofa.theme') === 'light') document.documentElement.dataset.theme = 'light';
+      } catch (e) {}
+      // The language, before the first paint: the link, the reader's choice, the browser.
+      (function () {
+        var l = null;
+        try {
+          l = new URLSearchParams(location.hash.slice(1)).get('lang');
+          if (l !== 'ru' && l !== 'en') l = localStorage.getItem('sankofa.lang');
+        } catch (e) {}
+        if (l !== 'ru' && l !== 'en') l = (navigator.languages || [navigator.language || '']).some(function (x) { return /^ru\b/i.test(x); }) ? 'ru' : 'en';
+        document.documentElement.lang = l;
+        if (l === 'ru') document.title = 'Sankofa — Вернись и забери';
+      })();
+    </script>
+    <link rel="preload" as="image" type="image/webp" imagesrcset="media/w960/hero-v0.webp 960w, media/hero-v0.webp 1600w" imagesizes="100vw" fetchpriority="high" />
+    <style>
+      /* Critical: what the first screen needs before the stylesheet arrives. */
+      html,body{margin:0;background:#0c0d18;color:#f2e9d8}
+      body{font-family:Fraunces,Georgia,serif}
+      .nav{position:fixed;inset:0 0 auto 0;height:56px;z-index:40;display:flex;align-items:center;gap:16px;padding:0 clamp(16px,4vw,56px)}
+      .nav-actions svg{width:16px;height:16px}
+      .cover{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;isolation:isolate}
+      .cover-art{position:absolute;inset:0;margin:0;z-index:-2}
+      .cover-art img{width:100%;height:100%;object-fit:cover;object-position:68% 30%}
+      .cover-inner{padding:0 clamp(16px,4vw,56px) clamp(48px,10vh,110px)}
+      .cover h1{font-size:clamp(64px,15vw,210px);line-height:.86;margin:0;font-weight:400}
+      html:not(:lang(ru)) [data-l=ru],html:lang(ru) [data-l=en]{display:none}
+    </style>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip" href="#story"><span data-l="en">Skip to the story</span><span data-l="ru">Перейти к истории</span></a>
+    <nav class="nav" aria-label="Museum">
+      <a class="wordmark" href="#" data-home>Sanko<span>f</span>a</a>
+      <div class="progress" aria-label="Chapters"></div>
+      <div class="nav-actions">
+        <button class="btn" type="button" data-open-descent data-descent=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v15m0 0-6-6m6 6 6-6M5 21h14"/></svg><span class="label"><span data-l="en">Descend</span><span data-l="ru">Сквозь века</span></span></button>
+        <button class="btn" type="button" data-open-atlas><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14"/></svg><span class="label"><span data-l="en">Atlas</span><span data-l="ru">Атлас</span></span></button>
+        <button class="btn" type="button" data-open-listen data-listen=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h2m3-5v10m4-14v18m4-12v6m4-9v12"/></svg><span class="label"><span data-l="en">Listen</span><span data-l="ru">Слушать</span></span></button>
+        <button class="btn" type="button" data-open-roots data-roots=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v7m0 0-5 5m5-5 5 5m-5-5v11M7 15l-3 6m3-6 2 6m8-6 3 6m-3-6-2 6"/></svg><span class="label"><span data-l="en">Roots</span><span data-l="ru">Корни</span></span></button>
+        <button class="btn" type="button" data-open-engine data-engine=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 4 4-4 4m6 0h8"/></svg><span class="label"><span data-l="en">Engine room</span><span data-l="ru">Машинное отделение</span></span></button>
+        <button class="btn" type="button" data-open-book><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Zm0 16a2 2 0 0 1 2-2h13v2"/></svg><span class="label"><span data-l="en">Your book</span><span data-l="ru">Ваша книга</span></span> <span class="count" data-path-count>0</span></button>
+        <button class="btn lang-switch" type="button" data-lang-switch><span data-l="en" lang="ru" aria-label="Читать по-русски">RU</span><span data-l="ru" lang="en" aria-label="Read in English">EN</span></button>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg></button>
+      </div>
+    </nav>
+    <main id="story" tabindex="-1">
+      <section class="cover" aria-labelledby="cover-title">
+        <figure class="cover-art">
+          <picture><source type="image/webp" srcset="media/w960/hero-v0.webp 960w, media/hero-v0.webp 1600w" sizes="100vw" /><img src="media/hero-v0.jpg" width="1600" height="1141" alt="" fetchpriority="high" decoding="async" onerror="var s=this.previousElementSibling;if(s&amp;&amp;s.tagName==='SOURCE'){s.remove();this.src=this.src}" /></picture>
+        </figure>
+        <div class="cover-inner">
+          <h1 id="cover-title">Sanko<em>f</em>a</h1>
+          <p class="deck" data-l="en">Seven centuries of Black culture, from the libraries of Timbuktu to the starships of Sun Ra.</p>
+          <p class="deck" data-l="ru">Семь веков чёрной культуры — от библиотек Тимбукту до звездолётов Сан Ра.</p>
+          <p class="cover-wow" data-l="en">Around 1324 a king of Mali, on his way to Mecca, spent so much gold in Cairo that its price there was still low twelve years later.</p>
+          <p class="cover-wow" data-l="ru">Около 1324 года царь Мали по пути в Мекку потратил в Каире столько золота, что и двенадцать лет спустя оно стоило там дешевле прежнего.</p>
+          <div class="cover-actions">
+            <a class="btn primary" href="#t=1300&amp;view=descent" data-descent=""><span data-l="en">Descend through seven centuries</span><span data-l="ru">Спуститься сквозь семь веков</span></a>
+            <a class="btn l-cover" href="#view=roots" data-roots=""><span data-l="en">Find your band’s roots</span><span data-l="ru">Найти корни своей группы</span></a>
+            <a class="btn l-cover" href="#view=listen" data-listen=""><span data-l="en">Listen to the cluster</span><span data-l="ru">Послушать кластер</span></a>
+            <a class="cue" href="#opener"><i aria-hidden="true"></i><span data-l="en">Or begin before the ships</span><span data-l="ru">Или начать с того, что было до кораблей</span></a>
+          </div>
+        </div>
+        <p class="credit cover-credit"><span data-l="en">Mansa Musa on the Catalan Atlas, about 1375</span><span data-l="ru">Манса Муса в Каталанском атласе, около 1375 года</span> · Bibliothèque nationale de France · <span data-l="en">public domain</span><span data-l="ru">общественное достояние</span></p>
+      </section>
+      <section class="opener" id="opener" aria-label="Introduction">
+        <div data-l="en">
+          <p class="lede">This museum tells seven centuries of Black culture in eight chapters: <span data-chapter-list>Africa Before, the Middle Passage, Resistance, Voices, Diaspora, Renaissance, Civil Rights and Independence and Afrofuturism</span>. Every page is a card: a few lines, one surprise, and a road further.</p>
+          <p>Cards come from three books. The Book of Voices <b data-book="voices">❝</b> is told by people in their own words. The Book of Archives <b data-book="archives">▤</b> is the ledger kept by those who traded and ruled. The Book of Heirs <b data-book="heirs">✶</b> is the art and argument of the diaspora. As in Pavić’s <i>Dictionary of the Khazars</i>, the books do not always agree.</p>
+          <div data-edition-note></div>
+        </div>
+        <div data-l="ru">
+          <p class="lede">Этот музей рассказывает о семи веках чёрной культуры в восьми главах: <span data-chapter-list>«Африка до работорговли», «Средний путь», «Сопротивление», «Голоса», «Диаспора», «Ренессанс», «Гражданские права и независимость» и «Афрофутуризм»</span>. Каждая страница — карточка: несколько строк, одна неожиданная находка и подсказка, куда идти дальше.</p>
+          <p>Карточки взяты из трёх книг. Книга голосов <b data-book="voices">❝</b> — история, рассказанная самими людьми. Книга архивов <b data-book="archives">▤</b> — учётные записи тех, кто торговал и правил. Книга наследников <b data-book="heirs">✶</b> — искусство и споры диаспоры. Как в «Хазарском словаре» Павича, книги не всегда согласны друг с другом.</p>
+          <div data-edition-note></div>
+        </div>
+        <aside class="engine-aside" aria-label="The engine room">
+          <div class="kicker"><span data-l="en">The engine room</span><span data-l="ru">Машинное отделение</span></div>
+          <p data-l="en">This museum is also a Kubernetes cluster. Every card is an object in it, and the cluster’s own machinery is named after the culture it comes from: Griot remembers, Kgotla holds a council before anything is deleted, the nodes play drums.</p>
+          <p data-l="ru">Этот музей — ещё и кластер Kubernetes. Каждая карточка — объект в нём, а механизмы самого кластера названы по той культуре, из которой они пришли: Griot помнит, Kgotla созывает совет, прежде чем что-то удалить, а узлы играют на барабанах.</p>
+          <a class="btn" href="#view=engine" data-engine=""><span data-l="en">Enter the engine room</span><span data-l="ru">Войти в машинное отделение</span></a>
+        </aside>
+      </section>
+    </main>
+    <noscript><p class="error">The museum needs JavaScript to draw its maps and timeline. Музею нужен JavaScript, чтобы нарисовать карты и хронологию.</p></noscript>
+  </body>
+</html>

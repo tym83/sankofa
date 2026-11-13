@@ -1,0 +1,10 @@
+metadata: {name: smalls-1862}
+spec:
+  type: dilemma
+  title: The Planter
+  prompt: "Charleston harbour, before dawn, 13 May 1862. You are the enslaved pilot of a Confederate steamer, and the white officers have gone ashore for the night. Your family and other crew families are hidden nearby. Forts with cannon guard the harbour. Do you stay, or take the ship?"
+  choices:
+    - Stay and wait for the war to end
+    - Take the ship past the forts to the Union fleet
+  reveal: "Robert Smalls took the ship. Wearing the captain's straw hat and giving the right whistle signals, he steamed past the forts and surrendered the Planter to the Union blockade with sixteen people aboard. He later served parts of five terms in the US House of Representatives."
+  cards: [robert-smalls]

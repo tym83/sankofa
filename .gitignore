@@ -1,0 +1,12 @@
+/bin/
+/web/node_modules/
+/web/dist/
+.DS_Store
+/dist/
+SESSION_LOG.md
+.codex-*
+__pycache__/
+*.pyc
+features-results.json
+/sankofa
+/griot

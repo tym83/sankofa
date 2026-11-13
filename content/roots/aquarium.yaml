@@ -1,0 +1,21 @@
+id: "aquarium"
+name: "Aquarium"
+nameRu: "Аквариум"
+aliases: ["аквариум", "борис гребенщиков", "БГ", "Akvarium"]
+years: [1972]
+place: {"name": "Leningrad (Saint Petersburg)", "lat": 59.9343, "lon": 30.3351}
+placeRu: "Ленинград (Санкт-Петербург)"
+genre: "Rock / reggae"
+genreRu: "рок / регги"
+story: "Aquarium’s link to Black music runs through reggae. Their song “Vavilon” was first written in that style."
+storyRu: "Связь «Аквариума» с чёрной музыкой проходит через регги. Песню «Вавилон» сначала написали именно в этом жанре."
+links:
+  - to: "card:reggae"
+    kind: "influence"
+    claim: "Aquarium’s song “Vavilon” was originally written as reggae."
+    claimRu: "Песня «Аквариума» «Вавилон» изначально была написана как регги."
+    sources:
+      - title: "Kommersant Weekend: 10 albums of September"
+        url: "https://www.kommersant.ru/doc/4493505"
+      - title: "Colta: Interview with Levsha Patsan about Aquarium in Dub"
+        url: "https://www.colta.ru/articles/music_modern/26051-levsha-patsan-intervyu-albom-akvarium-in-dub-li-skretch-perri-pesni-bg"

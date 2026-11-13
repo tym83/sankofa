@@ -1,0 +1,10 @@
+metadata: {name: douglass-1846}
+spec:
+  type: dilemma
+  title: Buying freedom
+  prompt: "It is 1846. You escaped slavery and published your story with real names, so your former owner knows who you are and where to find you. Friends in Britain offer to buy your freedom from him. Some abolitionists say that paying would admit that a person can be property. Do you accept?"
+  choices:
+    - Accept the purchase
+    - Refuse and keep living as a fugitive
+  reveal: "Frederick Douglass accepted. British supporters paid about 150 pounds, and in December 1846 he became legally free. Some abolitionists criticised the purchase; Douglass took it as the price of being able to go home and keep fighting."
+  cards: [douglass-covey]

@@ -1,0 +1,31 @@
+---
+id: ed-sheeran
+name: Ed Sheeran
+nameRu: Эд Ширан
+aliases:
+- эд ширан
+years:
+- 1991
+place:
+  name: "Halifax, England"
+  lat: 53.725
+  lon: -1.863
+placeRu: "Галифакс, Англия"
+genre: Folk pop
+genreRu: фолк-поп
+links:
+- to: root:eminem
+  claim: Ed Sheeran learned Eminem’s The Marshall Mathers LP by heart as a child,
+    practising its rapid rap delivery.
+  claimRu: В детстве Эд Ширан выучил наизусть The Marshall Mathers LP Эминема и упражнялся
+    в быстрой рэп-подаче.
+  sources:
+  - title: 'ABC News: How Eminem Helped Ed Sheeran Overcome Stuttering'
+    url: https://abcnews.com/Entertainment/eminem-helped-ed-sheeran-overcome-stuttering/story?id=31661107
+  - title: 'The Standard: Ed Sheeran on Eminem and his childhood stutter'
+    url: https://www.standard.co.uk/showbiz/ed-sheeran-eminem-cured-his-childhood-stutter-friendship-howard-stern-b1081401.html
+  kind: influence
+story: Ed Sheeran learned Eminem’s The Marshall Mathers LP by heart as a child. Practising
+  its rapid delivery was part of his musical education.
+storyRu: Эд Ширан ещё ребёнком выучил наизусть «The Marshall Mathers LP» Эминема.
+  Упражнения в быстрой рэп-подаче стали частью его музыкального воспитания.

@@ -1,0 +1,45 @@
+---
+id: joe-cocker
+name: Joe Cocker
+nameRu: Джо Кокер
+aliases:
+- джо кокер
+- джо коккер
+years:
+- 1944
+- 2014
+place:
+  name: Sheffield
+  lat: 53.3811
+  lon: -1.4701
+placeRu: "Шеффилд"
+genre: Soul / blues rock
+genreRu: соул / блюз-рок
+links:
+- to: card:rhythm-and-blues
+  claim: Joe Cocker reinterpreted Ray Charles’s hit “Unchain My Heart”.
+  claimRu: Джо Кокер записал свою версию хита Рэя Чарльза «Unchain My Heart».
+  sources:
+  - title: 'NPR Morning Edition: Singer Joe Cocker dies at 70 (BPR transcript)'
+    url: https://www.bpr.org/2014-12-23/singer-joe-cocker-dies-of-lung-cancer-at-70
+  - title: 'Contemporary Musicians: Joe Cocker (Encyclopedia.com)'
+    url: https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker
+  kind: cover
+  what: "“Unchain My Heart”, previously a Ray Charles hit, in Cocker’s new performance."
+  whatRu: "«Unchain My Heart», прежде ставшая хитом Рэя Чарльза, в новом исполнении
+    Кокера."
+- to: root:ray-charles
+  kind: influence
+  claim: Ray Charles was Joe Cocker’s principal vocal influence from his teenage years.
+  claimRu: Рэй Чарльз был главным вокальным ориентиром Джо Кокера ещё с подростковых
+    лет.
+  sources:
+  - title: 'Contemporary Musicians: Joe Cocker'
+    url: https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker
+  - title: 'Melody Maker: Joe captures that King of Soul sound, October 19, 1968,
+      p. 8'
+    url: https://worldradiohistory.com/UK/Melody-Maker/60s/68/Melody-Maker-1968-1019.pdf
+story: Ray Charles was Joe Cocker’s principal vocal influence from his teenage years.
+  Cocker later made his own version of Charles’s hit “Unchain My Heart”.
+storyRu: Рэй Чарльз был главным вокальным ориентиром Джо Кокера ещё с подростковых
+  лет. Позже Кокер записал свою версию его хита «Unchain My Heart».

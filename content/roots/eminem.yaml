@@ -1,0 +1,63 @@
+---
+id: eminem
+name: Eminem
+nameRu: Эминем
+aliases:
+- эминем
+- маршалл мэтерс
+- слим шейди
+years:
+- 1972
+place:
+  name: St. Joseph, Missouri
+  lat: 39.7675
+  lon: -94.8467
+placeRu: "Сент-Джозеф, Миссури"
+genre: Hip-hop
+genreRu: хип-хоп
+links:
+- to: card:funk
+  claim: Eminem’s “My Name Is” uses the riff from Labi Siffre’s funk recording “I
+    Got The…”.
+  claimRu: В «My Name Is» Эминема использован рифф из фанковой записи Лаби Сиффре
+    «I Got The…».
+  sources:
+  - title: 'MusicRadar: Chas and Dave played on a classic Eminem track'
+    url: https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it
+  - title: 'Rolling Stone: Labi Siffre’s Biggest Moment Was an Eminem Sample'
+    url: https://www.rollingstone.com/music/music-features/the-holdovers-song-crying-laughing-loving-lying-labi-siffre-1234939657/
+  kind: sample
+  what: The instrumental riff from Labi Siffre’s 1975 recording “I Got The…” in “My
+    Name Is”.
+  whatRu: Инструментальный рифф из записи Лаби Сиффре «I Got The…» 1975 года в «My
+    Name Is».
+- to: root:rakim
+  kind: influence
+  claim: Rakim’s rhyme patterns helped shape Eminem’s approach to rap.
+  claimRu: Рифмовка Ракима помогла сформировать подход Эминема к рэпу.
+  sources:
+  - title: 'SiriusXM Shade 45: Eminem on learning from Rakim'
+    url: https://www.siriusxm.com/blog/eminem-ll-cool-j-rakim-shade-45
+  - title: Apple Music interview with Eminem, transcribed by GRUNGECAKE
+    url: https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon
+- to: root:labi-siffre
+  claim: Eminem’s “My Name Is” uses the riff from Labi Siffre’s funk recording “I
+    Got The…”.
+  claimRu: В «My Name Is» Эминема использован рифф из фанковой записи Лаби Сиффре
+    «I Got The…».
+  sources:
+  - title: 'MusicRadar: Chas and Dave played on a classic Eminem track'
+    url: https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it
+  - title: 'Pitchfork: Labi Siffre — Crying Laughing Loving Lying'
+    url: https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/
+  kind: sample
+  what: The instrumental riff from Labi Siffre’s 1975 recording “I Got The…” in “My
+    Name Is”.
+  whatRu: Инструментальный рифф из записи Лаби Сиффре «I Got The…» 1975 года в «My
+    Name Is».
+story: 'Rakim’s rhyme patterns helped shape Eminem’s approach to rap. “My Name Is”
+  also carries an older recording inside it: the instrumental riff from Labi Siffre’s
+  “I Got The…”.'
+storyRu: Рифмовка Ракима помогла сформировать подход Эминема к рэпу. А внутри «My
+  Name Is» звучит более ранняя запись — инструментальный рифф из «I Got The…» Лаби
+  Сиффре.

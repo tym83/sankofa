@@ -1,0 +1,21 @@
+id: "big-mama-thornton"
+name: "Big Mama Thornton"
+nameRu: "Биг Мама Торнтон"
+aliases: ["биг мама торнтон"]
+years: [1926, 1984]
+place: {"name": "Ariton, Alabama", "lat": 31.6002, "lon": -85.7188}
+placeRu: "Аритон, Алабама"
+genre: "Blues / rhythm and blues"
+genreRu: "блюз / ритм-н-блюз"
+links:
+  - to: "card:blues"
+    kind: "scene"
+    claim: "After touring with the Hot Harlem Revue, Big Mama Thornton established herself in Houston and began recording for Peacock."
+    claimRu: "После гастролей с Hot Harlem Revue Биг Мама Торнтон обосновалась в Хьюстоне и начала записываться на Peacock."
+    sources:
+      - title: "Yale University Library: Big Mama Thornton — Early Years"
+        url: "https://onlineexhibits.library.yale.edu/s/ohamstruggles/page/bmt1"
+      - title: "Encyclopedia of Alabama: Willie Mae “Big Mama” Thornton"
+        url: "https://encyclopediaofalabama.org/article/willie-mae-big-mama-thornton/"
+story: "Big Mama Thornton’s apprenticeship included touring with the Hot Harlem Revue. She then established herself in Houston and began recording for Peacock."
+storyRu: "Биг Мама Торнтон прошла школу гастролей с Hot Harlem Revue. Затем она обосновалась в Хьюстоне и начала записываться на Peacock."

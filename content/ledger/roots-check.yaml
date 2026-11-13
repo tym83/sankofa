@@ -1,0 +1,355 @@
+# Second independent fact-check of Roots links (one entry per link).
+# Checked 2026-11-12. Each verdict rests on two sources opened and read for the claim;
+# 'corrected' means the claim or its Russian translation was changed in content/roots.
+checkedAt: "2026-11-12"
+links:
+  - artist: "abba"
+    to: "card:rhythm-and-blues"
+    verdict: confirmed
+    sources:
+      - "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf"
+      - "https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/"
+    note: "Palm (LoC essay) and Rolling Stone both state the songwriters drew on George McCrae’s “Rock Your Baby”. Endpoint acceptable: McCrae’s 1974 soul hit sits in the R&B lineage the card describes."
+  - artist: "adele"
+    to: "root:bob-dylan"
+    verdict: confirmed
+    sources:
+      - "https://au.rollingstone.com/music/music-lists/every-adele-song-ranked-35015/make-you-feel-my-love-35062/"
+      - "https://www.srf.ch/kultur/musik/cover-me-special-adele-bringt-emotionen-in-dylans-song"
+    note: "Both describe Adele’s recording of Dylan’s song (on 19)."
+  - artist: "amy-winehouse"
+    to: "card:jazz"
+    verdict: confirmed
+    sources:
+      - "https://www.nme.com/features/music-interviews/amy-winehouse-band-dale-davis-3612156"
+      - "https://beat.com.au/16-years-on-frank-is-a-testament-to-the-brilliance-of-amy-winehouse/"
+    note: "NME (Dale Davis) places the cover on Frank; Beat calls it a jazz standard on Frank."
+  - artist: "aquarium"
+    to: "card:reggae"
+    verdict: confirmed
+    sources:
+      - "https://www.kommersant.ru/doc/4493505"
+      - "https://www.colta.ru/articles/music_modern/26051-levsha-patsan-intervyu-albom-akvarium-in-dub-li-skretch-perri-pesni-bg"
+    note: "Kommersant states “Vavilon” was conceived as reggae from the start; Colta treats it as arguably the first reggae song in the USSR. No third independent source found; the two given are independent outlets."
+  - artist: "arctic-monkeys"
+    to: "card:rhythm-and-blues"
+    verdict: confirmed
+    sources:
+      - "https://www.nme.com/news/music/arctic-monkeys-578-1365201"
+      - "https://completemusicupdate.com/arctic-monkeys-collaborate-with-747s-on-next-single/"
+    note: "B-side of “Leave Before the Lights Come On” (2006), recorded with the 747s."
+  - artist: "billie-eilish"
+    to: "root:the-beatles"
+    verdict: corrected
+    sources:
+      - "https://www.nme.com/big-reads/billie-eilish-cover-interview-2022-glastonbury-festival-3253169"
+      - "https://www.musicradar.com/news/billie-eilish-lunch-finneas-guitar"
+    note: "English claim confirmed (“The Beatles raised me”; “my biggest inspiration and the main thing that was in my ears when I was a child”). claimRu rendered “formative” as “одним из главных”; changed to match the English."
+  - artist: "black-sabbath"
+    to: "card:blues"
+    verdict: confirmed
+    sources:
+      - "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/"
+      - "https://www.guitarworld.com/gw-archive/archive-original-members-black-sabbath-look-back-30-plus-years-demonic-riffing-2001"
+    note: "Rolling Stone: Earth “continued playing electric blues”; Guitar World (Butler): “a straight blues band”."
+  - artist: "bob-dylan"
+    to: "card:blues"
+    verdict: confirmed
+    sources:
+      - "https://www.bobdylan.com/albums/bootleg-series-vol-11-basement-tapes-complete"
+      - "https://blog.oup.com/2013/03/bob-dylan-first-listen/"
+    note: "Official notes: Dylan “first tried the song on his debut album in 1962”, attributing it to Blind Lemon Jefferson; OUP blog walks the debut’s track list including it."
+  - artist: "bts"
+    to: "root:eminem"
+    verdict: confirmed
+    sources:
+      - "https://english.elpais.com/culture/2023-03-15/rm-the-leader-of-k-pop-band-bts-we-work-so-hard-in-korea-because-70-years-ago-there-was-nothing.html"
+      - "https://rollingstone.co.kr/the-cover/the-cover-print-cover/18024"
+    note: "El País: “You cite rappers like Nas and Eminem … as influences”; Rolling Stone (Korea) says Nas and Eminem drew him to music."
+  - artist: "christina-aguilera"
+    to: "card:rhythm-and-blues"
+    verdict: confirmed
+    sources:
+      - "https://www.nme.com/news/music/etta-james-1270497"
+      - "https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute"
+    note: "Funeral at City of Refuge, Gardena, 28 January 2012."
+  - artist: "coldplay"
+    to: "root:kraftwerk"
+    verdict: confirmed
+    sources:
+      - "https://www.nporadio2.nl/nieuws/top2000/e21e3ff0-4ff8-495f-9247-c533993bce04/coldplay-leent-de-basis-voor-talk-van-kraftwerk"
+      - "https://arthurmag.com/2009/11/16/a-conversation-with-ralf-hutter-of-kraftwerk-2005/"
+    note: "Both: Coldplay use the “Computer Love” riff in “Talk”."
+  - artist: "creedence-clearwater-revival"
+    to: "card:rhythm-and-blues"
+    verdict: corrected
+    sources:
+      - "https://concord.com/concord-albums/creedence-clearwater-revival-40th-anniv-edition/"
+      - "https://americana-uk.com/essentials-the-top-ten-creedence-clearwater-revival-cover-songs"
+    note: "Claim confirmed (opening track of the 1968 debut). El País source could not be checked (no matching text retrieved) and was replaced. claimRu: fixed declension “Скримин Джея Хокинса”."
+  - artist: "daft-punk"
+    to: "card:chicago-house"
+    verdict: corrected
+    sources:
+      - "https://au.rollingstone.com/music/music-news/paul-johnson-dead-28588/"
+      - "https://www.complex.com/music/a/david-drake/a-guide-to-daft-punk"
+    note: "Claim confirmed: Rolling Stone (Paul Johnson name-checked on “Teachers”), Complex (Paul Johnson and DJ Funk open the track, which lists the group’s influences). DJ Mag returned 403 and was replaced. claimRu: “чикагского хауса” → glossary form “чикаго-хауса”."
+  - artist: "david-bowie"
+    to: "card:jazz"
+    verdict: confirmed
+    sources:
+      - "https://www.nporadio2.nl/nieuws/top2000/93682543-a548-417c-b69e-9b220e4b507b/david-bowies-wild-is-the-wind-is-een-eerbetoon-aan-nina-simone"
+      - "https://www.prnewswire.com/news-releases/nina-simones-historic-philips-years-celebrated-with-vinyl-remasters-of-seven-classic-albums-including-nina-simone-in-concert-wild-is-the-wind-high-priestess-of-soul-300337404.html"
+    note: "Both state Simone’s version inspired Bowie’s Station to Station recording; also corroborated by Far Out (faroutmagazine.co.uk/nina-simone-influence-on-david-bowie). The Verve/UMe release is a label press text; acceptable as corroboration only."
+  - artist: "deep-purple"
+    to: "card:rock-n-roll"
+    verdict: confirmed
+    sources:
+      - "https://www.mojo4music.com/articles/new-music/deep-purple-made-in-japan-reviewed-revered-72-live-album-remixed-and-expanded/"
+      - "https://www.metal.de/reviews/deep-purple-in-concert-72-re-release-58099/"
+    note: "“Lucille” live in Osaka, 16 August 1972 (MOJO) and on In Concert ’72 (metal.de)."
+  - artist: "dolly-parton"
+    to: "root:the-beatles"
+    verdict: confirmed
+    sources:
+      - "https://www.dollyparton.com/news/dolly-parton-releases-her-powerful-rendition-of-rock-classic-let-it-be"
+      - "https://www.fijitimes.com.fj/surviving-beatles-join-dolly-parton-on-let-it-be-cover/"
+    note: "Official announcement and Reuters wire copy agree."
+  - artist: "ed-sheeran"
+    to: "root:eminem"
+    verdict: confirmed
+    sources:
+      - "https://abcnews.com/Entertainment/eminem-helped-ed-sheeran-overcome-stuttering/story?id=31661107"
+      - "https://www.standard.co.uk/showbiz/ed-sheeran-eminem-cured-his-childhood-stutter-friendship-howard-stern-b1081401.html"
+    note: "“I learned every word of it back to front by the time I was 10.”"
+  - artist: "elvis-presley"
+    to: "card:big-mama-thornton"
+    verdict: confirmed
+    sources:
+      - "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf"
+      - "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis"
+    note: "Smithsonian Folkways page returned 403; replaced with the Guardian (Thornton topped the R&B chart with it in 1953, before Elvis)."
+  - artist: "eminem"
+    to: "card:funk"
+    verdict: confirmed
+    sources:
+      - "https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it"
+      - "https://www.rollingstone.com/music/music-features/the-holdovers-song-crying-laughing-loving-lying-labi-siffre-1234939657/"
+    note: "Both describe the sampled track as funk (“the funk classic”; “staccato funk riffs”). BTPM page is a radio-host blurb without the funk characterisation; replaced with Rolling Stone."
+  - artist: "eric-clapton"
+    to: "card:blues"
+    verdict: confirmed
+    sources:
+      - "https://ericclapton.com/pages/about"
+      - "https://www.musicradar.com/news/eric-clapton-on-robert-johnson-blues"
+    note: "All About Jazz returned 403; replaced with MusicRadar (14-track Robert Johnson tribute)."
+  - artist: "george-michael"
+    to: "card:rhythm-and-blues"
+    verdict: confirmed
+    sources:
+      - "https://www.grammy.com/artists/george-michael/12041"
+      - "https://www.musicradar.com/artists/i-was-so-jealous-of-george-michael-mick-hucknall-says-he-was-simply-green-with-envy-when-he-learned-that-the-former-wham-star-was-recording-a-duet-with-aretha-franklin"
+    note: "Duet won the Grammy for Best R&B Performance by a Duo or Group, supporting the R&B endpoint."
+  - artist: "iron-maiden"
+    to: "root:led-zeppelin"
+    verdict: confirmed
+    sources:
+      - "https://faroutmagazine.co.uk/led-zeppelin-greatest-covers-jeff-buckley-iron-maiden/"
+      - "https://metalinjection.net/editorials/back-in-the-day/iron-zeppelin-iron-maidens-kick-ass-cover-of-led-zeppelins-communication-breakdown"
+    note: "Released 1990 as a B-side of “Bring Your Daughter… to the Slaughter”. YouTube upload replaced with Far Out. Metal Injection blocks automated fetches; its content was confirmed through search excerpts."
+  - artist: "janis-joplin"
+    to: "card:big-mama-thornton"
+    verdict: confirmed
+    sources:
+      - "https://folkways-media.si.edu/docs/folkways/artwork/ARH00305.pdf"
+      - "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis"
+    note: "Arhoolie/Folkways notes and the Guardian: Joplin asked Thornton’s permission and recorded it on Cheap Thrills."
+  - artist: "joe-cocker"
+    to: "card:rhythm-and-blues"
+    verdict: confirmed
+    sources:
+      - "https://www.bpr.org/2014-12-23/singer-joe-cocker-dies-of-lung-cancer-at-70"
+      - "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker"
+    note: "Cocker on NPR: “When I did ‘Unchain My Heart’, the Ray Charles … we completely changed the rhythm”."
+  - artist: "johnny-cash"
+    to: "card:work-songs"
+    verdict: corrected
+    sources:
+      - "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"
+      - "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
+    note: "The bare claim (“Cash recorded it”) is true but gave no reason for the work-songs endpoint. Both sources document the 1934 Lomax recording from an Arkansas prison work group (Kelly Pace); the Encyclopedia of Arkansas also names Cash among its recorders. Claim and claimRu extended accordingly; johnnycash.com kept as a third source."
+  - artist: "joss-stone"
+    to: "root:the-white-stripes"
+    verdict: confirmed
+    sources:
+      - "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions"
+      - "https://music.apple.com/us/album/the-soul-sessions/712408255"
+    note: "musicOMH: “Renamed Fell In Love With A Boy”."
+  - artist: "kraftwerk"
+    to: "card:funk"
+    verdict: confirmed
+    sources:
+      - "https://enciklopedija.hr/clanak/kraftwerk"
+      - "https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/"
+    note: "Croatian Encyclopedia lists funk (James Brown) among influences; Karl Bartos: “I was growing up with the funky beats of James Brown and I brought them in more and more … during the late 70s.” Electronic Beats (Juan Atkins reporting a conversation with Florian Schneider) is second-hand and was replaced."
+  - artist: "led-zeppelin"
+    to: "card:blues"
+    verdict: confirmed
+    sources:
+      - "https://www.loudersound.com/features/led-zeppelin-memphis-minnie-when-the-levee-breaks"
+      - "https://mtosmt.org/issues/mto.16.22.3/mto.16.22.3.declercq.pdf"
+    note: "1929 recording by Kansas Joe McCoy and Memphis Minnie."
+  - artist: "madonna"
+    to: "card:funk"
+    verdict: confirmed
+    sources:
+      - "https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/"
+      - "https://www.vice.com/en/article/like-a-prayer-was-madonnas-first-masterpiece"
+    note: "Attitude: a Stephen Bray co-write that “used the funk of Sly & the Family Stone as an inspiration”; Vice: “the Sly and the Family Stone-inspired funk missile”. Rhino page unreachable; replaced with Vice."
+  - artist: "mashina-vremeni"
+    to: "root:the-beatles"
+    verdict: confirmed
+    sources:
+      - "https://www.colta.ru/articles/music_modern/21682-andrey-makarevich-rebyata-eto-pro-vas-pro-vseh"
+      - "https://www.svoboda.org/a/24197864.html"
+    note: "Colta: asked about early songwriting influences, “Дилан и «Битлз» — конечно”; Svoboda: “Находились под очень глубоким впечатлением”."
+  - artist: "massive-attack"
+    to: "card:jazz"
+    verdict: confirmed
+    sources:
+      - "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
+      - "https://www.uni-hildesheim.de/ojs/index.php/MMD/de/article/download/498/541"
+    note: "Cobham interview and Großmann (academic) both document the “Stratus” sample."
+  - artist: "metallica"
+    to: "root:black-sabbath"
+    verdict: confirmed
+    sources:
+      - "https://www.loudersound.com/bands-artists/metallica-load-cover-songs-story-album"
+      - "https://distortedsoundmag.com/heavy-music-history-garage-inc-metallica/"
+    note: "Metal Hammer and Distorted Sound: “A National Acrobat” interpolated into the cover. metallica.com returned 403; replaced."
+  - artist: "mumiy-troll"
+    to: "root:aquarium"
+    verdict: confirmed
+    sources:
+      - "https://www.newlookmedia.ru/?p=24869"
+      - "https://daily.afisha.ru/archive/volna/archive/week_playlist_041212/"
+    note: "Lenta.ru project “Re: Аквариум” for Aquarium’s 40th anniversary, December 2012; Afisha: the 134th and final cover."
+  - artist: "nirvana"
+    to: "card:blues"
+    verdict: confirmed
+    sources:
+      - "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/"
+      - "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/"
+    note: "Both name Lead Belly’s version; it closed the set."
+  - artist: "oasis"
+    to: "root:the-beatles"
+    verdict: confirmed
+    sources:
+      - "https://music.apple.com/us/album/the-masterplan/1517453693"
+      - "https://pitchfork.com/reviews/albums/5930-the-masterplan/"
+    note: "Live version of “I Am the Walrus” on The Masterplan (1998)."
+  - artist: "paul-simon"
+    to: "card:reggae"
+    verdict: confirmed
+    sources:
+      - "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/"
+      - "https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion"
+    note: "Recorded in Jamaica with the musicians from Jimmy Cliff’s Leslie Kong sessions."
+  - artist: "peter-gabriel"
+    to: "card:rhythm-and-blues"
+    verdict: confirmed
+    sources:
+      - "https://petergabriel.com/release/sledgehammer/"
+      - "https://www.muzines.co.uk/articles/peter-gabriel-behind-the-mask/1494"
+    note: "Gabriel: “homage to the music that I grew up with … brass players that had worked with Otis Redding, who’s my all time favourite singer”; Sound On Sound interviewer cites the Otis Redding tribute and Wayne Jackson on the record."
+  - artist: "radiohead"
+    to: "card:jazz"
+    verdict: confirmed
+    sources:
+      - "https://www.loudersound.com/features/radioheads-proggiest-moments"
+      - "https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388"
+    note: "Prog: “draws heavily from the avant-garde jazz of the late Charles Mingus”; Irish Times: “based on Charles Mingus”."
+  - artist: "red-hot-chili-peppers"
+    to: "card:funk"
+    verdict: confirmed
+    sources:
+      - "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/"
+      - "https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move"
+    note: "Cover on Mother’s Milk (1989)."
+  - artist: "talking-heads"
+    to: "card:afrobeat"
+    verdict: confirmed
+    sources:
+      - "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
+      - "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/"
+    note: "LoC: jams based on Afrobeat rhythms pioneered by Fela Kuti; Pitchfork: Afrodisiac as the template."
+  - artist: "taylor-swift"
+    to: "card:funk"
+    verdict: confirmed
+    sources:
+      - "https://www.wbgo.org/2018-04-13/you-know-what-fine-taylor-swift-covers-earth-wind-fires-september"
+      - "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf"
+    note: "NPR (via WBGO) and LoC (Rickey Vincent) both note the cover."
+  - artist: "television"
+    to: "card:jazz"
+    verdict: corrected
+    sources:
+      - "https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine"
+      - "https://www.irishtimes.com/culture/music/2023/01/30/tom-verlaine-guitarist-frontman-of-us-band-television-dies-at-73"
+    note: "Claim confirmed by Patti Smith (New Yorker: “In high school, he played the saxophone, embracing John Coltrane and Albert Ayler”) and the Irish Times obituary. The University of Chicago Press excerpt says nothing about saxophone or Coltrane/Ayler and was replaced. claimRu dropped “as a teenage saxophonist”; restored."
+  - artist: "the-beatles"
+    to: "card:rhythm-and-blues"
+    verdict: corrected
+    sources:
+      - "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
+      - "https://faroutmagazine.co.uk/one-take-beatles-hit-nearly-killed-john-lennon/"
+    note: "Claim confirmed (Isley Brothers’ 1962 hit; Beatles heard that version). AP page returned 403; replaced with Far Out. claimRu: “ритм-энд-блюзовый” → glossary form “ритм-н-блюз”."
+  - artist: "the-clash"
+    to: "card:reggae"
+    verdict: confirmed
+    sources:
+      - "https://www.theclash.com/music/the-clash"
+      - "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
+    note: "Track 12 on The Clash (1977)."
+  - artist: "the-libertines"
+    to: "root:the-clash"
+    verdict: confirmed
+    sources:
+      - "https://www.radiox.co.uk/artists/libertines/talk-up-the-bracket-gigs-mick-jones-glasto/"
+      - "https://www.the-independent.com/arts-entertainment/music/features/the-libertines-up-the-bracket-pete-doherty-carl-barat-interview-b2200753.html"
+    note: "Mick Jones produced Up the Bracket."
+  - artist: "the-police"
+    to: "card:reggae"
+    verdict: confirmed
+    sources:
+      - "https://www.guitarplayer.com/players/you-certainly-dont-want-to-be-looking-for-commercial-success-andy-summers-reveals-the-evolving-strategies-that-keep-his-creative-life-busier-than-ever"
+      - "https://los40.com/los40/2022/05/20/los40classic/1652955281_806107.html"
+    note: "Summers: reggae was “a musical convenience, particularly for Sting … play those more spacey bass lines and sing over the top”; same point to LOS40."
+  - artist: "the-prodigy"
+    to: "card:hip-hop"
+    verdict: confirmed
+    sources:
+      - "https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/"
+      - "https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf"
+    note: "MusicTech and Morey (academic) both document the vocal sample from Kool Keith’s verse. The Mixmag piece does not mention the sample and was replaced."
+  - artist: "the-rolling-stones"
+    to: "card:blues"
+    verdict: confirmed
+    sources:
+      - "https://www.thecurrent.org/feature/2019/08/28/today-in-music-history-the-stones-record-a-blues-standard"
+      - "https://www.udiscovermusic.com/stories/the-first-blues-record-to-top-the-uk-singles-chart"
+    note: "Willie Dixon blues, UK No. 1 single in December 1964. Both given sources were unreachable (Cambridge excerpt timed out, AllMusic 403) and were replaced."
+  - artist: "the-white-stripes"
+    to: "card:blues"
+    verdict: confirmed
+    sources:
+      - "https://au.rollingstone.com/music/music-news/white-stripes-death-letter-2000-12901/"
+      - "https://www.theguardian.com/music/2011/jun/12/white-stripes-blues-rock"
+    note: "Son House’s “Death Letter”, on De Stijl and live."
+  - artist: "van-morrison"
+    to: "card:blues"
+    verdict: confirmed
+    sources:
+      - "https://msbluestrail.org/blues-trail-markers/big-joe-williams"
+      - "https://www.udiscovermusic.com/stories/roots-blues-baby-please-dont-go"
+    note: "Mississippi Blues Trail names Van Morrison (with Them) among covers of Williams’s 1935 song; uDiscover covers the 1964 Decca session. Van Morrison Trail PDF returned 403; replaced."

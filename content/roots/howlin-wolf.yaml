@@ -1,0 +1,30 @@
+id: "howlin-wolf"
+name: "Howlin’ Wolf"
+nameRu: "Хаулин Вулф"
+aliases: ["хаулин вулф"]
+years: [1910, 1976]
+place: {"name": "White Station, Mississippi", "lat": 33.6748, "lon": -88.6503}
+placeRu: "Уайт-Стейшен, Миссисипи"
+genre: "Blues"
+genreRu: "блюз"
+links:
+  - to: "root:charley-patton"
+    kind: "teacher"
+    claim: "Charley Patton taught Howlin’ Wolf songs and performance technique."
+    claimRu: "Чарли Паттон учил Хаулина Вулфа песням и сценическим приёмам."
+    sources:
+      - title: "National Park Service: Howlin’ Wolf"
+        url: "https://www.nps.gov/locations/lowermsdeltaregion/howlin-wolf.htm"
+      - title: "Mississippi Blues Trail: Howlin’ Wolf"
+        url: "https://msbluestrail.org/blues-trail-markers/howlin-wolf"
+  - to: "card:blues"
+    kind: "scene"
+    claim: "Howlin’ Wolf adapted the Delta blues of his upbringing to an amplified band."
+    claimRu: "Хаулин Вулф перенёс дельта-блюз, на котором вырос, в звучание ансамбля с усиленными инструментами."
+    sources:
+      - title: "National Park Service: Howlin’ Wolf"
+        url: "https://www.nps.gov/locations/lowermsdeltaregion/howlin-wolf.htm"
+      - title: "Mississippi Blues Trail: Howlin’ Wolf"
+        url: "https://msbluestrail.org/blues-trail-markers/howlin-wolf"
+story: "Charley Patton taught Howlin’ Wolf songs and stagecraft. Wolf later carried his Delta blues into an amplified band."
+storyRu: "Чарли Паттон учил Хаулина Вулфа песням и сценическим приёмам. Позднее Вулф перенёс свой дельта-блюз в звучание ансамбля с усиленными инструментами."

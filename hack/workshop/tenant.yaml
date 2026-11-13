@@ -1,0 +1,15 @@
+# The stand and the public museum cluster live in their own tenant of the
+# workshop cluster. Nothing outside this tenant is touched.
+apiVersion: apps.cozystack.io/v1alpha1
+kind: Tenant
+metadata:
+  name: sankofa
+  namespace: tenant-root
+spec:
+  etcd: false
+  ingress: false
+  monitoring: false
+  seaweedfs: false
+  resourceQuotas:
+    cpu: "24"
+    memory: 48Gi

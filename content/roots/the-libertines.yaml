@@ -1,0 +1,21 @@
+id: "the-libertines"
+name: "The Libertines"
+nameRu: "The Libertines"
+aliases: ["либерти́нс", "либертинс", "Пит Доэрти", "Пит Дохерти", "Pete Doherty", "Peter Doherty", "Карл Барат"]
+years: [1997]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+placeRu: "Лондон"
+genre: "Indie rock"
+genreRu: "инди-рок"
+story: "The Libertines’ debut, Up the Bracket, was recorded with Mick Jones. The producer connected their first album to a musician from the Clash."
+storyRu: "Дебютный альбом The Libertines «Up the Bracket» записан вместе с Миком Джонсом. Продюсером первой пластинки стал музыкант The Clash."
+links:
+  - to: "root:the-clash"
+    kind: "producer"
+    claim: "The Libertines recorded their debut album, Up the Bracket, with the Clash’s Mick Jones."
+    claimRu: "The Libertines записали дебютный альбом Up the Bracket вместе с Миком Джонсом из The Clash."
+    sources:
+      - title: "Radio X: The Libertines on Up the Bracket, Mick Jones and Glastonbury"
+        url: "https://www.radiox.co.uk/artists/libertines/talk-up-the-bracket-gigs-mick-jones-glasto/"
+      - title: "The Independent: Carl Barât on the story of Up the Bracket"
+        url: "https://www.the-independent.com/arts-entertainment/music/features/the-libertines-up-the-bracket-pete-doherty-carl-barat-interview-b2200753.html"

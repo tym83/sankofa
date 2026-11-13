@@ -1,0 +1,55 @@
+# Griot fills in caBundle on start.
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: sankofa-validating
+webhooks:
+  - name: kgotla.sankofa.kuberoot.dev
+    # Only objects labelled sankofa.kuberoot.dev/kgotla=protected are guarded.
+    objectSelector: {matchLabels: {sankofa.kuberoot.dev/kgotla: protected}}
+    rules:
+      - operations: ["DELETE"]
+        apiGroups: ["", "apiextensions.k8s.io", "apps", "rbac.authorization.k8s.io"]
+        apiVersions: ["*"]
+        resources: ["namespaces", "persistentvolumes", "persistentvolumeclaims", "customresourcedefinitions", "deployments", "statefulsets", "clusterrolebindings"]
+    clientConfig: {service: {name: griot, namespace: sankofa-system, path: /admit/kgotla}}
+    admissionReviewVersions: ["v1"]
+    sideEffects: None
+    failurePolicy: Fail
+    timeoutSeconds: 5
+  - name: credits-warn.sankofa.kuberoot.dev
+    namespaceSelector: {matchLabels: {sankofa.kuberoot.dev/credits: warn}}
+    rules: [{operations: ["CREATE"], apiGroups: [""], apiVersions: ["v1"], resources: ["pods"]}]
+    clientConfig: {service: {name: griot, namespace: sankofa-system, path: /admit/credits/warn}}
+    admissionReviewVersions: ["v1"]
+    sideEffects: None
+    failurePolicy: Ignore
+    timeoutSeconds: 15
+  - name: credits-enforce.sankofa.kuberoot.dev
+    namespaceSelector: {matchLabels: {sankofa.kuberoot.dev/credits: enforce}}
+    rules: [{operations: ["CREATE"], apiGroups: [""], apiVersions: ["v1"], resources: ["pods"]}]
+    clientConfig: {service: {name: griot, namespace: sankofa-system, path: /admit/credits/enforce}}
+    admissionReviewVersions: ["v1"]
+    sideEffects: None
+    failurePolicy: Ignore
+    timeoutSeconds: 15
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  name: sankofa-mutating
+webhooks:
+  - name: kgotla-speech.sankofa.kuberoot.dev
+    rules: [{operations: ["CREATE", "UPDATE"], apiGroups: ["sankofa.kuberoot.dev"], apiVersions: ["v1alpha1"], resources: ["kgotlas"]}]
+    clientConfig: {service: {name: griot, namespace: sankofa-system, path: /mutate/kgotla-speech}}
+    admissionReviewVersions: ["v1"]
+    sideEffects: None
+    failurePolicy: Fail
+    timeoutSeconds: 5
+  - name: polyrhythm.sankofa.kuberoot.dev
+    rules: [{operations: ["CREATE", "UPDATE"], apiGroups: ["batch"], apiVersions: ["v1"], resources: ["cronjobs"]}]
+    clientConfig: {service: {name: griot, namespace: sankofa-system, path: /mutate/polyrhythm}}
+    admissionReviewVersions: ["v1"]
+    sideEffects: None
+    failurePolicy: Ignore
+    timeoutSeconds: 5

@@ -1,0 +1,32 @@
+id: "eric-clapton"
+name: "Eric Clapton"
+nameRu: "Эрик Клэптон"
+aliases: ["эрик клэптон", "эрик клептон"]
+years: [1945]
+place: {"name": "Ripley, Surrey", "lat": 51.3007, "lon": -0.491}
+placeRu: "Рипли, Суррей"
+genre: "Blues rock"
+genreRu: "блюз-рок"
+links:
+  - to: "card:blues"
+    claim: "Eric Clapton devoted Me and Mr. Johnson (2004) to covers of blues musician Robert Johnson’s songs."
+    claimRu: "Эрик Клэптон посвятил альбом Me and Mr. Johnson (2004) кавер-версиям песен блюзмена Роберта Джонсона."
+    sources:
+      - title: "Eric Clapton: Official biography"
+        url: "https://ericclapton.com/pages/about"
+      - title: "MusicRadar: Eric Clapton on Robert Johnson and Me and Mr Johnson"
+        url: "https://www.musicradar.com/news/eric-clapton-on-robert-johnson-blues"
+    kind: "cover"
+    what: "Me and Mr. Johnson (2004): an album of new performances of Robert Johnson’s songs."
+    whatRu: "«Me and Mr. Johnson» (2004): альбом новых исполнений песен Роберта Джонсона."
+  - to: "root:robert-johnson"
+    kind: "influence"
+    claim: "Robert Johnson’s recordings became a formative blues influence on the young Eric Clapton."
+    claimRu: "Записи Роберта Джонсона стали одним из главных блюзовых ориентиров юного Эрика Клэптона."
+    sources:
+      - title: "Guitar World: Eric Clapton — The King and I"
+        url: "https://www.guitarworld.com/artists/eric-clapton-king-and-i"
+      - title: "NPR Morning Edition: Eric Clapton takes on Robert Johnson’s blues (2004)"
+        url: "https://www.npr.org/2004/03/30/1798862/eric-clapton-takes-on-robert-johnsons-blues"
+story: "Robert Johnson’s recordings helped form Eric Clapton’s understanding of the blues. He later devoted Me and Mr. Johnson to new performances of Johnson’s songs."
+storyRu: "Записи Роберта Джонсона помогли Эрику Клэптону найти свой путь в блюзе. Позднее он посвятил альбом «Me and Mr. Johnson» новым исполнениям песен Джонсона."

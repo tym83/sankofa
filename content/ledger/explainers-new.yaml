@@ -1,0 +1,677 @@
+# Explainer rewrite (2026-11-12): the NEW claims each of the 25 explainer cards
+# adds, with the sources that state them. Existing facts are not repeated here;
+# they stay in final.yaml. For an independent re-check.
+spirituals:
+  - claim: "Spirituals are religious folk songs made by enslaved African Americans, most likely from the late eighteenth century on (also years: [1780, 1878])"
+    sources:
+      - {title: "Angela M. S. Nelson, What Did Slave Songs Sound Like?, Christian History 31 (1991): 'many scholars believe ... the spiritual originated in the late eighteenth century'", url: "https://christianhistoryinstitute.org/magazine/article/golden-age-of-hymns-spirituals"}
+      - {title: "Carnegie Hall Timeline (Maultsby): Folk spiritual, emerging with Second Awakening camp meetings (1780s-1830s), created by enslaved and freed Blacks", url: "https://timeline.carnegiehall.org/genres/folk-spiritual"}
+      - {title: "Digital History, University of Houston: Spirituals (late 18th/early 19th c. conversion; spirituals created by enslaved African Americans)", url: "https://www.digitalhistory.uh.edu/active_learning/explorations/spirituals/spirituals_menu.cfm"}
+  - claim: "They were made from Bible stories, hymns and African ways of singing"
+    sources:
+      - {title: "Nelson, Christian History 31: 'fashioned by combining verses from the Bible and hymns'; drew on African singing styles", url: "https://christianhistoryinstitute.org/magazine/article/golden-age-of-hymns-spirituals"}
+      - {title: "Carnegie Hall Timeline: Folk spiritual ('African call-response and repetitive chorus structures')", url: "https://timeline.carnegiehall.org/genres/folk-spiritual"}
+  - claim: "No two singers sang quite the same thing; a leader started each verse, often improvising, and the others 'based' him with the refrain"
+    sources:
+      - {title: "Allen, Ware and Garrison, Slave Songs of the United States (1867), introduction p. v (primary)", url: "https://docsouth.unc.edu/church/allen/allen.html"}
+      - {title: "Carnegie Hall Timeline: Folk spiritual (call-and-response between soloist and singers; improvised; slight deviations from the melody line)", url: "https://timeline.carnegiehall.org/genres/folk-spiritual"}
+  - claim: "Singers clapped, or shuffled round in a ring in the worship called the shout"
+    sources:
+      - {title: "Slave Songs of the United States (1867), introduction pp. xiii-xiv, quoting The Nation, 30 May 1867 (primary)", url: "https://docsouth.unc.edu/church/allen/allen.html"}
+      - {title: "Yolanda Y. Smith, He Still Wid Us, Jesus, Christian History 62 (ring shout; basers clapping)", url: "https://christianhistoryinstitute.org/magazine/article/he-still-wid-us-jesus"}
+      - {title: "Carnegie Hall Timeline: Folk spiritual (handclapping, foot-stomping, 'the shout')", url: "https://timeline.carnegiehall.org/genres/folk-spiritual"}
+  - claim: "They sang of Israel led out of Egypt into Canaan; words could carry a double meaning"
+    sources:
+      - {title: "Yolanda Y. Smith, Christian History 62 (God's deliverance of Israel from Egypt as inspiration)", url: "https://christianhistoryinstitute.org/magazine/article/he-still-wid-us-jesus"}
+      - {title: "Carnegie Hall Timeline: Folk spiritual (biblical themes, deliverance; double entendre)", url: "https://timeline.carnegiehall.org/genres/folk-spiritual"}
+      - {title: "Digital History, University of Houston: Spirituals (Old and New Testament stories; hidden transcripts)", url: "https://www.digitalhistory.uh.edu/active_learning/explorations/spirituals/spirituals_menu.cfm"}
+  - claim: "Frederick Douglass, singing of Canaan while planning an escape, wrote that 'the north was our Canaan'"
+    sources:
+      - {title: "Frederick Douglass, My Bondage and My Freedom (1855), ch. XIX, p. 278-279 (primary)", url: "https://docsouth.unc.edu/neh/douglass55/douglass55.html"}
+      - {title: "Yolanda Y. Smith, Christian History 62 (quotes the passage)", url: "https://christianhistoryinstitute.org/magazine/article/he-still-wid-us-jesus"}
+  - claim: "At first the Fisk singers hardly sang spirituals; Ella Sheppard: 'We did not dream of ever using them in public ... They were associated with slavery and the dark past' (also wow)"
+    sources:
+      - {title: "Andrew Ward, They Brought the Jubilee, American Heritage 51:4 (2000)", url: "https://www.americanheritage.com/they-brought-jubilee"}
+      - {title: "PBS American Experience: Jubilee Singers (film page, quotes Sheppard)", url: "https://www.pbs.org/wgbh/americanexperience/films/singers/"}
+      - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard"}
+  - claim: "Audiences asked for them; Sheppard arranged them, in four-part harmony"
+    sources:
+      - {title: "PBS American Experience: Jubilee Singers (arranging fell to Sheppard; more spirituals as audiences received them)", url: "https://www.pbs.org/wgbh/americanexperience/films/singers/"}
+      - {title: "Carnegie Hall Timeline: Concert spiritual (Fisk first popularised choral arrangement; four-part harmony)", url: "https://timeline.carnegiehall.org/genres/concert-spiritual"}
+  - claim: "Spirituals reached the concert hall with Harry T. Burleigh (link to existing card burleigh-dvorak)"
+    sources:
+      - {title: "Carnegie Hall Timeline: Spiritual as Art Song (already on burleigh-dvorak)", url: "https://timeline.carnegiehall.org/genres/spiritual-as-art-song"}
+      - {title: "Skidmore Saratoga Memory Project: Burleigh timeline (already on burleigh-dvorak)", url: "https://ssmp.skidmore.edu/exhibits/show/burleigh_in_saratoga/burleigh_bio/timeline"}
+  - claim: "Place: St. Helena Island, South Carolina Sea Islands, where spirituals and the shout were sung and Slave Songs of the United States (1867), the first book of spirituals, was largely collected"
+    sources:
+      - {title: "Slave Songs of the United States (1867), introduction pp. i-ii (Port Royal islands, church on St. Helena)", url: "https://docsouth.unc.edu/church/allen/allen.html"}
+      - {title: "Associated Press (Luis Andres Henao, 2025) via WCIV", url: "https://abcnews4.com/news/local/gullah-geechee-elders-work-to-preserve-sacred-songs-passed-down-by-enslaved-ancestors-wciv-abc-news-4-charleston-sc-south-carolina-st-helena-island-sea-islands"}
+work-songs:
+  - claim: "Enslaved African Americans sang work songs to fit particular jobs, drawing on West and Central African singing"
+    sources:
+      - {title: "Maryland Public Television / Thinkport: Work songs (task-specific songs; West and Central African practices)", url: "https://thinkport.org/mptclassroom/waters-edge/music-making/work-songs.html"}
+      - {title: "Carnegie Hall Timeline (Maultsby): Work songs and field calls (enslaved retained customs of the past)", url: "https://timeline.carnegiehall.org/genres/work-songs-field-street-calls-satirical-protest-songs"}
+  - claim: "They were sung while rowing boats, felling trees and working the fields, setting the pace of shared labour"
+    sources:
+      - {title: "Carnegie Hall Timeline: Work songs (cotton and tobacco fields, clearing brush, rowing; coordinate movement)", url: "https://timeline.carnegiehall.org/genres/work-songs-field-street-calls-satirical-protest-songs"}
+      - {title: "Thinkport: Work songs (rowing boats, axe-cutting songs)", url: "https://thinkport.org/mptclassroom/waters-edge/music-making/work-songs.html"}
+      - {title: "Association for Cultural Equity: Prison Songs (field hollers, wood-cutting songs)", url: "https://www.culturalequity.org/rounder-records/prison"}
+  - claim: "Outsiders often read the singing as contentment; Douglass: 'Slaves sing most when they are most unhappy'; he 'often sung to drown my sorrow'"
+    sources:
+      - {title: "Frederick Douglass, Narrative (1845), ch. II, Documenting the American South (primary)", url: "https://docsouth.unc.edu/neh/douglass/douglass.html"}
+      - {title: "Frederick Douglass, Narrative (1845), Project Gutenberg edition", url: "https://www.gutenberg.org/ebooks/23"}
+  - claim: "The Sierra Leone rowers: one sang a couplet, all joined in the chorus (detail of an existing fact)"
+    sources:
+      - {title: "Thomas Winterbottom, An Account of the Native Africans ... Sierra Leone (1803), vol. 1 (primary, already in card)", url: "https://archive.org/stream/accountofnativea01wint/accountofnativea01wint_djvu.txt"}
+      - {title: "Carnegie Hall Timeline: Work songs (quotes the physician)", url: "https://timeline.carnegiehall.org/genres/work-songs-field-street-calls-satirical-protest-songs"}
+  - claim: "Places reordered: Sierra Leone coast (earliest documented leader-chorus work singing) first, Parchman second"
+    sources:
+      - {title: "Winterbottom (1803)", url: "https://archive.org/details/accountofnativea01wint"}
+      - {title: "Carnegie Hall Timeline: Work songs", url: "https://timeline.carnegiehall.org/genres/work-songs-field-street-calls-satirical-protest-songs"}
+blues:
+  - claim: "The blues grew up among African Americans in the Mississippi Delta at the end of the nineteenth century"
+    sources:
+      - {title: "Jeff Todd Titon, The Blues, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/blues"}
+      - {title: "Carnegie Hall Timeline (Maultsby): Rural/Folk Blues (Deep South, 1890s; believed to start on Mississippi Delta plantations)", url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"}
+  - claim: "Three-line verse: the second line repeats the first, the third answers with a rhyme, over twelve bars and three chords"
+    sources:
+      - {title: "Titon, Encyclopedia of African-American Culture and History (AAB, twelve bars)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/blues"}
+      - {title: "Carnegie Hall Timeline: Rural/Folk Blues (three-line stanza; 12-bar form on three chords)", url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"}
+      - {title: "Ballad of America: Blues (line repeated, rhyming third line)", url: "https://balladofamerica.org/blues/"}
+  - claim: "Blue notes are the flattened third and seventh"
+    sources:
+      - {title: "Carnegie Hall Timeline: Rural/Folk Blues", url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"}
+      - {title: "Ballad of America: Blues", url: "https://balladofamerica.org/blues/"}
+  - claim: "The guitar answers each sung line (call and response between voice and instrument)"
+    sources:
+      - {title: "Carnegie Hall Timeline: Rural/Folk Blues (call-and-response; lead instrument echoes the melody)", url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"}
+      - {title: "Ballad of America: Blues ('call and response often occurs between a singer and a musical instrument')", url: "https://balladofamerica.org/blues/"}
+  - claim: "Lyrics are about mistreatment by lovers, hard times, travel and prison"
+    sources:
+      - {title: "Titon, Encyclopedia of African-American Culture and History (mistreatment by lovers, misfortune)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/blues"}
+      - {title: "Carnegie Hall Timeline: Rural/Folk Blues (relationships, hardship, traveling, imprisonment)", url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"}
+gospel:
+  - claim: "Gospel is church music made in Black Chicago in the 1930s, new songs with sacred words set to blues melodies, harmonies and beat"
+    sources:
+      - {title: "Carnegie Hall Timeline (Maultsby): Traditional gospel (Chicago churches, 1930s; Dorsey fused blues-styled melodies and harmonies, blues and ragtime rhythms)", url: "https://timeline.carnegiehall.org/genres/traditional-gospel"}
+      - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey (fused sacred music with his blues technique)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/"}
+      - {title: "Christianity Today (2018): Dorsey's 'gospel blues'", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/"}
+  - claim: "Unlike spirituals, gospel songs had composers and were sold as sheet music; Dorsey published his songs himself"
+    sources:
+      - {title: "New Georgia Encyclopedia: Dorsey's decision to publish his own music", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/"}
+      - {title: "Christianity Today (2018): sold more than 4,000 copies at the 1930 convention", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/"}
+  - claim: "Choirs and soloists sang them"
+    sources:
+      - {title: "Carnegie Hall Timeline: Traditional gospel (groups, quartets, choirs)", url: "https://timeline.carnegiehall.org/genres/traditional-gospel"}
+      - {title: "New Georgia Encyclopedia: Dorsey directing gospel choruses at Pilgrim and Ebenezer Baptist", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/"}
+  - claim: "First to the piano and later the Hammond organ"
+    sources:
+      - {title: "Carnegie Hall Timeline: Traditional gospel (piano, Hammond B3 organ, drums as core instruments)", url: "https://timeline.carnegiehall.org/genres/traditional-gospel"}
+      - {title: "NPR (Anne Ford, 2016) via WUNC: Hammond organ and gospel, Chicago 1939 onward", url: "https://www.wunc.org/2016-01-03/how-the-hammond-organ-sound-laid-the-tracks-for-gospels-hit-train"}
+  - claim: "A strong, rocking beat"
+    sources:
+      - {title: "Carnegie Hall Timeline: Traditional gospel ('rockin' style of religious music')", url: "https://timeline.carnegiehall.org/genres/traditional-gospel"}
+      - {title: "Christianity Today (2018): 'His songs had a beat, rhythm, and tempo'", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/"}
+  - claim: "Many ministers at first rejected the songs because the beat sounded secular, like the blues clubs"
+    sources:
+      - {title: "Carnegie Hall Timeline: Traditional gospel ('most ministers of independent Black churches initially rejected his songs'; 'secular' beat)", url: "https://timeline.carnegiehall.org/genres/traditional-gospel"}
+      - {title: "Christianity Today (2018): pastors scoffed at a honky-tonk blues player composing church music", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/"}
+  - claim: "Dorsey published his songs himself (story detail)"
+    sources:
+      - {title: "New Georgia Encyclopedia", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/"}
+      - {title: "Christianity Today (2018)", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/"}
+jazz:
+  - claim: "Jazz emerged in New Orleans around 1900, mainly in the Black community, among Black and Creole musicians"
+    sources:
+      - {title: "NPS New Orleans Jazz NHP: Jazz Origins in New Orleans (roots mainly in the Black community; Creole of color musicians)", url: "https://www.nps.gov/jazz/learn/historyculture/history_early.htm"}
+      - {title: "Carnegie Hall Timeline: New Orleans-style jazz (careers around the turn of the 20th century; uptown Black streets)", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}
+  - claim: "It drew on ragtime, the blues, spirituals and brass-band marches"
+    sources:
+      - {title: "NPS: A New Orleans Jazz History ('ragtime, blues, spirituals, marches')", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm"}
+      - {title: "Carnegie Hall Timeline: New Orleans-style jazz (ragtime, blues, syncopated brass-band marches, religious music)", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}
+  - claim: "Played with a ragged, swinging rhythm"
+    sources:
+      - {title: "Carnegie Hall Timeline: New Orleans-style jazz ('ragged approach to the rhythmic interpretation')", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}
+      - {title: "NPS: A New Orleans Jazz History (looser feel of swing)", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm"}
+  - claim: "Typical band: front line of cornet, clarinet and trombone over a rhythm section"
+    sources:
+      - {title: "NPS: A New Orleans Jazz History", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm"}
+      - {title: "Carnegie Hall Timeline: New Orleans-style jazz (cornet, clarinet, trombone, tuba, banjo, drums)", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}
+  - claim: "Many players did not read music and worked numbers out by ear"
+    sources:
+      - {title: "NPS: A New Orleans Jazz History (away from sight-reading toward playing by ear)", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm"}
+      - {title: "Carnegie Hall Timeline: New Orleans-style jazz (musicians who could not read music)", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}
+  - claim: "They improvised together (collective improvisation)"
+    sources:
+      - {title: "NPS: A New Orleans Jazz History ('collective improvisation')", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm"}
+      - {title: "Carnegie Hall Timeline: New Orleans-style jazz ('a collective improvisational instrumental art form')", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}
+  - claim: "Bands played for dances, picnics, parades and brass-band funerals"
+    sources:
+      - {title: "NPS: Jazz Origins in New Orleans (parades, dances, picnics)", url: "https://www.nps.gov/jazz/learn/historyculture/history_early.htm"}
+      - {title: "Carnegie Hall Timeline: New Orleans-style jazz (funeral bands, dancers, parades)", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz"}
+
+rhythm-and-blues:
+  - claim: "Rhythm and blues was Black dance music of the 1940s and early 1950s, made in big cities after the Second World War"
+    sources:
+      - {title: "Carnegie Hall Timeline (Maultsby): Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues"}
+      - {title: "Encyclopedia of African-American Culture and History: Rhythm and Blues", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+  - claim: "Swing orchestras shrank to small jump bands; jump blues kept the twelve-bar blues, a boogie-woogie bass, a shuffle beat and a featured saxophone"
+    sources:
+      - {title: "Carnegie Hall Timeline (Maultsby): Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues"}
+      - {title: "Encyclopedia of African-American Culture and History: Rhythm and Blues (jump bands, honking tenor saxophonists, shuffle and boogie-woogie)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+  - claim: "The drums hit hard on the backbeat, beats two and four"
+    sources:
+      - {title: "Carnegie Hall Timeline (Maultsby): Rhythm & Blues ('heavy backbeats on 2 and 4')", url: "https://timeline.carnegiehall.org/genres/rhythm-blues"}
+      - {title: "PBS Sound Field: How James Brown invented funk ('most music of that era gave heavy emphasis to the back beat, on the two and the four')", url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"}
+  - claim: "Saxophonist and singer Louis Jordan and his Tympany Five set the model"
+    sources:
+      - {title: "Carnegie Hall Timeline (Maultsby): Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues"}
+      - {title: "Encyclopedia of African-American Culture and History: Rhythm and Blues ('greatest of the jump band leaders was saxophonist and vocalist Louis Jordan')", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+  - claim: "Vocal groups brought close harmony from the gospel church"
+    sources:
+      - {title: "Encyclopedia of African-American Culture and History: Rhythm and Blues (vocal groups drew heavily from gospel)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+      - {title: "Carnegie Hall Timeline: Rock 'n' Roll (doo-wop groups rooted in gospel)", url: "https://timeline.carnegiehall.org/genres/rock-n-roll"}
+  - claim: "It played in Black clubs from New York to Los Angeles (places: New York City, Los Angeles)"
+    sources:
+      - {title: "Encyclopedia of African-American Culture and History: Rhythm and Blues (New York among R&B cities)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+      - {title: "Carnegie Hall Timeline (Maultsby): Rhythm & Blues (Johnny Otis, Club Alabam, Los Angeles; Zanzibar, NY)", url: "https://timeline.carnegiehall.org/genres/rhythm-blues"}
+      - {title: "GRAMMY.com: R&B pioneer Johnny Otis dies (1948 Barrelhouse, one of Los Angeles' first R&B clubs)", url: "https://www.grammy.com/news/rb-pioneer-johnny-otis-dies/"}
+  - claim: "By the mid-1960s the music took a new name, soul"
+    sources:
+      - {title: "Carnegie Hall Timeline (Maultsby): Rhythm & Blues ('In the mid-1960s, the combo style transformed into a new sound labeled soul')", url: "https://timeline.carnegiehall.org/genres/rhythm-blues"}
+      - {title: "Encyclopedia of African-American Culture and History: Rhythm and Blues ('By 1964 black popular music had acquired a new name: soul music')", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+rock-n-roll:
+  - claim: "Rock and roll was rhythm and blues under a new name, promoted to Black and white teenagers; young white listeners took up R&B records by Black musicians in the early 1950s"
+    sources:
+      - {title: "Carnegie Hall Timeline: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll"}
+      - {title: "Encyclopedia of Cleveland History: Freed, Alan (appeal of black music to young white consumers)", url: "https://case.edu/ech/articles/f/freed-alan"}
+  - claim: "The phrase rock and roll was old blues slang for sex"
+    sources:
+      - {title: "Encyclopedia of Cleveland History: Freed, Alan ('believed to be an old blues reference to sex')", url: "https://case.edu/ech/articles/f/freed-alan"}
+      - {title: "Encyclopedia of African-American Culture and History: Rhythm and Blues ('originally a euphemism for sex')", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"}
+  - claim: "Fats Domino: \"What they call rock 'n' roll is rhythm and blues\""
+    sources:
+      - {title: "Carnegie Hall Timeline: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll"}
+      - {title: "64 Parishes: Fats Domino (quote, 1956)", url: "https://64parishes.org/entry/fats-domino"}
+  - claim: "It ran on an aggressive beat and loud electric guitar, with saxophone solos and pounding piano"
+    sources:
+      - {title: "Carnegie Hall Timeline: Rock 'n' Roll ('an aggressive beat and prominent electric guitars', sax solos, pumping pianos)", url: "https://timeline.carnegiehall.org/genres/rock-n-roll"}
+      - {title: "Library of Congress: Steve Propes on Rocket 88 (piano, loud electric guitar, tenor saxes, drums)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Rocket-88_Propes.pdf"}
+  - claim: "Rocket 88 was played on Turner's piano, two tenor saxophones, drums and a guitar whose buzz, the story goes, came from an amplifier that fell off the car on the way"
+    sources:
+      - {title: "Library of Congress: Steve Propes on Rocket 88 ('legend has it that his amplifier fell off the roof of the band's car')", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Rocket-88_Propes.pdf"}
+      - {title: "Blues Foundation Hall of Fame: Rocket 88 (personnel; amp fell off the station wagon)", url: "https://www.blues.org/award-search/rocket-88-is-one-of-many-blues-a"}
+funk:
+  - claim: "Funk is dance music built on a repetitive syncopated groove set by bass and drums, with guitar, horns and keyboards played as rhythm instruments"
+    sources:
+      - {title: "Carnegie Hall Timeline: Funk", url: "https://timeline.carnegiehall.org/genres/funk"}
+      - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
+  - claim: "Where earlier music leaned on the backbeat (two and four), James Brown put the emphasis on the first beat, 'the one'"
+    sources:
+      - {title: "PBS Sound Field: How James Brown invented funk", url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"}
+      - {title: "Encyclopedia.com: Funk (Oxford Pocket Dictionary entry: 'typically accentuates the first beat in the bar')", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
+  - claim: "Credit for funk's birth goes above all to James Brown and his band; 'Papa's Got a Brand New Bag' (1965) is counted among the first funk records"
+    sources:
+      - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
+      - {title: "Carnegie Hall Timeline: Funk ('James Brown gave funk its polyrhythmic foundation')", url: "https://timeline.carnegiehall.org/genres/funk"}
+  - claim: "Sly Stone blurred funk with rock and soul"
+    sources:
+      - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
+      - {title: "Carnegie Hall Timeline: Funk (Sly Stone introduced rock technology)", url: "https://timeline.carnegiehall.org/genres/funk"}
+  - claim: "'Funky Drummer' was recorded in 1969 at the King studios in Cincinnati (place: King Records studios, Evanston, Cincinnati)"
+    sources:
+      - {title: "The Current (MPR): Pride and pain, the story of the Funky Drummer", url: "https://www.thecurrent.org/feature/2020/02/11/pride-and-pain-the-story-of-the-funky-drummer"}
+      - {title: "CityBeat Cincinnati: The Once and Future King", url: "https://www.citybeat.com/news/the-once-and-future-king-12226061/"}
+  - claim: "Hip-hop producers built new songs on funk samples"
+    sources:
+      - {title: "Carnegie Hall Timeline: Rap & Hip-Hop (sampled materials, especially funk)", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"}
+      - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture (widespread use of funk samples in hip-hop)", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
+hip-hop:
+  - claim: "Hip-hop is a culture born in the Bronx in the early 1970s among young African American, Caribbean and Latino New Yorkers"
+    sources:
+      - {title: "Carnegie Hall Timeline: Rap & Hip-Hop", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"}
+      - {title: "Library of Congress Labs, Citizen DJ: About", url: "https://citizen-dj.labs.loc.gov/about/"}
+  - claim: "Its elements are DJing, rapping (MCing), breaking and graffiti"
+    sources:
+      - {title: "PBS Independent Lens: How the burning of the Bronx led to the birth of hip-hop", url: "https://www.pbs.org/independentlens/blog/how-the-burning-of-the-bronx-led-to-the-birth-of-hip-hop/"}
+      - {title: "Smithsonian American Art Museum blog (Bambaataa's four elements)", url: "https://americanart.si.edu/blog/short-discussion-hip-hop-art-and-their-entanglement"}
+  - claim: "The MC rhymes over the beat in rhythm and street speech"
+    sources:
+      - {title: "Carnegie Hall Timeline: Rap & Hip-Hop ('original poetry recited in rhythm and rhyme over prerecorded instrumental tracks')", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"}
+      - {title: "Cheryl Keyes, Rap, Encyclopedia of African-American Culture and History ('rhyme, rhythmic speech, and street vernacular')", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-popular-and-jazz/rap-music"}
+  - claim: "It was made for parties in homes, community centres, parks and on the block"
+    sources:
+      - {title: "Carnegie Hall Timeline: Rap & Hip-Hop (house parties, community centers, city parks, block parties)", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"}
+      - {title: "Cheryl Keyes, Rap, Encyclopedia of African-American Culture and History (dance scene moved to neighborhood parks)", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-popular-and-jazz/rap-music"}
+  - claim: "For young people the city had neglected it was an outlet and a voice"
+    sources:
+      - {title: "Library of Congress Labs, Citizen DJ: About (communities neglected politically and institutionally; protest, empowerment)", url: "https://citizen-dj.labs.loc.gov/about/"}
+      - {title: "PBS Independent Lens: burning of the Bronx (city let its poorest areas burn; Melle Mel: 'we just needed an outlet')", url: "https://www.pbs.org/independentlens/blog/how-the-burning-of-the-bronx-led-to-the-birth-of-hip-hop/"}
+  - claim: "Later, drum machines and samples, funk above all, became its instruments"
+    sources:
+      - {title: "Carnegie Hall Timeline: Rap & Hip-Hop", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"}
+      - {title: "Kembrew McLeod, Funk, St. James Encyclopedia of Popular Culture", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-theory-forms-and-instruments/funk"}
+reggae:
+  - claim: "Reggae arose in Jamaica in the late 1960s on a heavy four-beat rhythm laid down by drums, bass and electric guitar"
+    sources:
+      - {title: "Jamaica Information Service: Reggae", url: "https://jis.gov.jm/jamaica/reggae/"}
+      - {title: "Library of Congress, NRR: Garnice on The Harder They Come (Jamaican backing of drums, bass, rhythm guitars)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf"}
+  - claim: "It grew in the poor neighbourhoods of Kingston and was a voice for the marginalised: injustice, resistance, love, praise"
+    sources:
+      - {title: "UNESCO ICH: Reggae music of Jamaica (marginalized groups, Western Kingston; injustice, resistance, love; praising God)", url: "https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398"}
+      - {title: "Jamaica Information Service: Reggae (voice of the oppressed; ghetto life; social and economic injustice)", url: "https://jis.gov.jm/jamaica/reggae/"}
+  - claim: "Its songs of praise often used the words of the Bible"
+    sources:
+      - {title: "Library of Congress, NRR: Garnice on The Harder They Come (Rivers of Babylon adapts Psalms 19 and 137)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf"}
+      - {title: "UNESCO ICH: Reggae music of Jamaica (a means of praising God)", url: "https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398"}
+  - claim: "In the 1970s reggae was steeped in Rastafari, which looks to Africa as the homeland of the diaspora"
+    sources:
+      - {title: "Carnegie Hall Timeline: Musical Exchange Across the Black Atlantic", url: "https://timeline.carnegiehall.org/stories/musical-exchange-across-the-black-atlantic"}
+      - {title: "Jamaica Information Service: Reggae (connection grew between the music and the Rastafarian movement)", url: "https://jis.gov.jm/jamaica/reggae/"}
+  - claim: "Bob Marley carried reggae far beyond Jamaica"
+    sources:
+      - {title: "Carnegie Hall Timeline: Musical Exchange Across the Black Atlantic (force throughout sub-Saharan Africa due to Marley)", url: "https://timeline.carnegiehall.org/stories/musical-exchange-across-the-black-atlantic"}
+      - {title: "Library of Congress, NRR: Garnice on The Harder They Come (opened the door for Bob Marley & The Wailers outside Jamaica)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf"}
+  - claim: "The Jamaican deejay talking in rhythm over a record carried on in New York rap"
+    sources:
+      - {title: "Carnegie Hall Timeline: Musical Exchange Across the Black Atlantic (rap fused African American verbal improvisation with Jamaican toasting over recorded music)", url: "https://timeline.carnegiehall.org/stories/musical-exchange-across-the-black-atlantic"}
+      - {title: "Library of Congress, NRR: Garnice on The Harder They Come (DJ style: vocalist speak-sings over an existing recording)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf"}
+
+chicago-house:
+  - claim: "House is built on a kick drum on every beat of the bar, 'four on the floor'"
+    sources:
+      - {title: "Carnegie Hall, Timeline of African American Music: House", url: "https://timeline.carnegiehall.org/genres/house"}
+      - {title: "GRAMMY.com: A house music timeline", url: "https://www.grammy.com/news/house-music-timeline-important-artists-songs-moments"}
+  - claim: "Tempo around 120 to 130 beats a minute (Carnegie: 120–135; Grammy: 115–130)"
+    sources:
+      - {title: "Carnegie Hall, Timeline of African American Music: House", url: "https://timeline.carnegiehall.org/genres/house"}
+      - {title: "GRAMMY.com: A house music timeline", url: "https://www.grammy.com/news/house-music-timeline-important-artists-songs-moments"}
+  - claim: "Made on drum machines such as Roland's TR-808 and TR-909, with synthesizers and samples"
+    sources:
+      - {title: "Carnegie Hall, Timeline of African American Music: House", url: "https://timeline.carnegiehall.org/genres/house"}
+      - {title: "GRAMMY.com: A house music timeline", url: "https://www.grammy.com/news/house-music-timeline-important-artists-songs-moments"}
+  - claim: "House grew out of disco"
+    sources:
+      - {title: "Carnegie Hall, Timeline of African American Music: House", url: "https://timeline.carnegiehall.org/genres/house"}
+      - {title: "GRAMMY.com: A house music timeline", url: "https://www.grammy.com/news/house-music-timeline-important-artists-songs-moments"}
+  - claim: "Frankie Knuckles called house 'disco's revenge'"
+    sources:
+      - {title: "GRAMMY.com: A house music timeline", url: "https://www.grammy.com/news/house-music-timeline-important-artists-songs-moments"}
+      - {title: "WBEZ, Jim DeRogatis: 50 Chicago artists who changed popular music, house music (2017)", url: "https://wbez.org/jim-derogatis/2017/04/24/50-chicago-artists-who-changed-popular-music-house-music"}
+  - claim: "Its makers were young Chicagoans, many of them Black and queer"
+    sources:
+      - {title: "GRAMMY.com: A house music timeline ('many of them Black and queer')", url: "https://www.grammy.com/news/house-music-timeline-important-artists-songs-moments"}
+      - {title: "NPR (via KPCW): From the Warehouse to the World (2023) (Meida McNeal: 'Black and brown queer folk and young people')", url: "https://www.kpcw.org/npr-top-stories/npr-top-stories/2023-03-01/from-the-warehouse-to-the-world-chicago-and-the-birth-of-house-music"}
+  - claim: "At the Warehouse Knuckles reworked disco and funk records, adding a drum machine"
+    sources:
+      - {title: "Carnegie Hall, Timeline: House (Knuckles 'edited and manipulated the tempos of soul and funk recordings')", url: "https://timeline.carnegiehall.org/genres/house"}
+      - {title: "NPR (via KPCW): From the Warehouse to the World (blended disco, funk and German electronic pop; sound effects and drum machines)", url: "https://www.kpcw.org/npr-top-stories/npr-top-stories/2023-03-01/from-the-warehouse-to-the-world-chicago-and-the-birth-of-house-music"}
+      - {title: "WBEZ (2017): Knuckles 'began creating his own rhythms on the earliest drum machines'", url: "https://wbez.org/jim-derogatis/2017/04/24/50-chicago-artists-who-changed-popular-music-house-music"}
+  - claim: "By the late 1980s house had crossed to Britain (UK top 10 for 'Love Can't Turn Around', 1986; Knuckles's London Heaven residency, 1987) and spread worldwide; place London replaces Comiskey Park (an event site, not where house arose or spread)"
+    sources:
+      - {title: "NPR (via KPCW): From the Warehouse to the World (UK top 10)", url: "https://www.kpcw.org/npr-top-stories/npr-top-stories/2023-03-01/from-the-warehouse-to-the-world-chicago-and-the-birth-of-house-music"}
+      - {title: "GRAMMY.com: A house music timeline (Heaven, London, 1987)", url: "https://www.grammy.com/news/house-music-timeline-important-artists-songs-moments"}
+      - {title: "Carnegie Hall, Timeline: House (regional scenes in the UK, South Africa, Japan)", url: "https://timeline.carnegiehall.org/genres/house"}
+detroit-techno:
+  - claim: "Techno is made almost entirely with machines: drum machines, synthesizers, sequencers and computers"
+    sources:
+      - {title: "Carnegie Hall, Timeline of African American Music: Detroit Techno", url: "https://timeline.carnegiehall.org/genres/detroit-techno"}
+      - {title: "Michigan Public: Juan Atkins obituary (2026)", url: "https://www.michiganpublic.org/news/2026-11-02/juan-atkins-obituary-detroit-techno"}
+  - claim: "Often with few or no words (Carnegie: 'lyrics, when present'; Clear 'almost wordless')"
+    sources:
+      - {title: "Carnegie Hall, Timeline: Detroit Techno", url: "https://timeline.carnegiehall.org/genres/detroit-techno"}
+      - {title: "Encyclopedia.com (Contemporary Musicians): Atkins, Juan", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/atkins-juan"}
+  - claim: "Born in Detroit in the early 1980s among young Black musicians influenced by Parliament-Funkadelic and Kraftwerk"
+    sources:
+      - {title: "Carnegie Hall, Timeline: Detroit Techno", url: "https://timeline.carnegiehall.org/genres/detroit-techno"}
+      - {title: "NPR: Remembering Juan Atkins (2026)", url: "https://www.nprillinois.org/2026-11-02/remembering-juan-atkins-known-as-the-originator-of-techno"}
+      - {title: "Encyclopedia.com: Atkins, Juan (Kraftwerk and Parliament on the Electrifying Mojo's show)", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/atkins-juan"}
+  - claim: "Detroit was losing factories and jobs (deindustrialization) as techno arose"
+    sources:
+      - {title: "Carnegie Hall, Timeline: Detroit Techno", url: "https://timeline.carnegiehall.org/genres/detroit-techno"}
+      - {title: "NPR: Remembering Juan Atkins (2026) ('Factories were closing, unemployment was rising')", url: "https://www.nprillinois.org/2026-11-02/remembering-juan-atkins-known-as-the-originator-of-techno"}
+  - claim: "Its themes were technology, space and the future"
+    sources:
+      - {title: "Carnegie Hall, Timeline: Detroit Techno (lyrics on space travel, technology; science fiction)", url: "https://timeline.carnegiehall.org/genres/detroit-techno"}
+      - {title: "NPR: Remembering Juan Atkins (2026) ('futuristic music')", url: "https://www.nprillinois.org/2026-11-02/remembering-juan-atkins-known-as-the-originator-of-techno"}
+  - claim: "Europe took to techno faster than America; it is often taken for a German music"
+    sources:
+      - {title: "Encyclopedia.com: Atkins, Juan (techno more popular in Europe than the US)", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/atkins-juan"}
+      - {title: "NPR: Remembering Juan Atkins (2026) (techno 'is often associated with Germany')", url: "https://www.nprillinois.org/2026-11-02/remembering-juan-atkins-known-as-the-originator-of-techno"}
+      - {title: "Michigan Public (2026): 'especially popular in many parts of Europe'", url: "https://www.michiganpublic.org/news/2026-11-02/juan-atkins-obituary-detroit-techno"}
+afrobeat:
+  - claim: "Afrobeat is long, trance-like dance music; a piece can fill a whole LP side (one or two long numbers per LP; 13 to 30 minutes)"
+    sources:
+      - {title: "Songlines: Fela Kuti, a beginner's guide", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
+      - {title: "Red Bull Music Academy Daily: I Go Shout Plenty (2012)", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti"}
+      - {title: "Classic Album Sundays: Gentleman and Zombie ('trance-like, cyclical')", url: "https://classicalbumsundays.com/album-of-the-month-fela-kuti-gentleman-zombie/"}
+  - claim: "Horns punch out riffs"
+    sources:
+      - {title: "Songlines: Fela Kuti, a beginner's guide ('thunderous brass', 'propulsive horns')", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
+      - {title: "Red Bull Music Academy Daily: I Go Shout Plenty ('bright horn blasts')", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti"}
+  - claim: "Fela sings in Pidgin English"
+    sources:
+      - {title: "Songlines: Fela Kuti, a beginner's guide", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
+      - {title: "Red Bull Music Academy Daily: I Go Shout Plenty", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti"}
+  - claim: "A chorus answers him (call-and-response)"
+    sources:
+      - {title: "Songlines: Fela Kuti, a beginner's guide", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
+      - {title: "Classic Album Sundays: Gentleman and Zombie", url: "https://classicalbumsundays.com/album-of-the-month-fela-kuti-gentleman-zombie/"}
+  - claim: "Before afrobeat Fela led a band playing highlife and jazz (Highlife Rakers, Koola Lobitos)"
+    sources:
+      - {title: "Songlines: Fela Kuti, a beginner's guide", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
+      - {title: "Red Bull Music Academy Daily: I Go Shout Plenty", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti"}
+      - {title: "Fela Kuti official site: story", url: "https://felakuti.com/story/1969"}
+  - claim: "He took the drive of James Brown's funk"
+    sources:
+      - {title: "Red Bull Music Academy Daily: I Go Shout Plenty ('James Brown-styled funk')", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti"}
+      - {title: "Classic Album Sundays: Gentleman and Zombie ('inspired by the energy of James Brown')", url: "https://classicalbumsundays.com/album-of-the-month-fela-kuti-gentleman-zombie/"}
+highlife:
+  - claim: "Two forms: dance-band highlife (orchestras of horns, saxophones, trumpets) and guitar-band highlife (small guitar groups)"
+    sources:
+      - {title: "Graphic Showbiz: 100 Years of Highlife", url: "https://www.graphic.com.gh/entertainment/showbiz-news/100-years-of-highlife.html"}
+      - {title: "Music in Africa: Highlife in West Africa", url: "https://www.musicinafrica.net/node/15054"}
+  - claim: "It grew up in Gold Coast port towns, Cape Coast and Accra among them (supports places Accra and Cape Coast)"
+    sources:
+      - {title: "Graphic Showbiz: 100 Years of Highlife (Accra, Cape Coast, Sekondi-Takoradi)", url: "https://www.graphic.com.gh/entertainment/showbiz-news/100-years-of-highlife.html"}
+      - {title: "John Collins via MyJoyOnline (regimental bands at Cape Coast and Elmina castles; adaha on the Fanti coast)", url: "https://www.myjoyonline.com/highlife-music-dates-as-far-back-as-19th-century-prof-collins/"}
+  - claim: "Local brass bands schooled on colonial military music were among its sources"
+    sources:
+      - {title: "John Collins via MyJoyOnline", url: "https://www.myjoyonline.com/highlife-music-dates-as-far-back-as-19th-century-prof-collins/"}
+      - {title: "Graphic Showbiz: 100 Years of Highlife (European brass-band and military marching music)", url: "https://www.graphic.com.gh/entertainment/showbiz-news/100-years-of-highlife.html"}
+  - claim: "Fela Kuti began in highlife before building afrobeat"
+    sources:
+      - {title: "Graphic Showbiz: 100 Years of Highlife", url: "https://www.graphic.com.gh/entertainment/showbiz-news/100-years-of-highlife.html"}
+      - {title: "Songlines: Fela Kuti, a beginner's guide (Koola Lobitos, highlife and jazz)", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}
+  - claim: "In Ghana rappers later laid hip-hop over highlife melodies as hiplife"
+    sources:
+      - {title: "Graphic Showbiz: 100 Years of Highlife (Reggie Rockstone)", url: "https://www.graphic.com.gh/entertainment/showbiz-news/100-years-of-highlife.html"}
+      - {title: "Music in Africa: Highlife in West Africa", url: "https://www.musicinafrica.net/node/15054"}
+samba:
+  - claim: "Samba is a music and a dance at once"
+    sources:
+      - {title: "UNESCO ICH: Samba de Roda of the Recôncavo of Bahia (music, dance and poetry)", url: "https://ich.unesco.org/en/RL/samba-de-roda-of-the-reconcavo-of-bahia-00101"}
+      - {title: "UW / University of Arizona CLAS, Smithsonian Folkways lesson ('refers to the genre and the dance')", url: "https://clas.arizona.edu/sites/default/files/Brazil_Music_Danca%2C%20Movement%20and%20Music%20of%20Brazil.pdf"}
+  - claim: "Samba de roda gathers people in a circle in the Recôncavo of Bahia; pandeiro, viola and prato-e-faca; clapping; responsorial verses; dancers, mostly women, take turns in the middle with tiny shuffling steps (miudinho)"
+    sources:
+      - {title: "UNESCO ICH: Samba de Roda of the Recôncavo of Bahia", url: "https://ich.unesco.org/en/RL/samba-de-roda-of-the-reconcavo-of-bahia-00101"}
+      - {title: "Ari Lima, quoting IPHAN dossier (2006), UFRB", url: "https://www.ufrb.edu.br/ebecult/wp-content/uploads/2012/04/Mem%c2%97ria-cultura-e-espirais-do-tempo-no-samba-de-roda-baiano.pdf"}
+  - claim: "The prato-e-faca is a plate and knife from the kitchen"
+    sources:
+      - {title: "Rolling Stone Brasil: Dossiê, o samba de roda e o prato-e-faca", url: "https://rollingstone.com.br/?p=101205"}
+      - {title: "Ari Lima, quoting IPHAN dossier (2006), UFRB (prato-e-faca as idiophone)", url: "https://www.ufrb.edu.br/ebecult/wp-content/uploads/2012/04/Mem%c2%97ria-cultura-e-espirais-do-tempo-no-samba-de-roda-baiano.pdf"}
+  - claim: "Samba de roda drew on the dances of the region's enslaved Africans"
+    sources:
+      - {title: "UNESCO ICH: Samba de Roda of the Recôncavo of Bahia", url: "https://ich.unesco.org/en/RL/samba-de-roda-of-the-reconcavo-of-bahia-00101"}
+      - {title: "Ari Lima (UFRB): samba de roda rooted in the condition born of African slavery", url: "https://www.ufrb.edu.br/ebecult/wp-content/uploads/2012/04/Mem%c2%97ria-cultura-e-espirais-do-tempo-no-samba-de-roda-baiano.pdf"}
+  - claim: "Samba schools of Rio's Black neighbourhoods compete at carnival"
+    sources:
+      - {title: "AAIHS Black Perspectives: Rio's carnival quilombo", url: "https://www.aaihs.org/rios-carnival-quilombo/"}
+      - {title: "UW / University of Arizona CLAS lesson (carnival samba, samba schools)", url: "https://clas.arizona.edu/sites/default/files/Brazil_Music_Danca%2C%20Movement%20and%20Music%20of%20Brazil.pdf"}
+  - claim: "Samba became a symbol of Brazil"
+    sources:
+      - {title: "UNESCO ICH: urban samba became a symbol of Brazilian national identity in the 20th century", url: "https://ich.unesco.org/en/RL/samba-de-roda-of-the-reconcavo-of-bahia-00101"}
+      - {title: "UW / University of Arizona CLAS lesson: 'Samba: Brazil's National Music'", url: "https://clas.arizona.edu/sites/default/files/Brazil_Music_Danca%2C%20Movement%20and%20Music%20of%20Brazil.pdf"}
+
+adinkra:
+  - claim: "Adinkra signs are Akan; each stands for a proverb, belief or idea"
+    sources:
+      - {title: "Adrian Anagnost, Adinkra from Kumase to the British Museum, British Art Studies 28", url: "https://britishartstudies.ac.uk/issues/28/adinkra-from-kumase-to-the-british-museum/"}
+      - {title: "Carol Ventura: Adinkra in Ntonso-Ashanti, Ghana", url: "https://www.carolventura.com/Adinkra.htm"}
+      - {title: "P. Owusu (University of Ghana), Adinkra Symbols as Multivocal Pedagogical Tool", url: "https://www.ajol.info/index.php/contjas/article/view/187100"}
+  - claim: "The signs are stamped by hand with stamps carved in relief from calabash"
+    sources:
+      - {title: "Anagnost, British Art Studies 28", url: "https://britishartstudies.ac.uk/issues/28/adinkra-from-kumase-to-the-british-museum/"}
+      - {title: "Carol Ventura: Adinkra in Ntonso-Ashanti", url: "https://www.carolventura.com/Adinkra.htm"}
+      - {title: "Doran H. Ross, Adinkra (encyclopedia.com): carved gourd stamps", url: "https://www.encyclopedia.com/fashion/encyclopedias-almanacs-transcripts-and-maps/adinkra"}
+  - claim: "The ink is made from the bark of the badie tree"
+    sources:
+      - {title: "Anagnost, British Art Studies 28 (ink from boiled badie tree bark)", url: "https://britishartstudies.ac.uk/issues/28/adinkra-from-kumase-to-the-british-museum/"}
+      - {title: "Carol Ventura: adinkra aduro from Badie bark and roots", url: "https://www.carolventura.com/Adinkra.htm"}
+  - claim: "A comb dipped in the ink rules a grid across the cloth, and the stamps fill its sections"
+    sources:
+      - {title: "Doran H. Ross, Adinkra (encyclopedia.com)", url: "https://www.encyclopedia.com/fashion/encyclopedias-almanacs-transcripts-and-maps/adinkra"}
+      - {title: "Carol Ventura: Adinkra in Ntonso-Ashanti", url: "https://www.carolventura.com/Adinkra.htm"}
+  - claim: "Adinkra was first a mourning cloth worn by Asante elites at funerals, later spread to all ranks and festive occasions"
+    sources:
+      - {title: "Anagnost, British Art Studies 28 (mourning garment by elites, then popularized across ranks)", url: "https://britishartstudies.ac.uk/issues/28/adinkra-from-kumase-to-the-british-museum/"}
+      - {title: "GWU Textile Museum collection stories (worn by royalty and spiritual leaders for funerals)", url: "https://collectionstories.museum.gwu.edu/?p=445"}
+      - {title: "Carol Ventura (originally only mourning cloth; today other special occasions)", url: "https://www.carolventura.com/Adinkra.htm"}
+      - {title: "Doran H. Ross (Sunday adinkra as festive dress)", url: "https://www.encyclopedia.com/fashion/encyclopedias-almanacs-transcripts-and-maps/adinkra"}
+  - claim: "Places: African Burial Ground removed (disputed object site, not where adinkra arose or spread); Kumasi and Ntonso kept as the places of origin and continued production"
+    sources:
+      - {title: "Anagnost, British Art Studies 28 (Kumase)", url: "https://britishartstudies.ac.uk/issues/28/adinkra-from-kumase-to-the-british-museum/"}
+      - {title: "Carol Ventura: Adinkra in Ntonso-Ashanti", url: "https://www.carolventura.com/Adinkra.htm"}
+banjo:
+  - claim: "The banjo body, once a gourd, later a wooden hoop/frame, is covered with skin like a drum"
+    sources:
+      - {title: "Ballad of America: Banjo, A Brief History (gourd body covered like a drum with hide; Boucher's wood-frame body)", url: "https://balladofamerica.org/banjo/"}
+      - {title: "Encyclopedia Virginia: Joel Walker Sweeney (wooden body replacing the gourd)", url: "https://encyclopediavirginia.org/entries/joel-walker-sweeney-ca-1810-october-1860/"}
+  - claim: "The strings run over a bridge that rests on the skin head"
+    sources:
+      - {title: "NPR: The Banjo's Roots Reconsidered (movable bridge holds strings over the skin head, as in banjos)", url: "https://www.npr.org/transcripts/139880625"}
+      - {title: "UCLA Ethnomusicology Review: Historical Narratives of the Akonting and Banjo (bridge atop the animal-skin soundplane)", url: "https://ethnomusicologyreview.ucla.edu/node/763"}
+  - claim: "Beside the long strings runs a short thumb or drone string"
+    sources:
+      - {title: "Ballad of America (short fifth string providing a drone)", url: "https://balladofamerica.org/banjo/"}
+      - {title: "e-WV: Banjo (fifth or drone string)", url: "https://wvencyclopedia.org/entries/314"}
+      - {title: "Encyclopedia Virginia: Sweeney (earlier banjos already had a short drone string)", url: "https://encyclopediavirginia.org/entries/joel-walker-sweeney-ca-1810-october-1860/"}
+  - claim: "The oldest playing style is the downstroke or clawhammer: a finger strikes down, the thumb sounds the drone on the way back"
+    sources:
+      - {title: "e-WV: Banjo (clawhammer or stroke style learned from enslaved people)", url: "https://wvencyclopedia.org/entries/314"}
+      - {title: "Ballad of America (African-rooted downstroke)", url: "https://balladofamerica.org/banjo/"}
+  - claim: "The akonting of the Jola of Senegambia is the closest known African relative: calabash body with goat skin, long neck, short thumb string, same downstroke"
+    sources:
+      - {title: "NPR: The Banjo's Roots Reconsidered (2011)", url: "https://www.npr.org/transcripts/139880625"}
+      - {title: "UCLA Ethnomusicology Review: Historical Narratives of the Akonting and Banjo", url: "https://ethnomusicologyreview.ucla.edu/node/763"}
+  - claim: "The banjo's bright sound cut through early jazz bands"
+    sources:
+      - {title: "McClung Museum: The Banjo (only stringed instrument loud enough above the horns)", url: "https://mcclungmuseum.utk.edu/exhibitions/the-banjo-from-africa-to-america-and-beyond/"}
+      - {title: "Ballad of America (loud, bright sound cut through jazz bands)", url: "https://balladofamerica.org/banjo/"}
+  - claim: "Black and white string bands played banjo at Appalachian dances"
+    sources:
+      - {title: "Ballad of America (White, Black and integrated string bands for square and step dances in southern Appalachia)", url: "https://balladofamerica.org/banjo/"}
+      - {title: "McClung Museum (Appalachian social music for dancing; Black and white musicians)", url: "https://mcclungmuseum.utk.edu/exhibitions/the-banjo-from-africa-to-america-and-beyond/"}
+  - claim: "The banjo is prominent in bluegrass"
+    sources:
+      - {title: "McClung Museum", url: "https://mcclungmuseum.utk.edu/exhibitions/the-banjo-from-africa-to-america-and-beyond/"}
+      - {title: "e-WV: Banjo (Scruggs-style bluegrass)", url: "https://wvencyclopedia.org/entries/314"}
+  - claim: "Places reordered: The Gambia (Jola country, akonting homeland) first as place of origin, South Carolina Lowcountry second as place of early American spread"
+    sources:
+      - {title: "UCLA Ethnomusicology Review (Jola, Senegambia)", url: "https://ethnomusicologyreview.ucla.edu/node/763"}
+      - {title: "NPR (Jatta, Jola, Gambia)", url: "https://www.npr.org/transcripts/139880625"}
+gullah:
+  - claim: "Gullah (Geechee) is a creole that grew from English and many African languages"
+    sources:
+      - {title: "NPS: Gullah Geechee Cultural Heritage Corridor (a creole language)", url: "https://www.nps.gov/guge/index.htm"}
+      - {title: "University of Chicago Magazine: Lorenzo Dow Turner (amalgam of English and multiple African languages)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml"}
+  - claim: "Most of its vocabulary is English, but its grammar does not simply follow English"
+    sources:
+      - {title: "University of Chicago Magazine (English-based vocabulary; grammatical number, serial verbs)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml"}
+      - {title: "Kenyon College: American Language, African Roots (grammatical constructions not resembling English)", url: "https://digital.kenyon.edu/gullah_language.html"}
+  - claim: "It keeps African words such as kuta (turtle) and thousands of African personal names"
+    sources:
+      - {title: "Folkstreams: Dr. Lorenzo Turner and the Gullah Language (kuta, turtle; thousands of personal names)", url: "https://www.folkstreams.net/contexts/dr-lorenzo-turner-and-the-gullah-language"}
+      - {title: "University of Chicago Magazine (cootuh, turtle; 3,600 basket names)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml"}
+  - claim: "Its speakers descend from Africans enslaved on rice, Sea Island cotton and indigo plantations of the South Carolina and Georgia coast; isolation let them keep many African traditions"
+    sources:
+      - {title: "NPS: Gullah Geechee Cultural Heritage Corridor", url: "https://www.nps.gov/guge/index.htm"}
+      - {title: "University of Chicago Magazine (rice coast, Charleston and Savannah; cloistered Sea Island communities)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml"}
+  - claim: "Turner's 1949 book traced thousands of Gullah words and names to African languages"
+    sources:
+      - {title: "Folkstreams (nearly 4,000 items of African origin)", url: "https://www.folkstreams.net/contexts/dr-lorenzo-turner-and-the-gullah-language"}
+      - {title: "University of Chicago Magazine", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml"}
+  - claim: "Places reordered: Sea Islands, South Carolina first (where Gullah arose), Harris Neck second"
+    sources:
+      - {title: "NPS: Gullah Geechee Cultural Heritage Corridor", url: "https://www.nps.gov/guge/index.htm"}
+      - {title: "University of Chicago Magazine (Sea Islands of South Carolina and Georgia)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml"}
+steelpan:
+  - claim: "A steelpan is made from a 55-gallon oil drum"
+    sources:
+      - {title: "Discover Trinidad and Tobago: The steelpan", url: "https://www.discovertnt.com/articles/Trinidad/Steelbands/136/3/19"}
+      - {title: "Oxford Business Group: The story of the steel drum (55-gallon oil drum)", url: "https://oxfordbusinessgroup.com/reports/trinidad-tobago/2015-report/economy/the-story-of-the-steel-drum-in-trinidad-and-tobago"}
+  - claim: "Its surface is grooved into separate sections, each hammered to a definite pitch"
+    sources:
+      - {title: "T&T Ministry of Foreign Affairs: National instrument", url: "https://foreign.gov.tt/about/trinidad-tobago/national-symbols/national-instrument/"}
+      - {title: "Discover Trinidad and Tobago (notes grooved, hammered precise in pitch)", url: "https://www.discovertnt.com/articles/Trinidad/Steelbands/136/3/19"}
+  - claim: "Tenor/lead pans carry the melody, mid-range pans are like guitars and cellos, plus bass pans"
+    sources:
+      - {title: "Discover Trinidad and Tobago (tenor/lead pan carries melody; seconds, guitar, cello, bass pans)", url: "https://www.discovertnt.com/articles/Trinidad/Steelbands/136/3/19"}
+      - {title: "Oxford Business Group (frontline tenor pans, midrange pans like guitars and cellos)", url: "https://oxfordbusinessgroup.com/reports/trinidad-tobago/2015-report/economy/the-story-of-the-steel-drum-in-trinidad-and-tobago"}
+  - claim: "Bands of a hundred players and more rehearse in panyards"
+    sources:
+      - {title: "Discover Trinidad and Tobago (100-person orchestras; panyards)", url: "https://www.discovertnt.com/articles/Trinidad/Steelbands/136/3/19"}
+      - {title: "Oxford Business Group (120 musicians; panyard)", url: "https://oxfordbusinessgroup.com/reports/trinidad-tobago/2015-report/economy/the-story-of-the-steel-drum-in-trinidad-and-tobago"}
+      - {title: "National Trust of Trinidad and Tobago: Panyards of Trinidad", url: "https://nationaltrust.tt/panyards-of-trinidad/"}
+  - claim: "Panorama is the national steelband competition at Carnival"
+    sources:
+      - {title: "Discover Trinidad and Tobago", url: "https://www.discovertnt.com/articles/Trinidad/Steelbands/136/3/19"}
+      - {title: "National Trust of Trinidad and Tobago: Panyards", url: "https://nationaltrust.tt/panyards-of-trinidad/"}
+  - claim: "Tamboo bamboo arose after colonial authorities banned drumming; when bamboo was banned in turn, the oil drum took its place"
+    sources:
+      - {title: "Discover Trinidad and Tobago (drumming banned, tambu bamboo; tambu bamboo banned in WWII; oil drums)", url: "https://www.discovertnt.com/articles/Trinidad/Steelbands/136/3/19"}
+      - {title: "Oxford Business Group (ban on percussion; Tamboo-Bamboo; banned by the 1930s; oil drum withstood drumming)", url: "https://oxfordbusinessgroup.com/reports/trinidad-tobago/2015-report/economy/the-story-of-the-steel-drum-in-trinidad-and-tobago"}
+  - claim: "Places: Royal Festival Hall replaced by Notting Hill, London, where Russ Henderson's steelband led the first carnival processions (place of spread)"
+    sources:
+      - {title: "Pan Podium: 70th anniversary of steelpan in the UK (first steelband at Notting Hill Carnival was Russ Henderson's)", url: "https://www.panpodium.com/home/2021/7/25/70th-anniversary-of-steelpan-in-the-uk"}
+      - {title: "Red Bull Music Academy Daily: The birth of Notting Hill Carnival", url: "https://daily.redbullmusicacademy.com/2013/08/birth-of-notting-hill-carnival"}
+talking-drums:
+  - claim: "The dùndún is played with a curved stick"
+    sources:
+      - {title: "Smithsonian Folkways: William Bascom, Drums of the Yoruba of Nigeria (stick curving through ninety degrees)", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW04441.pdf"}
+      - {title: "Samuel Kayode Akinbo, The Language of Gángan, Frontiers in Communication (2021)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2021.650382/full"}
+  - claim: "The ensemble is led by the ìyáàlù, the 'mother drum', which carries most of the text"
+    sources:
+      - {title: "Frontiers in Communication: Speech surrogacy systems of the Yoruba dùndún and bàtá (2021)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2021.652542/full"}
+      - {title: "Akinbo, The Language of Gángan", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2021.650382/full"}
+      - {title: "Bascom, Folkways liner notes (iya ilu, mother of the drums)", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW04441.pdf"}
+  - claim: "Talking drums are not a code like telegraphy; they reproduce the tones of the language"
+    sources:
+      - {title: "Bascom, Folkways liner notes ('not comparable to telegraphy since they are not based upon a code')", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW04441.pdf"}
+      - {title: "Akinbo, The Language of Gángan (drum encodes the sound patterns of Yorùbá)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2021.650382/full"}
+  - claim: "The repertoire is praise poetry (oríkì), proverbs, greetings and praise names of important people, in palaces and civic and religious rites"
+    sources:
+      - {title: "Frontiers in Communication: dùndún and bàtá (oríkì and proverbs; civic and religious rituals)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2021.652542/full"}
+      - {title: "Bascom, Folkways liner notes (greetings, praise names; drummers of the King of Oyo in the palace)", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW04441.pdf"}
+
+adlam:
+  - claim: "Fulani is spoken by some 40 million people across the Sahel, from Senegal and Guinea to Nigeria, Chad and Cameroon"
+    sources:
+      - {title: "Michael Everson, Proposal for encoding Adlam (2014), §1 (more than 40 million; Senegal ... Nigeria, Chad, Cameroon, Niger)", url: "https://www.unicode.org/L2/L2014/14219-n4628-adlam.pdf"}
+      - {title: "Thomas Phinney, Finding a Common Language, Communication Arts (about 40 million in West and Central Africa)", url: "https://www.commarts.com/columns/finding-a-common-language"}
+  - claim: "Adlam is written right to left, with capital and small letters, and letters may stand apart or join cursively"
+    sources:
+      - {title: "The Unicode Standard 17.0, chapter 19: Adlam (casing script, right-to-left)", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
+      - {title: "Michael Everson, Proposal for encoding Adlam (2014), §2 (casing, right to left, optional cursive joining)", url: "https://www.unicode.org/L2/L2014/14219-n4628-adlam.pdf"}
+      - {title: "Thomas Phinney, Finding a Common Language (uppercase and lowercase forms; right to left)", url: "https://www.commarts.com/columns/finding-a-common-language"}
+  - claim: "Before Adlam, Fulani was usually written in Arabic script, which has no letters for many of its sounds"
+    sources:
+      - {title: "Thomas Phinney, Finding a Common Language ('many sounds in Fulfulde have no direct representation in Arabic')", url: "https://www.commarts.com/columns/finding-a-common-language"}
+      - {title: "Michael Everson, Proposal for encoding Adlam (2014), §1 (father wrote Fulani in Arabic script: 'That's not our script')", url: "https://www.unicode.org/L2/L2014/14219-n4628-adlam.pdf"}
+  - claim: "Adlam is taught in schools in several African countries"
+    sources:
+      - {title: "The Unicode Standard 17.0, chapter 19: Adlam (taught at schools in Guinea, Nigeria ...)", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
+      - {title: "Thomas Phinney, Finding a Common Language ('Adlam-based schools in five African countries')", url: "https://www.commarts.com/columns/finding-a-common-language"}
+nko:
+  - claim: "N'Ko is an alphabet for the Manding languages, written right to left, with 7 vowel letters and 19 consonants, one sign per sound"
+    sources:
+      - {title: "The Unicode Standard 17.0, chapter 19: N'Ko (right to left; one symbol, one sound; seven vowels, 19 consonants)", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
+      - {title: "W3C, N'Ko Script Resources (alphabet; right-to-left; 19 native consonant and 7 vowel letters)", url: "https://www.w3.org/TR/nkoo-lreq/"}
+  - claim: "N'Ko was built to show Manding tone and vowel length; diacritical marks over the vowels carry the tone"
+    sources:
+      - {title: "The Unicode Standard 17.0, chapter 19: N'Ko (each vowel can bear one of seven diacritical marks that modify the tone)", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
+      - {title: "W3C, N'Ko Script Resources (7 combining tone marks)", url: "https://www.w3.org/TR/nkoo-lreq/"}
+      - {title: "Coleman Donaldson, African Studies Review (N'ko built for Manding's tonal and vowel-length features)", url: "https://www.cambridge.org/core/journals/african-studies-review/article/role-of-islam-ajami-writings-and-educational-reform-in-sulemaana-kantes-nko/E6394B2D11A96EE6872CA621456E2D22"}
+  - claim: "N'Ko users run their own schools and print newspapers, a dictionary and books in it"
+    sources:
+      - {title: "Endangered Alphabets Project: N'Ko (N'Ko schools, books, a dictionary and several local newspapers)", url: "https://www.endangeredalphabets.net/?p=330"}
+      - {title: "Coleman Donaldson, African Studies Review (grassroots publishing, broadcasting and education in N'ko)", url: "https://www.cambridge.org/core/journals/african-studies-review/article/role-of-islam-ajami-writings-and-educational-reform-in-sulemaana-kantes-nko/E6394B2D11A96EE6872CA621456E2D22"}
+  - claim: "Kanté wrote on many subjects, from history to medicine, copying many books by hand"
+    sources:
+      - {title: "Coleman Donaldson, African Studies Review (over one hundred books on linguistics, history, traditional medicine and Islam)", url: "https://www.cambridge.org/core/journals/african-studies-review/article/role-of-islam-ajami-writings-and-educational-reform-in-sulemaana-kantes-nko/E6394B2D11A96EE6872CA621456E2D22"}
+      - {title: "Endangered Alphabets Project: N'Ko (authored works on many subjects, writing the books himself, by hand)", url: "https://www.endangeredalphabets.net/?p=330"}
+  - claim: "The N'Ko literacy movement spread across West Africa without government support"
+    sources:
+      - {title: "Dianne White Oyler, History in Africa 24 (1997), abstract (grassroots movement spread from the Gambia to Nigeria without government intervention or support)", url: "https://www.cambridge.org/core/journals/history-in-africa/article/nko-alphabet-as-a-vehicle-of-indigenist-historiography1/D095250EBB95F2CF3F237D12A7AB6710"}
+      - {title: "Coleman Donaldson, African Studies Review (thousands of West Africans study and promote N'ko; grassroots efforts)", url: "https://www.cambridge.org/core/journals/african-studies-review/article/role-of-islam-ajami-writings-and-educational-reform-in-sulemaana-kantes-nko/E6394B2D11A96EE6872CA621456E2D22"}
+  - claim: "Place: N'Ko first appeared in Bingerville, Côte d'Ivoire (first place kept); Kanté was from Kankan"
+    sources:
+      - {title: "Dianne White Oyler, History in Africa 24 (1997), abstract (Kanté of Kankan; first appearance in Bingerville, 14 April 1949)", url: "https://www.cambridge.org/core/journals/history-in-africa/article/nko-alphabet-as-a-vehicle-of-indigenist-historiography1/D095250EBB95F2CF3F237D12A7AB6710"}
+      - {title: "Coleman Donaldson, African Studies Review (Kantè devised N'ko in Côte d'Ivoire)", url: "https://www.cambridge.org/core/journals/african-studies-review/article/role-of-islam-ajami-writings-and-educational-reform-in-sulemaana-kantes-nko/E6394B2D11A96EE6872CA621456E2D22"}
+nsibidi:
+  - claim: "Nsibidi signs do not spell sounds but stand for ideas and situations"
+    sources:
+      - {title: "Princeton University Art Museum: Victor Ekpuk, Language and Lineage ('an ancient nonspoken system of communication')", url: "https://artmuseum.princeton.edu/art/stories-perspectives/conversation-victor-ekpuk-language-and-lineage"}
+      - {title: "Hood Museum: Ukara brochure (2015) ('a body of ideographic, abstract, and gestural signs')", url: "https://hoodmuseum.dartmouth.edu/sites/hoodmuseum.prod/files/hoodmuseum/publications/ukara-brochure-2015.pdf"}
+  - claim: "Signs stand for situations such as love, a quarrel, two people talking"
+    sources:
+      - {title: "Dayrell, JRAI 41 (1911), signs for love (150, 154), quarrel (17, 41-43), two men talking (80) — primary", url: "https://zenodo.org/records/1449623/files/article.pdf"}
+      - {title: "Hood Museum: Ukara brochure (2015) (signs encapsulate human relationships at personal, communal and cross-cultural levels)", url: "https://hoodmuseum.dartmouth.edu/sites/hoodmuseum.prod/files/hoodmuseum/publications/ukara-brochure-2015.pdf"}
+  - claim: "Ekpe is a men's association whose lodges governed communities and trade"
+    sources:
+      - {title: "Hood Museum: Ukara exhibition page ('a multi-ethnic all-male association'); brochure ('a governing institution across different communities')", url: "https://hoodmuseum.dartmouth.edu/news/2015/03/ukara-ritual-cloth-ekpe-secret-society"}
+      - {title: "UBC Press / University Press of Mississippi: Miller, Voice of the Leopard ('Ékpè lodges ruled local communities while also managing regional and long-distance trade')", url: "https://ubcpress.ca/voice-of-the-leopard"}
+  - claim: "Ekpe spread among the Ejagham, Efik, Igbo, Ibibio and neighbouring peoples"
+    sources:
+      - {title: "Hood Museum: Ukara brochure (2015) (distribution of Ekpe among the Ejagham, Igbo, Efik, Ibibio and other groups)", url: "https://hoodmuseum.dartmouth.edu/sites/hoodmuseum.prod/files/hoodmuseum/publications/ukara-brochure-2015.pdf"}
+      - {title: "Ivor L. Miller, Abakuá, Encyclopedia of African-American Culture and History (leopard societies of the Qua Ejagham, Efut and Efik)", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/abakua"}
+  - claim: "Signs are drawn on the ground or performed with the body (gestural)"
+    sources:
+      - {title: "Princeton University Art Museum: Victor Ekpuk (signs drawn on the ground or performed)", url: "https://artmuseum.princeton.edu/art/stories-perspectives/conversation-victor-ekpuk-language-and-lineage"}
+      - {title: "Hood Museum: Ukara brochure (2015) (gestural signs)", url: "https://hoodmuseum.dartmouth.edu/sites/hoodmuseum.prod/files/hoodmuseum/publications/ukara-brochure-2015.pdf"}
+  - claim: "On ukara the signs stand out white on indigo"
+    sources:
+      - {title: "Hood Museum: Ukara brochure (2015) ('white against a deep blue background')", url: "https://hoodmuseum.dartmouth.edu/sites/hoodmuseum.prod/files/hoodmuseum/publications/ukara-brochure-2015.pdf"}
+      - {title: "Colgate University Picker Art Gallery: Ukara ('indigo resist-dyed ... Nsibidi symbols')", url: "https://emuseum.colgate.edu/objects/20619/ukara"}
+  - claim: "Many signs are widely known; their deepest meanings are kept by initiates"
+    sources:
+      - {title: "Hood Museum: Ukara brochure (2015) ('recognizable to a broad public; still, few understand the signs' deeply guarded meanings')", url: "https://hoodmuseum.dartmouth.edu/sites/hoodmuseum.prod/files/hoodmuseum/publications/ukara-brochure-2015.pdf"}
+      - {title: "Dayrell, JRAI 41 (1911), p. 521 (a large number of signs common to all societies, known to most of the natives; each society has its own signs strangers would not understand) — primary", url: "https://zenodo.org/records/1449623/files/article.pdf"}
+  - claim: "Abakuá lodges were founded from the 1830s, first in Regla across the bay from Havana, then in Havana and Matanzas"
+    sources:
+      - {title: "Ivor L. Miller, Abakuá, via Encyclopedia.com ('established by Africans in Regla, Havana, in the 1830s')", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/abakua"}
+      - {title: "OnCuba, Chivo que rompe tambó (2012) (founded in 1836 in Regla; beginnings in Havana, Cárdenas and Matanzas)", url: "https://oncubanews.com/informe/chivo-que-rompe-tambo-verdad-y-mito-del-abakua"}
+  - claim: "Place added: Matanzas, Cuba (23.0411, -81.5775), where Ekpe was rebuilt as Abakuá"
+    sources:
+      - {title: "UBC Press: Miller, Voice of the Leopard ('reorganized their Ékpè clubs covertly in Havana and Matanzas')", url: "https://ubcpress.ca/voice-of-the-leopard"}
+      - {title: "OnCuba, Chivo que rompe tambó (2012) (Matanzas among the places of origin)", url: "https://oncubanews.com/informe/chivo-que-rompe-tambo-verdad-y-mito-del-abakua"}
+bamum:
+  - claim: "The Bamum script is a syllabary for the Bamum language of western Cameroon; its final form, about 1910, has about 80 signs"
+    sources:
+      - {title: "The Unicode Standard 17.0/18.0, chapter 19: Bamum (syllabary developed 1896-1910; 80 syllable characters)", url: "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-19/"}
+      - {title: "Kenneth J. Orosz, Njoya's Alphabet, Cahiers d'études africaines 217 (2015) (sixth revision, 1910, reduced to 80 symbols)", url: "https://journals.openedition.org/etudesafricaines/18002"}
+  - claim: "Njoya simplified the signs through six versions"
+    sources:
+      - {title: "The Unicode Standard, chapter 19: Bamum ('rapidly simplified through six stages')", url: "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-19/"}
+      - {title: "Kenneth J. Orosz, Njoya's Alphabet (2015) (the sixth revision in 1910 produced A ka u ku)", url: "https://journals.openedition.org/etudesafricaines/18002"}
+  - claim: "In Foumban the script served for letters, court cases, records of births, deaths and land sales, medicine and a history of the Bamum people"
+    sources:
+      - {title: "Kenneth J. Orosz, Njoya's Alphabet (2015) (correspondence, pharmacopeia; from 1912 births, deaths, land sales, court cases; history of the Bamum)", url: "https://journals.openedition.org/etudesafricaines/18002"}
+      - {title: "Tim Brookes, Endangered Alphabets: A tragic tale, a hopeful future (record of the history of the kingdom; administrative records and legal codes)", url: "https://www.endangeredalphabets.com/2015/11/18/a-tragic-tale-a-hopeful-future/"}
+  - claim: "It was taught in schools Njoya founded in and around Foumban"
+    sources:
+      - {title: "Kenneth J. Orosz, Njoya's Alphabet (2015) (palace school 1910; 20 schools by 1918)", url: "https://journals.openedition.org/etudesafricaines/18002"}
+      - {title: "Tim Brookes, Endangered Alphabets (the king created schools in Foumban and nearby towns)", url: "https://www.endangeredalphabets.com/2015/11/18/a-tragic-tale-a-hopeful-future/"}
+  - claim: "Correction (wow and dispute): counts of the first signs differ — about 500 (Unicode), some 465 (Endangered Alphabets), more than 1,000 (Orosz); wow now says 'hundreds'"
+    sources:
+      - {title: "The Unicode Standard, chapter 19: Bamum (approximately 500 logographic symbols)", url: "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-19/"}
+      - {title: "Kenneth J. Orosz, Njoya's Alphabet (2015) ('more than 1,000 symbols')", url: "https://journals.openedition.org/etudesafricaines/18002"}
+      - {title: "Tim Brookes, Endangered Alphabets ('collected some 465 symbols')", url: "https://www.endangeredalphabets.com/2015/11/18/a-tragic-tale-a-hopeful-future/"}
+vai-script:
+  - claim: "The Vai script is written from left to right"
+    sources:
+      - {title: "The Unicode Standard 17.0, chapter 19: Vai ('a syllabic script written left to right')", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
+      - {title: "S. W. Koelle, Narrative of an Expedition into the Vy Country (1849) ('performed from the left hand to the right') — primary", url: "https://archive.org/stream/narrativeofexped00koeliala/narrativeofexped00koeliala_djvu.txt"}
+  - claim: "It has been used for ordinary purposes: letters, accounts, records of trade"
+    sources:
+      - {title: "The Unicode Standard 17.0, chapter 19: Vai (correspondence and record-keeping, mainly among merchants and traders)", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
+      - {title: "Kelly et al., Current Anthropology (letter writing and household administration)", url: "https://bura.brunel.ac.uk/bitstream/2438/28951/3/FullText.pdf"}
+  - claim: "It is learned informally, from someone who can write, by doing; and it is still in use today"
+    sources:
+      - {title: "The Unicode Standard 17.0, chapter 19: Vai ('nowadays the script is learned informally')", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
+      - {title: "Kelly et al., Current Anthropology (transmission largely informal; learners seek out a literate individual; learn-by-doing; remains in active use today)", url: "https://bura.brunel.ac.uk/bitstream/2438/28951/3/FullText.pdf"}
+  - claim: "Bukẹlẹ said the idea came to him in a dream in which a messenger showed him a book and taught him to write Vai words (also wow); Koelle recorded it from him and published it in 1849"
+    sources:
+      - {title: "The Unicode Standard 17.0, chapter 19: Vai (he later stated that the inspiration had come to him in a dream)", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
+      - {title: "S. W. Koelle, Narrative of an Expedition into the Vy Country (1849), pp. 21-22 (Doalu Bukara's account of the dream) — primary", url: "https://archive.org/stream/narrativeofexped00koeliala/narrativeofexped00koeliala_djvu.txt"}
+
