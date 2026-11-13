@@ -1,0 +1,16 @@
+id: coldplay
+name: "Coldplay"
+aliases: ["колдплей", "колдплэй"]
+years: [1997]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+genre: "Pop rock"
+genreRu: "поп-рок"
+links:
+  - to: root:kraftwerk
+    claim: "Coldplay used the riff from Kraftwerk's 'Computer Love' in 'Talk'."
+    claimRu: "В «Talk» Coldplay использовали рифф из «Computer Love» группы Kraftwerk."
+    sources:
+      - title: "NPO Radio 2: Coldplay leent de basis voor Talk van Kraftwerk"
+        url: "https://www.nporadio2.nl/nieuws/top2000/e21e3ff0-4ff8-495f-9247-c533993bce04/coldplay-leent-de-basis-voor-talk-van-kraftwerk"
+      - title: "LA Weekly / Arthur: A conversation with Ralf Hutter of Kraftwerk"
+        url: "https://arthurmag.com/2009/11/16/a-conversation-with-ralf-hutter-of-kraftwerk-2005/"

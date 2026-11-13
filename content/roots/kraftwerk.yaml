@@ -1,0 +1,16 @@
+id: kraftwerk
+name: "Kraftwerk"
+aliases: ["крафтверк", "крафтверкк"]
+years: [1970]
+place: {"name": "Düsseldorf", "lat": 51.2277, "lon": 6.7735}
+genre: "Electronic music"
+genreRu: "электронная музыка"
+links:
+  - to: card:funk
+    claim: "James Brown's funk was an influence on Kraftwerk."
+    claimRu: "На Kraftwerk повлиял фанк Джеймса Брауна."
+    sources:
+      - title: "Electronic Beats: A week in the life — 168 hrs Kraftwerk, NYC, part 1"
+        url: "https://www.electronicbeats.net/a-week-in-the-life-168-hours-kraftwerk-nyc-part-1/"
+      - title: "Croatian Encyclopedia: Kraftwerk"
+        url: "https://enciklopedija.hr/clanak/kraftwerk"

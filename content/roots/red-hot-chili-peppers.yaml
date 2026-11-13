@@ -1,0 +1,16 @@
+id: red-hot-chili-peppers
+name: "Red Hot Chili Peppers"
+aliases: ["ред хот чили пепперс", "рэд хот чили пепперс", "RHCP"]
+years: [1983]
+place: {"name": "Los Angeles", "lat": 34.0522, "lon": -118.2437}
+genre: "Funk rock"
+genreRu: "фанк-рок"
+links:
+  - to: card:funk
+    claim: "Red Hot Chili Peppers recorded a cover of Stevie Wonder's 'Higher Ground'."
+    claimRu: "Red Hot Chili Peppers записали кавер на «Higher Ground» Стиви Уандера."
+    sources:
+      - title: "Rolling Stone: Red Hot Chili Peppers on 25 Years of Mother’s Milk"
+        url: "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/"
+      - title: "Guitar World: Flea’s bittersweet hip-hop recording experience"
+        url: "https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move"

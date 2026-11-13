@@ -1,0 +1,16 @@
+id: massive-attack
+name: "Massive Attack"
+aliases: ["массив атак", "мэссив атак"]
+years: [1988]
+place: {"name": "Bristol", "lat": 51.4545, "lon": -2.5879}
+genre: "Trip hop"
+genreRu: "трип-хоп"
+links:
+  - to: card:jazz
+    claim: "Massive Attack sampled Billy Cobham's 'Stratus' in 'Safe from Harm'."
+    claimRu: "В «Safe from Harm» Massive Attack использовали сэмпл из «Stratus» Билли Кобэма."
+    sources:
+      - title: "Hit Channel: Interview — Billy Cobham"
+        url: "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
+      - title: "Rolf Großmann: Xtended Sampling 1995–2026, in Un_Making Beats, p. 97"
+        url: "https://www.uni-hildesheim.de/ojs/index.php/MMD/de/article/download/498/541"

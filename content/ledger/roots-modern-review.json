@@ -1,0 +1,294 @@
+{
+  "batch": "modern",
+  "checkedAt": "2026-11-12",
+  "reviewer": "primary",
+  "method": "Independent second-agent review. Both source bodies opened and read, source independence and endpoint relevance checked, English and Russian claims confirmed. Hashes bind review to final text. Direct HTTP retrieval used where web extraction failed.",
+  "links": [
+    {
+      "artist": "radiohead",
+      "to": "card:jazz",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "393cac821824f29edd4cc2bba249f0f4be8fe1f26193c0f49e5f770433616e3c",
+      "translationSha256": "7da84019d1085d5366e7d90e51bf8ca069cff67c87b8a9db60cc212aa22376c4",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.loudersound.com/features/radioheads-proggiest-moments",
+          "opened": true,
+          "locator": "Pyramid Song section."
+        },
+        {
+          "url": "https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388",
+          "opened": true,
+          "locator": "Colin Greenwood interview, Pyramid Song paragraph."
+        }
+      ]
+    },
+    {
+      "artist": "daft-punk",
+      "to": "card:chicago-house",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "5f08d1b25c152d1d1db1b301192f52c0b17c9828f8033a35c3f94a39c26d7105",
+      "translationSha256": "5ea59ec6422199aef617b27b6480207789db20a642aba5efef3a89bca6c0ce72",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://djmag.com/longreads/daft-punk-s-homework-25-teachers-and-students",
+          "opened": true,
+          "locator": "Teachers discussion and Chicago producer interviews."
+        },
+        {
+          "url": "https://au.rollingstone.com/music/music-news/paul-johnson-dead-28588/",
+          "opened": true,
+          "locator": "Paul Johnson influence paragraph."
+        }
+      ]
+    },
+    {
+      "artist": "kraftwerk",
+      "to": "card:funk",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "06af68860a5ee388a4d34a53d915ffd81ab1d4297b671ecd83843d66b807b900",
+      "translationSha256": "3e3d9140e3cf9ef93790498e1286ccc1f51e47a7f689f4b5bf2f3e9405b3c9b4",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.electronicbeats.net/a-week-in-the-life-168-hours-kraftwerk-nyc-part-1/",
+          "opened": true,
+          "locator": "Juan Atkins recollection of Florian Schneider."
+        },
+        {
+          "url": "https://enciklopedija.hr/clanak/kraftwerk",
+          "opened": true,
+          "locator": "Opening historical paragraph."
+        }
+      ]
+    },
+    {
+      "artist": "red-hot-chili-peppers",
+      "to": "card:funk",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "ceb72cd364602153a45e8d3482fc997f0741b878ff11c327713b8aa598d5fdb7",
+      "translationSha256": "312fb51054d738126420d81978d4657e68e2984b209ad2c6643e15c7e6c32482",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/",
+          "opened": true,
+          "locator": "Chad Smith interview, Higher Ground paragraph."
+        },
+        {
+          "url": "https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move",
+          "opened": true,
+          "locator": "Opening and Higher Ground paragraphs."
+        }
+      ]
+    },
+    {
+      "artist": "the-white-stripes",
+      "to": "card:blues",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "3333acb4d1231a62ff5255d855d95144b3e40d0491cae0e6508ee9e976c6a5ea",
+      "translationSha256": "87d4df240275e77e66bfec35195282133c3142159a8ced544e3e4a03f485a208",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://au.rollingstone.com/music/music-news/white-stripes-death-letter-2000-12901/",
+          "opened": true,
+          "locator": "Performance report."
+        },
+        {
+          "url": "https://www.theguardian.com/music/2011/jun/12/white-stripes-blues-rock",
+          "opened": true,
+          "locator": "Confirmed."
+        }
+      ]
+    },
+    {
+      "artist": "arctic-monkeys",
+      "to": "card:rhythm-and-blues",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "95e83f33a33b658f5d380f8a61453128e818749bd42ae3f99d44179a6d9408c9",
+      "translationSha256": "ff44d575d79d2b846a4a48b87e2cfe02d8aeb19daa9766d0a69a6f156a631b25",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.nme.com/news/music/arctic-monkeys-578-1365201",
+          "opened": true,
+          "locator": "Full body independently retrieved with urllib."
+        },
+        {
+          "url": "https://completemusicupdate.com/arctic-monkeys-collaborate-with-747s-on-next-single/",
+          "opened": true,
+          "locator": "Full body independently retrieved with urllib; Oisin Leech interview."
+        }
+      ]
+    },
+    {
+      "artist": "coldplay",
+      "to": "root:kraftwerk",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "c3641fe84943ef6544b0ea7d2a33a247455b0c5fbee8eb2eba2db66da949d970",
+      "translationSha256": "89d73d9432d4c77f1ca034544a385a62d5c67d33ce5cd2ae5424b5bb4095a5d6",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.nporadio2.nl/nieuws/top2000/e21e3ff0-4ff8-495f-9247-c533993bce04/coldplay-leent-de-basis-voor-talk-van-kraftwerk",
+          "opened": true,
+          "locator": "Song-history body."
+        },
+        {
+          "url": "https://arthurmag.com/2009/11/16/a-conversation-with-ralf-hutter-of-kraftwerk-2005/",
+          "opened": true,
+          "locator": "Ralf Hutter interview, Coldplay paragraph."
+        }
+      ]
+    },
+    {
+      "artist": "david-bowie",
+      "to": "card:jazz",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "e9c1404ce4be6cd808b4a539781ceaa657af1959351cd015aa1ac79e7fe6ff32",
+      "translationSha256": "f3b918e53f476677e1777c60360ac799d9fadd2b8f256086482c4dd2969944d8",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.nporadio2.nl/nieuws/top2000/93682543-a548-417c-b69e-9b220e4b507b/david-bowies-wild-is-the-wind-is-een-eerbetoon-aan-nina-simone",
+          "opened": true,
+          "locator": "Song-history body."
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/nina-simones-historic-philips-years-celebrated-with-vinyl-remasters-of-seven-classic-albums-including-nina-simone-in-concert-wild-is-the-wind-high-priestess-of-soul-300337404.html",
+          "opened": true,
+          "locator": "Wild Is The Wind album paragraph."
+        }
+      ]
+    },
+    {
+      "artist": "talking-heads",
+      "to": "card:afrobeat",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "ad9b0260a2ecf5769dfd523379333af4a85e373cd6f6620796ec8d182bc022ee",
+      "translationSha256": "fbabcac180b560e40a50d3872c9155b0089e24eb73b96aae5efa003e6f21799a",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf",
+          "opened": true,
+          "locator": "Essay page 1."
+        },
+        {
+          "url": "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/",
+          "opened": true,
+          "locator": "Afrodisiac discussion."
+        }
+      ]
+    },
+    {
+      "artist": "paul-simon",
+      "to": "card:reggae",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "66fb02d7b67c42432a2796eb184ccc4b97a4afe86e756f801520b0f7063947db",
+      "translationSha256": "ea72d5b3436ea780cc6f0b085ee04f25a01b5fc931abd4f06264e5a4015643d3",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/",
+          "opened": true,
+          "locator": "Opening recording-history paragraphs."
+        },
+        {
+          "url": "https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion",
+          "opened": true,
+          "locator": "Song-history body."
+        }
+      ]
+    },
+    {
+      "artist": "peter-gabriel",
+      "to": "card:rhythm-and-blues",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "2921cf71abb5e581691258d561b18117b834550d3a9eb058887ad91d7b74dd24",
+      "translationSha256": "64841867a539ac35c9b4ddf41bbec83505bec178a81c2b959619f9c1cfdfbe36",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://petergabriel.com/release/sledgehammer/",
+          "opened": true,
+          "locator": "Official release description."
+        },
+        {
+          "url": "https://www.muzines.co.uk/articles/peter-gabriel-behind-the-mask/1494",
+          "opened": true,
+          "locator": "Sound On Sound interview, Otis Redding discussion."
+        }
+      ]
+    },
+    {
+      "artist": "massive-attack",
+      "to": "card:jazz",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "066e49dd75209c2f29a249114a8a04b0099ee325dc9ae8b3e99094cac1020914",
+      "translationSha256": "0d0869cb2ce339c84f208c1406556ad9a252aa4e73c50cb0cda41aa9af143d4a",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/",
+          "opened": true,
+          "locator": "Billy Cobham answer on Safe From Harm."
+        },
+        {
+          "url": "https://www.uni-hildesheim.de/ojs/index.php/MMD/de/article/download/498/541",
+          "opened": true,
+          "locator": "PDF independently retrieved with urllib, printed page 97."
+        }
+      ]
+    },
+    {
+      "artist": "the-prodigy",
+      "to": "card:hip-hop",
+      "reviewer": "primary",
+      "status": "confirmed",
+      "claimSha256": "24bef19bfdfb703338c262f0c76197032d25a17a1628d94064d69a4bca6a89da",
+      "translationSha256": "9c4d4d37dc101d2e67743f7799830a0b287d6bc71490cb9ce5540865ce583f34",
+      "independentSources": true,
+      "translationChecked": true,
+      "sources": [
+        {
+          "url": "https://mixmag.net/feature/uncontrollable-energy-20-years-on-the-fat-of-the-land-is-still-a-life-changing-album",
+          "opened": true,
+          "locator": "Sample discussion."
+        },
+        {
+          "url": "https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf",
+          "opened": true,
+          "locator": "PDF independently retrieved with urllib, printed page 51."
+        }
+      ]
+    }
+  ]
+}

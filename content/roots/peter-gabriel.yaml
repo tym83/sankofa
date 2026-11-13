@@ -1,0 +1,17 @@
+id: peter-gabriel
+name: "Peter Gabriel"
+nameRu: "Питер Гэбриел"
+aliases: ["питер гэбриел", "питер гэбриэл", "питер габриэль"]
+years: [1950]
+place: {"name": "Chobham", "lat": 51.3483, "lon": -0.6049}
+genre: "Art rock"
+genreRu: "арт-рок"
+links:
+  - to: card:rhythm-and-blues
+    claim: "Peter Gabriel made 'Sledgehammer' as a tribute to the soul music of Otis Redding."
+    claimRu: "Питер Гэбриел создал «Sledgehammer» как дань соулу Отиса Реддинга."
+    sources:
+      - title: "Peter Gabriel: Sledgehammer"
+        url: "https://petergabriel.com/release/sledgehammer/"
+      - title: "Sound On Sound: Peter Gabriel — Behind The Mask (January 1987)"
+        url: "https://www.muzines.co.uk/articles/peter-gabriel-behind-the-mask/1494"

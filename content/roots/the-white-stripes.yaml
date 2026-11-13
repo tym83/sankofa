@@ -1,0 +1,16 @@
+id: the-white-stripes
+name: "The White Stripes"
+aliases: ["уайт страйпс", "вайт страйпс", "джек уайт"]
+years: [1997]
+place: {"name": "Detroit", "lat": 42.3314, "lon": -83.0458}
+genre: "Garage rock and blues rock"
+genreRu: "гаражный рок и блюз-рок"
+links:
+  - to: card:blues
+    claim: "The White Stripes covered Son House's 'Death Letter'."
+    claimRu: "The White Stripes исполняли «Death Letter» Сона Хауса."
+    sources:
+      - title: "Rolling Stone: The White Stripes Share 2000 Performance of Death Letter"
+        url: "https://au.rollingstone.com/music/music-news/white-stripes-death-letter-2000-12901/"
+      - title: "The Guardian: The White Stripes bring the blues back to rock"
+        url: "https://www.theguardian.com/music/2011/jun/12/white-stripes-blues-rock"
