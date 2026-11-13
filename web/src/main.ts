@@ -59,6 +59,10 @@ async function start(): Promise<void> {
   document.body.append(loading);
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
+  // The language switch needs no data, so it works while the cards load.
+  document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
+  // Let the static cover paint before the 1 MB of cards competes for the wire.
+  await new Promise<void>((r) => requestAnimationFrame(() => setTimeout(r, 0)));
   try {
     [cardsFile, chaptersFile] = await Promise.all([load<CardsFile>('data/cards.json'), load<ChaptersFile>('data/chapters.json'), loadMediaManifest()]);
   } catch (e) {
@@ -222,7 +226,6 @@ async function start(): Promise<void> {
   };
 
   setupNav(app, atlas);
-  document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
   document.querySelectorAll<HTMLAnchorElement>('[data-set-lang]').forEach((a) =>
     a.addEventListener('click', (e) => {
       e.preventDefault();
