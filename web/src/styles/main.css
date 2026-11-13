@@ -5072,3 +5072,14 @@ html.panel-open body {
 .atlas > * {
   min-width: 0;
 }
+@media (max-width: 760px) {
+  .desk-in {
+    padding: 14px 16px 18px;
+  }
+  .desk-in figure img {
+    max-height: 15svh;
+  }
+  .desk-in h3 {
+    font-size: 24px;
+  }
+}
