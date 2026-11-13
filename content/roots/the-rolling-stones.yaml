@@ -1,0 +1,17 @@
+id: "the-rolling-stones"
+name: "The Rolling Stones"
+nameRu: "The Rolling Stones"
+aliases: ["роллинг стоунз", "роллинг стоунс"]
+years: [1962]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+genre: "Rock"
+genreRu: "рок"
+links:
+  - to: "card:blues"
+    claim: "The Rolling Stones released the blues song “Little Red Rooster” as a single."
+    claimRu: "The Rolling Stones выпустили блюзовую песню «Little Red Rooster» отдельным синглом."
+    sources:
+      - title: "John Covach: The Rolling Stones — Albums and Singles, 1963–1974 (Cambridge University Press)"
+        url: "https://assets.cambridge.org/97811070/30268/excerpt/9781107030268_excerpt.pdf"
+      - title: "Matthew Greenwald: Little Red Rooster (AllMusic)"
+        url: "https://www.allmusic.com/song/little-red-rooster-mt0010866510"

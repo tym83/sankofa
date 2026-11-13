@@ -1,0 +1,17 @@
+id: "the-police"
+name: "The Police"
+nameRu: "The Police"
+aliases: ["полис", "стинг", "Sting"]
+years: [1977]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+genre: "New wave"
+genreRu: "новая волна"
+links:
+  - to: "card:reggae"
+    claim: "Andy Summers says the Police adopted reggae bass lines because they suited Sting’s simultaneous playing and singing."
+    claimRu: "По словам Энди Саммерса, The Police использовали басовые партии регги, потому что они подходили Стингу для одновременной игры и пения."
+    sources:
+      - title: "Guitar Player: Andy Summers on the strategies behind his creative life"
+        url: "https://www.guitarplayer.com/players/you-certainly-dont-want-to-be-looking-for-commercial-success-andy-summers-reveals-the-evolving-strategies-that-keep-his-creative-life-busier-than-ever"
+      - title: "LOS40: Interview with Andy Summers, 20 May 2022"
+        url: "https://los40.com/los40/2022/05/20/los40classic/1652955281_806107.html"

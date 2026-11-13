@@ -1,0 +1,17 @@
+id: "bob-dylan"
+name: "Bob Dylan"
+nameRu: "Боб Дилан"
+aliases: ["дилан", "боб дилан"]
+years: [1941]
+place: {"name": "Duluth, Minnesota", "lat": 46.7867, "lon": -92.1005}
+genre: "Folk rock"
+genreRu: "фолк-рок"
+links:
+  - to: "card:blues"
+    claim: "Bob Dylan recorded Blind Lemon Jefferson’s “See That My Grave Is Kept Clean” for his debut album."
+    claimRu: "Боб Дилан записал для дебютного альбома песню Блайнд Лемона Джефферсона «See That My Grave Is Kept Clean»."
+    sources:
+      - title: "Bob Dylan: The Basement Tapes Complete — official liner notes"
+        url: "https://www.bobdylan.com/albums/bootleg-series-vol-11-basement-tapes-complete"
+      - title: "Oxford University Press: Bob Dylan — A first listen"
+        url: "https://blog.oup.com/2013/03/bob-dylan-first-listen/"

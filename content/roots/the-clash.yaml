@@ -1,0 +1,17 @@
+id: "the-clash"
+name: "The Clash"
+nameRu: "The Clash"
+aliases: ["клэш", "клаш"]
+years: [1976]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+genre: "Punk rock"
+genreRu: "панк-рок"
+links:
+  - to: "card:reggae"
+    claim: "The Clash recorded a cover of Junior Murvin’s reggae song “Police and Thieves”."
+    claimRu: "The Clash записали свою версию регги-песни Джуниора Мёрвина «Police and Thieves»."
+    sources:
+      - title: "The Clash: The Clash — official album notes"
+        url: "https://www.theclash.com/music/the-clash"
+      - title: "Pitchfork: R.I.P. Reggae Singer Junior Murvin"
+        url: "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"

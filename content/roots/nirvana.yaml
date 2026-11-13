@@ -1,0 +1,17 @@
+id: "nirvana"
+name: "Nirvana"
+nameRu: "Nirvana"
+aliases: ["нирвана", "Курт Кобейн", "Kurt Cobain"]
+years: [1987]
+place: {"name": "Aberdeen, Washington", "lat": 46.9754, "lon": -123.8157}
+genre: "Grunge"
+genreRu: "гранж"
+links:
+  - to: "card:blues"
+    claim: "Nirvana closed MTV Unplugged with “Where Did You Sleep Last Night”, drawing on Lead Belly’s version of the traditional song."
+    claimRu: "Nirvana завершили MTV Unplugged песней «Where Did You Sleep Last Night», опираясь на версию традиционной песни в исполнении Ледбелли."
+    sources:
+      - title: "David Browne: In the Room at Nirvana’s MTV Unplugged in New York (Rolling Stone)"
+        url: "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/"
+      - title: "Mike Powell: Nirvana — MTV Unplugged in New York (Pitchfork)"
+        url: "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/"

@@ -1,0 +1,17 @@
+id: "elvis-presley"
+name: "Elvis Presley"
+nameRu: "Элвис Пресли"
+aliases: ["элвис", "elvis"]
+years: [1935, 1977]
+place: {"name": "Tupelo, Mississippi", "lat": 34.2576, "lon": -88.7034}
+genre: "Rock and roll"
+genreRu: "рок-н-ролл"
+links:
+  - to: "card:big-mama-thornton"
+    claim: "Elvis Presley recorded “Hound Dog”, the song first recorded by Big Mama Thornton."
+    claimRu: "Элвис Пресли записал «Hound Dog» — песню, которую первой записала Биг Мама Торнтон."
+    sources:
+      - title: "Smithsonian Folkways: Big Mama Thornton"
+        url: "https://folkways.si.edu/artists/big-mama-thornton"
+      - title: "Michael Sporke: Hound Dog — Big Mama Thornton (Library of Congress)"
+        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf"

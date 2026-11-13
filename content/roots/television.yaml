@@ -1,0 +1,17 @@
+id: "television"
+name: "Television"
+nameRu: "Television"
+aliases: ["телевижн", "телевижен", "Том Верлен", "Tom Verlaine"]
+years: [1973]
+place: {"name": "New York City", "lat": 40.7128, "lon": -74.006}
+genre: "Art rock"
+genreRu: "арт-рок"
+links:
+  - to: "card:jazz"
+    claim: "Before leading Television, Tom Verlaine embraced the jazz of John Coltrane and Albert Ayler as a teenage saxophonist."
+    claimRu: "До создания Television Том Верлен играл на саксофоне и увлекался джазом Джона Колтрейна и Альберта Эйлера."
+    sources:
+      - title: "Bernard Gendron: Between Montmartre and the Mudd Club (University of Chicago Press)"
+        url: "https://press.uchicago.edu/Misc/Chicago/287378.html"
+      - title: "Patti Smith: He Was Tom Verlaine (The New Yorker)"
+        url: "https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine"

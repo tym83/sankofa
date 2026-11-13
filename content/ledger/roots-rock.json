@@ -1,0 +1,327 @@
+{
+  "scope": "ROOTS.md: rock batch",
+  "entries": [
+    {
+      "artist": "television",
+      "to": "card:jazz",
+      "claim": "Before leading Television, Tom Verlaine embraced the jazz of John Coltrane and Albert Ayler as a teenage saxophonist.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Bernard Gendron: Between Montmartre and the Mudd Club (University of Chicago Press)",
+          "url": "https://press.uchicago.edu/Misc/Chicago/287378.html",
+          "opened": true,
+          "evidence": "Academic book excerpt, Television section: Verlaine heard Coltrane, took up saxophone, and became an Ayler devotee."
+        },
+        {
+          "title": "Patti Smith: He Was Tom Verlaine (The New Yorker)",
+          "url": "https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine",
+          "opened": true,
+          "evidence": "Personal remembrance: Verlaine played saxophone in high school and embraced Coltrane and Ayler."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "metallica",
+      "to": "root:black-sabbath",
+      "claim": "Metallica recorded Black Sabbath’s “Sabbra Cadabra”, inserting a passage from “A National Acrobat”.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Metallica: Sabbra Cadabra — official song credits",
+          "url": "https://www.metallica.com/songs/sabbra-cadabra.html",
+          "opened": true,
+          "evidence": "Official credits identify Black Sabbath and the excerpt of A National Acrobat."
+        },
+        {
+          "title": "Metal Hammer: The story of Metallica’s Garage Inc.",
+          "url": "https://www.loudersound.com/bands-artists/metallica-load-cover-songs-story-album",
+          "opened": true,
+          "evidence": "Track 3 discussion identifies the Sabbath cover and the inserted passage; includes contemporary band comments."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "oasis",
+      "to": "root:the-beatles",
+      "claim": "Oasis included their cover of the Beatles’ “I Am the Walrus” on The Masterplan.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Apple Music: The Masterplan — editorial album notes",
+          "url": "https://music.apple.com/us/album/the-masterplan/1517453693",
+          "opened": true,
+          "evidence": "Editorial album notes identify I Am the Walrus as a Beatles cover."
+        },
+        {
+          "title": "Pitchfork: Oasis — The Masterplan",
+          "url": "https://pitchfork.com/reviews/albums/5930-the-masterplan/",
+          "opened": true,
+          "evidence": "Independent album review discusses the live Beatles cover on the compilation."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "the-beatles",
+      "to": "card:rhythm-and-blues",
+      "claim": "The Beatles recorded “Twist and Shout” after the Isley Brothers made it an R&B hit.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music, 1997)",
+          "url": "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf",
+          "opened": true,
+          "evidence": "Peer-reviewed article, pp. 208–209 and 225: identifies the Isley model and compares the recordings."
+        },
+        {
+          "title": "Associated Press: Rudolph Isley, founding member of Isley Brothers, dies at 84",
+          "url": "https://apnews.com/article/rudolph-isley-dies-efe795a819a03754d648bbd6bc75c13f",
+          "opened": true,
+          "evidence": "Reports the R&B hit and its subsequent inclusion on the Beatles debut."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "the-rolling-stones",
+      "to": "card:blues",
+      "claim": "The Rolling Stones released the blues song “Little Red Rooster” as a single.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "John Covach: The Rolling Stones — Albums and Singles, 1963–1974 (Cambridge University Press)",
+          "url": "https://assets.cambridge.org/97811070/30268/excerpt/9781107030268_excerpt.pdf",
+          "opened": true,
+          "evidence": "Academic chapter, pp. 7–8, documents the Howlin’ Wolf song and the Stones blues single."
+        },
+        {
+          "title": "Matthew Greenwald: Little Red Rooster (AllMusic)",
+          "url": "https://www.allmusic.com/song/little-red-rooster-mt0010866510",
+          "opened": true,
+          "evidence": "Editorial song review explicitly calls the Stones single a straight blues song."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "led-zeppelin",
+      "to": "card:blues",
+      "claim": "Led Zeppelin reworked “When the Levee Breaks”, originally recorded by Kansas Joe McCoy and Memphis Minnie.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Charles Shaar Murray: Led Zeppelin, Memphis Minnie, and the levee that broke (Classic Rock)",
+          "url": "https://www.loudersound.com/features/led-zeppelin-memphis-minnie-when-the-levee-breaks",
+          "opened": true,
+          "evidence": "Traces the 1929 recording by McCoy and Minnie to the Zeppelin adaptation; distinguishes McCoy’s writing and singing from Minnie’s guitar."
+        },
+        {
+          "title": "Trevor de Clercq: Measuring a Measure (Music Theory Online 22.3)",
+          "url": "https://mtosmt.org/issues/mto.16.22.3/mto.16.22.3.declercq.pdf",
+          "opened": true,
+          "evidence": "Peer-reviewed analysis, section 4.2–4.5, compares the original blues recording with Zeppelin’s 1971 version."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "black-sabbath",
+      "to": "card:blues",
+      "claim": "Before adopting the name Black Sabbath, the band played blues under the name Earth.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Rolling Stone: Heavy Metal, Year One — The Inside Story of Black Sabbath’s Groundbreaking Debut",
+          "url": "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/",
+          "opened": true,
+          "evidence": "Oral history documents Earth’s electric-blues repertoire with musicians and manager as witnesses."
+        },
+        {
+          "title": "Guitar World: Original Members of Black Sabbath Look Back on 30-Plus Years of Demonic Riffing",
+          "url": "https://www.guitarworld.com/gw-archive/archive-original-members-black-sabbath-look-back-30-plus-years-demonic-riffing-2001",
+          "opened": true,
+          "evidence": "Separate 2001 interview: Geezer Butler describes Earth as a straight blues band."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "elvis-presley",
+      "to": "card:big-mama-thornton",
+      "claim": "Elvis Presley recorded “Hound Dog”, the song first recorded by Big Mama Thornton.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Smithsonian Folkways: Big Mama Thornton",
+          "url": "https://folkways.si.edu/artists/big-mama-thornton",
+          "opened": true,
+          "evidence": "Identifies Thornton’s first release and Presley’s later recording."
+        },
+        {
+          "title": "Michael Sporke: Hound Dog — Big Mama Thornton (Library of Congress)",
+          "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf",
+          "opened": true,
+          "evidence": "National Recording Registry essay describes Thornton’s original and Presley’s later version; no claim that Presley copied her arrangement."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "bob-dylan",
+      "to": "card:blues",
+      "claim": "Bob Dylan recorded Blind Lemon Jefferson’s “See That My Grave Is Kept Clean” for his debut album.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Bob Dylan: The Basement Tapes Complete — official liner notes",
+          "url": "https://www.bobdylan.com/albums/bootleg-series-vol-11-basement-tapes-complete",
+          "opened": true,
+          "evidence": "Notes for One Kind Favor identify the alternate title, Jefferson association, and Dylan’s debut recording."
+        },
+        {
+          "title": "Oxford University Press: Bob Dylan — A first listen",
+          "url": "https://blog.oup.com/2013/03/bob-dylan-first-listen/",
+          "opened": true,
+          "evidence": "Meghann Wilhoite’s first-album review lists the song and credits Blind Lemon Jefferson."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "the-clash",
+      "to": "card:reggae",
+      "claim": "The Clash recorded a cover of Junior Murvin’s reggae song “Police and Thieves”.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "The Clash: The Clash — official album notes",
+          "url": "https://www.theclash.com/music/the-clash",
+          "opened": true,
+          "evidence": "Official debut album page identifies the Murvin cover and reggae connection."
+        },
+        {
+          "title": "Pitchfork: R.I.P. Reggae Singer Junior Murvin",
+          "url": "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/",
+          "opened": true,
+          "evidence": "Identifies Murvin’s reggae hit and subsequent Clash cover."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "the-police",
+      "to": "card:reggae",
+      "claim": "Andy Summers says the Police adopted reggae bass lines because they suited Sting’s simultaneous playing and singing.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Guitar Player: Andy Summers on the strategies behind his creative life",
+          "url": "https://www.guitarplayer.com/players/you-certainly-dont-want-to-be-looking-for-commercial-success-andy-summers-reveals-the-evolving-strategies-that-keep-his-creative-life-busier-than-ever",
+          "opened": true,
+          "evidence": "Summers explains that spacious reggae bass lines enabled Sting to sing over his playing."
+        },
+        {
+          "title": "LOS40: Interview with Andy Summers, 20 May 2022",
+          "url": "https://los40.com/los40/2022/05/20/los40classic/1652955281_806107.html",
+          "opened": true,
+          "evidence": "Separate interview: Summers describes Sting singing while playing reggae bass; distinguishes practical fit from a sweeping claim about Jamaican influence."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "nirvana",
+      "to": "card:blues",
+      "claim": "Nirvana closed MTV Unplugged with “Where Did You Sleep Last Night”, drawing on Lead Belly’s version of the traditional song.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "David Browne: In the Room at Nirvana’s MTV Unplugged in New York (Rolling Stone)",
+          "url": "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/",
+          "opened": true,
+          "evidence": "Eyewitness account identifies the Lead Belly song as the final performance."
+        },
+        {
+          "title": "Mike Powell: Nirvana — MTV Unplugged in New York (Pitchfork)",
+          "url": "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/",
+          "opened": true,
+          "evidence": "Independent review identifies the Leadbelly cover, the In the Pines title, and its position at the end of the set."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "iron-maiden",
+      "to": "root:led-zeppelin",
+      "claim": "Iron Maiden recorded a cover of Led Zeppelin’s “Communication Breakdown”.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Metal Injection: Iron Maiden’s cover of Led Zeppelin’s Communication Breakdown",
+          "url": "https://metalinjection.net/editorials/back-in-the-day/iron-zeppelin-iron-maidens-kick-ass-cover-of-led-zeppelins-communication-breakdown",
+          "opened": true,
+          "evidence": "Editorial account identifies the Zeppelin cover and its 1990 B-side release."
+        },
+        {
+          "title": "Iron Maiden / Rhino-Parlophone: Communication Breakdown — official recording credits",
+          "url": "https://www.youtube.com/watch?v=pQpVjjOgngE",
+          "opened": true,
+          "evidence": "Official artist-channel recording, read via curl when browser fetch failed: credits Maiden as performer and Jimmy Page, John Paul Jones and John Bonham as writers; 1990 phonogram."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    },
+    {
+      "artist": "the-libertines",
+      "to": "root:the-clash",
+      "claim": "The Libertines recorded their debut album, Up the Bracket, with the Clash’s Mick Jones.",
+      "researcher": "rock_roots",
+      "checkedOn": "2026-11-12",
+      "status": "first-review-confirmed",
+      "sources": [
+        {
+          "title": "Radio X: The Libertines on Up the Bracket, Mick Jones and Glastonbury",
+          "url": "https://www.radiox.co.uk/artists/libertines/talk-up-the-bracket-gigs-mick-jones-glasto/",
+          "opened": true,
+          "evidence": "Carl Barât interview recalls Jones producing the debut and introducing him to Clash music."
+        },
+        {
+          "title": "The Independent: Carl Barât on the story of Up the Bracket",
+          "url": "https://www.the-independent.com/arts-entertainment/music/features/the-libertines-up-the-bracket-pete-doherty-carl-barat-interview-b2200753.html",
+          "opened": true,
+          "evidence": "Interview standfirst identifies the debut recording with Mick Jones."
+        }
+      ],
+      "secondReview": "confirmed in roots-rock-review.json"
+    }
+  ]
+}

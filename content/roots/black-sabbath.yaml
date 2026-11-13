@@ -1,0 +1,17 @@
+id: "black-sabbath"
+name: "Black Sabbath"
+nameRu: "Black Sabbath"
+aliases: ["блэк саббат", "блэк саббатт"]
+years: [1968]
+place: {"name": "Birmingham", "lat": 52.4862, "lon": -1.8904}
+genre: "Heavy metal"
+genreRu: "хеви-метал"
+links:
+  - to: "card:blues"
+    claim: "Before adopting the name Black Sabbath, the band played blues under the name Earth."
+    claimRu: "Прежде чем стать Black Sabbath, группа играла блюз под названием Earth."
+    sources:
+      - title: "Rolling Stone: Heavy Metal, Year One — The Inside Story of Black Sabbath’s Groundbreaking Debut"
+        url: "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/"
+      - title: "Guitar World: Original Members of Black Sabbath Look Back on 30-Plus Years of Demonic Riffing"
+        url: "https://www.guitarworld.com/gw-archive/archive-original-members-black-sabbath-look-back-30-plus-years-demonic-riffing-2001"
