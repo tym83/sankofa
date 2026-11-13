@@ -7,7 +7,7 @@ import type { Card } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, span } from '../lib/cards';
 import { vtags, bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
-import { eraColor, readerCards } from '../lib/atlasModel';
+import { chapterCopy, eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
 import { count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
@@ -245,8 +245,8 @@ export class Descent {
     const app = this.app;
     const W = this.el.clientWidth || window.innerWidth;
     const mobile = W < 760;
-    const all = readerCards(app.set, app.edition).filter((c) => c.years.length);
-    const cards = levelCards(all, this.level);
+    const all = readerCards(app.set, app.edition);
+    const cards = levelCards(all.filter((c) => c.years.length), this.level);
     const cardIndex = new Map(cards.map((c) => [c.id, c]));
 
     // Geometry of the columns.
@@ -300,7 +300,7 @@ export class Descent {
             {},
             h('small', {}, ...vtags(`${ch.id} · ${ch.kicker}`)),
             h('b', {}, ch.title),
-            h('span', {}, pick({ en: `${count(all.filter((c) => c.era === ch.id).length, 'card', 'en')} in this era · read the chapter →`, ru: `В этой эпохе ${count(all.filter((c) => c.era === ch.id).length, 'card', 'ru')} · читать главу →` })),
+            h('span', {}, pick({ en: `${count(chapterCopy(app.set, app.edition, ch).length, 'card', 'en')} in this era · read the chapter →`, ru: `В этой эпохе ${count(chapterCopy(app.set, app.edition, ch).length, 'card', 'ru')} · читать главу →` })),
           ),
         );
         els.set('chapter:' + ch.id, el);

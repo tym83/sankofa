@@ -31,6 +31,18 @@ export function readerCards(set: CardSet, edition: AtlasQuery['edition']): Card[
   return set.all().filter((c) => !edition || c.edition === 'both' || c.edition === edition);
 }
 
+/**
+ * One chapter's cards in the reader's copy, in the chapter's own order. Every
+ * count of a chapter (contents, chapter end, descent) is this list's length.
+ */
+export function chapterCopy(set: CardSet, edition: AtlasQuery['edition'], chapter: { id: string; cards: string[] }): Card[] {
+  const order = new Map(chapter.cards.map((id, i) => [id, i]));
+  const rank = (c: Card) => order.get(c.id) ?? order.get(set.partner(c.id)?.id ?? '') ?? 1e6;
+  return readerCards(set, edition)
+    .filter((c) => c.era === chapter.id)
+    .sort((a, b) => rank(a) - rank(b));
+}
+
 /** Spread cards that share a place on a small spiral so each stays clickable. */
 function spread(cards: Card[], level: number): Map<string, [number, number]> {
   const groups = new Map<string, Card[]>();

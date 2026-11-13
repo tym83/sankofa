@@ -7,7 +7,7 @@ import { ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL, links } from '../lib/cards';
 import { vtags, bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
-import { eraColor, isNonPlace } from '../lib/atlasModel';
+import { chapterCopy, eraColor, isNonPlace, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
 import { mediaSrc, progressive } from '../lib/media';
 import { chapterCoda, signature, SIGNATURE_CARD } from './signature';
@@ -84,7 +84,7 @@ function heroImg(app: App, ch: Chapter, eager: boolean, pos?: string, sizes = '1
  */
 function heroMap(app: App, ch: Chapter): HTMLElement {
   const host = h('div.hero-map', { 'aria-hidden': 'true' });
-  const cards = [...new Set(ch.cards.map((id) => app.set.forEdition(id, app.edition)).filter(Boolean) as Card[])];
+  const cards = [...new Set(ch.cards.map((id) => app.set.get(id)).filter(Boolean) as Card[])];
   const coords: [number, number][] = [...ch.places, ...cards.flatMap((c) => c.places)].map((p) => [p.lon, p.lat]);
   const moves = MOVEMENTS.filter((m) => m.era === ch.id);
   moves.forEach((m) => m.legs.forEach((l) => coords.push(l.from, l.to)));
@@ -176,7 +176,8 @@ function toc(app: App): HTMLElement {
 function stepCards(app: App, text: string): Card[] {
   const out: Card[] = [];
   for (const id of links(text)) {
-    const c = app.set.forEdition(id, app.edition);
+    // The chapter's own card: the words of the step name it, whichever copy is held.
+    const c = app.set.get(id);
     if (c && !out.includes(c)) out.push(c);
   }
   return out;
@@ -200,7 +201,7 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
   const { ch, pos: swapPos, swapped: swapMedia } = withHero(app, ch0);
   const swap = swapMedia ? { pos: swapPos } : undefined;
   const color = eraColor(ch.id);
-  const cards = [...new Set(ch.cards.map((id) => app.set.forEdition(id, app.edition)).filter(Boolean) as Card[])];
+  const cards = chapterCopy(app.set, app.edition, ch);
 
   const mapHero = !ch.hero?.file || ch.hero.file === COVER_IMAGE;
   const hero = h(
@@ -315,7 +316,8 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
   let map: GeoMap | null = null;
   let current = -1;
   const figures = new Map<string, HTMLElement>();
-  const chapterCards = [...new Set(ch.cards.map((id) => app.set.forEdition(id, app.edition)).filter(Boolean) as Card[])];
+  // The map names the chapter's own places, so the copy held never moves a label.
+  const chapterCards = [...new Set(ch.cards.map((id) => app.set.get(id)).filter(Boolean) as Card[])];
   const phone = () => window.innerWidth < 720;
 
   const ready = new Map<string, Promise<void>>();
@@ -461,7 +463,7 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
 
 function finale(app: App): HTMLElement {
   const host = h('div.timeline-wrap');
-  const cards = app.set.all().filter((c) => c.edition === 'both' || c.edition === app.edition);
+  const cards = readerCards(app.set, app.edition);
   const sec = h(
     'section.finale',
     { id: 'atlas-intro', 'aria-labelledby': 'finale-title' },
