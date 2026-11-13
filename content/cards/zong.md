@@ -23,8 +23,6 @@ sources:
   - {title: "Insurance Museum (132 total; 122 thrown, 10 jumped, 29 Nov–early Dec)", url: "https://insurance.museum/?p=17318"}
   - {title: "McGill Faculty of Law: Zong! 'composed entirely from the words of ... Gregson v. Gilbert'", url: "https://mcgill.ca/law/node/8889"}
   - {title: "M. NourbeSe Philip: Set Speaks, author’s account of Zong!", url: "https://www.setspeaks.com/backstory/"}
-media:
-  - {"type": "image", "file": "zong.jpg", "caption": "Granville Sharp, lithograph, about 1810", "credit": "Francis Legatt Chantrey; National Library of Wales, Welsh Portrait Collection; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Portrait_of_Granville_Sharp_(4671963).jpg"}
 ---
 More than 130 Africans were thrown into the sea, and the owners then claimed
 them on insurance as lost cargo. In late 1781 the Liverpool-owned slave ship
