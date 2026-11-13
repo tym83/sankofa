@@ -152,3 +152,5 @@
 | Lease (node heartbeat) | отметка о жизни (аренда узла) | the kubelet renews it every few seconds |
 | ready / not ready | готов / молчит | in the listening room |
 | declared down | объявлен выбывшим | after the grace period |
+
+| ruler of Mali (Mansa Musa) | царь Мали | одинаково на обложке, в главе и в карточке |
