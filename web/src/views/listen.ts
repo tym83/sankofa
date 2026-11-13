@@ -258,6 +258,7 @@ export class Listen {
   private moveNote: HTMLElement;
   private subs = h('ul.l-subs', { 'aria-live': 'polite', 'aria-label': 'Subtitles' });
   private next = h('p.l-next');
+  private nodeLine = h('p.l-nodeline', { 'aria-live': 'off' });
   private hand: SVGLineElement;
   private bellDots: SVGCircleElement[] = [];
   private callRow: HTMLElement;
@@ -342,6 +343,7 @@ export class Listen {
         h('li', {}, h('i.k-silent'), pick({ en: 'Hollow: the machine has stopped', ru: 'Пустой круг: машина остановилась' })),
         h('li', {}, h('i.k-ans'), pick({ en: 'Filled: a program answered', ru: 'Заполненный: программа откликнулась' })),
         h('li', {}, h('i.k-gap'), pick({ en: 'Empty: a program was called and stayed silent', ru: 'Пунктир: программу позвали, а она промолчала' })),
+        h('li', {}, h('i.k-soft'), pick({ en: 'Soft dot: an answer still to come', ru: 'Бледная точка: ответ ещё впереди' })),
       ),
     );
     this.moveNote = h(
@@ -360,7 +362,7 @@ export class Listen {
         ru: 'Колокол держит ритм, каждая машина играет на барабане, кластер зовёт — программы отвечают. Подписи ниже говорят, что сейчас произошло.',
       }),
     );
-    const stage = h('div.l-stage', {}, whatShort, this.svg, this.callRow, this.subs, this.next, this.moveNote);
+    const stage = h('div.l-stage', {}, whatShort, this.svg, this.nodeLine, this.callRow, this.subs, this.next, this.moveNote);
     // On phones the controls sit under the drums, so pressing them shows what happens.
     const place = () => (window.innerWidth <= 900 ? stage.append(ctl) : ctlSlot.append(ctl));
     place();
@@ -552,13 +554,12 @@ export class Listen {
         this.gNodes.append(g);
         this.nodeEls.set(v.node, g);
       }
-      const a = (k / n) * Math.PI * 2 - Math.PI / 2 + Math.PI / n;
+      const a = nodeAngle(k, n);
       const x = 300 + Math.cos(a) * 222;
       const y = 300 + Math.sin(a) * 222;
       const p = playing(v);
       g.setAttribute('transform', `translate(${x.toFixed(1)},${y.toFixed(1)})`);
       g.setAttribute('class', `l-node${v.alive ? '' : ' silent'}${p.jitter > 0 ? ' late' : ''}`);
-      g.style.setProperty('--hue', String((k * 67 + 30) % 360));
       g.style.setProperty('--wob', `${(p.jitter * 40).toFixed(1)}px`);
       g.querySelector('text.nm')!.textContent = drumName(k);
       g.querySelector('text.no')!.textContent = `${t('node')} ${k + 1}`;
@@ -589,6 +590,10 @@ export class Listen {
       g.querySelector('path.late')!.setAttribute('d', path);
     });
     this.renderPods(voices);
+    // On small circles each drum's state is one line under the circle instead.
+    this.nodeLine.replaceChildren(
+      ...voices.map((v, k) => h(`span${v.broken ? '.bad' : ''}`, {}, h('b', {}, drumName(k)), ' ', (this.nodeEls.get(v.node)?.querySelector('text.st')?.textContent ?? ''))),
+    );
     this.narrate(voices);
     for (const [node, g] of this.nodeEls) {
       if (!seen.has(node)) {
@@ -604,9 +609,17 @@ export class Listen {
   }
 
   /** One line of subtitles; the newest on top, the older fading below. */
+  private liveLate?: HTMLElement;
+
   private say(s: Sub): void {
     if (!this.isOpen) return;
     const line = h('li', {}, subtitle(s, lang()));
+    // The late line is kept live: it reads the same clock as the drum.
+    if (s.kind === 'late') {
+      this.liveLate?.remove();
+      this.liveLate = line;
+      line.dataset.drum = s.drum;
+    }
     this.subs.prepend(line);
     while (this.subs.children.length > 3) this.subs.lastElementChild!.remove();
   }
@@ -684,7 +697,7 @@ export class Listen {
       }
       const j = slot.get(p.at) ?? 0;
       slot.set(p.at, j + 1);
-      const a = (p.at / n) * Math.PI * 2 - Math.PI / 2 + Math.PI / n;
+      const a = nodeAngle(p.at, n);
       // a little arc of dots on the outer side of the node
       const spread = (j - 4) * 0.075;
       const x = 300 + Math.cos(a + spread * 1.6) * 166;
@@ -704,7 +717,7 @@ export class Listen {
         this.podEls.set(id, c);
       }
       const at = Math.max(0, voices.findIndex((v) => v.node === node));
-      const a = (at / n) * Math.PI * 2 - Math.PI / 2 + Math.PI / n - 0.42;
+      const a = nodeAngle(at, n) - 0.42;
       c.style.transform = `translate(${(300 + Math.cos(a) * 222).toFixed(1)}px, ${(300 + Math.sin(a) * 222).toFixed(1)}px)`;
       c.setAttribute('class', 'l-pod guest');
       c.setAttribute('aria-label', name);
@@ -796,6 +809,13 @@ export class Listen {
     this.button.setAttribute('aria-pressed', String(this.playingNow));
     this.el.classList.toggle('playing', this.playingNow);
     this.renderNodes();
+    // Keep the newest late line in step with the drum's own countdown.
+    const ll = this.liveLate;
+    if (ll && ll.isConnected) {
+      const k = this.source.voices.findIndex((x) => x.broken);
+      const v = this.source.voices[k];
+      if (v?.broken && v.alive) ll.textContent = subtitle({ kind: 'late', drum: ll.dataset.drum!, late: v.lateSeconds ?? 0, s: v.downIn ?? 0 }, lang());
+    }
   }
 }
 
@@ -807,4 +827,9 @@ export function shortName(node: string, all: string[]): string {
   while (parts.every((p) => p.length > common + 1 && p[common] === parts[0][common])) common++;
   const rest = node.split('-').slice(common).join('-');
   return rest.length > 18 ? rest.slice(-18) : rest;
+}
+
+/** Node 1 on the left, then clockwise: reading order around the circle. */
+export function nodeAngle(k: number, n: number): number {
+  return Math.PI + (k / Math.max(1, n)) * Math.PI * 2;
 }

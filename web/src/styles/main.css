@@ -6749,3 +6749,47 @@ html:lang(ru) .r-edge-head {
     margin-left: 6px;
   }
 }
+/* one colour for a healthy drum; late is orange, silent is grey */
+.l-node .body {
+  fill: #3fae8c !important;
+  stroke: #9fe0c8 !important;
+}
+.l-node .halo {
+  fill: rgba(63, 174, 140, 0.16) !important;
+}
+.l-node.broken .body,
+.l-node.silent .body {
+  fill: rgba(150, 150, 160, 0.35) !important;
+  stroke: rgba(242, 233, 216, 0.6) !important;
+}
+.k-node {
+  background: #3fae8c !important;
+}
+.k-soft {
+  background: rgba(242, 233, 216, 0.28);
+  border: 1.5px solid rgba(242, 233, 216, 0.5);
+}
+.l-nodeline {
+  display: none;
+}
+@media (max-width: 900px) {
+  .l-node .st {
+    display: none;
+  }
+  .l-nodeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px 14px;
+    margin: 2px 12px 4px;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: rgba(242, 233, 216, 0.7);
+  }
+  .l-nodeline b {
+    color: #f2e9d8;
+  }
+  .l-nodeline .bad {
+    color: #f0b49a;
+  }
+}
