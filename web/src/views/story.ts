@@ -401,6 +401,8 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
     { rootMargin: '100% 0px' },
   );
   near.observe(el);
+  // Another chapter's map never shows its labels behind this one's steps.
+  new IntersectionObserver((es) => graphic.classList.toggle('away', !es[0].isIntersecting), { threshold: 0.02 }).observe(graphic.parentElement!);
 
   const io = new IntersectionObserver(
     (entries) => {
@@ -408,7 +410,9 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
         if (e.isIntersecting) activate(Number((e.target as HTMLElement).dataset.step));
       }
     },
-    { rootMargin: '-45% 0px -45% 0px' },
+    // A step takes over as soon as it enters the lower third: the picture
+    // changes with the words, not one card behind them.
+    { rootMargin: '-66% 0px -33% 0px' },
   );
   steps.forEach((s) => io.observe(s));
 }

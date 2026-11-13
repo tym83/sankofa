@@ -6584,3 +6584,6 @@ a.r-artist:hover {
 .rm-node.card .lbl {
   display: block !important;
 }
+.graphic.away .pt .lbl {
+  display: none !important;
+}
