@@ -6089,3 +6089,20 @@ a.r-artist:hover {
     padding: 8px 14px;
   }
 }
+
+/* listening room: an opaque header, legend swatches that match the drawing */
+.listen .d-bar {
+  background: #0b0b16;
+  border-bottom: 1px solid rgba(242, 233, 216, 0.08);
+}
+.k-node {
+  background: conic-gradient(hsl(30 55% 52%) 0 33%, hsl(97 55% 52%) 0 66%, hsl(164 55% 52%) 0) !important;
+}
+.k-late {
+  border-color: hsl(30 80% 62%) !important;
+}
+@media (max-width: 900px) {
+  .listen .l-ring {
+    height: 44svh !important;
+  }
+}

@@ -7,7 +7,11 @@ export type Sub =
   | { kind: 'join'; name: string; drum: string }
   | { kind: 'leave'; name: string; drum: string }
   | { kind: 'down'; drum: string }
-  | { kind: 'moved'; drum: string; n: number };
+  | { kind: 'moved'; drum: string; n: number }
+  | { kind: 'stopped'; drum: string; s: number }
+  | { kind: 'late'; drum: string; late: number; s: number }
+  | { kind: 'mended'; drum: string }
+  | { kind: 'failed'; drum: string; n: number };
 
 export function subtitle(s: Sub, l: Lang): string {
   const ru = l === 'ru';
@@ -26,6 +30,16 @@ export function subtitle(s: Sub, l: Lang): string {
       return ru ? `${s.name} уходит` : `${s.name} leaves`;
     case 'down':
       return ru ? `${s.drum} замолчал и объявлен выбывшим` : `${s.drum} has fallen silent and is declared down`;
+    case 'stopped':
+      return ru
+        ? `Вы остановили ${s.drum}. Его сердцебиение запаздывает; через ${s.s} с кластер перестанет его ждать.`
+        : `You stopped ${s.drum}. Its heartbeat is late; the cluster will give up on it in ${s.s} s.`;
+    case 'late':
+      return ru ? `${s.drum} молчит уже ${s.late} с — кластер ждёт ещё ${s.s} с` : `${s.drum} has been silent for ${s.late} s; the cluster waits ${s.s} s more`;
+    case 'mended':
+      return ru ? `${s.drum} снова играет` : `${s.drum} plays again`;
+    case 'failed':
+      return ru ? `Вы уронили ${count(s.n, 'program', 'ru')} на барабане ${s.drum}: на зов они не ответят` : `You failed ${count(s.n, 'program', 'en')} on ${s.drum}: they will not answer the call`;
     case 'moved':
       return ru ? `${count(s.n, 'program', 'ru')} с барабана ${s.drum} ${s.n === 1 ? 'перешла' : 'перешли'} к остальным` : `${count(s.n, 'program', 'en')} from ${s.drum} moved to the others`;
   }

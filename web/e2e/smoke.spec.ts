@@ -426,3 +426,19 @@ test('the music map counts its roots, finds an artist and lights its way down', 
   await page.goto('/#view=roots-map&lang=ru');
   await expect(page.locator('.rm-head h2')).toHaveText(/^Из \d+ исполнител/);
 });
+
+test('breaking a node is told at once and the stopped node never checks in', async ({ page }) => {
+  const voices = { type: 'voices', at: 'x', voices: [{ node: 'cp-1', alive: true, late: 0.1, ready: 3, notReady: 0 }, { node: 'w-1', alive: true, late: 0.1, ready: 2, notReady: 0 }] };
+  const ev = (o: object) => `data: ${JSON.stringify(o)}\n\n`;
+  await page.route('**/pulse', (r) =>
+    r.fulfill({ status: 200, headers: { 'content-type': 'text/event-stream' }, body: 'retry: 1500\n' + ev(voices) + ev({ type: 'lease', node: 'w-1', at: 'x', leaseSeconds: 40 }) }),
+  );
+  await page.goto('/#view=listen');
+  await expect(page.locator('.l-badge')).toHaveText('Live: this museum’s own cluster');
+  await page.getByRole('button', { name: 'Break a node' }).click();
+  await expect(page.locator('.l-subs')).toContainText(/You stopped Sogo\. Its heartbeat is late; the cluster will give up on it in \d+\ss\./);
+  // the stream reconnects and sends Sogo's check-in again: it is not shown
+  await page.waitForTimeout(3500);
+  await expect(page.locator('.l-subs')).not.toContainText('Sogo checked in');
+  await expect(page.locator('.l-subs')).toContainText(/Sogo has been silent for \d+/);
+});

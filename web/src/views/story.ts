@@ -471,7 +471,7 @@ function coda(app: App): HTMLElement {
       'div.coda-inner.reveal',
       {},
       h('div.kicker', {}, 'Sankofa'),
-      h('h2', { id: 'coda-title' }, pick({ en: 'Go back and fetch it.', ru: 'Вернись и забери.' })),
+      h('h2', { id: 'coda-title' }, pick({ en: 'Go back and fetch\u00a0it.', ru: 'Вернись и\u00a0забери.' })),
       h(
         'p',
         {},

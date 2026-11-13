@@ -256,13 +256,13 @@ export const RU: Record<string, string> = {
   'Start listening': 'Начать слушать',
   Stop: 'Остановить',
   'The bell timeline in the centre and one drum per node around it': 'Колокольный ритм в центре и по барабану на каждый узел вокруг',
-  'Bell: the control plane': 'Колокол — это управляющая машина (control plane)',
-  'Drum: a node, renewing its Lease': 'Барабан — машина кластера, пока она подаёт сигнал жизни',
+  'Bell: the control plane': 'Колокол — управляющий слой',
+  'Drum: a node, renewing its Lease': 'Барабан — узел, пока он обновляет отметку о жизни',
   'Wavering: the heartbeat is late': 'Дрожь: сердцебиение запаздывает',
   'Hollow: the node is silent': 'Пустой круг: узел молчит',
   'Filled: a pod answered': 'Заполненный: под откликнулся',
   'Empty: a pod was called and stayed silent': 'Пунктир: под позвали, а он промолчал',
-  'Live · Griot /pulse': 'Вживую · Griot /pulse',
+  'Live · Griot /pulse': 'Вживую: собственный кластер музея',
   'Recorded demo · not a live cluster': 'Записанное демо · не живой кластер',
   'Live stream quiet': 'Поток молчит',
   'Connecting…': 'Подключение…',
@@ -278,7 +278,7 @@ export const RU: Record<string, string> = {
   'talking drums': 'говорящие барабаны',
   'the spirituals': 'спиричуэлс',
   'The bell is the control plane, keeping the West African 12/8 timeline of seven strokes in twelve pulses that every drum in the ensemble locks to, the way {talk} carry speech in rhythm. Each node is a drum with its own interlocking part: it plays while its Lease is fresh, stumbles as heartbeats come late, and falls silent when the node stops. Then the cluster calls and every ready pod answers, as in {spirit}; a pod that is not ready leaves its answer empty, and you hear the gap.':
-    'Колокол — это control plane: он держит западноафриканскую линию 12/8, семь ударов на двенадцать долей, по которой сверяется каждый барабан ансамбля, — так {talk} передают речь ритмом. Каждый узел — барабан со своей партией, вплетённой в общий узор: он играет, пока его Lease свеж, сбивается, когда сердцебиение запаздывает, и замолкает, когда узел останавливается. Потом кластер зовёт, и каждый готовый под откликается, как в {spirit}; под, который не готов, оставляет место отклика пустым — и вы слышите эту паузу.',
+    'Колокол — это управляющий слой кластера: он держит западноафриканскую линию 12/8, семь ударов на двенадцать долей, по которой сверяется каждый барабан ансамбля, — так {talk} передают речь ритмом. Каждый узел — барабан со своей партией, вплетённой в общий узор: он играет, пока его отметка о жизни (аренда узла) свежа, сбивается, когда сердцебиение запаздывает, и замолкает, когда узел останавливается. Потом кластер зовёт, и каждый готовый под откликается, как в {spirit}; под, который не готов, оставляет место отклика пустым — и вы слышите эту паузу.',
 };
 
 /** The one way the museum counts its cards: "96 cards in your copy · 102 in both". */

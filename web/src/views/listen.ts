@@ -6,7 +6,7 @@ import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { subtitle, type Sub } from '../lib/subtitles';
-import { BELL, GUEST_EVERY, GUEST_PART, PARTS, PULSES, guestPitch, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, simulate, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
+import { BELL, GRACE, simTargets, GUEST_EVERY, GUEST_PART, PARTS, PULSES, guestPitch, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, simulate, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
 const PULSE = 0.2; // seconds per pulse: one 12/8 cycle is 2.4 s
 const AHEAD = 0.15;
@@ -279,6 +279,7 @@ export class Listen {
             const active = this.source.sim[key] !== undefined;
             if (active) delete this.source.sim[key];
             else this.source.sim[key] = performance.now();
+            this.narrateSim(key, !active);
             b.setAttribute('aria-pressed', String(!active));
             b.textContent = pick(!active ? { en: off[0], ru: off[1] } : { en: on[0], ru: on[1] });
             this.tickSim();
@@ -362,9 +363,12 @@ export class Listen {
     document.body.append(this.el);
     this.source.onChange = () => this.render();
     this.source.onLease = (node) => {
+      if (this.source.voices.find((x) => x.node === node)?.broken) return;
       this.accents.add(node);
       this.flash(node);
-      this.say({ kind: 'lease', drum: this.drumOf(node) });
+      // A node the reader stopped does not check in, whatever the stream says.
+      const v = this.source.voices.find((x) => x.node === node);
+      if (!v?.broken) this.say({ kind: 'lease', drum: this.drumOf(node) });
     };
     this.source.onPod = (phase, name, node) => this.say(phase === 'joined' ? { kind: 'join', name, drum: this.drumOf(node) } : { kind: 'leave', name, drum: this.drumOf(node) });
     window.setInterval(() => this.isOpen && this.paintNext(), 1000);
@@ -588,6 +592,26 @@ export class Listen {
   }
 
   private lastState = new Map<string, string>();
+  private lateTimer = 0;
+
+  /** What the reader just did, said first, then counted down. */
+  private narrateSim(key: 'brokenAt' | 'failingAt', on: boolean): void {
+    const tg = simTargets(this.source.base.length);
+    clearInterval(this.lateTimer);
+    if (key === 'brokenAt') {
+      const drum = drumName(tg.broken);
+      if (!on) return this.say({ kind: 'mended', drum });
+      this.say({ kind: 'stopped', drum, s: GRACE });
+      this.lateTimer = window.setInterval(() => {
+        const v = this.source.voices[tg.broken];
+        if (!v?.broken || !v.alive) return clearInterval(this.lateTimer);
+        this.say({ kind: 'late', drum, late: v.lateSeconds ?? 0, s: v.downIn ?? 0 });
+      }, 4000);
+    } else if (on) {
+      const v = this.source.voices[tg.failing];
+      this.say({ kind: 'failed', drum: drumName(tg.failing), n: v?.failing ?? 2 });
+    }
+  }
 
   /** Watch the voices for a node going down and its pods moving on. */
   private narrate(voices: SimVoice[]): void {
@@ -727,7 +751,7 @@ export class Listen {
   private render(): void {
     const m = this.source.mode;
     const live = m === 'live';
-    this.badge.textContent = t(live ? 'Live · Griot /pulse' : m === 'demo' ? 'Recorded demo · not a live cluster' : m === 'stale' ? 'Live stream quiet' : 'Connecting…');
+    this.badge.textContent = live ? pick({ en: 'Live: this museum’s own cluster', ru: 'Вживую: собственный кластер музея' }) : t( m === 'demo' ? 'Recorded demo · not a live cluster' : m === 'stale' ? 'Live stream quiet' : 'Connecting…');
     this.badge.className = `l-badge ${m}`;
     this.demoRow.hidden = m === 'connecting';
     const v = this.source.voices;
