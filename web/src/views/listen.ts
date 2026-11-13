@@ -539,6 +539,8 @@ export class Listen {
 
   private renderNodes(): void {
     const voices = this.source.voices;
+    // On a small circle the labels are larger and the words shorter.
+    const small = this.svg.clientWidth > 0 && this.svg.clientWidth < 520;
     const seen = new Set<string>();
     const n = Math.max(1, voices.length);
     voices.forEach((v, k) => {
@@ -563,14 +565,20 @@ export class Listen {
       g.querySelector('text.nm')!.setAttribute('aria-label', v.node);
       g.querySelector('text.st')!.textContent = v.broken
         ? v.alive
-          ? pick({ en: `heartbeat ${v.lateSeconds} s late · down in ${v.downIn} s`, ru: `сердцебиение опаздывает на ${v.lateSeconds} с · выбывает через ${v.downIn} с` })
+          ? small
+            ? pick({ en: `late ${v.lateSeconds} s · down in ${v.downIn}`, ru: `опаздывает ${v.lateSeconds} с · ещё ${v.downIn}` })
+            : pick({ en: `heartbeat ${v.lateSeconds} s late · down in ${v.downIn} s`, ru: `сердцебиение опаздывает на ${v.lateSeconds} с · выбывает через ${v.downIn} с` })
           : v.evicted
-            ? pick({ en: 'down · its pods moved away', ru: 'выбыл · его поды переехали' })
+            ? small
+              ? pick({ en: 'down · moved', ru: 'выбыл' })
+              : pick({ en: 'down · its pods moved away', ru: 'выбыл · его поды переехали' })
             : pick({ en: 'declared down · pods silent', ru: 'объявлен выбывшим · поды молчат' })
         : v.alive
           ? v.rebalancing
             ? pick({ en: `back · ${v.ready} ready, more as pods restart`, ru: `вернулся · готовы: ${v.ready}, остальные по мере перезапуска` })
-            : (v.adopted ? pick({ en: `took over ${v.adopted} · `, ru: `принял ${v.adopted} · ` }) : '') + t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
+            : small
+              ? `${v.ready}${v.adopted ? ` (+${v.adopted})` : ''} ${pick({ en: 'ready', ru: 'готовы' })}`
+              : (v.adopted ? pick({ en: `took over ${v.adopted} · `, ru: `принял ${v.adopted} · ` }) : '') + t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
           : t('silent');
       g.classList.toggle('broken', !!v.broken);
       // The lateness arc: how far into its lease the node is.

@@ -6479,3 +6479,68 @@ a.r-artist:hover {
   background: rgba(242, 233, 216, 0.28);
   border-color: rgba(242, 233, 216, 0.5);
 }
+@media (max-width: 900px) {
+  .l-node .nm {
+    font-size: 30px !important;
+  }
+  .l-node .st {
+    font-size: 25px !important;
+  }
+  .l-node .no {
+    font-size: 17px !important;
+  }
+}
+/* Phone chapter heroes: title and credit in flow, never on top of each other. */
+@media (max-width: 720px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .hero .hero-text {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    padding: 0 16px;
+  }
+  .hero .credit {
+    position: relative !important;
+    inset: auto !important;
+    margin: 14px 16px 18px;
+    text-align: left;
+    max-width: none;
+  }
+  .hero.portrait .hero-text,
+  .hero.portrait .credit {
+    z-index: 1;
+  }
+  /* narrative boxes are always opaque over the map */
+  .chapter.rhythm-1 .step {
+    background: #0e0d18;
+    border: 1px solid rgba(242, 233, 216, 0.1);
+    padding: 20px 20px 18px;
+    text-shadow: none;
+    font-size: 19px;
+  }
+  .chapter.rhythm-1 .graphic .map {
+    opacity: 1;
+  }
+  .step {
+    background: #121226 !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .chapter.rhythm-2 .step {
+    background: #efe7d6 !important;
+  }
+}
+.step-fig img {
+  height: auto !important;
+  max-height: 38svh;
+  width: auto !important;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 6px;
+}

@@ -78,6 +78,16 @@ function width(file: string): number | undefined {
   return undefined;
 }
 
+function height(file: string): number | undefined {
+  try {
+    if (tool === 'sips') return Number(execFileSync('sips', ['-g', 'pixelHeight', file]).toString().match(/pixelHeight:\s*(\d+)/)?.[1]);
+    if (tool === 'vips') return Number(execFileSync('vipsheader', ['-f', 'height', file]).toString().trim());
+  } catch {
+    /* unreadable: skip */
+  }
+  return undefined;
+}
+
 function resize(src: string, dst: string, w: number): void {
   if (tool === 'sips') execFileSync('sips', ['-Z', String(w), '-s', 'formatOptions', '72', src, '--out', dst], { stdio: 'ignore' });
   else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${dst}[Q=72,strip]`], { stdio: 'ignore' });
@@ -85,6 +95,7 @@ function resize(src: string, dst: string, w: number): void {
 
 const files: Record<string, number[]> = {};
 const sizes: Record<string, number> = {};
+const ratios: Record<string, number> = {};
 const webps: string[] = [];
 if (tool) {
   for (const f of readdirSync(dir)) {
@@ -94,6 +105,8 @@ if (tool) {
     const w0 = width(src);
     if (!w0) continue;
     sizes[f] = w0;
+    const h0 = height(src);
+    if (h0) ratios[f] = Math.round((w0 / h0) * 1000) / 1000;
     for (const w of WIDTHS) {
       if (w >= w0 * 0.9) break; // never upscale, and skip near-duplicates
       const dstDir = join(dir, `w${w}`);
@@ -108,5 +121,5 @@ if (tool) {
   }
 }
 mkdirSync(dirname(out), { recursive: true });
-writeFileSync(out, JSON.stringify({ widths: WIDTHS, files, sizes, webp: webps }));
+writeFileSync(out, JSON.stringify({ widths: WIDTHS, files, sizes, ratios, webp: webps }));
 console.log(`media variants: ${tool ?? 'none (no sips or vipsthumbnail)'}, ${Object.keys(files).length} images, ${webps.length} with WebP`);

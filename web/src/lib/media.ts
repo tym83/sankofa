@@ -7,6 +7,8 @@ interface Manifest {
   files?: Record<string, number[]>;
   /** file → width of the original */
   sizes?: Record<string, number>;
+  /** width / height of each image */
+  ratios?: Record<string, number>;
   /** files that also come as WebP next to every copy */
   webp?: string[];
 }
@@ -14,6 +16,7 @@ interface Manifest {
 let variants: Record<string, number[]> = {};
 let sizes: Record<string, number> = {};
 let webp = new Set<string>();
+let ratios: Record<string, number> = {};
 
 export async function loadMediaManifest(): Promise<void> {
   try {
@@ -23,6 +26,7 @@ export async function loadMediaManifest(): Promise<void> {
     variants = m.files ?? {};
     sizes = m.sizes ?? {};
     webp = new Set(m.webp ?? []);
+    ratios = m.ratios ?? {};
   } catch {
     /* no variants: the originals are used */
   }
@@ -73,6 +77,8 @@ export function progressive(
 ): { img: HTMLImageElement; ready: Promise<void> } {
   const img = document.createElement('img');
   img.alt = opts.alt ?? '';
+  // Reserve the picture's shape before it loads: nothing below it jumps.
+  if (ratios[file]) img.style.aspectRatio = String(ratios[file]);
   img.decoding = 'async';
   if (opts.cls) img.className = opts.cls;
   const small = variants[file]?.[0];
