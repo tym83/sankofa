@@ -11,6 +11,8 @@ COPY pkg ./pkg
 RUN go build -o /out/sankofa ./cmd/sankofa
 
 FROM node:24-alpine AS web
+# libvips makes the smaller image copies (scripts/build-media.ts).
+RUN apk add --no-cache vips-tools
 WORKDIR /src
 COPY web/package.json web/package-lock.json web/
 RUN cd web && npm ci --no-audit --no-fund
@@ -24,6 +26,7 @@ RUN set -eu; cd /src; \
     sankofa content export "$src/cards" -o web/public/data/cards.json; \
     node web/scripts/build-chapters.ts "$src/chapters" web/public/data/chapters.json; \
     if [ -d "$src/media" ]; then cp -R "$src/media/." web/public/media/; fi; \
+    node web/scripts/build-media.ts web/public/media web/public/data/media.json; \
     cd web && npx vite build
 
 FROM nginxinc/nginx-unprivileged:1.29-alpine

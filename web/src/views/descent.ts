@@ -11,6 +11,7 @@ import { eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
 import { count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
+import { mediaSrc } from '../lib/media';
 import { buildScale, chapterAt, chapterCentres, chaptersAt, lanes, levelCards, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
 import { interpolateRgb } from 'd3-interpolate';
 import { scaleLinear } from 'd3-scale';
@@ -198,6 +199,8 @@ export class Descent {
     if (this.raf) return;
     this.raf = requestAnimationFrame(() => {
       this.raf = 0;
+      // The hint has done its job once the reader starts to descend.
+      if (this.el.scrollTop > 120 && this.levelHint.classList.contains('on')) this.dismissHint();
       const y = this.yearNow();
       const year = Math.round(y);
       this.el.style.backgroundColor = SKY(y);
@@ -318,8 +321,8 @@ export class Descent {
         'p.d-count',
         {},
         pick({
-          en: `Level ${this.level}, ${LEVEL_NAMES[this.level - 1].toLowerCase()}: ${count(cards.length, 'card', 'en')} of ${all.length}. Change the level at the top.`,
-          ru: `Уровень ${this.level}, «${LEVEL_NAMES[this.level - 1].toLowerCase()}»: ${count(cards.length, 'card', 'ru')} из ${all.length}. Уровень меняется вверху.`,
+          en: `Level ${this.level}, ${LEVEL_NAMES[this.level - 1].toLowerCase()}: ${count(cards.length, 'card', 'en')} shown of ${all.length} in your copy. Change the level at the top.`,
+          ru: `Уровень ${this.level}, «${LEVEL_NAMES[this.level - 1].toLowerCase()}»: показано ${cards.length} из ${all.length} в вашем экземпляре. Уровень меняется вверху.`,
         }),
       ),
       h('div.d-down', { 'aria-hidden': 'true' }, h('i')),
@@ -475,7 +478,7 @@ export class Descent {
     return h(
       `a.dc${img ? '' : '.noimg'}${c.zoom <= 2 ? '.big' : ''}`,
       { href: `#focus=${c.id}`, 'data-card': c.id, style: `width:${w}px;--era:${eraColor(c.era)}` },
-      img ? h('div.ph', {}, h('img', { 'data-src': this.app.media(img.file), alt: '', decoding: 'async' })) : null,
+      img ? h('div.ph', {}, h('img', { 'data-src': mediaSrc(this.app, img.file, [480]).src, alt: '', decoding: 'async' })) : null,
       h(
         'div.tx',
         {},

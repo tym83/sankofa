@@ -5,7 +5,7 @@ import type { App } from '../app';
 import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, pick, t } from '../lib/i18n';
-import { BELL, PARTS, PULSES, SLOTS, TUNINGS, demoLeases, demoWith, drumName, exchange, type DemoTweaks, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
+import { BELL, PARTS, PULSES, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, simulate, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
 const PULSE = 0.2; // seconds per pulse: one 12/8 cycle is 2.4 s
 const AHEAD = 0.15;
@@ -27,7 +27,12 @@ interface Cue {
 /** Where the voices come from: Griot's /pulse, or the recorded demo. */
 class Source {
   mode: Mode = 'connecting';
-  voices: Voice[] = [];
+  base: Voice[] = [];
+  sim: Sim = {};
+  /** The voices as played: the cluster (or the demo) with the reader's interventions. */
+  get voices(): SimVoice[] {
+    return simulate(this.base, this.sim, performance.now());
+  }
   private es?: EventSource;
   private started = 0;
   private lastData = 0;
@@ -35,8 +40,6 @@ class Source {
   private lastDemo = 0;
   onChange?: () => void;
   onLease?: (node: string) => void;
-  tweaks: DemoTweaks = {};
-  retick?: () => void;
 
   start(): void {
     this.started = performance.now();
@@ -55,7 +58,7 @@ class Source {
         this.onChange?.();
       }
       if (e.type === 'voices' && e.voices) {
-        this.voices = e.voices;
+        this.base = e.voices;
         this.onChange?.();
       } else if (e.type === 'lease' && e.node) this.onLease?.(e.node);
     };
@@ -67,7 +70,7 @@ class Source {
     window.setInterval(() => {
       if (this.mode === 'live' && performance.now() - this.lastData > 15000) {
         this.mode = 'stale';
-        this.voices = this.voices.map((v) => ({ ...v, alive: false }));
+        this.base = this.base.map((v) => ({ ...v, alive: false }));
         this.onChange?.();
       }
     }, 3000);
@@ -80,13 +83,12 @@ class Source {
     const t0 = performance.now();
     const tick = () => {
       const t = (performance.now() - t0) / 1000;
-      this.voices = demoWith(t, this.tweaks);
+      this.base = demoVoices(t);
       for (const l of demoLeases(this.lastDemo, t)) this.onLease?.(l.node);
       this.lastDemo = t;
       this.onChange?.();
     };
     tick();
-    this.retick = tick;
     this.demoTimer = window.setInterval(tick, 1000);
     this.onChange?.();
   }
@@ -227,23 +229,29 @@ export class Listen {
     this.gNodes = document.createElementNS(NS, 'g');
     this.drawRing();
     this.callRow = h('div.l-call', { 'aria-hidden': 'true' });
-    const tweak = (key: 'broken' | 'failing', on: [string, string], off: [string, string]) => {
-      const b = h('button.btn', {
-        'aria-pressed': 'false',
-        onclick: () => {
-          this.source.tweaks[key] = !this.source.tweaks[key];
-          b.setAttribute('aria-pressed', String(!!this.source.tweaks[key]));
-          b.textContent = pick(this.source.tweaks[key] ? { en: off[0], ru: off[1] } : { en: on[0], ru: on[1] });
-          this.source.retick?.();
+    const tweak = (key: 'brokenAt' | 'failingAt', on: [string, string], off: [string, string]) => {
+      const b = h(
+        'button.btn',
+        {
+          'aria-pressed': 'false',
+          onclick: () => {
+            const active = this.source.sim[key] !== undefined;
+            if (active) delete this.source.sim[key];
+            else this.source.sim[key] = performance.now();
+            b.setAttribute('aria-pressed', String(!active));
+            b.textContent = pick(!active ? { en: off[0], ru: off[1] } : { en: on[0], ru: on[1] });
+            this.tickSim();
+          },
         },
-      }, pick({ en: on[0], ru: on[1] }));
+        pick({ en: on[0], ru: on[1] }),
+      );
       return b;
     };
     this.demoRow = h(
       'div.l-demo',
       {},
-      tweak('broken', ['Break a node', 'Сломать узел'], ['Mend the node', 'Починить узел']),
-      tweak('failing', ['Fail two pods', 'Уронить два пода'], ['Heal the pods', 'Поднять поды']),
+      tweak('brokenAt', ['Break a node', 'Сломать узел'], ['Mend the node', 'Починить узел']),
+      tweak('failingAt', ['Fail two pods', 'Уронить два пода'], ['Heal the pods', 'Поднять поды']),
     );
     const talk = app.set.get('talking-drums') ? `[[talking-drums|${t('talking drums')}]]` : t('talking drums');
     const spirit = app.set.get('spirituals') ? `[[spirituals|${t('the spirituals')}]]` : t('the spirituals');
@@ -461,7 +469,14 @@ export class Listen {
       g.querySelector('text.nm')!.textContent = drumName(k);
       g.querySelector('text.no')!.textContent = `${t('node')} ${k + 1}`;
       g.querySelector('text.nm')!.setAttribute('aria-label', v.node);
-      g.querySelector('text.st')!.textContent = v.alive ? t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '') : t('silent');
+      g.querySelector('text.st')!.textContent = v.broken
+        ? v.alive
+          ? pick({ en: `heartbeat ${v.lateSeconds} s late · down in ${v.downIn} s`, ru: `сердцебиение опаздывает на ${v.lateSeconds} с · выбывает через ${v.downIn} с` })
+          : pick({ en: 'declared down · pods silent', ru: 'объявлен выбывшим · поды молчат' })
+        : v.alive
+          ? t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
+          : t('silent');
+      g.classList.toggle('broken', !!v.broken);
       // The lateness arc: how far into its lease the node is.
       const f = Math.max(0, Math.min(0.999, v.late));
       const ang = f * Math.PI * 2;
@@ -521,12 +536,21 @@ export class Listen {
     );
   }
 
+  private simTimer = 0;
+
+  /** While an intervention runs, the room redraws every quarter second. */
+  private tickSim(): void {
+    clearInterval(this.simTimer);
+    this.render();
+    if (this.source.sim.brokenAt !== undefined || this.source.sim.failingAt !== undefined) this.simTimer = window.setInterval(() => this.render(), 250);
+  }
+
   private render(): void {
     const m = this.source.mode;
     const live = m === 'live';
     this.badge.textContent = t(live ? 'Live · Griot /pulse' : m === 'demo' ? 'Recorded demo · not a live cluster' : m === 'stale' ? 'Live stream quiet' : 'Connecting…');
     this.badge.className = `l-badge ${m}`;
-    this.demoRow.hidden = m !== 'demo';
+    this.demoRow.hidden = m === 'connecting';
     const v = this.source.voices;
     const alive = v.filter((x) => x.alive).length;
     const ready = v.reduce((s, x) => s + (x.alive ? x.ready : 0), 0);

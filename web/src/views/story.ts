@@ -9,6 +9,8 @@ import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { eraColor, isNonPlace } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
+import { mediaSrc } from '../lib/media';
+import { chapterCoda, signature, SIGNATURE_CARD } from './signature';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
 import { Timeline } from './timeline';
 import { hideTip, showTip } from './tip';
@@ -44,7 +46,8 @@ function coverMap(host: HTMLElement | null): void {
 function heroImg(app: App, ch: Chapter, eager: boolean): HTMLElement | null {
   if (!ch.hero?.file) return null;
   return h('img', {
-    src: app.media(ch.hero.file),
+    ...mediaSrc(app, ch.hero.file, [1600]),
+    sizes: '100vw',
     alt: ch.hero.caption ?? '',
     loading: eager ? 'eager' : 'lazy',
     decoding: 'async',
@@ -130,7 +133,7 @@ function toc(app: App): HTMLElement {
   return h(
     'section.toc',
     { id: 'contents', 'aria-label': t('Contents') },
-    h('div.toc-head', {}, h('h2', {}, t('Eight releases')), h('p', {}, t('Each era ships as a release of the distribution, from v0 to v7. Begin anywhere; every card leads somewhere else.'))),
+    h('div.toc-head', {}, h('h2', {}, t('Eight chapters')), h('p', {}, t('Each era ships as a release of the distribution, from v0 to v7. Begin anywhere; every card leads somewhere else.'))),
     h(
       'div.toc-grid',
       {},
@@ -139,7 +142,7 @@ function toc(app: App): HTMLElement {
           'a.toc-item.reveal',
           { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `--era:${eraColor(ch.id)}` },
           heroImg(app, ch, false) ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, ch.id),
-          h('span.num', {}, ch.id.toUpperCase()),
+          h('span.num', {}, pick({ en: `Chapter ${app.chapters.indexOf(ch) + 1}`, ru: `Глава ${app.chapters.indexOf(ch) + 1}` }), h('small', {}, ` · ${t('release')} ${ch.id}`)),
           h('span.t', {}, h('b', {}, ch.title), h('span', {}, ch.kicker)),
         ),
       ),
@@ -182,8 +185,9 @@ function chapter(app: App, ch: Chapter): HTMLElement {
   // an earlier step has not shown. Step 0 always orients on the map.
   const used = new Set<string>();
   const stepImage: (Card | undefined)[] = ch.steps.map((s, i) => {
-    if (i === 0) return undefined;
-    const c = stepCards(app, s).find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id));
+    // At most three pictures per chapter, so the map and the words breathe.
+    if (i === 0 || used.size >= 3) return undefined;
+    const c = stepCards(app, s).find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id) && x.id !== SIGNATURE_CARD[ch.id]);
     if (c) used.add(c.id);
     return c;
   });
@@ -196,22 +200,15 @@ function chapter(app: App, ch: Chapter): HTMLElement {
       `div.step${i === 0 ? '.first' : ''}`,
       { 'data-step': String(i), lang: ch.textLang && ch.textLang !== lang() ? ch.textLang : undefined },
       // On phones the picture sits above the text instead of under it.
-      img ? h('figure.step-fig', {}, h('img', { src: app.media(img.file), alt: img.caption ?? stepImage[i]!.title, loading: 'lazy', decoding: 'async' }), h('figcaption.credit', {}, img.caption ? img.caption + ' · ' : '', img.credit, ' · ', img.license)) : null,
+      img ? h('figure.step-fig', {}, h('img', { ...mediaSrc(app, img.file, [960]), sizes: '92vw', alt: img.caption ?? stepImage[i]!.title, loading: 'lazy', decoding: 'async' }), h('figcaption.credit', {}, img.caption ? img.caption + ' · ' : '', img.credit, ' · ', img.license)) : null,
       h('div.where', {}, where),
       h('p', {}, richText(app, s)),
     );
   });
   const scrolly = h('div.scrolly', {}, graphic, h('div.steps', {}, steps));
 
-  const pick = cards.find((c, i) => i > 0 && c.wow.length < 140) ?? cards[0];
-  const interlude = pick
-    ? h(
-        'section.interlude',
-        { style: `--era:${color}` },
-        h('blockquote.reveal', {}, pick.wow),
-        h('a.btn.attr.reveal', { href: `#focus=${pick.id}`, 'data-card': pick.id }, bookMarks(pick.books), `${pick.title}, ${formatYears(pick.years)} →`),
-      )
-    : null;
+  const fallback = cards.find((c, i) => i > 0 && c.wow.length < 140) ?? cards[0];
+  const interlude = signature(app, ch.id, cards, fallback);
 
   const LEAD = 4;
   const rest = cards.slice(LEAD);
@@ -237,6 +234,7 @@ function chapter(app: App, ch: Chapter): HTMLElement {
         h('h3', {}, t('In {chapter}: {cards}', { chapter: ch.id, cards: count(cards.length, 'card') })),
         h('div.strip-row', {}, cards.slice(0, LEAD).map((c) => teaser(app, c))),
         more,
+        chapterCoda(ch.id, count(cards.length, 'card')),
       )
     : null;
 
@@ -258,7 +256,7 @@ export function teaser(app: App, c: Card, seen = false): HTMLElement {
   return h(
     `a.teaser${seen ? '.seen' : ''}.reveal${img ? '' : '.textonly'}`,
     { href: `#focus=${c.id}`, 'data-card': c.id, style: `--era:${eraColor(c.era)}` },
-    img ? h('div.ph', {}, h('img', { src: app.media(img.file), alt: '', loading: 'lazy', decoding: 'async' })) : null,
+    img ? h('div.ph', {}, h('img', { ...mediaSrc(app, img.file, [480]), sizes: '(max-width: 720px) 92vw, 300px', alt: '', loading: 'lazy', decoding: 'async' })) : null,
     h(
       'div.tx',
       {},
@@ -281,11 +279,10 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
     const m = c.media?.find((x) => x.type === 'image');
     if (!m) return null;
     if (!figures.has(c.id)) {
-      const src = app.media(m.file);
       const f = h(
         'figure',
         {},
-        h('img', { src, alt: m.caption ?? c.title, decoding: 'async' }),
+        h('img', { ...mediaSrc(app, m.file, [960]), sizes: '58vw', alt: m.caption ?? c.title, decoding: 'async' }),
         h('figcaption.credit', {}, h('b', {}, m.caption ?? c.title), m.credit, ' · ', m.license),
       );
       figures.set(c.id, f);
@@ -296,7 +293,11 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
 
   const ensureMap = () => {
     if (map) return map;
-    map = new GeoMap(mapHost, {});
+    map = new GeoMap(mapHost, {
+      // Never under the text column; on phones at most three names.
+      avoid: () => (phone() ? [] : [[0, 0, Math.min(mapHost.clientWidth * 0.42, 620), mapHost.clientHeight]]),
+      maxLabels: () => (phone() ? 3 : 8),
+    });
     return map;
   };
 
@@ -334,7 +335,7 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
           title: true,
           color: eraColor(c.era),
           lit: lit.has(c.id),
-          minor: !lit.has(c.id) && i > 0,
+          minor: !lit.has(c.id),
           priority: lit.has(c.id) ? 10 : 1,
         })),
       );
@@ -458,7 +459,7 @@ function coda(app: App): HTMLElement {
   return h(
     'section.coda',
     { 'aria-labelledby': 'coda-title' },
-    art ? h('img.coda-img', { src: app.media(art.file), alt: '', loading: 'lazy', decoding: 'async' }) : null,
+    art ? h('img.coda-img', { ...mediaSrc(app, art.file, [1600]), sizes: '100vw', alt: '', loading: 'lazy', decoding: 'async' }) : null,
     h(
       'div.coda-inner.reveal',
       {},

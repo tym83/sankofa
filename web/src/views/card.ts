@@ -8,6 +8,7 @@ import { bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
 import { edition, lang, t } from '../lib/i18n';
 import { cardYaml } from '../lib/cardYaml';
+import { mediaSrc } from '../lib/media';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
 export class Drawer {
@@ -205,7 +206,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     ? h(
         'figure.card-media',
         {},
-        h('img', { src: app.media(img.file), alt: img.caption ?? c.title, loading: 'eager', decoding: 'async' }),
+        h('img', { ...mediaSrc(app, img.file, [960]), sizes: '(max-width: 720px) 100vw, 560px', alt: img.caption ?? c.title, loading: 'eager', decoding: 'async' }),
         h(
           'figcaption.credit',
           {},

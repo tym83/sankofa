@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { BELL, PARTS, demoLeases, demoVoices, demoWith, drumName, exchange, parsePulse, playing, strokes } from '../src/lib/rhythm';
+import { BELL, PARTS, demoLeases, demoVoices, drumName, exchange, parsePulse, playing, simulate, strokes } from '../src/lib/rhythm';
 
 describe('rhythm', () => {
   it('the bell plays seven strokes in twelve pulses', () => {
@@ -49,12 +49,25 @@ describe('rhythm', () => {
   });
 });
 
-describe('demo interventions and names', () => {
-  it('breaks a node and fails pods on request', () => {
-    const v = demoWith(40, { broken: true, failing: true });
-    expect(v[1].alive).toBe(false);
-    expect(v[2].notReady).toBeGreaterThanOrEqual(2);
-    expect(demoWith(40, {})[1].alive).toBe(true);
+describe('interventions and names', () => {
+  const base = demoVoices(40);
+  it('a broken node goes late second by second, then is declared down; its pods fall silent at once', () => {
+    const t0 = 1_000_000;
+    const now = simulate(base, { brokenAt: t0 }, t0 + 3000);
+    expect(now[1].lateSeconds).toBe(3);
+    expect(now[1].downIn).toBe(9);
+    expect(now[1].alive).toBe(true);
+    expect(now[1].ready).toBe(0);
+    expect(playing(now[1]).jitter).toBeGreaterThan(0);
+    const later = simulate(base, { brokenAt: t0 }, t0 + 13000);
+    expect(later[1].alive).toBe(false);
+    expect(later[1].downIn).toBe(0);
+    expect(simulate(base, {}, t0)[1]).toEqual(base[1]);
+  });
+
+  it('fails two pods on another node', () => {
+    const v = simulate(base, { failingAt: 0 }, 1);
+    expect(v[2].notReady).toBe(base[2].notReady + 2);
   });
 
   it('names nodes after drums', () => {

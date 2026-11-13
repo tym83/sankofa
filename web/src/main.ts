@@ -9,7 +9,9 @@ import * as reader from './lib/reader';
 import { copyText, h, svgIcon, toast } from './lib/dom';
 import { detectLang, isLang, lang, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
 import { buildStory } from './views/story';
-import { localizeStatics } from './lib/statics';
+import { localizeStatics, RU_TITLE_FIX } from './lib/statics';
+import { loadMediaManifest } from './lib/media';
+import { watchTypography } from './lib/typo';
 import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
 import { Descent } from './views/descent';
@@ -55,7 +57,7 @@ async function start(): Promise<void> {
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
   try {
-    [cardsFile, chaptersFile] = await Promise.all([load<CardsFile>('data/cards.json'), load<ChaptersFile>('data/chapters.json')]);
+    [cardsFile, chaptersFile] = await Promise.all([load<CardsFile>('data/cards.json'), load<ChaptersFile>('data/chapters.json'), loadMediaManifest()]);
   } catch (e) {
     loading.remove();
     document.getElementById('story')!.append(h('p.error', {}, t('The museum could not load its cards ({error}). Run scripts/build-data.sh.', { error: (e as Error).message })));
@@ -64,7 +66,7 @@ async function start(): Promise<void> {
 
   const rawCards = new Map(cardsFile.cards.map((c) => [c.id, c]));
   const set = new CardSet(cardsFile.cards.map((c) => localizeCard(c, current)));
-  const chapters = sortChapters(chaptersFile.chapters.map((c) => localizeChapter(c, current)));
+  const chapters = sortChapters(chaptersFile.chapters.map((c) => localizeChapter(c, current))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
   const cardDrawer = new Drawer(t('Card'));
   const bookDrawer = new Drawer(t('Your book'));
   const pathListeners: ((p: string[]) => void)[] = [];
@@ -206,10 +208,8 @@ async function start(): Promise<void> {
       if (isLang(to) && to !== lang()) switchLang(to);
     }),
   );
-  document.querySelector('[data-open-descent]')?.prepend(svgIcon('down'));
-  document.querySelector('[data-open-listen]')?.prepend(svgIcon('wave'));
-  document.querySelector('[data-open-engine]')?.prepend(svgIcon('term'));
   buildStory(app, document.getElementById('story')!);
+  watchTypography(current);
   trackChapters(app);
   loading.remove();
 
@@ -266,6 +266,9 @@ async function start(): Promise<void> {
   });
 
   const apply = (initial: boolean) => {
+    // A link with another language (typed, pasted or followed) switches the museum.
+    const asked = new URLSearchParams(location.hash.slice(1)).get('lang');
+    if (!initial && isLang(asked) && asked !== lang()) return switchLang(asked);
     route = readRoute();
     const screen = screenOf(route);
     closeOverlays(screen);
@@ -301,10 +304,8 @@ function setupNav(app: App, atlas: Atlas): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
   const atlasBtn = nav.querySelector<HTMLElement>('[data-open-atlas]')!;
-  atlasBtn.prepend(svgIcon('map'));
   atlasBtn.addEventListener('click', () => app.openAtlas({ zoom: 1 }));
   const bookBtn = nav.querySelector<HTMLElement>('[data-open-book]')!;
-  bookBtn.prepend(svgIcon('book'));
   bookBtn.addEventListener('click', () => app.openBook());
   const count = nav.querySelector<HTMLElement>('[data-path-count]')!;
   const setCount = (p: string[]) => {

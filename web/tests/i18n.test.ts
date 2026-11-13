@@ -47,3 +47,16 @@ describe('i18n', () => {
     expect(t('Open the atlas')).toBe('Open the atlas');
   });
 });
+
+import { nbsp } from '../src/lib/typo';
+describe('typography', () => {
+  it('binds short Russian words and names to the next word', () => {
+    const s = nbsp('Он пел в хоре и до звездолётов Сан Ра — дальше', 'ru');
+    expect(s).toContain('в хоре');
+    expect(s).toContain('и до звездолётов');
+    expect(s).toContain('Сан Ра —');
+  });
+  it('binds English articles and keeps Sun Ra together', () => {
+    expect(nbsp('the starships of Sun Ra', 'en')).toBe('the starships of Sun Ra');
+  });
+});

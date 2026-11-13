@@ -132,19 +132,51 @@ export function drumName(i: number): string {
   return i < DRUMS.length ? base : `${base} ${Math.floor(i / DRUMS.length) + 1}`;
 }
 
-export interface DemoTweaks {
-  broken?: boolean; // the second node stops
-  failing?: boolean; // two pods on the third node stop answering
+/** Seconds a stopped node takes to be declared down in the simulation. */
+export const GRACE = 12;
+
+export interface Sim {
+  /** ms timestamp when the reader broke a node */
+  brokenAt?: number;
+  /** ms timestamp when the reader failed two pods */
+  failingAt?: number;
 }
 
-/** The recorded demo with the reader's own interventions on top. */
-export function demoWith(t: number, tw: DemoTweaks): Voice[] {
-  const v = demoVoices(t).map((x) => ({ ...x }));
-  if (tw.broken && v[1]) Object.assign(v[1], { alive: false, late: 1.6, notReady: v[1].ready + v[1].notReady, ready: 0 });
-  if (tw.failing && v[2]) {
-    const n = Math.min(2, v[2].ready);
-    v[2].ready -= n;
-    v[2].notReady += n;
+export interface SimVoice extends Voice {
+  /** seconds since the last heartbeat, while a broken node is still counted */
+  lateSeconds?: number;
+  /** seconds left until the broken node is declared down */
+  downIn?: number;
+  broken?: boolean;
+  failing?: number;
+}
+
+/** Which node the reader's actions touch: never the first (the control plane). */
+export function simTargets(n: number): { broken: number; failing: number } {
+  return { broken: n > 1 ? 1 : 0, failing: n > 2 ? 2 : n - 1 };
+}
+
+/**
+ * The reader's interventions on top of the live or recorded voices: a broken
+ * node stops renewing at once, its heartbeat grows late second by second and
+ * after GRACE seconds it is declared down; its pods stop answering at once.
+ * Failing pods stop answering at once.
+ */
+export function simulate(base: Voice[], sim: Sim, now: number): SimVoice[] {
+  const out: SimVoice[] = base.map((v) => ({ ...v }));
+  const tg = simTargets(out.length);
+  if (sim.brokenAt !== undefined && out[tg.broken]) {
+    const v = out[tg.broken];
+    const s = Math.max(0, (now - sim.brokenAt) / 1000);
+    const total = v.ready + v.notReady;
+    Object.assign(v, { broken: true, lateSeconds: Math.floor(s), downIn: Math.max(0, Math.ceil(GRACE - s)), late: 0.3 + s / GRACE, alive: s < GRACE, ready: 0, notReady: total });
   }
-  return v;
+  if (sim.failingAt !== undefined && out[tg.failing] && !out[tg.failing].broken) {
+    const v = out[tg.failing];
+    const n = Math.min(2, v.ready);
+    v.ready -= n;
+    v.notReady += n;
+    v.failing = n;
+  }
+  return out;
 }

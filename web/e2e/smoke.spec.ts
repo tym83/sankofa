@@ -168,7 +168,7 @@ test('the language switch turns the museum Russian and remembers it', async ({ p
   await expect(page.locator('html')).toHaveAttribute('lang', 'ru');
   await expect(page).toHaveURL(/lang=ru/);
   await expect(page.locator('.deck:visible')).toContainText('Семь веков');
-  await expect(page.locator('.toc-head h2')).toHaveText('Восемь релизов');
+  await expect(page.locator('.toc-head h2')).toHaveText('Восемь глав');
   expect(await page.evaluate(() => localStorage.getItem('sankofa.lang'))).toBe('ru');
   await page.locator('[data-lang-switch]').click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
@@ -199,8 +199,9 @@ test('the engine room shows cards as Kubernetes objects', async ({ page }) => {
 test('#view=atlas opens the atlas on first load, and a card shows its object', async ({ page }) => {
   await page.goto('/#view=atlas');
   await expect(page.locator('.atlas.open')).toBeVisible();
+  await page.goto('about:blank');
   await page.goto('/#focus=equiano');
-  await page.reload();
+  await expect(page.locator('.drawer.on article.card')).toBeVisible();
   const det = page.locator('.drawer.on details.k8s');
   await det.locator('summary').click();
   await expect(det.locator('pre')).toContainText('sankofa dict equiano');
@@ -211,7 +212,11 @@ test('the demo lets you break a node and hear it fall silent', async ({ page }) 
   await page.goto('/#view=listen');
   await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/, { timeout: 8000 });
   await page.getByRole('button', { name: 'Break a node' }).click();
-  await expect.poll(() => page.locator('.l-node.silent').count()).toBeGreaterThan(0);
+  // At once: the node is marked, its heartbeat is late and its pods are silent.
+  const broken = page.locator('.l-node.broken');
+  await expect(broken).toHaveCount(1);
+  await expect(broken.locator('.st')).toContainText(/late|опаздывает/);
+  await expect.poll(async () => Number((await broken.locator('.st').textContent())?.match(/(\d+)\s*s late/)?.[1] ?? 0)).toBeGreaterThan(1);
   await expect(page.getByRole('button', { name: 'Mend the node' })).toBeVisible();
 });
 
@@ -220,7 +225,7 @@ test('cover opens on a real image with the first surprise, and the end returns t
   await expect(page.locator('.cover-art img')).toBeVisible();
   await expect(page.locator('.cover-wow:visible')).toContainText(/Mecca|Мекку/);
   await expect(page.locator('.cover .kicker')).toHaveCount(0);
-  await expect(page.locator('.coda h2')).toHaveText(/Go back and fetch it|Вернись и забери/);
+  await expect(page.locator('.coda h2')).toHaveText(/Go\sback\sand\sfetch\sit|Вернись\sи\sзабери/);
 });
 
 test('a chapter leads with a few cards and reveals the rest on request', async ({ page }) => {
@@ -238,8 +243,9 @@ test('a chapter leads with a few cards and reveals the rest on request', async (
 
 test('descent cards hold their text and the level control changes what is shown', async ({ page }) => {
   for (const url of ['/#view=descent&zoom=5', '/#view=descent&zoom=5&lang=ru']) {
+    await page.goto('about:blank');
     await page.goto(url);
-    await page.reload();
+    await page.waitForLoadState('load');
     await expect(page.locator('.descent.open')).toBeVisible();
     await page.evaluate(() => document.fonts.ready);
     await page.waitForTimeout(400);
@@ -258,4 +264,27 @@ test('descent cards hold their text and the level control changes what is shown'
   await expect.poll(() => page.locator('.descent a.dc').count()).toBeGreaterThan(one);
   await expect(page.locator('.descent .d-chapter')).toHaveCount(0);
   await expect(page.locator('.dm-era .main')).not.toBeEmpty();
+});
+
+test('each chapter ends on the cluster, and maps never stack labels', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.ch-cluster').first()).toContainText(/Griot/);
+  await expect(page.locator('.toc-head h2')).toHaveText(/Eight chapters|Восемь глав/);
+  const step = page.locator('article.chapter').nth(4).locator('.step').nth(1);
+  await step.evaluate((el) => el.scrollIntoView({ block: 'center' }));
+  await page.waitForTimeout(2500);
+  const overlaps = await page.locator('article.chapter').nth(4).locator('.graphic svg.geo').evaluate((svg) => {
+    const boxes = [...svg.querySelectorAll('g.pt text.lbl')]
+      .filter((t) => getComputedStyle(t).display !== 'none' && t.textContent)
+      .map((t) => t.getBoundingClientRect());
+    let n = 0;
+    for (let i = 0; i < boxes.length; i++)
+      for (let j = i + 1; j < boxes.length; j++) {
+        const a = boxes[i];
+        const b = boxes[j];
+        if (a.left < b.right - 2 && a.right > b.left + 2 && a.top < b.bottom - 2 && a.bottom > b.top + 2) n++;
+      }
+    return n;
+  });
+  expect(overlaps).toBe(0);
 });

@@ -4319,3 +4319,405 @@ details.k8s .term {
     padding-right: 10px;
   }
 }
+
+/* ---------- pacing: steps arrive on time and stay legible ---------- */
+.steps {
+  padding-top: 22svh;
+}
+.step {
+  opacity: 1;
+  transform: none;
+  border-left: 3px solid transparent;
+  transition: border-color 0.4s;
+}
+.step.on {
+  border-left-color: var(--era, var(--gold));
+}
+@media (max-width: 720px) {
+  .steps {
+    padding-top: 46svh;
+  }
+}
+
+/* ---------- pictures: on a warm mat, never larger than their source ---------- */
+.graphic .img figure img {
+  object-fit: scale-down;
+  background: #efe7d6;
+  padding: 14px;
+  border-radius: 2px;
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.7);
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  align-self: center;
+}
+.step-fig img {
+  background: #efe7d6;
+  padding: 8px;
+}
+.toc-item img,
+.teaser .ph img {
+  background: #efe7d6;
+}
+
+/* ---------- signatures ---------- */
+.sig {
+  position: relative;
+  color: #f2e9d8;
+  background: #0b0b14;
+}
+.sig .attr,
+.sig .btn {
+  color: #f2e9d8;
+}
+.sig-counter {
+  padding: clamp(90px, 16vh, 180px) var(--gutter);
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+}
+.sig-num {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(84px, 17vw, 260px);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums lining-nums;
+  color: var(--era, var(--gold));
+  font-variation-settings: 'SOFT' 100, 'WONK' 0, 'opsz' 144;
+}
+.sig-wow {
+  max-width: 34ch;
+  font-size: clamp(19px, 1.8vw, 26px);
+  line-height: 1.45;
+  font-style: italic;
+  margin: 0;
+  text-wrap: balance;
+}
+.sig-plate {
+  height: 230svh;
+}
+.sig-insert {
+  height: 200svh;
+}
+.sig-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 64px);
+  padding: calc(var(--nav-h) + 20px) var(--gutter) 30px;
+}
+.sig-mat {
+  --p: 0;
+  justify-self: center;
+  max-height: calc(100svh - var(--nav-h) - 60px);
+  background: #efe7d6;
+  padding: clamp(12px, 1.6vw, 24px);
+  box-shadow: 0 40px 90px -40px rgba(0, 0, 0, 0.8);
+  clip-path: inset(0 0 calc((1 - var(--p)) * 100%) 0);
+}
+.sig-mat img {
+  display: block;
+  max-height: calc(100svh - var(--nav-h) - 110px);
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: scale-down;
+}
+.sig-cap b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 350;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+.sig-cap p {
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0 0 20px;
+  color: rgba(242, 233, 216, 0.88);
+}
+.sig-cap .credit {
+  font-style: normal;
+  font-size: 11px;
+  margin-top: 18px;
+  color: rgba(242, 233, 216, 0.5);
+}
+.sig-stage {
+  position: relative;
+  height: min(70svh, 620px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.sig-cart {
+  --p: 0;
+  position: relative;
+  z-index: 1;
+  width: min(80%, 420px);
+  transform: translateY(calc((1 - var(--p, 0)) * -70%)) rotate(calc((1 - var(--p, 0)) * -6deg));
+  transition: transform 0.08s linear;
+}
+.sig-insert .sig-cart {
+  transform: translateY(calc((1 - var(--p, 0)) * -70%)) rotate(calc((1 - var(--p, 0)) * -6deg));
+}
+.sig-cart img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  background: #efe7d6;
+  padding: 10px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.8);
+}
+.sig-slot {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 6%;
+  height: 22%;
+  z-index: 2;
+  border-radius: 10px 10px 18px 18px;
+  background: linear-gradient(#24202b, #121018);
+  border-top: 3px solid #3a3442;
+  box-shadow: inset 0 10px 18px rgba(0, 0, 0, 0.7);
+  display: grid;
+  place-items: center;
+}
+.sig-slot span {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: rgba(242, 233, 216, 0.4);
+}
+.sig-done {
+  position: absolute;
+  top: 8%;
+  font-family: ui-monospace, Menlo, monospace;
+  letter-spacing: 0.2em;
+  color: var(--era, var(--gold));
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.sig-insert.in .sig-done {
+  opacity: 1;
+}
+.sig-insert.in .sig-slot {
+  box-shadow: inset 0 10px 18px rgba(0, 0, 0, 0.7), 0 0 40px -6px var(--era, var(--gold));
+}
+@media (max-width: 760px) {
+  .sig-sticky {
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    gap: 16px;
+  }
+  .sig-mat img {
+    max-height: 52svh;
+  }
+  .sig-stage {
+    height: 46svh;
+  }
+}
+.ch-cluster {
+  margin: 28px 0 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.ch-cluster a {
+  color: var(--gold);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.toc-item .num small {
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+  text-transform: none;
+}
+
+/* ---------- coda: legible over the cloth ---------- */
+.coda::after {
+  background: linear-gradient(180deg, rgba(10, 9, 16, 0.55) 0%, rgba(10, 9, 16, 0.75) 40%, rgba(10, 9, 16, 0.95) 85%);
+}
+.coda-term code {
+  white-space: nowrap;
+  display: inline-block;
+}
+.geo .pt .leader {
+  stroke: var(--ink);
+  stroke-opacity: 0.55;
+  stroke-width: 1;
+}
+.geo .pt .leader.hide {
+  display: none;
+}
+/* Labels belong to the scene: others are dots that grow and name themselves on hover. */
+.geo .pt.lit .lbl.hide,
+.geo .pt:not(.lit) .lbl.hide {
+  display: none;
+}
+.geo .pt:hover .lbl,
+.geo .pt:focus .lbl {
+  display: block !important;
+}
+.geo .pt:hover .dot,
+.geo .pt:focus .dot {
+  r: 7px;
+}
+.geo .route-label {
+  stroke-width: 7px;
+  stroke: color-mix(in srgb, var(--ocean, #0c0d18) 90%, transparent);
+}
+.l-node.broken .body {
+  fill: rgba(150, 150, 160, 0.35);
+  stroke: rgba(242, 233, 216, 0.6);
+  stroke-dasharray: 3 4;
+}
+.l-node.broken .st {
+  fill: #f0b49a;
+  font-weight: 600;
+}
+.l-node.broken .late {
+  stroke: #e07a50;
+}
+.l-ring {
+  max-height: calc(100svh - var(--nav-h) - 120px);
+  width: auto;
+  max-width: 100%;
+}
+.l-stage {
+  align-self: center;
+  max-height: calc(100svh - var(--nav-h) - 40px);
+}
+@media (max-width: 900px) {
+  .l-ring {
+    width: 100%;
+    max-height: none;
+  }
+  .l-wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .l-node .nm {
+    font-size: 17px;
+  }
+  .l-node .st {
+    font-size: 14px;
+  }
+  .l-node .no {
+    font-size: 13px;
+  }
+}
+
+/* ---------- Russian: hyphenate running text only ---------- */
+html:lang(ru) h1,
+html:lang(ru) h2,
+html:lang(ru) h3,
+html:lang(ru) h4,
+html:lang(ru) .deck,
+html:lang(ru) .lede,
+html:lang(ru) .cover-wow,
+html:lang(ru) blockquote,
+html:lang(ru) .sig-wow,
+html:lang(ru) .sig-cap,
+html:lang(ru) .wow,
+html:lang(ru) .teaser,
+html:lang(ru) .dc,
+html:lang(ru) .toc-item,
+html:lang(ru) .e-culture,
+html:lang(ru) .l-plain,
+html:lang(ru) .step .where,
+html:lang(ru) .kicker {
+  hyphens: manual;
+}
+html:lang(ru) .opener p.lede {
+  text-wrap: pretty;
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 720px) {
+  .cover-lang {
+    display: none;
+  }
+  .cover h1 {
+    font-size: clamp(64px, 19vw, 84px);
+    margin-top: -0.62em;
+    position: relative;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+  }
+  .cover-credit {
+    top: calc(48svh - 64px);
+  }
+  .atlas {
+    grid-template-rows: var(--nav-h) 62svh minmax(0, 1fr) 0;
+  }
+}
+@media (max-width: 400px) {
+  [data-theme-toggle] {
+    display: inline-grid !important;
+  }
+  .nav .nav-actions .btn {
+    width: 32px;
+  }
+  .nav [data-open-engine] {
+    display: inline-flex !important;
+  }
+  [data-theme-toggle] {
+    display: none !important;
+  }
+}
+
+/* ---------- cover: nothing moves in late ---------- */
+.nav-actions .btn svg {
+  width: 16px;
+  height: 16px;
+}
+.cover-wow {
+  min-height: 4.2em;
+}
+/* A fixed frame for the step picture: no layout shift when it loads. */
+.step-fig img {
+  height: 38svh;
+  width: 100%;
+  object-fit: scale-down;
+}
+.sig-insert .sig-cart {
+  transform: translateY(calc((1 - var(--p, 0)) * -55% + var(--p, 0) * 22%)) rotate(calc((1 - var(--p, 0)) * -6deg));
+}
+.sig-slot {
+  bottom: 8%;
+  height: 34%;
+}
+.sig-slot {
+  bottom: 12%;
+  height: 20%;
+}
+.sig-insert .sig-cart {
+  transform: translateY(calc((1 - var(--p, 0)) * -55% + var(--p, 0) * 40%)) rotate(calc((1 - var(--p, 0)) * -6deg));
+}
+@media (max-width: 900px) {
+  .l-node .nm {
+    font-size: 24px;
+  }
+  .l-node .st {
+    font-size: 19px;
+  }
+  .l-node .no {
+    font-size: 16px;
+  }
+  .l-centre {
+    font-size: 30px;
+  }
+}
+@media (max-width: 720px) {
+  .cover-credit {
+    top: calc(var(--nav-h) + 6px);
+  }
+}

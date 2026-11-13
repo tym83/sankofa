@@ -30,7 +30,7 @@
         if (l === 'ru') document.title = 'Sankofa — Вернись и забери';
       })();
     </script>
-    <link rel="preload" as="image" href="media/hero-v0.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="media/hero-v0.jpg" imagesrcset="media/w960/hero-v0.jpg 960w, media/hero-v0.jpg 1600w" imagesizes="100vw" fetchpriority="high" />
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
@@ -39,19 +39,19 @@
       <a class="wordmark" href="#" data-home>Sanko<span>f</span>a</a>
       <div class="progress" aria-label="Chapters"></div>
       <div class="nav-actions">
-        <button class="btn" type="button" data-open-descent data-descent=""><span class="label"><span data-l="en">Descend</span><span data-l="ru">Сквозь века</span></span></button>
-        <button class="btn" type="button" data-open-atlas><span class="label"><span data-l="en">Atlas</span><span data-l="ru">Атлас</span></span></button>
-        <button class="btn" type="button" data-open-listen data-listen=""><span class="label"><span data-l="en">Listen</span><span data-l="ru">Слушать</span></span></button>
-        <button class="btn" type="button" data-open-engine data-engine=""><span class="label"><span data-l="en">Engine room</span><span data-l="ru">Машинное отделение</span></span></button>
-        <button class="btn" type="button" data-open-book><span class="label"><span data-l="en">Your book</span><span data-l="ru">Ваша книга</span></span> <span class="count" data-path-count>0</span></button>
+        <button class="btn" type="button" data-open-descent data-descent=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v15m0 0-6-6m6 6 6-6M5 21h14"/></svg><span class="label"><span data-l="en">Descend</span><span data-l="ru">Сквозь века</span></span></button>
+        <button class="btn" type="button" data-open-atlas><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14"/></svg><span class="label"><span data-l="en">Atlas</span><span data-l="ru">Атлас</span></span></button>
+        <button class="btn" type="button" data-open-listen data-listen=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h2m3-5v10m4-14v18m4-12v6m4-9v12"/></svg><span class="label"><span data-l="en">Listen</span><span data-l="ru">Слушать</span></span></button>
+        <button class="btn" type="button" data-open-engine data-engine=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 4 4-4 4m6 0h8"/></svg><span class="label"><span data-l="en">Engine room</span><span data-l="ru">Машинное отделение</span></span></button>
+        <button class="btn" type="button" data-open-book><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Zm0 16a2 2 0 0 1 2-2h13v2"/></svg><span class="label"><span data-l="en">Your book</span><span data-l="ru">Ваша книга</span></span> <span class="count" data-path-count>0</span></button>
         <button class="btn lang-switch" type="button" data-lang-switch><span data-l="en" lang="ru" aria-label="Читать по-русски">RU</span><span data-l="ru" lang="en" aria-label="Read in English">EN</span></button>
-        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme"></button>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg></button>
       </div>
     </nav>
     <main id="story" tabindex="-1">
       <section class="cover" aria-labelledby="cover-title">
         <figure class="cover-art">
-          <img src="media/hero-v0.jpg" alt="" fetchpriority="high" decoding="async" />
+          <img src="media/hero-v0.jpg" srcset="media/w960/hero-v0.jpg 960w, media/hero-v0.jpg 1600w" sizes="100vw" width="1600" height="1141" alt="" fetchpriority="high" decoding="async" onerror="this.removeAttribute('srcset')" />
         </figure>
         <div class="cover-inner">
           <div class="cover-lang" role="group" aria-label="Language · Язык">
@@ -74,11 +74,11 @@
       <section class="opener" id="opener" aria-label="Introduction">
         <div data-l="en">
           <p class="lede">This museum tells seven centuries of Black culture in eight chapters: Africa before the slave trade, the Middle Passage, the revolutions, the voices, the diaspora, Harlem and Négritude, civil rights, Afrofuturism. Every page is a card: a few lines, one surprise, and a road further.</p>
-          <p>Cards come from three books. The Book of Voices <b data-book="voices">❝</b> is told by people in their own words. The Book of Archives <b data-book="archives">▤</b> is the ledger kept by those who traded and ruled. The Book of Heirs <b data-book="heirs">✶</b> is the art and argument of the diaspora. As in Pavić’s <i>Dictionary of the Khazars</i>, the books do not always agree, and the museum exists in two copies, male and female. You hold the <b data-edition>…</b>.</p>
+          <p>Cards come from three books. The Book of Voices <b data-book="voices">❝</b> is told by people in their own words. The Book of Archives <b data-book="archives">▤</b> is the ledger kept by those who traded and ruled. The Book of Heirs <b data-book="heirs">✶</b> is the art and argument of the diaspora. As in Pavić’s <i>Dictionary of the Khazars</i>, the books do not always agree. And as in that dictionary, the museum comes in two copies, male and female: a few moments are told by a man in one and by a woman in the other. You hold the <b data-edition>…</b>; another reader’s shared path can show you the other.</p>
         </div>
         <div data-l="ru">
           <p class="lede">Этот музей рассказывает о семи веках чёрной культуры в восьми главах: Африка до работорговли, Средний путь, революции, голоса, диаспора, Гарлем и негритюд, борьба за гражданские права, афрофутуризм. Каждая страница — карточка: несколько строк, одно удивление и дорога дальше.</p>
-          <p>Карточки взяты из трёх книг. Книга голосов <b data-book="voices">❝</b> рассказана самими людьми. Книга архивов <b data-book="archives">▤</b> — учётные записи тех, кто торговал и правил. Книга наследников <b data-book="heirs">✶</b> — искусство и споры диаспоры. Как в «Хазарском словаре» Павича, книги не всегда согласны друг с другом, а сам музей существует в двух экземплярах, мужском и женском. У вас в руках — <b data-edition>…</b>.</p>
+          <p>Карточки взяты из трёх книг. Книга голосов <b data-book="voices">❝</b> рассказана самими людьми. Книга архивов <b data-book="archives">▤</b> — учётные записи тех, кто торговал и правил. Книга наследников <b data-book="heirs">✶</b> — искусство и споры диаспоры. Как в «Хазарском словаре» Павича, книги не всегда согласны друг с другом. И, как у Павича, музей существует в двух экземплярах, мужском и женском: несколько эпизодов в одном рассказаны мужским голосом, в другом — женским. У вас в руках <b data-edition>…</b>; другой экземпляр откроет путь, которым поделится другой читатель.</p>
         </div>
         <aside class="engine-aside" aria-label="The engine room">
           <div class="kicker"><span data-l="en">The engine room</span><span data-l="ru">Машинное отделение</span></div>

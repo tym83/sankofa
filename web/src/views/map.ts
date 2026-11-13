@@ -77,6 +77,10 @@ interface Options {
   onHover?: (id: string | null, ev?: MouseEvent) => void;
   onLevel?: (level: number) => void;
   onMoveEnd?: () => void;
+  /** Screen rectangles labels must stay out of (the text column, say). */
+  avoid?: () => [number, number, number, number][];
+  /** At most this many labels at once. */
+  maxLabels?: () => number;
 }
 
 const topoCache = new Map<string, Promise<Topology>>();
@@ -307,6 +311,7 @@ export class GeoMap {
         const g = enter.append('g').attr('class', 'pt');
         g.append('circle').attr('class', 'halo').attr('r', 30).attr('fill', `url(#${this.idPrefix}-halo)`);
         g.append('circle').attr('class', 'dot');
+        g.append('line').attr('class', 'leader');
         g.append('text').attr('class', 'lbl').attr('x', 9).attr('y', 4);
         if (this.opts.interactive) {
           g.attr('tabindex', 0).attr('role', 'button');
@@ -452,10 +457,14 @@ export class GeoMap {
         const [x, y] = this.xy(d.label!.at[0], d.label!.at[1]);
         // Keep the label on screen: clamp by its measured width.
         const w = (this.labelWidths.get(d.id) ?? d.label!.text.length * 8) + 8;
-        const cx = Math.max(8, Math.min(this.w - w, x));
+        // Not under the text column either.
+        const left = Math.max(8, ...(this.opts.avoid?.() ?? []).filter((a) => y > a[1] - 30 && y < a[3]).map((a) => a[2] + 12));
+        const cx = Math.max(left, Math.min(this.w - w, x));
         return `translate(${cx.toFixed(1)},${y})`;
       })
       .style('opacity', (d) => Math.min(1, ((d.progress ?? 1) - 0.4) * 2));
+    // Titles above every arc, never crossed by one.
+    lab.raise();
     lab.select('tspan.main').attr('x', 0).text((d) => d.label!.text);
     lab.select('tspan.sub').attr('x', 0).text((d) => d.label!.sub ?? '');
     lab.each((d, i, n) => {
@@ -486,33 +495,79 @@ export class GeoMap {
   }
 
   /** Greedy label placement: important labels first, drop the ones that collide. */
+  /**
+   * Label placement: important labels first; each tries right, left, above and
+   * below its dot, then (if it must be shown) a spot further out with a leader
+   * line. Labels never overlap, never leave the frame and never sit under the
+   * text column.
+   */
   private placeLabels(): void {
-    const boxes: [number, number, number, number][] = [];
-    const order = [...this.points].sort((a, b) => Number(!!b.focus) - Number(!!a.focus) || Number(!!b.lit) - Number(!!a.lit) || b.priority - a.priority);
-    const nodes = new Map<string, SVGTextElement>();
-    this.gPoints.selectAll<SVGGElement, MapPoint>('g.pt').each(function (d) {
-      nodes.set(d.id, this.querySelector('text.lbl') as SVGTextElement);
+    const boxes: [number, number, number, number][] = [...(this.opts.avoid?.() ?? [])];
+    // Movement titles are placed already; point labels keep clear of them.
+    const own = this.svg.node()!.getBoundingClientRect();
+    this.gRoutes.selectAll<SVGTextElement, unknown>('text.route-label').each(function () {
+      const r = this.getBoundingClientRect();
+      if (r.width) boxes.push([r.left - own.left - 4, r.top - own.top - 2, r.right - own.left + 4, r.bottom - own.top + 2]);
     });
+    const budget = this.opts.maxLabels?.() ?? Infinity;
+    let shown = 0;
+    const order = [...this.points].sort((a, b) => Number(!!b.focus) - Number(!!a.focus) || Number(!!b.lit) - Number(!!a.lit) || b.priority - a.priority);
+    const nodes = new Map<string, SVGGElement>();
+    this.gPoints.selectAll<SVGGElement, MapPoint>('g.pt').each(function (d) {
+      nodes.set(d.id, this);
+    });
+    const free = (b: [number, number, number, number]) =>
+      b[0] >= 4 && b[2] <= this.w - 4 && b[1] >= 4 && b[3] <= this.h - 4 && !boxes.some((o) => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
     for (const p of order) {
-      const node = nodes.get(p.id);
-      if (!node) continue;
-      if (p.minor || p.out) {
+      const g = nodes.get(p.id);
+      if (!g) continue;
+      const node = g.querySelector('text.lbl') as SVGTextElement;
+      const leader = g.querySelector('line.leader') as SVGLineElement;
+      leader.setAttribute('x2', '0');
+      leader.setAttribute('y2', '0');
+      leader.classList.add('hide');
+      if (p.minor || p.out || shown >= budget || !p.label) {
         node.classList.add('hide');
         continue;
       }
       const [x, y] = this.xy(p.lon, p.lat);
-      const w = p.label.length * (p.title ? 7.4 : 6.6) + 12;
-      // Labels stay inside the frame: near the right edge they go to the left.
-      const left = x + 6 + w > this.w - 8 && x - 6 - w > 8;
-      node.setAttribute('x', left ? '-9' : '9');
-      node.setAttribute('text-anchor', left ? 'end' : 'start');
-      const box: [number, number, number, number] = left ? [x - 6 - w, y - 10, x - 6, y + 8] : [x + 6, y - 10, x + 6 + w, y + 8];
-      const inside = box[0] >= 0 && box[2] <= this.w && box[1] < this.h && box[3] > 0;
-      const hit = boxes.some((b) => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1]);
-      if (inside && (!hit || p.lit || p.focus)) {
+      // Long names are shortened on narrow maps rather than run off the edge.
+      const max = this.w < 520 ? 24 : 44;
+      const text = p.label.length > max ? p.label.slice(0, max - 1).trimEnd() + '…' : p.label;
+      if (node.textContent !== text) node.textContent = text;
+      node.classList.remove('hide');
+      const measured = (node as SVGTextContentElement).getComputedTextLength?.() || 0;
+      const w = (measured || text.length * (p.title ? 7.4 : 6.6)) + 8;
+      const hgt = 16;
+      // [dx, dy, anchor] for the text, relative to the dot.
+      const spots: [number, number, 'start' | 'end' | 'middle'][] = [
+        [9, 4, 'start'],
+        [-9, 4, 'end'],
+        [0, -12, 'middle'],
+        [0, 20, 'middle'],
+      ];
+      if (p.lit || p.focus) spots.push([34, -26, 'start'], [-34, -26, 'end'], [34, 30, 'start'], [-34, 30, 'end'], [0, -40, 'middle'], [0, 46, 'middle']);
+      let placed = false;
+      for (const [dx, dy, anchor] of spots) {
+        const x0 = anchor === 'start' ? x + dx : anchor === 'end' ? x + dx - w : x + dx - w / 2;
+        const box: [number, number, number, number] = [x0, y + dy - 12, x0 + w, y + dy - 12 + hgt];
+        if (!free(box)) continue;
         boxes.push(box);
+        node.setAttribute('x', String(dx));
+        node.setAttribute('y', String(dy));
+        node.setAttribute('text-anchor', anchor);
         node.classList.remove('hide');
-      } else node.classList.add('hide');
+        if (Math.abs(dx) > 20 || Math.abs(dy) > 24) {
+          leader.setAttribute('x2', String(dx * 0.82));
+          leader.setAttribute('y2', String(dy - 4));
+          leader.classList.remove('hide');
+        }
+        shown++;
+        placed = true;
+        break;
+      }
+      if (!placed) node.classList.add('hide');
+      else boxes.push([x - 6, y - 6, x + 6, y + 6]);
     }
   }
 

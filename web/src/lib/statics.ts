@@ -6,6 +6,9 @@ import { MOVEMENTS, REGIONS } from './movements';
 import { LEVEL_NAMES } from '../views/map';
 import { t, type Lang } from './i18n';
 
+/** Russian chapter titles that read as unfinished on their own. */
+export const RU_TITLE_FIX: Record<string, string> = { 'Африка до': 'Африка до работорговли' };
+
 export function localizeStatics(l: Lang): void {
   if (l === 'en') return;
   for (const e of ERAS) e.label = t(e.label);

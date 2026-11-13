@@ -10,7 +10,7 @@ import { ERAS, type Card } from '../lib/types';
 import { GeoMap, LEVEL_K, LEVEL_NAMES } from './map';
 import { Timeline } from './timeline';
 import { showTip, hideTip } from './tip';
-import { count, pick, t } from '../lib/i18n';
+import { copyCount, pick, t } from '../lib/i18n';
 
 export class Atlas {
   readonly el: HTMLElement;
@@ -90,6 +90,8 @@ export class Atlas {
     this.map = new GeoMap(this.stage, {
       interactive: true,
       detail: 'high',
+      maxLabels: () => (window.innerWidth < 720 ? 5 : 18),
+      avoid: () => [[0, 0, window.innerWidth < 720 ? 210 : 250, window.innerWidth < 720 ? 52 : 330]],
       onPoint: (id) => this.focus(id),
       onRegion: (r) => this.map!.flyTo(r.lon, r.lat, LEVEL_K[2], 1200),
       onLevel: (lvl) => {
@@ -162,7 +164,11 @@ export class Atlas {
       if (place && !focusCard) this.map!.flyTo(place.lon, place.lat, k, dur);
       else if (focusCard) this.map!.flyTo(focusCard.places[0].lon, focusCard.places[0].lat, k, dur);
       else if (p.path?.length) this.map!.fit(this.pathCards().map((c) => [c.places[0].lon, c.places[0].lat]), LEVEL_K[3], dur);
-      else this.map!.flyTo(-28, 18, k, dur);
+      else if (this.level >= 2) {
+        // Open where there is something to see, not on the open sea.
+        const c = this.nearestContent() ?? [-28, 18];
+        this.map!.flyTo(c[0], c[1], k, dur);
+      } else this.map!.flyTo(-28, 18, k, dur);
     });
   }
 
@@ -205,7 +211,7 @@ export class Atlas {
 
   private setLevel(lvl: number): void {
     this.level = Math.max(1, Math.min(5, lvl));
-    const target = this.level >= 3 ? this.nearestContent() : undefined;
+    const target = this.level >= 2 ? this.nearestContent() : undefined;
     if (target) this.map?.flyTo(target[0], target[1], LEVEL_K[this.level - 1], 1100);
     else this.map?.setLevel(this.level);
     this.draw(false);
@@ -267,7 +273,7 @@ export class Atlas {
       b.setAttribute('aria-pressed', String(i + 1 === this.level));
     });
     const when = this.p.from ? formatYears(this.p.to ? [this.p.from, this.p.to] : [this.p.from]) : t('1300 – today');
-    this.when.textContent = `${when} · ${LEVEL_NAMES[this.level - 1]} · ${count(layers.points.filter((p) => !p.out).length, 'card')}`;
+    this.when.textContent = `${when} · ${LEVEL_NAMES[this.level - 1]} · ${pick({ en: `${layers.points.filter((p) => !p.out).length} on the map`, ru: `на карте: ${layers.points.filter((p) => !p.out).length}` })} · ${copyCount(readerCards(this.app.set, this.app.edition).length, this.app.set.all().length)}`;
     this.renderPathbar(path);
     this.renderList(layers.points.filter((p) => !p.out).map((p) => this.app.set.get(p.id)).filter((c): c is Card => !!c));
   }
