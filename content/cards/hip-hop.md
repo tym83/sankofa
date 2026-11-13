@@ -56,4 +56,4 @@ Grandmaster Flash and Afrika Bambaataa built on it. The record that took rap
 to a mass market, "Rapper's Delight" (1979), rode Chic's "Good Times" bass
 line and ended in shared writing credits.
 
-Roots: [[reggae|Reggae]], [[funk|funk]]; heir: the [[amen-break|\"Amen, Brother\" and the Amen break]].
+Roots: [[reggae|reggae]] and [[funk|funk]]; heir: [[amen-break|the Amen break from "Amen, Brother"]].

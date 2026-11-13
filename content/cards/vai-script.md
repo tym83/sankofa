@@ -24,4 +24,4 @@ The Vai script is a syllabary: each sign stands for a whole syllable rather than
 
 In the early 1830s Mọmọlu Duwalu Bukẹlẹ of Jondu, in western Liberia, gave the Vai language a script of its own. He later said the idea came to him in a dream, in which a messenger showed him a book and taught him to write Vai words in it; the missionary Sigismund Koelle took the story down from him and published it in 1849. The script was put to work at once. The Vai wrote their own tongue in their own signs.
 
-This is a writing system whose inventor we can name, and it belongs to a long line of African scripts made from within. Compare [[liberia|Liberia]], the scripts of [[bamum|the Bamum script]], [[nko|N'Ko]] and [[adlam|Adlam]], and the older signs of [[nsibidi|Nsibidi]].
+This is a writing system whose inventor we can name, and it belongs to a long line of African scripts made from within. Compare [[liberia|Liberia]], the [[bamum|Bamum]], [[nko|N'Ko]] and [[adlam|Adlam]] scripts, and the older signs of [[nsibidi|Nsibidi]].

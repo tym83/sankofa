@@ -32,5 +32,5 @@ was organised by Abdel Kader Haidara, keeper of the Mamma Haidara library
 and head of SAVAMA-DCI. National Geographic counts about 350,000 manuscripts
 rescued, though the totals are contested. Before fleeing in early 2013 the
 militants destroyed manuscripts at the Ahmed Baba Institute. Compare
-[[nsibidi|Nsibidi]] and [[adinkra|Adinkra and Sankofa]], other African ways of keeping knowledge, and
-the Mali of [[mansa-musa|Mansa Musa]].
+[[nsibidi|Nsibidi]] and [[adinkra|adinkra signs]], other African ways of
+keeping knowledge, and the Mali of [[mansa-musa|Mansa Musa]].

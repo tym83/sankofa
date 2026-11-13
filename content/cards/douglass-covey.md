@@ -23,9 +23,11 @@ media:
   - {type: "image", file: "douglass-covey.jpg", caption: "Frontispiece portrait of Frederick Douglass in the first edition of his Narrative, Boston, 1845", credit: "Narrative of the Life of Frederick Douglass (1845), via Documenting the American South", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Frontispiece_of_Frederick_Douglass_in_Narrative_of_the_Life_of_Frederick_Douglass,_an_American_Slave_(1845).jpg"}
 ---
 Frederick Douglass was a boy of about sixteen when he fought back, and
-Edward Covey never laid a hand on him again. Covey was a farmer near
-St. Michael's, Maryland, known as a "negro-breaker". Douglass was sent to him in 1834 (his own
-Narrative gives 1833). The fight changed everything inside him. It was, he wrote, "the turning-point in my career as a slave".
-The body was still owned; the will was not. In 1838 he escaped north, and
-his pen went on to fight the whole system. Compare [[jacobs-garret|Harriet Jacobs in the garret]],
-[[robert-smalls|Robert Smalls]] and [[sojourner-truth|Sojourner Truth and \"Ain't I a Woman?\"]].
+Edward Covey never laid a hand on him again. Covey was a farmer near St.
+Michael's, Maryland, known as a "negro-breaker". Douglass was sent to him in
+1834 (his own Narrative gives 1833). The fight changed everything inside
+him. It was, he wrote, "the turning-point in my career as a slave". The body
+was still owned; the will was not. In 1838 he escaped north, and his pen
+went on to fight the whole system. Compare [[jacobs-garret|Harriet Jacobs in
+her garret]], [[robert-smalls|Robert Smalls]] and
+[[sojourner-truth|Sojourner Truth]].

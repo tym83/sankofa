@@ -52,6 +52,7 @@ it went to space: in 1976 George Clinton's Parliament-Funkadelic landed a
 Mothership on stage, with Black "afronauts" and Afrofuturism in the spirit of
 [[sun-ra|Sun Ra]]. A replica now stands in the Smithsonian.
 
-Its roots run through [[gospel|gospel]], [[rhythm-and-blues|rhythm and blues]] and [[jazz|jazz]]. Funk fed
-[[hip-hop|hip-hop]], whose producers built new songs on its samples, and
-[[afrobeat|Afrobeat]]; compare the breakbeat of the [[amen-break|\"Amen, Brother\" and the Amen break]].
+Its roots run through [[gospel|gospel]], [[rhythm-and-blues|rhythm and
+blues]] and [[jazz|jazz]]. Funk fed [[hip-hop|hip-hop]], whose producers
+built new songs on its samples, and [[afrobeat|Afrobeat]]; compare the
+breakbeat of [[amen-break|"Amen, Brother", the Amen break]].

@@ -28,8 +28,9 @@ readers. In 2001 Henry Louis Gates Jr. bought the manuscript at Swann
 Galleries in New York for $8,500. It came from the collection of Dorothy
 Porter Wesley, and its title page named the author as "Hannah Crafts, a
 fugitive slave recently escaped from North Carolina". Published in 2002 as
-The Bondwoman's Narrative, it became a bestseller. Who was Crafts? In
-2013, after a decade of research, Gregg Hecimovich named Hannah Bond,
-enslaved by John Hill Wheeler. The identification is widely accepted,
-though still argued. Compare [[jacobs-garret|Harriet Jacobs in the garret]], [[phillis-wheatley|Phillis Wheatley]] and
-[[wpa-narratives|Born in Slavery, the WPA narratives]].
+The Bondwoman's Narrative, it became a bestseller. Who was Crafts? In 2013,
+after a decade of research, Gregg Hecimovich named Hannah Bond, enslaved by
+John Hill Wheeler. The identification is widely accepted, though still
+argued. Compare [[jacobs-garret|Harriet Jacobs in the garret]],
+[[phillis-wheatley|Phillis Wheatley]] and [[wpa-narratives|the WPA slave
+narratives]].

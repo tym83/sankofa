@@ -32,5 +32,6 @@ Futa Toro in West Africa, landed in Charleston as a slave. He fled a cruel
 owner and was jailed in Fayetteville, where he wrote in Arabic on the walls
 of his cell. He lived with the Owen family until his death, in 1863 or 1864
 by different records. His manuscript is the only known slave autobiography
-written in Arabic in America. Compare the [[timbuktu-manuscripts|Timbuktu manuscripts]], and
-other lives told by their own hand: [[equiano|Olaudah Equiano]] and [[douglass-covey|Frederick Douglass fights Edward Covey]].
+written in Arabic in America. Compare the [[timbuktu-manuscripts|Timbuktu
+manuscripts]], and other lives told by their own hand: [[equiano|Olaudah
+Equiano]] and [[douglass-covey|Frederick Douglass]].

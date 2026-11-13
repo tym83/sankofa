@@ -25,12 +25,12 @@ sources:
 ---
 The first station in Haiti to deliver news in Creole paid dearly for it.
 Around 1970, or in the 1960s by another account, the agronomist Jean
-Dominique bought a Port-au-Prince station, and with Michèle Montas, his
-wife and co-anchor, broadcast news and commentary in Creole. On 28 November
-1980 the Duvalier regime raided it and the couple went into exile. On 3
-April 2000 Dominique was shot dead outside the station. Threats closed it
-by 2003 (2002 in one account). Its tapes, reaching back to 1957 by one
-count, are open online at Duke. For the country it reported on, start with
-the [[haitian-revolution|Haitian Revolution]]; for another Caribbean voice in exile,
-[[claudia-jones|Claudia Jones]]; for a paper that spoke for its own people, the
-[[chicago-defender|the Chicago Defender]].
+Dominique bought a Port-au-Prince station, and with Michèle Montas, his wife
+and co-anchor, broadcast news and commentary in Creole. On 28 November 1980
+the Duvalier regime raided it and the couple went into exile. On 3 April
+2000 Dominique was shot dead outside the station. Threats closed it by 2003
+(2002 in one account). Its tapes, reaching back to 1957 by one count, are
+open online at Duke. For the country it reported on, start with the
+[[haitian-revolution|Haitian Revolution]]; for another Caribbean voice in
+exile, [[claudia-jones|Claudia Jones]]; for a paper that spoke for its own
+people, [[chicago-defender|the Chicago Defender]].

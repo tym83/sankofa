@@ -29,14 +29,15 @@ sources:
 media:
   - {"type": "image", "file": "emmett-till.jpg", "caption": "Emmett Till's last home, 6427 S. St. Lawrence Avenue, Chicago, 3 September 2016", "credit": "Charles Orlowek; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Emmett_Till%27s_Chicago_home_6427_S._St._Lawrence_Avenue.jpg"}
 ---
-Mamie Till-Mobley would not let the world look away. Emmett, fourteen,
-had come from Chicago to visit family in the Mississippi Delta.
-On 24 August 1955 he stopped at Bryant's store in Money; accounts of
-what happened there differ. Four nights later Roy Bryant and J. W. Milam took him from his
+Mamie Till-Mobley would not let the world look away. Emmett, fourteen, had
+come from Chicago to visit family in the Mississippi Delta. On 24 August
+1955 he stopped at Bryant's store in Money; accounts of what happened there
+differ. Four nights later Roy Bryant and J. W. Milam took him from his
 great-uncle's house; his body was found in the Tallahatchie River. In
 Chicago she held an open-casket funeral at Roberts Temple and let Jet
 photographer David Jackson take pictures; Jet ran them in September. An
-all-white jury acquitted both men in about an hour. In January 1956, safe from
-retrial, they sold their confession to Look. Carolyn Bryant's
-reported recantation is contested. In 2022 a law in his name made lynching a
-federal hate crime. Compare [[ida-b-wells|Ida B. Wells]], [[chicago-defender|the Chicago Defender]].
+all-white jury acquitted both men in about an hour. In January 1956, safe
+from retrial, they sold their confession to Look. Carolyn Bryant's reported
+recantation is contested. In 2022 a law in his name made lynching a federal
+hate crime. Compare [[ida-b-wells|Ida B. Wells]] and [[chicago-defender|the
+Chicago Defender]].

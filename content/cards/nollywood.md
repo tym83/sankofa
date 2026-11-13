@@ -27,9 +27,10 @@ media:
 ---
 The film remembered as Nollywood's first blockbuster began, the story goes,
 with VHS tapes that would not sell. Their owner, Kenneth Nnebue, put an
-original story on them, written with Okechukwu Ogunjiofor. Living in
-Bondage (1992) was shot in Igbo for 150,000 naira and, by different counts,
-sold 100,000 copies in weeks or over a million. Nnebue had already made
+original story on them, written with Okechukwu Ogunjiofor. Living in Bondage
+(1992) was shot in Igbo for 150,000 naira and, by different counts, sold
+100,000 copies in weeks or over a million. Nnebue had already made
 Yoruba-language films; the Igbo one is the one remembered. Both the tapes
-story and the sales figures are contested. Compare [[achebe|Chinua Achebe]] and
-[[tutuola|Amos Tutuola, The Palm-Wine Drinkard]] in print, and the Lagos of [[afrobeat|Afrobeat]].
+story and the sales figures are contested. Compare [[achebe|Chinua Achebe]]
+and [[tutuola|Amos Tutuola]] in print, and the Lagos of
+[[afrobeat|Afrobeat]].

@@ -25,9 +25,10 @@ sources:
 One sentence of Virginia law made slavery hereditary through the mother.
 Elizabeth Key was the daughter of an English planter, Thomas Key, and an
 enslaved African woman. Baptised, and held far beyond the nine years her
-father had set, she won her freedom in 1656; English common law said a
-child followed the father. In December 1662 the General Assembly enacted,
-probably at least in part in answer to her case, that children "shalbe held
-bond or free only according to the condition of the mother". In 1667 it
-added that baptism did not free an enslaved person. Compare
-[[anthony-johnson|Anthony Johnson]], [[ashleys-sack|Ashley's Sack]] and [[sojourner-truth|Sojourner Truth and \"Ain't I a Woman?\"]].
+father had set, she won her freedom in 1656; English common law said a child
+followed the father. In December 1662 the General Assembly enacted, probably
+at least in part in answer to her case, that children "shalbe held bond or
+free only according to the condition of the mother". In 1667 it added that
+baptism did not free an enslaved person. Compare [[anthony-johnson|Anthony
+Johnson]], [[ashleys-sack|Ashley's Sack]] and [[sojourner-truth|Sojourner
+Truth]].

@@ -26,8 +26,10 @@ media:
 A Boston clothes dealer wrote a call to resist slavery and asked sailors
 heading south to carry copies with them. David Walker was born in
 Wilmington, North Carolina, to a free mother, and ran a clothing business on
-Brattle Street in Boston. In 1829 he published his *Appeal ... to the
-Coloured Citizens of the World*, urging the enslaved to resist. According to
+Brattle Street in Boston. In 1829 he published his Appeal ... to the
+Coloured Citizens of the World, urging the enslaved to resist. According to
 Henry Highland Garnet, Georgians put a price on Walker's head; the sums
 reported differ. He died in Boston in 1830. Compare the free press of
-[[freedoms-journal|Freedom's Journal]], the [[haitian-revolution|Haitian Revolution]] and [[douglass-covey|Frederick Douglass fights Edward Covey]].
+[[freedoms-journal|Freedom's Journal]], the [[haitian-revolution|Haitian
+Revolution]] and [[douglass-covey|Frederick Douglass's fight with Edward
+Covey]].

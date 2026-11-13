@@ -30,8 +30,9 @@ media:
 Octavia E. Butler reached the New York Times bestseller list in 2020,
 fourteen years after her death in 2006, with Parable of the Sower. She grew
 up in Pasadena, raised by a mother who worked as a maid. Kindred (1979)
-brought slavery into science fiction through time travel. In 1995 she
-became the first science fiction writer to receive a MacArthur Fellowship.
-Long before the list caught up with her, she wrote affirmations to herself
-predicting that her books would be bestsellers. Read her beside [[sun-ra|Sun Ra]]
-and [[hurston|Zora Neale Hurston]], and Kindred beside [[jacobs-garret|Harriet Jacobs in the garret]].
+brought slavery into science fiction through time travel. In 1995 she became
+the first science fiction writer to receive a MacArthur Fellowship. Long
+before the list caught up with her, she wrote affirmations to herself
+predicting that her books would be bestsellers. Read her beside [[sun-ra|Sun
+Ra]] and [[hurston|Zora Neale Hurston]], and Kindred beside
+[[jacobs-garret|Harriet Jacobs's years in the garret]].

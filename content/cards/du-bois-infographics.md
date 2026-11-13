@@ -28,7 +28,9 @@ fair with data: hand-drawn charts of Black America, made for Paris in 1900.
 The Exposition Universelle had a Negro Exhibit in the American section, put
 together by Thomas J. Calloway, Du Bois, Booker T. Washington and Daniel
 Murray of the Library of Congress. Its job was to show the economic and
-social progress of African Americans since emancipation. They answered with charts, with captions in English and French so that Europe
-could read them. The originals were drawn by hand, and they survive in the
-Library of Congress's Daniel Murray collection. Compare [[hurston|Zora Neale Hurston]],
-[[freedoms-journal|Freedom's Journal]] and [[wpa-narratives|Born in Slavery, the WPA narratives]].
+social progress of African Americans since emancipation. They answered with
+charts, with captions in English and French so that Europe could read them.
+The originals were drawn by hand, and they survive in the Library of
+Congress's Daniel Murray collection. Compare [[hurston|Zora Neale Hurston]],
+[[freedoms-journal|Freedom's Journal]] and [[wpa-narratives|the WPA slave
+narratives]].

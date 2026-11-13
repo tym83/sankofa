@@ -28,11 +28,12 @@ media:
 ---
 The first name on the list of people who paid in advance for this book was
 the Prince of Wales. In 1789 Olaudah Equiano, also called Gustavus Vassa,
-published his life story in London, financed by subscribers. *The
-Interesting Narrative* became a bestseller and ran to nine editions by
-1794. It tells of a childhood in Igbo country, kidnapping, the Middle
-Passage, and the day in 1766 when he bought his own freedom for £40. Then
-the twist: Vincent Carretta found a 1759 baptism record and a 1773 Navy
-muster roll that both give his birthplace as Carolina. Whether the African
-chapters are memory or gathered testimony is still contested. Compare
-[[granville-sharp|Granville Sharp]], [[zong|the Zong massacre]] and [[phillis-wheatley|Phillis Wheatley]].
+published his life story in London, financed by subscribers. The Interesting
+Narrative became a bestseller and ran to nine editions by 1794. It tells of
+a childhood in Igbo country, kidnapping, the Middle Passage, and the day in
+1766 when he bought his own freedom for £40. Then the twist: Vincent
+Carretta found a 1759 baptism record and a 1773 Navy muster roll that both
+give his birthplace as Carolina. Whether the African chapters are memory or
+gathered testimony is still contested. Compare [[granville-sharp|Granville
+Sharp]], [[zong|the Zong massacre]] and [[phillis-wheatley|Phillis
+Wheatley]].

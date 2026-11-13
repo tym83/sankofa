@@ -30,10 +30,10 @@ media:
 For decades a runaway community in the hills of northeast Brazil beat back
 Dutch and Portuguese expeditions. From around 1600, people who fled the
 sugar plantations of Pernambuco built a network of villages centred on the
-Serra da Barriga, in present-day Alagoas. Ganga Zumba led Palmares, and
-then Zumbi. In 1694 Domingos Jorge Velho's force captured Macaco. Zumbi
-escaped, but was killed on 20 November 1695 and his head sent to Recife.
-Brazil's Black movement made that date its own, and law 14.759 of December
-2023 made it a national holiday, the Dia de Zumbi e da Consciência Negra.
-Compare [[nanny-of-the-maroons|Jamaica's maroons]], [[capoeira|Capoeira]] and
+Serra da Barriga, in present-day Alagoas. Ganga Zumba led Palmares, and then
+Zumbi. In 1694 Domingos Jorge Velho's force captured Macaco. Zumbi escaped,
+but was killed on 20 November 1695 and his head sent to Recife. Brazil's
+Black movement made that date its own, and law 14.759 of December 2023 made
+it a national holiday, the Dia de Zumbi e da Consciência Negra. Compare
+[[nanny-of-the-maroons|Jamaica's maroons]], [[capoeira|capoeira]] and
 [[haitian-revolution|the Haitian Revolution]].

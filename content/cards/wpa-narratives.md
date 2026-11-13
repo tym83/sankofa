@@ -27,9 +27,9 @@ The answers people born into slavery gave in the 1930s changed with the
 colour of the person asking. Between 1936 and 1938 the Federal Writers'
 Project, a New Deal program, sent writers to interview them, and the Library
 of Congress now holds more than 2,300 of their first-person accounts, online
-as Born in Slavery. Read them with care, and with wonder that they exist
-at all. Most interviewers were white, some from former slaveholding
-families, and they were told to capture "dialect", which often came out as
-stereotype. Behind that filter, people who had lived through slavery speak
-in the first person. Compare [[spirituals|spirituals]], [[work-songs|work songs and field hollers]] and
-[[jacobs-garret|Harriet Jacobs in the garret]].
+as Born in Slavery. Read them with care, and with wonder that they exist at
+all. Most interviewers were white, some from former slaveholding families,
+and they were told to capture "dialect", which often came out as stereotype.
+Behind that filter, people who had lived through slavery speak in the first
+person. Compare [[spirituals|spirituals]], [[work-songs|work songs, field
+hollers]] and [[jacobs-garret|Harriet Jacobs in her garret]].

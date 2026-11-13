@@ -33,7 +33,8 @@ the Ohio is contested. The quilt code, signals in quilt patterns hung out
 for fugitives, comes from one family's oral account in Tobin and Dobard's
 book Hidden in Plain View. Historian Giles R. Wright and quilt historians
 found no mention of it in 19th-century slave narratives or the 1930s
-interviews of [[wpa-narratives|Born in Slavery, the WPA narratives]]. The real network left real records:
-William Still of the Philadelphia Vigilance Committee logged hundreds of
-fugitives and published them in 1872. Compare [[spirituals|spirituals]],
-[[douglass-covey|Frederick Douglass]] and the [[combahee-raid|Combahee River Raid]].
+interviews collected in [[wpa-narratives|Born in Slavery]]. The real network
+left real records: William Still of the Philadelphia Vigilance Committee
+logged hundreds of fugitives and published them in 1872. Compare
+[[spirituals|spirituals]], [[douglass-covey|Frederick Douglass]] and the
+[[combahee-raid|Combahee River Raid]].

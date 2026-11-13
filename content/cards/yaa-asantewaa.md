@@ -31,5 +31,5 @@ king Prempeh had been exiled by the British. There he asked the chiefs to
 hand over the Stool; later accounts say he demanded to sit on it, a version
 his wife's memoir disputes. Yaa Asantewaa, Queen Mother of Ejisu, led the
 rising that followed. She was exiled to the Seychelles and died there in
-1921. Compare [[nanny-of-the-maroons|Nanny of the Maroons]], [[nzinga|Queen Njinga of Ndongo and Matamba]] and the [[adinkra|Adinkra and Sankofa]] signs
-of Asante.
+1921. Compare [[nanny-of-the-maroons|Nanny of the Maroons]], [[nzinga|Queen
+Njinga of Ndongo and Matamba]] and the [[adinkra|adinkra]] signs of Asante.
