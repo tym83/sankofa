@@ -5172,3 +5172,11 @@ a.r-artist:hover {
     align-items: center;
   }
 }
+@media (max-width: 720px) {
+  .r-line {
+    min-height: 40px;
+  }
+  .r-claim {
+    padding-top: 6px;
+  }
+}
