@@ -28,9 +28,9 @@ describe('links', () => {
   it('splits text into runs and links like pkg/card', () => {
     expect(segments('Told by [[equiano|Olaudah Equiano]] and [[zong]].')).toEqual([
       { text: 'Told by ' },
-      { target: 'equiano', text: 'Olaudah Equiano' },
+      { target: 'equiano', text: 'Olaudah Equiano', explicit: true },
       { text: ' and ' },
-      { target: 'zong', text: 'zong' },
+      { target: 'zong', text: 'zong', explicit: false },
       { text: '.' },
     ]);
     expect(links('[[a]] [[b-2|B]] [[Not-valid]]')).toEqual(['a', 'b-2']);

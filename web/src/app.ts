@@ -54,8 +54,9 @@ export function richText(app: App, text: string): DocumentFragment {
           'data-card': s.target,
           title: `${target.title}: ${target.wow}`,
         },
-        // A bare [[id]] shows the title of the card it names.
-        s.text === s.target ? (app.set.get(s.target)?.title ?? s.text) : s.text,
+        // A bare [[id]] shows the title of the card it names; an explicit
+        // [[id|text]] always shows its own words, even when they equal the id.
+        s.explicit ? s.text : (app.set.get(s.target)?.title ?? s.text),
       ),
     );
   }
