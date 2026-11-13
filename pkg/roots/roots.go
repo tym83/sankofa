@@ -50,6 +50,7 @@ type Artist struct {
 	Aliases []string   `json:"aliases,omitempty"` // for search: other spellings, Cyrillic
 	Years   []int      `json:"years"`
 	Place   card.Place `json:"place"`
+	PlaceRU string     `json:"placeRu,omitempty"`
 	Genre   string     `json:"genre"`
 	GenreRU string     `json:"genreRu,omitempty"`
 	// Story tells in two or three sentences how the artist grew out of the
