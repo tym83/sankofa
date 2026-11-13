@@ -1,0 +1,20 @@
+id: "james-brown"
+name: "James Brown"
+nameRu: "Джеймс Браун"
+aliases: ["джеймс браун"]
+years: [1933, 2006]
+place: {"name": "Barnwell, South Carolina", "lat": 33.2449, "lon": -81.3587}
+genre: "Soul and funk"
+genreRu: "соул и фанк"
+story: "Gospel supplied the vocal intensity that James Brown carried into rhythm and blues. That gospel voice also powered his funk."
+storyRu: "Госпел дал Джеймсу Брауну вокальный накал, который он перенёс в ритм-н-блюз. Тот же голос, воспитанный госпелом, зазвучал и в его фанке."
+links:
+  - to: "card:gospel"
+    kind: "influence"
+    claim: "James Brown carried gospel vocal intensity into his rhythm-and-blues and funk."
+    claimRu: "Джеймс Браун перенёс накал госпел-вокала в свой ритм-н-блюз и фанк."
+    sources:
+      - title: "Rock and Roll Hall of Fame: James Brown"
+        url: "https://library.rockhall.com/james_brown"
+      - title: "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)"
+        url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"

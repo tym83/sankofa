@@ -1,12 +1,24 @@
-id: kraftwerk
+id: "kraftwerk"
 name: "Kraftwerk"
 aliases: ["крафтверк", "крафтверкк"]
 years: [1970]
 place: {"name": "Düsseldorf", "lat": 51.2277, "lon": 6.7735}
 genre: "Electronic music"
 genreRu: "электронная музыка"
+story: "James Brown’s funk was one of Kraftwerk’s influences. Their electronic music has a documented connection to his rhythms."
+storyRu: "Фанк Джеймса Брауна был одним из источников влияния на Kraftwerk. Их электронная музыка связана с его ритмами."
 links:
-  - to: card:funk
+  - to: "card:funk"
+    kind: "influence"
+    claim: "James Brown's funk was an influence on Kraftwerk."
+    claimRu: "На Kraftwerk повлиял фанк Джеймса Брауна."
+    sources:
+      - title: "The Quietus: Karl Bartos Interviewed — Kraftwerk and the Birth of the Modern"
+        url: "https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/"
+      - title: "Croatian Encyclopedia: Kraftwerk"
+        url: "https://enciklopedija.hr/clanak/kraftwerk"
+  - to: "root:james-brown"
+    kind: "influence"
     claim: "James Brown's funk was an influence on Kraftwerk."
     claimRu: "На Kraftwerk повлиял фанк Джеймса Брауна."
     sources:

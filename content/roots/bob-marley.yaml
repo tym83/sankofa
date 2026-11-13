@@ -1,0 +1,29 @@
+id: "bob-marley"
+name: "Bob Marley"
+nameRu: "Боб Марли"
+aliases: ["боб марли", "роберт неста марли"]
+years: [1945, 1981]
+place: {"name": "Nine Mile, Jamaica", "lat": 18.298, "lon": -77.278}
+genre: "Reggae"
+genreRu: "регги"
+story: "Lee “Scratch” Perry paired the Wailers with Aston and Carlton Barrett on bass and drums. Their work together helped define roots reggae."
+storyRu: "Ли «Скрэтч» Перри объединил The Wailers с Астоном и Карлтоном Барреттами на басу и барабанах. Совместная работа помогла определить звучание рутс-регги."
+links:
+  - to: "root:lee-scratch-perry"
+    kind: "producer"
+    claim: "Lee “Scratch” Perry helped the Wailers develop their sound by pairing them with bassist Aston Barrett and drummer Carlton Barrett."
+    claimRu: "Ли «Скрэтч» Перри помог The Wailers выработать своё звучание, объединив их с басистом Астоном Барреттом и барабанщиком Карлтоном Барреттом."
+    sources:
+      - title: "Bob Marley estate: History"
+        url: "https://www.bobmarley.com/history/"
+      - title: "The Cambridge Companion to Pop and Rock: Bob Marley profile"
+        url: "https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf"
+  - to: "card:reggae"
+    kind: "scene"
+    claim: "The Wailers’ work with Lee “Scratch” Perry helped define roots reggae."
+    claimRu: "Работа The Wailers с Ли «Скрэтчем» Перри помогла определить звучание рутс-регги."
+    sources:
+      - title: "Bob Marley estate: History"
+        url: "https://www.bobmarley.com/history/"
+      - title: "The Cambridge Companion to Pop and Rock: Bob Marley profile"
+        url: "https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf"

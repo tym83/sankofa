@@ -1,0 +1,20 @@
+id: "edwin-birdsong"
+name: "Edwin Birdsong"
+nameRu: "Эдвин Бёрдсонг"
+aliases: ["эдвин бёрдсонг", "эдвин бердсонг"]
+years: [1941, 2019]
+place: {"name": "Los Angeles", "lat": 34.0522, "lon": -118.2437}
+genre: "Jazz funk"
+genreRu: "джаз-фанк"
+story: "Edwin Birdsong’s jazz-funk took shape in collaboration with Roy Ayers. Together they made records that joined jazz to funk."
+storyRu: "Джаз-фанк Эдвина Бёрдсонга складывался в сотрудничестве с Роем Эйерсом. Вместе они создавали записи на стыке джаза и фанка."
+links:
+  - to: "card:funk"
+    kind: "scene"
+    claim: "Edwin Birdsong developed jazz-funk records in collaboration with Roy Ayers."
+    claimRu: "Эдвин Бёрдсонг создавал джаз-фанковые записи вместе с Роем Эйерсом."
+    sources:
+      - title: "Resident Advisor: Edwin Birdsong obituary"
+        url: "https://ra.co/news/43130"
+      - title: "Wax Poetics: Edwin Birdsong — Cosmic Reverb"
+        url: "https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/"

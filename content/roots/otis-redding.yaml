@@ -1,0 +1,20 @@
+id: "otis-redding"
+name: "Otis Redding"
+nameRu: "Отис Реддинг"
+aliases: ["отис реддинг"]
+years: [1941, 1967]
+place: {"name": "Dawson, Georgia", "lat": 31.7735, "lon": -84.4466}
+genre: "Soul"
+genreRu: "соул"
+story: "Otis Redding’s voice grew out of church singing. That upbringing was one of the foundations of his music."
+storyRu: "Голос Отиса Реддинга вырос из церковного пения. Это воспитание стало одной из основ его музыки."
+links:
+  - to: "card:gospel"
+    kind: "influence"
+    claim: "Otis Redding’s musical upbringing was rooted in singing in church."
+    claimRu: "Музыкальное воспитание Отиса Реддинга началось с церковного пения."
+    sources:
+      - title: "New Georgia Encyclopedia: Otis Redding"
+        url: "https://www.georgiaencyclopedia.org/articles/arts-culture/otis-redding-1941-1967"
+      - title: "Thaddeus Russell: Otis Redding (American National Biography)"
+        url: "https://academic.oup.com/american-national-biography/reference/63042/reference-article-abstract/570547002"

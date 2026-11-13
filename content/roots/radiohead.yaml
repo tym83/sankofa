@@ -1,12 +1,24 @@
-id: radiohead
+id: "radiohead"
 name: "Radiohead"
 aliases: ["радиохед", "радиохэд"]
 years: [1985]
 place: {"name": "Abingdon", "lat": 51.6711, "lon": -1.2828}
 genre: "Art rock"
 genreRu: "арт-рок"
+story: "Radiohead drew on Charles Mingus when making “Pyramid Song”. His jazz was a reference for the band’s own music."
+storyRu: "Создавая «Pyramid Song», Radiohead опирались на Чарльза Мингуса. Его джаз стал ориентиром для собственной музыки группы."
 links:
-  - to: card:jazz
+  - to: "card:jazz"
+    kind: "influence"
+    claim: "Radiohead drew on Charles Mingus's jazz for 'Pyramid Song'."
+    claimRu: "Создавая «Pyramid Song», Radiohead опирались на джаз Чарльза Мингуса."
+    sources:
+      - title: "Prog: Radiohead’s proggiest moments"
+        url: "https://www.loudersound.com/features/radioheads-proggiest-moments"
+      - title: "The Irish Times: Taking music to strange places"
+        url: "https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388"
+  - to: "root:charles-mingus"
+    kind: "influence"
     claim: "Radiohead drew on Charles Mingus's jazz for 'Pyramid Song'."
     claimRu: "Создавая «Pyramid Song», Radiohead опирались на джаз Чарльза Мингуса."
     sources:

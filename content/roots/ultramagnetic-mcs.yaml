@@ -1,0 +1,20 @@
+id: "ultramagnetic-mcs"
+name: "Ultramagnetic MCs"
+nameRu: "Ultramagnetic MCs"
+aliases: ["ультрамагнетик эмсиз", "ултрамагнетик эмсиз", "кул кит"]
+years: [1984]
+place: {"name": "Bronx, New York", "lat": 40.8448, "lon": -73.8648}
+genre: "Hip-hop"
+genreRu: "хип-хоп"
+story: "The Bronx DJ scene was the starting point for Ultramagnetic MCs. Ced Gee carried that experience into rapping and production built from samples."
+storyRu: "Отправной точкой для Ultramagnetic MCs стала диджейская сцена Бронкса. Сед Джи перенёс этот опыт в рэп и продюсирование на основе сэмплов."
+links:
+  - to: "card:hip-hop"
+    kind: "scene"
+    claim: "Ultramagnetic MCs grew out of Bronx DJ culture, with Ced Gee moving from DJing into rap and sample-based production."
+    claimRu: "Ultramagnetic MCs выросли из диджейской культуры Бронкса: Сед Джи перешёл от диджеинга к рэпу и продюсированию на основе сэмплов."
+    sources:
+      - title: "SPIN: When Hip Hop Went Ultra — Ced Gee and Kool Keith interview"
+        url: "https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/"
+      - title: "Ced Gee: Official biography"
+        url: "https://www.cedgee.com/about/"

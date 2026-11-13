@@ -1,0 +1,29 @@
+id: "billy-cobham"
+name: "Billy Cobham"
+nameRu: "Билли Кобэм"
+aliases: ["билли кобэм", "билли кобхэм"]
+years: [1944]
+place: {"name": "Colón, Panama", "lat": 9.3547, "lon": -79.9006}
+genre: "Jazz fusion"
+genreRu: "джаз-фьюжн"
+story: "Billy Cobham played with Miles Davis before joining the Mahavishnu Orchestra. His work with that band put him at the heart of early jazz fusion."
+storyRu: "Билли Кобэм играл с Майлзом Дэвисом, прежде чем войти в Mahavishnu Orchestra. Работа в этой группе связала его с ранним джаз-фьюжном."
+links:
+  - to: "root:miles-davis"
+    kind: "member"
+    claim: "Billy Cobham played drums with Miles Davis before his work in the Mahavishnu Orchestra."
+    claimRu: "Билли Кобэм играл на барабанах с Майлзом Дэвисом до работы в Mahavishnu Orchestra."
+    sources:
+      - title: "Blue Note Records: Billy Cobham biography"
+        url: "https://www.bluenote.com/artist/billy-cobham/"
+      - title: "Hit Channel: Interview — Billy Cobham"
+        url: "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
+  - to: "card:jazz"
+    kind: "scene"
+    claim: "Billy Cobham’s work with the Mahavishnu Orchestra placed him in the early jazz-fusion movement."
+    claimRu: "Работа Билли Кобэма в Mahavishnu Orchestra связала его с ранним движением джаз-фьюжна."
+    sources:
+      - title: "Blue Note Records: Billy Cobham biography"
+        url: "https://www.bluenote.com/artist/billy-cobham/"
+      - title: "Hit Channel: Interview — Billy Cobham"
+        url: "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
