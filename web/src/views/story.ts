@@ -43,9 +43,10 @@ function coverMap(host: HTMLElement | null): void {
   });
 }
 
-function heroImg(app: App, ch: Chapter, eager: boolean): HTMLElement | null {
+function heroImg(app: App, ch: Chapter, eager: boolean, pos?: string): HTMLElement | null {
   if (!ch.hero?.file) return null;
   return h('img', {
+    style: pos ? `object-position:${pos}` : undefined,
     ...mediaSrc(app, ch.hero.file, [1600]),
     sizes: '100vw',
     alt: ch.hero.caption ?? '',
@@ -141,7 +142,7 @@ function toc(app: App): HTMLElement {
         h(
           'a.toc-item.reveal',
           { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `--era:${eraColor(ch.id)}` },
-          heroImg(app, ch, false) ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, ch.id),
+          heroImg(app, withHero(app, ch).ch, false, withHero(app, ch).pos) ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, ch.id),
           h('span.num', {}, pick({ en: `Chapter ${app.chapters.indexOf(ch) + 1}`, ru: `Глава ${app.chapters.indexOf(ch) + 1}` }), h('small', {}, ` · ${t('release')} ${ch.id}`)),
           h('span.t', {}, h('b', {}, ch.title), h('span', {}, ch.kicker)),
         ),
@@ -159,15 +160,31 @@ function stepCards(app: App, text: string): Card[] {
   return out;
 }
 
-function chapter(app: App, ch: Chapter): HTMLElement {
+/**
+ * Chapters whose hero is a chart or a document open instead on a photograph
+ * from their own cards; the chart keeps its place as the chapter's plate.
+ */
+const HERO_FROM_CARD: Record<string, { card: string; pos: string }> = {
+  v5: { card: 'hurston', pos: '50% 22%' },
+};
+
+function withHero(app: App, ch: Chapter): { ch: Chapter; pos?: string; swapped: boolean } {
+  const swap = HERO_FROM_CARD[ch.id];
+  const m = swap ? app.set.get(swap.card)?.media?.find((x) => x.type === 'image') : undefined;
+  return m ? { ch: { ...ch, hero: { ...m, type: 'image' } }, pos: swap!.pos, swapped: true } : { ch, swapped: false };
+}
+
+function chapter(app: App, ch0: Chapter): HTMLElement {
+  const { ch, pos: swapPos, swapped: swapMedia } = withHero(app, ch0);
+  const swap = swapMedia ? { pos: swapPos } : undefined;
   const color = eraColor(ch.id);
   const cards = [...new Set(ch.cards.map((id) => app.set.forEdition(id, app.edition)).filter(Boolean) as Card[])];
 
   const mapHero = !ch.hero?.file || ch.hero.file === COVER_IMAGE;
   const hero = h(
-    `header.hero${mapHero ? '.map-hero' : ''}`,
+    `header.hero${mapHero ? '.map-hero' : ''}${swapMedia ? '.portrait' : ''}`,
     { style: `--era:${color}` },
-    mapHero ? heroMap(app, ch) : heroImg(app, ch, false),
+    mapHero ? heroMap(app, ch) : heroImg(app, ch, false, swap?.pos),
     h(
       'div.hero-text',
       {},
