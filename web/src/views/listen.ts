@@ -570,12 +570,13 @@ export class Listen {
       g.setAttribute('transform', `translate(${x.toFixed(1)},${y.toFixed(1)})`);
       // A drum above the ring wears its name above it, clear of its pods inside.
       const up = Math.sin(a) < -0.3;
-      g.querySelector('text.nm')!.setAttribute('y', up ? '-66' : '58');
+      g.querySelector('text.nm')!.setAttribute('y', up ? (small ? '-70' : '-66') : small ? '66' : '58');
       g.querySelector('text.st')!.setAttribute('y', up ? '-50' : '74');
       g.setAttribute('class', `l-node${v.alive ? '' : ' silent'}${p.jitter > 0 ? ' late' : ''}`);
       g.style.setProperty('--wob', `${(p.jitter * 40).toFixed(1)}px`);
       g.querySelector('text.nm')!.textContent = drumName(k);
-      g.querySelector('text.no')!.textContent = `${t('node')} ${k + 1}`;
+      // On a small circle the number alone fits inside the drum.
+      g.querySelector('text.no')!.textContent = small ? String(k + 1) : `${t('node')} ${k + 1}`;
       g.querySelector('text.nm')!.setAttribute('aria-label', v.node);
       g.querySelector('text.st')!.textContent = v.broken
         ? v.alive
@@ -640,7 +641,8 @@ export class Listen {
       line.dataset.drum = s.drum;
     }
     this.subs.prepend(line);
-    while (this.subs.children.length > 3) this.subs.lastElementChild!.remove();
+    // A short log of what just happened; phones show the newest lines only.
+    while (this.subs.children.length > 6) this.subs.lastElementChild!.remove();
   }
 
   private lastState = new Map<string, string>();

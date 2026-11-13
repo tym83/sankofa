@@ -110,7 +110,9 @@ export class RootsMap {
     const cards = new Map<string, MapCard>(this.app.set.all().map((c) => [c.id, { id: c.id, title: c.title, years: c.years, roots: c.roots }]));
     const g = (this.g = buildGraph(this.artists, cards, (a) => this.nameOf(a)));
     this.phone = window.innerWidth < 760;
-    const W = this.stage.clientWidth || window.innerWidth;
+    // Phones get a canvas wider than the screen, panned sideways, so the
+    // artists spread out instead of piling at the left edge.
+    const W = this.phone ? Math.max(680, (this.stage.clientWidth || window.innerWidth) * 1.8) : this.stage.clientWidth || window.innerWidth;
     const years = [Math.min(...g.nodes.map((n) => n.year)) - 10, Math.min(new Date().getFullYear(), Math.max(...g.nodes.map((n) => n.year)) + 6)] as [number, number];
     // Phones: a map under two screens tall, the empty 1800s squeezed, so the
     // first screen holds the roots and the artists who grew straight from them.
@@ -159,7 +161,7 @@ export class RootsMap {
       const ys = g.nodes.map((n) => n.y!);
       const pad = 110;
       const [x0, x1] = [Math.min(...xs) - pad, Math.max(...xs) + pad];
-      const [y0, y1] = [Math.min(...ys) - 70, Math.max(...ys) + 40];
+      const [y0, y1] = [Math.min(...ys) - 70, Math.max(...ys) + 110];
       const k = Math.min(1.4, vw / (x1 - x0), vh / (y1 - y0));
       select(this.svg).call(this.zoomer.transform, zoomIdentity.translate((vw - (x1 - x0) * k) / 2 - x0 * k, (vh - (y1 - y0) * k) / 2 - y0 * k).scale(k));
     }
@@ -171,6 +173,9 @@ export class RootsMap {
       const deepest = Math.max(...g.nodes.map((n) => n.y!));
       requestAnimationFrame(() => {
         this.stage.scrollTop = Math.max(0, deepest + 90 - this.stage.clientHeight);
+        const roots = g.nodes.filter((n) => n.card && n.y! > deepest - 400);
+        const cx = roots.length ? roots.reduce((s, n) => s + n.x!, 0) / roots.length : W / 2;
+        this.stage.scrollLeft = Math.max(0, cx - this.stage.clientWidth / 2);
         this.placeLabels();
       });
     }
@@ -295,8 +300,17 @@ export class RootsMap {
     const rects = lbls.map(({ el }) => el.getBoundingClientRect());
     const boxes: DOMRect[] = [];
     let shown = 0;
-    const hits = (r: DOMRect) => boxes.some((b) => r.left < b.right + 3 && r.right > b.left - 3 && r.top < b.bottom + 1 && r.bottom > b.top - 1);
+    // Dots are obstacles too: a label never covers another artist's node.
+    const dots = new Map<string, DOMRect>();
+    for (const n of g.nodes) {
+      const c = this.nodeEls.get(n.id)?.querySelector('circle');
+      if (c) dots.set(n.id, c.getBoundingClientRect());
+    }
+    let self = '';
+    const over = (r: DOMRect, b: DOMRect) => r.left < b.right + 3 && r.right > b.left - 3 && r.top < b.bottom + 1 && r.bottom > b.top - 1;
+    const hits = (r: DOMRect) => boxes.some((b) => over(r, b)) || [...dots].some(([id, b]) => id !== self && b.width > 0 && over(r, b));
     lbls.forEach(({ n, el }, i) => {
+      self = n.id;
       let r = rects[i];
       const want = priority ? priority.has(n.id) || n.card : famous ? famous.has(n.id) || n.card : true;
       // Every root keeps its name: above its dot, or below it if that is taken.

@@ -100,7 +100,7 @@ const MECHANISMS: Mechanism[] = [
       en: 'Every artist is traced, link by sourced link, back to a card of the museum; every link carries two sources.',
       ru: 'Каждого исполнителя можно проследить звено за звеном до карточки музея; у каждого звена два источника.',
     },
-    cmd: 'sankofa content lint content/cards',
+    cmd: 'sankofa roots metallica',
     link: { hash: '#view=roots', en: 'Find your band’s roots', ru: 'Найти корни своей группы' },
   },
 ];
@@ -200,6 +200,20 @@ export class Engine {
         ),
       ),
       h('section.e-trysec', {}, h('h3', {}, pick({ en: 'Try it yourself', ru: 'Попробуйте сами' })), this.tryHost),
+      // A closing beat: the machinery serves the story, so the way leads back to it.
+      h(
+        'footer.e-close',
+        {},
+        h(
+          'p',
+          {},
+          pick({
+            en: 'All of this exists so the museum can remember: every card is kept, every deletion is argued over, every node keeps the beat.',
+            ru: 'Всё это нужно для того, чтобы музей помнил: каждая карточка хранится, каждое удаление обсуждается, каждый узел держит ритм.',
+          }),
+        ),
+        h('button.btn.primary', { onclick: () => this.onClose?.() }, pick({ en: 'Back to the story', ru: 'Вернуться к истории' })),
+      ),
     );
     this.el = h('section.engine', { 'aria-label': t('The engine room'), tabindex: '-1' }, bar, body);
     this.el.addEventListener('keydown', (e) => {

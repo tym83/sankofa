@@ -32,6 +32,8 @@ export function nbsp(text: string, lang: string): string {
   let s = quotes(text, lang).replace(NAMES, `$1${NBSP}$2`);
   // A dash belongs to the word before it.
   s = s.replace(/ (—)/g, `${NBSP}$1`);
+  // A year range is one word: "1791–1804" never breaks at the dash.
+  s = s.replace(/(\d)([–-])(?=\d)/g, '$1\u2060$2\u2060');
   // Numbers stay with their units and the words they count.
   s = s.replace(/(\d) (?=[^\d\s])/g, `$1${NBSP}`);
   const re = lang === 'ru' ? RU_SHORT : EN_SHORT;

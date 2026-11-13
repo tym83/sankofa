@@ -9,9 +9,16 @@ const dir = 'screenshots';
 const shot = (page: Page, name: string, project: string) => page.screenshot({ path: `${dir}/${project}-${name}.png` });
 const settle = (page: Page, ms = 2600) => page.waitForTimeout(ms);
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('sankofa.navlegend', '1'));
+});
+
 test('key views', async ({ page }, info) => {
   const p = info.project.name;
-  await page.addInitScript(() => localStorage.setItem('sankofa.edition', 'f'));
+  await page.addInitScript(() => {
+    localStorage.setItem('sankofa.edition', 'f');
+    localStorage.setItem('sankofa.navlegend', '1');
+  });
   await page.goto('/');
   await settle(page, 5500);
   await shot(page, '01-cover', p);

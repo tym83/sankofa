@@ -7037,16 +7037,279 @@ html:lang(ru) .r-edge-head {
   display: inline !important;
   writing-mode: inherit;
 }
-/* Level 5: "Open the card" stays in view while the document scrolls under it. */
-.desk-in .btn {
-  position: sticky;
-  bottom: 12px;
-  z-index: 1;
-  background: #efe7d6;
-  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.45);
+/* Level 5: the document scrolls above a footer that holds "Open the card". */
+.descent.lvl5 .d-desk {
+  overflow: hidden;
+}
+.desk-in {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+.desk-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.desk-foot {
+  flex: none;
+  padding: 12px 0 16px;
+  border-top: 1px solid rgba(28, 26, 42, 0.12);
 }
 @media (max-width: 760px) {
   .desk-in figcaption {
     display: none;
   }
+}
+
+/* Russian hyphenation: running text only, and gently. Links, headings,
+   eyebrows, buttons and labels never break inside a word. */
+html:lang(ru) body {
+  hyphenate-limit-chars: 7 4 4;
+  -webkit-hyphenate-limit-before: 4;
+  -webkit-hyphenate-limit-after: 4;
+  hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-lines: 2;
+}
+html:lang(ru) a,
+html:lang(ru) button,
+html:lang(ru) .btn,
+html:lang(ru) h1,
+html:lang(ru) h2,
+html:lang(ru) h3,
+html:lang(ru) h4,
+html:lang(ru) b,
+html:lang(ru) small,
+html:lang(ru) label,
+html:lang(ru) .kicker,
+html:lang(ru) .chip,
+html:lang(ru) .dc,
+html:lang(ru) .dc strong,
+html:lang(ru) .dc .w,
+html:lang(ru) .xref {
+  hyphens: manual;
+}
+
+/* Year ranges never break at the dash (the typesetter also binds them). */
+.r-gap,
+.y {
+  white-space: nowrap;
+}
+/* Contents tiles: the chapter label sits on a chip, readable over light pictures. */
+.toc-item .num {
+  top: 10px;
+  left: 10px;
+  max-width: calc(100% - 20px);
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(10, 10, 20, 0.72);
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.toc-item::after {
+  background: linear-gradient(180deg, rgba(10, 10, 20, 0.25) 0%, rgba(10, 10, 20, 0) 22%, rgba(10, 10, 20, 0.15) 40%, rgba(10, 10, 20, 0.92));
+}
+@media (max-width: 720px) {
+  .toc-item .num {
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+  }
+  .toc-item .t b {
+    font-size: 19px;
+    overflow-wrap: break-word;
+  }
+}
+.tl .scale-break text {
+  fill: var(--ink-3, var(--ink-2));
+  font-size: 13px;
+}
+.tl .scale-note {
+  fill: var(--ink-3, var(--ink-2));
+  font-family: var(--font-sans);
+  font-size: 11px;
+}
+/* Descent lanes: an era's name sits on its own chip, above whatever crosses it. */
+.descent .d-lane > span {
+  z-index: 3;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: rgba(10, 9, 16, 0.88);
+}
+@media (max-width: 760px) {
+  .rm-stage {
+    overflow-x: auto;
+  }
+  .rm-svg {
+    max-width: none;
+  }
+}
+
+/* Signature plates come in whole: a fade and a settle, never a wipe that cuts
+   the jar or the map in half mid-scroll. */
+.sig-plate .sig-mat {
+  clip-path: none;
+  opacity: calc(0.25 + var(--p) * 0.75);
+  transform: translateY(calc((1 - var(--p)) * 24px)) scale(calc(0.97 + var(--p) * 0.03));
+}
+/* The console set piece: the cartridge is never more than tucked into its
+   slot, and "READY" lights below the slot, clear of the top bar. */
+.sig-insert .sig-cart {
+  width: min(62%, 340px);
+  transform: translateY(calc(-16% - (1 - var(--p, 0)) * 38%)) rotate(calc((1 - var(--p, 0)) * -6deg));
+}
+.sig-insert .sig-slot {
+  height: 16%;
+  bottom: 9%;
+}
+.sig-insert .sig-done {
+  top: auto;
+  bottom: 1%;
+}
+.sig-insert .sig-sticky {
+  padding-top: calc(var(--nav-h) + 28px);
+}
+/* Listening room: the log fills the space under the circle on wide screens. */
+@media (min-width: 901px) {
+  .l-subs {
+    min-height: 9em;
+  }
+  .l-subs li:nth-child(n + 4) {
+    font-size: 12.5px;
+    color: rgba(242, 233, 216, 0.28);
+  }
+}
+@media (max-width: 900px) {
+  .l-ctl .l-status,
+  .listen .l-status {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  .l-head-phone h2 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+  .listen .l-node .no {
+    font-size: 15px;
+  }
+}
+
+/* Engine room terminals: lines never soft-wrap; long ones scroll inside the
+   block. A one-line command never breaks inside a flag. */
+.term.multi pre,
+.term.multi.table pre {
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  min-width: 0;
+}
+.term {
+  min-width: 0;
+  max-width: 100%;
+}
+.term code {
+  min-width: 0;
+  white-space: pre;
+  overflow-x: auto;
+}
+.e-close {
+  margin: 56px 0 24px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-2, rgba(242, 233, 216, 0.24));
+  text-align: center;
+}
+.e-close p {
+  max-width: 52ch;
+  margin: 0 auto 18px;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.45;
+}
+/* Atlas zoom levels carry names: on phones the chosen one shows its short name. */
+.levels button .short {
+  display: none;
+}
+@media (max-width: 720px) {
+  .levels button.on .short {
+    display: inline;
+    margin-left: 6px;
+    font-size: 12px;
+  }
+  .atlas-bar {
+    flex-wrap: wrap;
+  }
+  .atlas-bar .when {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    font-size: 11.5px;
+    line-height: 1.35;
+  }
+  .atlas-why {
+    display: none;
+  }
+  .atlas-eras {
+    scroll-padding-inline: 16px;
+    padding-inline: 16px;
+    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent);
+    mask-image: linear-gradient(90deg, #000 85%, transparent);
+  }
+}
+.atlas-title h2 {
+  margin: 0;
+}
+.atlas-why {
+  margin: 2px 0 0;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--ink-2);
+}
+.finale-why,
+.d-why {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--ink-2);
+  max-width: 60ch;
+}
+/* First visit on a phone: what each icon in the top bar means. */
+.nav-legend {
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  padding: 8px 44px 8px 14px;
+  background: rgba(10, 9, 16, 0.94);
+  border-bottom: 1px solid rgba(242, 233, 216, 0.14);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: #f2e9d8;
+}
+.nav-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.nav-legend svg {
+  width: 15px;
+  height: 15px;
+}
+.nav-legend .icon-btn {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
 }

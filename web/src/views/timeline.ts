@@ -6,7 +6,7 @@ import { brushX, type BrushBehavior } from 'd3-brush';
 import type { Card } from '../lib/types';
 import { formatYears, span } from '../lib/cards';
 import { eraColor } from '../lib/atlasModel';
-import { t } from '../lib/i18n';
+import { pick, t } from '../lib/i18n';
 
 export interface EraSpan {
   id: string;
@@ -26,10 +26,17 @@ interface Options {
 
 const NOW = new Date().getFullYear();
 
+/** Where the scale changes pace: drawn on the axis as breaks. */
+export const SCALE_BREAKS = [1500, 1700, 1850, 1950];
+
+/**
+ * Piecewise linear, widening toward today, with every change of pace marked
+ * on the axis: 1300–1500, 1500–1700, 1700–1850, 1850–1950, 1950–now.
+ */
 export function yearScale(width: number, left = 24, right = 24): ScaleLinear<number, number> {
   const inner = width - left - right;
   return scaleLinear()
-    .domain([1300, 1500, 1700, 1850, 1950, NOW])
+    .domain([1300, ...SCALE_BREAKS, NOW])
     .range([0, 0.06, 0.15, 0.33, 0.72, 1].map((f) => left + f * inner))
     .clamp(true);
 }
@@ -129,7 +136,7 @@ export class Timeline {
     const beadTop = lifeTop + Math.max(1, rows.length) * rowH + 6;
     const lanesH = Math.max(1, beadEnds.length) * 9;
     const axisY = beadTop + lanesH + 8;
-    const H = axisY + 26;
+    const H = axisY + 40;
     svg.attr('width', W).attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
 
     const gEra = svg.append('g');
@@ -164,6 +171,17 @@ export class Timeline {
       g.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', lifeTop - 6).attr('y2', axisY);
       if (major || t >= 1850) g.append('text').attr('x', x(t)).attr('y', axisY + 16).attr('text-anchor', 'middle').text(t);
     }
+    // The scale changes pace at these years: say so where it happens.
+    for (const b of SCALE_BREAKS) {
+      const g = gAxis.append('g').attr('class', 'scale-break');
+      g.append('text').attr('x', x(b)).attr('y', axisY + 4).attr('text-anchor', 'middle').text('≈');
+    }
+    gAxis
+      .append('text')
+      .attr('class', 'scale-note')
+      .attr('x', x(1300))
+      .attr('y', axisY + 32)
+      .text(pick({ en: 'The scale widens toward today; ≈ marks where its pace changes.', ru: 'Шкала растягивается к нашим дням; ≈ отмечает, где меняется её шаг.' }));
     const now = svg.append('g').attr('class', 'now');
     now.append('line').attr('x1', x(NOW)).attr('x2', x(NOW)).attr('y1', lifeTop - 6).attr('y2', axisY);
 

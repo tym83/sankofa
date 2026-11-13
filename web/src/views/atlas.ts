@@ -54,7 +54,8 @@ export class Atlas {
     );
     const ladder = h('div.levels', { role: 'group', 'aria-label': t('Zoom level') });
     LEVEL_NAMES.forEach((name, i) => {
-      const b = h('button', { 'aria-pressed': 'false', onclick: () => this.setLevel(i + 1) }, h('b', {}, String(i + 1)), h('span', {}, name)) as HTMLButtonElement;
+      const short = pick({ en: ['Atlantic', 'Regions', 'Cities', 'People', 'Document'], ru: ['Атлантика', 'Регионы', 'Города', 'Люди', 'Документ'] })[i];
+      const b = h('button', { 'aria-pressed': 'false', 'aria-label': name, onclick: () => this.setLevel(i + 1) }, h('b', {}, String(i + 1)), h('span', {}, name), h('span.short', {}, short)) as HTMLButtonElement;
       this.levels.push(b);
       ladder.append(b);
     });

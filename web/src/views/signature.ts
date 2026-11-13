@@ -158,7 +158,6 @@ function insert(app: App, c: Card, link: HTMLElement, era: string): HTMLElement 
   return el;
 }
 
-/** One line at a chapter's end tying it to the cluster. */
 
 function kindLink(c: Card): string {
   return `${pick({ en: 'Open the card', ru: 'Открыть карточку' })} · ${formatYears(c.years)} →`;

@@ -541,8 +541,10 @@ export class GeoMap {
     this.gPoints.selectAll<SVGGElement, MapPoint>('g.pt').each(function (d) {
       nodes.set(d.id, this);
     });
+    // Labels keep a margin from the screen's edge, wider on phones.
+    const edge = this.w < 520 ? 12 : 4;
     const free = (b: [number, number, number, number]) =>
-      b[0] >= 4 && b[2] <= this.w - 4 && b[1] >= 4 && b[3] <= this.h - 4 && !boxes.some((o) => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
+      b[0] >= edge && b[2] <= this.w - edge && b[1] >= 4 && b[3] <= this.h - 4 && !boxes.some((o) => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
     for (const p of order) {
       const g = nodes.get(p.id);
       if (!g) continue;

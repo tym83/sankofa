@@ -60,6 +60,7 @@ async function start(): Promise<void> {
   document.body.append(loading);
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
+  navLegend(current);
   // The language switch needs no data, so it works while the cards load.
   document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
   // Let the static cover paint before the 1 MB of cards competes for the wire.
@@ -420,3 +421,36 @@ function trackChapters(app: App): void {
 }
 
 start();
+
+/**
+ * On a phone the top bar is icons only. On the first visit a strip under it
+ * names each icon once; it goes away when closed or when an icon is used.
+ */
+function navLegend(l: string): void {
+  if (window.innerWidth >= 720) return;
+  const KEY = 'sankofa.navlegend';
+  try {
+    if (localStorage.getItem(KEY)) return;
+  } catch {
+    return;
+  }
+  const items = [...document.querySelectorAll<HTMLElement>('.nav-actions .btn:not(.lang-switch)')]
+    .map((b) => {
+      const svg = b.querySelector('svg')?.cloneNode(true);
+      const name = b.querySelector(`.label [data-l="${l}"]`)?.textContent ?? '';
+      return svg && name ? h('span', {}, svg as SVGElement as unknown as HTMLElement, name) : null;
+    })
+    .filter((x): x is HTMLElement => !!x);
+  if (!items.length) return;
+  const strip = h('div.nav-legend', { role: 'note' }, ...items, h('button.icon-btn', { 'aria-label': l === 'ru' ? 'Скрыть подсказку' : 'Hide this hint', onclick: () => done() }, '×'));
+  const done = () => {
+    strip.remove();
+    try {
+      localStorage.setItem(KEY, '1');
+    } catch {
+      /* private mode */
+    }
+  };
+  document.querySelectorAll('.nav-actions .btn').forEach((b) => b.addEventListener('click', done, { once: true }));
+  document.body.append(strip);
+}

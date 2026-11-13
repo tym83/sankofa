@@ -3,7 +3,7 @@
 // era, cards surface at their year, lives run alongside as bars and genres
 // branch from their roots.
 import type { App } from '../app';
-import type { Card } from '../lib/types';
+import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, span } from '../lib/cards';
 import { vtags, bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
@@ -11,7 +11,7 @@ import { chapterCopy, eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
 import { count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
-import { mediaSrc, progressive } from '../lib/media';
+import { mediaSrc } from '../lib/media';
 import { richText } from '../app';
 import { buildScale, chapterAt, chapterCentres, chaptersAt, lanes, levelCards, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
 import { interpolateRgb } from 'd3-interpolate';
@@ -202,6 +202,24 @@ export class Descent {
     });
   }
 
+  /** The chapter of the card or era panel at the reading line, if any. */
+  private eraOnScreen(): Chapter | undefined {
+    const box = this.el.getBoundingClientRect();
+    const line = box.top + this.el.clientHeight * 0.45;
+    let best: HTMLElement | undefined;
+    let dist = 260;
+    this.track.querySelectorAll<HTMLElement>('a.dc[data-card], a.d-era[data-chapter]').forEach((e) => {
+      const r = e.getBoundingClientRect();
+      const d = line < r.top ? r.top - line : line > r.bottom ? line - r.bottom : 0;
+      if (d < dist) {
+        dist = d;
+        best = e;
+      }
+    });
+    const id = best?.dataset.chapter ?? (best?.dataset.card ? this.app.set.get(best.dataset.card)?.era : undefined);
+    return id ? this.app.chapters.find((c) => c.id === id) : undefined;
+  }
+
   private onScroll(): void {
     if (this.raf) return;
     this.raf = requestAnimationFrame(() => {
@@ -222,7 +240,8 @@ export class Descent {
         this.centres ??= chapterCentres(this.app.chapters, (id) => this.app.set.get(id)?.years[0]);
         // Chapters overlap in time: name the one this year belongs to most,
         // and list the others that are also running.
-        const ch = chapterAt(this.app.chapters, year, this.centres);
+        // The era of the card on screen, when there is one, not of the year alone.
+        const ch = this.eraOnScreen() ?? chapterAt(this.app.chapters, year, this.centres);
         const also = chaptersAt(this.app.chapters, year).filter((c) => c !== ch);
         const key = `${ch?.id}|${also.map((c) => c.id).join()}`;
         if (this.meterEra.dataset.key !== key) {
@@ -284,7 +303,12 @@ export class Descent {
     for (const c of cards) {
       const el = this.cardEl(c, colW);
       els.set('card:' + c.id, el);
-      list.push({ kind: 'card', id: c.id, year: Math.max(START, span(c)[0]), h: 0 });
+      // A card sits in its own era: one dated by a recent event (Kente's 2024
+      // inscription, the 2012 rescue in Timbuktu) is placed where its era ends,
+      // not at "today".
+      const era = app.chapters.find((x) => x.id === c.era);
+      const [e0, e1] = era?.years.length ? [era.years[0], era.years[1] ?? NOW] : [START, NOW];
+      list.push({ kind: 'card', id: c.id, year: Math.max(START, Math.min(Math.max(span(c)[0], e0), e1)), h: 0 });
     }
     // Level 1 is a summary: each era opens with its picture, title and span.
     if (this.level === 1) {
@@ -573,13 +597,19 @@ export class Descent {
       h(
         'div.desk-in',
         { style: `--era:${eraColor(c.era)}` },
-        img ? h('figure', {}, progressive(this.app, img.file, { want: 960, sizes: '40vw', alt: img.caption ?? c.title }).img, h('figcaption.credit', {}, img.caption ?? '')) : null,
-        h('small', {}, ...vtags(`${c.era ?? ''} · ${formatYears(c.years)} · ${c.places[0].name}`)),
-        h('h3', {}, c.title),
-        // The hook only when the body does not open with the same words.
-        sameStart(c.wow, c.body) ? null : h('p.desk-wow', {}, c.wow),
-        h('div.desk-body', {}, richText(this.app, c.body.split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' '))),
-        h('a.btn', { href: `#focus=${c.id}`, 'data-card': c.id }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' })),
+        // The text scrolls; the button sits below it and never covers a line.
+        h(
+          'div.desk-scroll',
+          {},
+          // The full picture straight away: the document is the point of this level.
+          img ? h('figure', {}, h('img', { ...mediaSrc(this.app, img.file, [960]), sizes: '(max-width: 760px) 92vw, 36vw', alt: img.caption ?? c.title, decoding: 'async' }), h('figcaption.credit', {}, img.caption ?? '')) : null,
+          h('small', {}, ...vtags(`${c.era ?? ''} · ${formatYears(c.years)} · ${c.places[0].name}`)),
+          h('h3', {}, c.title),
+          // The hook only when the body does not open with the same words.
+          sameStart(c.wow, c.body) ? null : h('p.desk-wow', {}, c.wow),
+          h('div.desk-body', {}, richText(this.app, c.body.split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' '))),
+        ),
+        h('div.desk-foot', {}, h('a.btn', { href: `#focus=${c.id}`, 'data-card': c.id }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' }))),
       ),
     );
   }

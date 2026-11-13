@@ -16,6 +16,8 @@ const WIDTHS = [480, 960, 1600];
  */
 const CROPS: Record<string, [number, number, number, number]> = {
   'phillis-wheatley.jpg': [0.08, 0.13, 0.08, 0.145],
+  // the scan's paper margins read as grey bands behind the coda
+  'adinkra.jpg': [0.025, 0.035, 0.02, 0.02],
 };
 const [dir, out] = process.argv.slice(2);
 if (!dir || !out) {

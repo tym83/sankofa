@@ -2,7 +2,10 @@ import { serveFixtureRoots } from './support/roots';
 import { expect, test } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  await page.addInitScript(() => localStorage.setItem('sankofa.edition', 'm'));
+  await page.addInitScript(() => {
+    localStorage.setItem('sankofa.edition', 'm');
+    localStorage.setItem('sankofa.navlegend', '1');
+  });
 });
 
 test('the story loads and a chapter follows the scroll', async ({ page }) => {
@@ -64,7 +67,8 @@ test('reduced motion still reaches the deep-linked point', async ({ browser }) =
   const page = await ctx.newPage();
   await page.goto('/#t=1900-1935&zoom=3');
   await expect(page.locator('.atlas .levels button[aria-pressed="true"] b')).toHaveText('3');
-  await expect(page.locator('.atlas-bar .when')).toContainText('1900–1935');
+  // Year ranges are bound with word joiners so they never break at the dash.
+  await expect(page.locator('.atlas-bar .when')).toContainText(/1900\u2060?–\u2060?1935/);
   await ctx.close();
 });
 
@@ -501,12 +505,11 @@ test('a step reached by a jump is the active one and never shows the previous pi
   await expect(page.locator('#ch-v4 .graphic.show-img, #ch-v4 .show-img')).toHaveCount(0);
 });
 
-test('the engine room wraps long YAML and copies from a corner icon', async ({ page }) => {
+test('the engine room folds long YAML values and scrolls, never soft-wraps; copy is a corner icon', async ({ page }) => {
   await page.goto('/#view=engine');
   const pre = page.locator('.term.multi:not(.table) pre').first();
   await expect(pre).toContainText('wow: >-');
-  const overflow = await pre.evaluate((e) => e.scrollWidth - e.clientWidth);
-  expect(overflow).toBeLessThanOrEqual(1);
+  expect(await pre.evaluate((e) => getComputedStyle(e).whiteSpace)).toBe('pre');
   await expect(page.locator('.term.multi button.copy').first()).toHaveAttribute('aria-label', /Copy/);
 });
 
@@ -584,4 +587,16 @@ test('roots: a person is not written as a band', async ({ page }) => {
 test('a first visit to the engine room does not claim a card was opened', async ({ page }) => {
   await page.goto('/#view=engine');
   await expect(page.locator('.e-yaml p').first()).toContainText('One card');
+});
+
+test('a first visit on a phone names the top-bar icons once', async ({ browser, baseURL }, info) => {
+  test.skip(info.project.name !== 'mobile', 'phones only');
+  const page = await (await browser.newContext({ ...info.project.use, baseURL })).newPage();
+  await page.goto('/');
+  const strip = page.locator('.nav-legend');
+  await expect(strip).toContainText('Atlas');
+  await strip.getByRole('button').click();
+  await expect(strip).toHaveCount(0);
+  await page.reload();
+  await expect(page.locator('.nav-legend')).toHaveCount(0);
 });

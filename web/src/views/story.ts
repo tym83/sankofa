@@ -97,12 +97,20 @@ function heroMap(app: App, ch: Chapter): HTMLElement {
       io.disconnect();
       const map = new GeoMap(host, { frame, maxLabels: () => (window.innerWidth < 720 ? 2 : Infinity) });
       map.ready.then(() => {
+        // One label per place name: two cards in Kangaba name it once.
+        const named = new Set<string>();
+        const placeLabel = (c: Card) => {
+          const n = c.places[0].name.split(/[,(]/)[0].trim();
+          if (named.has(n)) return '';
+          named.add(n);
+          return n;
+        };
         map.setPoints(
           cards.map((c) => ({
             id: c.id,
             lon: c.places[0].lon,
             lat: c.places[0].lat,
-            label: c.places[0].name.split(/[,(]/)[0].trim(),
+            label: placeLabel(c),
             color: eraColor(c.era),
             priority: 6 - c.zoom,
           })),
