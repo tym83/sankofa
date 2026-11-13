@@ -5,6 +5,8 @@ places: ["Ричмонд, Виргиния", "Рио-де-Жанейро", "Ни
 further:
   - "IBGE, Características étnico-raciais da população: um estudo das categorias de classificação de cor ou raça (2013)"
   - "Чимаманда Нгози Адичи, «Американха» (Americanah, 2013)"
+captions:
+  - "Чимаманда Нгози Адичи на Congreso Futuro, 13 января 2020 года"
 ---
 Когда бразильское обследование домохозяйств 1976 года позволило людям самим
 назвать свой цвет, оно записало 136 разных обозначений — от *morena* до
