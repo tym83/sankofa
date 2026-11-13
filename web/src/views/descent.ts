@@ -282,6 +282,27 @@ export class Descent {
       els.set('card:' + c.id, el);
       list.push({ kind: 'card', id: c.id, year: Math.max(START, span(c)[0]), h: 0 });
     }
+    // Level 1 is a summary: each era opens with its picture, title and span.
+    if (this.level === 1) {
+      for (const ch of app.chapters) {
+        if (!ch.years.length) continue;
+        const img = ch.hero?.file;
+        const el = h(
+          'a.d-era',
+          { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `--era:${eraColor(ch.id)}` },
+          img ? h('div.ph', {}, h('img', { 'data-src': mediaSrc(this.app, img, [960]).src, alt: '', decoding: 'async' })) : null,
+          h(
+            'div.tx',
+            {},
+            h('small', {}, `${ch.id} · ${ch.kicker}`),
+            h('b', {}, ch.title),
+            h('span', {}, pick({ en: `${count(all.filter((c) => c.era === ch.id).length, 'card', 'en')} in this era · read the chapter →`, ru: `В этой эпохе ${count(all.filter((c) => c.era === ch.id).length, 'card', 'ru')} · читать главу →` })),
+          ),
+        );
+        els.set('chapter:' + ch.id, el);
+        list.push({ kind: 'chapter', id: ch.id, year: Math.max(START, ch.years[0]), h: 0 });
+      }
+    }
     for (const m of MOVEMENTS) {
       const el = h('div.d-move', { style: `--era:${eraColor(m.era)}` }, h('small', {}, t('Movement')), h('b', {}, m.title), h('span', {}, m.sub));
       els.set('movement:' + m.id, el);
@@ -310,7 +331,8 @@ export class Descent {
       list.map((it) => ({ year: it.year, need: (it.h + 22) / (it.kind === 'card' ? cols : 1) })),
       top,
       bottom,
-      mobile ? 0.9 : 1,
+      // Level 1 moves through the empty stretches faster.
+      (mobile ? 0.9 : 1) * (this.level === 1 ? 0.4 : 1),
     ));
     const placed = place(list, scale, cols);
     const end = Math.max(scale.height, ...placed.map((p) => p.top + p.item.h + bottom));
@@ -558,7 +580,7 @@ export class Descent {
 
   private reveal(): void {
     this.loadImages();
-    const els = this.track.querySelectorAll('.dc, .d-chapter, .d-move, .d-quiet');
+    const els = this.track.querySelectorAll('.dc, .d-chapter, .d-era, .d-move, .d-quiet');
     if (reducedMotion() || !('IntersectionObserver' in window)) {
       els.forEach((e) => e.classList.add('seen'));
       return;
