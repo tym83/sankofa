@@ -27,6 +27,15 @@ const SKIP = new Set(['SCRIPT', 'STYLE', 'CODE', 'PRE', 'TEXTAREA', 'INPUT']);
 
 /** Apply nbsp() to every text node under root. */
 export function typeset(root: Node, lang: string): void {
+  // A walker never returns its own root: a text node set by textContent is handled here.
+  if (root.nodeType === 3) {
+    const t = root as Text;
+    const p = t.parentElement;
+    if (!p || SKIP.has(p.tagName) || p.closest('pre, code, svg text.lbl') || t.data.length < 3 || !/\s/.test(t.data)) return;
+    const next = nbsp(t.data, lang);
+    if (next !== t.data) t.data = next;
+    return;
+  }
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     acceptNode: (n) => (n.parentElement && (SKIP.has(n.parentElement.tagName) || n.parentElement.closest('pre, code, svg text.lbl')) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
   });

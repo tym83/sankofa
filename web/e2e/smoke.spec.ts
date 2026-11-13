@@ -93,7 +93,7 @@ test('the cover leads into the descent', async ({ page }) => {
 test('the listening room plays a labelled demo when the cluster is not reachable', async ({ page }) => {
   await page.goto('/#view=listen');
   await expect(page.locator('.listen.open')).toBeVisible();
-  await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/, { timeout: 8000 });
+  await expect(page.locator('.l-badge')).toHaveText(/Recorded\sdemo/, { timeout: 8000 });
   await expect(page.locator('.l-node')).toHaveCount(3);
   await page.getByRole('button', { name: 'Start listening' }).click();
   await expect(page.locator('.listen.playing')).toBeVisible();
@@ -211,7 +211,7 @@ test('#view=atlas opens the atlas on first load, and a card shows its object', a
 
 test('the demo lets you break a node and hear it fall silent', async ({ page }) => {
   await page.goto('/#view=listen');
-  await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/, { timeout: 8000 });
+  await expect(page.locator('.l-badge')).toHaveText(/Recorded\sdemo/, { timeout: 8000 });
   await page.getByRole('button', { name: 'Break a node' }).click();
   // At once: the node is marked, its heartbeat is late and its pods are silent.
   const broken = page.locator('.l-node.broken');
@@ -270,7 +270,7 @@ test('descent cards hold their text and the level control changes what is shown'
 test('each chapter ends on the cluster, and maps never stack labels', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.ch-cluster').first()).toContainText(/Griot/);
-  await expect(page.locator('.toc-head h2')).toHaveText(/Eight chapters|Восемь глав/);
+  await expect(page.locator('.toc-head h2')).toHaveText(/Eight\schapters|Восемь\sглав/);
   const step = page.locator('article.chapter').nth(4).locator('.step').nth(1);
   await step.evaluate((el) => el.scrollIntoView({ block: 'center' }));
   await page.waitForTimeout(2500);
@@ -310,7 +310,7 @@ test('the listening room moves pods off a node that is declared down', async ({ 
   await page.clock.install();
   await page.goto('/#view=listen');
   await page.clock.runFor(5000);
-  await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/);
+  await expect(page.locator('.l-badge')).toHaveText(/Recorded\sdemo/);
   const pods = await page.locator('.l-pod:not(.guest)').count();
   await page.getByRole('button', { name: 'Break a node' }).click();
   await expect(page.locator('.l-pod.off').first()).toBeAttached();
@@ -413,7 +413,7 @@ test('the music map counts its roots, finds an artist and lights its way down', 
   await serveFixtureRoots(page);
   await page.goto('/#view=roots-map');
   await expect(page.locator('.rmap.open')).toBeVisible();
-  await expect(page.locator('.rm-head h2')).toHaveText(/(Of \d+ artists, \d+|All \d+ artists) lead back to/);
+  await expect(page.locator('.rm-head h2')).toHaveText(/(Of\s\d+\sartists,\s\d+|All\s\d+\sartists)\slead\sback\sto/);
   await expect(page.locator('.rm-node.card').first()).toBeAttached();
   await page.locator('.rm-input').fill('telev');
   await page.locator('.rm-input').press('Enter');
@@ -425,7 +425,7 @@ test('the music map counts its roots, finds an artist and lights its way down', 
 
   await page.goto('about:blank');
   await page.goto('/#view=roots-map&lang=ru');
-  await expect(page.locator('.rm-head h2')).toHaveText(/^(Из|Все) \d+ исполнител/);
+  await expect(page.locator('.rm-head h2')).toHaveText(/^(Из|Все)\s\d+\sисполнител/);
 });
 
 test('breaking a node is told at once and the stopped node never checks in', async ({ page }) => {
@@ -471,22 +471,22 @@ test('the room state stays consistent: late node not counted, pods return gradua
   await page.clock.install();
   await page.goto('/#view=listen');
   await page.clock.runFor(5000);
-  await expect(page.locator('.l-badge')).toHaveText(/Recorded demo/);
+  await expect(page.locator('.l-badge')).toHaveText(/Recorded\sdemo/);
   await page.getByRole('button', { name: 'Break a node' }).click();
   await page.clock.runFor(1000);
-  await expect(page.locator('.l-status')).toContainText(/2 of 3 nodes playing.*Sogo late/);
+  await expect(page.locator('.l-status')).toContainText(/2\sof\s3\snodes\splaying.*Sogo\slate/);
   const label = await page.locator('.l-node.broken .st').textContent();
   const sub = await page.locator('.l-subs').textContent();
-  expect(label!.match(/down in (\d+)/)?.[1]).toBeTruthy();
+  expect(label!.match(/down\sin\s(\d+)/)?.[1]).toBeTruthy();
   expect(sub).toMatch(/in\s+\d+\s+s/);
   await page.clock.runFor(17000);
   await expect(page.locator('.l-node.broken .st')).toContainText(/moved/);
   await page.getByRole('button', { name: 'Mend the node' }).click();
   await page.clock.runFor(500);
-  await expect(page.locator('.l-subs')).toContainText(/does not move pods back/);
-  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back · 0 ready/);
+  await expect(page.locator('.l-subs')).toContainText(/does\snot\smove\spods\sback/);
+  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s0\sready/);
   await page.clock.runFor(7000);
-  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back · [12] ready/);
+  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s[12]\sready/);
 });
 
 test('a step reached by a jump is the active one and never shows the previous picture', async ({ page }, info) => {
@@ -523,8 +523,15 @@ test('the copy switch flips a paired card at once, and the pairs list links both
   await page.goto('/');
   const note = page.locator('.opener .ed-note:visible');
   await expect(note).toContainText('Yours is the female copy: instead of Frederick Douglass you will meet Harriet Jacobs');
-  await note.getByRole('button', { name: 'All six pairs' }).click();
-  await expect(note.locator('.ed-pairs li')).toHaveCount(6);
+  // The pairs come from the data: count them there.
+  const pairs = await page.evaluate(async () => {
+    const d = await (await fetch('data/cards.json')).json();
+    return new Set(d.cards.filter((c: { edition?: string; pair?: string }) => c.edition === 'm' || c.edition === 'f').map((c: { pair?: string }) => c.pair)).size;
+  });
+  const words = ['', 'one', 'Both', 'three', 'four', 'five', 'six'];
+  await note.getByRole('button', { name: pairs === 2 ? 'Both pairs' : `All ${words[pairs]} pairs` }).click();
+  await expect(note.locator('.ed-pairs li')).toHaveCount(pairs);
+  await expect(note).toContainText(`They differ in ${words[pairs]} places`);
   await note.getByRole('button', { name: 'Open the male copy' }).click();
   await expect(page.locator('.opener .ed-note:visible')).toContainText('Yours is the male copy: instead of Harriet Jacobs you will meet Frederick Douglass');
   await page.goto('/#focus=jacobs-garret');
@@ -550,4 +557,26 @@ test('Russian descent speaks Russian in its empty stretches', async ({ page }) =
   const quiet = page.locator('.d-quiet').first();
   await expect(quiet).toBeAttached();
   await expect(quiet).not.toContainText(/archive|records|stretch|sources/i);
+});
+
+test('counts agree: a chapter has as many cards in the contents, its end and the descent', async ({ page }) => {
+  await page.goto('/');
+  const row = await page.locator('#ch-v5 h3', { hasText: /cards?/ }).first().textContent();
+  const n = Number(row?.match(/(\d+)\s+cards?/)?.[1]);
+  expect(n).toBeGreaterThan(0);
+  await page.goto('/#view=descent&zoom=1');
+  const era = (await page.locator('a.d-era[data-chapter="v5"]').textContent()) ?? '';
+  expect(Number(era.match(/(\d+)\s+cards?\s+in\s+this\s+era/)?.[1])).toBe(n);
+});
+
+test('roots: a person is not written as a band', async ({ page }) => {
+  await page.goto('/#view=roots&artist=john-coltrane');
+  const m = page.locator('.r-member').first();
+  await expect(m).toContainText('Miles Davis, who led the band John Coltrane played in');
+  await expect(page.locator('.r-col')).not.toContainText('Miles Davis, of John Coltrane');
+});
+
+test('a first visit to the engine room does not claim a card was opened', async ({ page }) => {
+  await page.goto('/#view=engine');
+  await expect(page.locator('.e-yaml p').first()).toContainText('One card');
 });

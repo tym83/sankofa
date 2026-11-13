@@ -9,6 +9,7 @@ import 'd3-transition';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { buildGraph, grewFrom, headline, layout, radius, reach, yearY, type GEdge, type GNode, type Graph, type MapCard } from '../lib/rootsMap';
+import { nbsp } from '../lib/typo';
 import { placeName, KIND_LABEL, searchArtists, type Artist, type LinkKind } from '../lib/roots';
 
 const NS = 'http://www.w3.org/2000/svg';
@@ -74,7 +75,7 @@ export class RootsMap {
       h('div.kicker', {}, t('Roots')),
       h('h2', {}),
       h('div.rm-search', {}, this.input, this.results),
-      h('p.rm-hint-line', {}, pick({ en: 'Tap an artist to light its way to the roots.', ru: 'Коснитесь исполнителя — загорится его путь к корням.' })),
+      h('p.rm-hint-line', {}, pick({ en: 'Tap an artist to light its way to the roots. Later artists are further up ↑', ru: 'Коснитесь исполнителя — загорится его путь к корням. Выше — более поздние исполнители ↑' })),
     );
     this.el = h('section.rmap', { 'aria-label': pick({ en: 'The music map', ru: 'Карта музыки' }), tabindex: '-1' }, bar, this.head, this.stage, legend, this.info);
     this.el.addEventListener('keydown', (e) => {
@@ -127,7 +128,8 @@ export class RootsMap {
     const hl = headline(g);
     const rc = hl.root ? this.app.set.get(hl.root.id.slice(5)) : undefined;
     const rootInline = rc?.inline || (hl.root ? (lang() === 'ru' ? `«${hl.root.label}»` : hl.root.label.charAt(0).toLowerCase() + hl.root.label.slice(1)) : '');
-    this.head.querySelector('h2')!.textContent = hl.root
+    // Set explicitly: the heading is written before the page-wide typesetter starts.
+    this.head.querySelector('h2')!.textContent = nbsp(hl.root
       ? pick({
           en:
             hl.count === hl.total
@@ -138,7 +140,7 @@ export class RootsMap {
               ? `Все ${count(hl.total, 'artist', 'ru')} ${pluralLead(hl.total)} к одному корню: ${rootInline}`
               : `Из ${count(hl.total, 'artistOf', 'ru')} ${hl.count} ${pluralLead(hl.count)} к одному корню: ${rootInline}`,
         })
-      : pick({ en: 'Every chain on one map', ru: 'Все цепочки на одной карте' });
+      : pick({ en: 'Every chain on one map', ru: 'Все цепочки на одной карте' }), lang());
     if (!this.phone) {
       this.zoomer
         .scaleExtent([0.4, 6])
@@ -163,17 +165,13 @@ export class RootsMap {
     }
     this.placeLabels();
     this.showInfo();
-    // Phones open on the roots at the bottom, with the artists above them, and
-    // say that later artists are further up.
+    // Phones open on the roots at the bottom, with the artists above them; the
+    // line under the search says that later artists are further up.
     if (this.phone) {
       const deepest = Math.max(...g.nodes.map((n) => n.y!));
       requestAnimationFrame(() => {
         this.stage.scrollTop = Math.max(0, deepest + 90 - this.stage.clientHeight);
         this.placeLabels();
-        const hint = h('div.rm-scroll-hint', { 'aria-hidden': 'true' }, h('span', {}, pick({ en: '↑ Later artists are further up', ru: '↑ Выше — более поздние исполнители' })));
-        this.stage.prepend(hint);
-        // Armed after the opening jump, so only the reader's own scroll hides it.
-        setTimeout(() => this.stage.addEventListener('scroll', () => hint.classList.add('gone'), { once: true, passive: true }), 400);
       });
     }
   }

@@ -623,6 +623,7 @@ export class Listen {
 
   /** One line of subtitles; the newest on top, the older fading below. */
   private liveLate?: HTMLElement;
+  private liveCall?: HTMLElement;
 
   private say(s: Sub): void {
     if (!this.isOpen) return;
@@ -631,6 +632,11 @@ export class Listen {
     if (s.kind === 'late') {
       this.liveLate?.remove();
       this.liveLate = line;
+      line.dataset.drum = s.drum;
+    }
+    // So is the newest call line: its count is the drum label's count.
+    if (s.kind === 'call') {
+      this.liveCall = line;
       line.dataset.drum = s.drum;
     }
     this.subs.prepend(line);
@@ -835,6 +841,11 @@ export class Listen {
     this.button.setAttribute('aria-pressed', String(this.playingNow));
     this.el.classList.toggle('playing', this.playingNow);
     this.renderNodes();
+    const lc = this.liveCall;
+    if (lc && lc.isConnected) {
+      const v = this.source.voices.find((_, k) => drumName(k) === lc.dataset.drum);
+      if (v) lc.textContent = subtitle({ kind: 'call', drum: lc.dataset.drum!, ready: v.ready, silent: v.notReady }, lang());
+    }
     // Keep the newest late line in step with the drum's own countdown.
     const ll = this.liveLate;
     if (ll && ll.isConnected) {

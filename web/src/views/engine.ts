@@ -94,7 +94,7 @@ const MECHANISMS: Mechanism[] = [
     name: 'Roots',
     culture: {
       en: 'Rock, pop and metal grew from the blues, gospel and rhythm and blues, one documented step at a time.',
-      ru: 'Рок, поп и метал выросли из блюза, госпела и ритм-энд-блюза — шаг за документированным шагом.',
+      ru: 'Рок, поп и метал выросли из блюза, госпела и ритм-н-блюза — шаг за шагом, и каждый шаг задокументирован.',
     },
     does: {
       en: 'Every artist is traced, link by sourced link, back to a card of the museum; every link carries two sources.',
@@ -231,12 +231,19 @@ export class Engine {
   /** The YAML of the card the reader opened last. */
   private renderYaml(): void {
     const path = readPath();
-    const id = [...path].reverse().find((x) => this.app.raw(x)) ?? 'equiano';
-    const c = this.app.raw(id) ?? this.app.set.all()[0];
+    const opened = [...path].reverse().find((x) => this.app.raw(x));
+    const c = this.app.raw(opened ?? 'equiano') ?? this.app.set.all()[0];
     if (!c) return;
     const title = this.app.set.get(c.id)?.title ?? c.title;
     this.yamlHost.replaceChildren(
-      h('p', {}, pick({ en: `The card you opened last, “${title}”, as the cluster stores it:`, ru: `Последняя открытая вами карточка, «${title}», — так её хранит кластер:` })),
+      h(
+        'p',
+        {},
+        // A first visit has opened nothing yet: show one card without claiming it was theirs.
+        opened
+          ? pick({ en: `The card you opened last, “${title}”, as the cluster stores it:`, ru: `Последняя открытая вами карточка, «${title}», — так её хранит кластер:` })
+          : pick({ en: `One card, “${title}”, as the cluster stores it:`, ru: `Одна карточка, «${title}», — так её хранит кластер:` }),
+      ),
       term(`$ kubectl get card ${c.id} -o yaml\n${cardYaml(c)}`, true),
     );
   }

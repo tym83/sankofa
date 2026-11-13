@@ -6985,29 +6985,6 @@ html:lang(ru) .r-edge-head {
 .sig-q.wait {
   opacity: 0;
 }
-.rm-scroll-hint {
-  position: sticky;
-  top: 10px;
-  height: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  pointer-events: none;
-  transition: opacity 0.4s var(--ease);
-}
-.rm-scroll-hint span {
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(7, 7, 13, 0.8);
-  border: 1px solid rgba(242, 233, 216, 0.18);
-  font-family: var(--font-sans);
-  font-size: 12px;
-  color: var(--ink-2);
-  white-space: nowrap;
-}
-.rm-scroll-hint.gone {
-  opacity: 0;
-}
 /* a band's chain going on through one of its members */
 .r-member {
   display: block;
@@ -7059,4 +7036,17 @@ html:lang(ru) .r-edge-head {
 .vt .vtag {
   display: inline !important;
   writing-mode: inherit;
+}
+/* Level 5: "Open the card" stays in view while the document scrolls under it. */
+.desk-in .btn {
+  position: sticky;
+  bottom: 12px;
+  z-index: 1;
+  background: #efe7d6;
+  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.45);
+}
+@media (max-width: 760px) {
+  .desk-in figcaption {
+    display: none;
+  }
 }
