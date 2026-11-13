@@ -55,6 +55,7 @@ export function pluralRu(n: number, forms: [string, string, string]): string {
 
 const NOUNS: Record<string, { en: [string, string]; ru: [string, string, string] }> = {
   card: { en: ['card', 'cards'], ru: ['карточка', 'карточки', 'карточек'] },
+  chain: { en: ['chain', 'chains'], ru: ['цепочка', 'цепочки', 'цепочек'] },
   year: { en: ['year', 'years'], ru: ['год', 'года', 'лет'] },
   node: { en: ['node', 'nodes'], ru: ['узел', 'узла', 'узлов'] },
   pod: { en: ['pod', 'pods'], ru: ['под', 'пода', 'подов'] },
@@ -269,7 +270,7 @@ export const RU: Record<string, string> = {
   Call: 'Зов',
   node: 'узел',
   silent: 'молчит',
-  '{ready} ready': 'готовы: {ready}',
+  '{ready} ready': 'готово {ready}',
   '{n} silent': 'молчат: {n}',
   '{alive} of {total} playing · {ready} answering': 'Играют: {alive} из {total} · откликаются: {ready}',
   '{n} silent pods': 'молчат: {n}',
@@ -279,12 +280,6 @@ export const RU: Record<string, string> = {
     'Колокол — это управляющий слой кластера. Он держит западноафриканский колокольный рисунок 12/8, семь ударов на двенадцать долей, и каждый барабан ансамбля, включая {talk}, играет свою партию, сверяясь с этим общим рисунком; так же и узлы сверяют время с управляющим слоем. Каждый узел — барабан со своей партией, вплетённой в общий узор: он играет, пока узел вовремя подаёт сигнал «я жив», сбивается, когда сердцебиение запаздывает, и замолкает, когда узел останавливается. Потом кластер зовёт, и каждый готовый под откликается, как в {spirit}; под, который не готов, оставляет место отклика пустым — и вы слышите эту паузу.',
 };
 
-/** The one way the museum counts its cards: "96 cards in your copy · 102 in both". */
-export function copyCount(mine: number, total: number, l: Lang = current): string {
-  return l === 'ru'
-    ? `${count(mine, 'card', 'ru')} в вашем экземпляре · ${total} в обоих`
-    : `${count(mine, 'card', 'en')} in your copy · ${total} in both`;
-}
 
 /** Licence words and the museum's own credit phrases, in the reader's language. Names stay as they are. */
 const CREDIT_RU: [RegExp, string][] = [

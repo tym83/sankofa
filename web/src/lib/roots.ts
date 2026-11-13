@@ -139,15 +139,16 @@ export function suggestions(all: Artist[], n = 6): Artist[] {
 }
 
 export const KIND_LABEL: Record<LinkKind, { en: string; ru: string; glyph: string }> = {
-  influence: { en: 'named as influence', ru: 'называл влиянием', glyph: '❝' },
-  cover: { en: 'covered', ru: 'перепел', glyph: '↻' },
-  sample: { en: 'sampled', ru: 'взял сэмпл', glyph: '◐' },
-  interpolation: { en: 'interpolated', ru: 'цитата из песни', glyph: '♪' },
-  member: { en: 'played in', ru: 'играл в', glyph: '◎' },
-  producer: { en: 'produced', ru: 'продюсер', glyph: '◇' },
+  // Neutral nouns, so the label never has to agree with a name in number or gender.
+  influence: { en: 'influence', ru: 'влияние', glyph: '❝' },
+  cover: { en: 'cover', ru: 'кавер', glyph: '↻' },
+  sample: { en: 'sample', ru: 'сэмпл', glyph: '◐' },
+  interpolation: { en: 'interpolation', ru: 'интерполяция', glyph: '♪' },
+  member: { en: 'member', ru: 'участник', glyph: '◎' },
+  producer: { en: 'producer', ru: 'продюсер', glyph: '◇' },
   scene: { en: 'same scene', ru: 'одна сцена', glyph: '⁂' },
-  teacher: { en: 'taught', ru: 'учил', glyph: '✎' },
-  collaboration: { en: 'worked with', ru: 'работал вместе', glyph: '⇄' },
+  teacher: { en: 'teacher', ru: 'учитель', glyph: '✎' },
+  collaboration: { en: 'collaboration', ru: 'совместная работа', glyph: '⇄' },
 };
 
 /** A museum card as far as lineage needs it: genres name the genres they grew from. */
@@ -210,9 +211,8 @@ export function longestRoots(all: Artist[], cards: Map<string, LineageCard>, n =
     .filter((a) => a.paths.length)
     .map((a) => {
       const chain = deepest(extendLineage(buildTree(a, byId), cards));
-      const borrowed = chain
-        .map((ref, i) => (i ? linkTo(byId.get(chain[i - 1]), ref) : undefined))
-        .find((l) => l && (l.kind === 'sample' || l.kind === 'cover' || l.kind === 'interpolation') && l.what);
+      // The tile speaks for its own artist: the first link out of that artist.
+      const borrowed = chain.length > 1 ? linkTo(a, chain[1]) : undefined;
       return { artist: a, chain, borrowed };
     });
   return rows.sort((x, y) => y.chain.length - x.chain.length || Number(!!y.borrowed) - Number(!!x.borrowed) || x.artist.name.localeCompare(y.artist.name)).slice(0, n);

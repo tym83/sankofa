@@ -113,8 +113,8 @@ describe('roots as a graph', () => {
 import { KIND_LABEL } from '../src/lib/roots';
 describe('new kinds', () => {
   it('label interpolation and collaboration in both languages', () => {
-    expect(KIND_LABEL.interpolation).toMatchObject({ en: 'interpolated', ru: 'цитата из песни' });
-    expect(KIND_LABEL.collaboration).toMatchObject({ en: 'worked with', ru: 'работал вместе' });
+    expect(KIND_LABEL.interpolation).toMatchObject({ en: 'interpolation', ru: 'интерполяция' });
+    expect(KIND_LABEL.collaboration).toMatchObject({ en: 'collaboration', ru: 'совместная работа' });
   });
 });
 

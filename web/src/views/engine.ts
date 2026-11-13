@@ -4,7 +4,7 @@
 import type { App } from '../app';
 import { cardTable, cardYaml } from '../lib/cardYaml';
 import { copyText, h, svgIcon, toast } from '../lib/dom';
-import { copyCount, pick, t } from '../lib/i18n';
+import { count, pick, t } from '../lib/i18n';
 import { readerCards } from '../lib/atlasModel';
 import { readPath } from '../lib/reader';
 
@@ -171,11 +171,11 @@ export class Engine {
           'p',
           {},
           pick({
-            en: `This release holds ${copyCount(mine, raw.length, 'en')}; each is a Card object of the API group sankofa.kuberoot.dev. Griot, the cluster’s memory, loads them from the content repository; the museum and the terminal read the same objects.`,
-            ru: `В этом релизе ${copyCount(mine, raw.length, 'ru')}; каждая — объект Card из группы API sankofa.kuberoot.dev. Griot, память кластера, загружает их из репозитория содержания, а музей и терминал читают одни и те же объекты.`,
+            en: `Your copy of the museum holds ${count(mine, 'card', 'en')}; each is a Card object of the API group sankofa.kuberoot.dev. Griot, the cluster’s memory, loads them from the content repository; the museum and the terminal read the same objects.`,
+            ru: `В вашем экземпляре музея ${count(mine, 'card', 'ru')}; каждая — объект Card из группы API sankofa.kuberoot.dev. Griot, память кластера, загружает их из репозитория содержания, а музей и терминал читают одни и те же объекты.`,
           }),
         ),
-        h('div.e-count', { 'aria-hidden': 'true' }, h('b', {}, String(raw.length)), h('span', {}, pick({ en: 'Card objects', ru: 'объектов Card' }))),
+        h('div.e-count', { 'aria-hidden': 'true' }, h('b', {}, String(mine)), h('span', {}, pick({ en: 'Card objects', ru: 'объектов Card' }))),
         term(`$ kubectl get cards\n${cardTable(raw)}\n…`, true, true),
         this.yamlHost,
       ),

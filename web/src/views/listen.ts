@@ -5,7 +5,7 @@ import type { App } from '../app';
 import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
-import { subtitle, type Sub } from '../lib/subtitles';
+import { guestLabel, subtitle, type Sub } from '../lib/subtitles';
 import { BELL, GRACE, mend, roomState, simTargets, type RoomState, GUEST_EVERY, GUEST_PART, PARTS, PULSES, guestPitch, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
 const PULSE = 0.2; // seconds per pulse: one 12/8 cycle is 2.4 s
@@ -589,9 +589,9 @@ export class Listen {
             : pick({ en: 'declared down · pods silent', ru: 'объявлен выбывшим · поды молчат' })
         : v.alive
           ? v.rebalancing
-            ? pick({ en: `back · ${v.ready} ready, more as pods restart`, ru: `вернулся · готовы: ${v.ready}, остальные по мере перезапуска` })
+            ? pick({ en: `back · ${v.ready} ready, more as pods restart`, ru: `вернулся · готово ${v.ready}, остальные по мере перезапуска` })
             : small
-              ? `${v.ready}${v.adopted ? ` (+${v.adopted})` : ''} ${pick({ en: 'ready', ru: 'готовы' })}`
+              ? pick({ en: `${v.ready}${v.adopted ? ` (+${v.adopted})` : ''} ready`, ru: `готово ${v.ready}${v.adopted ? ` (+${v.adopted})` : ''}` })
               : (v.adopted ? pick({ en: `took over ${v.adopted} · `, ru: `принял ${v.adopted} · ` }) : '') + t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
           : t('silent');
       g.classList.toggle('broken', !!v.broken);
@@ -684,12 +684,9 @@ export class Listen {
   private paintNext(): void {
     const g = this.source.guests;
     if (g.size) {
-      const names = [...g.keys()];
+      const names = [...g.keys()].map((n) => guestLabel(n, lang()));
       const list = (and: string) => (names.length > 1 ? `${names.slice(0, -1).join(', ')} ${and} ${names[names.length - 1]}` : names[0]);
-      this.next.textContent =
-        names.length > 1
-          ? pick({ en: `Guests playing now: ${list('and')}`, ru: `Сейчас играют гости: ${list('и')}` })
-          : pick({ en: `Guest playing now: ${list('and')}`, ru: `Сейчас играет гость: ${list('и')}` });
+      this.next.textContent = pick({ en: `Playing now: ${list('and')}`, ru: `Сейчас ${names.length > 1 ? 'играют' : 'играет'} ${list('и')}` });
       return;
     }
     if (!this.source.lastGuestAt || this.source.mode !== 'live') {

@@ -267,9 +267,11 @@ test('descent cards hold their text and the level control changes what is shown'
   await expect(page.locator('.dm-era .main')).not.toBeEmpty();
 });
 
-test('each chapter ends on the cluster, and maps never stack labels', async ({ page }) => {
+test('each chapter ends on a quiet editorial beat, and maps never stack labels', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('.ch-cluster').first()).toContainText(/Griot/);
+  await expect(page.locator('.strip h3').first()).toHaveText('More from this chapter');
+  await expect(page.locator('.ch-cluster')).toHaveCount(0);
+  await expect(page.locator('.toc-grid')).not.toContainText(/release/);
   await expect(page.locator('.toc-head h2')).toHaveText(/Eight\schapters|Восемь\sглав/);
   const step = page.locator('article.chapter').nth(4).locator('.step').nth(1);
   await step.evaluate((el) => el.scrollIntoView({ block: 'center' }));
@@ -370,9 +372,9 @@ test('the listening room narrates leases, calls and a guest drummer joining and 
   await expect(page.locator('.l-badge')).toHaveText(/Live/);
   await expect(page.locator('.l-what')).toContainText('What you are hearing');
   await expect(page.locator('.l-subs')).toContainText('Atsimevu checked in: alive');
-  await expect(page.locator('.l-subs li').first()).toHaveText('A new program, guest-drummer, joins on Sogo');
+  await expect(page.locator('.l-subs li').first()).toHaveText('A guest drummer joins on Sogo');
   await expect(page.locator('.l-pod.guest')).toHaveCount(1);
-  await expect(page.locator('.l-next')).toContainText('guest-drummer');
+  await expect(page.locator('.l-next')).toContainText(/Playing\snow:\sa\sguest\sdrummer/);
 });
 
 test('in the demo the guest drummer comes and goes, in Russian too', async ({ page }) => {
@@ -381,10 +383,10 @@ test('in the demo the guest drummer comes and goes, in Russian too', async ({ pa
   await page.clock.runFor(5000);
   await expect(page.locator('.l-badge')).toHaveText(/демо/);
   await page.clock.runFor(10000);
-  await expect(page.locator('.l-subs')).toContainText('Вступает новая программа guest-drummer');
+  await expect(page.locator('.l-subs')).toContainText(/Вступает\sприглашённый\sбарабанщик/);
   await expect(page.locator('.l-pod.guest')).toHaveCount(1);
   await page.clock.runFor(31000);
-  await expect(page.locator('.l-subs')).toContainText('Программа guest-drummer уходит');
+  await expect(page.locator('.l-subs')).toContainText(/Приглашённый\sбарабанщик\sуходит/);
   await expect(page.locator('.l-pod.guest')).toHaveCount(0);
 });
 
@@ -393,7 +395,7 @@ test('roots unwind past the card, name the kind of each link and what was borrow
   await serveFixtureRoots(page);
   await page.goto('/#view=roots&artist=the-prodigy');
   await expect(page.locator('.r-tree')).toBeVisible();
-  await expect(page.locator('.r-edge.k-sample .r-kind')).toContainText('sampled');
+  await expect(page.locator('.r-edge.k-sample .r-kind')).toContainText('sample');
   await expect(page.locator('.r-edge.k-sample .r-say')).toContainText('handclaps');
   // gospel grows from spirituals: the chain goes on past the first card
   await expect(page.locator('.r-edge.r-lin').first()).toBeVisible();
@@ -402,7 +404,7 @@ test('roots unwind past the card, name the kind of each link and what was borrow
   await page.goto('about:blank');
   await page.goto('/#view=roots&artist=television&lang=ru');
   await expect(page.locator('.r-story')).toContainText('[заглушка]');
-  await expect(page.locator('.r-kind').first()).toContainText('называл влиянием');
+  await expect(page.locator('.r-kind').first()).toContainText('влияние');
 
   await page.goto('about:blank');
   await page.goto('/#view=roots');
@@ -561,8 +563,11 @@ test('Russian descent speaks Russian in its empty stretches', async ({ page }) =
 
 test('counts agree: a chapter has as many cards in the contents, its end and the descent', async ({ page }) => {
   await page.goto('/');
-  const row = await page.locator('#ch-v5 h3', { hasText: /cards?/ }).first().textContent();
-  const n = Number(row?.match(/(\d+)\s+cards?/)?.[1]);
+  // The chapter's cards in the male copy (the setup pins it), counted from the data.
+  const n = await page.evaluate(async () => {
+    const d = await (await fetch('data/cards.json')).json();
+    return d.cards.filter((c: { era?: string; edition?: string }) => c.era === 'v5' && (!c.edition || c.edition === 'both' || c.edition === 'm')).length;
+  });
   expect(n).toBeGreaterThan(0);
   await page.goto('/#view=descent&zoom=1');
   const era = (await page.locator('a.d-era[data-chapter="v5"]').textContent()) ?? '';

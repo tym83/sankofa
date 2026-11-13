@@ -353,6 +353,7 @@ export class Descent {
       h('div.kicker', {}, t('{from} – {to}', { from: START, to: NOW })),
       h('h2', {}, t('Through the centuries')),
       h('p', {}, t('Seven hundred years of Black culture, one year at a time. Scroll down: every screen is time, and the deeper you go, the closer you come to today.')),
+      h('p.d-why', {}, pick({ en: 'The descent is the museum in detail: the atlas shows where, the descent how it unfolded year by year.', ru: 'Спуск — музей в подробностях: атлас показывает где, спуск — как всё разворачивалось год за годом.' })),
       h(
         'p.d-count',
         {},

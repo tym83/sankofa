@@ -25,11 +25,13 @@ export function subtitle(s: Sub, l: Lang): string {
       const quiet = s.silent ? (ru ? `, ${count(s.silent, 'program', 'ru')} ${s.silent % 10 === 1 && s.silent % 100 !== 11 ? 'молчит' : 'молчат'}` : `, ${s.silent} silent`) : '';
       return ru ? `Кластер зовёт ${s.drum} — ${answer}${quiet}` : `The cluster calls ${s.drum}: ${answer}${quiet}`;
     }
-    case 'join':
-      // Workload names are names, not words: the sentence says what they are.
-      return ru ? `Вступает новая программа ${s.name} на барабане ${s.drum}` : `A new program, ${s.name}, joins on ${s.drum}`;
+    case 'join': {
+      // Workload names are object names, not words: say who they are.
+      const g = guestLabel(s.name, l);
+      return ru ? `Вступает ${g} — на барабане ${s.drum}` : `${cap(g)} joins on ${s.drum}`;
+    }
     case 'leave':
-      return ru ? `Программа ${s.name} уходит` : `The ${s.name} program leaves`;
+      return ru ? `${cap(guestLabel(s.name, l))} уходит` : `${cap(guestLabel(s.name, l))} leaves`;
     case 'down':
       return ru ? `${s.drum} замолчал и объявлен выбывшим` : `${s.drum} has fallen silent and is declared down`;
     case 'stopped':
@@ -50,3 +52,16 @@ export function subtitle(s: Sub, l: Lang): string {
       return ru ? `${count(s.n, 'program', 'ru')} с барабана ${s.drum} ${s.n === 1 ? 'перешла' : 'перешли'} к остальным` : `${count(s.n, 'program', 'en')} from ${s.drum} moved to the others`;
   }
 }
+
+/** What a guest workload is, in words: "guest-drummer" is a guest drummer. */
+export function guestLabel(name: string, l: Lang): string {
+  const known: Record<string, { en: string; ru: string }> = {
+    'guest-drummer': { en: 'a guest drummer', ru: 'приглашённый барабанщик' },
+    credits: { en: 'the closing credits', ru: 'финальные титры' },
+  };
+  const k = known[name];
+  if (k) return l === 'ru' ? k.ru : k.en;
+  return l === 'ru' ? `программа ${name}` : `the ${name} program`;
+}
+
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);

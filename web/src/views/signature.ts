@@ -5,7 +5,7 @@ import type { App } from '../app';
 import type { Card } from '../lib/types';
 import { formatYears } from '../lib/cards';
 import { h, reducedMotion } from '../lib/dom';
-import { lang, pick, t } from '../lib/i18n';
+import { lang, pick } from '../lib/i18n';
 import { progressive } from '../lib/media';
 
 type Kind = 'counter' | 'plate' | 'insert' | 'quote';
@@ -159,17 +159,6 @@ function insert(app: App, c: Card, link: HTMLElement, era: string): HTMLElement 
 }
 
 /** One line at a chapter's end tying it to the cluster. */
-export function chapterCoda(chapterId: string, countText: string): HTMLElement {
-  return h(
-    'p.ch-cluster',
-    {},
-    pick({
-      en: `These ${countText} are objects in release ${chapterId} of the cluster; Griot remembers them. `,
-      ru: `Эти ${countText} — объекты релиза ${chapterId} в кластере; Griot их помнит. `,
-    }),
-    h('a', { href: '#view=engine', 'data-engine': '' }, t('The engine room') + ' →'),
-  );
-}
 
 function kindLink(c: Card): string {
   return `${pick({ en: 'Open the card', ru: 'Открыть карточку' })} · ${formatYears(c.years)} →`;

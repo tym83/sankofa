@@ -62,7 +62,7 @@ export class RootsMap {
           'li',
           { style: `--kc:var(--k-${k === 'lineage' ? 'lineage' : k})` },
           h('i'),
-          k === 'lineage' ? pick({ en: 'genre grew out of', ru: 'жанр вырос из' }) : pick(KIND_LABEL[k]),
+          k === 'lineage' ? pick({ en: 'rooted in', ru: 'корни в' }) : pick(KIND_LABEL[k]),
         ),
       ),
     );

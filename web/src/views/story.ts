@@ -5,12 +5,12 @@ import { richText } from '../app';
 import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL, links } from '../lib/cards';
-import { vtags, bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
-import { count, lang, pick, t } from '../lib/i18n';
+import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
+import { lang, pick, t } from '../lib/i18n';
 import { chapterCopy, eraColor, isNonPlace, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
 import { mediaSrc, progressive } from '../lib/media';
-import { chapterCoda, signature, SIGNATURE_CARD } from './signature';
+import { signature, SIGNATURE_CARD } from './signature';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
 import { Timeline } from './timeline';
 import { editionNote } from './editionNote';
@@ -165,7 +165,7 @@ function toc(app: App): HTMLElement {
           'a.toc-item.reveal',
           { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `--era:${eraColor(ch.id)}` },
           heroImg(app, withHero(app, ch).ch, false, withHero(app, ch).pos, '(max-width: 720px) 46vw, 300px') ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, ch.id),
-          h('span.num', {}, pick({ en: `Chapter ${app.chapters.indexOf(ch) + 1}`, ru: `Глава ${app.chapters.indexOf(ch) + 1}` }), h('small', {}, ...vtags(` · ${t('release')} ${ch.id}`))),
+          h('span.num', {}, pick({ en: `Chapter ${app.chapters.indexOf(ch) + 1}`, ru: `Глава ${app.chapters.indexOf(ch) + 1}` })),
           h('span.t', {}, h('b', {}, ch.title), h('span', {}, ch.kicker)),
         ),
       ),
@@ -191,10 +191,28 @@ const HERO_FROM_CARD: Record<string, { card: string; pos: string }> = {
   v5: { card: 'hurston', pos: '50% 22%' },
 };
 
+/** Chapter heroes that portray the subject of a paired card. */
+const HERO_SUBJECT: Record<string, string> = { v3: 'douglass-covey' };
+
+/**
+ * Pictures follow the copy the reader holds: a paired card of the other copy
+ * gives way to its counterpart in this one. Only pictures do; prose stays.
+ */
+function inCopy(app: App, c: Card): Card {
+  if (c.edition === 'both' || c.edition === app.edition) return c;
+  const p = app.set.partner(c.id);
+  return p && p.media?.some((m) => m.type === 'image') ? p : c;
+}
+
 function withHero(app: App, ch: Chapter): { ch: Chapter; pos?: string; swapped: boolean } {
   const swap = HERO_FROM_CARD[ch.id];
   const m = swap ? app.set.get(swap.card)?.media?.find((x) => x.type === 'image') : undefined;
-  return m ? { ch: { ...ch, hero: { ...m, type: 'image' } }, pos: swap!.pos, swapped: true } : { ch, swapped: false };
+  if (m) return { ch: { ...ch, hero: { ...m, type: 'image' } }, pos: swap!.pos, swapped: true };
+  // A hero that portrays a paired card's subject follows the copy too.
+  const owner = HERO_SUBJECT[ch.id] ? app.set.get(HERO_SUBJECT[ch.id]) : ch.hero?.file ? app.set.all().find((c) => c.pair && c.media?.some((x) => x.file === ch.hero!.file)) : undefined;
+  const mine = owner ? inCopy(app, owner) : undefined;
+  const mm = mine && mine !== owner ? mine.media?.find((x) => x.type === 'image') : undefined;
+  return mm ? { ch: { ...ch, hero: { ...mm, type: 'image' } }, pos: '50% 25%', swapped: true } : { ch, swapped: false };
 }
 
 function chapter(app: App, ch0: Chapter): HTMLElement {
@@ -227,7 +245,9 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
   const stepImage: (Card | undefined)[] = ch.steps.map((s, i) => {
     // At most three pictures per chapter, so the map and the words breathe.
     if (i === 0 || used.size >= 3) return undefined;
-    const c = stepCards(app, s).find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id) && x.id !== SIGNATURE_CARD[ch.id]);
+    const c = stepCards(app, s)
+      .map((x) => inCopy(app, x))
+      .find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id) && x.id !== SIGNATURE_CARD[ch.id] && x.media?.find((m) => m.type === 'image')?.file !== ch.hero?.file);
     if (c) used.add(c.id);
     return c;
   });
@@ -268,17 +288,17 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
             b.remove();
           },
         },
-        t('See all {cards}', { cards: count(cards.length, 'card') }),
+        pick({ en: 'Show the others', ru: 'Показать остальные' }),
       )
     : null;
+  // A quiet editorial beat, not a catalogue: a few more pages from the chapter.
   const strip = cards.length
     ? h(
         'section.strip',
         {},
-        h('h3', {}, ...vtags(t('In {chapter}: {cards}', { chapter: ch.id, cards: count(cards.length, 'card') }))),
+        h('h3', {}, pick({ en: 'More from this chapter', ru: 'Ещё из этой главы' })),
         h('div.strip-row', {}, stripCards.slice(0, LEAD).map((c) => teaser(app, c))),
         more,
-        chapterCoda(ch.id, count(cards.length, 'card')),
       )
     : null;
 
@@ -470,6 +490,7 @@ function finale(app: App): HTMLElement {
     h('div.kicker', {}, t('The atlas')),
     h('h2', { id: 'finale-title' }, t('Seven centuries on one map')),
     h('p', {}, t('Every card has a place and a time. Brush the years, zoom from oceans to a single page, and watch the routes the music and the people took.')),
+    h('p.finale-why', {}, pick({ en: 'The timeline below is the whole museum in time, seven centuries in one sweep; the atlas lays it out in space, the descent goes through it in detail.', ru: 'Лента времени ниже — весь музей во времени, семь веков одним взглядом; атлас раскладывает его в пространстве, спуск проходит его в подробностях.' })),
     h(
       'div.actions',
       {},
@@ -528,11 +549,10 @@ function heroParallax(): void {
 
 /**
  * The ending returns to the bird of the title: go back and fetch it. A last
- * picture, the proverb, and the way on: the dictionary in the terminal.
+ * picture, the proverb, and the ways on.
  */
 function coda(app: App): HTMLElement {
   const art = (app.set.get('adinkra') ?? app.raw('adinkra'))?.media?.find((m) => m.type === 'image');
-  const cmd = 'sankofa dict';
   return h(
     'section.coda',
     { 'aria-labelledby': 'coda-title' },
@@ -556,12 +576,6 @@ function coda(app: App): HTMLElement {
         h('button.btn.primary', { onclick: () => app.openDescent() }, t('Descend through the centuries')),
         h('a.btn', { href: '#view=engine', 'data-engine': '' }, t('The engine room')),
         h('button.btn', { onclick: () => app.openBook() }, t('Your book')),
-      ),
-      h(
-        'p.coda-term',
-        {},
-        pick({ en: 'Or open the dictionary where engineers live:', ru: 'Или откройте словарь там, где живут инженеры:' }),
-        h('code', {}, cmd),
       ),
       art ? h('p.credit', {}, art.caption ? art.caption + ' · ' : '', art.credit, ' · ', art.license) : null,
     ),

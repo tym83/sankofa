@@ -4,7 +4,7 @@ import type { App } from '../app';
 import { placeName, buildTree, chainLine, deepest, endCards, extendLineage, groupChildren, KIND_LABEL, quotes, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
 import { vtags, copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
 import { formatYears } from '../lib/cards';
-import { lang, pick, t } from '../lib/i18n';
+import { count, lang, pick, t } from '../lib/i18n';
 import { mediaSrc } from '../lib/media';
 import { eraColor } from '../lib/atlasModel';
 
@@ -53,8 +53,8 @@ export class Roots {
         'p.r-lede',
         {},
         pick({
-          en: 'Pick a band or an artist. Link by documented link, every one with two sources, the chain runs back to Black traditions and ends at a card of the museum.',
-          ru: 'Выберите группу или исполнителя. Звено за звеном, у каждого два источника, цепочка уходит назад, к чёрным традициям, и заканчивается карточкой музея.',
+          en: 'Pick a band or an artist. The chain runs back from them to Black traditions and ends at a card of the museum; every link in it is documented by two sources.',
+          ru: 'Выберите группу или исполнителя. Цепочка ведёт от них назад, к чёрным традициям, и заканчивается карточкой музея; каждое её звено подтверждено двумя источниками.',
         }),
       ),
       h('div.r-search', {}, searchIcon(), this.input, this.results),
@@ -183,7 +183,7 @@ export class Roots {
                   { href: `#view=roots&artist=${artist.id}`, 'data-artist': artist.id },
                   h('small', {}, pick({ en: `${chain.length - 1} steps back`, ru: `шагов назад: ${chain.length - 1}` })),
                   h('b', {}, this.nameOf(artist)),
-                  borrowed ? h('span.r-what', {}, (lang() === 'ru' && borrowed.whatRu) || borrowed.what || '') : null,
+                  borrowed ? h('span.r-what', {}, quotes((lang() === 'ru' && (borrowed.whatRu || borrowed.claimRu)) || borrowed.what || borrowed.claim, lang())) : null,
                   h('span.r-chain', {}, chainLine(chain, (r) => this.refName(r))),
                 ),
               ),
@@ -234,7 +234,7 @@ export class Roots {
         // a card's span would date the genre, not the link.
         const edge = g[0].lineage ? this.lineageEdge(from, to, step++) : this.edgeEl(g[0].link!, from, to, step++);
         const body = [edge, ...g.flatMap((c) => render(c, false))];
-        out.push(sub ? h('div.r-sub', { style: `--b:${gi}` }, h('span.r-branch-no', {}, pick({ en: `root ${gi + 1} of ${groups.length}`, ru: `корень ${gi + 1} из ${groups.length}` })), ...body) : h('div.r-run', {}, ...body));
+        out.push(sub ? h('div.r-sub', { style: `--b:${gi}` }, h('span.r-branch-no', {}, pick({ en: `branch ${gi + 1} of ${groups.length}`, ru: `ветвь ${gi + 1} из ${groups.length}` })), ...body) : h('div.r-run', {}, ...body));
       });
       return out;
     };
@@ -268,7 +268,7 @@ export class Roots {
         'div.r-tree',
         { 'data-root': id },
         story ? h('p.r-story', {}, story) : null,
-        h('p.r-count', {}, pick({ en: `${a.paths.length} ${a.paths.length === 1 ? 'chain' : 'chains'}, ${ends.length} ${ends.length === 1 ? 'root' : 'roots'} in the museum`, ru: `Цепочек: ${a.paths.length}, корней в музее: ${ends.length}` })),
+        h('p.r-count', {}, pick({ en: `${a.paths.length} ${a.paths.length === 1 ? 'chain leads' : 'chains lead'} back to ${ends.length} ${ends.length === 1 ? 'card' : 'cards'} of the museum`, ru: `${count(a.paths.length, 'chain', 'ru')} ${a.paths.length % 10 === 1 && a.paths.length % 100 !== 11 ? 'ведёт' : 'ведут'} к карточкам музея: ${ends.length}` })),
         column,
       ),
       close,
@@ -305,7 +305,7 @@ export class Roots {
     return h(
       'div.r-edge.r-lin.r-anim',
       { style: `--i:${i}` },
-      h('div.r-edge-head', {}, h('b', {}, from), h('span.r-arrow', { 'aria-hidden': 'true' }, '→'), h('b', {}, to.join(pick({ en: ' and ', ru: ' и ' }))), h('span.r-kind', {}, h('i', { 'aria-hidden': 'true' }, '↓'), pick({ en: 'grew out of', ru: 'выросло из' }))),
+      h('div.r-edge-head', {}, h('b', {}, from), h('span.r-arrow', { 'aria-hidden': 'true' }, '→'), h('b', {}, to.join(pick({ en: ' and ', ru: ' и ' }))), h('span.r-kind', {}, h('i', { 'aria-hidden': 'true' }, '↓'), pick({ en: 'rooted in', ru: 'корни в' }))),
     );
   }
 

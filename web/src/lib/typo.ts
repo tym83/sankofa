@@ -3,12 +3,33 @@
 
 const NBSP = ' ';
 
-const RU_SHORT = /(^|[\s(«„"—–-])(а|в|во|и|к|ко|о|об|обо|с|со|у|я|не|ни|но|на|за|из|от|до|по|под|над|при|без|для|же|ли|бы|как|что|это|его|её|их|он|она|они|мы|вы|ты)[ \t\n]+(?=\S)/giu;
-const EN_SHORT = /(^|[\s(“"—–])(a|an|the|of|to|in|on|at|by|for|and|or|as|is|I)[ \t\n]+(?=\S)/gu;
+const RU_SHORT = /(^|[\s(«„"—–-])(а|в|во|и|к|ко|о|об|обо|с|со|у|я|не|ни|но|на|за|из|от|до|по|под|над|при|без|для|же|ли|бы|как|что|это|его|её|их|он|она|они|мы|вы|ты)[ \t\n]+(?=\S|$)/giu;
+const EN_SHORT = /(^|[\s(“"—–])(a|an|the|of|to|in|on|at|by|for|and|or|as|is|I)[ \t\n]+(?=\S|$)/gu;
 const NAMES = /(Sun|Сан) (Ra|Ра)(?![\p{L}])/gu;
 
+/**
+ * Typographer's quotes and apostrophes. Decided by the neighbours of each mark,
+ * not by pairing, so a quote that opens in one text node and closes in the next
+ * (around a link) still comes out right.
+ */
+export function quotes(text: string, lang: string): string {
+  const ru = lang === 'ru';
+  return (
+    text
+      // apostrophes inside or at the end of a word: Sony’r, don’t, Jacobs’
+      .replace(/(\p{L})'(?=\p{L})/gu, '$1’')
+      .replace(/(\p{L}s)'(?=\s|[.,;:!?)]|$)/gu, '$1’')
+      // double quotes: opening after start, space or bracket; closing otherwise
+      .replace(/(^|[\s(\[—–-])"/gu, `$1${ru ? '«' : '“'}`)
+      .replace(/"/g, ru ? '»' : '”')
+      // single quotes left: opening after start, space or bracket
+      .replace(/(^|[\s(\[—–-])'/gu, '$1‘')
+      .replace(/'/g, '’')
+  );
+}
+
 export function nbsp(text: string, lang: string): string {
-  let s = text.replace(NAMES, `$1${NBSP}$2`);
+  let s = quotes(text, lang).replace(NAMES, `$1${NBSP}$2`);
   // A dash belongs to the word before it.
   s = s.replace(/ (—)/g, `${NBSP}$1`);
   // Numbers stay with their units and the words they count.
@@ -25,26 +46,24 @@ export function nbsp(text: string, lang: string): string {
 
 const SKIP = new Set(['SCRIPT', 'STYLE', 'CODE', 'PRE', 'TEXTAREA', 'INPUT']);
 
-/** Apply nbsp() to every text node under root. */
+/** Typeset one text node in the language of its element. */
+function setText(t: Text, lang: string): void {
+  const p = t.parentElement;
+  if (!p || SKIP.has(p.tagName) || p.closest('pre, code, svg text.lbl')) return;
+  if (!/["']/.test(t.data) && (t.data.length < 2 || !/\s/.test(t.data))) return;
+  const l = p.closest('[lang]')?.getAttribute('lang')?.slice(0, 2) || lang;
+  const next = nbsp(t.data, l);
+  if (next !== t.data) t.data = next;
+}
+
+/** Apply nbsp() and quotes to every text node under root. */
 export function typeset(root: Node, lang: string): void {
   // A walker never returns its own root: a text node set by textContent is handled here.
-  if (root.nodeType === 3) {
-    const t = root as Text;
-    const p = t.parentElement;
-    if (!p || SKIP.has(p.tagName) || p.closest('pre, code, svg text.lbl') || t.data.length < 3 || !/\s/.test(t.data)) return;
-    const next = nbsp(t.data, lang);
-    if (next !== t.data) t.data = next;
-    return;
-  }
-  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-    acceptNode: (n) => (n.parentElement && (SKIP.has(n.parentElement.tagName) || n.parentElement.closest('pre, code, svg text.lbl')) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
-  });
-  for (let n = walker.nextNode(); n; n = walker.nextNode()) {
-    const t = n as Text;
-    if (t.data.length < 3 || !/\s/.test(t.data)) continue;
-    const next = nbsp(t.data, lang);
-    if (next !== t.data) t.data = next;
-  }
+  if (root.nodeType === 3) return setText(root as Text, lang);
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes: Text[] = [];
+  for (let n = walker.nextNode(); n; n = walker.nextNode()) nodes.push(n as Text);
+  nodes.forEach((t) => setText(t, lang));
 }
 
 /** Keep typesetting whatever the museum adds to the page. */

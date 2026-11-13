@@ -10,7 +10,7 @@ import { ERAS, type Card } from '../lib/types';
 import { GeoMap, LEVEL_K, LEVEL_NAMES } from './map';
 import { Timeline } from './timeline';
 import { showTip, hideTip } from './tip';
-import { copyCount, pick, t } from '../lib/i18n';
+import { count, pick, t } from '../lib/i18n';
 
 export class Atlas {
   readonly el: HTMLElement;
@@ -36,7 +36,7 @@ export class Atlas {
     const bar = h(
       'header.atlas-bar',
       {},
-      h('h2', {}, t('Atlas')),
+      h('div.atlas-title', {}, h('h2', {}, t('Atlas')), h('p.atlas-why', {}, pick({ en: 'The museum in space: where everything happened.', ru: 'Музей в пространстве: где всё происходило.' }))),
       this.when,
       h('div.sp'),
       h(
@@ -290,7 +290,9 @@ export class Atlas {
       b.setAttribute('aria-pressed', String(i + 1 === this.level));
     });
     const when = this.p.from ? formatYears(this.p.to ? [this.p.from, this.p.to] : [this.p.from]) : t('1300 – today');
-    this.when.textContent = `${when} · ${LEVEL_NAMES[this.level - 1]} · ${pick({ en: `${layers.points.filter((p) => !p.out).length} on the map`, ru: `на карте: ${layers.points.filter((p) => !p.out).length}` })} · ${copyCount(readerCards(this.app.set, this.app.edition).length, this.app.set.all().length)}`;
+    // One sentence, not a stat row.
+    const n = layers.points.filter((p) => !p.out).length;
+    this.when.textContent = pick({ en: `${count(n, 'card', 'en')} on the map, ${when}.`, ru: `На карте ${count(n, 'card', 'ru')}, ${when}.` });
     this.renderPathbar(path);
     this.renderList(layers.points.filter((p) => !p.out).map((p) => this.app.set.get(p.id)).filter((c): c is Card => !!c));
   }

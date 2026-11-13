@@ -75,12 +75,12 @@ export function editionNote(app: App): HTMLElement {
         'li',
         {},
         pairLink(app, p.m),
-        h('span.ed-dash', {}, ' — '),
+        h('span.ed-dash', {}, ' / '),
         pairLink(app, p.f),
       ),
     ),
   );
-  const box = h('div.ed-box', { hidden: true }, h('p.ed-head', {}, pick({ en: 'man’s voice — woman’s voice', ru: 'мужской голос — женский голос' })), list);
+  const box = h('div.ed-box', { hidden: true }, h('p.ed-head', {}, pick({ en: 'Male copy / Female copy', ru: 'Мужской экземпляр / Женский экземпляр' })), list);
   const listBtn = h(
     'button.btn.ed-list',
     {
