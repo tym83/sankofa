@@ -2,7 +2,7 @@ id: "the-prodigy"
 name: "The Prodigy"
 aliases: ["продиджи", "зе продиджи", "продижи"]
 years: [1990]
-place: {"name": "Braintree", "lat": 51.8787, "lon": 0.5529}
+place: {"name": "Braintree, England", "lat": 51.8787, "lon": 0.5529}
 genre: "Big beat and rave"
 genreRu: "биг-бит и рейв"
 story: "The Prodigy took a vocal phrase from Ultramagnetic MCs’ “Give the Drummer Some”. Looping Kool Keith’s voice made it the hook of “Smack My Bitch Up”."

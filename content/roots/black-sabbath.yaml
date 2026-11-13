@@ -3,7 +3,7 @@ name: "Black Sabbath"
 nameRu: "Black Sabbath"
 aliases: ["блэк саббат", "блэк саббатт"]
 years: [1968]
-place: {"name": "Birmingham", "lat": 52.4862, "lon": -1.8904}
+place: {"name": "Birmingham, England", "lat": 52.4862, "lon": -1.8904}
 genre: "Heavy metal"
 genreRu: "хеви-метал"
 links:

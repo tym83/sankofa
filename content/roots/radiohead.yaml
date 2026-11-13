@@ -2,7 +2,7 @@ id: "radiohead"
 name: "Radiohead"
 aliases: ["радиохед", "радиохэд"]
 years: [1985]
-place: {"name": "Abingdon", "lat": 51.6711, "lon": -1.2828}
+place: {"name": "Abingdon, England", "lat": 51.6711, "lon": -1.2828}
 genre: "Art rock"
 genreRu: "арт-рок"
 story: "Radiohead drew on Charles Mingus when making “Pyramid Song”. His jazz was a reference for the band’s own music."
