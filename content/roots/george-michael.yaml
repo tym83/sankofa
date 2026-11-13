@@ -1,0 +1,15 @@
+id: "george-michael"
+name: "George Michael"
+nameRu: "Джордж Майкл"
+aliases: ["джордж майкл", "уэм", "wham"]
+years: [1963, 2016]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+genre: "Pop and soul"
+genreRu: "поп и соул"
+links:
+  - to: "card:rhythm-and-blues"
+    claim: "George Michael recorded “I Knew You Were Waiting (For Me)” as a duet with Aretha Franklin."
+    claimRu: "Джордж Майкл записал «I Knew You Were Waiting (For Me)» дуэтом с Аретой Франклин."
+    sources:
+      - {"title": "Recording Academy: George Michael", "url": "https://www.grammy.com/artists/george-michael/12041"}
+      - {"title": "MusicRadar: Mick Hucknall on George Michael’s Aretha Franklin duet", "url": "https://www.musicradar.com/artists/i-was-so-jealous-of-george-michael-mick-hucknall-says-he-was-simply-green-with-envy-when-he-learned-that-the-former-wham-star-was-recording-a-duet-with-aretha-franklin"}

@@ -1,0 +1,15 @@
+id: "amy-winehouse"
+name: "Amy Winehouse"
+nameRu: "Эми Уайнхаус"
+aliases: ["эми уайнхаус", "эми вайнхаус"]
+years: [1983, 2011]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+genre: "Soul and jazz"
+genreRu: "соул и джаз"
+links:
+  - to: "card:jazz"
+    claim: "Amy Winehouse recorded the jazz standard “Moody’s Mood for Love” on her debut album Frank."
+    claimRu: "Эми Уайнхаус записала джазовый стандарт «Moody’s Mood for Love» на своём дебютном альбоме Frank."
+    sources:
+      - {"title": "NME: The Amy Winehouse Band on why she was so special", "url": "https://www.nme.com/features/music-interviews/amy-winehouse-band-dale-davis-3612156"}
+      - {"title": "Beat: Frank is a testament to the brilliance of Amy Winehouse", "url": "https://beat.com.au/16-years-on-frank-is-a-testament-to-the-brilliance-of-amy-winehouse/"}

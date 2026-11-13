@@ -1,0 +1,15 @@
+id: "madonna"
+name: "Madonna"
+nameRu: "Мадонна"
+aliases: ["мадонна"]
+years: [1958]
+place: {"name": "Bay City, Michigan", "lat": 43.5945, "lon": -83.8889}
+genre: "Dance pop"
+genreRu: "танцевальный поп"
+links:
+  - to: "card:funk"
+    claim: "Madonna and Stephen Bray drew on Sly and the Family Stone’s funk for “Express Yourself”."
+    claimRu: "Создавая «Express Yourself», Мадонна и Стивен Брей опирались на фанк Sly and the Family Stone."
+    sources:
+      - {"title": "Rhino: May 1989 — Madonna Releases Express Yourself", "url": "https://www.rhino.com/article/may-1989-madonna-releases-express-yourself"}
+      - {"title": "Attitude: Ten reasons Like a Prayer remains an all-time classic", "url": "https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/"}

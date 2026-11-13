@@ -1,0 +1,15 @@
+id: "bts"
+name: "BTS"
+nameRu: "BTS"
+aliases: ["бтс", "би ти эс", "бангтан"]
+years: [2010]
+place: {"name": "Seoul", "lat": 37.5665, "lon": 126.978}
+genre: "K-pop and hip-hop"
+genreRu: "кей-поп и хип-хоп"
+links:
+  - to: "root:eminem"
+    claim: "BTS leader RM counts Eminem among the rappers who influenced him."
+    claimRu: "Лидер BTS RM называет Эминема среди рэперов, повлиявших на него."
+    sources:
+      - {"title": "El País: Interview with BTS leader RM", "url": "https://english.elpais.com/culture/2023-03-15/rm-the-leader-of-k-pop-band-bts-we-work-so-hard-in-korea-because-70-years-ago-there-was-nothing.html"}
+      - {"title": "Rolling Stone Korea: RM and Pharrell Williams in conversation", "url": "https://rollingstone.co.kr/the-cover/the-cover-print-cover/18024"}

@@ -1,0 +1,15 @@
+id: "johnny-cash"
+name: "Johnny Cash"
+nameRu: "Джонни Кэш"
+aliases: ["джонни кэш", "джонни кеш"]
+years: [1932, 2003]
+place: {"name": "Kingsland, Arkansas", "lat": 33.859, "lon": -92.2932}
+genre: "Country"
+genreRu: "кантри"
+links:
+  - to: "card:work-songs"
+    claim: "Johnny Cash recorded “Rock Island Line”."
+    claimRu: "Джонни Кэш записал «Rock Island Line»."
+    sources:
+      - {"title": "Johnny Cash: Rock Island Line — official recording catalogue", "url": "https://www.johnnycash.com/track/rock-island-line/"}
+      - {"title": "Library of Congress: From Mule-een to New Orleans — What Was Lead Belly Saying?", "url": "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"}

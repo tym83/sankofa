@@ -1,0 +1,15 @@
+id: "adele"
+name: "Adele"
+nameRu: "Адель"
+aliases: ["адель"]
+years: [1988]
+place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
+genre: "Soul pop"
+genreRu: "соул-поп"
+links:
+  - to: "root:bob-dylan"
+    claim: "Adele recorded Bob Dylan’s “Make You Feel My Love”."
+    claimRu: "Адель записала «Make You Feel My Love» Боба Дилана."
+    sources:
+      - {"title": "Rolling Stone: Every Adele Song, Ranked — Make You Feel My Love", "url": "https://au.rollingstone.com/music/music-lists/every-adele-song-ranked-35015/make-you-feel-my-love-35062/"}
+      - {"title": "SRF: Adele bringt Emotionen in Dylans Song", "url": "https://www.srf.ch/kultur/musik/cover-me-special-adele-bringt-emotionen-in-dylans-song"}
