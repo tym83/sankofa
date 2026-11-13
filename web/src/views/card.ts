@@ -7,6 +7,7 @@ import { formatFragment, terminalCommand } from '../lib/fragment';
 import { vtags, bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
 import { edition, lang, t } from '../lib/i18n';
+import { editionNote, pairLink } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
 
@@ -102,7 +103,9 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
         'div.notice.edition',
         {},
         t('You followed a link to {title}. In your {edition} this place is held by another voice.', { title: ctx.asked.title, edition: edition(app.edition, 'prep') }) + ' ',
-        t('The other page exists: a reader with the other copy can pass it to you by sharing their path.'),
+        t('This story in the other copy:') + ' ',
+        pairLink(app, ctx.asked),
+        '.',
       ),
     );
   } else if (ctx.foreign) {
@@ -123,7 +126,9 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
         'div.notice.edition',
         {},
         h('b', {}, t('Only in the {edition}.', { edition: edition(c.edition, 'prep') }) + ' '),
-        t('This museum comes in two copies, like Pavić’s dictionary. The other one tells this moment in a different voice; ask another reader for their path.'),
+        partner ? t('This story in the other copy:') + ' ' : '',
+        partner ? pairLink(app, partner) : '',
+        partner ? '.' : '',
       ),
     );
   }
@@ -231,6 +236,7 @@ export function renderBook(app: App, path: string[], actions: { share(): void; r
     {},
     h('div.kicker', {}, t('Your book · {edition}', { edition: edition(app.edition) })),
     h('h2', { tabindex: '-1' }, t('The path you walked')),
+    editionNote(app),
     h(
       'p',
       {},

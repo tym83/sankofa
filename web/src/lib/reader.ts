@@ -60,3 +60,8 @@ export function theme(): Theme {
 export function setTheme(t: Theme): void {
   write(K.theme, t);
 }
+
+/** Hold the other copy from now on (the page is rebuilt by the caller). */
+export function setEdition(e: Exclude<Edition, 'both'>): void {
+  write(K.edition, e);
+}

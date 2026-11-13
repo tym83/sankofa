@@ -1,7 +1,7 @@
 // The long read: cover, opener, contents, eight chapters told in scroll steps
 // over a sticky map or photograph, and the timeline at the end.
 import type { App } from '../app';
-import { EDITION_NAME, richText } from '../app';
+import { richText } from '../app';
 import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL, links } from '../lib/cards';
@@ -13,6 +13,7 @@ import { mediaSrc, progressive } from '../lib/media';
 import { chapterCoda, signature, SIGNATURE_CARD } from './signature';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
 import { Timeline } from './timeline';
+import { editionNote } from './editionNote';
 import { hideTip, showTip } from './tip';
 
 /** The cover's own picture; a chapter that would repeat it opens on its map. */
@@ -21,10 +22,7 @@ const LEAD_CARDS = 4;
 
 export function buildStory(app: App, main: HTMLElement): void {
   coverMap(main.querySelector<HTMLElement>('.cover-map'));
-  main.querySelectorAll<HTMLElement>('[data-edition]').forEach((el) => {
-    const l = el.closest<HTMLElement>('[data-l]')?.dataset.l ?? lang();
-    el.textContent = l === 'ru' ? (app.edition === 'm' ? 'мужской экземпляр' : 'женский экземпляр') : EDITION_NAME[app.edition];
-  });
+  main.querySelectorAll<HTMLElement>('[data-edition-note]').forEach((el) => el.replaceWith(editionNote(app)));
   main.querySelectorAll<HTMLElement>('[data-book]').forEach((b) => b.replaceWith(bookMarks([b.dataset.book!])));
 
   main.append(toc(app));

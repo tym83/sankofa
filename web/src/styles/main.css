@@ -6936,3 +6936,46 @@ html:lang(ru) .r-edge-head {
     bottom: 44px;
   }
 }
+/* the two copies, said plainly */
+.ed-note {
+  margin: 18px 0 0;
+}
+.ed-note > p {
+  margin: 0;
+}
+.ed-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.ed-box {
+  margin-top: 14px;
+}
+.ed-box[hidden] {
+  display: none;
+}
+.ed-note p.ed-head,
+.opener .ed-note p.ed-head {
+  margin: 0 0 6px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.ed-pairs {
+  margin: 0;
+  padding-left: 1.4em;
+  font-size: 0.95em;
+}
+.ed-pairs li {
+  margin: 4px 0;
+}
+.ed-pairs a.mine {
+  font-weight: 600;
+}
+.book-panel .ed-note {
+  font-size: 15px;
+  margin-bottom: 18px;
+}

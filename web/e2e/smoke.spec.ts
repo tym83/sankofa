@@ -507,3 +507,26 @@ test('the engine room wraps long YAML and copies from a corner icon', async ({ p
   expect(overflow).toBeLessThanOrEqual(1);
   await expect(page.locator('.term.multi button.copy').first()).toHaveAttribute('aria-label', /Copy/);
 });
+
+test('the copy switch flips a paired card at once, and the pairs list links both voices', async ({ browser, baseURL }) => {
+  // A page of its own: the shared setup pins the male copy on every load.
+  const page = await (await browser.newContext({ baseURL })).newPage();
+  await page.addInitScript(() => {
+    if (!sessionStorage.getItem('seeded')) {
+      localStorage.setItem('sankofa.edition', 'f');
+      sessionStorage.setItem('seeded', '1');
+    }
+  });
+  await page.goto('/#focus=douglass-covey');
+  await expect(page.locator('.card h2, #card-title').first()).toContainText('Harriet Jacobs');
+  await expect(page.locator('.notice.edition')).toContainText('This story in the other copy');
+  await page.goto('/');
+  const note = page.locator('.opener .ed-note:visible');
+  await expect(note).toContainText('Yours is the female copy: instead of Frederick Douglass you will meet Harriet Jacobs');
+  await note.getByRole('button', { name: 'All six pairs' }).click();
+  await expect(note.locator('.ed-pairs li')).toHaveCount(6);
+  await note.getByRole('button', { name: 'Open the male copy' }).click();
+  await expect(page.locator('.opener .ed-note:visible')).toContainText('Yours is the male copy: instead of Harriet Jacobs you will meet Frederick Douglass');
+  await page.goto('/#focus=jacobs-garret');
+  await expect(page.locator('.card h2, #card-title').first()).toContainText('Frederick Douglass');
+});

@@ -181,14 +181,11 @@ export const RU: Record<string, string> = {
   'Contested.': 'Об этом спорят.',
   'You followed a link to {title}. In your {edition} this place is held by another voice.':
     'Вы шли по ссылке к странице «{title}». В вашем {edition} на этом месте звучит другой голос.',
-  'The other page exists: a reader with the other copy can pass it to you by sharing their path.':
-    'Другая страница существует: читатель с другим экземпляром может передать её вам, поделившись своим путём.',
   'From the other copy.': 'Из другого экземпляра.',
   "You hold the {edition}; this page reached you through another reader's path.": 'У вас в руках {edition}; эта страница пришла к вам по пути другого читателя.',
   'Its counterpart in your copy is': 'Её пара в вашем экземпляре —',
+  'This story in the other copy:': 'Эта история в другом экземпляре:',
   'Only in the {edition}.': 'Только в {edition}.',
-  'This museum comes in two copies, like Pavić’s dictionary. The other one tells this moment in a different voice; ask another reader for their path.':
-    'Музей существует в двух экземплярах, как словарь Павича. В другом этот момент рассказан иным голосом — попросите у другого читателя его путь.',
   'Go further': 'Куда смотреть дальше',
   'Cards that lead here': 'Сюда ведут',
   'Show on the atlas': 'Показать на атласе',
