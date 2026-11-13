@@ -14,6 +14,22 @@ Circus" using a Nina Simone recording's beat/handclaps: VERIFY this; if it is
 wrong, find what the track actually samples, and don't write anything you
 cannot document.
 
+What counts (the owner's correction): a link must explain LINEAGE — how the
+artist's music was formed out of the tradition — not trivia. "The Beatles
+recorded 'Twist and Shout' after the Isley Brothers" is true but says nothing
+about succession; useful are facts like: what repertoire the young band was
+built on night after night (Hamburg/Cavern sets of American R&B and rock'n'roll),
+who shaped a singer's style (e.g. a tour with Little Richard, what he showed
+them), whose songwriting they modelled theirs on, which scene they grew out of,
+what in their sound is taken from whom. Single covers and samples stay only
+when they show formation or are a genuine "wow" (a track built on a Black
+recording). Replace weak existing links with formative ones where you can
+document them (you may remove a weak link if a better one replaces it).
+
+Each artist file also gets `story` / `storyRu`: two or three sentences that
+tell how this artist grew out of the tradition, built ONLY from the facts in
+its own links (no new facts in the story).
+
 Do:
 1. For every existing artist add the intermediate steps that are documented
    (2–4 hops where real), as separate artist files (e.g. the-velvet-underground,
