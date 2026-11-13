@@ -321,7 +321,7 @@ export class Listen {
         h('b', {}, pick({ en: 'What you are hearing. ', ru: 'Что вы слышите. ' })),
         pick({
           en: 'A bell keeps time, each machine of the museum plays a drum, and every other bar the cluster calls and its programs answer. A healthy cluster sounds steady on purpose; every few minutes a guest drummer joins for a minute, and the words under the circle say what just happened.',
-          ru: 'Колокол держит ритм, каждая машина музея играет на барабане, а через такт кластер зовёт — и его программы отвечают. Здоровый кластер и должен звучать ровно; раз в несколько минут на минуту вступает приглашённый барабанщик, а подписи под кругом говорят, что сейчас произошло.',
+          ru: 'Колокол держит ритм, каждая машина музея играет на барабане, а через такт кластер зовёт — и его программы отвечают. Здоровый кластер и должен звучать ровно; время от времени на минуту вступает приглашённый барабанщик, а подписи под кругом говорят, что сейчас произошло.',
         }),
       ),
       ctlSlot,
