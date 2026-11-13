@@ -9,7 +9,7 @@ genre: "Delta blues"
 genreRu: "дельта-блюз"
 links:
   - to: "card:blues"
-    kind: "influence"
+    kind: "teacher"
     claim: "At Dockery, Charley Patton developed his blues by studying the playing of local guitarist Henry Sloan."
     claimRu: "На плантации Докери Чарли Паттон развивал свой блюз, изучая игру местного гитариста Генри Слоуна."
     sources:
