@@ -20,7 +20,7 @@
 
 | English | Русский |
 |---|---|
-| Africa Before | Африка до |
+| Africa Before | Африка до работорговли |
 | Asante / Ashanti | Асанте (не Ашанти) |
 | MacArthur Fellowship | грант Макартура |
 | National Hero (Jamaica) | национальный герой (со строчной) |
