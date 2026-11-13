@@ -12,7 +12,7 @@ import { buildGraph, grewFrom, headline, layout, radius, reach, yearY, type GEdg
 import { KIND_LABEL, searchArtists, type Artist, type LinkKind } from '../lib/roots';
 
 const NS = 'http://www.w3.org/2000/svg';
-const KINDS: (LinkKind | 'lineage')[] = ['influence', 'cover', 'sample', 'member', 'producer', 'scene', 'teacher', 'lineage'];
+const KINDS: (LinkKind | 'lineage')[] = ['influence', 'cover', 'sample', 'interpolation', 'member', 'producer', 'collaboration', 'scene', 'teacher', 'lineage'];
 
 export class RootsMap {
   readonly el: HTMLElement;
@@ -258,10 +258,15 @@ export class RootsMap {
       const want = priority ? priority.has(n.id) || n.card : true;
       // Every root keeps its name: above its dot, or below it if that is taken.
       if (n.card) {
-        el.setAttribute('y', String(-radius(n) - 5));
-        if (hits(r)) {
-          el.setAttribute('y', String(radius(n) + 16));
+        const rr = radius(n);
+        // above, below, right, left: the first place that is free
+        const spots: [number, number, string][] = [[0, -rr - 5, 'middle'], [0, rr + 16, 'middle'], [rr + 6, 4, 'start'], [-rr - 6, 4, 'end']];
+        for (const [x, y, anchor] of spots) {
+          el.setAttribute('x', String(x));
+          el.setAttribute('y', String(y));
+          el.setAttribute('text-anchor', anchor);
           r = el.getBoundingClientRect();
+          if (!hits(r)) break;
         }
       }
       const free = n.card || !hits(r);

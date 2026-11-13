@@ -6,7 +6,7 @@ export interface RootSource {
   url: string;
 }
 
-export type LinkKind = 'influence' | 'cover' | 'sample' | 'member' | 'producer' | 'scene' | 'teacher';
+export type LinkKind = 'influence' | 'cover' | 'sample' | 'interpolation' | 'member' | 'producer' | 'scene' | 'teacher' | 'collaboration';
 
 export interface RootLink {
   to: string; // root:<id> | card:<id>
@@ -141,10 +141,12 @@ export const KIND_LABEL: Record<LinkKind, { en: string; ru: string; glyph: strin
   influence: { en: 'named as influence', ru: 'называл влиянием', glyph: '❝' },
   cover: { en: 'covered', ru: 'перепел', glyph: '↻' },
   sample: { en: 'sampled', ru: 'взял сэмпл', glyph: '◐' },
+  interpolation: { en: 'interpolated', ru: 'цитата из песни', glyph: '♪' },
   member: { en: 'played in', ru: 'играл в', glyph: '◎' },
   producer: { en: 'produced', ru: 'продюсер', glyph: '◇' },
   scene: { en: 'same scene', ru: 'одна сцена', glyph: '⁂' },
   teacher: { en: 'taught', ru: 'учил', glyph: '✎' },
+  collaboration: { en: 'worked with', ru: 'работал вместе', glyph: '⇄' },
 };
 
 /** A museum card as far as lineage needs it: genres name the genres they grew from. */
@@ -209,7 +211,7 @@ export function longestRoots(all: Artist[], cards: Map<string, LineageCard>, n =
       const chain = deepest(extendLineage(buildTree(a, byId), cards));
       const borrowed = chain
         .map((ref, i) => (i ? linkTo(byId.get(chain[i - 1]), ref) : undefined))
-        .find((l) => l && (l.kind === 'sample' || l.kind === 'cover') && l.what);
+        .find((l) => l && (l.kind === 'sample' || l.kind === 'cover' || l.kind === 'interpolation') && l.what);
       return { artist: a, chain, borrowed };
     });
   return rows.sort((x, y) => y.chain.length - x.chain.length || Number(!!y.borrowed) - Number(!!x.borrowed) || x.artist.name.localeCompare(y.artist.name)).slice(0, n);

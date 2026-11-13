@@ -109,3 +109,11 @@ describe('roots as a graph', () => {
     expect(d.incoming.get('card:blues')!.map((e) => e.from).sort()).toEqual(['card:rhythm-and-blues', 'card:rock-n-roll']);
   });
 });
+
+import { KIND_LABEL } from '../src/lib/roots';
+describe('new kinds', () => {
+  it('label interpolation and collaboration in both languages', () => {
+    expect(KIND_LABEL.interpolation).toMatchObject({ en: 'interpolated', ru: 'цитата из песни' });
+    expect(KIND_LABEL.collaboration).toMatchObject({ en: 'worked with', ru: 'работал вместе' });
+  });
+});

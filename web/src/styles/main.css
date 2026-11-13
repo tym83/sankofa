@@ -6587,3 +6587,22 @@ a.r-artist:hover {
 .graphic.away .pt .lbl {
   display: none !important;
 }
+:root {
+  --k-interpolation: #ff5fa2;
+  --k-collaboration: #5fd4e8;
+}
+.r-link.k-interpolation { --kc: var(--k-interpolation); }
+.r-link.k-collaboration { --kc: var(--k-collaboration); }
+.rm-edge.k-interpolation { --kc: var(--k-interpolation); }
+.rm-edge.k-collaboration { --kc: var(--k-collaboration); }
+.r-rail path.k-interpolation { stroke: var(--k-interpolation); }
+.r-rail path.k-collaboration { stroke: var(--k-collaboration); }
+.r-row .r-src {
+  align-items: flex-start !important;
+  text-align: left;
+}
+html:lang(ru) .r-claim,
+html:lang(ru) .r-story,
+html:lang(ru) .r-plate {
+  hyphens: manual;
+}
