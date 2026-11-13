@@ -5,8 +5,8 @@ years: [1988]
 place: {"name": "Bristol", "lat": 51.4545, "lon": -2.5879}
 genre: "Trip hop"
 genreRu: "трип-хоп"
-story: "Massive Attack made a new backing from Billy Cobham’s “Stratus”. Its sampled instrumental phrases became part of “Safe from Harm”."
-storyRu: "Massive Attack собрали новое сопровождение из «Stratus» Билли Кобэма. Сэмплы его инструментальных фраз стали частью «Safe from Harm»."
+story: "“Safe from Harm” runs on a loop of Billy Cobham’s “Stratus”. The bass-and-drums groove of his 1973 recording became Massive Attack’s rhythm section."
+storyRu: "«Safe from Harm» держится на петле из «Stratus» Билли Кобэма. Грув баса и барабанов из его записи 1973 года стал ритм-секцией Massive Attack."
 links:
   - to: "card:jazz"
     kind: "sample"
@@ -23,10 +23,10 @@ links:
     kind: "sample"
     claim: "Massive Attack sampled Billy Cobham's 'Stratus' in 'Safe from Harm'."
     claimRu: "В «Safe from Harm» Massive Attack использовали сэмпл из «Stratus» Билли Кобэма."
-    what: "Instrumental backing phrases from Billy Cobham's 1973 recording 'Stratus', looped in 'Safe from Harm'."
-    whatRu: "Фрагменты инструментального сопровождения из записи «Stratus» Билли Кобэма 1973 года, зацикленные в «Safe from Harm»."
+    what: "The bass-and-drums groove of Billy Cobham’s 1973 recording “Stratus”, looped as the rhythm section of “Safe from Harm”."
+    whatRu: "Грув баса и барабанов из записи «Stratus» Билли Кобэма 1973 года, зацикленный как ритм-секция «Safe from Harm»."
     sources:
       - title: "Hit Channel: Interview — Billy Cobham"
         url: "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
-      - title: "Rolf Großmann: Xtended Sampling 1995–2026, in Un_Making Beats, p. 97"
-        url: "https://www.uni-hildesheim.de/ojs/index.php/MMD/de/article/download/498/541"
+      - title: "MusicTech: Landmark Productions — Massive Attack, Blue Lines"
+        url: "https://musictech.net/guides/essential-guide/landmarks-massive-attack/"

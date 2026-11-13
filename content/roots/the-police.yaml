@@ -6,8 +6,8 @@ years: [1977]
 place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
 genre: "New wave"
 genreRu: "новая волна"
-story: "The Police drew on Bob Marley’s reggae for their bass-led grooves. Andy Summers says reggae bass lines also let Sting play and sing at the same time."
-storyRu: "The Police опирались на регги Боба Марли в грувах с ведущей ролью баса. По словам Энди Саммерса, басовые партии регги также позволяли Стингу одновременно играть и петь."
+story: "Sting built the chorus of “So Lonely” on Bob Marley’s “No Woman, No Cry”, and the Police made switching between punk and reggae their own. Andy Summers says reggae bass lines also let Sting play and sing at the same time."
+storyRu: "Припев «So Lonely» Стинг построил на «No Woman, No Cry» Боба Марли, а переходы от панка к регги стали фирменным приёмом The Police. По словам Энди Саммерса, басовые партии регги к тому же позволяли Стингу одновременно играть и петь."
 links:
   - to: "card:reggae"
     kind: "influence"
@@ -20,10 +20,10 @@ links:
         url: "https://los40.com/los40/2022/05/20/los40classic/1652955281_806107.html"
   - to: "root:bob-marley"
     kind: "influence"
-    claim: "The Police drew on Bob Marley’s reggae when developing their bass-led grooves."
-    claimRu: "Вырабатывая грувы с ведущей ролью баса, The Police опирались на регги Боба Марли."
+    claim: "Sting built the chorus of the Police’s “So Lonely” on Bob Marley’s “No Woman, No Cry”, setting the band’s pattern of switching between punk and reggae."
+    claimRu: "Припев «So Lonely» Стинг построил на «No Woman, No Cry» Боба Марли — так сложился фирменный приём The Police: переходы от панка к регги и обратно."
     sources:
-      - title: "Mark Spicer: Reggatta de Blanc — Analyzing Style in the Music of the Police"
-        url: "https://www.academia.edu/5120856/_Reggatta_de_Blanc_Analyzing_Style_in_the_Music_of_the_Police"
+      - title: "Guitar World: Sting’s 10 best basslines with the Police"
+        url: "https://www.guitarworld.com/features/stings-10-best-basslines-with-the-police"
       - title: "Jon Wiederhorn: Andy Summers interview (FretBuzz)"
         url: "https://fretbuzz.co/andy-summers-provides-a-candid-viewfinder-glimpse-at-his-life-as-a-guitarist/"

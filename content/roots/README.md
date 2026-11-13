@@ -6,8 +6,8 @@ two independent authoritative sources. Both a researcher and a separate
 reviewer open and check the sources. Two websites repeating the same
 interview do not count as two independent sources.
 
-The collection contains 94 artists and 160 links. The deeper edition adds
-44 intermediate artists and 110 links, preserving all 50 original links,
+The collection contains 90 artists and 148 links. The deeper edition adds
+40 intermediate artists and 98 links, preserving all 50 original links,
 their claims, translations and sources. Every original artist now has a
 documented path through another artist to a museum tradition. Paths are
 selected connections, not complete ancestry or a claim of exclusive influence.
@@ -75,6 +75,14 @@ that baseline; new annotations and stories receive a separate review.
 the unresolved `Paradise Circus` / Nina Simone lead. It is not an accepted
 edge: community attributions and silence in a credits booklet cannot
 establish or disprove the sample. Do not invent a replacement attribution.
+
+[`roots-deep-check.yaml`](../ledger/roots-deep-check.yaml) is the second
+independent check of every edge in the inventory: a verdict (confirmed,
+corrected, refuted, unverified, trivia) with two sources the second checker
+opened. Corrected links were fixed in place; unverified links and trivia (a
+single cover that shows no formation) were removed, together with the four
+intermediate artists they left unreachable. The inventory and the review
+hashes above describe the edition before this check.
 
 ## Validation
 

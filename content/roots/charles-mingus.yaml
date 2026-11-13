@@ -6,8 +6,8 @@ years: [1922, 1979]
 place: {"name": "Nogales, Arizona", "lat": 31.3404, "lon": -110.9343}
 genre: "Jazz"
 genreRu: "джаз"
-story: "Charles Mingus’s early musical world included the singing he heard in church. Gospel remained part of the jazz he composed."
-storyRu: "В раннем музыкальном мире Чарльза Мингуса звучало церковное пение. Госпел остался частью джаза, который он сочинял."
+story: "Charles Mingus’s early musical world included the singing he heard in church. The gospel singing and preaching of his youth later fed compositions such as “Better Git It in Your Soul”."
+storyRu: "В раннем музыкальном мире Чарльза Мингуса звучало церковное пение. Позже госпел и проповеди его юности отозвались в таких сочинениях, как «Better Git It in Your Soul»."
 links:
   - to: "card:gospel"
     kind: "influence"
@@ -18,10 +18,10 @@ links:
         url: "https://www.charlesmingus.com/mingusbio"
       - title: "Blue Note Records: Charles Mingus biography"
         url: "https://www.bluenote.com/artist/charles-mingus/"
-  - to: "card:jazz"
+  - to: "card:gospel"
     kind: "influence"
-    claim: "Charles Mingus brought gospel into his jazz compositions."
-    claimRu: "Чарльз Мингус вплетал госпел в свои джазовые сочинения."
+    claim: "Charles Mingus drew on the gospel singing and preaching of his youth in compositions such as “Better Git It in Your Soul”."
+    claimRu: "В таких сочинениях, как «Better Git It in Your Soul», Чарльз Мингус опирался на госпел и проповеди, которые слышал в юности."
     sources:
       - title: "Blue Note Records: Charles Mingus biography"
         url: "https://www.bluenote.com/artist/charles-mingus/"

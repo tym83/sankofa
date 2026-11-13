@@ -10,7 +10,7 @@ story: "Jimmy Cliff’s singing began in church. That gospel experience preceded
 storyRu: "Джимми Клифф начал петь в церкви. Этот опыт госпел-пения предшествовал его карьере звукозаписи."
 links:
   - to: "card:gospel"
-    kind: "influence"
+    kind: "scene"
     claim: "Jimmy Cliff began singing in church before his recording career."
     claimRu: "Джимми Клифф начал петь в церкви задолго до карьеры звукозаписи."
     sources:

@@ -6,8 +6,8 @@ years: [1972]
 place: {"name": "Leningrad (Saint Petersburg)", "lat": 59.9343, "lon": 30.3351}
 genre: "Rock / reggae"
 genreRu: "рок / регги"
-story: "Bob Marley was among the influences on Boris Grebenshchikov. Aquarium’s “Vavilon” was originally conceived as reggae."
-storyRu: "Боб Марли был одним из тех, кто повлиял на Бориса Гребенщикова. «Вавилон» группы «Аквариум» изначально задумывался как регги."
+story: "Aquarium’s link to Black music runs through reggae. Their song “Vavilon” was first written in that style."
+storyRu: "Связь «Аквариума» с чёрной музыкой проходит через регги. Песню «Вавилон» сначала написали именно в этом жанре."
 links:
   - to: "card:reggae"
     kind: "influence"
@@ -18,12 +18,3 @@ links:
         url: "https://www.kommersant.ru/doc/4493505"
       - title: "Colta: Interview with Levsha Patsan about Aquarium in Dub"
         url: "https://www.colta.ru/articles/music_modern/26051-levsha-patsan-intervyu-albom-akvarium-in-dub-li-skretch-perri-pesni-bg"
-  - to: "root:bob-marley"
-    kind: "influence"
-    claim: "Bob Marley was an influence on Aquarium’s Boris Grebenshchikov."
-    claimRu: "Боб Марли повлиял на Бориса Гребенщикова из «Аквариума»."
-    sources:
-      - title: "Aquarium: Blue Album liner-note history, preserved from official album pages"
-        url: "https://aquarium.lipetsk.ru/MESTA/mp3/aquarium.ru-albums/siniy.htm"
-      - title: "Konstantin Bakanov: Boris Grebenshchikov, Sobesednik (RIMA archive)"
-        url: "https://rima.media/document/033gEbdguRvTiTqcBNXyat-2019-05-10-sobesednik-636459-boris-grebenshchikov-vsia-zhizn-v-poiskakh-svezhikh-smyslov"

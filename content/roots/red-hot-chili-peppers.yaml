@@ -25,17 +25,6 @@ links:
   kind: cover
   what: Stevie Wonder’s “Higher Ground”, newly performed on Mother’s Milk.
   whatRu: Песня Стиви Уандера «Higher Ground» в новом исполнении на «Mother’s Milk».
-- to: root:stevie-wonder
-  claim: Red Hot Chili Peppers recorded a cover of Stevie Wonder's 'Higher Ground'.
-  claimRu: Red Hot Chili Peppers записали кавер на «Higher Ground» Стиви Уандера.
-  sources:
-  - title: 'Rolling Stone: Red Hot Chili Peppers on 25 Years of Mother’s Milk'
-    url: https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/
-  - title: 'Guitar World: Flea’s bittersweet hip-hop recording experience'
-    url: https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move
-  kind: cover
-  what: Stevie Wonder’s “Higher Ground”, newly performed on Mother’s Milk.
-  whatRu: Песня Стиви Уандера «Higher Ground» в новом исполнении на «Mother’s Milk».
 - to: root:james-brown
   kind: influence
   claim: James Brown’s funk was one of Red Hot Chili Peppers’ musical influences.

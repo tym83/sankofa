@@ -6,22 +6,22 @@ years: [1936, 2021]
 place: {"name": "Kendal, Hanover, Jamaica", "lat": 18.354, "lon": -78.079}
 genre: "Reggae and dub"
 genreRu: "регги и даб"
-story: "Lee “Scratch” Perry developed dub by experimenting with reggae rhythm tracks and studio effects. King Tubby’s mixing was part of Blackboard Jungle Dub."
-storyRu: "Ли «Скрэтч» Перри развивал даб через эксперименты с ритм-треками регги и студийными эффектами. В «Blackboard Jungle Dub» свою роль сыграло сведение Кинга Табби."
+story: "Lee “Scratch” Perry developed dub by experimenting with reggae rhythm tracks and studio effects. On Blackboard Jungle Dub, King Tubby shared the mixing while Perry added the effects."
+storyRu: "Ли «Скрэтч» Перри развивал даб через эксперименты с ритм-треками регги и студийными эффектами. «Blackboard Jungle Dub» он сводил вместе с Кингом Табби, сам добавляя эффекты."
 links:
   - to: "card:reggae"
     kind: "scene"
     claim: "Lee “Scratch” Perry helped develop dub through experiments with reggae rhythm tracks and studio effects."
     claimRu: "Ли «Скрэтч» Перри развивал даб, экспериментируя с ритм-треками регги и студийными эффектами."
     sources:
-      - title: "Resident Advisor: Lee “Scratch” Perry biography"
-        url: "https://ra.co/dj/leescratchperry/biography"
+      - title: "Songlines: Obituary — Lee “Scratch” Perry (1936–2021)"
+        url: "https://www.songlines.co.uk/news/obituary-lee-scratch-perry-1936-2021"
       - title: "Danny Kelly: Lee Perry interview (NME, archived by Uncarved)"
         url: "https://uncarved.org/dub/scratch.html"
   - to: "root:king-tubby"
     kind: "producer"
-    claim: "King Tubby mixed Lee “Scratch” Perry’s Blackboard Jungle Dub."
-    claimRu: "Кинг Табби сводил «Blackboard Jungle Dub» Ли «Скрэтч» Перри."
+    claim: "King Tubby co-mixed Lee “Scratch” Perry’s Blackboard Jungle Dub (1973), with Perry adding the effects."
+    claimRu: "Кинг Табби вместе с Ли «Скрэтчем» Перри сводил «Blackboard Jungle Dub» (1973), а Перри добавлял эффекты."
     sources:
       - title: "David Katz: The Strange World Of King Tubby (The Quietus)"
         url: "https://thequietus.com/interviews/strange-world-of/king-tubby-best-music/"
