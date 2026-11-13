@@ -34,7 +34,7 @@ sources:
   - {title: "Mark Puryear, Tell It Like It Is, Smithsonian Folklife Festival (2011), pp. 53–63", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf"}
   - {title: "Case Western Reserve University, Encyclopedia of Cleveland History: Rock & Roll", url: "https://case.edu/ech/articles/r/rock-roll"}
 media:
-  - {"type": "image", "file": "rhythm-and-blues.jpg", "caption": "Ruth Brown performing, 10 September 2005", "credit": "caviera (-cp on Flickr); resized for display", "license": "CC BY 2.0", "url": "https://commons.wikimedia.org/wiki/File:Ruth_Brown.jpg"}
+  - {"type": "image", "file": "rhythm-and-blues.jpg", "caption": "Ruth Brown performing, 10 September 2005", "credit": "caviera (-cp on Flickr)", "license": "CC BY 2.0", "url": "https://commons.wikimedia.org/wiki/File:Ruth_Brown.jpg"}
 ---
 Rhythm and blues was the dance music of Black America in the 1940s and early
 1950s, flourishing in the big cities after the Second World War. Swing orchestras

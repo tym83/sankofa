@@ -21,7 +21,7 @@ sources:
   - {title: "Smithsonian: Du Bois at the world’s fair", url: "https://www.smithsonianmag.com/smithsonian-institution/how-web-du-bois-disrupted-americas-dominance-at-the-worlds-fair-180981538/"}
   - {title: "LoC catalog: Proportion of freemen and slaves", url: "https://www.loc.gov/item/2014645356/?fo=json"}
 media:
-  - {"type": "image", "file": "du-bois-infographics.jpg", "caption": "The Georgia Negro: Negro population of Georgia by counties, 1890, chart for the Paris Exposition, 1900", "credit": "W. E. B. Du Bois; Library of Congress, Prints and Photographs Division, Daniel Murray collection; resized for display", "license": "Public domain", "url": "https://www.loc.gov/item/2013650424/"}
+  - {"type": "image", "file": "du-bois-infographics.jpg", "caption": "The Georgia Negro: Negro population of Georgia by counties, 1890, chart for the Paris Exposition, 1900", "credit": "W. E. B. Du Bois; Library of Congress, Prints and Photographs Division, Daniel Murray collection", "license": "Public domain", "url": "https://www.loc.gov/item/2013650424/"}
 ---
 W. E. B. Du Bois and his students at Atlanta University answered a world's
 fair with data: hand-drawn charts of Black America, made for Paris in 1900.

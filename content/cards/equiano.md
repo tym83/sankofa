@@ -17,7 +17,6 @@ dispute: "Birthplace. Equiano wrote of a childhood in Igbo country and kidnappin
 sources:
   - {title: "London Museum: Olaudah Equiano, writer and abolitionist", url: "https://www.londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist/"}
   - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm"}
-  - {title: "London Museum: Olaudah Equiano, writer and abolitionist", url: "https://londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist"}
   - {title: "Project Gutenberg text with subscriber list", url: "https://www.gutenberg.org/cache/epub/15399/pg15399.txt"}
   - {title: "Brycchan Carey: Where was Equiano born?", url: "https://brycchancarey.com/equiano/nativity.htm"}
   - {title: "University of Oxford, English Faculty: The Interesting Narrative by Olaudah Equiano", url: "https://english.web.ox.ac.uk/node/1250811"}

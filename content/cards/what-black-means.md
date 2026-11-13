@@ -25,7 +25,7 @@ sources:
   - {title: "JSTOR Daily, interview by Hope Reese (2018)", url: "https://daily.jstor.org/chimamanda-ngozi-adichie-i-became-black-in-america/"}
   - {title: "BillMoyers.com, Adichie with NPR's Michele Norris (2014)", url: "https://billmoyers.com/2014/12/16/nigerian-author-chimananda-ngozi-adichie-identity/"}
 media:
-  - {"type": "image", "file": "what-black-means.jpg", "caption": "Chimamanda Ngozi Adichie at Congreso Futuro, 13 January 2020", "credit": "Carlos Figueroa; Wikimedia Chile; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Congreso_Futuro_2020_-_Chimamanda_Ngozi_Adichie_02.jpg"}
+  - {"type": "image", "file": "what-black-means.jpg", "caption": "Chimamanda Ngozi Adichie at Congreso Futuro, 13 January 2020", "credit": "Carlos Figueroa; Wikimedia Chile", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Congreso_Futuro_2020_-_Chimamanda_Ngozi_Adichie_02.jpg"}
 ---
 When Brazil's 1976 household survey let people name their own colour, it
 recorded 136 different terms, from morena to clara. The census today offers

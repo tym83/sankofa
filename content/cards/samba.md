@@ -31,7 +31,7 @@ sources:
   - {title: "Riotur, Visit Rio visitor guide (2023), Democratic Carnival", url: "https://riotur.rio/wp-content/uploads/2024/08/Riotur_LivretoPublico_Visit_2023_200x200mm_ING.pdf"}
   - {title: "Adalberto Paranhos, A invenção do Brasil como terra do samba: os sambistas e sua afirmação social, História 22:1 (2003)", url: "https://www.scielo.br/j/his/a/pt5J7FmCbfqbMmsSry4xczr/?lang=pt"}
 media:
-  - {"type": "image", "file": "samba.jpg", "caption": "Roda de samba in Tijuca, Rio de Janeiro, 30 December 2017", "credit": "Lgjunior; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Roda_de_Samba_-_Tijuca_-_RJ.jpg"}
+  - {"type": "image", "file": "samba.jpg", "caption": "Roda de samba in Tijuca, Rio de Janeiro, 30 December 2017", "credit": "Lgjunior", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Roda_de_Samba_-_Tijuca_-_RJ.jpg"}
 ---
 Samba is a music and a dance at once. Its root, samba de roda, still gathers people in a circle in the Recôncavo of Bahia: participants sing, play, clap and take turns dancing in the middle. It drew on the dances of the region's enslaved Africans.
 

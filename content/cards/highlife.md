@@ -31,7 +31,7 @@ sources:
   - {title: "Alexander Stewart, Make It Funky: Fela Kuti, James Brown and the Invention of Afrobeat, American Studies 52:4 (2013)", url: "https://journals.ku.edu/amsj/article/download/4463/4304/"}
   - {title: "Jesse Weaver Shipley, Living the Hiplife, Duke University Press (2013), book description", url: "https://www.dukeupress.edu/living-the-hiplife"}
 media:
-  - {"type": "image", "file": "highlife.jpg", "caption": "Invitation to E. T. Mensah's performance with Louis Armstrong, May 1956", "credit": "E. T. Mensah's Paramount / David Hagen, Georgetown University Library; resized for display", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg"}
+  - {"type": "image", "file": "highlife.jpg", "caption": "Invitation to E. T. Mensah's performance with Louis Armstrong, May 1956", "credit": "E. T. Mensah's Paramount / David Hagen, Georgetown University Library", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg"}
 ---
 Highlife is the dance music of Ghana's coast. Its forms include dance-band highlife, played by orchestras of horns, saxophones and trumpets, and guitar-band highlife, small groups built around guitars and songs that tell stories. It grew up in the port towns of the Gold Coast, Cape Coast and Accra among them, where local brass bands schooled on colonial military music, sailors' palm-wine guitar and local rhythms met the ballroom.
 

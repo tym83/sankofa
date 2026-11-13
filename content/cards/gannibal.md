@@ -25,7 +25,7 @@ sources:
   - {title: "Ibrahima Gaye, 'African Pushkin', Philology. Theory & Practice 2024", url: "https://www.gramota.net/articles/phil20240134.pdf"}
   - {title: "Pushkin, Arap Petra Velikogo", url: "https://ru.wikisource.org/wiki/%D0%90%D1%80%D0%B0%D0%BF_%D0%9F%D0%B5%D1%82%D1%80%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3%D0%BE_(%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD)"}
 media:
-  - {"type": "image", "file": "gannibal.jpg", "caption": "Outbuilding at Suyda, Gatchinsky district, Leningrad region, 2 October 2021", "credit": "Vaija; resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Outbuildin_Suyda,_Gatchinsky_district,_Leningrad_region.jpg"}
+  - {"type": "image", "file": "gannibal.jpg", "caption": "Outbuilding at Suyda, Gatchinsky district, Leningrad region, 2 October 2021", "credit": "Vaija", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Outbuildin_Suyda,_Gatchinsky_district,_Leningrad_region.jpg"}
 ---
 Alexander Pushkin, Russia's national poet, was the great-grandson of an
 African boy who had been kidnapped. Held in Constantinople, the child was

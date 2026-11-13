@@ -25,6 +25,6 @@ sources:
   - {title: "PBS: Noble Desire, A Time for Healing", url: "https://www.pbs.org/video/noble-desire-a-time-for-healing-fexkfb"}
   - {title: "NBC News: Genetic quest leads to African apology", url: "https://www.nbcnews.com/sciencemain/genetic-quest-leads-african-apology-role-slave-trade-8c11467842"}
 media:
-  - {"type": "image", "file": "aro-and-dahomey.jpg", "caption": "Royal palace in Abomey, Benin", "credit": "Dominik Schwarz; resized for display", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Abomey-K%C3%B6nigspalast3.jpg"}
+  - {"type": "image", "file": "aro-and-dahomey.jpg", "caption": "Royal palace in Abomey, Benin", "credit": "Dominik Schwarz", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Abomey-K%C3%B6nigspalast3.jpg"}
 ---
 In 1999 Benin's president Mathieu Kérékou convened a reconciliation conference to ask forgiveness for the slave trade. The Atlantic trade needed African sellers, and states and merchant networks supplied them. In the Bight of Biafra, where there was no large state, the Aro merchants of Arochukwu drove the trade's expansion through Igboland. None of this lightens European guilt; it adds African responsibility. Count the voyages in [[slavevoyages|SlaveVoyages]], see the currency in [[cowries|cowrie shells]], and read [[equiano|Olaudah Equiano]].

@@ -32,7 +32,7 @@ sources:
   - {title: "Jake Homiak, Black History in Roots Reggae Music, Smithsonian essay republished by Jamaica Information Service", url: "https://jis.gov.jm/jamaica/black-history-in-roots-reggae-music/"}
   - {title: "Mellonee V. Burnim and Portia K. Maultsby, eds., African American Music: An Introduction, 2nd ed. (2015), chapters on African roots and funk", url: "https://microsite-oh-prod.s3.amazonaws.com/media/editor/405/vdoc.pub_african-american-music-an-introduction.pdf"}
 media:
-  - {"type": "image", "file": "reggae.jpg", "caption": "Toots Hibbert performing with Toots and the Maytals in Orlando, Florida, 29 April 2010", "credit": "Karl Simpson; resized for display", "license": "CC BY-SA 2.0", "url": "https://commons.wikimedia.org/wiki/File:Toots-Hibbert.jpg"}
+  - {"type": "image", "file": "reggae.jpg", "caption": "Toots Hibbert performing with Toots and the Maytals in Orlando, Florida, 29 April 2010", "credit": "Karl Simpson", "license": "CC BY-SA 2.0", "url": "https://commons.wikimedia.org/wiki/File:Toots-Hibbert.jpg"}
 ---
 Reggae is the music Jamaica made from the late 1960s on: a slow, heavy
 four-beat rhythm laid down by drums, bass and electric guitar. It grew in the

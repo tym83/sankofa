@@ -24,7 +24,7 @@ sources:
   - {title: "Monotype, The story of Adlam: interview with type designer Kamal Mansour", url: "https://www.monotype.com/resources/expertise/story-adlam"}
   - {title: "Conrad Riley, Ibrahima Barry and Abdoulaye Barry, ADLaM romanization memorandum, Library of Congress (2023)", url: "https://www.loc.gov/catdir/cpso/romanization/romguide/ADLaM-rev2022-Memo.pdf"}
 media:
-  - {"type": "image", "file": "adlam.jpg", "caption": "ADLAM in capitals on a textbook cover, 17 September 2025; detail of the lettering", "credit": "Smoking Tyre; cropped to the lettering and resized for display", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:The_Adlam_of_Fulfulde.jpg"}
+  - {"type": "image", "file": "adlam.jpg", "caption": "ADLAM in capitals on a textbook cover, 17 September 2025; detail of the lettering", "credit": "Smoking Tyre", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:The_Adlam_of_Fulfulde.jpg"}
 ---
 Adlam is an alphabet for Fulani, a language spoken by some 40 million people across the Sahel, from Senegal and Guinea to Nigeria, Chad and Cameroon. It has 28 letters and is written from right to left, with capital and small letters as in Latin script, and its letters can stand apart or join in a flowing hand. Before it, Fulani had been written in Arabic script, which did not directly represent all its sounds. Today Adlam is taught in schools in several African countries.
 

@@ -9,7 +9,7 @@ dispute: "Кто отменил донорскую акцию 2004 года, с�
 captions:
   - "Куин Латифа выступает на San Diego Comic-Con International, 27 июля 2025 года"
 credits:
-  - "Гейдж Скидмор; размер уменьшен"
+  - "Гейдж Скидмор"
 licenses:
   - "CC BY-SA 3.0"
 ---

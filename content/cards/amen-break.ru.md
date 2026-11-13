@@ -9,7 +9,7 @@ dispute: "О том, что Грегори Коулман умер бездом�
 captions:
   - "Этикетка семидюймового сингла The Winstons «Amen, Brother», 1969 год"
 credits:
-  - "The Winstons / Metromedia; скан с Discogs; размер уменьшен"
+  - "The Winstons / Metromedia; скан с Discogs"
 licenses:
   - "общественное достояние"
 ---

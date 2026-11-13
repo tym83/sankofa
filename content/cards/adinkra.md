@@ -29,7 +29,7 @@ sources:
   - {title: "Precious Lovell, Adinkra: Message and Medium, Cooper Hewitt Smithsonian Design Museum (2018)", url: "https://www.cooperhewitt.org/2018/09/07/adinkra-message-and-medium/"}
   - {title: "Saint Louis Art Museum, Adinkra cloth, object 29199", url: "https://www.slam.org/collection/objects/29199/"}
 media:
-  - {type: "image", file: "adinkra.jpg", caption: "Stamped adinkra cloth acquired by Thomas Edward Bowdich in Kumasi, 1817, now in the British Museum", credit: "Photograph of a two-dimensional work over 100 years old, via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Adinkra_cloth.JPG"}
+  - {type: "image", file: "adinkra.jpg", caption: "Stamped adinkra cloth acquired by Thomas Edward Bowdich in Kumasi, 1817, now in the British Museum", credit: "Photographer not identified; via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Adinkra_cloth.JPG"}
 ---
 Adinkra are signs of the Akan people of Ghana, each standing for a proverb, a belief or an idea, and printed by hand on cloth. The printer carves the sign in relief on a piece of calabash and makes a dark ink from the bark of the badie tree. A comb dipped in the ink rules a grid across the cloth, and the stamps fill its sections. Adinkra was traditionally associated with Asante mourning and elite use; over time its use broadened to other ranks and festive occasions too.
 

@@ -9,7 +9,7 @@ dispute: "Код лоскутных одеял держится на устно�
 captions:
   - "Иллюстрация из книги Уильяма Стилла «Подземная железная дорога» (The Underground Rail Road), Филадельфия, 1872 год"
 credits:
-  - "Уильям Стилл, «Подземная железная дорога» (The Underground Rail Road), Филадельфия, 1872; Internet Archive Book Images; размер уменьшен"
+  - "Уильям Стилл, «Подземная железная дорога» (The Underground Rail Road), Филадельфия, 1872; Internet Archive Book Images"
 licenses:
   - "общественное достояние"
 ---
