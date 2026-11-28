@@ -1,24 +1,35 @@
 # A registry on every node of the stand, on the node's localhost:5000.
 # containerd pulls from localhost over plain HTTP, so the stand needs no
 # external registry and no credentials. Images are pushed to each node with
-# hack/stand/push.sh. Storage is an emptyDir: a recreated node starts empty,
-# which is why the stand's own services run images from ghcr.io instead and
-# this registry is left for experiments (hack/griot-bench).
+# hack/stand/push.sh. Each replica keeps its images on its own volume, not on
+# the node's root disk: the stand's nodes have little disk, and a full root
+# disk makes the kubelet evict pods. The stand's own services run images from
+# ghcr.io; this registry holds experiments (hack/griot-bench) and the sites
+# built inside the cluster (devops-trainer). One replica per node: keep
+# `replicas` equal to the number of nodes.
 apiVersion: v1
 kind: Namespace
 metadata:
   name: sankofa-registry
 ---
 apiVersion: apps/v1
-kind: DaemonSet
+kind: StatefulSet
 metadata:
   name: registry
   namespace: sankofa-registry
 spec:
-  selector: {matchLabels: {app: registry}}
+  replicas: 2
+  serviceName: registry
+  podManagementPolicy: Parallel
+  selector: {matchLabels: {app: registry, store: volume}}
   template:
-    metadata: {labels: {app: registry}}
+    metadata: {labels: {app: registry, store: volume}}
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector: {matchLabels: {app: registry}}
+              topologyKey: kubernetes.io/hostname
       containers:
         - name: registry
           image: docker.io/library/registry:3
@@ -26,6 +37,8 @@ spec:
           ports: [{containerPort: 5000, hostPort: 5000, hostIP: 127.0.0.1}]
           resources: {requests: {cpu: 10m, memory: 32Mi}}
           volumeMounts: [{name: data, mountPath: /var/lib/registry}]
-      volumes:
-        - name: data
-          emptyDir: {}
+  volumeClaimTemplates:
+    - metadata: {name: data}
+      spec:
+        accessModes: [ReadWriteOnce]
+        resources: {requests: {storage: 20Gi}}

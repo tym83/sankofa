@@ -2,8 +2,8 @@
 # Build an image once and push it to the node-local registry on every node of
 # the stand. Only for experiments with images CI does not publish (the Griot
 # benchmark, hack/griot-bench): the museum, Griot and Angel are deployed from
-# ghcr.io (ghcr_image in env.sh). The registry keeps images in an emptyDir, so
-# they are gone whenever a node is recreated. Prints the digest reference:
+# ghcr.io (ghcr_image in env.sh). Each registry replica keeps its images on
+# its own volume (hack/stand/registry.yaml). Prints the digest reference:
 #   localhost:5000/sankofa/<name>@sha256:...
 #
 #   hack/stand/push.sh griot ./cmd/griot          # a Go command, built with ko
